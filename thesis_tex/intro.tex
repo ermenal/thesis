@@ -1,0 +1,277 @@
+\chapter{Introduction}
+\label{cha:intro}
+The first contains a general introduction to the work. The goals are
+defined and the modus operandi is explained.
+
+\section{The problem}
+TEEs can be used for 
+
+\section{Paper outline}
+\begin{itemize}
+    \item Schetsing van het probleem: Wat is het probleem, wat zijn de extra moeilijkheden ivm IoT, OTA update security schetsen in wijdere wereld van IoT security
+    \item Beschrijving van huidige literatuur en verwante security oplossingen
+    \item Hoog-level beschrijving van oplossing, technisch 
+    \item Implementatie mbv board 
+\end{itemize}
+
+\section{Trusted Execution Environments: A Technical Overview of Intel SGX, Arm TrustZone, and RISC-V PMP}
+\hyperlink{https://www.youtube.com/watch?v=MREwcSo0uz4}{video link}
+\\
+\\
+Def van TEE: Environment die 3 zaken verzekert: Data confidentiality, data integrity en code integrity
+\\
+\\
+Mogelijke dingen die TEEs providen: Code confidentiality, Authenticated launch, programmability, attestability \& recoverability
+\\
+\\
+Belang voor thesis: 
+\begin{itemize}
+    \item Code confidentiality en attestability: Zeker zijn dat TEE secure is
+    \item Programmability: Yesh
+    \item Recoverability: Als de state van de TEE corrupt is, is het mogelijk deze te resetten naar een goede state
+\end{itemize}
+Attestation in depth: Attestation = integriteit van de TEE verzekeren. Hiervoor is een hardware root of trust nodig.
+Mbv symmetrische keys (lokaal) of asymmetrische keys (remote).
+\\
+Arm Privilege levels
+\begin{itemize}
+    \item EL-0, Application Privilege Level
+    \item EL-1, Kernel Privilege Level
+    \item EL-2, Virtualization Privilege Level (Optional)
+    \item EL-3, Secure Privilege Level
+\end{itemize}
+Arm Trustzone explanation: Voor ARMv8-A architectuur en TrustZone implementaties provided door Arm's Trusted Firmware-A (TF-A) en Open-source Portable TEE (OP-TEE).\\
+Arm SoC (System on a Chip) processors create separation between SW and NW using the Secure Configuration Register (SCR) "Non-Secure Bit", where 1 = non-secure and 0 = secure. \\
+This separation of worlds is accomplished using 3 technologies: The bus, the SoC core and the debug infrastructure (more than just using the SCR).
+\begin{itemize}
+    \item The bus: Advanced Microcontroller Bus Architecture (AMBA) Advanced eXtensible Interface (AXI): The AMBA AXI bus partitions all of the SoC's hardware and software resources by using a set of bits. Ensures no SW resources can be accessed by NW components.
+    \item SoC core: Implement extensions which enable a single physical processor core to safely and efficiently execute code from both NW and SW in time-sliced fashion. Dependent on the NS bit's state at the time of code execution.
+    \item Debug infrastructure Niet belangrijk.
+\end{itemize}
+Secure monitor = brug tussen NW en SW. \\
+\\
+Arm trustzone boot: Cold reset -> Trusted boot ROM SoC TEE configuration (embedded device config registers blabla vgm) -> Arm Trusted Firmware (ROM of trusted SRAM) -> Trusted OS execution -> NW bootloader execution.\\
+Dus eerste SW helemaal inladen, trusted OS etc, dan pas NW.\\
+We hebben Trusted OS (e.g. OP-TEE) in SW, non-trusted OS (e.g. Linux kernel) in NW.\\ 
+\section{ Develop Secure Cortex-M Applications with Trustzone}
+\hyperlink{https://www.youtube.com/watch?v=TkFC4Q2BwCM}{video link}
+\\
+When to use TrustZone: 
+\begin{itemize}
+    \item If product is connected: e.g. Wi-Fi, Bluetooth, Zigbee, USB, UART ... 
+    \item If product is upgradeable: OTA updates, e.g. firmware upgrades, feature upgrades, security upgrades ...
+    \item If product stores valuable information: e.g. Keys, certificates, personal data ... (nvt?)
+\end{itemize}
+
+TrustZone is about isolation: Isolate some application with some assets (e.g. firmware, keys, password ... Could be software or data). \\
+Traditionally, to isolate 2 worlds (SW and NSW) uses 2 CPUs isolated from each other. \\
+TrustZone = 1 CPU with hardware isolation.
+\\
+\\
+In TrustZone enabled device, we have 2 different "views" / states: Non-trusted view and Trusted view. Up to developer to divide what part should be in trusted and non-trusted view. E.g. some secure (trusted) firmware, some non-trusted firmware, some secure data and some normal data, some trusted peripherals and untrusted peripherals, memory ... 
+\\
+\\
+Additional states / how Armv8-M architecture facilitates TrustZone:
+\begin{itemize}
+    \item Secure and non-secure code run on a single CPU = more efficient for embedded 
+    \item In Armv7-M: CPU had Handler mode and Thread mode. In Armv8-M these are mirrored with secure and non-secure states (non-secure handler mode, non-secure thread mode, secure handler mode, secure thread mode).
+    \item Secure state for trusted code: For example added new secure stack pointer (now we have secure and non-secure stack pointer), if we had MPU we now have 1 for the non-trusted view and 1 for trusted view etc.
+\end{itemize}
+Priority: Secure vs non-secure view has nothing to do with priority. Secure can interrupt non-secure and vice-versa. \\
+Interrupt handling: Interrupt while executing in SW from NSW: Zero all registers first blabla.\\
+\\
+
+Security defined by address. All addresses are either Secure or non-secure. \\
+Policing managed by Secure Attribution Unit (SAU) = new hardware block inside of the CPU. 
+Request from CPU goes through SAU, SAU forwards to either secure MPU or non-secure MPU.\\
+SAU is software-configurable, so developer can define which part of memory is secure and non-secure.\\
+\\
+When trying to access secure address from non-secure state = memory fault.\\
+\\ 
+Memory without TrustZone is divided into multiple regions: System region, device region, RAM region, peripheral region .... \\
+With TrustZone, each of these regions is also partitioned into secure and non-secure parts. \\
+This defines access control to all of these regions.\\ 
+\\
+Developing code for secure IoT applications: Project is partitioned into "User project" and "secure project", 2 different binaries.\\ 
+\\
+Cross-domain function calls: Non-secure side can call some functions on the secure side. Up to developer which functions can be called by NSW.\\
+Then compiler / linker produce some extra code on secure side: "Non-Secure callable" region. \\ 
+
+\section{Secure Firmware Update over the Air using TrustZone}
+Samenvatting van \url{https://ieeexplore.ieee.org/document/8959992/references#references}
+Abstract / Introductie: Doel van paper = gebruik maken van TrustZone TEE om OTA firmware updates (FOTA) secuur te doen. Via digital signature en dan signature verification in trusted application (SW). Signing mbv RSA\\
+\\
+Sectie 2: TEE. Uitleg TrustZone = Low-cost security core for SoC, by providing 2 virtual processors \& split resources between SW and NW.
+Voor extra security runnen we apart secure OS in de SW, namelijk een TEE.
+\begin{quote}
+    As per Global Platform Compliance, "the TEE is a secure area of the main processor" and it must "offer isolated safe execution of authorized security software".
+\end{quote}
+bv OP-TEE \dots
+\\
+\\
+Sectie 3: Architectuur voor secure update.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/Architectuur secure updates.png}
+    \caption{Architectuur voor de secure updates}
+    \label{fig:secureUpdateArchitecture}
+\end{figure}
+Zie \ref{fig:secureUpdateArchitecture}, bron = link blabla.\\
+Secure server (FOTA server) levert de firmware files.\\
+TEE heeft geen network access dus NW OS doet download.\\
+Nu zijn er 2 applications: "FOTA application" in NW en "trusted application" in SW. Deze communiceren via SMC (Secure Monitor Call).\\
+\\
+Dus, "Host application"(FOTA appl.) in NW doet download over secure channel met FOTA server. Gebruikt dan de OP-TEE driver om SMC te doen naar trusted application voor signature verification. Deze RSA crypto shnitzel gebeurt in TEE waar private keys zitten.\\ 
+Als geverified, schrijft trusted application de firmware file naar flash via flash drivers (NW heeft geen access naar firmware flash region).\\
+De access control policies voor peripherals worden onderhouden door CSU (Central Security Unit). E.g. enkel SW heeft toegang tot de EMMC / NAND waar firmware gestored wordt, CSU blockt calls van NW.\\
+\\
+Sectie 4: Implementatie. 
+Deze paper gebruikt ARM Cortex A7, Linux in NW, OP-TEE in SW, U-Boot als bootloader. \\
+Zie andere figuur in de paper voor flow, Trusted Application (TA) wordt pas ingeladen na download van nieuwe firmware. Dus flow is Bootloader start -> Bootloader laadt OP-TEE (SW) -> OP-TEE start Linux (NW) -> FOTA (Host application in NW) wordt geinitialiseerd en checkt of firmware update available is. Als nee, niks (wacht tot een update komt). Als ja -> FOTA application in NW download de firmware van de Secure server -> FOTA application initialiseert de Trusted Application in SW via call (SMC) met UUID voor deze specifieke Trusted Application) -> TA verifieert, schrijft naar EMMC / NAND flash \dots.\\
+Bij inladen van de TA in SW, doen we ook validations vd authenticity etc van de TA eerst. = extra security.\\
+\\
+Dit is allemaal zeer interessant en nuttig voor basic implementatie in onze thesis, maar is andere richting dan wat wij willen zoeken. \\
+In deze implementatie, wat als een NW application (zeg Bad Application) onze device DoS't door de network stack in de NW hele tijd bezig te houden?\\
+Priority based preemption? -> Application in NW heeft somehow max priority, wat nu? Geen FOTA updates mogelijk?\\
+\section{Secure FOTA updates for IoT: survey, challenges and discussions}
+\url{https://www.sciencedirect.com/science/article/pii/S2542660522000142}//
+\subsection{Intro en Background}
+IoT heeft slechte security want security niet zo profitable als eerst zijn.\\
+Veel zero-day attacks.\\
+Daarom is FOTA zo belangrijk, om deze exploits snel te fixen.\\
+In deze paper: Basically beschrijving van huidige landschap (security mechanisms, threats, solutions).\\
+Idk paper praat wel veel uit standpunt van ISP
+\\
+Background:\\
+New classification voor embedded devices blabla\\
+Secure element is zeer belangrijk om een trusted environment te bekomen (elke device heeft SE waarin crypto shit zit om device te authenticaten etc, malicious devices kunnen uit onze trusted environment gepingeld worden). (Dit is TEE btw, e.g. TrustZone...)\\
+Root-of-trust (verifieer de integriteit en authenticiteit vd software die geload wordt op device) establishen en verder Trust Chain uitbouwen.\\
+Bij TrustZone: Protect keys / certificates, dit is initial layer van RoT. Start boot van IBB en bouw chain verder uit. \\
+Modes of FOTA updates: Pull en Push. Pull = device query't FOTA server periodiek, Push = server-initiated, voor devices die zeer resource-constrained zijn en niet periodiek willen / kunnen checken. Hybrid mode ook mogelijk, partial FOTA updates ook cool.\\ 
+FOTA update via mobile gateway: Gateway managet meerdere IoT devices. Extra concerns, zie 2.5 evt. Niet zo belangrijk.\\
+\subsection{FOTA update related threats}
+Beschrijving van verschillende attack types. 3 categorieen: attacks op IoT devices, op gateways en op suppliers/manufacturers. Vooral geinteresseerd in attacks op IoT devices zelf voor deze. \begin{quote}
+    Since the IoT devices are the weakest node in the update process, the attackers will mainly try to exploit their constraints in order
+to infiltrate the local network of the user for malicious purposes. In this section, the attacks targeting these devices are highlighted.
+The ‘‘Rollback attack’’: the hacker re-sends a valid but old firmware version to the devices [2]. ‘‘Mismatched firmware’’: the
+attacker sends this time a valid firmware but for a different type of IoT device, which will lead to the dysfunction of the device. Thus,
+the devices become unavailable [18]. Another attack targets the very constrained devices that are most of the time in sleep mode, this
+attack can be called ‘‘Offline update attack’’. Since some IoT devices are most of the time offline, they may have missed a couple of
+firmware updates. In this case, the attacker sends a newer version than the one installed in the devices but still not the latest version.
+This newer version may still have some unpatched vulnerabilities, that can be exploited [18]. ‘‘Repeated update requests attack‘‘:
+can be seen as a kind of DoS attack where the malicious peer sends as many as possible new FoTA update requests either with
+valid or invalid firmware. It leads the IoT device to check the integrity and the authenticity of the firmware each time. This attack
+provokes the unavailability of the IoT device and extra power consumption, which is problematic for the battery-powered ones.
+‘‘Device cloning attack‘‘: the attacker replicates some IoT devices so that only the cloned one will be updated and not the original
+devices. In this case, the attacker will simply remove the cloned devices from the network and will try to exploit the unpatched
+devices. ‘‘Non-ephemeral keys attack’’: in this case, the attacker tries to deduce the asymmetric key pair from all the exchanges
+that have been done between the IoT device and the other entities, in particular since the IoT device will rarely renegotiate a new
+pair of keys. The attacker can then forge a signature on a rogue update [18]. ‘‘Unchanged default password’’: is not a particular
+problem for IoT but for all the devices where the default password was never changed, and where it can be the same for all devices
+of the same model manufactured by the same manufacturer. Hence, an attacker who possesses a similar device model can suppose
+that the target has also the same password. Furthermore, a weak password can be easy to guess. In both cases, an attacker may aim
+to get unauthorized access to the device using the obtained password. ‘‘Firmware reverse engineering’’: is another type of process
+an attacker can perform, by reverse-engineering the binaries into assembly in order to analyze the functionality and to get access
+to secret data [2,19].
+\end{quote}
+Deze + de 2 andere categorieen versterken vgm het punt dat deze thesis nuttig is: no matter what, het is mogelijk dat onze device infected raakt. Het is dus belangrijk om, in welke situatie dan ook, de OTA update service available te hebben. \\
+\subsection{Challenges}
+\begin{itemize}
+    \item Constraints of IoT devices: Heel zwakke IoT devices hebben mss niet eens capabilities voor authenticity checks (crypto).
+    \item Security \& privacy: Integrity en authenticity van de firmware verifieren is belangrijk. End-to-end security mbv chain of trust en safe key-distribution system is de goal
+    \item Interoperability: IoT devices zijn heterogeen, e.g. verschillende HW capabilities, verschillende communication protocols, verschillende architecturen \dots Moeilijk om standardised solution te vinden.
+    \item Verschillende netwerk topologies: P2P, star, mesh \dots
+    \item Establishing trust chain: Zoals eerder gezien, niet altijd mogelijk dat elk element in de chain alles kan authenticaten. Maybe 3rd party nodig die devices monitort \dots
+\end{itemize}
+\subsection{State of the art}
+Zeeeer interessant, samenvatting en review van een hoop papers, zie hoofdstuk 5.\\
+Vooral: [24] TUF, [33] ASSURED (TUF voor o.a. ARM TrustZone-M), [44] (zie 5.2.4) paper die FOTA update over LoraWAN standardiseert
+\section{Plaatsing van ons probleem}
+We gebruiken \hyperlink{https://www.enisa.europa.eu/sites/default/files/publications/ENISA\%20Report\%20-\%20Guidelines\%20for\%20Securing\%20the\%20Internet\%20of\%20Things.pdf}{ENISA guidelines for securing the IoT}. \\
+Deze thesis behandelt 3.3: Nefarious activity/abuse, en meer specifiek Malware insertion. 
+\begin{quote}
+    Attackers are presented with the opportunity to insert malicious software
+whose main objective is to provide illicit access or any other functionality
+that goes against the intended usage of the system. Insecure update
+mechanisms and poisoned update services are prime examples of such
+opportunities for malware injection. IoT gateways are especially relevant in
+this context; these are functional devices that are commonly found in IoT
+architectures, but can also function as a threats source. IoT gateways
+usually have a supporting role in the scope of security requirements, they
+are, however, an avenue to compromise IoT devices for a malicious actor,
+providing access into trusted networks and a method to acquire data from
+supported constrained devices.
+\end{quote}
+Ook 3.5: Unintentional damage or loss of information. Meer specifiek Compromise of network \begin{quote}
+    Systems that are necessary for the control of supply chain processes and
+exist in a network could become compromised without the proper QoS or
+firewall policies. These assets could be weaponized to orchestrate, for
+example, large scale Denial of Service (DoS) attacks, or to degrade the
+operation of the supply chain. Those that have access to the Internet are
+the most vulnerable, although isolated internal networks are also at risk
+from insider attacks.
+\end{quote}
+en Failure of recovery mechanics \begin{quote}
+    Due to an attack, the system (and the device) is not able to be recovered
+impacting functionality and security. During the lifecycle of an IoT device,
+several assets (firmware, configuration, credentials) might need to be
+updated. Chain of trust must be considered since depending the asset to
+be updated (impacted), different mechanisms must be used. The recovery
+plan must define which mechanism and which process must be followed to
+fix any potential situation that might compromise the service and the
+security of the device. Depending the level of criticality and the element of
+the chain that is compromised, the mechanisms must be one or other. This
+is a critical process in which the security of the device and the system can
+be compromised.
+\end{quote}
+evt ook undetected software or hardware disruptions of the devices \begin{quote}
+    Systems related in any fashion to the operation of the supply chain should
+ideally be extensively monitored for an early detection of hardware of
+software issues. A more proactive approach on detection usually results in
+a reduced number of disruptions to the supply chain, especially when
+compared with reactive measures.
+\end{quote}
+Punt van deze sectie is om deze 3.3 te plaatsen in wijdere context van IoT vulnerabilities.\\
+\\
+There is a lot to be said and done about security in the IoT sector. This thesis is not trying to tackle all the problems at once \dots
+\\
+Er is een hele IoT supply chain (zie ENISA guidelines), op elke stap kan iets fout gaan. Enkel security die OTA updates authenticate bv is niet genoeg, het is altijd mogelijk dat iets binnenslipt en bv onze comms DoS't. \\
+Dus de thesis goals / research questions zijn nog steeds relevant IMO.\\
+
+\section{Thesis outline}
+Research question: How can we use a TEE in an IoT device to create a split architecture that guarantees the availability of OTA updates in the case of a possibly compromised Normal World, while minimizing the performance loss? 
+\section{NetReach}
+\url{https://ieeexplore.ieee.org/document/10628625}\\
+Idee: RT scheduler toevoegen aan TrustZone en alle critical code in SW = goede availability. Issue: Network stack runt nog in NW, kan nog geDoS't worden.\\
+NetReach oplossing: always available network peripheral in SW + always available network connection naar critical applications in NW.\\ 
+Basically gewoon: geef NW transmission lage prioriteit.\\
+In normal operation, NW network stack wordt gedeeld tussen NW en SW. Dan ook nog extra backup network connection van SW (aparte MAC en IP) .\\
+\\
+Verschil met deze thesis: \begin{itemize}
+    \item NetReach gebruikt Armv7 A (meer computational power), wij gebruiken Arm Cortex M (meer resource-constrained, M33 specifiek)
+    \item NetReach heeft backup network channel voor SW. Wij willen maar 1 shared channel 
+    \item NetReach is split-driver architecture, wij moeten uitzoeken welke manier best is (fair sharing, priority based, meerdere drivers vs 1 driver in SW \dots)
+    \item NetReach DoS protection door priority-based: NW tx lagere prio dan SW. Deze thesis: 
+\end{itemize}
+\section{Bronnen}
+Building a secure system using TrustZone technology: \url{https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://documentation-service.arm.com/static/5f212796500e883ab8e74531&ved=2ahUKEwiMyJLq_4OQAxXLVaQEHdDXNP4QFnoECAsQAQ&usg=AOvVaw1Pe2c9ygxbbg8PjsGQV9XZ}
+\\
+\\
+Board: \url{https://www.silabs.com/development-tools/wireless/proprietary/efr32fg23-868-915-mhz-14-dbm-dev-kit?tab=techdocs}
+\\
+\\
+Board documentation, Reference manual etc: \url{https://www.silabs.com/support/resources.p-wireless_proprietary_efr32fg23-series-2-socs}
+\\
+\\
+Trusted firmware site, zie TF-M: \url{https://www.trustedfirmware.org/}
+\\
+\\
+Secure Firmware Update over the Air using TrustZone: \url{https://ieeexplore.ieee.org/document/8959992}
+\\
+\\
+ENISA guidelines for securing the IoT: \url{https://www.enisa.europa.eu/sites/default/files/publications/ENISA\%20Report\%20-\%20Guidelines\%20for\%20Securing\%20the\%20Internet\%20of\%20Things.pdf}
+\\
+\\
+Basically state of IoT OTA update security anno mei 2022: \url{https://www.sciencedirect.com/science/article/pii/S2542660522000142}
+
+NetReach, paper van Tom Van Eyck et al. \url{https://ieeexplore.ieee.org/document/10628625}

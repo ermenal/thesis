@@ -1,0 +1,65 @@
+#-------------------------------------------------------------------------------
+# General user infterface config
+#-------------------------------------------------------------------------------
+
+set pagination off
+set confirm off
+tui enable
+tui focus cmd
+
+#-------------------------------------------------------------------------------
+# Macro definitions
+#-------------------------------------------------------------------------------
+
+define reset
+    # Reset device
+    monitor reset
+    # Flash device
+    load
+end
+document reset
+    Reset and reflash device
+end
+
+define pp_xpsr
+    printf "APSR: {N: %d, Z: %d, C: %d, V: %d, Q: %d, GE: 0x%x}\n", \
+        ($apsr >> 31) & 0b1, \
+        ($apsr >> 30) & 0b1, \
+        ($apsr >> 29) & 0b1, \
+        ($apsr >> 28) & 0b1, \
+        ($apsr >> 27) & 0b1, \
+        ($apsr >> 17) & 0b1111
+    printf "IPSR: 0x%03x\n", $ipsr & 0xff
+    printf "EPSR: {ICI/IT: 0x%x, T: %d}\n", \
+        $epsr \
+        ($epsr >> 24) & 0b1
+end
+document pp_xpsr
+    Pretty-print xPSR registers
+end
+
+define usart0
+    x/10x 0x5005c000
+end
+
+#-------------------------------------------------------------------------------
+# Setup breakpoints
+#-------------------------------------------------------------------------------
+
+break main
+
+#-------------------------------------------------------------------------------
+# Connect to gdb server on port 2331
+#-------------------------------------------------------------------------------
+
+target remote localhost:2331
+
+#-------------------------------------------------------------------------------
+# Start debugging
+#-------------------------------------------------------------------------------
+
+# Reset device
+reset
+
+# Run to first breakpoint
+continue
