@@ -10,64 +10,114 @@
 
 #include <stdint.h>
 #include "em_device.h"
+#include "em_chip.h"
 #include "em_cmu.h"
 #include "em_gpio.h"
-#include "em_usart.h"
+#include "em_lcd.h"
+#include "em_emu.h"
 
-#include "iot_uart_cfg_vcom.h"
-#include "iot_pwm_cfg_led0.h"
+#define LCD_PRESC           16
+#define FRAME_RATE_DIV      8
+#define VLCD                3.0
+#define FRAME_COUNTER_TOP   16
+
+#define BLINK_ENABLE        0
+
+void initLCD(void)
+{
+  // Enable clocks required for LCD
+  CMU_ClockEnable(cmuClock_LFRCO, true);
+  CMU_ClockEnable(cmuClock_LCD, true);
+  CMU_ClockEnable(cmuClock_GPIO, true);
+
+  // Initialize the LCD
+  LCD_Init_TypeDef lcd_init = {
+    // Don't enable LCD driver after init to continue configuring the LCD
+    .enable = false,
+
+    // The LCD has 4 COMs and is driven with 1/3 bias (4 voltage levels)
+    .mux = lcdMuxQuadruplex,
+    .bias = lcdBiasOneThird,
+
+    // In order to minimize power consumption, the low power waveform is used
+    .wave = lcdWaveLowPower,
+
+    // Step down mode selected because VDD = 3.3V and the desired VLCD = 3.0V
+    .mode = lcdModeStepDown,
+
+    // Table 28.1 in the reference manual shows 0.0% charge redistribution with
+    // currently configured mux and prescaler values, so just keep it disabled
+    .chargeRedistribution = lcdChargeRedistributionDisable,
+
+    // Frame rate = LCD_CLK / (8 * FRAME_RATE_DIV)
+    //            =  2048Hz / (8 * 8)
+    //            =  32Hz
+    .frameRateDivider = FRAME_RATE_DIV - 1,
+
+    // Contrast level = (VLCD - 2.25V) / 0.05V
+    //                = (3.0V - 2.25V) / 0.05V
+    //                = 15
+    .contrastLevel = (int)((VLCD - 2.25) / 0.05)
+  };
+
+  LCD_Init(&lcd_init);
+
+  // LCD_CLK = LFRCOfreq / LCD_PRESC
+  //         =   32768Hz / 16
+  //         =    2048Hz
+  LCD->CTRL = (LCD->CTRL & (~_LCD_CTRL_PRESCALE_MASK))
+              | ((LCD_PRESC - 1) << _LCD_CTRL_PRESCALE_SHIFT);
+
+  // Select LCD VDDX to AVDD to enable step down mode
+  LCD->BIASCTRL_SET = LCD_BIASCTRL_VDDXSEL_AVDD;
+
+  // Enable common (COM0) and segment (SEG0-SEG1, SEG4-SEG7) lines
+  // BRD2600A has only segment 0-1 and 4-7 to configure with
+  LCD_ComEnable(0, true);
+  LCD_SegmentEnable(0, true);
+  LCD_SegmentEnable(1, true);
+  LCD_SegmentEnable(4, true);
+  LCD_SegmentEnable(5, true);
+  LCD_SegmentEnable(6, true);
+  LCD_SegmentEnable(7, true);
+
+  // Animation state 0 has segment 0 on
+  // Odd state will shift AReg to the left by 1 bit
+  // AReg initial value is 1000 0000, BReg initial value is 0000 0000
+  LCD_AnimInit_TypeDef anim_init = {
+    .enable = true,
+    .AReg = 0x80,
+    .AShift = lcdAnimShiftLeft,
+    .BReg = 0x00,
+    .BShift = lcdAnimShiftNone,
+    .animLogic = lcdAnimLogicOr,
+    .startSeg = lcdAnimLocSeg0To7
+  };
+
+  LCD_AnimInit(&anim_init);
+
+#if BLINK_ENABLE
+  // Set BLINK_ENABLE define to 1 to enable blinking. Blinking will turn off
+  // all segments every other frame counter event.
+  LCD_BlinkEnable(true);
+#endif
+
+  // Frame count event frequency = frame rate / (FRAME_COUNTER_TOP * prescale)
+  //                             = 32Hz       / (16                * 1)
+  //                             = 2Hz
+  LCD_FrameCountInit_TypeDef fc_init = {
+    .enable = true,
+    .top = FRAME_COUNTER_TOP,
+    .prescale = lcdFCPrescDiv1
+  };
+
+  LCD_FrameCountInit(&fc_init);
+}
 
 int main(void)
 {
-    /* Make variables from macros for debug purposes */
-    USART_TypeDef *uart0 = USART0;
 
-    /* Enable USART0 clock domain. Also enable the clock for GPIO in order to configure pins. */
-    CMU_ClockEnable(cmuClock_USART0, true);
-    CMU_ClockEnable(cmuClock_GPIO, true);
-
-    /* Initialize with default settings and then update fields according to application requirements. */
-    USART_InitAsync_TypeDef initAsync = USART_INITASYNC_DEFAULT;
-    initAsync.baudrate = 115200;
-    initAsync.enable = usartDisable;
-    USART_InitAsync(uart0, &initAsync);
-
-    /* Configure USART0 pins */
-    GPIO_Port_TypeDef tx_port = IOT_UART_CFG_VCOM_TX_PORT;
-    uint8_t tx_pin = IOT_UART_CFG_VCOM_TX_PIN;
-    GPIO_Port_TypeDef rx_port = IOT_UART_CFG_VCOM_RX_PORT;
-    uint8_t rx_pin = IOT_UART_CFG_VCOM_RX_PIN;
-
-    GPIO_Port_TypeDef led_port = gpioPortB;
-    uint8_t led_pin = 2;
-
-    GPIO->USARTROUTE[0].ROUTEEN = GPIO_USART_ROUTEEN_TXPEN | GPIO_USART_ROUTEEN_RXPEN;
-    GPIO->USARTROUTE[0].TXROUTE = tx_port | (tx_pin << _GPIO_USART_CLKROUTE_PIN_SHIFT);
-    GPIO->USARTROUTE[0].RXROUTE = rx_port | (rx_pin << _GPIO_USART_CLKROUTE_PIN_SHIFT);
-
-    GPIO_PinModeSet(tx_port, tx_pin, gpioModePushPull, 1);
-    GPIO_PinModeSet(rx_port, rx_pin, gpioModeInputPull, 1);
-    GPIO_PinModeSet(led_port, led_pin, gpioModePushPull, 0);
-
-    // Enable USART0
-    // USART_Enable(uart0, usartEnable);
-    uart0->CMD = USART_CMD_RXEN | USART_CMD_TXEN;
-    uart0->EN = USART_EN_EN;
-
-    for (;;)
-    {
-    //    for (int i = 0; i < 64; i++)
-    //    {
-    //        USART_Tx(USART0, 'a');
-    //    }
-    //    for (int i = 0; i < 64; i++)
-    //    {
-    //        USART_Tx(USART0, '\x00');
-    //    }
-        GPIO_PinOutToggle(led_port, led_pin);
-        uint32_t i;
-        for (i = 0; i < 10000000; i++){
-            __NOP();
-        }
-    }
+    initLCD();
 }
+
+

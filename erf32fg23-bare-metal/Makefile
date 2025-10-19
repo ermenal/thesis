@@ -51,7 +51,7 @@ LD_FLAGS     = $(COMMON_FLAGS) -T"$(RES_DIR)/linkerfile.ld" --specs=nano.specs -
 
 SRCS += startup_efr32fg23.c system_efr32fg23.c
 SRCS += sl_memory.c sl_syscalls.c
-SRCS += em_core.c em_usart.c em_cmu.c em_gpio.c
+SRCS += em_core.c em_usart.c em_cmu.c em_gpio.c em_lcd.c
 SRCS += main.c
 
 OBJS = $(SRCS:%.c=$(OUT_DIR)/%.o)
