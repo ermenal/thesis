@@ -26,13 +26,20 @@
  * 3. This notice may not be removed or altered from any source distribution.
  *
  ******************************************************************************/
- MEMORY
+MEMORY
  {
-   FLASH (rx)  : ORIGIN = 0x08000000, LENGTH = 0x7e000
-   RAM   (rwx) : ORIGIN = 0x20000000, LENGTH = 0x10000
+   FLASH (rx)  : ORIGIN = 0x08000000, LENGTH = 0x10000
+   RAM   (rwx) : ORIGIN = 0x20000000, LENGTH = 0x4000
  }
 
 ENTRY(Reset_Handler)
+
+PHDRS
+{
+  S_CODE_LOAD PT_LOAD FILEHDR PHDRS FLAGS(5); /* R, X */
+  S_DATA_LOAD PT_LOAD FLAGS(6); /* R, W */
+  S_VENEER_LOAD PT_LOAD FLAGS(5); /* R, X */
+}
 
 SECTIONS
 {
@@ -69,19 +76,25 @@ SECTIONS
     *(.dtors)
 
     *(.rodata*)
-  } > FLASH
+  } > FLASH :S_CODE_LOAD
 
   .ARM.extab :
   {
     *(.ARM.extab* .gnu.linkonce.armextab.*)
-  } > FLASH
+  } > FLASH :S_CODE_LOAD
 
   __exidx_start = .;
   .ARM.exidx :
   {
     *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-  } > FLASH
+  } > FLASH :S_CODE_LOAD
   __exidx_end = .;
+
+  .nsc_veneers :
+  {
+      . = ALIGN(32);
+      *(.gnu.sgstubs*)
+  } > FLASH :S_VENEER_LOAD
 
     .copy.table :
   {
@@ -92,29 +105,17 @@ SECTIONS
     LONG (__data_start__)
     LONG ((__data_end__ - __data_start__) / 4)
 
-    /* Add each additional data section here */
-    /*
-    LONG (__etext2)
-    LONG (__data2_start__)
-    LONG ((__data2_end__ - __data2_start__) / 4)
-    */
-
     __copy_table_end__ = .;
-  } > FLASH
+  } > FLASH :S_CODE_LOAD
 
     .zero.table :
   {
     . = ALIGN(4);
     __zero_table_start__ = .;
-
-    /* Add each additional bss section here */
-    /*
-    LONG (__bss2_start__)
-    LONG ((__bss2_end__ - __bss2_start__) / 4)
-    */
-
+    LONG (__bss_start__)
+    LONG ((__bss_end__ - __bss_start__) / 4)
     __zero_table_end__ = .;
-  } > FLASH
+  } > FLASH :S_CODE_LOAD
 
   __etext = .;
 
@@ -128,23 +129,20 @@ SECTIONS
     . = ALIGN(4);
     __StackTop = .;
     PROVIDE(__stack = __StackTop);
-  } > RAM
+  } > RAM :S_DATA_LOAD
 
-  /* ARMv8-M stack sealing:
-  to use ARMv8-M stack sealing uncomment '.stackseal' section
-  */
   .stackseal (COPY):
   {
     __StackSeal = .;
     . = . + 8;
     . = ALIGN(8);
-  } > RAM
+  } > RAM :S_DATA_LOAD
 
 
   .noinit . (NOLOAD):
   {
     *(.noinit*);
-  } > RAM
+  } > RAM :S_DATA_LOAD
 
   .data . : AT (__etext)
   {
@@ -159,32 +157,28 @@ SECTIONS
     PROVIDE(__ram_func_section_end = .);
 
     . = ALIGN(4);
-    /* preinit data */
     PROVIDE_HIDDEN (__preinit_array_start = .);
     KEEP(*(.preinit_array))
     PROVIDE_HIDDEN (__preinit_array_end = .);
 
     . = ALIGN(4);
-    /* init data */
     PROVIDE_HIDDEN (__init_array_start = .);
     KEEP(*(SORT(.init_array.*)))
     KEEP(*(.init_array))
     PROVIDE_HIDDEN (__init_array_end = .);
 
     . = ALIGN(4);
-    /* finit data */
     PROVIDE_HIDDEN (__fini_array_start = .);
     KEEP(*(SORT(.fini_array.*)))
     KEEP(*(.fini_array))
     PROVIDE_HIDDEN (__fini_array_end = .);
 
     . = ALIGN(4);
-    /* All data end */
     __data_end__ = .;
 
-  } > RAM
+  } > RAM :S_DATA_LOAD
 
-  .bss . :
+  .bss . (NOLOAD):
   {
     . = ALIGN(4);
     __bss_start__ = .;
@@ -192,7 +186,7 @@ SECTIONS
     *(COMMON)
     . = ALIGN(4);
     __bss_end__ = .;
-  } > RAM
+  } > RAM :S_DATA_LOAD
 
   __ramfuncs_start__ = .;
 
@@ -207,7 +201,7 @@ SECTIONS
     *(text_application_ram)
     . = ALIGN(4);
     __text_application_ram_end__ = .;
-  } > RAM
+  } > RAM :S_DATA_LOAD
 
   . = ALIGN(4);
   __vma_ramfuncs_end__ = .;
@@ -223,7 +217,7 @@ SECTIONS
     _end = __end__;
     KEEP(*(.heap*))
     __HeapLimit = ORIGIN(RAM) + LENGTH(RAM);
-  } > RAM
+  } > RAM :S_DATA_LOAD
 
   __heap_size = __HeapLimit - __HeapBase;
 }

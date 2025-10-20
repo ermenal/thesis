@@ -40,3 +40,6 @@ build/
 
 # Visual studio code
 .vscode/
+
+# Docs dir
+docs/

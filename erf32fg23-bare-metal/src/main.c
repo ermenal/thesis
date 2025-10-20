@@ -8,23 +8,22 @@
  * @copyright Copyright (c) 2024
  */
 
-#include <stdint.h>
-#include "em_device.h"
 #include "em_chip.h"
 #include "em_cmu.h"
+#include "em_device.h"
+#include "em_emu.h"
 #include "em_gpio.h"
 #include "em_lcd.h"
-#include "em_emu.h"
+#include <stdint.h>
 
-#define LCD_PRESC           16
-#define FRAME_RATE_DIV      8
-#define VLCD                3.0
-#define FRAME_COUNTER_TOP   16
+#define LCD_PRESC 16
+#define FRAME_RATE_DIV 8
+#define VLCD 3.0
+#define FRAME_COUNTER_TOP 16
 
-#define BLINK_ENABLE        0
+#define BLINK_ENABLE 0
 
-void initLCD(void)
-{
+void initLCD(void) {
   // Enable clocks required for LCD
   CMU_ClockEnable(cmuClock_LFRCO, true);
   CMU_ClockEnable(cmuClock_LCD, true);
@@ -32,41 +31,43 @@ void initLCD(void)
 
   // Initialize the LCD
   LCD_Init_TypeDef lcd_init = {
-    // Don't enable LCD driver after init to continue configuring the LCD
-    .enable = false,
+      // Don't enable LCD driver after init to continue configuring the LCD
+      .enable = false,
 
-    // The LCD has 4 COMs and is driven with 1/3 bias (4 voltage levels)
-    .mux = lcdMuxQuadruplex,
-    .bias = lcdBiasOneThird,
+      // The LCD has 4 COMs and is driven with 1/3 bias (4 voltage levels)
+      //.mux = lcdMuxQuadruplex,
+      .mux = lcdMuxStatic,
+      .bias = lcdBiasOneThird,
 
-    // In order to minimize power consumption, the low power waveform is used
-    .wave = lcdWaveLowPower,
+      // In order to minimize power consumption, the low power waveform is used
+      .wave = lcdWaveLowPower,
 
-    // Step down mode selected because VDD = 3.3V and the desired VLCD = 3.0V
-    .mode = lcdModeStepDown,
+      // Step down mode selected because VDD = 3.3V and the desired VLCD = 3.0V
+      .mode = lcdModeStepDown,
 
-    // Table 28.1 in the reference manual shows 0.0% charge redistribution with
-    // currently configured mux and prescaler values, so just keep it disabled
-    .chargeRedistribution = lcdChargeRedistributionDisable,
+      // Table 28.1 in the reference manual shows 0.0% charge redistribution
+      // with
+      // currently configured mux and prescaler values, so just keep it disabled
+      .chargeRedistribution = lcdChargeRedistributionDisable,
 
-    // Frame rate = LCD_CLK / (8 * FRAME_RATE_DIV)
-    //            =  2048Hz / (8 * 8)
-    //            =  32Hz
-    .frameRateDivider = FRAME_RATE_DIV - 1,
+      // Frame rate = LCD_CLK / (8 * FRAME_RATE_DIV)
+      //            =  2048Hz / (8 * 8)
+      //            =  32Hz
+      //.frameRateDivider = (FRAME_RATE_DIV - 1) * 4,
+      .frameRateDivider = FRAME_RATE_DIV - 1,
 
-    // Contrast level = (VLCD - 2.25V) / 0.05V
-    //                = (3.0V - 2.25V) / 0.05V
-    //                = 15
-    .contrastLevel = (int)((VLCD - 2.25) / 0.05)
-  };
+      // Contrast level = (VLCD - 2.25V) / 0.05V
+      //                = (3.0V - 2.25V) / 0.05V
+      //                = 15
+      .contrastLevel = (int)((VLCD - 2.25) / 0.05)};
 
   LCD_Init(&lcd_init);
 
   // LCD_CLK = LFRCOfreq / LCD_PRESC
   //         =   32768Hz / 16
   //         =    2048Hz
-  LCD->CTRL = (LCD->CTRL & (~_LCD_CTRL_PRESCALE_MASK))
-              | ((LCD_PRESC - 1) << _LCD_CTRL_PRESCALE_SHIFT);
+  LCD->CTRL = (LCD->CTRL & (~_LCD_CTRL_PRESCALE_MASK)) |
+              ((LCD_PRESC - 1) << _LCD_CTRL_PRESCALE_SHIFT);
 
   // Select LCD VDDX to AVDD to enable step down mode
   LCD->BIASCTRL_SET = LCD_BIASCTRL_VDDXSEL_AVDD;
@@ -74,6 +75,12 @@ void initLCD(void)
   // Enable common (COM0) and segment (SEG0-SEG1, SEG4-SEG7) lines
   // BRD2600A has only segment 0-1 and 4-7 to configure with
   LCD_ComEnable(0, true);
+  // LCD_ComEnable(1, true);
+  // LCD_ComEnable(2, true);
+  // LCD_ComEnable(3, true);
+  //  for (int i = 0; i < 20; i++) {
+  //   LCD_SegmentEnable(i, true);
+  // }
   LCD_SegmentEnable(0, true);
   LCD_SegmentEnable(1, true);
   LCD_SegmentEnable(4, true);
@@ -84,15 +91,16 @@ void initLCD(void)
   // Animation state 0 has segment 0 on
   // Odd state will shift AReg to the left by 1 bit
   // AReg initial value is 1000 0000, BReg initial value is 0000 0000
-  LCD_AnimInit_TypeDef anim_init = {
-    .enable = true,
-    .AReg = 0x80,
-    .AShift = lcdAnimShiftLeft,
-    .BReg = 0x00,
-    .BShift = lcdAnimShiftNone,
-    .animLogic = lcdAnimLogicOr,
-    .startSeg = lcdAnimLocSeg0To7
-  };
+  LCD_AnimInit_TypeDef anim_init = {.enable = true,
+                                    .AReg = 0x80,
+                                    //.AReg = 0xFF,
+                                    .AShift = lcdAnimShiftLeft,
+                                    //.AShift = lcdAnimShiftNone,
+                                    //.BReg = 0xFF,
+                                    .BReg = 0x00,
+                                    .BShift = lcdAnimShiftNone,
+                                    .animLogic = lcdAnimLogicOr,
+                                    .startSeg = lcdAnimLocSeg0To7};
 
   LCD_AnimInit(&anim_init);
 
@@ -106,18 +114,9 @@ void initLCD(void)
   //                             = 32Hz       / (16                * 1)
   //                             = 2Hz
   LCD_FrameCountInit_TypeDef fc_init = {
-    .enable = true,
-    .top = FRAME_COUNTER_TOP,
-    .prescale = lcdFCPrescDiv1
-  };
+      .enable = true, .top = FRAME_COUNTER_TOP, .prescale = lcdFCPrescDiv1};
 
   LCD_FrameCountInit(&fc_init);
 }
 
-int main(void)
-{
-
-    initLCD();
-}
-
-
+int main(void) { initLCD(); }
