@@ -1,4 +1,0 @@
-Gecko Platform 4.4.3.0
-- Fixed the Pin Assignment issue which prevents the configuration header files from being created/updated when using PinTool. 
-
-

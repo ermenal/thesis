@@ -1,0 +1,16 @@
+#CRC Codes for initially generated config files -- do not modify!
+dmadrv_config.h=281221886
+export/psa_crypto_config.h=2001171959
+export/sl_mbedtls_device_config.h=-1083250924
+export/sl_mbedtls_trustzone_config.h=-260821329
+nvm3_default_config.h=-1865878923
+sl_board_control_config.h=1942454455
+sl_clock_manager_oscillator_config.h=502249010
+sl_clock_manager_tree_config.h=-1943968352
+sl_core_config.h=-2018153270
+sl_debug_swo_config.h=1207363231
+sl_device_init_dcdc_config.h=-1956854636
+sl_device_init_emu_config.h=1238190016
+sl_iostream_eusart_vcom_config.h=226434289
+sl_memory_manager_config.h=-209387538
+sl_memory_manager_region_config.h=990835082

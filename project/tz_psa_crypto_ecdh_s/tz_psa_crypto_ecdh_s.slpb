@@ -1,0 +1,17 @@
+---
+parameters:
+- name: "build_dir"
+constants:
+- name: "project_name"
+  value: "tz_psa_crypto_ecdh_s"
+steps:
+- task: "copy"
+  output: "artifact/{{project_name}}.s37"
+  export: "trustzone_secure_binary"
+  input: "{{build_dir}}/{{project_name}}.s37"
+- task: "copy"
+  output: "artifact/trustzone_secure_library.o"
+  input: "{{build_dir}}/trustzone_secure_library.o"
+- task: "usage"
+  input: "{{build_dir}}/{{project_name}}.out"
+  map: "{{build_dir}}/{{project_name}}.map"

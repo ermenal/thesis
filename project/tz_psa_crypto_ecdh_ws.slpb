@@ -1,0 +1,13 @@
+---
+parameters: []
+constants:
+- name: "workspace_name"
+  value: "tz_psa_crypto_ecdh_ws"
+- path: "tz_psa_crypto_ecdh_s/tz_psa_crypto_ecdh_s.slpb"
+- path: "tz_psa_crypto_ecdh_ns/tz_psa_crypto_ecdh_ns.slpb"
+steps:
+- task: "convert"
+  output: "artifact/{{workspace_name}}-combined.s37"
+  input:
+  - "{{trustzone_secure_binary}}"
+  - "{{trustzone_nonsecure_binary}}"
