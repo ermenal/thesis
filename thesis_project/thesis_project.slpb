@@ -1,0 +1,13 @@
+---
+parameters: []
+constants:
+- name: "workspace_name"
+  value: "thesis_project"
+- path: "thesis_project_s/thesis_project_s.slpb"
+- path: "thesis_project_ns/thesis_project_ns.slpb"
+steps:
+- task: "convert"
+  output: "artifact/{{workspace_name}}-combined.s37"
+  input:
+  - "{{trustzone_secure_binary}}"
+  - "{{trustzone_nonsecure_binary}}"

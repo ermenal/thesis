@@ -1,0 +1,77 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: thesis_project_ns
+label: thesis_project_ns
+description: |
+  The Non-secure part of the application demonstrates how to use the ECDH key agreement API. The Non-secure application needs to build with the Secure application on a workspace (tz_psa_crypto_ecdh_ws).
+category: Example|Platform
+filter:
+- name: Device Type
+  value: [SoC]
+- name: MCU
+  value: [32-bit MCU]
+- name: Project Difficulty
+  value: [Advanced]
+package: platform
+quality: production
+readme:
+- {path: readme.md}
+- {path: readme.md}
+source:
+- {path: main.c}
+- {path: app_init.c}
+- {path: app_process.c}
+- {path: app_psa_crypto_ecdh.c}
+- {path: app_psa_crypto_key.c}
+tag: ['companion:secure_app']
+include:
+- path: .
+  file_list:
+  - {path: app_init.h}
+  - {path: app_process.h}
+  - {path: app_psa_crypto_ecdh.h}
+  - {path: app_psa_crypto_key.h}
+  - {path: app_psa_crypto_macro.h}
+sdk: {vendor: null, id: simplicity_sdk, version: 2025.6.2}
+toolchain_settings:
+- {value: debug, option: optimize}
+component:
+- {id: EFR32FG23B010F512IM48}
+- {id: brd2600a_a02}
+- {id: clock_manager}
+- {id: device_init}
+- {id: iostream_recommended_stream}
+- {id: iostream_retarget_stdio}
+- {id: nvm3_default}
+- {id: printf}
+- {id: psa_crypto_ecc_curve25519}
+- {id: psa_crypto_ecc_secp192r1}
+- {id: psa_crypto_ecc_secp256r1}
+- {id: psa_crypto_ecc_secp384r1}
+- {id: psa_crypto_ecc_secp521r1}
+- {id: psa_crypto_ecdh}
+- {id: psa_its}
+- {id: sl_system}
+- {id: trustzone_nonsecure}
+- {id: tz_secure_key_library}
+define:
+- {name: DEBUG_EFM}
+- {name: PSA_CRYPTO_PRINT}
+template_contribution:
+- {name: memory_flash_start, priority: 0, value: 134397952}
+- {name: memory_flash_size, priority: 0, value: 344064}
+- {name: memory_ram_start, priority: 0, value: 536883200}
+- {name: memory_ram_size, priority: 0, value: 20480}
+import:
+- {id: trustzone_secure_application}
+requires:
+- {name: psa_crypto_ecc_curve448}
+- {name: armv8m.main}
+configuration:
+- {name: SL_CLOCK_MANAGER_HFRCO_BAND, value: '38000000'}
+- {name: SL_BOARD_ENABLE_VCOM, value: '1'}
+ui_hints:
+  highlight:
+  - {path: readme.md, focus: true}
+post_build:
+- {path: thesis_project_ns.slpb, profile: tz_nonsecure_application}
+

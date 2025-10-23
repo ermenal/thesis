@@ -1,0 +1,51 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: thesis_project_s
+label: thesis_project_s
+description: |
+  The Secure part of the application provides the PSA Crypto and Attestation functionalities in the Secure world. The Secure application needs to build with the Non-secure application on a workspace (tz_psa_crypto_ecdh_ws).
+category: Example|Platform
+filter:
+- name: Device Type
+  value: [SoC]
+- name: MCU
+  value: [32-bit MCU]
+- name: Project Difficulty
+  value: [Advanced]
+package: platform
+quality: production
+readme:
+- {path: readme.md}
+- {path: readme.md}
+tag: ['companion:nonsecure_app']
+sdk: {vendor: null, id: simplicity_sdk, version: 2025.6.2}
+toolchain_settings: []
+component:
+- {id: EFR32FG23B010F512IM48}
+- {id: brd2600a_a02}
+- {id: trustzone_secure}
+- {id: tz_secure_key_library}
+define:
+- {name: TFM_CRYPTO_CONC_OPER_NUM, value: '2'}
+template_contribution:
+- {name: memory_flash_start, priority: 0, value: 134217728}
+- {name: memory_flash_size, priority: 0, value: 180224}
+- {name: memory_ram_start, priority: 0, value: 536870912}
+- {name: memory_ram_size, priority: 0, value: 12288}
+- {name: application_type, priority: 0, value: APPLICATION_TYPE_MCU}
+import:
+- {id: trustzone_nonsecure_application}
+export:
+  library:
+  - {path: artifact/trustzone_secure_library.o}
+requires:
+- {name: armv8m.main}
+configuration:
+- {name: SL_STACK_SIZE, value: '3072'}
+- {name: SL_HEAP_SIZE, value: '4096'}
+- {name: BOOTLOADER_DISABLE_OLD_BOOTLOADER_MITIGATION, value: '1'}
+ui_hints:
+  highlight:
+  - {path: readme.md, focus: true}
+post_build:
+- {path: thesis_project_s.slpb, profile: tz_secure_application}
+

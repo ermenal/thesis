@@ -1,0 +1,15 @@
+---
+workspace_name: "thesis_project"
+label: "tz_psa_crypto_ecdh_ws"
+quality: "production"
+description: "This example workspace demonstrates TrustZone for ECDH key agreement.\n"
+project:
+- id: "trustzone_secure_application"
+  path: "thesis_project_s/thesis_project_s.slcp"
+  output: "thesis_project_s"
+- id: "trustzone_nonsecure_application"
+  path: "thesis_project_ns/thesis_project_ns.slcp"
+  output: "thesis_project_ns"
+post_build:
+  profile: "tz_application"
+  path: "thesis_project.slpb"
