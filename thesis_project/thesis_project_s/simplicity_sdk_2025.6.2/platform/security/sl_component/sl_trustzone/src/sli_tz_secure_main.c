@@ -879,7 +879,7 @@ static inline void configure_smu_peripherals(void)
   SMU->PPUSATD0_CLR = _SMU_PPUSATD0_MASK
                       & ~(SMU_PPUSATD0_SYSCFG
                           | SMU_PPUSATD0_MSC 
-                          // | SMU_PPUSATD0_GPIO
+                          | SMU_PPUSATD0_GPIO
                         );
   #if defined(SMU_PPUSATD2_SEMAILBOX)
   SMU->PPUSATD2_CLR = _SMU_PPUSATD2_MASK

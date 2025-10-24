@@ -18,11 +18,13 @@ readme:
 - {path: readme.md}
 source:
 - {path: src/secure_gpio.c}
+- {path: src/nsc_gpio.c}
 tag: ['companion:nonsecure_app']
 include:
 - path: .
   file_list:
   - {path: src/secure_gpio.h}
+  - {path: src/nsc_gpio.h}
 sdk: {vendor: null, id: simplicity_sdk, version: 2025.6.2}
 toolchain_settings: []
 component:
