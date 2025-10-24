@@ -691,13 +691,13 @@ static fih_int __attribute__ ((noinline)) configure_sau(void)
 
       CMU_ClockEnable(cmuClock_GPIO, true);
 
-//  // MIJN GPIO SAU REGION CONFIG 
-//  FIH_CALL(configure_sau_region, fih_rc, i & SAU_RNR_REGION_Msk, GPIO_BASE, ((GPIO_BASE + 0xFFF) & SAU_RLAR_LADDR_Msk) | SAU_RLAR_ENABLE_Msk);
-//  if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
-//      fatal_error();
-//      goto exit; // if fatal_error is glitched
-//    }
-//   i++;
+  // MIJN GPIO SAU REGION CONFIG 
+  FIH_CALL(configure_sau_region, fih_rc, i & SAU_RNR_REGION_Msk, GPIO_BASE, ((GPIO_BASE + 0xFFF) & SAU_RLAR_LADDR_Msk) | SAU_RLAR_ENABLE_Msk);
+  if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
+      fatal_error();
+      goto exit; // if fatal_error is glitched
+    }
+   i++;
 
 
   FIH_CFI_STEP_DECREMENT();
@@ -878,7 +878,9 @@ static inline void configure_smu_peripherals(void)
   // All peripherals are non-secure except SMU, SEMAILBOX, MSC and SYSCFG.
   SMU->PPUSATD0_CLR = _SMU_PPUSATD0_MASK
                       & ~(SMU_PPUSATD0_SYSCFG
-                          | SMU_PPUSATD0_MSC);
+                          | SMU_PPUSATD0_MSC 
+                          // | SMU_PPUSATD0_GPIO
+                        );
   #if defined(SMU_PPUSATD2_SEMAILBOX)
   SMU->PPUSATD2_CLR = _SMU_PPUSATD2_MASK
                       & ~(SMU_PPUSATD2_SEMAILBOX);
