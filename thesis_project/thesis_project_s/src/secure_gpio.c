@@ -5,5 +5,5 @@ void secure_led_toggle(void)
 {
   // The LED is on Port B, Pin 2
   GPIO_PinOutToggle(gpioPortB, 2);
-  GPIO_PinOutToggle(gpioPortB, 2);
+  // GPIO_PinOutToggle(gpioPortB, 2);
 }

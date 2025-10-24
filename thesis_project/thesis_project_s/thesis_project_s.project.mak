@@ -1245,12 +1245,12 @@ CDEPS += $(OUTPUT_DIR)/sdk/util/third_party/trusted-firmware-m/secure_fw/partiti
 OBJS += $(OUTPUT_DIR)/sdk/util/third_party/trusted-firmware-m/secure_fw/partitions/crypto/crypto_rng.o
 
 
-#$(OUTPUT_DIR)/secure_gpio.o: src/secure_gpio.c
-#	@$(POSIX_TOOL_PATH)echo 'src/secure_gpio.c'
-#	@$(POSIX_TOOL_PATH)mkdir -p $(@D)
-#	$(ECHO)$(CC) $(CFLAGS) -c -o $@ src/secure_gpio.c
-#CDEPS += $(OUTPUT_DIR)/secure_gpio.d
-#OBJS += $(OUTPUT_DIR)/secure_gpio.o
+$(OUTPUT_DIR)/secure_gpio.o: src/secure_gpio.c
+	@$(POSIX_TOOL_PATH)echo 'Building src/secure_gpio.c'
+	@$(POSIX_TOOL_PATH)mkdir -p $(@D)
+	$(ECHO)$(CC) $(CFLAGS) -c -o $@ src/secure_gpio.c
+CDEPS += $(OUTPUT_DIR)/secure_gpio.d
+OBJS += $(OUTPUT_DIR)/secure_gpio.o
 
 # Automatically-generated Simplicity Studio Metadata
 # Please do not edit or delete these lines!
