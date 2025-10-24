@@ -5,7 +5,7 @@
 // This function is the secure gateway. The __attribute__ tells the
 // compiler to place an SG instruction at the start of this function,
 // making it a valid entry point from the Non-secure world.
-__attribute__((cmse_nonsecure_entry))
+__attribute__((cmse_nonsecure_entry, section(".sg_veneer_table")))
 void nsc_led_toggle(void)
 {
   // The gateway function calls the internal secure function.

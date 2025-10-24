@@ -757,6 +757,10 @@ static fih_int __attribute__ ((noinline)) configure_smu(void)
   // Configure flash into S/NSC/NS regions.
   // S - NSC boundary
   SMU->ESAUMRB01 = FLASH_BASE & _SMU_ESAUMRB01_MASK;
+  /** SMU_ESAUMRBR01 (Movable Region Boundary tussen region 0 en 1)
+  * krijgt waarde 0x80000000 (= base flash voor ons)
+  * Idk wat het punt is van die if hieronder, zodat ge dat niet manueel hier aanpast I guess? 
+  */
   if (fih_not_eq(fih_int_encode(SMU->ESAUMRB01),
                  fih_int_encode(FLASH_BASE & _SMU_ESAUMRB01_MASK))) {
     fatal_error();
@@ -764,6 +768,9 @@ static fih_int __attribute__ ((noinline)) configure_smu(void)
   }
   // NSC - NS boundary
   SMU->ESAUMRB12 = (FLASH_BASE + TZ_NS_FLASH_OFFSET) & _SMU_ESAUMRB12_MASK;
+  /** SMU_ESAUMRBR12 (Movable Region Boundary tussen region 1 en 2)
+  * krijgt waarde 0x802c000 (= NS flash start - base flash addr voor ons)
+  */
   if (fih_not_eq(fih_int_encode(SMU->ESAUMRB12),
                  fih_int_encode((FLASH_BASE + TZ_NS_FLASH_OFFSET) & _SMU_ESAUMRB12_MASK))) {
     fatal_error();
