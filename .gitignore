@@ -1,6 +1,4 @@
 thesis_project/thesis_project_s/build/debug/sdk/platform/bootloader/api/btl_interface_nsc.d
-*.d
-*.o
 *.bin
 *.hex
 *.elf
