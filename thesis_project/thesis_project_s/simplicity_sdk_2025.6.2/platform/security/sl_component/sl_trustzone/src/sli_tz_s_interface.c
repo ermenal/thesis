@@ -44,6 +44,8 @@
 #include "tfm_crypto_defs.h"
 #include "psa/client.h"
 
+// #include "src/secure_gpio.h"
+
 #if defined(TZ_SERVICE_PSA_CRYPTO_PRESENT)
   #include "sli_tz_service_psa_crypto.h"
 #endif
@@ -354,6 +356,10 @@ int32_t sli_tz_s_interface_dispatch_simple(uint32_t sid,
 
 int32_t sli_tz_s_interface_dispatch_simple_no_args(uint32_t sid)
 {
+  // if (sid == 20){ 
+  //   return secure_led_toggle();
+  // }
+
   EFM_ASSERT(sizeof(simple_function_table_no_args) / sizeof(simple_function_table_no_args[0])
              == SLI_TZ_SIMPLE_NO_ARGS_MAX_SID);
 
@@ -363,4 +369,25 @@ int32_t sli_tz_s_interface_dispatch_simple_no_args(uint32_t sid)
 
   return simple_function_table_no_args[sid]();
 }
+
+#define GPIO_BASE_NS (0x5003C000UL)
+#define GPIO_BASE_S  (0x4003C000UL)
+
+#define GPIO_PORTB_DOUT_SET ((volatile uint32_t *)(GPIO_BASE_S + 0x70))
+
+void delay(volatile uint32_t count) {
+    while (count--) {
+        __NOP();
+    }
+}
+
+void secure_blink(void)
+{
+      *GPIO_PORTB_DOUT_SET = (0b100); // Toggle PB02 on
+       delay(1000000);
+       *GPIO_PORTB_DOUT_SET = 0x0; // Toggle PB02 off
+       delay(1000000);
+       return;
+}
+
 #endif //TZ_SERVICE_SYSCFG_PRESENT || TZ_SERVICE_MSC_PRESENT

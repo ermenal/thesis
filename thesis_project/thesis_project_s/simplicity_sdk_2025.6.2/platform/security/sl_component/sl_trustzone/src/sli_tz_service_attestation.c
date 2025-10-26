@@ -30,7 +30,6 @@
 
 #include <string.h>
 #include "em_device.h"
-#include "secure_gpio.h"
 #include "sli_tz_iovec_check.h"
 #include "psa/storage_common.h"
 
@@ -962,14 +961,6 @@ enum psa_attest_err_t sli_attest_add_all_sw_components(struct attest_token_encod
 }
 
 #endif // (_SILICON_LABS_SECURITY_FEATURE != _SILICON_LABS_SECURITY_FEATURE_VAULT)
-
-psa_status_t mijn_func(psa_invec in_vec[],
-                      size_t in_len,
-                      psa_outvec out_vec[],
-                      size_t out_len)
-{
-  secure_led_toggle();
-}
 
 //-------------------------------------
 // Full services (IOVEC usage)

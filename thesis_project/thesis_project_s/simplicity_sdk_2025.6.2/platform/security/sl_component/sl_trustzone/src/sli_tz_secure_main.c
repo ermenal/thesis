@@ -28,7 +28,7 @@
  *
  ******************************************************************************/
 
-#include "efr32fg23b010f512im48.h"
+// #include "efr32fg23b010f512im48.h"
 #include "em_cmu.h"
 #if defined (SL_COMPONENT_CATALOG_PRESENT)
   #include "sl_component_catalog.h"
@@ -699,13 +699,6 @@ static fih_int __attribute__ ((noinline)) configure_sau(void)
     }
    i++;
 
-  // MIJN NSC SAU REGION CONFIG 
-  // FIH_CALL(configure_sau_region, fih_rc, i & SAU_RNR_REGION_Msk, GPIO_BASE, ((GPIO_BASE + 0xFFF) & SAU_RLAR_LADDR_Msk) | SAU_RLAR_ENABLE_Msk);
-  // if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
-  //     fatal_error();
-  //     goto exit; // if fatal_error is glitched
-  //   }
-  //  i++;
 
   FIH_CFI_STEP_DECREMENT();
 
@@ -764,10 +757,6 @@ static fih_int __attribute__ ((noinline)) configure_smu(void)
   // Configure flash into S/NSC/NS regions.
   // S - NSC boundary
   SMU->ESAUMRB01 = FLASH_BASE & _SMU_ESAUMRB01_MASK;
-  /** SMU_ESAUMRBR01 (Movable Region Boundary tussen region 0 en 1)
-  * krijgt waarde 0x80000000 (= base flash voor ons)
-  * Idk wat het punt is van die if hieronder, zodat ge dat niet manueel hier aanpast I guess? 
-  */
   if (fih_not_eq(fih_int_encode(SMU->ESAUMRB01),
                  fih_int_encode(FLASH_BASE & _SMU_ESAUMRB01_MASK))) {
     fatal_error();
@@ -775,9 +764,6 @@ static fih_int __attribute__ ((noinline)) configure_smu(void)
   }
   // NSC - NS boundary
   SMU->ESAUMRB12 = (FLASH_BASE + TZ_NS_FLASH_OFFSET) & _SMU_ESAUMRB12_MASK;
-  /** SMU_ESAUMRBR12 (Movable Region Boundary tussen region 1 en 2)
-  * krijgt waarde 0x802c000 (= NS flash start - base flash addr voor ons)
-  */
   if (fih_not_eq(fih_int_encode(SMU->ESAUMRB12),
                  fih_int_encode((FLASH_BASE + TZ_NS_FLASH_OFFSET) & _SMU_ESAUMRB12_MASK))) {
     fatal_error();
@@ -892,7 +878,7 @@ static inline void configure_smu_peripherals(void)
   // All peripherals are non-secure except SMU, SEMAILBOX, MSC and SYSCFG.
   SMU->PPUSATD0_CLR = _SMU_PPUSATD0_MASK
                       & ~(SMU_PPUSATD0_SYSCFG
-                          | SMU_PPUSATD0_MSC 
+                          | SMU_PPUSATD0_MSC
                           | SMU_PPUSATD0_GPIO
                         );
   #if defined(SMU_PPUSATD2_SEMAILBOX)

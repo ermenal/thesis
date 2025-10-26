@@ -9,7 +9,7 @@ UNAME:=$(shell $(POSIX_TOOL_PATH)uname -s | $(POSIX_TOOL_PATH)sed -e 's/^\(CYGWI
 ifeq ($(UNAME),MINGW)
 # Translate "C:/super" into "/C/super" for MinGW make.
 SDK_PATH := /$(shell $(POSIX_TOOL_PATH)echo $(BASE_SDK_PATH) | sed s/://)
-PKG_PATH :=(COPIED_SDK_PATH)/util/third_party/trusted-firmware-m/secure_fw/partitions/crypto/crypto_rng.c /$(shell $(POSIX_TOOL_PATH)echo $(BASE_PKG_PATH) | sed s/://)
+PKG_PATH := /$(shell $(POSIX_TOOL_PATH)echo $(BASE_PKG_PATH) | sed s/://)
 endif
 SDK_PATH ?= $(BASE_SDK_PATH)
 PKG_PATH ?= $(BASE_PKG_PATH)
@@ -80,7 +80,6 @@ ASM_DEFS += \
 INCLUDES += \
  -Iconfig \
  -Iautogen \
- -Iinc \
  -I../thesis_project_ns/autogen/export \
  -I../thesis_project_ns/config/export \
  -I$(COPIED_SDK_PATH)/platform/Device/SiliconLabs/EFR32FG23/Include \
@@ -1244,21 +1243,6 @@ $(OUTPUT_DIR)/sdk/util/third_party/trusted-firmware-m/secure_fw/partitions/crypt
 	$(ECHO)$(CC) $(CFLAGS) -c -o $@ $(COPIED_SDK_PATH)/util/third_party/trusted-firmware-m/secure_fw/partitions/crypto/crypto_rng.c
 CDEPS += $(OUTPUT_DIR)/sdk/util/third_party/trusted-firmware-m/secure_fw/partitions/crypto/crypto_rng.d
 OBJS += $(OUTPUT_DIR)/sdk/util/third_party/trusted-firmware-m/secure_fw/partitions/crypto/crypto_rng.o
-
-
-$(OUTPUT_DIR)/secure_gpio.o: src/secure_gpio.c
-	@$(POSIX_TOOL_PATH)echo 'Building src/secure_gpio.c'
-	@$(POSIX_TOOL_PATH)mkdir -p $(@D)
-	$(ECHO)$(CC) $(CFLAGS) -c -o $@ src/secure_gpio.c
-CDEPS += $(OUTPUT_DIR)/secure_gpio.d
-OBJS += $(OUTPUT_DIR)/secure_gpio.o
-
-$(OUTPUT_DIR)/nsc_gpio.o: src/nsc_gpio.c
-	@$(POSIX_TOOL_PATH)echo 'Building src/nsc_gpio.c'
-	@$(POSIX_TOOL_PATH)mkdir -p $(@D)
-	$(ECHO)$(CC) $(CFLAGS) -c -o $@ src/nsc_gpio.c
-CDEPS += $(OUTPUT_DIR)/nsc_gpio.d
-OBJS += $(OUTPUT_DIR)/nsc_gpio.o
 
 # Automatically-generated Simplicity Studio Metadata
 # Please do not edit or delete these lines!

@@ -93,7 +93,6 @@ INCLUDES += \
  -I. \
  -I../thesis_project_s/autogen/export \
  -I../thesis_project_s/config/export \
- -I../thesis_project_s/inc \
  -I$(COPIED_SDK_PATH)/platform/Device/SiliconLabs/EFR32FG23/Include \
  -I$(COPIED_SDK_PATH)/platform/common/inc \
  -I$(COPIED_SDK_PATH)/hardware/board/inc \

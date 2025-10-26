@@ -1,5 +1,7 @@
 build/debug/sdk/platform/security/sl_component/sl_trustzone/src/sli_tz_secure_main.o: \
  simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/src/sli_tz_secure_main.c \
+ simplicity_sdk_2025.6.2/platform/emlib/inc/em_cmu.h \
+ simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/em_device.h \
  simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h \
  simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/core_cm33.h \
  simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_version.h \
@@ -58,9 +60,6 @@ build/debug/sdk/platform/security/sl_component/sl_trustzone/src/sli_tz_secure_ma
  simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_ldmaxbar_defines.h \
  autogen/sl_component_catalog.h \
  simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/config/secure/sl_trustzone_secure_config.h \
- simplicity_sdk_2025.6.2/platform/emlib/inc/em_cmu.h \
- simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/em_device.h \
- simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h \
  simplicity_sdk_2025.6.2/platform/common/inc/sl_assert.h \
  simplicity_sdk_2025.6.2/platform/emlib/inc/em_bus.h \
  simplicity_sdk_2025.6.2/platform/common/inc/sl_core.h \
@@ -173,6 +172,8 @@ build/debug/sdk/platform/security/sl_component/sl_trustzone/src/sli_tz_secure_ma
  simplicity_sdk_2025.6.2/platform/service/mpu/inc/sl_mpu.h \
  simplicity_sdk_2025.6.2/util/third_party/trusted-firmware-m/lib/fih/inc/fih.h \
  config/sl_fault_injection_hardening_cfg.h
+simplicity_sdk_2025.6.2/platform/emlib/inc/em_cmu.h:
+simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/em_device.h:
 simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h:
 simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/core_cm33.h:
 simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_version.h:
@@ -231,9 +232,6 @@ simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_
 simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_ldmaxbar_defines.h:
 autogen/sl_component_catalog.h:
 simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/config/secure/sl_trustzone_secure_config.h:
-simplicity_sdk_2025.6.2/platform/emlib/inc/em_cmu.h:
-simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/em_device.h:
-simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h:
 simplicity_sdk_2025.6.2/platform/common/inc/sl_assert.h:
 simplicity_sdk_2025.6.2/platform/emlib/inc/em_bus.h:
 simplicity_sdk_2025.6.2/platform/common/inc/sl_core.h:

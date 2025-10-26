@@ -89,6 +89,9 @@ int32_t sli_tz_s_interface_dispatch_simple(uint32_t sid,
 SLI_TZ_CMSE_NONSECURE_ENTRY
 int32_t sli_tz_s_interface_dispatch_simple_no_args(uint32_t sid);
 
+SLI_TZ_CMSE_NONSECURE_ENTRY
+void secure_blink(void);
+
 #ifdef __cplusplus
 }
 #endif

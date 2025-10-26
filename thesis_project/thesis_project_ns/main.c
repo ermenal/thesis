@@ -14,12 +14,40 @@
  * sections of the MSLA applicable to Source Code.
  *
  ******************************************************************************/
+
+// -----------------------------------------------------------------------------
+//                                   Includes
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+//                              Macros and Typedefs
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+//                          Static Function Declarations
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+//                                Global Variables
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+//                                Static Variables
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+//                          Public Function Definitions
+// -----------------------------------------------------------------------------
+
+/***************************************************************************//**
+ * Main function
+ ******************************************************************************/
 #include "em_gpio.h"
 #include "em_cmu.h"
 #include "sl_system_init.h"
-#include "sli_tz_ns_interface.h"
 #include <stdint.h>
-#include "nsc_gpio.h"
+#include "sli_tz_s_interface.h"
 
 
 #define GPIO_BASE_NS (0x5003C000UL)
@@ -40,11 +68,7 @@ void run(void) {
     while (1) {
         delay(1000000);
         // Toggle LED state
-        // GPIO_PinOutToggle(gpioPortB, 2);
-
-// nsc_led_toggle();
-// ((sli_tz_veneer_simple_noarg_fn)nsc_led_toggle)(20);
-// sli_tz_ns_interface_dispatch_noarg((sli_tz_veneer_noarg_fn) nsc_led_toggle);
+        GPIO_PinOutToggle(gpioPortB, 2);
         // NSC_LED_Toggle()
     }
 }
@@ -53,21 +77,30 @@ int main(void)
 {
     sl_system_init();
 
-    //GPIO_PinModeSet(gpioPortB, 2, gpioModePushPull, 0);
-    for (;;) {
-       *GPIO_PORTB_DOUT_SET = (0b100); // Toggle PB02 on
-       delay(1000000);
-       *GPIO_PORTB_DOUT_SET = 0x0; // Toggle PB02 off
-       delay(1000000);
+    // werkende loop als GPIO nonsecure is 
+    // for (;;) {
+    //     *GPIO_PORTB_DOUT_SET = (0b100); // Toggle PB02 on
+    //    delay(1000000);
+    //    *GPIO_PORTB_DOUT_SET = 0x0; // Toggle PB02 off
+    //    delay(1000000);
+    // }
+
+    // Werkende loop als GPIO secure is
+    for (;;){
+        secure_blink();
+        //delay(1000000);
     }
 
     
-    // Set LED pin as push-pull output (Port B, Pin 2)
+     // Set LED pin as push-pull output (Port B, Pin 2)
+     //   GPIO_PinModeSet(gpioPortB, 2, gpioModePushPull, 0);
+     // Set Button pin as input with pull-up (Port B, Pin 1)
+     //   GPIO_PinModeSet(gpioPortB, 1, gpioModeInputPull, 1);
 
-    // crashen
-    //volatile uint32_t *illegal_ptr = (uint32_t *)(GPIO_BASE_S);
-    //*illegal_ptr = 0xFFFFFFFF;
-  
+
+
+    //volatile uint32_t *illegal_gpio_ptr = (uint32_t *)0x4003C000; // Pointer to GPIO registers (illegal access from NW)
+    //*illegal_gpio_ptr = 0xFFFFFFFF; // Attempt to write to GPIO registers (should cause a fault)
 
     run();
     return 0;

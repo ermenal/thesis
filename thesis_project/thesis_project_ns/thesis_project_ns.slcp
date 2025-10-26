@@ -22,8 +22,6 @@ source:
 - {path: app_process.c}
 - {path: app_psa_crypto_ecdh.c}
 - {path: app_psa_crypto_key.c}
-#- {path: ../thesis_project_s/src/nsc_gpio.c}
-#- {path: /home/ermenal/thesis_project/thesis_project_s/src/nsc_gpio.c}
 tag: ['companion:secure_app']
 include:
 - path: .
@@ -33,7 +31,6 @@ include:
   - {path: app_psa_crypto_ecdh.h}
   - {path: app_psa_crypto_key.h}
   - {path: app_psa_crypto_macro.h}
-  - {path: /home/ermenal/thesis_project/thesis_project_s/src/nsc_gpio.h}
 sdk: {vendor: null, id: simplicity_sdk, version: 2025.6.2}
 toolchain_settings:
 - {value: debug, option: optimize}
