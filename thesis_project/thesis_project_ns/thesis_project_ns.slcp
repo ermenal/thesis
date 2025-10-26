@@ -22,8 +22,8 @@ source:
 - {path: app_process.c}
 - {path: app_psa_crypto_ecdh.c}
 - {path: app_psa_crypto_key.c}
-- {path: ../thesis_project_s/src/nsc_gpio.c}
-- {path: /home/ermenal/thesis_project/thesis_project_s/src/nsc_gpio.c}
+#- {path: ../thesis_project_s/src/nsc_gpio.c}
+#- {path: /home/ermenal/thesis_project/thesis_project_s/src/nsc_gpio.c}
 tag: ['companion:secure_app']
 include:
 - path: .

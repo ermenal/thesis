@@ -80,6 +80,7 @@ ASM_DEFS += \
 INCLUDES += \
  -Iconfig \
  -Iautogen \
+ -Iinc \
  -I../thesis_project_ns/autogen/export \
  -I../thesis_project_ns/config/export \
  -I$(COPIED_SDK_PATH)/platform/Device/SiliconLabs/EFR32FG23/Include \

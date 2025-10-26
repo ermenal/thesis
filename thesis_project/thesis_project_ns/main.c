@@ -41,7 +41,10 @@ void run(void) {
         delay(1000000);
         // Toggle LED state
         // GPIO_PinOutToggle(gpioPortB, 2);
-sli_tz_ns_interface_dispatch_noarg((sli_tz_veneer_noarg_fn) nsc_led_toggle());
+
+// nsc_led_toggle();
+// ((sli_tz_veneer_simple_noarg_fn)nsc_led_toggle)(20);
+// sli_tz_ns_interface_dispatch_noarg((sli_tz_veneer_noarg_fn) nsc_led_toggle);
         // NSC_LED_Toggle()
     }
 }

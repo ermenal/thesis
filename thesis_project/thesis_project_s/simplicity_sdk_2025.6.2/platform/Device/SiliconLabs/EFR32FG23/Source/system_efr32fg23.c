@@ -175,7 +175,7 @@ void SystemInit(void)
  * that all the peripherals are accessed from non-secure address except SMU,
  * as SMU is used to configure the trustzone state of the system. */
 #if !defined(SL_TRUSTZONE_SECURE) && !defined(SL_TRUSTZONE_NONSECURE) \
-  && defined(__TZ_PRESENT)
+&& defined(__TZ_PRESENT)
   CMU->CLKEN1_SET = CMU_CLKEN1_SMU;
   // config SMU to Secure and other peripherals to Non-Secure.
   SMU->PPUSATD0_CLR = _SMU_PPUSATD0_MASK;

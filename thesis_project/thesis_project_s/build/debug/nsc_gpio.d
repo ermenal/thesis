@@ -1,4 +1,4 @@
-build/debug/nsc_gpio.o: src/nsc_gpio.c src/nsc_gpio.h src/secure_gpio.h \
+build/debug/nsc_gpio.o: src/nsc_gpio.c inc/nsc_gpio.h inc/secure_gpio.h \
  simplicity_sdk_2025.6.2/platform/emlib/inc/em_gpio.h \
  simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/em_device.h \
  simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h \
@@ -66,8 +66,8 @@ build/debug/nsc_gpio.o: src/nsc_gpio.c src/nsc_gpio.h src/secure_gpio.h \
  simplicity_sdk_2025.6.2/platform/common/inc/sl_common.h \
  simplicity_sdk_2025.6.2/platform/common/inc/sl_assert.h \
  simplicity_sdk_2025.6.2/platform/common/inc/sl_enum.h
-src/nsc_gpio.h:
-src/secure_gpio.h:
+inc/nsc_gpio.h:
+inc/secure_gpio.h:
 simplicity_sdk_2025.6.2/platform/emlib/inc/em_gpio.h:
 simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/em_device.h:
 simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h:

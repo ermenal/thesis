@@ -73,7 +73,10 @@ build/debug/project/main.o: main.c \
  simplicity_sdk_2025.6.2/platform/emlib/inc/em_cmu_compat.h \
  simplicity_sdk_2025.6.2/platform/emlib/inc/em_gpio.h \
  simplicity_sdk_2025.6.2/platform/emlib/inc/sli_em_cmu.h \
- simplicity_sdk_2025.6.2/platform/service/sl_main/sl_system_compatibility/inc/sl_system_init.h
+ simplicity_sdk_2025.6.2/platform/service/sl_main/sl_system_compatibility/inc/sl_system_init.h \
+ simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/inc/nonsecure/sli_tz_ns_interface.h \
+ simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/inc/common/sli_tz_iovec.h \
+ ../thesis_project_s/inc/nsc_gpio.h
 simplicity_sdk_2025.6.2/platform/emlib/inc/em_gpio.h:
 simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/em_device.h:
 simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h:
@@ -149,3 +152,6 @@ simplicity_sdk_2025.6.2/platform/emlib/inc/em_cmu_compat.h:
 simplicity_sdk_2025.6.2/platform/emlib/inc/em_gpio.h:
 simplicity_sdk_2025.6.2/platform/emlib/inc/sli_em_cmu.h:
 simplicity_sdk_2025.6.2/platform/service/sl_main/sl_system_compatibility/inc/sl_system_init.h:
+simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/inc/nonsecure/sli_tz_ns_interface.h:
+simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/inc/common/sli_tz_iovec.h:
+../thesis_project_s/inc/nsc_gpio.h:

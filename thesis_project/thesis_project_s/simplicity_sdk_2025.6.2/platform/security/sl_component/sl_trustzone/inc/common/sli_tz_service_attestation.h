@@ -46,6 +46,10 @@ extern "C" {
 
 //-------------------------------------
 // Full services (IOVEC usage)
+psa_status_t mijn_func(psa_invec in_vec[],
+                      size_t in_len,
+                      psa_outvec out_vec[],
+                      size_t out_len);
 
 /**
  * \brief Get attestation public key.

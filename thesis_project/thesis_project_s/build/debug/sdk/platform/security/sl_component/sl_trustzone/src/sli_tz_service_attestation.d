@@ -59,9 +59,16 @@ build/debug/sdk/platform/security/sl_component/sl_trustzone/src/sli_tz_service_a
  simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_ldmaxbar_defines.h \
  autogen/sl_component_catalog.h \
  simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/config/secure/sl_trustzone_secure_config.h \
+ inc/secure_gpio.h simplicity_sdk_2025.6.2/platform/emlib/inc/em_gpio.h \
+ simplicity_sdk_2025.6.2/platform/common/inc/sl_assert.h \
+ simplicity_sdk_2025.6.2/platform/emlib/inc/em_bus.h \
+ simplicity_sdk_2025.6.2/platform/common/inc/sl_core.h \
+ simplicity_sdk_2025.6.2/platform/common/inc/sl_code_classification.h \
+ simplicity_sdk_2025.6.2/platform/common/inc/sl_common.h \
+ simplicity_sdk_2025.6.2/platform/common/inc/sl_assert.h \
+ simplicity_sdk_2025.6.2/platform/common/inc/sl_enum.h \
  simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/inc/secure/sli_tz_iovec_check.h \
  simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/inc/common/sli_tz_iovec.h \
- simplicity_sdk_2025.6.2/platform/common/inc/sl_assert.h \
  simplicity_sdk_2025.6.2/util/third_party/trusted-firmware-m/interface/include/psa/storage_common.h \
  simplicity_sdk_2025.6.2/util/third_party/trusted-firmware-m/interface/include/psa/client.h \
  simplicity_sdk_2025.6.2/util/third_party/trusted-firmware-m/interface/include/psa_config.h \
@@ -103,8 +110,6 @@ build/debug/sdk/platform/security/sl_component/sl_trustzone/src/sli_tz_service_a
  simplicity_sdk_2025.6.2/platform/security/sl_component/se_manager/inc/sl_se_manager_config.h \
  simplicity_sdk_2025.6.2/platform/security/sl_component/se_manager/inc/sl_se_manager_check_config.h \
  simplicity_sdk_2025.6.2/platform/security/sl_component/se_manager/inc/sli_se_manager_mailbox.h \
- simplicity_sdk_2025.6.2/platform/common/inc/sl_common.h \
- simplicity_sdk_2025.6.2/platform/common/inc/sl_assert.h \
  simplicity_sdk_2025.6.2/platform/common/inc/sl_status.h \
  simplicity_sdk_2025.6.2/platform/security/sl_component/se_manager/inc/sl_se_manager_cipher.h \
  simplicity_sdk_2025.6.2/platform/security/sl_component/se_manager/inc/sl_se_manager_util.h \
@@ -168,9 +173,17 @@ simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_
 simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_ldmaxbar_defines.h:
 autogen/sl_component_catalog.h:
 simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/config/secure/sl_trustzone_secure_config.h:
+inc/secure_gpio.h:
+simplicity_sdk_2025.6.2/platform/emlib/inc/em_gpio.h:
+simplicity_sdk_2025.6.2/platform/common/inc/sl_assert.h:
+simplicity_sdk_2025.6.2/platform/emlib/inc/em_bus.h:
+simplicity_sdk_2025.6.2/platform/common/inc/sl_core.h:
+simplicity_sdk_2025.6.2/platform/common/inc/sl_code_classification.h:
+simplicity_sdk_2025.6.2/platform/common/inc/sl_common.h:
+simplicity_sdk_2025.6.2/platform/common/inc/sl_assert.h:
+simplicity_sdk_2025.6.2/platform/common/inc/sl_enum.h:
 simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/inc/secure/sli_tz_iovec_check.h:
 simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/inc/common/sli_tz_iovec.h:
-simplicity_sdk_2025.6.2/platform/common/inc/sl_assert.h:
 simplicity_sdk_2025.6.2/util/third_party/trusted-firmware-m/interface/include/psa/storage_common.h:
 simplicity_sdk_2025.6.2/util/third_party/trusted-firmware-m/interface/include/psa/client.h:
 simplicity_sdk_2025.6.2/util/third_party/trusted-firmware-m/interface/include/psa_config.h:
@@ -212,8 +225,6 @@ simplicity_sdk_2025.6.2/platform/security/sl_component/se_manager/inc/sl_se_mana
 simplicity_sdk_2025.6.2/platform/security/sl_component/se_manager/inc/sl_se_manager_config.h:
 simplicity_sdk_2025.6.2/platform/security/sl_component/se_manager/inc/sl_se_manager_check_config.h:
 simplicity_sdk_2025.6.2/platform/security/sl_component/se_manager/inc/sli_se_manager_mailbox.h:
-simplicity_sdk_2025.6.2/platform/common/inc/sl_common.h:
-simplicity_sdk_2025.6.2/platform/common/inc/sl_assert.h:
 simplicity_sdk_2025.6.2/platform/common/inc/sl_status.h:
 simplicity_sdk_2025.6.2/platform/security/sl_component/se_manager/inc/sl_se_manager_cipher.h:
 simplicity_sdk_2025.6.2/platform/security/sl_component/se_manager/inc/sl_se_manager_util.h:

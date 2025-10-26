@@ -699,6 +699,13 @@ static fih_int __attribute__ ((noinline)) configure_sau(void)
     }
    i++;
 
+  // MIJN NSC SAU REGION CONFIG 
+  // FIH_CALL(configure_sau_region, fih_rc, i & SAU_RNR_REGION_Msk, GPIO_BASE, ((GPIO_BASE + 0xFFF) & SAU_RLAR_LADDR_Msk) | SAU_RLAR_ENABLE_Msk);
+  // if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
+  //     fatal_error();
+  //     goto exit; // if fatal_error is glitched
+  //   }
+  //  i++;
 
   FIH_CFI_STEP_DECREMENT();
 
