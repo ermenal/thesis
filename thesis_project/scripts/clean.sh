@@ -1,3 +1,3 @@
 #!/bin/bash
 
-make -f thesis_project.solution.Makefile clean
+make -f rtz_ws.solution.Makefile clean

@@ -1,8 +1,0 @@
-#CRC Codes for initially generated config files -- do not modify!
-app_properties_config.h=-77184399
-btl_interface_cfg.h=664168518
-btl_interface_cfg_s2c3.h=1779758953
-sl_core_config.h=-2018153270
-sl_fault_injection_hardening_cfg.h=1583405622
-sl_memory_manager_config.h=-209387538
-sl_memory_manager_region_config.h=41493225

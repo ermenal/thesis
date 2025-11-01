@@ -8,8 +8,8 @@
         {
             "name": "TrustZone Debug JLink",
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceFolder}/thesis_project_s/build/debug/thesis_project_s.out",
-            "loadFiles": ["${workspaceFolder}/artifact/thesis_project-combined.s37"],
+            "executable": "${workspaceFolder}/rtz_s/build/debug/rtz_s.out",
+            "loadFiles": ["${workspaceFolder}/artifact/rtz_ws-combined.s37"],
             "request": "launch",
             "type": "cortex-debug",
             //"runToEntryPoint": "Reset_Handler",
@@ -17,10 +17,10 @@
             "servertype": "jlink",
             "device": "EFR32FG23B010F512IM48",
             "postStartSessionCommands": [
-                "set print type hex on",
-                "define sau_ctrl\nx/wx 0xE000EDD0\nend"
+                // "set print type hex on",
+                // "define sau_ctrl\nx/wx 0xE000EDD0\nend"
             ],
-            "symbolFiles": ["thesis_project_ns/build/debug/thesis_project_ns.out", "thesis_project_s/build/debug/thesis_project_s.out"]   
+            "symbolFiles": ["rtz_ns/build/debug/rtz_ns.out", "rtz_s/build/debug/rtz_s.out"]
         },
     ]
 }
