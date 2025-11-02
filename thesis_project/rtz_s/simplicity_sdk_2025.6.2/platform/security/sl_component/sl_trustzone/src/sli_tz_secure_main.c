@@ -279,10 +279,11 @@ int main(void)
   }
 
   // Configure interrupt target states before any secure interrupts are enabled.
-  FIH_CALL(configure_interrupt_target_states, fih_rc);
-  if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
-    fatal_error();
-  }
+  // FIH_CALL(configure_interrupt_target_states, fih_rc);
+  // if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
+  //   fatal_error();
+  // }
+  fixNVIC();
 
   #if defined(MBEDTLS_PSA_CRYPTO_STORAGE_C) && defined(SLI_PSA_ITS_ENCRYPTED)
   #if defined(SEMAILBOX_PRESENT)
@@ -377,9 +378,6 @@ int main(void)
   }
   sl_main_init();
   init_secure_radio();
-//  while(1) {
-//    process_action_secure_radio();
-//  }
   start_ns_app();
 
   // Will never get here, as non-secure software doesn't return.
@@ -994,7 +992,7 @@ static fih_int __attribute__ ((noinline)) configure_interrupt_target_states(void
   
 
 
-  NVIC_ClearTargetState(GPIO_EVEN_IRQn);
+  // NVIC_ClearTargetState(GPIO_EVEN_IRQn);
   NVIC_ClearTargetState(GPIO_ODD_IRQn);
 
 

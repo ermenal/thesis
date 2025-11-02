@@ -1,20 +1,15 @@
-build/debug/project/main.o: main.c autogen/sl_component_catalog.h \
- simplicity_sdk_2025.6.2/platform/service/sl_main/sl_system_compatibility/inc/sl_system_init.h \
- simplicity_sdk_2025.6.2/platform/service/sl_main/sl_system_compatibility/inc/sl_system_process_action.h \
- app_init.h app_psa_crypto_macro.h \
- simplicity_sdk_2025.6.2/platform/emlib/inc/em_cmu.h \
- simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/em_device.h \
- simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h \
- simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/core_cm33.h \
- simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_version.h \
- simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_compiler.h \
- simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_gcc.h \
+build/debug/project/main.o: main.c \
  simplicity_sdk_2025.6.2/platform/service/interrupt_manager/inc/arm/cmsis_nvic_virtual.h \
  simplicity_sdk_2025.6.2/platform/service/interrupt_manager/inc/sl_interrupt_manager.h \
  simplicity_sdk_2025.6.2/platform/common/inc/sl_core.h \
  simplicity_sdk_2025.6.2/platform/common/inc/sl_code_classification.h \
  simplicity_sdk_2025.6.2/platform/common/inc/sli_code_classification.h \
  simplicity_sdk_2025.6.2/platform/common/inc/sl_status.h \
+ simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h \
+ simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/core_cm33.h \
+ simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_version.h \
+ simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_compiler.h \
+ simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_gcc.h \
  simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/mpu_armv8.h \
  simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/system_efr32fg23.h \
  simplicity_sdk_2025.6.2/platform/common/inc/sl_code_classification.h \
@@ -65,6 +60,14 @@ build/debug/project/main.o: main.c autogen/sl_component_catalog.h \
  simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_prs_signals.h \
  simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_dma_descriptor.h \
  simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_ldmaxbar_defines.h \
+ autogen/sl_component_catalog.h \
+ simplicity_sdk_2025.6.2/platform/service/sl_main/sl_system_compatibility/inc/sl_system_init.h \
+ simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/system_efr32fg23.h \
+ simplicity_sdk_2025.6.2/platform/service/sl_main/sl_system_compatibility/inc/sl_system_process_action.h \
+ app_init.h app_psa_crypto_macro.h \
+ simplicity_sdk_2025.6.2/platform/emlib/inc/em_cmu.h \
+ simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/em_device.h \
+ simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h \
  simplicity_sdk_2025.6.2/platform/common/inc/sl_assert.h \
  simplicity_sdk_2025.6.2/platform/emlib/inc/em_bus.h \
  simplicity_sdk_2025.6.2/platform/emlib/inc/em_cmu_compat.h \
@@ -153,24 +156,17 @@ build/debug/project/main.o: main.c autogen/sl_component_catalog.h \
  simplicity_sdk_2025.6.2/util/third_party/trusted-firmware-m/interface/include/psa_config.h \
  simplicity_sdk_2025.6.2/util/third_party/trusted-firmware-m/interface/include/psa/error.h \
  simplicity_sdk_2025.6.2/platform/security/sl_component/sl_trustzone/inc/common/sli_tz_iovec.h
-autogen/sl_component_catalog.h:
-simplicity_sdk_2025.6.2/platform/service/sl_main/sl_system_compatibility/inc/sl_system_init.h:
-simplicity_sdk_2025.6.2/platform/service/sl_main/sl_system_compatibility/inc/sl_system_process_action.h:
-app_init.h:
-app_psa_crypto_macro.h:
-simplicity_sdk_2025.6.2/platform/emlib/inc/em_cmu.h:
-simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/em_device.h:
-simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h:
-simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/core_cm33.h:
-simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_version.h:
-simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_compiler.h:
-simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_gcc.h:
 simplicity_sdk_2025.6.2/platform/service/interrupt_manager/inc/arm/cmsis_nvic_virtual.h:
 simplicity_sdk_2025.6.2/platform/service/interrupt_manager/inc/sl_interrupt_manager.h:
 simplicity_sdk_2025.6.2/platform/common/inc/sl_core.h:
 simplicity_sdk_2025.6.2/platform/common/inc/sl_code_classification.h:
 simplicity_sdk_2025.6.2/platform/common/inc/sli_code_classification.h:
 simplicity_sdk_2025.6.2/platform/common/inc/sl_status.h:
+simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h:
+simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/core_cm33.h:
+simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_version.h:
+simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_compiler.h:
+simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/cmsis_gcc.h:
 simplicity_sdk_2025.6.2/platform/CMSIS/Core/Include/mpu_armv8.h:
 simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/system_efr32fg23.h:
 simplicity_sdk_2025.6.2/platform/common/inc/sl_code_classification.h:
@@ -221,6 +217,15 @@ simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_
 simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_prs_signals.h:
 simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_dma_descriptor.h:
 simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_ldmaxbar_defines.h:
+autogen/sl_component_catalog.h:
+simplicity_sdk_2025.6.2/platform/service/sl_main/sl_system_compatibility/inc/sl_system_init.h:
+simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/system_efr32fg23.h:
+simplicity_sdk_2025.6.2/platform/service/sl_main/sl_system_compatibility/inc/sl_system_process_action.h:
+app_init.h:
+app_psa_crypto_macro.h:
+simplicity_sdk_2025.6.2/platform/emlib/inc/em_cmu.h:
+simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/em_device.h:
+simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h:
 simplicity_sdk_2025.6.2/platform/common/inc/sl_assert.h:
 simplicity_sdk_2025.6.2/platform/emlib/inc/em_bus.h:
 simplicity_sdk_2025.6.2/platform/emlib/inc/em_cmu_compat.h:

@@ -27,6 +27,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  *
  ******************************************************************************/
+#include "cmsis_nvic_virtual.h"
+#include "efr32fg23b010f512im48.h"
 #include "em_gpio.h"
 #include "gpiointerrupt.h"
 #include "rail.h"
@@ -38,6 +40,7 @@
 #include <stdio.h>
 #include "sl_common.h"
 #include "rail_config.h"
+#include <string.h>
 
 
 // TX FIFO dingen
@@ -55,25 +58,31 @@ SL_ALIGN(RAIL_FIFO_ALIGNMENT)
 static uint8_t rx_fifo[RX_FIFO_SIZE]
 SL_ATTRIBUTE_ALIGN(RAIL_FIFO_ALIGNMENT);
 
-// App process dingen 
-#define PAYLOAD_LENGTH 16
-static uint8_t payload[PAYLOAD_LENGTH] =
-    {PAYLOAD_LENGTH - 1, 0x01, 0x02, 0x03, 0x04,
-  0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x00 };
-static volatile bool send_packet = false;
+#define PACKET_MAX_LENGTH 16
+#define RX_PACKET_BUFFER_SIZE (PACKET_MAX_LENGTH * 2) // Extra voor appended info
+static uint8_t secure_rx_buffer[RX_PACKET_BUFFER_SIZE];
 
-static uint8_t rx_buffer[PAYLOAD_LENGTH*2]; // Extra bytes voor appended information van RAIL
-static RAIL_RxPacketHandle_t packet_handle;
-static RAIL_RxPacketInfo_t packet_info;
-static RAIL_RxPacketDetails_t packet_details;
+#define SECURE_COMMAND_SEQUENCE_LENGTH 3
+const uint8_t secure_command_sequence[SECURE_COMMAND_SEQUENCE_LENGTH] = {0x01, 0x02, 0x03};
 
-void buttonCb(uint8_t intNo) {
-  send_packet = true;
-  // GPIO_PinOutToggle(gpioPortB, 2);
-  // tijdelijk, teveel in cb ofc
-  process_action_secure_radio(); 
+/*
+* Button callback (GPIO odd interrupt, gericht op SW)
+* Forward "button was pressed" naar NSW via SW1 IRQ
+*/
+void buttonCb(uint8_t intNo) 
+{
+  (void) intNo;
+  NVIC_SetPendingIRQ(SW1_IRQn);
 }
 
+/*
+* Init secure radio
+* Initialize de globale SL_RAIL_UTIL_HANDLE_INST handle
+* Setup aligned secure TX en RX FIFO
+* Enable TX, RX en cal events
+* Start RX op default channel
+* Setup LED, button en button interrupt
+*/
 void init_secure_radio(void)
 {
   RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
@@ -92,13 +101,13 @@ void init_secure_radio(void)
                                            | RAIL_EVENTS_RX_COMPLETION
                                            | RAIL_EVENT_CAL_NEEDED);
   if (status != RAIL_STATUS_NO_ERROR) {
-    printf("RAIL_ConfigEvents failed: %lu\n", status);
+    printf("RAIL_ConfigEvents failed: %u\n", status);
     while(1);
   }
 
   status = RAIL_SetRxFifo(rail_handle, rx_fifo, &rx_fifo_size);
   if (status != RAIL_STATUS_NO_ERROR) {
-    printf("RAIL_SetRxFifo failed: %lu\n", status);
+    printf("RAIL_SetRxFifo failed: %u\n", status);
     while(1);
   }
   const RAIL_ChannelConfig_t *mijnConfig = channelConfigs[0];
@@ -106,97 +115,122 @@ void init_secure_radio(void)
                         mijnConfig->configs->channelNumberStart,
                         NULL);
   if (status != RAIL_STATUS_NO_ERROR) {
-    printf("RAIL_StartRx failed: %lu\n", status);
+    printf("RAIL_StartRx failed: %u\n", status);
     while(1);
   }
 
+  CMU_ClockEnable(cmuClock_GPIO, true);
   // setup LED
   GPIO_PinModeSet(gpioPortB, 2, gpioModePushPull, false);
   
-  CMU_ClockEnable(cmuClock_GPIO, true);
+  // setup button int
   GPIOINT_Init();
   GPIO_PinModeSet(gpioPortB, 1, gpioModeInputPull, 1);
   GPIOINT_CallbackRegister(1, buttonCb);
   GPIO_ExtIntConfig(gpioPortB, 1, 1, false, true, true);
 }
 
-void process_action_secure_radio(void) 
+/*
+* Download oudste packet vd RAIL RX FIFO naar gegeven buffer
+* Return aantal bytes vd packet, 0 als geen packet / leeg / error
+*/
+uint16_t download_packet(RAIL_Handle_t rail_handle, uint8_t *rx_buf)
 {
-  // RAIL_RadioState_t radio_state = RAIL_GetRadioState(rail_handle);
-  // printf("Radio state: %u\n", radio_state);
-  // wel degelijk altijd in rx state ... 
-  // send_packet = true;
-  RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
-  if (send_packet) {
-    send_packet = false;
-    
-    payload[PAYLOAD_LENGTH - 1]++;
-
-    RAIL_WriteTxFifo(rail_handle,
-                     payload,
-                     PAYLOAD_LENGTH,
-                     false);
-    const RAIL_ChannelConfig_t *mijnConfig = channelConfigs[0];
-    RAIL_StartTx(rail_handle,
-                 mijnConfig->configs->channelNumberStart,
-                 RAIL_TX_OPTIONS_DEFAULT,
-                 NULL);
-  }
-  packet_handle = RAIL_GetRxPacketInfo(rail_handle,
+  RAIL_RxPacketInfo_t packet_info;
+  RAIL_RxPacketDetails_t packet_details;
+  RAIL_RxPacketHandle_t packet_handle = RAIL_GetRxPacketInfo(rail_handle,
                                        RAIL_RX_PACKET_HANDLE_OLDEST_COMPLETE,
                                        &packet_info);
-    
+  // printf("Download packet in SW\n");
   if (packet_handle != RAIL_RX_PACKET_HANDLE_INVALID) {
-    RAIL_CopyRxPacket(rx_buffer, &packet_info);
+    RAIL_CopyRxPacket(rx_buf, &packet_info);
     RAIL_Status_t status =
       RAIL_GetRxPacketDetails(rail_handle, packet_handle, &packet_details);
     if (status != RAIL_STATUS_NO_ERROR) {
-      printf("RAIL_GetRxPacketDetails failed: %lu\n", status);
-      while(1);
+      printf("RAIL_GetRxPacketDetails failed: %u\n", status);
+      return 0;
     }
     status = RAIL_ReleaseRxPacket(rail_handle, packet_handle);
     if (status != RAIL_STATUS_NO_ERROR) {
-      printf("RAIL_ReleaseRxPacket failed: %lu\n", status);
-      while(1);
+      printf("RAIL_ReleaseRxPacket failed: %u\n", status);
+      return 0;
     }
-    printf("RX PACKET RECEIVED: ");
-    for (int i=0; i<packet_info.packetBytes; i++) {
-      printf("0x%02X", rx_buffer[i]);
-    }
-    printf("\n");
+    return packet_info.packetBytes;
   }
+  return 0;
 }
 
+/*
+* Transmit packet met gegeven payload en length
+* Return RAIL_StartTx status
+*/
+uint32_t transmit_packet(uint8_t *payload, uint16_t length)
+{
+  RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
+  RAIL_WriteTxFifo(rail_handle, payload, length, false);
+  return RAIL_StartTx(rail_handle,
+                 channelConfigs[0]->configs->channelNumberStart,
+                 RAIL_TX_OPTIONS_DEFAULT,
+                 NULL);
+}
+
+/*
+* Wanneer we packet met secure command sequence ontvangen, call deze
+*/
+void handle_secure_command(uint16_t packet_length) 
+{
+  printf("SECURE COMMAND RECEIVED! COMMAND: %.*s\n", packet_length, secure_rx_buffer);
+}
+
+/*
+* RAIL library event callback functie
+* Setup verschillende events, enkel RX doet iets speciaal
+* Bij RX event: Hou packet vast in RX FIFO, zet SW0 IRQ pending om NS te waarschuwen
+*
+* Issue: Mogelijk dat als NS traag is met downloaden, dat RX FIFO overloopt ...
+*/
 SL_CODE_RAM void sl_rail_util_on_event(sl_rail_handle_t rail_handle, sl_rail_events_t events)
 {
-  (void) rail_handle;
-  // printf("EVENT: %lu\n", events);
-
   if (events & RAIL_EVENTS_TX_COMPLETION) {
-    printf("EVENT: TX completed\n");
+    // printf("EVENT: TX completed\n");
   }
-  if (events & RAIL_EVENTS_RX_COMPLETION) {
-    if (events & RAIL_EVENT_RX_PACKET_RECEIVED) {
-      printf("EVENT: RX packet received\n");
-      // Zeg RAIL dat we het packet willen houden in de rx_fifo
-      // Anders verwijdert RAIL het packet na deze callback
-      // Nu kunnen we de packet downloaden buiten deze callback
-      // Alternatief: Direct hier rx packet downloaden, maar mogelijks grote memcpy in interrupt ... 
+  else if (events & RAIL_EVENT_RX_PACKET_RECEIVED) {
+    RAIL_RxPacketInfo_t packet_info;
+    RAIL_RxPacketHandle_t packet_handle = RAIL_GetRxPacketInfo(rail_handle,
+                                         RAIL_RX_PACKET_HANDLE_NEWEST,
+                                         &packet_info);
+    if (packet_handle == RAIL_RX_PACKET_HANDLE_INVALID) {
+      printf("RAIL_GetRxPacketInfo failed\n");
+      return;
+    }
+    RAIL_CopyRxPacket(secure_rx_buffer, &packet_info);
+    if ((packet_info.packetBytes >= SECURE_COMMAND_SEQUENCE_LENGTH) &&
+        (memcmp(secure_rx_buffer, secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH) == 0)){
+        // Secure command
+        handle_secure_command(packet_info.packetBytes);
+        RAIL_ReleaseRxPacket(rail_handle, packet_handle);
+    } else { // Normal packet, voor NS
       if (RAIL_HoldRxPacket(rail_handle) == RAIL_RX_PACKET_HANDLE_INVALID) {
         printf("RAIL_HoldRxPacket failed\n");
         while(1);
       }
-    }
-    else {
-      printf("EVENT: RX completed, niet packet received (error dus)\n");
+      // Laat NS weten dat packet klaar is
+      NVIC_SetPendingIRQ(SW0_IRQn);
     }
   }
-  if (events & RAIL_EVENT_CAL_NEEDED) {
-    printf("EVENT: Calibration needed\n");
+  else if (events & RAIL_EVENT_CAL_NEEDED) {
+    // printf("EVENT: Calibration needed\n");
     RAIL_Status_t status = RAIL_Calibrate(rail_handle, NULL, RAIL_CAL_ALL_PENDING);
     if (status != RAIL_STATUS_NO_ERROR) {
-      printf("RAIL_Calibrate failed: %lu\n", status);
+      printf("RAIL_Calibrate failed: %u\n", status);
       while(1);
     }
+  }
+  else {
+    printf("Wss FIFO vol\n");
+    // Wss RX fifo vol want NS traag met downloaden, reset zodat we geen important packets missen
+    // Edge case: RX FIFO net vol + net nieuwe secure command = secure verloren? 
+    // Maar events bevat ook RAIL_EVENT_RX_FIFO_ALMOST_FULL dus denk niet mogelijk want dan resetten we ook hier? 
+    RAIL_ResetFifo(rail_handle, false, true);
   }
 }

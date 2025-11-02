@@ -1,4 +1,6 @@
 #include "mijn_tz_setup.h"
+#include "efr32fg23b010f512im48.h"
+#include <stddef.h>
 
 extern const uint32_t linker_sg_begin;
 extern const uint32_t linker_vectors_begin;
@@ -171,9 +173,34 @@ void page_locks(void)
     // CMU->CLKEN1_SET = CMU_CLKEN1_MSC;
 }
 
+#define NUM_RADIO_IRQS 13
+const IRQn_Type rf_irqs[NUM_RADIO_IRQS] = {
+    FRC_PRI_IRQn, FRC_IRQn, MODEM_IRQn, RAC_SEQ_IRQn, RAC_RSM_IRQn,
+    BUFC_IRQn, AGC_IRQn, PROTIMER_IRQn, SYNTH_IRQn,
+    HOSTMAILBOX_IRQn, RFECA0_IRQn, RFECA1_IRQn, HFRCO0_IRQn
+};
 
+#define NUM_SECURE_PERIPH_IRQS 7
+const IRQn_Type secure_periph_irqs[NUM_SECURE_PERIPH_IRQS] = {
+  SEMBRX_IRQn, SEMBTX_IRQn, SMU_SECURE_IRQn, SYSCFG_IRQn,
+  MSC_IRQn, LDMA_IRQn, GPIO_ODD_IRQn
+};
 
 void fixNVIC(void)
 {
+  // Start by setting all Interrupt Non-Secure State (ITNS) bits. This results
+  // in all IRQs being targeted at the NS world.
+  for (size_t i = 0; i < sizeof(NVIC->ITNS) / sizeof(NVIC->ITNS[0]); i++) {
+    NVIC->ITNS[i] = 0xFFFFFFFF;
+  }
 
+  // Setup secure periph IRQs to target secure
+  for (uint32_t i = 0; i < (sizeof(secure_periph_irqs) / sizeof(IRQn_Type)); i++) {
+    NVIC_ClearTargetState(secure_periph_irqs[i]);
+  }
+
+  // Setup radio IRQs to target secure
+  for (uint32_t i = 0; i < (sizeof(rf_irqs) / sizeof(IRQn_Type)); i++) {
+    NVIC_ClearTargetState(rf_irqs[i]);
+  }
 }

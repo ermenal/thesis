@@ -7,3 +7,4 @@
 void config_mpu(void);
 void config_sau(uint32_t linker_sg_begin_addr);
 void config_smu(void);
+void fixNVIC(void);

@@ -31,6 +31,7 @@
 #ifndef __SLI_TZ_S_INTERFACE_H__
 #define __SLI_TZ_S_INTERFACE_H__
 
+#include "rail_types.h"
 #include "sli_tz_util.h"
 #include "psa/client.h"
 
@@ -94,6 +95,13 @@ void toggle_led_nsc(void);
 
 SLI_TZ_CMSE_NONSECURE_ENTRY
 uint32_t transmit_nsc(const uint8_t *data, uint16_t length);
+
+SLI_TZ_CMSE_NONSECURE_ENTRY
+void print_nsc(const char *data, uint16_t length);
+
+SLI_TZ_CMSE_NONSECURE_ENTRY
+uint16_t download_packet_nsc(const char *buffer, uint16_t max_buffer_size);
+
 
 #ifdef __cplusplus
 }

@@ -31,9 +31,11 @@
 #include "efr32fg23b010f512im48.h"
 #include "em_gpio.h"
 #include "rail_config.h"
+#include "rail_types.h"
 #include "second_main.h"
 #include "sl_rail_util_init.h"
 #include <stdint.h>
+#include <stdio.h>
 #include <string.h>
 
 #if defined(TZ_SERVICE_CONFIG_PRESENT)
@@ -370,26 +372,40 @@ int32_t sli_tz_s_interface_dispatch_simple_no_args(uint32_t sid)
   return simple_function_table_no_args[sid]();
 }
 
-SLI_TZ_CMSE_NONSECURE_ENTRY
 void toggle_led_nsc(void) 
 {
   GPIO_PinOutToggle(gpioPortB, 2);
 }
 
 static uint8_t temp_buf[16];
-SLI_TZ_CMSE_NONSECURE_ENTRY
 uint32_t transmit_nsc(const uint8_t *data, uint16_t length)
 {
   // 1) validate pointer met cmse check addr range
   // 2) copy data naar local temp secure buffer
   memcpy(temp_buf, data, length);
-  RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
 
   // 3) Transmit met secure radio
-  RAIL_WriteTxFifo(rail_handle, temp_buf, length, false);
-  return RAIL_StartTx(rail_handle,
-                 channelConfigs[0]->configs->channelNumberStart,
-                 RAIL_TX_OPTIONS_DEFAULT,
-                 NULL);
+  return transmit_packet(temp_buf, length);
+}
+
+void print_nsc(const char *data, uint16_t length) 
+{
+  printf("NW message: %.*s", length, data);
+}
+
+SLI_TZ_CMSE_NONSECURE_ENTRY
+uint16_t download_packet_nsc(const char *buffer, uint16_t max_buffer_size)
+{
+  // Validation ...
+  RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
+  uint8_t temp_buf[32];
+  uint32_t packet_bytes = download_packet(rail_handle, temp_buf);
+  // if (status != RAIL_STATUS_NO_ERROR) {
+  //   printf("download_packet failed: %lu\n", status);
+  //   return status;
+  // }
+  // Check evt temp buf eerst
+  memcpy((void *)buffer, temp_buf, 32);
+  return packet_bytes;
 }
 #endif //TZ_SERVICE_SYSCFG_PRESENT || TZ_SERVICE_MSC_PRESENT
