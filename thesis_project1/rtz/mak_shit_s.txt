@@ -1,0 +1,13 @@
+$(OUTPUT_DIR)/project/second_main.o: second_main.c
+	@$(POSIX_TOOL_PATH)echo 'Building second_main.c'
+	@$(POSIX_TOOL_PATH)mkdir -p $(@D)
+	$(ECHO)$(CC) $(CFLAGS) -c -o $@ second_main.c
+CDEPS += $(OUTPUT_DIR)/project/second_main.d
+OBJS += $(OUTPUT_DIR)/project/second_main.o
+
+$(OUTPUT_DIR)/project/mijn_tz_setup.o: mijn_tz_setup.c
+	@$(POSIX_TOOL_PATH)echo 'Building mijn_tz_setup.c'
+	@$(POSIX_TOOL_PATH)mkdir -p $(@D)
+	$(ECHO)$(CC) $(CFLAGS) -c -o $@ mijn_tz_setup.c
+CDEPS += $(OUTPUT_DIR)/project/mijn_tz_setup.d
+OBJS += $(OUTPUT_DIR)/project/mijn_tz_setup.o

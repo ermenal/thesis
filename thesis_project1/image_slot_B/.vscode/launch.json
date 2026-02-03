@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "TrustZone Debug JLink",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/rtz_s/build/debug/rtz_s.out",
+            "loadFiles": ["${workspaceFolder}/artifact/rtz_ws-combined.s37"],
+            "request": "launch",
+            "type": "cortex-debug",
+            //"runToEntryPoint": "Reset_Handler",
+            "runToEntryPoint": "main",
+            "servertype": "jlink",
+            "device": "EFR32FG23B010F512IM48",
+            "postStartSessionCommands": [
+                // "set print type hex on",
+                // "define sau_ctrl\nx/wx 0xE000EDD0\nend"
+            ],
+            "symbolFiles": ["rtz_ns/build/debug/rtz_ns.out", "rtz_s/build/debug/rtz_s.out"]
+        },
+    ]
+}

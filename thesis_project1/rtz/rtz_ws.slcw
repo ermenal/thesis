@@ -1,0 +1,15 @@
+---
+workspace_name: "rtz_ws"
+label: "tz_psa_attestation_ws"
+quality: "production"
+description: "This example workspace demonstrates TrustZone for PSA Attestation.\n"
+project:
+- id: "trustzone_secure_application"
+  path: "rtz_s/rtz_s.slcp"
+  output: "rtz_s"
+- id: "trustzone_nonsecure_application"
+  path: "rtz_ns/rtz_ns.slcp"
+  output: "rtz_ns"
+post_build:
+  profile: "tz_application_sign"
+  path: "rtz_ws.slpb"

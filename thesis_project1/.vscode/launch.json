@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/production_image.hex",
+            "request": "launch",
+            "type": "cortex-debug",
+            // "reset": true,
+            // "haltAfterReset": true,
+            "servertype": "jlink",
+            "device": "EFR32FG23B010F512IM48",
+            // For symbol files that are linked at a different runtime/load address,
+            // use gdb's add-symbol-file via postLaunchCommands. Replace 0xLOAD_ADDR with the actual load address.
+            //"postLaunchCommands": [
+            //    "symbol-file ${workspaceFolder}/fsb/build/debug/fsb_baremetal.out", 
+            //    "add-symbol-file ${workspaceFolder}/rtz/rtz_s/build/debug/rtz_s.out 0x08004000",
+            //    "add-symbol-file ${workspaceFolder}/rtz/rtz_ns/build/debug/rtz_ns.out 0x08022000"
+            //]
+            "symbolFiles": [
+              { 
+                "file": "${workspaceFolder}/fsb/build/debug/fsb_baremetal.out" 
+              },
+              { 
+                "file": "${workspaceFolder}/rtz/rtz_s/build/debug/rtz_s.out", 
+                // "offset": "0x08004000" 
+              },
+              //{ 
+              //   "file": "${workspaceFolder}/rtz/rtz_ns/build/debug/rtz_ns.out", 
+              //  // "offset": "0x08022000" 
+              //}
+            ],
+        }
+    ]
+}

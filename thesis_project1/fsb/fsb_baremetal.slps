@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<model:MDescriptors xmlns:model="http://www.silabs.com/ss/Studio.ecore">
+  <descriptors name="fsb_baremetal">
+    <properties key="projectCommon.sdkId" value="com.silabs.sdk.stack.sisdk:2025.6.2._-1073067225-2373502477"/>
+    <properties key="universalConfig.relativeWorkspacePath" value="../fsb_baremetal.slcw"/>
+    <properties key="universalConfig.generationDirectory" value=""/>
+    <properties key="universalConfig.toolchainCompatibility" value="iar gcc"/>
+    <properties key="projectCommon.overwriteCopiedSources" value="false"/>
+    <properties key="projectCommon.boardIds" value="brd2600a:0.0.0.A03"/>
+    <properties key="projectCommon.kitId" value=""/>
+    <properties key="projectCommon.partId" value="mcu.arm.efr32.fg23.efr32fg23b010f512im48"/>
+    <properties key="projectCommon.toolchainId" value="com.silabs.ss.framework.project.core.noToolChain:0.0.0"/>
+    <properties key="universalConfig.projectTypeIds" value="com.silabs.framework.project.makefile"/>
+    <properties key="projectCommon.importModeId" value="COPY"/>
+    <properties key="universalConfig.compSelProjInstanceId" value="1762232285353"/>
+  </descriptors>
+</model:MDescriptors>
