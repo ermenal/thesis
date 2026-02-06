@@ -1,0 +1,332 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: 7YvH5Q6y1rXUxCTsA6rZFlTRjxs4ChN250th80govF5TRyP
+ xoF3dag9ZCCqXd+iG
+SHA-384-Digest-Manifest-Main-Attributes: rT5yMtIZ6v7UtVh/FbXTEqBqk2jLIAl
+ AC6mGHG5O7lzl9njVblz/FtS4tqYIJdrT
+
+Name: plugin.xml
+SHA-384-Digest: ZZh5O2+/3LztQslhvZ+DCqNfW9HWq0QOS62rx11U4UYYYIBS2kAoEKAe
+ QdXeuzNY
+
+Name: schema/licensingParticipants.exsd
+SHA-384-Digest: nAzHtGd/YMMBVvbXg7Ru2zQQbGRoeb6tgd1WdVntRXNO1hGXmcBJ8X0V
+ IYNLA0oa
+
+Name: com/silabs/ss/platform/api/launcher/core/solutions/Solution.class
+SHA-384-Digest: NUi/URKnaMIVLlkQOeYwTuJm/ZZtMF9+yRFjW+rfBFdjeWxnkojhU5QU
+ G+trBLoJ
+
+Name: com/silabs/ss/platform/api/launcher/core/ILaunchContextListener.cl
+ ass
+SHA-384-Digest: mNf589csW/AGg0+OPu+xHMsm0NrNzCDcqXKgVvUpVH3YhVgNFRS/vU+K
+ CQ1mGy1X
+
+Name: schema/launchItemEnabler.exsd
+SHA-384-Digest: qlEj9brAc/XFcOA0C6RsgZcx3/LkbRq8Y3j1WhuKZiWZvnHAcwowoNu3
+ 3uJxPRoO
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/i
+ mpl/MSolutionsImpl.class
+SHA-384-Digest: isL1ldEx9cUqg/dx4bQxLlD2V3XU6sdiwxUUZZ+jGjHDIDbmFp8Jh2Qw
+ 7OtvXSEg
+
+Name: com/silabs/ss/platform/api/launcher/core/solutions/ISolutionDescri
+ ptor.class
+SHA-384-Digest: 7sm4qUnRFALoKos1o7jzlknBdVNI0hSjjPGTOBVivFBeCI2zrRMFa5hm
+ 8evNZPsn
+
+Name: com/silabs/ss/platform/api/launcher/core/ILaunchContext.class
+SHA-384-Digest: cdwQcH5Jo5qwcTXnj4yFU71hSm+UzqtGIsIoLisvFpLxLNBjepRNdssk
+ mt752aWx
+
+Name: com/silabs/ss/platform/api/launcher/core/ILaunchable3.class
+SHA-384-Digest: S7yiLvq6P7sI+g1pcex9ZQk4YTOXt9mXLObOn+TIbH/1Zn/wOtLA9mqR
+ KCIEBNU8
+
+Name: com/silabs/ss/platform/api/launcher/core/solutions/SolutionsModelU
+ tils.class
+SHA-384-Digest: aDEvoJNozFYDmdh85HurhpR8Q58MCt+3+11GEvOzNMu/TPHnXVpRZCF4
+ tyLjpM0B
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/M
+ Solutions.class
+SHA-384-Digest: M7NWf0ZwEM3Zb3Dk1Ebb5IgX+AE7ePPcypYa8JsDDCLH4pVMkgobl0HR
+ 1q+huLxQ
+
+Name: com/silabs/ss/platform/internal/launcher/core/solutions/SolutionsR
+ egistry.class
+SHA-384-Digest: ShF/5M4f6/tt4klN7cKcG63k+ZBUgAW3vnTg50StF4M0qmNfmG73tMZ8
+ G8o1BHTe
+
+Name: com/silabs/ss/platform/api/launcher/core/IPropertyProvider.class
+SHA-384-Digest: x9idKNe0ws8I+7CaN61KkNeNj7/g9CNsQqC+u4nsezZ6aPjRLktJcVsg
+ 0NVs6TfF
+
+Name: plugin.properties
+SHA-384-Digest: qzWIVBUN6/y+l5rLrrF5AGKUgja+XuZTPsJsKmQ3gkFRbKQQalDTMR4X
+ xP0c3FrP
+
+Name: com/silabs/ss/platform/api/launcher/core/solutions/Solution$Single
+ tonHolder.class
+SHA-384-Digest: v1cZupj2bcQEjCOW3N+oxpgA9Clgv20COxewXNV1Sjla1gFED8D8NqC7
+ UVnZOZ69
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/i
+ mpl/SolutionModelPackageImpl.class
+SHA-384-Digest: zeSYoqZQQTyX7C+hAGakp/Yh/+aA8PUejWWryKKbChGjGDVKIkhGVUed
+ P9/65gsh
+
+Name: com/silabs/ss/platform/api/launcher/core/solutions/ISolutionsRegis
+ try.class
+SHA-384-Digest: j1N0ubFk3aAuKG/6/V09MdORYUIO6vdUxJoiWG4vQkB0uups9263OJsL
+ er6CFppL
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/M
+ Solution.class
+SHA-384-Digest: ++72ZvsaGau0GVMV1i9XAp+wKJJwvOyfG74hB/MN0ior9Sms8Y4rwp9I
+ mzSJ0s5P
+
+Name: com/silabs/ss/platform/api/launcher/core/ILaunchElement$ECategory.
+ class
+SHA-384-Digest: 9Dsf1e43oJVDIu/f+O2Pi+zCVGdSwz5+UBK1eyAcGfJNRlc71ovSUfk5
+ t2beD8m7
+
+Name: .api_description
+SHA-384-Digest: CaKsmYycjZBDdRi4lsf9VORP+kB1CeNT1EzwB1VNkZfaL1iQSgDVh8FN
+ 1JVQLP9D
+
+Name: com/silabs/ss/platform/api/launcher/core/DescriptorCompatUtils.cla
+ ss
+SHA-384-Digest: 9JNFHYExCWeOTl4OVSJTWypemk3fYDjksaUY2UZlfPt6z0FGnWnMEafg
+ XNmufIOS
+
+Name: com/silabs/ss/platform/api/launcher/core/ILaunchItem$ECategory.cla
+ ss
+SHA-384-Digest: bL/Tjhc/UDO3+wDSCM2QFgMEFmCgwVYjph+ngDaU5Y1hSWczlOPQGq2E
+ /kaDdi8r
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/u
+ til/SolutionModelResourceImpl.class
+SHA-384-Digest: IY43xSZvmhmW2i1jN2sznzcgB5l7V+hrGHcjNTCi5hXux1lw5bBbXqrl
+ kkg1SBFT
+
+Name: com/silabs/ss/platform/internal/api/launcher/core/InitialSetupUtil
+ s.class
+SHA-384-Digest: tmauPKzm/w0a1cu5lPI/YBP1K0cplmxaj9eD8J5utaLHepLQGUDxR1NP
+ /PLd39bo
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/u
+ til/SolutionsXMLHandler.class
+SHA-384-Digest: ALzniOv20eGXaB4yanq9k1LL5RZZnx/3CRUV1A/3COY+a3hv8kKJM68P
+ JHQNssh2
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/S
+ olutionModelPackage.class
+SHA-384-Digest: GPt519fCk9oRgwYsh93jijKYup6J0YQjYdbvC7GEStoiHmonxEVS1tYp
+ 6soFctrB
+
+Name: com/silabs/ss/platform/api/launcher/core/ILaunchable.class
+SHA-384-Digest: qKMPIVAvlu7ANg87DBHwp0ZiDmsmz/pX791A0ieSzM0+DdNQYjHYgvMi
+ iLYZiuF5
+
+Name: com/silabs/ss/platform/api/launcher/core/LaunchItemsManager.class
+SHA-384-Digest: 4VoXQDWhk72nvyKUZUm7le/kyjSmTi4boaFP0l2rU+kEZf3/vWKPCKvp
+ ZlIaVTrD
+
+Name: com/silabs/ss/platform/api/launcher/core/ILaunchElement.class
+SHA-384-Digest: 0WAVqA5xIMtOIE8LDhiKpZoxPZKsh4ljGEwZuhUQ5f5mBYgY1q9KIQa0
+ YOwRYBt1
+
+Name: schema/initialSetupHelpers.exsd
+SHA-384-Digest: UrF+EKWBeU7k4ybl9RZCWT14bF6/mVPeP725S/Lf4wP6hRSdNy7gyb4B
+ O3xcjT+L
+
+Name: com/silabs/ss/platform/api/launcher/core/ILaunchContributor.class
+SHA-384-Digest: x/Nke++rDvBAQAyXEvM7nR6G3jiHsj2Zpygo5pGFskgd89mu1Cts/z4K
+ oMsStgE3
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/u
+ til/SolutionModelXMLProcessor.class
+SHA-384-Digest: BIywfRpANdIB7zXHquzxp8IE9JPPPFx/ejopor74iGhbixotyaW24PdT
+ MZJMflc2
+
+Name: com/silabs/ss/platform/api/launcher/core/ISetupTask.class
+SHA-384-Digest: YVTQzM6YJL0oSSyetUrKB5kSeegSjypTHCqH2oAru9YOC97nLQKgg337
+ EMFKaqsX
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/u
+ til/SolutionsModelXMLHelper.class
+SHA-384-Digest: 1x0V4My+zjFVq+LkA6BhHtU315vmawv3pqOg8ZXQiG/luteIHzQyK9eD
+ Ze4uoN8m
+
+Name: com/silabs/ss/platform/api/launcher/core/licensing/ILicensingManag
+ er.class
+SHA-384-Digest: FX57qiHBlAvwG8yi/sz89M0uLS8POR6NM0OVcsLvSwmahByNcwySwV3y
+ jr+MxkVl
+
+Name: com/silabs/ss/platform/api/launcher/core/LaunchItemAnalyticsData.c
+ lass
+SHA-384-Digest: zO/on/KsH7vdpV37Pmq/G/BVQuZAxa0C3oXeKgojX2Wz5A4NR3tzb1ZV
+ EuODsgR6
+
+Name: com/silabs/ss/platform/api/launcher/core/licensing/ILicensingParti
+ cipant.class
+SHA-384-Digest: WLDnYP/tngyk89sGevxMpsmRMV9FP6Zv+/UUNuANwoxWlyButjHUzmUX
+ g5stZrYH
+
+Name: com/silabs/ss/platform/api/launcher/core/ILaunchElement2.class
+SHA-384-Digest: 5HtHz/i8lzNT+0PMNs2IbDk1i6bCWveuM8L6R1/L9N+6ex56kvA4E1/w
+ mPXjrN5i
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/u
+ til/XMLLoadContent.class
+SHA-384-Digest: tt+tx0shvEjR0W6IhyFIa0cB8fs4wuPBoYfhl0mFsUnlIQwCOpgGbMHP
+ XMZArs3Q
+
+Name: schema/setupTask.exsd
+SHA-384-Digest: /4lWMTslYGiCZEXaOJHGDvFlQvX3DdtCk5xUVsObCAkV52Y3Wudjp1Ko
+ 0K9jXIfw
+
+Name: com/silabs/ss/platform/api/launcher/core/IInitialSetupHelper.class
+SHA-384-Digest: WtzG3DaMcGdkdIfF0AVNM+htzNSPVd34W/VwqKRhC/wmSQKyvBoSsRAz
+ vkimLG/n
+
+Name: com/silabs/ss/platform/api/launcher/core/LauncherCoreUtils.class
+SHA-384-Digest: jMgm+YPGox5gfJm5MQaex821T5/1MirI4i6gbSORPnSp48rEE615TDMv
+ NDAJ4Dgb
+
+Name: com/silabs/ss/platform/internal/launcher/core/licensing/LicensingM
+ anager$EmptyHandler.class
+SHA-384-Digest: czFmPf4W1CmrMlGPWebF+hYpzbVCRnzihdJzGyDYp4maPDZ0ro72obA2
+ +ZjRWp3C
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/u
+ til/SolutionModelSwitch.class
+SHA-384-Digest: IVK/F8/cANacknO11Ry1/tgldGzWGm90QLnb914WwCzKe/ofkgV50tH3
+ +5TcY+d4
+
+Name: com/silabs/ss/platform/api/launcher/core/ILaunchItem.class
+SHA-384-Digest: MTwDtIz7ifRDIxS9TI3uLdK8J6CQwOpHuNIkW+1RTBB11BMXZsym85we
+ iAwLyDMG
+
+Name: com/silabs/ss/platform/api/launcher/core/ILaunchItemsProvider.clas
+ s
+SHA-384-Digest: 6+7vFW2SVjOBA3gAE8RRvG92i3I8RihCpZjbhOgGFj2JL/UpQOFm93jJ
+ EfDjSYr3
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/S
+ olutionModelPackage$Literals.class
+SHA-384-Digest: ufAtsFQDd3/Tcs24fJYbs95yevUZXvA8O3US1oto8tt/IEJoWfqQ7UZR
+ PNwVeF2B
+
+Name: com/silabs/ss/platform/api/launcher/core/ILaunchable2.class
+SHA-384-Digest: HlXaiMp7VK+4VMvbWqk1KXUxIej5eYlZ6o4UB7VtTJC3cCjb7I6Iykec
+ QLSuel81
+
+Name: schema/launchElementsProvider.exsd
+SHA-384-Digest: jdg0ifwU/Ny96A/SWr05Ev6hmAjcp9iCIfjPR2+fOpRctzV71xdabywI
+ KwrL4Hm3
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/S
+ olutionModelFactory.class
+SHA-384-Digest: LJdDIeW6a/JG5MkvDFy6XNCwHzD8sk1/kZ9Sc2Zp1ts0O/6hWRPaUmBU
+ wP/s7N7l
+
+Name: com/silabs/ss/platform/api/launcher/core/IDeviceLaunchValidator.cl
+ ass
+SHA-384-Digest: sK3uTf4Z96LMosgH6k1C4IRwFTlRTIwEz8SVHjvouDj1Y2VB+ziU7+uQ
+ Vg2u8Y1k
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/u
+ til/SolutionModelAdapterFactory$1.class
+SHA-384-Digest: uSptDXHpFcSOOuqPW2H47KJmG6yRnLnGbSoAe/Kf4QjwjKxnK7+8wbU3
+ WvpfTxwz
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/i
+ mpl/MSolutionImpl.class
+SHA-384-Digest: 0K0EC6KkWDWBclE6frYBr9qyfX7JTrQj28nwY7m0j906isxnTzK/HTqA
+ 4EihEjgc
+
+Name: com/silabs/ss/platform/api/launcher/core/LaunchElementsManager.cla
+ ss
+SHA-384-Digest: joz8JArlq1hlfWIPPdYB7kLYS/Ey72zt9iJaaOzpgmEPkNGofqs413co
+ xkbH2Ole
+
+Name: com/silabs/ss/platform/api/launcher/core/IFilterableInitialSetupHe
+ lper.class
+SHA-384-Digest: nebftATdvG93c022FID62/SfTxjGwe6k7yu5CORja98D0BetIyRMLSCf
+ 12p9lHwV
+
+Name: com/silabs/ss/platform/internal/launcher/core/SeggerAutoInstall.cl
+ ass
+SHA-384-Digest: Ex1op2DT+Y/oOz5ognw352Iy5EECdWHFsCUIbfmZ/Z3ngUC0I62tVKGp
+ hQwDTy3/
+
+Name: com/silabs/ss/platform/internal/launcher/core/solutions/SolutionDe
+ scriptor.class
+SHA-384-Digest: +x37indQFg/OcRuxw8E1nTHXPjvXSk9pZFxQvgWyn/NE8fQIf+6f5cxj
+ dgtKPyIm
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/u
+ til/SolutionModelResourceFactoryImpl.class
+SHA-384-Digest: FGqUtRr5zfHPfiTy+WuyOcRd9NG/LxJ4xve/go92kUNCDFqP8ILnd9Fu
+ lSjJr5ZZ
+
+Name: com/silabs/ss/platform/internal/launcher/core/solutions/SolutionsR
+ egistry$1.class
+SHA-384-Digest: w+qRd86TCyBh0BiDfxnJR8357m4A5yZi2rPFAfRtaq/+AIj3Oxbmr7e9
+ KatKBoKn
+
+Name: schema/launchItemsProvider.exsd
+SHA-384-Digest: NuzNI41NagT8GbjdVdREHtfuCncXnagiIAq3oomCFMyE/O4InLHn2jO5
+ iTKuv4j2
+
+Name: com/silabs/ss/platform/internal/api/launcher/core/solutions/Soluti
+ onsModelInternalUtils.class
+SHA-384-Digest: zjy6vQ1idDzQ3XCEfAu1VzOHvEM4iygLxajqUi1eN7iXjbMCmIqoAego
+ fSJROv5N
+
+Name: com/silabs/ss/platform/api/launcher/core/IFavoriteable.class
+SHA-384-Digest: V9iHu1wWSrZQ48ittNmOiE24OrjmYZkl+uk1uqSgxUCrOhhWh0NeXKux
+ PaZ21n9b
+
+Name: com/silabs/ss/platform/api/launcher/core/licensing/ILicensingHandl
+ erAdapter.class
+SHA-384-Digest: v+xAIxJ0UEuISIADGlghqZDNW6ffiobSi6SGXHWJ2gGo1/j/kbpE67rr
+ oNebo69f
+
+Name: com/silabs/ss/platform/api/launcher/core/ILaunchElementsProvider.c
+ lass
+SHA-384-Digest: i0CPjSV+V+EDTrie2HGRSZ8aCiUnwY5ZvKqYzlBdfaeMKtuJ/+iTvbwT
+ MidNipk+
+
+Name: com/silabs/ss/platform/internal/launcher/core/Activator.class
+SHA-384-Digest: 6Qw/VtOGPxj9AqGFj25PMV6UCa/smsYkF3cBJInYvoBPXFzGTXek7gQk
+ yS222XrY
+
+Name: com/silabs/ss/platform/internal/launcher/core/licensing/LicensingM
+ anager.class
+SHA-384-Digest: esOVezEagkzxLyrGOs/2WjW7jIqsBWfPlHuIBpZ12rGFgXQ3jgB7p74B
+ ycTuh3JN
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/i
+ mpl/SolutionModelFactoryImpl.class
+SHA-384-Digest: sg1fWOBMJIyvjOu/e1lLJxZ6oPzymH1l53sXLv3QaPE8TPIPCMxTjQYc
+ kSmEkzeR
+
+Name: com/silabs/ss/platform/api/launcher/core/InstallHelperSetupTask.cl
+ ass
+SHA-384-Digest: 9KMvwrGMYrXFEtsqNff/iFCCk2LOEo3+eoMEr9UPGBbKx5c4n+IcwVMA
+ MZBS+1bh
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/u
+ til/SolutionModelAdapterFactory.class
+SHA-384-Digest: VsJyrQnkE2iUCsJqHZtHj2nkv/cmHCLQaO/rOOlhuQhvfAqZ79q0ZvgC
+ A2wK1iIr
+
+Name: com/silabs/ss/platform/internal/api/launcher/solution/core/model/u
+ til/XMLSaveContent.class
+SHA-384-Digest: v5ZnI3E0mtYM7fDWKWumcC5r8Q9RVZx7IfTa2S2lDDPRvkOS4z4kAQ14
+ ZtW8o2+L
+

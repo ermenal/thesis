@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.silabs.ss.platform.content.board.core/src"
+    modelPluginID="com.silabs.ss.platform.content.board.core" modelName="Board" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../com.silabs.ss.platform.descriptor.core/model/Studio.genmodel#//model"
+    interfaceNamePattern="{0}" classNamePattern="{0}Impl" importOrganizing="true">
+  <foreignModel>Board.ecore</foreignModel>
+  <genPackages prefix="BoardModel" basePackage="com.silabs.ss.platform.internal.content.board.core"
+      resource="XML" disposableProviderFactory="true" fileExtensions="board,boards"
+      ecorePackage="Board.ecore#/">
+    <genClasses ecoreClass="Board.ecore#//MBoards">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Board.ecore#//MBoards/boards"/>
+    </genClasses>
+    <genClasses ecoreClass="Board.ecore#//MBoard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//MBoard/pcb"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//MBoard/notes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Board.ecore#//MBoard/mcu"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Board.ecore#//MBoard/module"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//MBoard/pn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//MBoard/revision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//MBoard/variant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//MBoard/opn"/>
+    </genClasses>
+    <genClasses ecoreClass="Board.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Board.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Board.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Board.ecore#//DocumentRoot/slboards"/>
+    </genClasses>
+    <genClasses ecoreClass="Board.ecore#//MMcu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//MMcu/part"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//MMcu/family"/>
+    </genClasses>
+    <genClasses ecoreClass="Board.ecore#//MModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//MModule/part"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//MModule/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Board.ecore#//MSlboards">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//MSlboards/updatedDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Board.ecore#//MSlboards/boards"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//MSlboards/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Board.ecore#//MSlboards/priority"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,91 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Adapter Pack Device
+Bundle-SymbolicName: com.silabs.ss.platform.apack.device;singleton:=true
+Bundle-Version: 5.2.0.202506061735-1855
+Bundle-Activator: com.silabs.ss.platform.internal.apack.device.AdapterPa
+ ckDeviceActivator
+Bundle-Vendor: Silicon Labs
+Require-Bundle: org.eclipse.core.runtime,com.silabs.java.utils,com.silab
+ s.ss.platform.rcp.core,com.silabs.ss.platform.apack.usb,com.silabs.ss.p
+ latform.device.core,com.silabs.ss.platform.content.core,com.silabs.ss.p
+ latform.content.board.core,com.silabs.ss.platform.content.part.core,com
+ .silabs.ss.platform.installer.base
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-ActivationPolicy: lazy
+Export-Package: com.silabs.ss.platform.api.apack.device
+
+Name: com/silabs/ss/platform/internal/apack/device/DetectedBoard.class
+SHA-384-Digest: hxsGrnXA1f9W/tOT8LCmCHHvXGFnMHjsfBApoJsou2g28bfR1RRt/upY
+ FIz+hb9g
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbVidPidInspector$Re
+ tryDetectionLineHandler.class
+SHA-384-Digest: OfENdnJ/tDDaIEJQFwuKSMyDdxl2elfMF7G6p1IaNCyRdecz18qbZDyL
+ WRgpFjXU
+
+Name: plugin.xml
+SHA-384-Digest: xxn8Z6HMkROedg3vKCNgKaph41FdB5WWlshUDfQ/j9vWz+BNVrwgdrwL
+ SlUBKR3s
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbDeviceCreator.clas
+ s
+SHA-384-Digest: Ehx4DRIo4aD1rAaI5sgzaoqwQrOgVchmNdQnEZ0OnnnJklInObAMXJip
+ dfbiSz5J
+
+Name: com/silabs/ss/platform/internal/apack/device/AdapterPackDetectionL
+ ocator.class
+SHA-384-Digest: UZXg9hDorM7kE1JVZQ4fRKZPqdk4OplSsh8Vf6PdLrzap1MNYAslrwBA
+ ZphyDUW3
+
+Name: com/silabs/ss/platform/internal/apack/device/DetectedPart.class
+SHA-384-Digest: V0nTpSH7KkMUawS112FGFFexFhDCuWufw+lWBU3sNuvMTjupNHwwx6bO
+ OBFUuxjJ
+
+Name: com/silabs/ss/platform/internal/apack/device/DeviceFilter.class
+SHA-384-Digest: pZlgULzpxeAPQY3QEDch0+mkfHVD8QKndNW5biVW/x4y9m9GIGlEh04s
+ csqWK1rq
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbInspectorExecution
+ Context.class
+SHA-384-Digest: uwur5cPYWcI7eTmvb/4J2269H+iNpvs5fslcYmyZH941WnELnJ0JuG/x
+ vPyrHs/5
+
+Name: .api_description
+SHA-384-Digest: 2rfJrJIHgz+bxa/o+fasg+pv3tkzCepizVsVCnxLC+Yxj+AamA6GA6j5
+ Ihm5IFL8
+
+Name: com/silabs/ss/platform/api/apack/device/UsbDevice.class
+SHA-384-Digest: PPqEMfWKk/8rJFF5bDvD1+eQfycx63uHdTZxwxAuXvstiPdqWUoynwtg
+ 7lX3TyJt
+
+Name: com/silabs/ss/platform/api/apack/device/UsbNotifierDetectionInfo.c
+ lass
+SHA-384-Digest: cDG64xroJpnEYaAA+LXvdJjff6Q1iFuEJqfDprFT73dvOf1ikUTluT95
+ X7TEgPau
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbHotplugNotifier.cl
+ ass
+SHA-384-Digest: tPt3p5popMJ3FoRlfLuVbbQVnC4q3FEe8mwj8MJfOJtGNvWVO3Gp+w9k
+ Gk9lcAXt
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbVidPidInspectionLi
+ stener.class
+SHA-384-Digest: TVXh2rd8AoQPiDhuVwMrTRtRt7PeHVQDuGnpymFoXHGJSCU59S8ZGvT1
+ MzKAzp++
+
+Name: com/silabs/ss/platform/internal/apack/device/AdapterPackDeviceActi
+ vator.class
+SHA-384-Digest: P63jiBvpkWq8EVX4SYd6zGtHNeCzoVIAL8qsN+bUpZ1I92a7639ULss3
+ +z/GJtiT
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbDeviceBridgeListen
+ er.class
+SHA-384-Digest: nunm4dQ1s1pga5hGFX3Rw6K0dZJkDGsA37dXPNih5P5ymNMzqdWi/aiE
+ oFMJuS3A
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbVidPidInspector.cl
+ ass
+SHA-384-Digest: e/iBUd2DrbRFp/9bvHwkSjZMA8i0S/ecFiB7C4KniZisiwWJWIgzbIKU
+ uVsz+t5q
+

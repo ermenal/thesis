@@ -1,0 +1,131 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AntlrTest
+Bundle-SymbolicName: com.silabs.ss.mapping.compatibility;singleton:=true
+Bundle-Version: 5.1.0.202506061735-1855
+Bundle-Activator: com.silabs.ss.mapping.compatibility.rcp.internal.Activ
+ ator
+Require-Bundle: org.eclipse.core.runtime,com.silabs.java.utils,com.silab
+ s.external.antlr,com.silabs.ss.compatibility,com.silabs.ss.platform.rcp
+ .core
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-ActivationPolicy: lazy
+Export-Package: com.silabs.ss.mapping.compatibility.internal.engine;x-fr
+ iends:="com.silabs.ss.mapping.compatibility.tests",com.silabs.ss.mappin
+ g.compatibility.internal.engine.generated;x-friends:="com.silabs.ss.map
+ ping.compatibility.tests",com.silabs.ss.mapping.compatibility.rcp.inter
+ nal;x-friends:="com.silabs.ss.mapping.compatibility.tests"
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibili
+ tyUtils.class
+SHA-384-Digest: 0GGtqnXUasNP7lIIjc2ndbcDsMCnYn5hUQ6kWlJJ85xk6o5AEVFq6CZj
+ ErnSfWA3
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarLexer.tokens
+SHA-384-Digest: MlkVW2dGsfTTwTjEVcGgJ8dblE2yLDryJU2UB7ADoTmwaMiJSlmFxFWH
+ nlNuuUCB
+
+Name: plugin.xml
+SHA-384-Digest: AchCdiPDIBiAZohiOkaC0HxHiV01j/Yi32FOmZXaEEqSfCSbDMDFbQ9M
+ k3E4c4LM
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$ProcessWithInputContext.class
+SHA-384-Digest: SNjjLgIpEudmWIGZUDZcNPCBW7naT5p0jFxCMIjI2woS5wdNbtfyU3sC
+ 282nOj+s
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$BracketExpressionContext.class
+SHA-384-Digest: CjzxsuKX8VdxSG3PsKzDTfwZK6K9FMsuAVVvejRFxmVd/Y2d2hFXcIRt
+ a+3cQp0q
+
+Name: com/silabs/ss/mapping/compatibility/internal/impl/MapCompatibility
+ Provider.class
+SHA-384-Digest: Kc/NAwJws2D/XdS8m7Y7XgZBpDxdYyRJMRk2IKqz63lOSctzxYKgpDcM
+ zzdrEKF1
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibili
+ tyContext$MapCompatToken.class
+SHA-384-Digest: 4VlIj8j0WpbpqyMLcwXL43NiOKjRO83DBiHZsAUg//lO37j0j0GXmXaB
+ 321vfsap
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$ArrayValueContext.class
+SHA-384-Digest: DvIE4f9hIZQCP5Y2VygFnI1PEfMLoYuyPUmh9KLCM1huVtC/QmzhxcJT
+ 8WIVY68/
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser.class
+SHA-384-Digest: R5cuQ7ONX4szkmVb3/S4drH5+pH6SwjWKsgnuxqcVB4sexrclzXqILjw
+ MYyQL6Yr
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammar.tokens
+SHA-384-Digest: MlkVW2dGsfTTwTjEVcGgJ8dblE2yLDryJU2UB7ADoTmwaMiJSlmFxFWH
+ nlNuuUCB
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibleS
+ tate.class
+SHA-384-Digest: Wo8TsIR3NAA1sgcNhpqd0XM/8681CTAuRBNccTJl5ctniyDxbXhFkgCH
+ rEQv5Qzj
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibili
+ tyEngine.class
+SHA-384-Digest: 0Hh8PUoYmwJiGJL8/T9khdZGRvgNMAZ4dMW4U06nnyCdTyL20qGAcFPA
+ a1BM4PcU
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibili
+ tyContext$MapCompatEntity.class
+SHA-384-Digest: pn7keelnPmqa5Nlo7buKO5TSNdUO0aqvaZ2WiDXMnxQMTm6onlK156Vf
+ m3gmJFE4
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$TypeLogicalContext.class
+SHA-384-Digest: EjGeYJ7DsX+67G4P7dEl3oZY12nbp1JEtlKF8gkMbwF44WcxU2bFVkCC
+ BstHL1LX
+
+Name: com/silabs/ss/mapping/compatibility/internal/impl/MapCompatibility
+ Expression.class
+SHA-384-Digest: UxX1jOg/ERluSDEqwnmAfRocrvYothKdfqp7F6r2zDdr1eG/RAcG1nF6
+ HrLzvJtI
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarLexer.class
+SHA-384-Digest: 5OPcuf8yHg/EqUkVDMx8akd9P+4LOwvwXVf9a1qUBM+GJxdV+d2oilkY
+ ojHaDEGU
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$TypeCompareContext.class
+SHA-384-Digest: HVLBDQDXgbUKxELCUUQfAb4uHXiGZjXp+E6u2z2+mXJxn+1dSYz+PYK5
+ qyG0Kfwu
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$ExpressionContext.class
+SHA-384-Digest: 0VuutEB3EAy+4nDHVX03daCjoWZonQAlK4joMhf2yi7wN6B/hnU3AM6y
+ 6xzXoWXb
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibili
+ tyEngine$Compatible.class
+SHA-384-Digest: 5JI9dm16x93EimnNykilTPPHOY1bi2+at8rThNQPwLSs/46GYvuHy35P
+ KgtEGR5x
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibili
+ tyContext.class
+SHA-384-Digest: GRKNH4eDsYtcSivYvDJSajDpOFU5Ak6E5ksFtzzCeJEzzvf85OPNelWq
+ dFQ2d2l0
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$BaseValueContext.class
+SHA-384-Digest: TfCi354f09Al+xADLI1Oa5MdWYuXKi3X13c25wp8bc2OY4+IOvVhe/DR
+ isDM1Cro
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$ComparisonExpressionContext.class
+SHA-384-Digest: Bfg4kF8NnJhYGQTEVoaCZrlWpmhgwrywjlukybZzGUHNq+ODDBjFmZZe
+ R31auuwD
+
+Name: com/silabs/ss/mapping/compatibility/rcp/internal/Activator.class
+SHA-384-Digest: rmZdiGmYcXwEfQKzgOZzVhA0LSDfX/5hlw9iTgmpmfr8UWMtMwHFe/3/
+ Yf1gxfU5
+

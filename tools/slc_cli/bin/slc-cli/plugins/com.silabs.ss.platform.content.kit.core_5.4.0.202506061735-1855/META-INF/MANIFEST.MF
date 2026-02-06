@@ -1,0 +1,267 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Kit Core
+Bundle-SymbolicName: com.silabs.ss.platform.content.kit.core;singleton:=
+ true
+Bundle-Activator: com.silabs.ss.platform.internal.content.kit.core.Activ
+ ator
+Bundle-Version: 5.4.0.202506061735-1855
+Bundle-Vendor: Silicon Labs
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: com.silabs.ss.platform.content.kit.core,com.silabs.ss.pl
+ atform.internal.content.kit.core;x-friends:="com.silabs.ss.platform.con
+ tent.kit.core.tests",com.silabs.ss.platform.internal.content.kit.core.m
+ odel;x-friends:="com.silabs.ss.platform.content.kit.core.tests",com.sil
+ abs.ss.platform.internal.content.kit.core.model.impl;x-friends:="com.si
+ labs.ss.platform.content.kit.core.tests",com.silabs.ss.platform.interna
+ l.content.kit.core.model.util;x-friends:="com.silabs.ss.platform.conten
+ t.kit.core.tests"
+Require-Bundle: org.eclipse.core.runtime,com.silabs.java.utils,org.eclip
+ se.emf.ecore;visibility:=reexport,org.eclipse.emf.ecore.xmi;visibility:
+ =reexport,com.silabs.ss.platform.rcp.core,com.silabs.ss.platform.conten
+ t.core;visibility:=reexport,com.silabs.ss.platform.content.board.core,j
+ son
+Bundle-ActivationPolicy: lazy
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/util/KitMod
+ elAdapterFactory.class
+SHA-384-Digest: 4VqwqgM5ae4hZnt8P8SboccyhVV5PN2231S53YgUfzBBUHAp8HgGwz7M
+ 40smQH8f
+
+Name: plugin.xml
+SHA-384-Digest: dwGtGWh509aUpJZb+XP46RKxLFiVqdMsYTWLizbEcjWTT/HPd3CowzB7
+ skQegnlu
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/util/KitMod
+ elResourceImpl.class
+SHA-384-Digest: 4voFwn0LovEXPE4kdIV3y5JYFjcP8iCMB2rV9FCjD7+3orYefl+K5uwA
+ QCBQ1TTP
+
+Name: Kit.xsd
+SHA-384-Digest: pDSl7fYP5Q/K1Jo6YEhZ5eWvGZFPEeRdFD57iwp6r1SX3HaUYZqIk9fY
+ kEZc4kVO
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/util/KitMod
+ elSwitch.class
+SHA-384-Digest: WOJOJNxsa7mqlxRnZ5Hmh8Bji/U8couZ+hwlv5zi2cUqS9Z9nMqaeS4c
+ jCLT7Gga
+
+Name: schema/kitSupport.exsd
+SHA-384-Digest: lSZaBDm1AG4Wjk8IFroKOSu5svcJG7EZnP5OfyRQk7D46Vnl/4/cEOAD
+ 6/QbDZpu
+
+Name: com/silabs/ss/platform/content/kit/core/IKitDescriptor.class
+SHA-384-Digest: NwZWSmZYQerf3YY05gZTBIUiQZRSY/QoYxAusSLvWY+VHSteGjnpWvqO
+ 8+tZp800
+
+Name: com/silabs/ss/platform/content/kit/core/BaseKit$1.class
+SHA-384-Digest: 1hg1VZTy9hVqxXf//jesWOBRMlc06QxpPdg+jvgY+b8Fb5dLq8Sl5m91
+ AwWzU1m7
+
+Name: com/silabs/ss/platform/content/kit/core/KitProperties.class
+SHA-384-Digest: LdwOrkeqL3WI8qc4rccMZo5/DTuRMHOirxwjXyEw+P3JQuH95kAHCpmW
+ /+xzrIL2
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/MSlkits.cla
+ ss
+SHA-384-Digest: sMjZnp2+3wd/0GPIlFgV0FHHqA7aiRFaEugwIQkSX21G3EuCpW8QmV+k
+ 2m4towYZ
+
+Name: com/silabs/ss/platform/content/kit/core/IKitManager.class
+SHA-384-Digest: NlYf1z5MOnHTDteWppbPwuBBfaonmN+MUFc2YInYIjtbVY9H6SiRz0cz
+ adB8tbJX
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/util/KitXML
+ Handler.class
+SHA-384-Digest: pEcKWkc47BInm4/yD+UhMToRXac2ZiEjqyu970/3SOCAk1UUs09RGuZu
+ gCRqcYC0
+
+Name: plugin.properties
+SHA-384-Digest: 6tsHfhSisYs+ub4kInnXvZ+4g5mleDJioPzD0ErTc5VZJtwrBZe+V/Jb
+ 4pKOTEkx
+
+Name: com/silabs/ss/platform/content/kit/core/KitProperties$ID.class
+SHA-384-Digest: sKuioVCgzcPm5Xe0HyRFVfL4Z4Y9Ee/oS3FNMXGVVR91ZxW5tIFFTJmx
+ M0bb/rf7
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/KitModelPac
+ kage.class
+SHA-384-Digest: SOc2LLGuuVt3AYSpKWHoTvnW2eoQg0MHq/78c3C9a+uJKVDvU1mwtV4w
+ 1sWIQ8LV
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/impl/BoardT
+ ypeImpl.class
+SHA-384-Digest: /ARTMHOzaAg00J5i57+Bjz0a/9kYNudmjot5bZOjA3bk+d5hmjdFNEef
+ XMU4CUaR
+
+Name: com/silabs/ss/platform/internal/content/kit/core/KitHardwareHandle
+ r.class
+SHA-384-Digest: GWQ+CbnOb0TRmBm3jwZFhMVVm97o1iN31n+nDAeZuKUrGlN3GFSPIIhW
+ ZkT16TgB
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/impl/MSlkit
+ sImpl.class
+SHA-384-Digest: Ng4exfjNNakfx0mIE8YAAtGAkGBmX7CtBp6cH60ogn7BwYoyD2xIvx9K
+ BQemziVM
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/impl/Boards
+ TypeImpl.class
+SHA-384-Digest: QGLSRdDMZH12Myfo2zb96Bwx3m79G28MNJRB/BiF1uO2SIp9be7BlwrR
+ cyyzgybY
+
+Name: .api_description
+SHA-384-Digest: r+mjRaNfoSz2bDtPiZQKu8gDNKn0TWHuYAnAatq+OkUaBOuMdPg/obrO
+ FV9qG7pE
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/KitModelPac
+ kage$Literals.class
+SHA-384-Digest: rXL0UmqBWT4aegu+Tqaezo8MJIWW9uEWmlIn/Z/4S8bkf4NrPASw+/+M
+ wtX7toSB
+
+Name: com/silabs/ss/platform/content/kit/core/IKit.class
+SHA-384-Digest: QHy+pj06Pvqv73ATX3U7dpoCxmG12ztXZZgKBxDs8Izzn/GHrnulLCpK
+ 7ldkVudN
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/impl/MKitIm
+ pl.class
+SHA-384-Digest: vx8rhfd3IX3Yl6JmP2E70b0nAAcNJ1TZZwTfhF9IU8KIN2FTiuffQ06e
+ PhYywWDY
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/util/KitMod
+ elXMLProcessor.class
+SHA-384-Digest: kdJornCe++Sk3PdLBZoACIFcGkMFPOpYPk+YFdAa4a0ikxss93Pt3QpR
+ TP4U2tY4
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/util/XMLLoa
+ dKit.class
+SHA-384-Digest: uwvoIRF0nrXKrNaqp3BzKk0JjeKIcB7apKzhhzagzY7YI8kOEMZrdNxQ
+ qy2PY9Yw
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/impl/MKitsI
+ mpl.class
+SHA-384-Digest: wZY8Fu+gj8zgNp7uu3iKYhlxfIO/RLlWcAs6EZyFrXlspJhH2oDA7CYG
+ IykrIEFR
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/MKit.class
+SHA-384-Digest: FwViZ+B/al6v0J9x7DXSqcnnSL7hssghpEImWVEy9D8xpvGsHAzDCRJZ
+ iMcwT0hj
+
+Name: Kit.ecore
+SHA-384-Digest: ihVMZwPxtrfybZyGUWK8hq4yqzfiA9OPHHYJJm1N0gTazNJ+WEyZHFHG
+ hLIgKcPT
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/BoardType.c
+ lass
+SHA-384-Digest: TS9xHd2R9zXmlTBveXkflPk7o4zy+x7TVdg/7IbVWvE5bVDSTFv14Bin
+ jntv5/9a
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/util/KitMod
+ elResourceFactoryImpl.class
+SHA-384-Digest: Yoo13TPm+CoG7hKvIR0FPXP1RB+Vrv9p4ZkWiJJ+ug9Eh5VQfyvg4tsg
+ jxNX0DFn
+
+Name: com/silabs/ss/platform/internal/content/kit/core/Activator.class
+SHA-384-Digest: nzqZFtUhxO+gdhnJrPu+QfeRqA2PbF4VSPsc2Iukx+nd5xoQOdmN9jmC
+ +a87iCoV
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/BoardsType.
+ class
+SHA-384-Digest: sWwBqBWL2K5EanvPJe1u5b0ci3bbeOQBTFbWgxzi1UT6Y7gSSZEfeddb
+ Puq3yrBb
+
+Name: com/silabs/ss/platform/content/kit/core/BaseKit.class
+SHA-384-Digest: CXL47AnaB29rFrfmvTfGddaeQtF5UHN01GsP2HBQnrPqPQ+dpmcJps68
+ kzxtgrDZ
+
+Name: com/silabs/ss/platform/internal/content/kit/core/KitManager.class
+SHA-384-Digest: kyAfS7tAJQ1NAj+/LwMqyjxt7f0VA3kcbg/YtoVxmyuPkJg2A4VTaI4f
+ scejYayp
+
+Name: com/silabs/ss/platform/content/kit/core/IKitRegistry.class
+SHA-384-Digest: EjZhfGpL9ukFSgEprjUtcT9YKd+qdVvpxsYklNA1Q3ECDOxir9WYV6Vw
+ bpn2VEpE
+
+Name: Kit.genmodel
+SHA-384-Digest: KC1V2wBDt0TRDGGpZyF12RtggdUXRfDeBlM0sKIuqUQ7bswvt2KqbA4z
+ HN6xXW9S
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/impl/Docume
+ ntRootImpl.class
+SHA-384-Digest: j66c1w7vCX1+G24KgPriuoQkTg5hrNK7iwfGK+m6hFEipap+C4sqvFuh
+ +uGip3v/
+
+Name: com/silabs/ss/platform/content/kit/core/Kit.class
+SHA-384-Digest: t+bB2ygMHOokHoCeaZCJoAIAKCvTJ55KdywvOENhord8ooWQfm8Maav/
+ 4DbwD0TG
+
+Name: com/silabs/ss/platform/content/kit/core/KitUtils.class
+SHA-384-Digest: 2UQyNfJOQyeqlDxzDWgDspr4HXMiKTenKiBG2cuQNbfw1YWEbY03KKix
+ vIwC1si0
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/impl/KitMod
+ elFactoryImpl.class
+SHA-384-Digest: oxrfHNWcTQRwP84QbQTrse3yOWChUsMXCocT8Y9UvdanwCudhd653ZJG
+ w/iK4f29
+
+Name: com/silabs/ss/platform/internal/content/kit/core/KitDescriptor.cla
+ ss
+SHA-384-Digest: m1xOECFnH2WAdCJA5zx4cKRvuOVFC2tD2ZL2RrmiyS0N5bJeOufkDGu2
+ 39kGwoE8
+
+Name: com/silabs/ss/platform/content/kit/core/BaseKitProvider.class
+SHA-384-Digest: Ifs9c5LcWHuRCKfg0KyZEJCFJahaOEzwOQr2S095my0R8+ugomKRqc0j
+ t/onDacK
+
+Name: com/silabs/ss/platform/internal/content/kit/core/KitModelInternalU
+ tils.class
+SHA-384-Digest: BVRnM2uaokFBSJyp4MNw3k2rSV7qicvvBPhqybONCR4L3l4QwmLVqKgo
+ ETH8RO1Z
+
+Name: com/silabs/ss/platform/internal/content/kit/core/KitRegistry.class
+SHA-384-Digest: 4bPcsbdbSPnZpoHeKHJwOn2gANFM2c8kdJLYSInFLBtY3V1IdkW+lGCy
+ MTArBwQC
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/util/XMLSav
+ eKit.class
+SHA-384-Digest: vyopYYMhNfvgYLhx78L+Iksscm1OLARkOqWjC8wTscOwHO9ziJ2UGh6f
+ KqvE3sBK
+
+Name: com/silabs/ss/platform/internal/content/kit/core/KitModelUtils.cla
+ ss
+SHA-384-Digest: QRCCrvToHrZeYs6Ju8AFgmFB3qm44PmqYrxeXdDldz+gEIRKJT/13y8k
+ cqDMfFxR
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/util/KitMod
+ elAdapterFactory$1.class
+SHA-384-Digest: D1BgM5wAO2dQbEPInKJTqf9EGscnn63sLYyykHV+FnSAuAhr4Uof2Ch7
+ v6HX33Az
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/KitModelFac
+ tory.class
+SHA-384-Digest: 8daGih0owNnH4x5K4RzEjqfvCRFcFiqMpheNL4nHzeqmmtBtoteHX8Y3
+ hxJr0o3f
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/MKits.class
+SHA-384-Digest: M0CCsUCw3WwHthSMfZpwJ9dOTbDLV5H3gMLoZI8ibptDIC5+uhXfB1I2
+ UGeROT0W
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/DocumentRoo
+ t.class
+SHA-384-Digest: cWyc1dM/d753yXi+NKg+G2quWqrmret/2BO0ppcnt7dvKm89E95AErpS
+ 0b/zHxdT
+
+Name: com/silabs/ss/platform/internal/content/kit/core/KitRegistry$1.cla
+ ss
+SHA-384-Digest: 49/M5aP10UD+DLu5sbRekWBcg29pJn4CD9BBWHQjuhfIH8kfBy49NGBB
+ w4WsGRHB
+
+Name: com/silabs/ss/platform/internal/content/kit/core/model/impl/KitMod
+ elPackageImpl.class
+SHA-384-Digest: AFEYkF/Yh54ikSS8VzubKveqTnbHp70RARjV/FAWmVdZI4Z4upwXIbjm
+ Dv53rrX6
+
+Name: com/silabs/ss/platform/content/kit/core/Kit$SingletonHolder.class
+SHA-384-Digest: FgD7FufgxIKaFXrqadqz3pGZSUPHxFphqLYp2PE7u4naiNjLi4cwcq3+
+ m3Uxa7d5
+

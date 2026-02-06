@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="launchElementsProvider" name="Launch Elements Provider" schema="schema/launchElementsProvider.exsd"/>
+   <extension-point id="launchItemsProvider" name="Launch Items Provider" schema="schema/launchItemsProvider.exsd"/>
+   <extension-point id="initialSetupHelpers" name="Initial Setup Helpers" schema="schema/initialSetupHelpers.exsd"/>
+   <extension-point id="setupTask" name="Setup Task" schema="schema/setupTask.exsd"/>
+   <extension-point id="licensingParticipants" name="Licensing Participants" schema="schema/licensingParticipants.exsd"/>
+   <extension-point id="launchItemEnabler" name="launchItemEnabler" schema="schema/launchItemEnabler.exsd"/>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Solution -->
+      <package
+            uri="http://www.silabs.com/ss/Solutions.ecore"
+            class="com.silabs.ss.platform.internal.api.launcher.solution.core.model.SolutionModelPackage"
+            genModel="model/Solution.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated Solution -->
+      <parser
+            type="solutions"
+            class="com.silabs.ss.platform.internal.api.launcher.solution.core.model.util.SolutionModelResourceFactoryImpl"/>
+   </extension>
+   <extension point="com.silabs.ss.platform.launcher.core.setupTask">
+      <task
+            class="com.silabs.ss.platform.internal.launcher.core.SeggerAutoInstall">
+      </task>
+   </extension>
+</plugin>

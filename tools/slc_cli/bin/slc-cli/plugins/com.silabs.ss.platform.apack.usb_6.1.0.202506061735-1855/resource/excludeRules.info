@@ -1,0 +1,29 @@
+This file lists the default rules for which vendor ids and 
+product ids are going to be included in the list of studio devices.
+
+The format is following:
+  * VID or PID reads as hex, if it starts with '0x', decimal otherwise.
+  * Line "-VID:PID" means to explicitly exclude VID:PID
+  * Line "+VID:PID" means to explicitly include VID:PID
+  * Line "-VID" means to explicitly exclude vendor id VID
+  * Line "+VID" means to explicitly include vendor id VID
+  * Line "+" means to include everything else.
+  * Line "-" means to exclude everything else.
+  * Any line that doesn't match the pattern is ignored.
+
+
+Cygnal:
++0x10c4
+
+Silicon Labs:
++0x10cE
+
+Ember Corporation:
++0x1BA4
+
+Segger:
++0x1366
+
+Everything else is excluded:
+-
+

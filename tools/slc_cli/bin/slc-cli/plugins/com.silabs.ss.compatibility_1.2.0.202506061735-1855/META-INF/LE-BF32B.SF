@@ -1,0 +1,76 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: NAvEUsTr/FlbXbh5xQPhuiRnsjxgM8PWP88/m6QTz8KMPCF
+ EaSgRWn0eH1Sm1duV
+SHA-384-Digest-Manifest-Main-Attributes: SWHs7w01COXnbQX7PkYXf2F5IRt3rQt
+ A2QHkVtxkpafG0PY5WPtfQ7MYSl1GBtNP
+
+Name: com/silabs/ss/compatibility/api/ICompatibility.class
+SHA-384-Digest: daQfQJ4bG+RVtN/UeLu6j4nPvuV5xtHYnyISQxTVKcwjtqsMA1PO8ia6
+ 7fRZp5uQ
+
+Name: plugin.xml
+SHA-384-Digest: lXvx0rmeXoFCxtU6EvUFZrnrXKLnaOldV84pjFlfoI1rdiR9omZY5Pl2
+ IeW5KBMs
+
+Name: com/silabs/ss/compatibility/rcp/engine/api/ICompatibilityEnginePro
+ vider.class
+SHA-384-Digest: QJoztHGusdPNuhTy9MeRn1ZSmHXMZlVIUUc5B+aoid5ysAu7NyXa0o12
+ 2V2IU1cn
+
+Name: com/silabs/ss/compatibility/api/engine/ICompatibilityManager.class
+SHA-384-Digest: Wl39y2GhvwvHdh3mHz1My6tZNrduHGEO70S6Yn/Tjv0SU58NOPum1stk
+ qxnGXsDm
+
+Name: .api_description
+SHA-384-Digest: QCgIW9tT88MXO7Q6C/60IXhlfA6jlmD9G4iol0sUoCxDFA/2VoO07w9U
+ IyH5/U1P
+
+Name: com/silabs/ss/compatibility/internal/NullCompatibilityExpression.c
+ lass
+SHA-384-Digest: SIqVRsfyqRKOMRGJNx/keBCHU0d9Ekz7FDHhRwAu101uXkZ/e2862CAI
+ w1eBhyX4
+
+Name: com/silabs/ss/compatibility/internal/CompatibilityManager.class
+SHA-384-Digest: fgUAm3sV+IMLNG5r1k+JHApo+099bvO+oXFwtOvqKIvkAP7r27DZmTUS
+ /RT0O3mR
+
+Name: com/silabs/ss/compatibility/api/ICompatibilityContainer.class
+SHA-384-Digest: k8TA4QlfJjCOO5JRtvdUjPzXrkkMzZz7WXJkTZert/M/JxGdXnfB16LB
+ S+ogPRNZ
+
+Name: com/silabs/ss/compatibility/rcp/internal/PlatformCompatibilityLoca
+ tor.class
+SHA-384-Digest: KjpsbM/W1WjUrluBZ2c8rTinXDfvgkimyglN4BToTakGx+nIzkrqsCbQ
+ RhVx2Sm6
+
+Name: com/silabs/ss/compatibility/api/engine/ICompatibilityProvider.clas
+ s
+SHA-384-Digest: CXt6vNsnnUrCKmu5gZ2b5YwSst+J97epN8WPsB4acO+uOsp8wFJWvz+Y
+ UT3Uweuq
+
+Name: com/silabs/ss/compatibility/rcp/internal/Activator.class
+SHA-384-Digest: CbXumPLRxLJGDMrdjWkhDIfjEcQAZh/ezL4pupic62CSyA6xRmcDRlPV
+ xa94aqbd
+
+Name: com/silabs/ss/compatibility/api/engine/ICompatibilityManager$IProv
+ iderLoader.class
+SHA-384-Digest: LOMCM3isGm66XF70wBT+6uVnpEsJLGjz/mZsVCDZJTPsxLkoYuvuD9Pi
+ 7qWZ0ojU
+
+Name: com/silabs/ss/compatibility/api/ICompatibilityContext.class
+SHA-384-Digest: /h8zsvu38IKdSAg+3lXKEtfo4hidwI+BdZHq5QaWkd6YMQwwtahCYpxK
+ 1pWZz+55
+
+Name: com/silabs/ss/compatibility/api/BaseCompatibleExpression.class
+SHA-384-Digest: gtOJqUeG0qSoAkxVv/pdi1uDmYE2tTs/LKfvSIgXOVu8gOeZW4fTMPyO
+ 5iCeTLhP
+
+Name: com/silabs/ss/compatibility/api/ICompatibilityEntity.class
+SHA-384-Digest: RjjvC6YnuUm8ZckYpMjznwAzGvhTf1vORLxQSLSHagoitNjqbdAKOhxl
+ JolQFbWw
+
+Name: com/silabs/ss/compatibility/api/ICompatibleExpression.class
+SHA-384-Digest: bmc+pFYyDj3zkFBEfdaFI2PbE4Rms5i55vKcRMxLY3EO3RKhSo32PeML
+ aixL8YbE
+

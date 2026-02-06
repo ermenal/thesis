@@ -1,0 +1,81 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: wgUudmLhDgOKxVhKnI2B8itL8CRB/66HrlZ2W8fpby+7l2g
+ O0oy7eK0ry9FFB0xs
+SHA-384-Digest-Manifest-Main-Attributes: SeC281TFCLRJrLyIHv7BLGGm8qFdEjX
+ 1JUTA1P0vUTRsaZDcZ3Px6C57UxuuAcBM
+
+Name: com/silabs/ss/platform/internal/apack/device/DetectedBoard.class
+SHA-384-Digest: 5fzY72K/umYlwB8azzgQkIBrSXR4y60MHVG0ddhruqKYzfUQ/bHfQSqA
+ I/Dan2cF
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbVidPidInspector$Re
+ tryDetectionLineHandler.class
+SHA-384-Digest: Pyx37WQSFnr8xoIIwvJ0L9/qWDOwtVX2x+w5vRgaLaU1nUzpK+aLeU5m
+ FJI4qGqN
+
+Name: plugin.xml
+SHA-384-Digest: s62BpdMNtVeIz6Aodbb9de0Vv9caSjG9L9qF2f2XoH/k3DJI9B0ZZfni
+ 8nsB2BT9
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbDeviceCreator.clas
+ s
+SHA-384-Digest: OrZBc1hVpElRcgabD5YoH6e7iUpJNm9HxaXyNmIxmbKDAdpM27RItF6W
+ 4n0atXzc
+
+Name: com/silabs/ss/platform/internal/apack/device/AdapterPackDetectionL
+ ocator.class
+SHA-384-Digest: SP2Q/+/SwCT4lLtwxcGAPtuGZhUbdEbGv18731Ur27ffENF0SKGqBWv2
+ LhESMpLx
+
+Name: com/silabs/ss/platform/internal/apack/device/DetectedPart.class
+SHA-384-Digest: rKmk2/vffM89Za1cqpR7ZbmZnfAm7vAjlcEo9SO9uJOqLiuQn/tgqE+W
+ yyeUxica
+
+Name: com/silabs/ss/platform/internal/apack/device/DeviceFilter.class
+SHA-384-Digest: hQl5PWQCS2aRHj8T/3LyOR/gYL6azB+mN0Wdq4jFU8bsebGl+WQYRX71
+ npHp2Act
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbInspectorExecution
+ Context.class
+SHA-384-Digest: kC6yBvi6hRY6wPHGLKHPGvyNgvYa1r6pBumh+socJi+PZiGodT4JWre2
+ NvxFQ733
+
+Name: .api_description
+SHA-384-Digest: EyXfcGE4LRAi3VpnyhL6JLCJMWbMPU5umtCVv4q8QoOLMBRyxgp42nkR
+ 2wCqrnbg
+
+Name: com/silabs/ss/platform/api/apack/device/UsbDevice.class
+SHA-384-Digest: ztABfpPRMc9kbA8cwEINURMscsH4LTkMwfMFngtl2JfBYAAuoZaZ0q8G
+ lYr2WTfe
+
+Name: com/silabs/ss/platform/api/apack/device/UsbNotifierDetectionInfo.c
+ lass
+SHA-384-Digest: CgHNWrRr9U/KxrUYlfcxGm8oqJEQZdwZUmM/FUvJ88UnJAIlX/jy3h0R
+ +DL93JI6
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbHotplugNotifier.cl
+ ass
+SHA-384-Digest: Y8PVP889hsELTWyyQLQ6fOwYmdLNuODasA6ko+Ivf69yxMamVUUEOPYg
+ spugZJA+
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbVidPidInspectionLi
+ stener.class
+SHA-384-Digest: hTYlH+Wq/ynqRcrHeZgZcBwDu0Wtdn/4sFESJinhpUg3UDqcvZS9ydmk
+ sPFDJnk6
+
+Name: com/silabs/ss/platform/internal/apack/device/AdapterPackDeviceActi
+ vator.class
+SHA-384-Digest: oaPrM3TPPkcMNxDq4wZ1sjyNd7uMu98cbL4nkUsgkAJjZbklu3t85zgy
+ HCXbqhDp
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbDeviceBridgeListen
+ er.class
+SHA-384-Digest: qWu5icEV3T+kqoN2GHXychb4uwxByNspDvIMn3iYT8yIlyXmb3mpswnK
+ jpkziZKd
+
+Name: com/silabs/ss/platform/internal/apack/device/UsbVidPidInspector.cl
+ ass
+SHA-384-Digest: OeQAb6l47Kd9lhGUl/y/1mr2sMpMxP9Ra/6SQTgNE1td2YBWc03a+I3i
+ 18B0t9Ab
+

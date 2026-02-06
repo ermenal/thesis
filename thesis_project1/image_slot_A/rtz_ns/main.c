@@ -69,9 +69,9 @@ int main(void)
 {
   // while (1){}
   init_NVIC_irqs();
-  print_nsc("SLOT A: SLOT A: In NS main, voor boot commit\n", sizeof("SLOT A: SLOT A: In NS main, voor boot commit\n") - 1);
-  // print_nsc("SLOT A: SLOT A: SLOT A: In NS main, voor boot commit\n", sizeof("SLOT A: SLOT A: SLOT A: In NS main, voor boot commit\n") - 1);
-  // print_nsc("SLOT B: SLOT A: SLOT A: In NS main, voor boot commit\n", sizeof("SLOT B: SLOT A: SLOT A: In NS main, voor boot commit\n") - 1);
+  print_nsc("SLOT A: In NS main, voor boot commit\n", sizeof("SLOT A: In NS main, voor boot commit\n") - 1);
+  // print_nsc("SLOT A: SLOT A: In NS main, voor boot commit\n", sizeof("SLOT A: SLOT A: In NS main, voor boot commit\n") - 1);
+  // print_nsc("SLOT B: SLOT A: In NS main, voor boot commit\n", sizeof("SLOT B: SLOT A: In NS main, voor boot commit\n") - 1);
 
   if (boot_state_commit_proof_of_life_nsc()) {
     const char success_msg[] = "Proof-of-life committed\n";
@@ -80,9 +80,9 @@ int main(void)
     const char failure_msg[] = "Proof-of-life commit failed\n";
     print_nsc(failure_msg, (uint16_t)(sizeof(failure_msg) - 1u));
   }
-  print_nsc("SLOT A: SLOT A: In NS main, na boot commit\n", sizeof("SLOT A: SLOT A: In NS main, na boot commit\n") - 1);
-  // print_nsc("SLOT A: SLOT A: SLOT A: In NS main, na boot commit\n", sizeof("SLOT A: SLOT A: SLOT A: In NS main, na boot commit\n") - 1);
-  // print_nsc("SLOT B: SLOT A: SLOT A: In NS main, na boot commit\n", sizeof("SLOT B: SLOT A: SLOT A: In NS main, na boot commit\n") - 1);
+  print_nsc("SLOT A: In NS main, na boot commit\n", sizeof("SLOT A: In NS main, na boot commit\n") - 1);
+  // print_nsc("SLOT A: SLOT A: In NS main, na boot commit\n", sizeof("SLOT A: SLOT A: In NS main, na boot commit\n") - 1);
+  // print_nsc("SLOT B: SLOT A: In NS main, na boot commit\n", sizeof("SLOT B: SLOT A: In NS main, na boot commit\n") - 1);
 
   while (1) {
     if (send_packet) {

@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.silabs.ss.platform.content.board.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="com.silabs.ss.platform.content.board.core" id="boardSupport" name="Board Support"/>
+      </appinfo>
+      <documentation>
+         This provides extensions declaring boards available in Studio.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appinfo>
+            <meta.element />
+         </appinfo>
+      </annotation>
+      <complexType>
+         <choice minOccurs="0" maxOccurs="unbounded">
+            <element ref="boardDatabase"/>
+            <element ref="boardProvider"/>
+            <element ref="boardDescriptor"/>
+         </choice>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="boardDescriptor">
+      <annotation>
+         <documentation>
+            This declares a board descriptor and properties.
+         </documentation>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="unbounded">
+            <element ref="property"/>
+            <element ref="description"/>
+            <element ref="containedPart"/>
+         </sequence>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Unique identifier for the board
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="label" type="string">
+            <annotation>
+               <documentation>
+                  Human-readable name for the board
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="description" type="string">
+            <annotation>
+               <documentation>
+                  Long description of the board.  May include HTML.
+
+Note: a separate &quot;description&quot; element may be used for easier editing of longer strings.
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="description" type="string">
+      <annotation>
+         <documentation>
+            Long description of the board.  May include HTML.
+         </documentation>
+      </annotation>
+   </element>
+
+   <element name="property">
+      <annotation>
+         <documentation>
+            Properties for the descriptor.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="key" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Key for a property entry.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="value" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Value of a property entry.
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="boardDatabase">
+      <annotation>
+         <documentation>
+            Define a database (*.boards file) which provides boards.  DEPRECATED:  This should only be used inside the platform and its unit tests.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="uri" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The URI to the *.boards file describing one or more boards.
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="resource"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="boardProvider">
+      <annotation>
+         <documentation>
+            Declare classes that can create IBoard instances.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Provide a class that can instantiate boards.
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn=":com.silabs.ss.platform.api.content.board.core.IBoardProvider"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="namespace" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The prefix for board identifiers supported by the provider.
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="containedPart">
+      <annotation>
+         <documentation>
+            Describes one part contained in a board.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Id of the part.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="partCompatibility" type="string">
+            <annotation>
+               <documentation>
+                  Specify the part compatibility grammar for the given part.  By default, the part itself is the only compatible one.  This may be set if a board contains a range of potential parts in the field.
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="since"/>
+      </appinfo>
+      <documentation>
+         1.0.0
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+         [Enter extension point usage example here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="apiinfo"/>
+      </appinfo>
+      <documentation>
+         [Enter API information here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="implementation"/>
+      </appinfo>
+      <documentation>
+         [Enter information about supplied implementation of this extension point.]
+      </documentation>
+   </annotation>
+
+
+</schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component name="com.silabs.ss.platform.rcp.core_6.7.0.202506061735-1855" version="1.2">
+    <plugin id="com.silabs.ss.platform.rcp.core_6.7.0.202506061735-1855"/>
+    <package name="com.silabs.ss.platform.api.rcp.core" visibility="1">
+        <type name="IURICacheUtils" restrictions="3"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.rcp.core.cache" visibility="1">
+        <type name="StudioCacheController" restrictions="6"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.rcp.core.process" visibility="1">
+        <type name="IAdminProcessLauncher" restrictions="1"/>
+        <type name="IDetachedProcessLauncher" restrictions="1"/>
+        <type name="IProcessLauncher" restrictions="1"/>
+        <type name="IProcessLauncherBase" restrictions="1"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.rcp.core.studioversion" visibility="1">
+        <type name="StudioVersionUtils" restrictions="0">
+            <method name="setTestVersionProvider" restrictions="8" signature="(Lcom/silabs/ss/platform/api/rcp/core/studioversion/IStudioVersionProvider;)V"/>
+        </type>
+    </package>
+</component>

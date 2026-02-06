@@ -1,0 +1,373 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Part Core
+Bundle-SymbolicName: com.silabs.ss.platform.content.part.core;singleton:
+ =true
+Bundle-Version: 6.0.0.202506061735-1855
+Bundle-Activator: com.silabs.ss.platform.internal.content.part.core.Acti
+ vator
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore,org.eclip
+ se.emf.ecore.xmi,com.silabs.java.utils,com.silabs.ss.platform.rcp.core,
+ com.silabs.ss.platform.descriptor.core;visibility:=reexport,com.silabs.
+ ss.platform.content.core,com.silabs.ss.platform.scripting.core,com.sila
+ bs.ss.platform.performance.recording
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-Vendor: Silicon Labs
+Export-Package: com.silabs.ss.platform.api.content.part.core,com.silabs.
+ ss.platform.api.content.part.core.scripting,com.silabs.ss.platform.inte
+ rnal.api.content.part.core.manager; x-friends:="com.silabs.ss.asset.pub
+ lisher.core,  com.silabs.ss.platform.content.part.core.tests,  com.sila
+ bs.ss.platform.content.part.ui,  com.silabs.ss.platform.launcher.ui,  c
+ om.silabs.ss.tool.launcher.ui",com.silabs.ss.platform.internal.content.
+ part.core; x-friends:="com.silabs.ss.asset.publisher.core,  com.silabs.
+ ss.framework.ide.project.core.tests,  com.silabs.ss.platform.content.pa
+ rt.core.tests,  com.silabs.ss.platform.content.board.core.tests,  com.s
+ ilabs.ss.platform.content.core.tests",com.silabs.ss.platform.internal.c
+ ontent.part.core.model;x-friends:="com.silabs.ss.platform.content.part.
+ core.edit,com.silabs.ss.platform.content.part.core.editor,com.silabs.ss
+ .platform.content.part.core.tests",com.silabs.ss.platform.internal.cont
+ ent.part.core.model.util;x-friends:="com.silabs.ss.platform.content.par
+ t.core.edit"
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/util/PartM
+ odelResource.class
+SHA-384-Digest: 2BXrdW0b6Ur7e938XynPfaLyvFUcBY7/kVAbWWorJ8yrWDnjQbMsdfRa
+ ePRnNKbo
+
+Name: plugin.xml
+SHA-384-Digest: 6lOkZejwmudlM538OPzoAIbCbFohPBaSgyqizXEZB/D4JiI7gUgmG66Y
+ Wu+RrKtm
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/util/PartM
+ odelSwitch.class
+SHA-384-Digest: xcdSWm4Eikk/RuD9yOBzTHiHLjkqn/eicM5BbmqmMUQYDYouajVyOD2g
+ 3iJXgmw/
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/PartModelP
+ ackage.class
+SHA-384-Digest: K6AQFazVG4aXqiDp6aFvSMRbFWLSEAVhLtzhE4d8u5/rMFKtdA9xVPGk
+ 40ksdXgE
+
+Name: com/silabs/ss/platform/internal/content/part/core/scripting/SLSPar
+ tModule.class
+SHA-384-Digest: pIZwhAurGpwqtZvFmjSDX4wIAMbdtyw4VV1yO+hRRymciqdHFeuJsDqL
+ jm/PV3ge
+
+Name: com/silabs/ss/platform/api/content/part/core/PartGroup.class
+SHA-384-Digest: Mceoqh9k1YP2rfrXHZBsFuW+J9iCU/14xcTncD6gTLjNT9lD3ch9ZNoA
+ 25LSIuhF
+
+Name: com/silabs/ss/platform/internal/api/content/part/core/manager/Base
+ PartManagerListener.class
+SHA-384-Digest: PHHYknn4QJGjrtWeXqwHenGlbDmNx+fs3/ucma4EEQCUCsTjMRSbWO4F
+ tuOT/G5c
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/impl/MPart
+ GroupImpl.class
+SHA-384-Digest: wZHTKijpqevBXs0s+vsREuZaeppqbDGI9/HfZqDoHyR+CxiSeTWGTtlG
+ Whouq1BG
+
+Name: data/stock.parts
+SHA-384-Digest: ieOuMsXIdILAe9U71FMDSoVGwrR8S5Td1o6auboPAnpsKDHPnqbJf0VK
+ Y43ARGYp
+
+Name: com/silabs/ss/platform/api/content/part/core/IPart.class
+SHA-384-Digest: +o5cR2IrU1XrschN/uyS5jTpNKgOrLHs5Z+BpZ+Rza1XnJkgLFmijFwj
+ gUdJBLe5
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartGroupDescrip
+ tor.class
+SHA-384-Digest: xSDah7NRod+9YzyFrmmVS9vLO1IB8J/hmvVE7ed0zrSiEyFqqk8wlR6u
+ M7IRmnWy
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/PartModelP
+ ackage$Literals.class
+SHA-384-Digest: xQ3xL+4ICij9EoYdPE9TBMhF2nmYWr/fsruAqqcGp5aLM3uwGX8RU7Fn
+ O3FKA6OP
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartReader.class
+SHA-384-Digest: 6sbNPfUcm+DgUl5nnznh1cLO948gEla4wFUdDM5oguglB2r1ZtZ4sWes
+ eh/x52qL
+
+Name: com/silabs/ss/platform/api/content/part/core/IPartManager.class
+SHA-384-Digest: S5DLMYwznAip/UMtIbhWnea6BR7JsJwM3Tb7ZwVSfaFFfTUnFnW3ycDo
+ qT8Y2UZL
+
+Name: com/silabs/ss/platform/internal/content/part/core/scripting/SLSPar
+ tModuleProvider.class
+SHA-384-Digest: NzGPOPc6It4EeySe76j+rsIcJgd67K3QWelSj4hll6x4fDBFhfsMOOZt
+ rvTDiQ/u
+
+Name: com/silabs/ss/platform/api/content/part/core/StockPartProvider.cla
+ ss
+SHA-384-Digest: hgdA/vXNu1hCOqCcff+k4Zjnr3SpnDaLsh7b/pDi5KJudxDHDe6BJJCb
+ ZQD/3rsE
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartResourceFact
+ ory.class
+SHA-384-Digest: OMpLZdsoLmyviLUEg4X743sPGs+VU0LyFRw4GBjabrH8eccpTN5Jlugz
+ ysZ/lZ5s
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartTypeConverte
+ r.class
+SHA-384-Digest: DkevmpSdCtTkFoArx9ClijIDuShRF3Q4kg5h9M3fd4oR5ghMAxDiuCqE
+ QuARGn0T
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/PartModelF
+ actory.class
+SHA-384-Digest: qplsDD4xm81jRJjLqKh+mLDd/R8gnspyEKfYsRlHxT93W7RH+KT0dNgU
+ VbcwnnW2
+
+Name: com/silabs/ss/platform/api/content/part/core/PartCompatibility.cla
+ ss
+SHA-384-Digest: 2guq2qvpPdPvkJLum4EWDw83dbc5jFnNBXSD/gAcKbfWHTmJ/N9WEPSv
+ 4yWevhqx
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/util/PartM
+ odelAdapterFactory.class
+SHA-384-Digest: 4GCUhfq4uc5v78Epl04WhRAauiJHnIY7/8mkzi9x7vMyWLHMPxT2iCkX
+ EIBJ8cBE
+
+Name: com/silabs/ss/platform/api/content/part/core/Part.class
+SHA-384-Digest: NrETliXiVQLftEMBGsaOwmyN8Ap+M8vQ5/deeo7EicOFnS/lZdtTVFZf
+ IX5mfNBS
+
+Name: .api_description
+SHA-384-Digest: 0e2gx5c0CWm77nwEOqiXpnGdORiNWovaNVXLK5lb9pIEExTQKLn6QMVz
+ s3FHJLkH
+
+Name: com/silabs/ss/platform/api/content/part/core/PartCommonProperties$
+ ID.class
+SHA-384-Digest: KMtBrLBsEFjgzsgGyC7vemc93t9kOl+6GMo80Uz6TS0HOWTZezugSyoW
+ aAs9F8b1
+
+Name: com/silabs/ss/platform/api/content/part/core/PartHardwarePropertie
+ s$ID.class
+SHA-384-Digest: hzi9aZw/woIj1wIUOWmGPo+FKr/+ZIZMUOECVHTLAHrzwGrj7PFCgdnw
+ wwdD91qQ
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/util/PartM
+ odelAdapterFactory$1.class
+SHA-384-Digest: jSPO5+HVooomEcINbAnXmnEOIbqkNBGyVgPls5dJBrn8n6/7CFiA7so+
+ RQxWD5ef
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartResourceFact
+ ory$PartResource.class
+SHA-384-Digest: 3ldROel7jMnbWcXl4vQdYFLESzC3sStHK2e2Z0WQrtF/S3hxRHUGBFmU
+ 2HUhrj+v
+
+Name: com/silabs/ss/platform/api/content/part/core/BasePart.class
+SHA-384-Digest: OOAYgEXXZRWKs9sVCj0nRtaFqcbag5b6wAQCa4nUQXt17d0GgjX9ol9a
+ mcrKRyJx
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartManagerCompa
+ tibility.class
+SHA-384-Digest: PgwCCzGH8kuJWAnxuCRXZPr6e4UEMa/8YrfVyRO5YJxD/KTbBNRIQljU
+ Uk1bmfkn
+
+Name: com/silabs/ss/platform/internal/content/part/core/Activator.class
+SHA-384-Digest: 5yX4CtGlmHnRBpF18y6/UYkCNMONTDAzSBXKuTQyE8tbHrPyZ0WC7nmO
+ wrvgmOzs
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartDescriptor.c
+ lass
+SHA-384-Digest: ydazPPukUgbXwPQYT6vdzb1RSB8jn5BGHWFmJd9iVdit2ZWbeJVvtq97
+ PPMR0FJ6
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartManager$1.cl
+ ass
+SHA-384-Digest: 7yTDqXTvmkC7ZSF/oiLlI5i7fwFlQo/7grbSucsc+WJbFog2xp2unufu
+ xdBlehKB
+
+Name: com/silabs/ss/platform/api/content/part/core/PartUtils.class
+SHA-384-Digest: OWcG1z4k+q97Uk/igooMGzcHFIp7Qkmsnm+L5qGoiHazW714VYUVnxm+
+ CW0AV53r
+
+Name: com/silabs/ss/platform/api/content/part/core/PartStockVariableProv
+ ider.class
+SHA-384-Digest: p4MBE7KTWgjZSCqmmjaY5CAFs+pZdSvKvRQQV0diiaE6otBGDFQWcxs9
+ 3QNAPaIX
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/impl/MPart
+ Impl.class
+SHA-384-Digest: dnRz3s4wbUsl/5z2qlpT00vm2h9m0FZGOHksfE2vNueXweJafUEk1Rh0
+ krvjOwdz
+
+Name: com/silabs/ss/platform/api/content/part/core/Part$SingletonHolder.
+ class
+SHA-384-Digest: wIv+d1RNEsIW6FOla9s+QVnKVbah4qxFThvWAvWYhm1mj81s6PgXufas
+ 7WUrLgTv
+
+Name: com/silabs/ss/platform/api/content/part/core/IPartManagerListener.
+ class
+SHA-384-Digest: GfveIq0/6DFkFjidYJfSEgf4gR8tOl8xWl+LISJ7JJZULnyhBjugUm6R
+ KJPCfmr/
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/util/PartM
+ odelResourceFactoryImpl.class
+SHA-384-Digest: UeqKz8U6qIec8xteujmWaNafZeuH6MDhVHNhRKrjuZCg5bKDwR9BtiUZ
+ hXjQpyRA
+
+Name: com/silabs/ss/platform/api/content/part/core/StockPartGroupProvide
+ r.class
+SHA-384-Digest: /ATM++qdDYlh/0oS5RJJXM0JJ8K2Wae9hOvQtmN9n+YDHm9qEJuU9fuQ
+ oObTfzga
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/impl/PartM
+ odelFactoryImpl.class
+SHA-384-Digest: IiMUK5BRIW/6TMlkvie+ZeEngNU56cErJcdG8QLWLZ8ZxX95rOLayuZV
+ 0/098GUy
+
+Name: com/silabs/ss/platform/internal/content/part/core/XMLLoadPart.clas
+ s
+SHA-384-Digest: mHbfzTlmcFHh2R1NRo52kszMWyNeXQy0l7SeUxr5z92MTueGLQI9gqHl
+ NNlwIUmq
+
+Name: com/silabs/ss/platform/api/content/part/core/IPartGroupProvider.cl
+ ass
+SHA-384-Digest: wwSYyRcynjNmN8K9wkkL54jKXK5TRFMhw/vHSxnrwHqXlI7/4z5ofbHp
+ zhEHBNoi
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartStockVariabl
+ eFactory.class
+SHA-384-Digest: A2D5k42bObHNRyeQxedBEMUEyne4RPy0/5xFH8elPTYlr1EQD+opXE0t
+ 20F6XGZY
+
+Name: com/silabs/ss/platform/api/content/part/core/IPartGroup.class
+SHA-384-Digest: rYx9cYpDDZ9/GY7AwIQty6ceWU1K+KEvl9uAmLDFfLax6JimhFTUWDJ2
+ V3YEEWje
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartRegistry.cla
+ ss
+SHA-384-Digest: TdcVYCVa+WKTULy3yjirmnq0L7p4+9bdsVPEed0wbRNrtSbNeJuG4E8y
+ Iq0fO3jc
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartReader$Loade
+ dDatabase.class
+SHA-384-Digest: 1IMhtBnpt1ER6Vt5K4yHRTiNoMt5jBE4f4G4CnUYOQbPYSM0PpkO5pUn
+ ZilnGHym
+
+Name: com/silabs/ss/platform/api/content/part/core/IPartGroupDescriptor.
+ class
+SHA-384-Digest: eCOq7YRBhX/7XD1D8rdzAKARBVaNr5NlcImaojghhW5NKQI6POwx/AyS
+ 4bubF/kg
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/util/PartM
+ odelXMLProcessor.class
+SHA-384-Digest: wc4OwSDREfg4++qvYHuAe2OAxlYfQLHuKwbMgY1ev7gSqEbZGP90nduI
+ grxwml0d
+
+Name: com/silabs/ss/platform/internal/content/part/core/XMLSavePart.clas
+ s
+SHA-384-Digest: LNCO1NzcVnTKMfLOMa+GyFH6646KytJA1JKwSkbcYV6Yau5wIUocbmKh
+ 6qNZ4oTP
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/MCollectio
+ n.class
+SHA-384-Digest: CdWXVyGObS+0fJvL6BdcIE843kF3m8/NT1GPmajhas9ZCtEefXVkkpnk
+ e0e+QDdL
+
+Name: com/silabs/ss/platform/api/content/part/core/IPartRegistry.class
+SHA-384-Digest: Orb0QUYjLjCpmuUwoCf9z3FDHFmAW+EKUW0S41rXx+js5jBRXF4c5+El
+ fbm2zDOk
+
+Name: Part.genmodel
+SHA-384-Digest: lGaV8sIq13khUYjyxErHBZDoSI1/9/vCfqkQlIAiLhjt11d9U88FZHa/
+ mHCe9lQ9
+
+Name: com/silabs/ss/platform/api/content/part/core/scripting/ISLSPartMod
+ ule.class
+SHA-384-Digest: S5erKwDInZBzp9gir2awv6av3WoNcbwA+1o+W7+f7Eyog7SGG+jK6hs5
+ EeXmuWYl
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartStockVariabl
+ eFactory$PartStockVariableSupplier.class
+SHA-384-Digest: FTMcDH8V6OrVZVBqek3uW7CeE5LbAG0cPEP7ltvJZZVBsiNqWutpUiXK
+ ykHMaZmD
+
+Name: com/silabs/ss/platform/api/content/part/core/PartCommonProperties.
+ class
+SHA-384-Digest: KA034ni3UMfhOeFSfYQd5zwrGkt2WezuL19Wx2Je5fYlSTF/lnz3k+7+
+ XU90+Hju
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartHardwareHand
+ ler.class
+SHA-384-Digest: GtsBOjWOZeyAaP42KHD9YxTKSscOo4JuT6VzzHdOpNm4BQ+UenDme3lc
+ x+Ojclm4
+
+Name: schema/partSupport.exsd
+SHA-384-Digest: 3ZhHNYbK7jxXwM8sk7Yd+3sUwcNLT91fc7q7529g5n1slycawj0SlRV0
+ L45Pg9fM
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/impl/PartM
+ odelPackageImpl.class
+SHA-384-Digest: tZNb1gl2w/yemlu3ejT12T01P7dqbdd6F4HdkL/6Y0PyyFOaNDS93Umo
+ Tl3lEtUL
+
+Name: Part.ecore
+SHA-384-Digest: ULmTqgvJJvgmOVZ2ZCK9TiIyi0BgN8AmUXUMmH6MPZElgwwA4iI9KCV9
+ 5Me6cH7F
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/MPart.clas
+ s
+SHA-384-Digest: vKhdXdLv4Ns7EeRk/TIFWHzCIE9F9bAuiyivV1eEV3j0MA4CLl/zIBs2
+ PRxoyZ/Z
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/util/PartM
+ odelResourceImpl.class
+SHA-384-Digest: 0Gv0qbeU5LyXLV+fKo3eoL029bvhTuY1XZBIH9AEwPvqoDcWB2PAuWYk
+ rAIS3G9w
+
+Name: com/silabs/ss/platform/api/content/part/core/PartHardwarePropertie
+ s$TYPES.class
+SHA-384-Digest: rmakETvr1YCHq53JECHa7/Na9MUFIAlI0btTdjCIJYwuPDbOyhf5BLXB
+ pjvoDtbQ
+
+Name: com/silabs/ss/platform/api/content/part/core/IPartOrGroupDescripto
+ rBase.class
+SHA-384-Digest: Yq5IajwSJy8S6DlG5wHLhbXTRyRMPtZoGx8QHTp+h5nBwe7hFeYEP5HC
+ WSfYeECY
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/MPartGroup
+ .class
+SHA-384-Digest: p+eAavu4NXtT1n2ED5pudM8weRKfoNg80IPpO/OAXxygt/vTDYGbtjmb
+ Be+5Z+cW
+
+Name: Part.xsd
+SHA-384-Digest: A+rvYZykySIFKqUEU/P0aouJN26CbLgNHlfqZPadzIL+QS1EA3orVZTG
+ QkAV1PBJ
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartXMLHandler.c
+ lass
+SHA-384-Digest: apTwIsWZvGEQBf2YfEmDREuTdLj5Bka1KP82N3wBeohLjXGy9hj5iAu8
+ jElBDJMj
+
+Name: com/silabs/ss/platform/api/content/part/core/IPartDescriptor.class
+SHA-384-Digest: +IQGcClXGbwB7IZ8q/PG1pLvJ1JjNmE/wLDLCMPospNGn7HAyxwDowqo
+ gZgOMgRW
+
+Name: com/silabs/ss/platform/internal/content/part/core/PartManager.clas
+ s
+SHA-384-Digest: zJYjJ3dWlwIIuxIEHYnKSfRKmFEY70JI8kmpvwwzZkHT9w0AmLLJE5bo
+ cFAL52Os
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/util/PartM
+ odelResourceFactory.class
+SHA-384-Digest: nyYg1tLOJaAhBfd4g9QMGF+nmMK/FGm9hqylumKM/+jr2FzRj+u2osDB
+ oVsc62Nh
+
+Name: com/silabs/ss/platform/api/content/part/core/PartHardwarePropertie
+ s.class
+SHA-384-Digest: I2b/BwkKkFXzFsWc2WVP7FQh/F/1n5iJIv9o9t9+NvKOB35YJKaGP3qw
+ lhMPkFYr
+
+Name: com/silabs/ss/platform/api/content/part/core/IPartProvider.class
+SHA-384-Digest: 18ESVhvxhGTNgQuwBiK5k2PuOoMj6bGo1IHKobklDj2d88jlOgazGgTA
+ 04tO9el4
+
+Name: com/silabs/ss/platform/internal/content/part/core/model/impl/MColl
+ ectionImpl.class
+SHA-384-Digest: qV+M84iN5nMfbO8wFzxNcJSt9CzFbkVN9GuCUf3eaxo5FOz6DPieAgZz
+ 7FUjTaJq
+

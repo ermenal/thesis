@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component name="com.silabs.java.utils_7.1.0.202506061735-1855" version="1.2">
+    <plugin id="com.silabs.java.utils_7.1.0.202506061735-1855"/>
+    <package name="com.silabs.java.utils" visibility="1">
+        <type name="CollectionUtils" restrictions="4"/>
+        <type name="OSUtils" restrictions="0">
+            <method name="test_recomputeBitSize" restrictions="8" signature="()V"/>
+            <method name="test_setIs64Windows" restrictions="8" signature="(Ljava/lang/String;)V"/>
+            <method name="test_setSystemProperties" restrictions="8" signature="(Ljava/util/Properties;)V"/>
+        </type>
+        <type name="Result" restrictions="3"/>
+        <type name="SystemSettings" restrictions="0">
+            <method name="environmentVariable" restrictions="8" signature="()Ljava/lang/String;"/>
+            <method name="javaProperty" restrictions="8" signature="()Ljava/lang/String;"/>
+        </type>
+    </package>
+    <package name="com.silabs.java.utils.annotation" visibility="1">
+        <type name="BadUnitTest" restrictions="8"/>
+        <type name="GroupedUnitTest" restrictions="8"/>
+        <type name="InternalUnitTest" restrictions="8"/>
+    </package>
+    <package name="com.silabs.java.utils.extension" visibility="1">
+        <type name="ExtensionManager" restrictions="2"/>
+        <type name="ExtensionUtils" restrictions="4"/>
+        <type name="IExtensionManager" restrictions="3"/>
+    </package>
+    <package name="com.silabs.java.utils.function" visibility="1">
+        <type name="ThrowableBiConsumer" restrictions="2"/>
+        <type name="ThrowableBiFunction" restrictions="2"/>
+        <type name="ThrowableConsumer" restrictions="2"/>
+        <type name="ThrowableFunction" restrictions="2"/>
+        <type name="ThrowableRunnable" restrictions="2"/>
+        <type name="ThrowableSupplier" restrictions="2"/>
+    </package>
+    <package name="com.silabs.java.utils.preferences" visibility="1">
+        <type name="IPreferences" restrictions="3"/>
+        <type name="ITypeReference" restrictions="3"/>
+    </package>
+    <package name="com.silabs.java.utils.thread" visibility="1">
+        <type name="SilabsThreadFactory" restrictions="4"/>
+    </package>
+    <package name="com.silabs.java.utils.variables" visibility="1">
+        <type name="EnvironmentVariableUtils" restrictions="0">
+            <method name="junitStubEnvAccessor" restrictions="8" signature="(Ljava/util/function/Function;)V"/>
+        </type>
+    </package>
+    <package name="com.silabs.java.utils.variables.engine" visibility="1">
+        <type name="StockVariables" restrictions="4"/>
+    </package>
+    <package name="com.silabs.java.utils.zip" visibility="1">
+        <type name="ZipUtils" restrictions="0">
+            <method name="unzip" restrictions="8" signature="(Lcom/silabs/java/utils/zip/ICompressionAlgorithm;Ljava/net/URL;Ljava/io/File;[Ljava/lang/String;ZIJLjava/util/function/Consumer;)V"/>
+        </type>
+    </package>
+    <package name="com.silabs.java.utils.zip.impl" visibility="1">
+        <type name="ZipCompressionAlgorithm" restrictions="8"/>
+    </package>
+</component>

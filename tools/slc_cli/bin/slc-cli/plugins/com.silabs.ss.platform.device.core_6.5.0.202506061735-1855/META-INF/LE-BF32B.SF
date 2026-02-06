@@ -1,0 +1,399 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: +0qDI+Sz1H8n9HeKMHtMx2exhlqpcEATLRQ8v0jSGfR5/FX
+ pFJkzhf2u8E9op2xj
+SHA-384-Digest-Manifest-Main-Attributes: b6tIIKZTKcZZVh/xh07Manx9YZJNnLr
+ duAEjE+If2arAnQ9u2X6nzb8skLOJV8bm
+
+Name: com/silabs/ss/platform/internal/device/core/Activator.class
+SHA-384-Digest: Px66f7WPWxunqXLIz4Hbz3OMVisf+HK893cSnqREHWoJ4dRXHFuKih/x
+ YMWiGVSh
+
+Name: plugin.xml
+SHA-384-Digest: iP5jQVTKnjhqx6CUE6rVQyM2MsNVZW5c6W8yKIOyrvBOz/KOR45q8iL/
+ fKpfOJny
+
+Name: com/silabs/ss/platform/internal/device/core/extensions/DeviceValid
+ atorExtensionParser.class
+SHA-384-Digest: eE8gH+qOaA4inlVagz5NLYIW9Ti0zIF+ak5i4cLnRIczgJUmv1gsWRk6
+ Z4gy9IJR
+
+Name: schema/deviceValidator.exsd
+SHA-384-Digest: x7aeUanACD3gM9JgoVd0m5RvwLOCeclM5TjYNrKXf+Qn/mgzZTNWxcvx
+ n+upfHBW
+
+Name: com/silabs/ss/platform/api/device/core/IDeviceOptionContributor.cl
+ ass
+SHA-384-Digest: 9C6dxXMLJ1eLn+zsygehwVZnP/7CezQ98+Wvdc+mhajFh2P0ntMnaNAg
+ rvtwV2UU
+
+Name: com/silabs/ss/platform/api/device/core/notifier/DeviceNotifierExte
+ nsion.class
+SHA-384-Digest: z6hk39oRiP4U1KRem3nZsduyJGbekUg4sdQ7YUey+7Zm+RPDdrp25loJ
+ yAP+VpIh
+
+Name: com/silabs/ss/platform/api/device/core/DeviceUtils.class
+SHA-384-Digest: Qut7jf9q/Q5JM9ksG6FsGDfrHS80wNxPwuMQgJYkAOEz9ZnTA4Tgbdll
+ srBnRPCt
+
+Name: com/silabs/ss/platform/api/device/core/locator/DeviceLocatorJob.cl
+ ass
+SHA-384-Digest: 9G6VGSslNritmQTBSyIiCRje5E0x/vFihsMCDCWUfNulrYM30ihlumIj
+ X0xDoMKi
+
+Name: com/silabs/ss/platform/api/device/core/DeviceManagerPreference$Dis
+ ableOption.class
+SHA-384-Digest: JgLcHoXGfAbstGoY1276iRymb1yqa6y1EPzdigmdqVJtrauYKrIH+L/l
+ 9d3biy71
+
+Name: com/silabs/ss/platform/internal/device/core/extensions/DeviceInspe
+ ctorExtensionParser.class
+SHA-384-Digest: XGS1V1/rzykLLr9lX8XRH3OOUqUBIZ2N99DShaVZyeWnsNCaEgsdi+l4
+ LH4Y3obX
+
+Name: com/silabs/ss/platform/api/device/core/DeviceUseState.class
+SHA-384-Digest: LvYjvTQ6ePqNHSFBTnQaei2OnMuQdmA+N35v9+RFv6kn5SLDMcj8hDvE
+ J0zuSkOB
+
+Name: com/silabs/ss/platform/api/device/core/IDeviceClient.class
+SHA-384-Digest: hXyv9qM7xKlBlw07CNHAouES7T/yhhxaF/qt+2y2xYrb7xQz0qspxCUP
+ 1xFET1WY
+
+Name: com/silabs/ss/platform/api/device/core/IDeviceCapabilityListener.c
+ lass
+SHA-384-Digest: Zdurq6QKhW+NxtlZ54EyK6HEy1CaoDCi1vQeFU6CnzrMwADT77UJlNAH
+ 2xnXUlDy
+
+Name: com/silabs/ss/platform/api/device/core/DeviceFilter.class
+SHA-384-Digest: biwbYZnMKB80ZQ/Legfb4s9O9uTftPCER1tbBAgt1TZfJFnmOlw+Uf22
+ Fygpbpj4
+
+Name: com/silabs/ss/platform/api/device/core/locator/DeviceLocatorExtens
+ ion.class
+SHA-384-Digest: wtySPcEnMO4OSltbKQm2nbA6ys9Sia/T+3npDprZV7rF8na+hkKedIUN
+ dBsp11IU
+
+Name: com/silabs/ss/platform/api/device/core/DeviceIdentifierContainer.c
+ lass
+SHA-384-Digest: 3Xrqt7K5hqyPi77oMEAolsbCcU7h0lPgTXO4Vh4bzNEJbRz94QsOqekG
+ OBerrejd
+
+Name: com/silabs/ss/platform/api/device/core/DeviceNotification.class
+SHA-384-Digest: vyZWy2+vIJ9SYag7Gw6MqBN+ugchx9iLUXiwy3XNbdz88pUG073eq82U
+ 4bh9PIiH
+
+Name: com/silabs/ss/platform/api/device/core/notifier/IDeviceNotifier.cl
+ ass
+SHA-384-Digest: JdZqs/Yb8tY0zw2vshvVv93Yyrt0XD3eZQkIvPJLt0/nWPQ2ubFuy/Zv
+ eDQ6PuLC
+
+Name: com/silabs/ss/platform/api/device/core/DeviceManager$1.class
+SHA-384-Digest: GMOVqLXhqCgyOFkifu0TAOEx6a2me91vptw7NFLI/mjm+lCrrbEU8Soq
+ nKqK9wpP
+
+Name: schema/deviceCreator.exsd
+SHA-384-Digest: NFjBMXTsXrzeaw6TtBnvLU7OqF17kRZ/I4YotVb7YTH3sUEB4kg9obv2
+ I4/nlieT
+
+Name: com/silabs/ss/platform/internal/device/core/extensions/DeviceCreat
+ orExtensionParser.class
+SHA-384-Digest: oiEKjPWk3999zvkztkxQ13QdGVOQgHUEpkpcVQ9zX2ACovokjPWEAEic
+ 63GOhVcG
+
+Name: com/silabs/ss/platform/api/device/core/UnknownDevice.class
+SHA-384-Digest: DY3sVbPFA3n42I3h0eOwZWmAD2Mdxxr5UkJEq7FnTtCQwntMFGuPMZnv
+ pPIAj7Op
+
+Name: com/silabs/ss/platform/api/device/core/IDeviceConfigLauncher.class
+SHA-384-Digest: YUpVOW5CfePB9BNKVvNFfk5J/y7QVCLzZr9c5K8/s4PXCwNHyi9hmBvb
+ yABih0aZ
+
+Name: com/silabs/ss/platform/api/device/core/DeviceAnalyticsData$LazyIns
+ tantiator.class
+SHA-384-Digest: EDRKGPLTlDjo7OASKuVJdv1duxvu0n/YUL8jEUnprCK2cSS/+Oq/MJHR
+ WS6OvfI7
+
+Name: com/silabs/ss/platform/api/device/core/notifier/IDeviceNotifierLis
+ tener.class
+SHA-384-Digest: WYxpO+l1eZzbGVswms71Flbk+2ipXYCcwsfwCJZAu8zMcAN2XFLV/AVm
+ 9lR0N0+I
+
+Name: com/silabs/ss/platform/api/device/core/IDeviceManagerListener.clas
+ s
+SHA-384-Digest: wcD4gZM9o9/sgRypcjK1jgRySnJEZYcSQ5pNZWVblvb+AZdiKLhovGor
+ 50rGe7/Q
+
+Name: com/silabs/ss/platform/api/device/core/DeviceManager.class
+SHA-384-Digest: icsRgWsknkbpiShpzdTSZUbxgaeV9urzOCLmLaWwXFz2oeXZUJaD/c/N
+ rqGoNsm5
+
+Name: schema/deviceInspector.exsd
+SHA-384-Digest: k3ne2AptV4E2PJBSTjZJAKqTlAVPd+LReucTBkAdU690TRgpdoex1HnG
+ LPjDvwWe
+
+Name: com/silabs/ss/platform/api/device/core/DeviceSelectionParams.class
+SHA-384-Digest: akmjsaY/Q2d8oVBw1P6uCtEooh57uBmkKH6RiJ0y0oubWzMM4dZSaTTt
+ l/9b9iA1
+
+Name: com/silabs/ss/platform/api/device/core/IDeviceClientInfo.class
+SHA-384-Digest: fGtycOi+4Nc135Z+Fv7dX54MHy9TQL9t3bQeyuSnGILAJVvjZcPr41Qr
+ Wy5Mxk8V
+
+Name: com/silabs/ss/platform/api/device/core/detection/DeviceDetectionMa
+ nager.class
+SHA-384-Digest: z0P5gRt/rzqeP+hdzVeIrDJJFyed7vo34KyhWBXAH8DCxS6p7Bsv5CyD
+ Djt2kevW
+
+Name: com/silabs/ss/platform/api/device/core/detection/IDeviceDetectionI
+ nfo.class
+SHA-384-Digest: eKOAXn0NA95Sj00FmlZRER4raT8g/yjGPu6n1DfaNy4MEkVlFicff76x
+ D1+qFfLl
+
+Name: .api_description
+SHA-384-Digest: r3OtaxkhmyjBmYYA0e+fjtHEomJKGj7/7TqOzILReqxyOMt9FH++V0zt
+ Nm0NbVbl
+
+Name: com/silabs/ss/platform/api/device/core/DeviceGroup.class
+SHA-384-Digest: bCOie4sbdIDbfGOzSf6QwCboyVSbAfPdJgs/9uVaQbgFmuXE+P0Qi3r+
+ JJBCQp3q
+
+Name: com/silabs/ss/platform/internal/device/core/extensions/DeviceDomai
+ nExtensionParser.class
+SHA-384-Digest: 4whZaClwvd99Bqaq1zBc0Z/H/21tBOhrGp/hQJ3X1pR9gXlTZQBfq+T3
+ mLgDLEJ4
+
+Name: com/silabs/ss/platform/internal/device/core/internationalization/m
+ essages.properties
+SHA-384-Digest: M0/7t4qGTR/rzCYVw9lBCE0svC8uuKfhZogSy9/jndRIgeGYbicZ/sC+
+ fC6D9EQD
+
+Name: com/silabs/ss/platform/api/device/core/locator/IDeviceLocator.clas
+ s
+SHA-384-Digest: uE+7HZc++SOXZ6+YBgRMwasezSWouFr8UsCRrbo5JDRft/7hF1Bvtewi
+ M/9KoQiE
+
+Name: com/silabs/ss/platform/api/device/core/locator/IDeviceLocatorListe
+ ner.class
+SHA-384-Digest: a9WnvcCpJEkNdpOflsEE7G7RE994kAoJ1xw/vjvWZQnDwYJ/b6lXDsp+
+ OxSksG8c
+
+Name: com/silabs/ss/platform/api/device/core/DeviceHardware.class
+SHA-384-Digest: AOWnjESrpvOYP/BEILN4BVyar6AN4awoaZg1CEbykb2nh2ugNFml+50M
+ XDjZX6r/
+
+Name: com/silabs/ss/platform/api/device/core/IDeviceSettingExtension.cla
+ ss
+SHA-384-Digest: DV+O2MnywMyNVu+Pz+n2Vg2G14G+UElpdpko5I2IQ+or2XgWDXiPK5xV
+ Yg2d+RG8
+
+Name: com/silabs/ss/platform/internal/device/core/internationalization/M
+ essages.class
+SHA-384-Digest: hY9RiPLa6hOZa3bXdaTHCo6aNGr92yHN1SG3EVCM4BTBwDEDoxBLQIf4
+ CjgRNq9v
+
+Name: com/silabs/ss/platform/api/device/core/IDeviceExtension.class
+SHA-384-Digest: Yqt4xKVNzLU69p2IDWG8jEONRvEsvDCr2uxcQsafcYLydxgXZHoJc9Np
+ Xtr7odOk
+
+Name: com/silabs/ss/platform/api/device/core/inspection/IDeviceInspector
+ .class
+SHA-384-Digest: aGH0/VZ7tS1CyxqTfkYWGEd++0BLmCwWjFZ4st9ceK4ZxRBCLRspXq3X
+ oQK1HuOg
+
+Name: com/silabs/ss/platform/internal/device/core/extensions/DeviceValid
+ atorExtension.class
+SHA-384-Digest: Fsw+tNaCDvhmsLJMvaDh67J3PVbm1tZKU3d8c3p/J4hhW5F2dX6qwgVH
+ zR2X0wIk
+
+Name: schema/deviceLocator.exsd
+SHA-384-Digest: gg/uisP4tLiSwvCt6b0SYbyplqOvWcTnJqMg8TMLu1Bhq4rgjb6E/2mE
+ r2o3lZDM
+
+Name: com/silabs/ss/platform/internal/device/core/extensions/DeviceNotif
+ ierExtensionParser.class
+SHA-384-Digest: vHG9BTSeQjfawoJGARRfR7oNSM1zm6sHjmmTtOCXvaSmbgp43pPQJTeL
+ IAmM8sNE
+
+Name: schema/deviceConfigurationLauncher.exsd
+SHA-384-Digest: /DMIa3a96ETeducYjAGBKRyTeLNjwbIM0o/brxS7BOLMKmcb7dAuXQzD
+ l+ntJxiu
+
+Name: com/silabs/ss/platform/api/device/core/DeviceSetting.class
+SHA-384-Digest: YMwQy2O4jyDNZVB+/0AjHQu3e4z/AUUzMMeX0goYf/R7I0f06JSKFQOe
+ h0bpRiIG
+
+Name: com/silabs/ss/platform/api/device/core/DeviceToken.class
+SHA-384-Digest: WgPaDI4J3UuqbL9yHsR2BSwthR64DMTCKNxiSpuSumqxTGWVyxdxenAY
+ LedxMbvo
+
+Name: com/silabs/ss/platform/api/device/core/identifier/IDeviceIdentifie
+ rContainer.class
+SHA-384-Digest: /4/zfznWqvTDvQdnkTNUV5gB1gSO6pM5P/A2uqc6EMOVj6cXMubpTIgy
+ 9f7c8e5s
+
+Name: com/silabs/ss/platform/api/device/core/DeviceAnalyticsData.class
+SHA-384-Digest: qJj8W5NdO/4NnMWX4VwZSdYp3xI4eGyG+W2XR7cNfaDZym2fIjRfslAW
+ PwyIFpl2
+
+Name: com/silabs/ss/platform/api/device/core/DeviceDetectionParams.class
+SHA-384-Digest: 9xe/MBu74kiEb15T7G8kL8cBPbFX4Ktd6gfoV6Mo/aUlDY3GPx89Y2Vj
+ y2gugr9A
+
+Name: com/silabs/ss/platform/api/device/core/detection/DeviceDetectionMa
+ nager$LazyInstantiator.class
+SHA-384-Digest: uKsR1bKzBgQWDWk4QElD/7XFlXtt7/nO4RjY9CjFAoyFnb7LTx/H5hvO
+ UcRn3dqj
+
+Name: com/silabs/ss/platform/api/device/core/inspection/DeviceInspectorE
+ xtension.class
+SHA-384-Digest: Auv1QsROBpV7lP/dWEAhEACzl4QT0ANb1Yer1bky5zTBoRP87u6pCmNP
+ ojbs2FOf
+
+Name: com/silabs/ss/platform/api/device/core/properties/UsbDeviceTokens.
+ class
+SHA-384-Digest: mXU9/tP/Q6En3+5YL6dzacqXl/WDMzfgbbmAgCvZzuPVdlCwgy08aSJe
+ AkG+oU9J
+
+Name: com/silabs/ss/platform/api/device/core/notifier/ManagedNotifier.cl
+ ass
+SHA-384-Digest: 7ecXSC7qfgxgPKOALOz3bplxj3shyZdFz5/C6A0bTLMUydcXBs1dYEld
+ Lksa8NrP
+
+Name: com/silabs/ss/platform/api/device/core/BaseDeviceClient.class
+SHA-384-Digest: qJ3tTgokCmNDI+b1FvSpg4z+RDiYdPI85eOFmiV8QW/f0AJAlw3C9xcV
+ qNeUrerr
+
+Name: com/silabs/ss/platform/internal/device/core/extensions/DeviceLocat
+ orExtensionParser.class
+SHA-384-Digest: vUV/D+OCUaFUIHY2BuQClWklbWVTVLK1MNYhqpo/omob87tYPHcfChD0
+ NtmQ/6+H
+
+Name: com/silabs/ss/platform/api/device/core/IDeviceManagerGroupListener
+ .class
+SHA-384-Digest: CA/vxO6Rusn1vgfhdxuStVpm+KvwawVlhhj66wkRZAjTwk1IYt6LSpQR
+ heUWzT9G
+
+Name: com/silabs/ss/platform/api/device/core/properties/types/IMetadataT
+ ype.class
+SHA-384-Digest: IiI2XSgCVXx6bEd3VY9KD4pAcS39f/s40CuhuRqWdxQoQlrmnXMqodLB
+ NENT3KGW
+
+Name: com/silabs/ss/platform/api/device/core/IDeviceValidator.class
+SHA-384-Digest: Okrj5PiN2zCe2HwJNt305Qsmgx4kUS7SQsC2w/KWM/kuTnFTWz1qI89B
+ u0UlW81+
+
+Name: com/silabs/ss/platform/api/device/core/detection/DeviceConsolidato
+ r.class
+SHA-384-Digest: MSwMA60w7CZ+CRsWkktvloe9VNWOx9eKNLSxaFnLb18QeAPH0PbymeZZ
+ X2TxvicS
+
+Name: com/silabs/ss/platform/api/device/core/detection/DetectionToken.cl
+ ass
+SHA-384-Digest: qMcKDf04L4njJe/VErbg+cTOoFBVao/op01Ff8RznjLsZRJ+g4LFwpX7
+ 4CNDwt6X
+
+Name: com/silabs/ss/platform/api/device/core/inspection/IDeviceInspector
+ $InspectorInterestLevel.class
+SHA-384-Digest: 9BKtGHhUhJddd3V+FaPkBxHajmV2i4hkMZDmM/sYm28xMQ8pFZ47rvFI
+ c3Ge/gMj
+
+Name: com/silabs/ss/platform/api/device/core/DeviceManagerPreference.cla
+ ss
+SHA-384-Digest: FKEOqsASm5TEMVb+6BTZHZSTB1cLgJsGU1Rxvl3K00/wKy+UKTLYfsnT
+ xGiBrwL1
+
+Name: com/silabs/ss/platform/api/device/core/DeviceComparator.class
+SHA-384-Digest: uGLPDvc3OkyWw6SAuVK8+X0PgJSncbqOUSKM2hX9Pqw5cxAyhLWNnGcB
+ AuXQuNwD
+
+Name: com/silabs/ss/platform/internal/device/core/extensions/DeviceDomai
+ nExtension.class
+SHA-384-Digest: RXiXn7YY+D9TLzjrSb3mbYS6vJW8gNbNJLt3fU19gsJjEpg97S2gCabh
+ J7jVn4KQ
+
+Name: com/silabs/ss/platform/api/device/core/DeviceExtensionKey.class
+SHA-384-Digest: sxNiAgkjeuFcfY5o/6aOwjajvK8wwOFPD1t9ckxJeVG5rCl8eHSvcDaL
+ kC6EvLy2
+
+Name: com/silabs/ss/platform/api/device/core/IDevice.class
+SHA-384-Digest: jhADBJqTnto33k5uh+wIl59Wan+3WFYNmeOEhVb8WYxh2f5PD49aridk
+ d7Je1VMF
+
+Name: com/silabs/ss/platform/api/device/core/locator/ManagedLocator.clas
+ s
+SHA-384-Digest: jh/xx7FkLD/TSXV3TQAjPF0+bdgWopGnoUQHw+ur33Y3vQ2jjmLngFqz
+ DveQdwzK
+
+Name: com/silabs/ss/platform/api/device/core/detection/IDeviceDetector.c
+ lass
+SHA-384-Digest: 6BzlvjABd/yG0U0oWnvYTxNByU0Ds5hTYKdKebzGfnwigpYmDcm2hc1o
+ lozd2vG3
+
+Name: schema/deviceOptionContributor.exsd
+SHA-384-Digest: EvWQ0PbuGYEXfIkmgbp29+4yE3QZxhNShVVsropzIWDLpbEw9bbFt0Bp
+ VlUrccRE
+
+Name: com/silabs/ss/platform/api/device/core/DeviceManagerLog$LogControl
+ .class
+SHA-384-Digest: 3ov0WRKiZ3W+2DvM1kgqk4TV5w2zcwr36yCIha/4+acUjhvBlEKYZCVm
+ 3JifxF25
+
+Name: schema/deviceDomain.exsd
+SHA-384-Digest: OCdDowjE+aeQTRzv4EjtraTz/5pULoMTP+optbp/38v2KlYCz4dNm9uR
+ nLD8S2LN
+
+Name: com/silabs/ss/platform/api/device/core/identifier/IDeviceDomain.cl
+ ass
+SHA-384-Digest: yVKhh41fnGz57+NfNGNlflEO8k3jN0RlRYM6q5QGoqmb6egwTPpKwE8K
+ P0akCRPJ
+
+Name: com/silabs/ss/platform/api/device/core/properties/MatchingDeviceTo
+ kens.class
+SHA-384-Digest: qXQHSefvHkYeTe7I8BoK4fw67ScxK+OALZEmwxxV0sJJAy5nOx8qkPJw
+ 9XOY18wA
+
+Name: com/silabs/ss/platform/api/device/core/identifier/SessionTemporary
+ Part.class
+SHA-384-Digest: NrdP/r07H0FXm73oRh4ROxBeHwyxWoIdmJscycH5HQ2gP+1LQTzUADPz
+ 0bQLT+WE
+
+Name: schema/deviceNotifier.exsd
+SHA-384-Digest: ezxJTkoCInTOAxUbF30MZ0XI/vbibmYE8OHFI3tyb3z++5CZj8k3qhpV
+ wOVLpRdE
+
+Name: com/silabs/ss/platform/api/device/core/identifier/DeviceIdentifier
+ .class
+SHA-384-Digest: cI4KZ9kwhTP0uYGID6Gwx4/cll+6ce58WsoiEAuZacnV2Lujru08Xvsv
+ VM0uHLO4
+
+Name: com/silabs/ss/platform/api/device/core/IDeviceToken.class
+SHA-384-Digest: rRAe45tvUyFJZqcQZYxup3IkULI0p3Uv4bGpKj9GhphC6X+cuXLBGekZ
+ i90dAOzR
+
+Name: com/silabs/ss/platform/api/device/core/DeviceManager$LazyInstantia
+ tor.class
+SHA-384-Digest: /q0XksxtN9CAMWtF1pIQjMv1tECtlee37UH5FGnq04g9gPiDqOxXSNzP
+ BAEOAqqt
+
+Name: com/silabs/ss/platform/api/device/core/BasicDevice.class
+SHA-384-Digest: jJDL3RbpW1K1xlwCnXhTDlZH2ehUnlOdKCYo320Dlz2AWbSXQd4FgHp0
+ 1Au9LnQl
+
+Name: com/silabs/ss/platform/api/device/core/DeviceManager$2.class
+SHA-384-Digest: VV7oUpBA8UC2NMJ8l9Rz5x6RSYx+6wGxODy0ogIJCUw/FEbP+4Kj8KDy
+ 5aYYdu0M
+
+Name: com/silabs/ss/platform/api/device/core/detection/IDeviceCreator.cl
+ ass
+SHA-384-Digest: ONJEL0FmXAKnznDiysI13qXHk2sETuvvu0eAFMTKh3MAShCE33n68OUX
+ exeN92f8
+
+Name: com/silabs/ss/platform/api/device/core/DeviceConfigurationExtensio
+ nParser.class
+SHA-384-Digest: UJgTUBkPim66XGtstpnmPF5TikLIn+EU4mrxsfm4T1uj96hv0ULiJfxf
+ ouGthVkV
+
+Name: com/silabs/ss/platform/api/device/core/DeviceManagerLog.class
+SHA-384-Digest: bwEIbtATrhAIy1jTRfiQ+9BIayrCdTIGRlGTBZhquBZRq95xzeKKUkhF
+ DKFrx3Ls
+

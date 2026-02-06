@@ -1,0 +1,65 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Analytics Core
+Bundle-SymbolicName: com.silabs.ss.platform.analytics.core;singleton:=tr
+ ue
+Bundle-Version: 5.2.0.202506061735-1855
+Bundle-Activator: com.silabs.ss.platform.internal.analytics.core.Activat
+ or
+Bundle-Vendor: Silicon Labs
+Require-Bundle: org.eclipse.core.runtime,com.silabs.ss.platform.rcp.core
+ ,org.eclipse.e4.core.contexts,org.eclipse.e4.core.di,json,com.silabs.ss
+ .platform.permissionsmanager.core,org.eclipse.osgi.services,com.silabs.
+ external.aws,com.silabs.ss.platform.analytics.protocol,com.silabs.java.
+ utils,com.google.guava
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-ActivationPolicy: lazy
+Export-Package: com.silabs.ss.platform.api.analytics.core,com.silabs.ss.
+ platform.api.analytics.tracking,com.silabs.ss.platform.internal.analyti
+ cs.core;x-friends:="com.silabs.performance.recording",com.silabs.ss.pla
+ tform.internal.api.analytics.core;x-friends:="com.silabs.ss.platform.an
+ alytics.upload.s3"
+Import-Package: org.eclipse.core.commands
+
+Name: com/silabs/ss/platform/internal/analytics/core/AnalyticsEventHandl
+ er.class
+SHA-384-Digest: WUqsYhsvHLDqp9d2GJ9sXuAtkpbBdrjiXVf0jFZsNPU430PfKpRrjKkg
+ rhKR/0KY
+
+Name: plugin.xml
+SHA-384-Digest: aY+lkuqObVtvvfVWU5wj1n2FqYEIMSLT+oN/+GQT1aX7lomSRy/oHjBA
+ lAyszIGK
+
+Name: com/silabs/ss/platform/api/analytics/tracking/TrackingModeManager$
+ TrackingMode.class
+SHA-384-Digest: 3wl+k+TnNfln4xEASdw3B23+0qXog7zDEMDerqGn/ZrFV8WWCWie9kFV
+ LcXl+Heh
+
+Name: com/silabs/ss/platform/api/analytics/core/IAnalyticsContentUpload.
+ class
+SHA-384-Digest: mq/OR4muwqR06umDkKlhMm6z9cyk96qy7Na3KbUyGFEutcZqAe3uk4Hv
+ TsAvLroo
+
+Name: com/silabs/ss/platform/internal/api/analytics/core/AnalyticsUtils.
+ class
+SHA-384-Digest: vqfKxuj8E7SteuldLxOxfNM7tRClQ5lZA2lH4twhNPZZ02sgyzIpVveh
+ w6nn4MhA
+
+Name: com/silabs/ss/platform/api/analytics/tracking/TrackingModeManager.
+ class
+SHA-384-Digest: aVSGVLjYsGfCHit4aS2drLzItghFQbwvLw0NhXUGwb+JvqKZEmOu10Q7
+ HPelB8/n
+
+Name: com/silabs/ss/platform/internal/analytics/core/Activator.class
+SHA-384-Digest: 1SZFOLl7reXezBTLTCaGzc1vZOiStMV5iUWXoJ6OfY/mTMJBXKf2w42U
+ /y2TIXIS
+
+Name: com/silabs/ss/platform/api/analytics/core/StudioAnalytics.class
+SHA-384-Digest: o64Lr3VGZOcgu4PqD0iLCLqJdwvUuvLFrUU/b7XfaLueOuo2iUvkuOwS
+ Yg13we56
+
+Name: com/silabs/ss/platform/api/analytics/tracking/TrackingModeManager$
+ TrackingModeListener.class
+SHA-384-Digest: ZPobSvTCyWbfibUormGzPWSOIXJFeThFfPzyXIFDkHCOeWf4AK/Wk5Pn
+ uU2QbCdv
+

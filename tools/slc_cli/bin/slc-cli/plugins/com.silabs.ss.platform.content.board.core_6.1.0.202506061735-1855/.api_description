@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component name="com.silabs.ss.platform.content.board.core_6.1.0.202506061735-1855" version="1.2">
+    <plugin id="com.silabs.ss.platform.content.board.core_6.1.0.202506061735-1855"/>
+    <package name="com.silabs.ss.platform.api.content.board.core" visibility="1">
+        <type name="Board" restrictions="0">
+            <method name="setTestManager" restrictions="8" signature="(Lcom/silabs/ss/platform/api/content/board/core/IBoardManager;)Lcom/silabs/ss/platform/api/content/board/core/IBoardManager;"/>
+        </type>
+        <type name="IBoardManager" restrictions="3"/>
+        <type name="IBoardRegistry" restrictions="3"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.content.board.core.scripting" visibility="1">
+        <type name="ISLSBoardModule" restrictions="3"/>
+    </package>
+</component>

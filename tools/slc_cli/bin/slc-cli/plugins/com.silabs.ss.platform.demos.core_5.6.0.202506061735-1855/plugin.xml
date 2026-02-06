@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="demoSupport" name="Demo Support" schema="schema/demoSupport.exsd"/>
+   <extension-point id="demoHandler" name="Demo Handler" schema="schema/demoHandler.exsd"/>
+
+   <extension
+         point="com.silabs.ss.platform.descriptor.core.propertySupport">
+      <propertyGroup
+            description="Properties for demonstrations"
+            name="demos">
+         <includes
+               group="core">
+         </includes>
+         <property
+               description="Short description for the demo"
+               name="blurb"
+               type="string">
+         </property>
+         <property
+               description="The path to the demo image file."
+               name="imageFile"
+               type="uri">
+         </property>
+         <property
+               description="The base address in which to flash the demo image file (for bin file images only)."
+               name="imageAddress"
+               type="string">
+         </property>
+         <property
+               description="Space delimited list of handlers that can run the demo."
+               name="handlerList"
+               type="stringList">
+         </property>
+         <property
+               description="URI to locate host application used for demo."
+               name="hostAppUri"
+               type="uri">
+         </property>
+         <property
+               description="Checksum used to verify integrity of downloaded file"
+               name="hostAppChecksum"
+               type="string">
+         </property>
+         <property
+               description="Arguments used when launching host app for demo."
+               name="hostAppLaunchArgs.win32.x86"
+               type="string">
+         </property>
+         <property
+               description="Arguments used for demo when launching host app on linux."
+               name="hostAppLaunchArgs.linux.x86"
+               type="string">
+         </property>
+         <property
+               description="Arguments used for demo when launching host app on Mac OS X."
+               name="hostAppLaunchArgs.macosx.x86_64"
+               type="string">
+         </property>
+         <property
+               description="Name of directory where host application will be installed"
+               name="hostAppInstallDirName"
+               type="string">
+         </property>
+         <property
+               description="Name of scenario ID for multi node demos"
+               name="scenarioId"
+               type="string">
+         </property>
+         <property
+               description="If set, an SDK which contributed the demo. Note that this might not be set since many demos do not come from SDKs."
+               name="contributingSdk"
+               type="string">
+         </property>
+         <property
+               default="false"
+               description="Whether the best demo handler (executor) should always be the default handler"
+               name="bestHandlerAsDefault"
+               type="boolean">
+         </property>
+         <property
+               description="the path to the bootloader for a demo"
+               name="bootloaderFile"
+               type="uri">
+         </property>
+         <property
+               description="path to signing key"
+               name="signingKey"
+               type="uri">
+         </property>
+         <property
+               description="path to encryption key"
+               name="encryptionKey"
+               type="uri">
+         </property>
+         <property
+               description="path to firmware file"
+               name="firmwareFile"
+               type="uri">
+         </property>
+         <property
+               description="version of firmware file"
+               name="firmwareFile.version"
+               type="string">
+         </property>
+      </propertyGroup>
+   </extension>
+
+   <extension
+         point="com.silabs.ss.platform.demos.core.demoSupport">
+      <demoDetector
+            class="com.silabs.ss.platform.internal.demos.core.SDKDemosDetector">
+      </demoDetector>
+   </extension>
+   
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Demo -->
+      <package
+            uri="http://www.silabs.com/ss/Demo.ecore"
+            class="com.silabs.ss.platform.internal.demos.core.model.DemoModelPackage"
+            genModel="model/Demo.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated Demo -->
+      <parser
+            type="demos"
+            class="com.silabs.ss.platform.internal.demos.core.model.util.DemoModelResourceFactoryImpl"/>
+      <parser
+            type="xml"
+            class="com.silabs.ss.platform.internal.demos.core.model.util.DemoModelResourceFactoryImpl"/>
+   </extension>
+</plugin>

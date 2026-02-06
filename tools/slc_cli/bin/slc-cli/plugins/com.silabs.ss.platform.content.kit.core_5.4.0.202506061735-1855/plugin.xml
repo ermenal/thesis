@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension-point id="kitSupport" name="Kit Support" schema="schema/kitSupport.exsd"/>
+   
+  <extension
+         point="com.silabs.ss.platform.descriptor.core.propertySupport">
+      <propertyGroup
+            description="Properties for kits"
+            name="kits">
+         <includes
+               group="core">
+         </includes>
+         <property
+               description="A space delimited list of asset URIs pointing to user manuals"
+               name="manuals"
+               type="asset">
+         </property>
+         <property
+               description="A space delimited list of asset URIs pointing to kit photos"
+               name="photos"
+               type="asset">
+         </property>
+         <includes
+               group="hardware">
+         </includes>
+       </propertyGroup>
+   </extension>
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Kit -->
+      <package
+            uri="http://www.silabs.com/ss/Kit.ecore"
+            class="com.silabs.ss.platform.internal.content.kit.core.model.KitModelPackage"
+            genModel="model/Kit.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated Kit -->
+      <parser
+            type="kits"
+            class="com.silabs.ss.platform.internal.content.kit.core.model.util.KitModelResourceFactoryImpl"/>
+   </extension>
+   <extension
+         point="com.silabs.ss.platform.descriptor.core.hardwareProvider">
+      <hardwareProvider
+            class="com.silabs.ss.platform.internal.content.kit.core.KitHardwareHandler">
+      </hardwareProvider>
+   </extension>
+</plugin>

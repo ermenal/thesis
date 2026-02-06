@@ -1,0 +1,17 @@
+<plugin>
+  <extension-point id="certifiableSupport" name="Certifiable Support" schema="schema/certifiableSupport.exsd"/>
+  <extension-point id="rootCertificateLoader" name="Root Certificate Loader" schema="schema/rootCertificateLoader.exsd"/>
+  <extension-point id="secureContentLocator" name="Secure Content Locator" schema="schema/secureContentLocator.exsd"/>
+  <extension
+     point="com.silabs.ss.platform.security.core.certifiableSupport">
+    <certifier
+        class="com.silabs.ss.platform.internal.security.core.FileWalkCertifier">
+    </certifier>
+  </extension>
+  <extension
+        point="com.silabs.ss.platform.security.core.rootCertificateLoader">
+     <certLoader
+           class="com.silabs.ss.platform.internal.security.core.BundleRootCertificateLoader">
+     </certLoader>
+  </extension>
+</plugin>

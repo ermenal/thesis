@@ -1,0 +1,774 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: kajJvKBrAvza190/ePECjIVrCslx5KpK2guaWlIRQmayHjK
+ yzzrGVnl5OBcDPtkn
+SHA-384-Digest-Manifest-Main-Attributes: mxmqk0RWfA8qZ3/1vSyfFUjXOiCy+87
+ T0DtOnZoZkOkD9GBImhrFDnNhSohqXb9S
+
+Name: plugin.xml
+SHA-384-Digest: lK2tnEZhTn9wkp4zyzjuMWJMAeVFvzsU9mk3fZuzHl9ZjapHkEjU22sW
+ DZOFyAOB
+
+Name: com/silabs/java/utils/files/monitor/DirectoryMonitor.class
+SHA-384-Digest: O2zqpQ+Osss59GXhGxnGZdKfm+CQKTbzcJo1bR6KdsUOVMbB9313kBa/
+ iah3tqdU
+
+Name: com/silabs/java/utils/preferences/IPreferences.class
+SHA-384-Digest: 0iyTl7BGLZFy5ierRm/FxfkKN5saqMJKxwpmcgG8s0FcJozdEwZIhVrh
+ 2M56m2sX
+
+Name: com/silabs/java/utils/MarketingName.class
+SHA-384-Digest: Gp8Gxj2OBQzrGb5zC0yMo7iM5aHtx5KSeTSUiNApoEeVULZW5yC9O2c+
+ 3dOPjaAi
+
+Name: com/silabs/java/utils/Time$Format.class
+SHA-384-Digest: T3XeTyWE9bKfTzwS6IHg6PyEDwvfQHwvgW82D6CsfBmfd1T1lX4ShBSt
+ mDx1HCOG
+
+Name: com/silabs/java/utils/annotation/BadUnitTest.class
+SHA-384-Digest: jyjiRKipU6ruTA4HMF+mwxcvXXj1vLE4Lq/FR1nh/AnUnJ2Lz26pvz08
+ u5PfDucN
+
+Name: com/silabs/java/utils/preferences/IUserPreference$Type.class
+SHA-384-Digest: 0zCrIlzRxU0cX3psdiKs9F2n8IHIE8rjpeaT6mfMt2EzXsiJHaRf/62k
+ FEmk+dEH
+
+Name: com/silabs/java/utils/zip/ZipUtils.class
+SHA-384-Digest: xPy2nkFZmUVYw7xMddVUQXIphHq43WhV+OwWDCVW0i1OTHrol2ZsepTp
+ 52DrfOZg
+
+Name: com/silabs/java/utils/zip/impl/ZipCompressionAlgorithm.class
+SHA-384-Digest: k+FXEANgrpzVsNjn9vcEqPme1atAM80dDPta0bkDHFl9j6lfJGmnpfu5
+ aLadJjE1
+
+Name: com/silabs/java/utils/SafeObjectParser$SafeObjectInputStream.class
+SHA-384-Digest: qNNUCrK1ORbVmehYcLRRnTBHMKtJmtJWXFRZ9lpwqTWhchIu7WiABPDx
+ Be1AHgzB
+
+Name: com/silabs/java/utils/IParentable.class
+SHA-384-Digest: qoT63QMsjz2mx+lLBehwGGPSTAJ3e+rYQBW3iVd4HLJqz3C5WJ0pFTbc
+ MR00hVAA
+
+Name: com/silabs/java/utils/variables/engine/IStockVariableFactory.class
+SHA-384-Digest: MxjYCiLC58WRF/TQIzyq815J4ctxje/i8a8ePYYYxzsQkgF57+cTlIjd
+ ZDN40Nrl
+
+Name: com/silabs/java/utils/PooledRunnableScheduler$1.class
+SHA-384-Digest: QlfBrnw4pCZk183dKGUTbvRfw7k1KU/5bSqH9HiriUxi7ZDSfcTHFcNj
+ Zver+MI+
+
+Name: com/silabs/java/utils/extension/ExcludeTestPluginsFilter.class
+SHA-384-Digest: 0ypEErpeUns1VieO2IMhEZQrLA+mdxYIEqkn3UYLM0TrkskRlR6sauTD
+ gP0N3Ed0
+
+Name: com/silabs/java/utils/variables/IVariableKey.class
+SHA-384-Digest: n60W4KJV3xSnBUPysgXahh0juQbSetj5ngx6oxKUwi6vfPx4Msy48/mc
+ hhSz3pjW
+
+Name: com/silabs/java/utils/OSUtils$BitSize.class
+SHA-384-Digest: 6IcE1Ae75lKWAIcvGooZdYSU/V2mBMfALziwkApm0/acOyWzGcjVgvJr
+ xOJJidh8
+
+Name: com/silabs/java/utils/variables/engine/CoreOperatorHandler$3.class
+SHA-384-Digest: TXzuXDsndbz/Ez8QOVt06Y1TNTgThdu5Hq0sbPlQTAw7kpaDVynql6Uj
+ Wc0ojkyw
+
+Name: com/silabs/java/utils/ListenerList$IFire.class
+SHA-384-Digest: 5JqAxKATg6PEDTGkdGP8CUO+GmrG5C8C0bYUvtO9kgkM0U+m02ulHkVG
+ aSlqe3mf
+
+Name: com/silabs/java/utils/enums/ImageTransform.class
+SHA-384-Digest: 9SQxm59iAV6gtvtgkQfZcW24S1BlSgUDxHA10xuPR4tkDoET0Rl78J2C
+ q1Izw/nY
+
+Name: com/silabs/java/internal/utils/files/monitor/SingleDirectoryMonito
+ r.class
+SHA-384-Digest: Vqv6fcd0zD10giaawtg9RgHbPp/8K3v+xoWqveUwnrns+Xi/lpzXr2Z9
+ 8dIHuk6c
+
+Name: com/silabs/java/utils/variables/IVariableLookup.class
+SHA-384-Digest: Y4P1tdfGMezPeTUtty3x/2ws4MEyKh96dmVonQBS4SKV+EQUySiwrM4m
+ R15nb4FI
+
+Name: com/silabs/java/utils/Either.class
+SHA-384-Digest: S9bI6nbeZECasXeBJ09OrvzrXJPXaQevIi6Wudte09h69rjkqr+D5xbP
+ NBqfnnyB
+
+Name: com/silabs/java/utils/extension/IExtensionManager.class
+SHA-384-Digest: ppt6Y84tJX3i0ur8eC9XfH0b8DzH+09CTSJaZcpgHR2vKh+mnQ2rWm/P
+ nvLmn/dc
+
+Name: com/silabs/java/utils/annotation/GroupedUnitTest.class
+SHA-384-Digest: Uvb8FAhxu7E2AVy8HBmaFO+vtUAcn/UlZMkvIVV0IF5LyOwtF9/WyBU3
+ z3YwMvVj
+
+Name: com/silabs/java/utils/extension/IExtensionManagerHolder.class
+SHA-384-Digest: hs2HcCzl8SY23zK6CVWQwY3kCRtNlmv7uVDwSwHMY81rTBq+dUxLwGKn
+ se93rSnb
+
+Name: com/silabs/java/utils/extension/IExtensionMechanism.class
+SHA-384-Digest: NEsu6nlhQcUvnHdNwGZtBxvGEbfyj+KpXccLS2Wr29+1CvrIT/SFGmIl
+ ASNdlqrv
+
+Name: com/silabs/java/utils/variables/NullVariableLookup.class
+SHA-384-Digest: Q7hqIy+nV2LLlwd+pxaujWNNxThwUveCFz55CUBqtKroYZOhea7BwSeM
+ FGLV5Mtv
+
+Name: com/silabs/java/utils/zip/ICompressionEntry.class
+SHA-384-Digest: gOCHoJ0HSqEhNuA4PTGmITiBEHEF7mREzoACGz0mjk+2z8Ioi/L5eYLO
+ OV+Y99iW
+
+Name: com/silabs/java/utils/extension/IExtensionElementHandler.class
+SHA-384-Digest: ai3S5qNfMqY5bLWu9gOisAB/e5mFyebmDdz3s1pFCMhBvGrVNsEyR9O5
+ FjMRPaEq
+
+Name: com/silabs/java/utils/extension/IExtensionHandler.class
+SHA-384-Digest: qNY238tvqfnLuxmFUgCC9vX0o99+UvI9SsEeJPeqbTsia+8b7wwJAPvo
+ fXxz42LF
+
+Name: com/silabs/java/utils/Result.class
+SHA-384-Digest: 2lsdIOswYoSX2nSul6r5DkiIdhlqi6kUkfxDBHEaSE4uIcvtCFscJx1d
+ 3WTZ+nlR
+
+Name: com/silabs/java/utils/thread/SilabsThreadFactory.class
+SHA-384-Digest: dQ0/Z/4Zjw+LKO+QLJqAPrVkvQeouvi9kfrcyKu0olLaNy7Nr1emz2Gi
+ qVm+ZqTL
+
+Name: .api_description
+SHA-384-Digest: dyhRv6XolN/uJOtSn1VMg/1Kj57wF96u2BAJgfSZO2qadrkSVZxltWIb
+ tVrVJplC
+
+Name: com/silabs/java/utils/CollectionUtils.class
+SHA-384-Digest: TXLgiA0h/geeEBR1No9UwromPncEm/ClXN2OUSyhq6fkCw2cBsp5/kLP
+ lyeQgam5
+
+Name: com/silabs/java/utils/annotation/InternalUnitTest.class
+SHA-384-Digest: grKflAnQ5LjIw96A0Edb2IPtvdPNCD0XD+iLiu9KK8XoAa+AOFMQVOpx
+ LzKo5NON
+
+Name: com/silabs/java/utils/annotation/ScriptReferenced.class
+SHA-384-Digest: inKr6FwNY7Ag/FTnuZ2XH0+dBlQhW//wCEcEAhBaUPAOziADMeNPiUPg
+ xWwn8le3
+
+Name: com/silabs/java/utils/variables/engine/CoreOperatorHandler$6.class
+SHA-384-Digest: oS+eh7EzATnTLYSH0mGbBH5MZx385p+FRwzmBmaGoCKmyO4LmdY9wlmO
+ 3ZvnvjNO
+
+Name: com/silabs/java/utils/LineParser.class
+SHA-384-Digest: 9I6Po5HJyNYt1pzgczTdGhv6OU428CuJGTWTH3zYpfFu1lZfYoYUlDwG
+ 8VcCFlJI
+
+Name: com/silabs/java/utils/preferences/PropertyReference.class
+SHA-384-Digest: nBOHU7RjUdDooT6ilmmzmjJOERmP+CbpievWd+GAh9Giw5rCjQD8biWI
+ hhQ4gapu
+
+Name: com/silabs/java/utils/runtime/IRuntimeProvider.class
+SHA-384-Digest: 3XdTVWe8HBrNOMRjgY7h5Rwld2h51yheeQhy4BV1uyHR1DisVXf5xZOy
+ r5HNHTr1
+
+Name: com/silabs/java/utils/zip/ZipFileGroup.class
+SHA-384-Digest: LSrHdoH2SZjmPIEbWPbYYQ6D3vcYlOYwBlyLjeJ2uNmG1vsSO1ToI3Aa
+ qjm7BY1T
+
+Name: com/silabs/java/utils/PooledRunnableScheduler.class
+SHA-384-Digest: qoS+I6xa6wzcnAnyIAjM6nyHnanSE/YqZX7aQ93pPNnCblRchRx0YH73
+ zsi7U2gy
+
+Name: com/silabs/java/utils/variables/engine/StockVariableUtils.class
+SHA-384-Digest: nBFCBi/njI8TEaRzRDCOTdsE/8a1Whvyh9YhsEt78NaidC9mEqOClD99
+ y/x8L9go
+
+Name: com/silabs/java/utils/SwappableClassLoader.class
+SHA-384-Digest: dYlurdefUWmLNNielChTAfDuR1cGAFdfn1cIPd7IljxhIb6qMDDh0nBb
+ 544IZ2HA
+
+Name: com/silabs/java/utils/InfoBlockFile.class
+SHA-384-Digest: YhWgh0WL66WWrbwZyjEx521XG5IPm1urlFwBBZ/k5x0cX8ji9y+3gtqN
+ 8ixDnI2T
+
+Name: com/silabs/java/utils/variables/MapVariableLookup.class
+SHA-384-Digest: xx2sjOD01yqtzkzuPpR2pBHTtJYdBn+6NTGq1nVea4QUrpGKAHF+kNt3
+ TogZyqpT
+
+Name: com/silabs/java/utils/CSVFile.class
+SHA-384-Digest: nk9r693E+kfdYOvxCdivS58a8NL19meuXgibGIspk0XybRiEXREec4GM
+ VaSHOVLY
+
+Name: com/silabs/java/utils/preferences/ITypeReference.class
+SHA-384-Digest: QKHNBXTOywmcRVVJ7h7tcXzF+prqAqUpovWtgyuCcJHxth19CzGjuYe8
+ Y8tRs+J9
+
+Name: com/silabs/java/utils/variables/engine/CoreOperatorHandler$9.class
+SHA-384-Digest: tgy3meo9BfiWe+pSOs1n/Hc9OPtxf1sdajzkAFeK8Hl2gmDoyBpzRJZH
+ tGJlD5MH
+
+Name: com/silabs/java/utils/api/IYamlSerializable.class
+SHA-384-Digest: L6UKBu3Izg4f6M/iNaiZ94KybM/izfo9V3aG2LGBer4D+nR40OgHSrHq
+ jBsyiqog
+
+Name: com/silabs/java/utils/variables/MapPropertyLookup.class
+SHA-384-Digest: qAVlswr9zthAmAK0lrHxLPESfTLfTap2nNWJaNPPtQkBFrV932W4rni0
+ 8PCZW95Q
+
+Name: com/silabs/java/utils/LangUtilities.class
+SHA-384-Digest: w7huNXVoM74Ds1Tr5E6/E7pL/PTCgE8zVStom9XuYZoVencRD0aXD9Hb
+ 4GslpVNL
+
+Name: com/silabs/java/internal/utils/EitherImpl.class
+SHA-384-Digest: byoguWcW43EmLvrCC95SAVkh49lu7StuMKIfwDwppinCM6i8MaC3dHKE
+ R2yTxKAy
+
+Name: com/silabs/java/utils/variables/engine/CoreOperatorHandler$5.class
+SHA-384-Digest: xAkQYnu5gSIANmoBHEdwx79fp3aPLw1OMdQ6ros9FUtgjC6arpUE7rGK
+ W5Id0OLS
+
+Name: com/silabs/java/utils/variables/IKeyedVariableLookup.class
+SHA-384-Digest: /N4b+CLJZg7ZXYy4HY1AVtgL9YzNGseUM1e4rlRBwAudhfhtu7WlOu7F
+ 5u2M+92A
+
+Name: com/silabs/java/utils/function/ThrowableRunnable.class
+SHA-384-Digest: yrzMeb+ZtxX4DF2N990+yDcJcs3fxGSHpn2TNgSN/WuVmHKVHNXKepFc
+ eT4auzvK
+
+Name: com/silabs/java/utils/variables/engine/IOperation.class
+SHA-384-Digest: QWLDksOiCFcs9SMalmrK67koYDHqEaHulsZAVkg+nAy1dKcWZGXZtYCm
+ dzc0LKfu
+
+Name: com/silabs/java/utils/api/IDisposable.class
+SHA-384-Digest: Hov+GZMjlMDOPbfmwOcjFhK4yx2rtuI1uAFrYH1Q8mDg04QZ8Uj15/fO
+ qkx8h9CH
+
+Name: com/silabs/java/utils/extension/ExtensionManager.class
+SHA-384-Digest: ACKu6VOx+61WpGm+M0JCFH64nkyIG+EmuyjgRt409+MvlEGy3inkgwQI
+ ib9nFsuI
+
+Name: com/silabs/java/utils/SafeObjectParser.class
+SHA-384-Digest: wIWYfcEgE4PA60D4+jfKV0tbkAE9kq2UQXLqeJmJQ94VpRTeXMYRXJUj
+ ONCYnNZ8
+
+Name: com/silabs/java/utils/OSUtils.class
+SHA-384-Digest: la3yfyJw2rWYDkop7n/KfP4zim8mUYk/nhSjPULMgq1ly4xKuU0HUxSX
+ 2Y4omMRa
+
+Name: com/silabs/java/utils/IFileVisitor.class
+SHA-384-Digest: totnxnyUuMMMWtsoSpQZ/w3JzEljQiWElEkoYvEoH751WzhF6N78oM+C
+ 3sOctuzj
+
+Name: com/silabs/java/utils/api/IActionParserListener.class
+SHA-384-Digest: XaJOfpV1RBlPh54A/cCfnXPqTXGJlef6HsWnn2+R+ElXgxEVTZs/+oxJ
+ +VrVZ54P
+
+Name: com/silabs/java/utils/variables/EnvironmentVariableUtils.class
+SHA-384-Digest: MM+2pO8dZiL0p9n9khoezae6sDxG13It9tB9D1SsaskwtpAlF6M1k4mp
+ AyrbVKPp
+
+Name: com/silabs/java/utils/api/IDeprecatable.class
+SHA-384-Digest: M+8SV/+uCeyN4bXYLDtpu5O6bdMfZS7lcOE3l+zcqWeGzNmXZ33GqNvI
+ 4Ny+ABP3
+
+Name: com/silabs/java/utils/SdkSemanticVersion.class
+SHA-384-Digest: Tm60yr/wntJFX7/jds5aaU+9jKOlb8P//uSspRI/14MjkhyZZKF/U62G
+ ypy04OPS
+
+Name: com/silabs/java/utils/api/IToggledToken.class
+SHA-384-Digest: vpz2vOcRmPYtFxfU9CrAqoXJUCL+Rj1E9Yt9sQ/AM/l6bTueYmFNuV0S
+ tradaK7j
+
+Name: com/silabs/java/utils/extension/IExtensionInformation.class
+SHA-384-Digest: o7lHfzkWN9qpBMfnglbHUpgerf619tLoas0lpDk4c7dGyIjLuOcjcG/0
+ x4a3VQ7t
+
+Name: com/silabs/java/internal/utils/ResultImpl.class
+SHA-384-Digest: CkA926uAamak88/o+FW98XYIwQ/Z4kWWasPv3hKOj8DWFQLbJG7GALVv
+ phm994wL
+
+Name: com/silabs/java/utils/FileUtils.class
+SHA-384-Digest: rw36BF336G/65/3LHGDLdjPTNgqqFQxH1BS2RMRS/4oMEyTcivw8jMVc
+ iSYLntgK
+
+Name: com/silabs/java/utils/runtime/RuntimeUtils.class
+SHA-384-Digest: 9OwXm6B96NEcLMphJcf74vATiodzn8zDRTejGDKpRtmMx3/jiSYxdKIY
+ EIAF8JTL
+
+Name: com/silabs/java/utils/log/ITopicLogControl.class
+SHA-384-Digest: jH2Ix7h2wbK4w2jzUjky0EspcLwSBzNZvOanuRckUhqFLGyaiTIDkz6Z
+ 2ZMFwG4x
+
+Name: com/silabs/java/internal/utils/files/monitor/IDirectoryMonitorImpl
+ .class
+SHA-384-Digest: X9/UDEIUIps1EprLCfNdCC952jqgZ7sySvVpOXzlP1CZaiCvBfPn/sbI
+ ECctW2Xv
+
+Name: com/silabs/java/utils/variables/IPropertyLookup.class
+SHA-384-Digest: 3UBB+A14LYK8gaXwCaz5+IrGVbCu11KK9xXD8+ymc0GY8vAkjfEOyplo
+ SAsPn/HN
+
+Name: com/silabs/java/utils/ReflectionUtil.class
+SHA-384-Digest: n2+rs5qqAhCdyum+hxoxC7g/ej+rMeiCHoMsg8sal7lYt2gKcYxUZehb
+ 0nPl0AVv
+
+Name: com/silabs/java/utils/extension/ExtensionUtils.class
+SHA-384-Digest: 3HsOylIj4RlwoF0SYQ49FCjkdiyxVpyNvjJWAgJDwY7t9LD39st05h93
+ uARSDri8
+
+Name: com/silabs/java/utils/preferences/PropertyGroupReference.class
+SHA-384-Digest: F5zaQr7kQNtzX+iyN1KeeSZRnxCtoloktxTt0GnoBTdHFtcXK5i9HOB7
+ LvQYs9pc
+
+Name: com/silabs/java/utils/StreamUtils.class
+SHA-384-Digest: XVZhJ4Aa0msmU6JM5i109+O9m33KNKdCP/U8cdWQVhTd1OE3F+u0dryW
+ +aeHhzVe
+
+Name: com/silabs/java/utils/variables/engine/IOperation$OperationExcepti
+ on.class
+SHA-384-Digest: v86vTKIEnP0zCbWc4GxceBjQE8oxZ3u2GI/RLdLFMBzkzbrnAp7ZpS2N
+ tML60kyg
+
+Name: com/silabs/java/utils/zip/impl/CompressionUtils.class
+SHA-384-Digest: pmIFojtuEbRe0b8A6fHBcRYRwgGzDGB6EgjNmYJMdRj1Fw98Uu1PS/YU
+ WjjlTkmD
+
+Name: com/silabs/java/utils/WinRegistry.class
+SHA-384-Digest: IeB3uTzwOb2qkSkexPSOCTS4V8FfJ3nPIYCpAR3Xrb5yb1zo5dNyKPe7
+ g3dSs7bi
+
+Name: com/silabs/java/utils/log/ILogger.class
+SHA-384-Digest: ++D6XqgNvtnRjvecUcBDWk7L4oM/xatTwX4jwhKXvvMRBeCDxtU0fBhr
+ Eb/UXyhz
+
+Name: com/silabs/java/utils/variables/VariableKey.class
+SHA-384-Digest: QS7toXy9AbiIoS+YFJb1s6LMGZ7ej0YxikLzT9sHhrnwKVcB+geYxCWd
+ 3vfakyD4
+
+Name: com/silabs/java/utils/zip/impl/ZipCompressionAlgorithm$ZipCompress
+ ionInputStream.class
+SHA-384-Digest: SzA/OyPU9zMsdN0JHudImLgshZP8Tji/+HFkXVvopBhvD9xNar7F8x2+
+ klqTfgR4
+
+Name: com/silabs/java/utils/SystemSettings.class
+SHA-384-Digest: 89XUwuqsLysijGf7nJIKKzaPIxAVDIMJca7k/x2nYnVnmUBLG7yFVEYf
+ LgoPkLl2
+
+Name: com/silabs/java/utils/Time.class
+SHA-384-Digest: ZB8ovNU2XlOh4QheXnCICNAd0529V+NdZv6xOVKihSo/hSzi250mfILi
+ eFy+UG0P
+
+Name: com/silabs/java/utils/function/ThrowableConsumer.class
+SHA-384-Digest: zUO4SJ+KZ2HEIERaaxlBfYFR816f6hE0ZW8pABZXeRk8PfJyUf+gE8o1
+ 6PrdAkj4
+
+Name: com/silabs/java/utils/ITypedFilter.class
+SHA-384-Digest: g6XfnkoKAma/uUEJvxsq7Ar1npv6nxqE+6vcoSSRAHA/3OXcQz1IS0iN
+ x8jkSH/C
+
+Name: com/silabs/java/utils/enums/LineTerminator.class
+SHA-384-Digest: J+siwv6d0FdIs0dEPKpku+YjP+AwAsHlJ+SqdKipmMyRXAXh8LRQ2zcH
+ RoPmwsvZ
+
+Name: com/silabs/java/utils/TemporaryFile.class
+SHA-384-Digest: KJIhz3HlQm4MUDEa445dQOhyWtpgjKiY2x1NeF0v8MuLJq+wECLw2kOO
+ V90Uycd6
+
+Name: com/silabs/java/utils/ObjectCache.class
+SHA-384-Digest: /H0qgT5wn1F5KUisJHDGEHfPu/jQtS+k1hGQXxgUOjFX+LqcqZM4PKl7
+ xsnc639K
+
+Name: com/silabs/java/utils/StringTemplate.class
+SHA-384-Digest: 9luBxbfitnqiK3l6Z+imBc0r+vmuv/oLl53Zs5vBEZ2A2MENXRU2qEWS
+ Bs2ymQTz
+
+Name: com/silabs/java/utils/variables/ChainedVariableLookup.class
+SHA-384-Digest: 0+/4LekwBqZOVntVsXW+Y6GpCZh3ZZIelkP5okETLxZEMgLbnEPMID1Z
+ /868U/1T
+
+Name: com/silabs/java/utils/ListenerList$1.class
+SHA-384-Digest: G7zUprZ4LNDgtxtLQPNJSlxKQV2riJKf6xht3F6nVE14J73jyHAGDWmm
+ M0JT0mjh
+
+Name: com/silabs/java/utils/variables/engine/StockVariables$DefaultVaria
+ bleFactory.class
+SHA-384-Digest: LACQEzcc7lxliMmb47+orHVnFJAC4LxmkZ6mDzx8zesvMWEvVvCz7cZx
+ joEceBYO
+
+Name: com/silabs/java/utils/files/monitor/IDirectoryNotifier.class
+SHA-384-Digest: QrPpqq6v2CiFIvV7gaePOZDSGa05HQRiCycED6I4GcGGjx6ZBb57Qxl6
+ BQvvsX8T
+
+Name: com/silabs/java/utils/variables/IPropertyStore.class
+SHA-384-Digest: qT62jbB1mOFwkYrZPaoOY/KIcttBzyN9zhKa7verUOvN93ZyCL1DOvQN
+ meytNEl4
+
+Name: com/silabs/java/utils/variables/IVariableStore.class
+SHA-384-Digest: fw5Jxp6EV2fwwywjshylFIEyTJ81zxpRIx6m4/2AJ+2nArjhpRIvgKnV
+ YebBGQDQ
+
+Name: com/silabs/java/utils/enums/Severity.class
+SHA-384-Digest: Bhl6BKElNnv5nPCvetBlLFRhebVmd7KitOk8Ck7yt3HKSX8X+Hch95E3
+ Yb7T6Qp1
+
+Name: com/silabs/java/utils/files/monitor/IDirectoryNotifier$TYPE.class
+SHA-384-Digest: HD+qEMVRBvrAOzK+2iOvCbQVwZnSKx5bQo68oZX0ocC7cjALj6snYkfG
+ C9SkFRlP
+
+Name: com/silabs/java/utils/extension/Extension.class
+SHA-384-Digest: WgJ+VWsya21WlT+BmYZpNZVY4klX/z1+9rQIw8vaeAfniI9bDQPEne2D
+ GChbpt52
+
+Name: com/silabs/java/utils/variables/engine/CoreOperatorHandler$4.class
+SHA-384-Digest: RykSgryA0W6wq7LsodPwJ7xgvn03I5PqLBAiGiS/zKjP8DY17swAL0fH
+ 1JgAhFfp
+
+Name: com/silabs/java/utils/variables/IKeyedVariableStore.class
+SHA-384-Digest: ShmAUxrybwBVRQKx7wShooG5Mh3ye1atKd/bHsN+tQEc86QfnlLueUl8
+ KBDYB/t3
+
+Name: com/silabs/java/utils/variables/engine/StockVariables.class
+SHA-384-Digest: 5u7vzQtZ/aF8y8xXVzVFEoAqOz1AhEKxSfBnYuKi+r7ycEO1zVUDp2kL
+ l/uxi+UK
+
+Name: com/silabs/java/internal/utils/JavaUtilsConstants.class
+SHA-384-Digest: RVI6Ly9nQZ7tlsJ4CqesS3TBi8Y7qCWW9dKammfWd5uY14hx2HlFIO6F
+ RNsH0rL3
+
+Name: com/silabs/java/utils/api/ISerializable.class
+SHA-384-Digest: CMew7drz+T9k9sE9MwQVy+2kkcViFI4uOYf2MFRgziaksmXc2nIZal1S
+ uF0fWgHP
+
+Name: com/silabs/java/utils/zip/ICompressionAlgorithm.class
+SHA-384-Digest: 1w28h1schxHyuUcFMvHRj9LQAefCITjtWlFXcgENP40GGXoxVLjX32pU
+ slZP2CnO
+
+Name: com/silabs/java/utils/variables/engine/CoreOperatorHandler$7.class
+SHA-384-Digest: l9CwsTV+QePJrj6sZEuSq1/amTfJVSdGKX6zn7xTVHmxADbBakEV1j+V
+ qLOjgQ/e
+
+Name: com/silabs/java/utils/log/TopicLog.class
+SHA-384-Digest: ZC/llFMw8kUL9lFytr44KX2zl9vR0cxdx4fSID8IkMFGoU4wT94g7p+W
+ U8U+soc9
+
+Name: com/silabs/java/utils/extension/BasePluginFilter.class
+SHA-384-Digest: mq14S4pUA9e0YMDrvFvKgOvrYUp6kfwkAqA0SojBgL1ljDu0cGcpzpmM
+ yAOL1vHa
+
+Name: com/silabs/java/utils/Rgb.class
+SHA-384-Digest: QR8HaGJNzdwUUtegIUa2TtFfRS8bK76GUvCw577g21l8Tlrh4q60p0vW
+ lcV+Sv0n
+
+Name: com/silabs/java/utils/StringTemplate$IPatternDecorator.class
+SHA-384-Digest: obdGpN6com2pNiOuP+JtIGQtBxarZ6a4Z7xcP5AuVAJeGwvczhfx5IOl
+ 1gzwUSGi
+
+Name: com/silabs/java/utils/extension/ExtensionManagerRegistry.class
+SHA-384-Digest: khdbZI7b8tJq70Nr7m4tIHZ1B71uE3Vtojm5iTbEJnyDfXjz//hEtCVk
+ lY41KxDt
+
+Name: com/silabs/java/utils/ArrayUtils.class
+SHA-384-Digest: XSBtup8vFkB1zwtT6F5+yQOYSVIk/wq5klB3WTk/OC/8UokYvgb7nRFs
+ Rb7TIY9R
+
+Name: com/silabs/java/utils/variables/engine/IOperatorHandler.class
+SHA-384-Digest: 0j6OPt61KSj/Zr4pKt7JcFNaeSecRWdJ4F9gAIk3/ykBjAoW8bVYRYHJ
+ wZ7ePUgM
+
+Name: com/silabs/java/utils/TextUtils.class
+SHA-384-Digest: d9tcSolTssA++fZzBSVBjh/qWUmVcLuMfeUBHC1CFxNHJhduUTISBTM5
+ TU7HJOg3
+
+Name: com/silabs/java/utils/ObjectUtils.class
+SHA-384-Digest: VGP+todOwxqbIdtXDTMZmbOK5CWhmiobakQqRcPHQ7HOJBjhfkHdHn6O
+ o8V20Ce9
+
+Name: com/silabs/java/utils/variables/KeyedVariableLookup.class
+SHA-384-Digest: SCWrwk71p02P4s498vTtsSC5yIEEhqMew75lhqJFzukkk9PaIHGjS2Gs
+ NthWxB1X
+
+Name: com/silabs/java/utils/variables/engine/CoreOperatorHandler.class
+SHA-384-Digest: rcaLSgD/FFfSytu9qssmnHrBwTbbwo7UBVuF4G/s6i+pvg++ToDFI39D
+ moQ1V3qA
+
+Name: com/silabs/java/utils/annotation/BadExample.class
+SHA-384-Digest: PiUdIf8pY08rypdoR0QUiFitQGH2GxWhx7iBAWEyd5ZdLq6+lg4oVa1i
+ 9qRxgVDw
+
+Name: com/silabs/java/utils/variables/IWritableVariableScope.class
+SHA-384-Digest: ZhsfusDvmrAs1i3LlKY0xtFy5zqsqnc4ZKUcTXVW239xl3/j6DIWgo37
+ /403eSJw
+
+Name: com/silabs/java/utils/MapUtils.class
+SHA-384-Digest: ZYXR3DJpiSLZz5mDaZ5yedACLxSjXTky6OyIgNnHxMgMgJEIoATNIbDa
+ MsKACPYY
+
+Name: com/silabs/java/utils/function/NullSupplier.class
+SHA-384-Digest: yNNaniTLA+c+bXzSScLWXrvK3lJmMKlVgpGTpiqJO8Uzv2FVNkNueQRO
+ D4Id5waQ
+
+Name: com/silabs/java/utils/preferences/ITypedPropertySetter.class
+SHA-384-Digest: 1iUjnQatzci4QHVPJxqeN2tQV1/b3e3b59G2JZnHLEG9TfTb/S6mIOok
+ 0wjmOnGF
+
+Name: com/silabs/java/utils/variables/engine/IStockVariableAdapter.class
+SHA-384-Digest: 48q+824JcCLb1x8+1MvciWCvRTgT7UoJ5XD7mFG9m7a/efcE9G7+I8V/
+ Si3KsJHN
+
+Name: com/silabs/java/utils/api/ILineHandler.class
+SHA-384-Digest: KGPATNvac7B98PjEZ4IFCOgG7CI7OnZ7uP5c3hqG5Cx/ymmySyd2Eu4T
+ HF3buQzO
+
+Name: com/silabs/java/utils/api/ICanceler.class
+SHA-384-Digest: tyBc8DYmfs6S9F5WiIoue+I/ZlsXw0TtplrN9bVZ77OPNJsoaed3ljBj
+ jwGse8RE
+
+Name: com/silabs/java/utils/function/ThrowableSupplier.class
+SHA-384-Digest: yeNrAjigIa1XtuiS1M++roDPkTXjOyJQyU2lZrqkxqg2PZcAU3pWNz5M
+ pAyhp9NA
+
+Name: com/silabs/java/utils/DeferredTaskRunner.class
+SHA-384-Digest: p2q7QHW1NtmnRBl3iuTWhc65gJ3DfkUUtuaC1PZ8MOqRwQs3Dg3QuVMW
+ xDnN98ka
+
+Name: com/silabs/java/utils/preferences/PreferenceUtils.class
+SHA-384-Digest: bB2zys3IXQLafssrls/3YzZHdlcr6Im9IFj7exHWNRdY0cNm1hzF2mog
+ /zlxC6cA
+
+Name: com/silabs/java/utils/function/Caster.class
+SHA-384-Digest: QX4hYzBENBr3x4haViK8uW8MOQxIBBoOzarJrLA6atc5DVS84J00mYqc
+ +m/lbkQb
+
+Name: com/silabs/java/utils/zip/ZipUtils$FileGroup.class
+SHA-384-Digest: 00v8KzFTJJcK/PT1FJoRt16IfdgWs4sf/VL4WrVDrs2f2bj+zJi02qv7
+ OWw4HCSP
+
+Name: com/silabs/java/utils/ChainedException.class
+SHA-384-Digest: fsWUuL/w5CuBBLb/0CcLuuABGDl+/dJpq6XxvLDzJhMNJyQHjqEGx1Cy
+ 3hhbW58X
+
+Name: com/silabs/java/utils/variables/engine/CoreOperatorHandler$2.class
+SHA-384-Digest: yL3g+chQfjLI+GpJ4lgnl6A+yxTG9hpQ8JnGPMyeyRUZTsJ00HO3P9kZ
+ ckH/wF2X
+
+Name: com/silabs/java/utils/variables/engine/IVariableSubstitutionEngine
+ .class
+SHA-384-Digest: 9F0zvcHacYRIuvFDbFjJOXujXf/CyvX/LFIiRw4KW/N+hDEinQdxlvHf
+ oZoeWXA4
+
+Name: com/silabs/java/utils/enums/ISeverityHolder.class
+SHA-384-Digest: E2lVLWUrb3Y5O1pCosv4pc8InTxpR8ohfDfZ0edLfzaN9yC1j3svknrd
+ pCcZthFG
+
+Name: com/silabs/java/internal/utils/files/monitor/PollingDirectoryMonit
+ orImpl.class
+SHA-384-Digest: dNyw6gIzilOrDRCQy5wrMwqGkEnhS4yQ/KeGcdoa3X4dqQaY+OlyBfHo
+ 5JGbvljY
+
+Name: com/silabs/java/utils/function/ThrowableBiFunction.class
+SHA-384-Digest: UUEnSwGfsubUabnPhynXhXEYbWZp7hTro7/nnZKCaohzk6wfvuTgve9+
+ 54fLVEr+
+
+Name: com/silabs/java/utils/log/IStatusLineHandler.class
+SHA-384-Digest: y6Vs+mzISv83i2Gh7SUJezwyJAalRUyXE39OanSRKCAwKKPjkXQInTLn
+ hSRWBa07
+
+Name: com/silabs/java/utils/DeferredTaskRunner$DeferredTask.class
+SHA-384-Digest: B1zXliJgi105RwV4dvOV+du9FUHWVooc1nPYq+6Yex6o1TlD70nybcEZ
+ 5sURwbDo
+
+Name: com/silabs/java/utils/FrameUtil.class
+SHA-384-Digest: 5mQwD9p3DXsz8ZmPOxO7AqzLJVk/dNZbyl0Y8YsyRPzuwTs4t2doGTdG
+ Oqp2htT4
+
+Name: com/silabs/java/utils/api/IStateHolder.class
+SHA-384-Digest: zMvmwstpFSiDmgub9aAEIYYLvEUu7hncmsLkHxPnV17QW/zzMUZkwyw1
+ Q4nH6UEv
+
+Name: com/silabs/java/utils/runtime/RuntimeUtils$DefaultProvider.class
+SHA-384-Digest: 4O5J6Aigeiu/WLDfljxGQzGQyOTH2+4aqOCL1YCEupScdfy0maJBI8X0
+ Hrocz69o
+
+Name: com/silabs/java/utils/function/ThrowableBiConsumer.class
+SHA-384-Digest: I7OeqQ67qU3PlfXj96VbgPpTackOmge4uEV+nuS4FXGX4G6o/vGhY/t3
+ R42SIibi
+
+Name: com/silabs/java/utils/InfoBlock.class
+SHA-384-Digest: HDBX+fFC4xF9UGM56aUhCcwoq72jSV5zA3Y0bmVE36CYBHAUbsgP1lTg
+ ZQAnqiqR
+
+Name: com/silabs/java/utils/api/IObjectConsumer.class
+SHA-384-Digest: VH+xfSmwDM26T3ELCLkWpKbptYxGYCD3doNiNioDPfvXCnPiODoed9GI
+ HXz6Qtzy
+
+Name: com/silabs/java/utils/log/StatusLineHandlerManager.class
+SHA-384-Digest: gsMaxsDjPWrBXYfCFkjYcvHGOph+KPY7D1W5lIGj/rEutykMw2XoAYUX
+ Q4AGOheX
+
+Name: com/silabs/java/utils/variables/KeyedChainedVariableLookup.class
+SHA-384-Digest: IAcaxQZUvmUqwnmZjcmuOEcRRwMS0Ufq8Inn0FuEkbpl+rDalZSKsdqk
+ FUrNGm77
+
+Name: com/silabs/java/utils/preferences/IUserPreference.class
+SHA-384-Digest: dM74xZfVndkbAamE1KKY/yyaERICQxqgi40HLYrkJ227PUVoRGPNQ+9F
+ ZIUQ8GTe
+
+Name: com/silabs/java/utils/OnOffRule.class
+SHA-384-Digest: PF1LoVMq3eRfu1c7HBA80FWVOXfiRNyAd6MR7WkMhcO62VghnXhzANCs
+ wEvRNd0D
+
+Name: com/silabs/java/utils/api/ITextSerializable.class
+SHA-384-Digest: dGrDXAQN9P6f0N3dM1eRGBWOu7nPdnfAmAyOBPNVt1msI25rwUTBka9D
+ +dSHngli
+
+Name: com/silabs/java/utils/zip/impl/ZipCompressionAlgorithm$ZipCompress
+ ionEntry.class
+SHA-384-Digest: cPQwBFrdPTOjnts03WzaJM8ho4y93GdqMnPcw9gUunKoNi/gTf25xsA1
+ CvzQddsi
+
+Name: com/silabs/java/utils/Pair.class
+SHA-384-Digest: EgY4nUYbj2pyT6g4M7NXfEzrQaIYSyBY2c/1E6aVMn60NMJGz73OD6/x
+ SnWIBChV
+
+Name: com/silabs/java/utils/SpecialCharacter.class
+SHA-384-Digest: juy4VDpWBvTSxNsa79lfAOWp6z+RZYYz3ROQzAKi9foOu60zCh9t3REh
+ rUs0LRRh
+
+Name: com/silabs/java/utils/thread/SilabsExecutors.class
+SHA-384-Digest: 4aboip8cECyxZZNhOcgCgSJT5Z3bKD504JLaOi31KrPHd/t7gAwO84Zk
+ WfsElEbf
+
+Name: com/silabs/java/internal/utils/files/monitor/WatchServiceDirectory
+ MonitorImpl.class
+SHA-384-Digest: bAAodpLYCvvgfagfO61NARFxjCLsm+id5U/wgGhz1TUm/cFMnwOgisfF
+ /p7D9s5i
+
+Name: com/silabs/java/utils/CircularBuffer$Iter.class
+SHA-384-Digest: V1AkYSdDLt3myJ/dR8n+0nfjh8X7oY0vrkmDR6EuR/DICeTKuZg2ijSB
+ BTI31LHN
+
+Name: com/silabs/java/utils/variables/engine/CoreOperatorHandler$8.class
+SHA-384-Digest: UtrYSyYde99sTfvo/dHLypnO7T2Yy1v+Lk9Iw9xjgG5X7n11sW2+G52Q
+ B5rr6dnU
+
+Name: com/silabs/java/utils/variables/engine/CoreOperatorHandler$11.clas
+ s
+SHA-384-Digest: nXxdpyk5bhbjk5bcbd8J2njsqsipMKvNd6P7kZaRVcnG9hLq4pDyhg5f
+ 0eMp9UD9
+
+Name: com/silabs/java/utils/ListenerList.class
+SHA-384-Digest: LLMZOTsot+yZ4x+42p2U7oRqJejvq2eA/CwsHR+tqgO2TJtrrt6KTjWE
+ 7FmxocgT
+
+Name: com/silabs/java/utils/variables/engine/VariableSubstitutionEngine$
+ IVariableSubstutionListener.class
+SHA-384-Digest: JCrL+A5jf6ok0AO7+VlQRtIe+hqylBve3CjpNDg7a57EUrAOBUQ/YNqf
+ ficUgIC0
+
+Name: com/silabs/java/utils/zip/ICompressionInputStream.class
+SHA-384-Digest: UWb8nP9GzX7e+5pk10AO0criqARbz4/nmKycYU1LiqY30TSCBufE+waU
+ dUm7Neng
+
+Name: com/silabs/java/utils/CircularBuffer.class
+SHA-384-Digest: mUvOSKMvhNFhpUjINXL77utibCMtoeQkGyaDpQIgJ+m101Blc027XNGA
+ GYPDxvSC
+
+Name: com/silabs/java/utils/log/DefaultLogger.class
+SHA-384-Digest: PGDigRAS+A0YXHyZiHpxc61bq77LWuhuzof28JADRLz77Ubmywg3XnXY
+ 4qG3L9Ni
+
+Name: com/silabs/java/utils/HostUtils.class
+SHA-384-Digest: lZgZnNslWKKk7SUMSNuJ4N0iTQX1bJHerC8YOwS5GXUYLr0yQDPb/aOd
+ htfUOR40
+
+Name: com/silabs/java/utils/variables/VariableScope.class
+SHA-384-Digest: y6/LiXSFYCTMkdgTwSlkcJ6BbWgJKHy+l4gzZoXL0Cn1qWRJYmCvi5V3
+ WG/ZRP2f
+
+Name: com/silabs/java/utils/extension/Extension$LazyInstantiator.class
+SHA-384-Digest: 4n0DMoVa/jObr11oEFTIkLJcrN6LobswsiwuVBnYlFtzK/WCewuihh4+
+ /iW9yVWm
+
+Name: com/silabs/java/utils/ExceptionUtils.class
+SHA-384-Digest: wFTW1aMJlvCDrLZux1Uenh0ys74wwpYp4d9FPH4TWtG76tFpheqxHJwN
+ nWib7r1T
+
+Name: com/silabs/java/utils/variables/BaseStockVariableProvider.class
+SHA-384-Digest: VfpObECkO1i98cUkoVQcOUZuaLEXjx9Vxw/pez3RrYYPR6tzYbuVQ5n7
+ 4HDU4Woe
+
+Name: com/silabs/java/utils/api/ICharacterListener.class
+SHA-384-Digest: iR20WuvuQ6Kp/RM46+hu08zhhXPuZHVeb+cjXOrokzXeVfdCtT5xiQzN
+ 5ILdRO3O
+
+Name: com/silabs/java/utils/annotation/GroupedUnitTest$WellKnownGroups.c
+ lass
+SHA-384-Digest: YJw9qkzMXJ24IEEISALCqatudm3apdscuKHcFh4P6IqGlmFYBNYCZbmm
+ ffqyGZac
+
+Name: com/silabs/java/utils/preferences/ITypedPropertyLookup.class
+SHA-384-Digest: e5K3uGWM0IsLOBYLM1YzqKZVhCLuLvfLZDeFwa7Uym1hvaaSlZWLRIpa
+ 3xyBdbfT
+
+Name: com/silabs/java/utils/variables/IVariableScope.class
+SHA-384-Digest: IkDdJZbvAbHWk4ckah0Q7Kewd6Nh8bYmqbeVa7rxF6Gkk218UKB7LcVj
+ GEHsbb5V
+
+Name: com/silabs/java/utils/FileUtils$1.class
+SHA-384-Digest: 0eq3qtvJi9SYNIEDHcP1zIL5x3a9BWQP5FgUc6FieoADrMLfrYw5uxAv
+ ruDF3xeX
+
+Name: com/silabs/java/utils/NetworkUtils.class
+SHA-384-Digest: eRttcUGwJSTuC33nZ7l8rd5/ZTjrjc+aOp/JtLXxOx8A0/v1nUvJJgRo
+ ozajGurf
+
+Name: com/silabs/java/utils/LineParser$InternalActionListener.class
+SHA-384-Digest: G5IldZj22WLQkLbjc0fh2XYdabYPgskT7tgwqrTE3nZiPbJgwxwh861x
+ qtoGWKQV
+
+Name: com/silabs/java/utils/extension/OnlyTestPluginsFilter.class
+SHA-384-Digest: jv2PPXqgM2+tKPVEVwtab5OyFtB6fmSZuLtXDI7H1MRqONHPYHB1iDiE
+ wzUNkxD6
+
+Name: com/silabs/java/utils/variables/engine/CoreOperatorHandler$10.clas
+ s
+SHA-384-Digest: YN2BryUttHqT+HvScqux1m7MQMJSQj+M4sioMyTPSFaeKdlmRXxnYcou
+ cCYpvj3y
+
+Name: com/silabs/java/utils/preferences/IPreferencesProvider.class
+SHA-384-Digest: v3SjK+beYSTTneZyeH+CMo9DVa75DZKGeFlNSagOMNQdQ6M6LjQRAtZ7
+ tmbGH9vl
+
+Name: com/silabs/java/internal/utils/files/monitor/SingleDirectoryMonito
+ r$DirectoryMonitorHandle.class
+SHA-384-Digest: NiztVj4ABlzlmNSXb5nPqJzX2QA2kclkYfNZ4QHx6E7HDs4C4PH9XphQ
+ EhZGk65p
+
+Name: com/silabs/java/utils/variables/engine/CoreOperatorHandler$1.class
+SHA-384-Digest: NpQ7WAksoxpQAWJ66fBXJcqEITpNldW20r/PW6YsN/oKnNELysOs32wd
+ 5rs2FRJ5
+
+Name: com/silabs/java/utils/Policy.class
+SHA-384-Digest: evQeSaTfZIy4BYO3SwwtgJBpsGNgRL0v8INdOXdWgQhEscTU0Cljy37h
+ ww/ZF6Jt
+
+Name: com/silabs/java/utils/function/ThrowableFunction.class
+SHA-384-Digest: JwaLf/E2NM0k5hFfuRAHKxIt/a9DvF1AJmcMQxwtoWkv4FOgoISgZyU9
+ mY+n3Cs6
+
+Name: com/silabs/java/utils/variables/engine/OperationUtils.class
+SHA-384-Digest: 1xHeuDO7awh678bOQ9e7qogpzeXnJka50Ebudhm+CQyI/lH8hhIgsXHY
+ XyidbDyT
+
+Name: com/silabs/java/utils/variables/engine/VariableSubstitutionEngine.
+ class
+SHA-384-Digest: SdIeja33Cj8v13GgP/nQi8Z5ZMoEHfAJlLr+rwC8qmSsrQXpKKCovwM/
+ IT8qGb30
+
+Name: com/silabs/java/utils/log/Log.class
+SHA-384-Digest: 9N0yiU7k9dtKAvnAT5UIij6hSmXtZnKelbeENeToo/XnAvy/Md+PRfDi
+ TD9sqhVY
+
+Name: com/silabs/java/utils/XmlHtmlUtils.class
+SHA-384-Digest: uRSQDjl5qkGdh4FObcXEKC5GdYG+dm8/p8XYuwliaBh719IdiW1BGVDr
+ K+UjrKAz
+
+Name: com/silabs/java/utils/thread/SilabsThreadFactory$1.class
+SHA-384-Digest: ztTK/wi7fzRQPHIh+WNIECHsogjGs5Jgh8TzgxdQ4nDM5T1eT0xkspMI
+ caaCnGuN
+

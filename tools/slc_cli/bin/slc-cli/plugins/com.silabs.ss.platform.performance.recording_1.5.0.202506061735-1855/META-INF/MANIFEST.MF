@@ -1,0 +1,137 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Performance Recording
+Bundle-SymbolicName: com.silabs.ss.platform.performance.recording;single
+ ton:=true
+Bundle-Version: 1.5.0.202506061735-1855
+Bundle-Activator: com.silabs.ss.platform.performance.recording.rcp.Activ
+ ator
+Bundle-Vendor: Silicon Labs
+Require-Bundle: org.eclipse.core.runtime,json;visibility:=reexport,com.g
+ oogle.guava;visibility:=reexport
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-ActivationPolicy: lazy
+Export-Package: com.silabs.ss.platform.performance.recording,com.silabs.
+ ss.platform.performance.recording.rcp,com.silabs.ss.platform.performanc
+ e.recording.summarizer
+Import-Package: com.silabs.java.utils
+
+Name: plugin.xml
+SHA-384-Digest: xWKoFnJ3fVgqI8U7VxvxYuS6vTCvkUGP9ZZsOu3j/NOcvG3PgyJwccH3
+ No9mt5sa
+
+Name: com/silabs/ss/platform/performance/recording/handlers/PerformanceE
+ ventHandler.class
+SHA-384-Digest: XMy42pOASQL3Zpmw+JIidzSX/TX6KIZRMKg7C585fkZQ08FDFcPyOe+j
+ 9RtzZJ4x
+
+Name: com/silabs/ss/platform/performance/recording/NullStopWatch.class
+SHA-384-Digest: 3sVPCg7WIhzmZnjmoosSz9hcuGloBq1aoXNN0zUbOO+BYmJk57uc/Xue
+ CY7QLXIs
+
+Name: com/silabs/ss/platform/performance/recording/handlers/FastEventHan
+ dler.class
+SHA-384-Digest: tWUmBA4m8QBXP53VDqdoItVJTWkEM7gfwwpZ1K0h1XSVJr0gmB0aFMum
+ dUMdTl5f
+
+Name: com/silabs/ss/platform/performance/recording/handlers/SummarizingE
+ ventHandler$1.class
+SHA-384-Digest: WowsXD6fWki2jVIR2XtDQ2CL+TGCrU3atrN/Jws9KGossJ/sWFzGx+h1
+ dTbUU9xT
+
+Name: com/silabs/ss/platform/performance/recording/summarizer/Performanc
+ eSummaryEvent.class
+SHA-384-Digest: KbyYieMJL3x85qad+GuwUUKIv3ayrgLtg9d2vVTZ1ize762qWgYsv4lJ
+ fQnkVkIO
+
+Name: com/silabs/ss/platform/performance/recording/internal/PrintWriterM
+ anager.class
+SHA-384-Digest: OdO/krmekwbUmcA/kQJPCxG3QJx6XWYj7PBsrFUh3biY3oY+rMzHmkQJ
+ U3TxABCg
+
+Name: com/silabs/ss/platform/performance/recording/rcp/PerformanceManage
+ r$1.class
+SHA-384-Digest: SGyW9u7yzlaM3MMD9PtWSZaPcuKXimm0qWPkBl5LzNQExa9KwoiXmHLz
+ rBkSFVu5
+
+Name: com/silabs/ss/platform/performance/recording/rcp/PerformanceManage
+ r.class
+SHA-384-Digest: P6yJl13l+/k951xViFCBuG6XVo8NK0+4VOx+7ORVuSQXNwh9FwoZteE3
+ sPD6uwzB
+
+Name: com/silabs/ss/platform/performance/recording/IPerformanceManager.c
+ lass
+SHA-384-Digest: HmtnaiiGTy9ID8A+RIYbb8VeqtckOBa9VbfvfITp779D8ILt4Amt+Aj8
+ rRBAXVjj
+
+Name: com/silabs/ss/platform/performance/recording/LoggingFeature.class
+SHA-384-Digest: TSEBQMJYDd+IS+vxgBfxuszbESKHFewA+9mvsg5IuFRw8ksXx77XckBi
+ Adq874Kf
+
+Name: com/silabs/ss/platform/performance/recording/PerformanceEventWrite
+ r.class
+SHA-384-Digest: fZxahEAt/l3+nSYk0ip4kRAST9lLkQ4VF9yxpy0wAVdb0fxQS4gnII58
+ NzCIC1CT
+
+Name: com/silabs/ss/platform/performance/recording/internal/PerformanceM
+ anagerImpl.class
+SHA-384-Digest: /S8Y6l7anmGwska/h6sfG/X1G5cL0oMJscPaR20C+0Nezbvhl5vZnOVy
+ 6z58O+eq
+
+Name: com/silabs/ss/platform/performance/recording/PerformanceManagerSet
+ tings.class
+SHA-384-Digest: HJwXvs+D1Vi56dcydXYTVPGL/U2FiqeFkOTUPvmcnMmRj0fSEwqoEd/D
+ oHfAHeU6
+
+Name: com/silabs/ss/platform/performance/recording/internal/PerformanceM
+ etadataInternal.class
+SHA-384-Digest: 9p/UT9GbZhX8Vqjq42sPQClrEVJ5hJUSbKe155VE5gGTslQ4Ol+0oz5l
+ oO1TV4eE
+
+Name: com/silabs/ss/platform/performance/recording/internal/LoggingData.
+ class
+SHA-384-Digest: 4b230UgQd8uBooQbS8Kc9gf1g/+Rw4m0RNPq8wN44Al3KC3SF9fhpX71
+ 8FFATTKn
+
+Name: com/silabs/ss/platform/performance/recording/PerformanceMetadata$B
+ uilder.class
+SHA-384-Digest: 1vNxXba24saGxPH4XK9pxkgi6IXWqXm/en+cS55SxXmW8YimKhpx+OYx
+ EWfiNSYO
+
+Name: com/silabs/ss/platform/performance/recording/rcp/Activator.class
+SHA-384-Digest: dhaXfCQMdU9NUaKVAXGsNDj7cWW5BK2LHgAqGZaECPPijMFNe/WmAmJD
+ O1WHc+zn
+
+Name: com/silabs/ss/platform/performance/recording/PerformanceMetadata.c
+ lass
+SHA-384-Digest: hoFX9G8zwMoaCrysHnfa7yVZiJibaE4XFxO9eSOf0q+2FvmLkfNV4BRQ
+ IaxL9hN7
+
+Name: com/silabs/ss/platform/performance/recording/handlers/VeryFastEven
+ tHandler.class
+SHA-384-Digest: yJ2tpn4L5L+SXb3EbxOKntyZpWjGWo+3xXs2fjWe8hUoeDm8jvOZC/W6
+ h+fgSt3n
+
+Name: com/silabs/ss/platform/performance/recording/Constants.class
+SHA-384-Digest: j1vKkaPzUfQbYmtHco34/ee4I1eAAsGXGfNu4D7erm3zTjNFjCDfTx2G
+ NyCzgGq+
+
+Name: com/silabs/ss/platform/performance/recording/PerformanceManagerCor
+ e.class
+SHA-384-Digest: RHZKUNxbXnQgk1zxvWFmZBq0D+tb7yy9uho38G8iQk9S0mPIdZfc4Bxt
+ QlzovPs7
+
+Name: com/silabs/ss/platform/performance/recording/StopWatch.class
+SHA-384-Digest: 7NOaBeo9/tSuzzPcyxRk6fIi6RBqgc0ghp7fNJ3GiINLpEEDej9VDxdo
+ PULeS9eq
+
+Name: com/silabs/ss/platform/performance/recording/handlers/SummarizingE
+ ventHandler.class
+SHA-384-Digest: 7vO3tMexcO4p1+dwkY6v36tc033i9BhaEsipxhHl961n5wZmoAqtfWEm
+ xtfA9Ce/
+
+Name: com/silabs/ss/platform/performance/recording/summarizer/Performanc
+ eSummarizer.class
+SHA-384-Digest: I5tWdF6XfOV5Sc5XBZeWRwI/ePntJvb3DWUdEW0mFxv52uZr8O7hKO6t
+ slZJirDt
+

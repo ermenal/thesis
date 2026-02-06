@@ -1,0 +1,192 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: RqmsQaqXYNwnEmCYBaECRKQ84fErZS1gWPgimx+3Oygyl+p
+ NPOZSnDhRe2SC+rly
+SHA-384-Digest-Manifest-Main-Attributes: dMegbP6qEz4FqR7oeOl4Z2hRvhrBQKT
+ RbDWhk4uBh7G5xc26v85cJAaJPhXylpa6
+
+Name: plugin.xml
+SHA-384-Digest: Yp2fz6J1H+8RdL+u+LPB/9QXih2JEX0nAVCG8mc0CDLii7rhBYdvcRO0
+ cydSajIz
+
+Name: com/silabs/ss/platform/api/demos/core/IDemoHandler3.class
+SHA-384-Digest: aOgVSe5yq7u9n+PtM3/7wGCfx1ryb2tBpw6fcX4bQnASR+egurtz3fLP
+ QPrOoMTc
+
+Name: com/silabs/ss/platform/internal/demos/core/model/DemoModelFactory.
+ class
+SHA-384-Digest: s+d54YaK6W9kjult2EB83ktMogkTv62dCLHqgk3XtBli4gHVovaI57i5
+ 69ip9pYb
+
+Name: icons/run.svg
+SHA-384-Digest: 7kgrGuWpKi0Zkb92psHCtmC+RuzqRosexuon2LFR9um7Er4BfkhDBEKh
+ RSQjGayS
+
+Name: com/silabs/ss/platform/api/demos/core/Demo$SingletonHolder.class
+SHA-384-Digest: H0m2Q10O96oDMqfynT9+qp+432yfZiNyOQJiVRxxyvWUZmHyj35ntjTG
+ EBTHPUM2
+
+Name: com/silabs/ss/platform/internal/demos/core/DemoRegistry$1.class
+SHA-384-Digest: SMKbUNFWQuQ1baUr26uFr3Lr5BXq3hpDLls1QaWzMBdAWlqtXAzUw8B3
+ h3OOrVva
+
+Name: com/silabs/ss/platform/internal/demos/core/model/util/DemoModelAda
+ pterFactory$1.class
+SHA-384-Digest: rjEFDHtLYLKIplxZjyJykaL6B+loGp3csTi8tJ61W2HtXOvylXWuVgI8
+ MoaPn/9d
+
+Name: com/silabs/ss/platform/internal/demos/core/model/util/XMLLoadDemo.
+ class
+SHA-384-Digest: bRh613y6DIVTewbE97U1smSFy5ZxYE/l2T3n86jvrZKHgSMt3dbl4vJA
+ V3T3UOe3
+
+Name: com/silabs/ss/platform/api/demos/core/DemoUtils$1.class
+SHA-384-Digest: lzS4O8+8rzWXTFD4kMp+FKOFUSzQMGn3uOCHMYez/ZDILNBhJ/FfO5XU
+ g9tBOT6J
+
+Name: com/silabs/ss/platform/internal/demos/core/model/impl/MDemosImpl.c
+ lass
+SHA-384-Digest: zG/J8rQ6gk6cQp1LUOyrL1j3yF2yH+RvZ7dQ1rlfKhT2HM38NQpiQoPc
+ HIo3yAYS
+
+Name: com/silabs/ss/platform/internal/demos/core/model/util/XMLSaveDemo.
+ class
+SHA-384-Digest: Xzd/9ZMTtix2V4FEXwNxS3gmQZHBfYMpAL0vkHZ5ZAZg0C6E34ZBb+I/
+ vBgEr06t
+
+Name: com/silabs/ss/platform/api/demos/core/DemoProperties$ID.class
+SHA-384-Digest: WmzRTU/tJR3HG6HXdMsPBcFzpAmUquQ9AVcNni6T9GruWAVax1h1khIF
+ jTHZ3HqL
+
+Name: com/silabs/ss/platform/api/demos/core/DemoDescriptor.class
+SHA-384-Digest: jsq4y6tPVRL7uLNJcAeEzgxFI/AlwTdX7hcuxMt5+fZvz9QRuuyCjwCk
+ btvVIWUU
+
+Name: com/silabs/ss/platform/api/demos/core/DemoUtils.class
+SHA-384-Digest: wI09jQH+qAj/TI+6na3y4R1ssCjxRNo70j70b0CZ1JgD+yf/3Ua1GuV9
+ e4ABvkK3
+
+Name: com/silabs/ss/platform/api/demos/core/IDemoDetector.class
+SHA-384-Digest: Kw4s1n2mC8SN8S55aIWdjEruhauWco84/Tx0f3FPu5gjGYOK2G1rfdH+
+ Q9srpdMe
+
+Name: com/silabs/ss/platform/api/demos/core/DemoProperties.class
+SHA-384-Digest: aLleQn8ennLUQjL/q4h4tYGeLgjFAXg2F5rvJ776pzEJCT549CCqERO2
+ kbD05Jwn
+
+Name: com/silabs/ss/platform/internal/demos/core/model/util/DemoModelRes
+ ourceImpl.class
+SHA-384-Digest: lKeMdfdJSZojNO1T48JP6M1ZI1oppDcgCoD9vhuQBNVQnq+RIappeNZH
+ VnhJmgIt
+
+Name: com/silabs/ss/platform/internal/demos/core/model/MDemo.class
+SHA-384-Digest: XGmtORNS9YAWDdX141lL4pMFtpMGAaOcBevcIz2dgR3j71bpzV5eqKxk
+ jq670nqI
+
+Name: schema/demoHandler.exsd
+SHA-384-Digest: MkvJfeZVe3xCy0WmcNvPsWQjeh6rNDdOOoXaDNJlGd/3y5vJKKfGOxfm
+ QgcyGa70
+
+Name: com/silabs/ss/platform/internal/demos/core/DemoRegistry.class
+SHA-384-Digest: akLK1FJ6wcJapfs0hwvvS+ZrGMiH9uqlz5wqWRyQYu25OMuUeW/bw70g
+ ueD01DgQ
+
+Name: com/silabs/ss/platform/internal/demos/core/model/DemoModelPackage$
+ Literals.class
+SHA-384-Digest: LMmID/IgecXxiq8oEmL1hVW2sfr9djEsiB9DvMfq0JUpAbyLMTIzMhHP
+ OYdYBZ+K
+
+Name: com/silabs/ss/platform/api/demos/core/DemoModelUtils.class
+SHA-384-Digest: poYo5PN9HYdbc8BaIQFRNlqwVBR46B72dyb/mZ9z6AuycAPegOEEY1zQ
+ CwUscvPz
+
+Name: com/silabs/ss/platform/api/demos/core/Demo.class
+SHA-384-Digest: J8D0tCe/eu+OzkrMoUaEy1pyggjwoGeM0RejT3M40SSTcUJVEn39ehy2
+ yj69J8b9
+
+Name: com/silabs/ss/platform/internal/demos/core/model/impl/MDemoImpl.cl
+ ass
+SHA-384-Digest: C1oOwncPVKI/L/Jq2ftwlPMm9ZipLoPgZXIBJL+12G7nHlWjHKVQo2d3
+ T8EiQOCe
+
+Name: com/silabs/ss/platform/internal/demos/core/model/util/DemoModelSwi
+ tch.class
+SHA-384-Digest: e7StKAebvcn1hmCor/m8exToBtW9uSOZrGEnfk9/ORZP27cbWTYT8TDP
+ Sqyc9jUb
+
+Name: com/silabs/ss/platform/internal/demos/core/model/impl/DemoModelPac
+ kageImpl.class
+SHA-384-Digest: aP4jA9MqY34tvwYTKxJf4dY6Z+ngepqr01poCciw3xyJCQj6Fpaz1plx
+ ItVH5Sdt
+
+Name: com/silabs/ss/platform/internal/demos/core/model/DemoModelPackage.
+ class
+SHA-384-Digest: lR1y7FaQ5bLSg0oRKY9NS3UIV2K1spsQcx5/Z4ngvKHRokdnZ907X0fS
+ x7OLLELq
+
+Name: com/silabs/ss/platform/internal/demos/core/model/util/DemoModelAda
+ pterFactory.class
+SHA-384-Digest: YeRim3O5q+JGXkIQCUck/maGcHCBePqPc/r66kVSZ0OMJ2NcWsLZuqI2
+ SJquhUlH
+
+Name: .api_description
+SHA-384-Digest: lPjikMQlka1vezJeOEbo3OrAJH2DV8HvR0otpXlcMTeeZzs5quWJCw1X
+ KcoAjDHX
+
+Name: com/silabs/ss/platform/internal/demos/core/model/util/DemoModelRes
+ ourceFactoryImpl.class
+SHA-384-Digest: TmSuwZTeagzgoFejWfLdXV+GCToyGTdHgGjdWB+YMY8Z6ELgx+kR1VQX
+ voUWmVj5
+
+Name: com/silabs/ss/platform/internal/demos/core/Activator.class
+SHA-384-Digest: 4M+iHmNJv4kPDVc4RT9wCzg2T13uz1d7fY2KjRji71y7SxMLNF6OuSGu
+ teL5ee4H
+
+Name: com/silabs/ss/platform/api/demos/core/IDemoHandler.class
+SHA-384-Digest: rWry/w7LW0wvJBYCI+bgdGCKha6vB0pFNye2hn4rCiNBzmBKBhWNHVGS
+ zNA4zjML
+
+Name: com/silabs/ss/platform/internal/demos/core/SDKDemosDetector.class
+SHA-384-Digest: 56C152sJRA517KPBcdMObpgus/PUbbrvRlurcz1mQF01Rs1P56zkWYhs
+ cgOy2eAr
+
+Name: com/silabs/ss/platform/internal/demos/core/model/MDemos.class
+SHA-384-Digest: hspIoFftCV8wLMN/KiVfcBJWrzkvRPkKgbGe7PNCDSSV1BUowbOFHlzG
+ OJyLQuB/
+
+Name: com/silabs/ss/platform/api/demos/core/IDemoRegistry.class
+SHA-384-Digest: 8zxgcXa2qJsEMoZaxq6u7FNdKqEkFO93lLO/qByzA0jzDFJNUyFn4OV2
+ 5Ez3Y7Nf
+
+Name: com/silabs/ss/platform/internal/demos/core/model/util/DemoXMLHandl
+ er.class
+SHA-384-Digest: Sg+W0AKaovgDpD86QBFy8m5WdbaN91WI5i09tBXWvMqy5NsmzNctfRQC
+ UafXmhAj
+
+Name: com/silabs/ss/platform/api/demos/core/IDemoDescriptor$ImageState.c
+ lass
+SHA-384-Digest: aBQYLUsOxekOvLivEAGZq4hOlMkpqAyfeSthusqUBrWBzvmdEzR2Nt7M
+ 3siYV+5O
+
+Name: com/silabs/ss/platform/api/demos/core/IDemoHandler2.class
+SHA-384-Digest: UYEPmsTecCH/ztuLiEpRrM9np0jJfxJENBzvdTIT8rp4AE1DoCoMNaTB
+ m4qUTp+4
+
+Name: com/silabs/ss/platform/internal/demos/core/model/util/DemoModelXML
+ Processor.class
+SHA-384-Digest: cbvuuHMFPdcoG+3ucWTO7f7hXu5UdH7BiXJYZNzuw3bRAdbEGdt3RvXm
+ 8Wd/2jC5
+
+Name: com/silabs/ss/platform/api/demos/core/IDemoDescriptor.class
+SHA-384-Digest: Exu9ssTKF6EUoGe1d9nijOdVZ76ylsHQ+ezdugw4F8raUaAyolASdZZN
+ f42btdKe
+
+Name: schema/demoSupport.exsd
+SHA-384-Digest: RT78yNZYXYMtisLxdDD9Ko/rDoDx/OTnxSgKDTrrXKB+hq8jaQbv6BMq
+ jXLjSnZt
+
+Name: com/silabs/ss/platform/internal/demos/core/model/impl/DemoModelFac
+ toryImpl.class
+SHA-384-Digest: bf8BZIrkgTkd0WaqBsGabOgzcrUHUlYdTj1bu+Tlsmd2DoBzwsoYNKvN
+ ZVLo3jmT
+

@@ -1,0 +1,139 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Capability Framework for Devices
+Bundle-SymbolicName: com.silabs.ss.platform.capability;singleton:=true
+Bundle-Version: 5.2.0.202506061735-1855
+Bundle-Vendor: Silicon Labs
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: com.silabs.ss.platform.api.capability
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: com.silabs.ss.platform.internal.capability.CapabilityA
+ ctivator
+Require-Bundle: org.eclipse.core.runtime,com.silabs.ss.platform.rcp.core
+ ,com.silabs.java.utils,com.silabs.ss.platform.performance.recording
+
+Name: com/silabs/ss/platform/api/capability/Capability$2.class
+SHA-384-Digest: GoHsYxM1/mhbEEXn47d6aNA1xfE51S0jXny8J1CjMwZR7jz8AFWi3hZ+
+ BbsrUBbW
+
+Name: plugin.xml
+SHA-384-Digest: 0q8x6JAesm0lkDt7Wpg+K4DHbbmT2SYD4rkdqhbFdV1ZcBF3fvElJIJ4
+ 0vOzIVZ+
+
+Name: com/silabs/ss/platform/api/capability/CapabilityDispatch.class
+SHA-384-Digest: eo76oYTShx1RKn3oQdtkn5g5UzY5aGiTifuPIzLoVF9A3p2xoQW8Oh6J
+ LoxJ643X
+
+Name: com/silabs/ss/platform/api/capability/CapabilitySetup.class
+SHA-384-Digest: aog7QaUrGw9FwybmFeRRjoJGCtjKp4K553k1XemslgYXxZwtGp9qhn+T
+ KCTTiXfW
+
+Name: com/silabs/ss/platform/api/capability/ICapableWithFeedback.class
+SHA-384-Digest: Kv01khIxksE87FNIYTfgmRQ1tkm6i11bHUtx66wF4ca7rfLuma82His6
+ 5YEXNnO0
+
+Name: com/silabs/ss/platform/api/capability/ICapability.class
+SHA-384-Digest: FBSBVb6apfFqN4ypiasRpuLE9RkfiwMElhrvLCjvj74IKOeFm/QWZS3l
+ MSRiNt+d
+
+Name: com/silabs/ss/platform/api/capability/ICapabilityFeedback$1.class
+SHA-384-Digest: 7l4KBntBogzFBTOq60VfWMbiotQkU0lb5MoqeGEq7S+QAUBsov1WOLXF
+ 7YBdUwfH
+
+Name: com/silabs/ss/platform/api/capability/CapabilityCreatorExtensionPa
+ rser.class
+SHA-384-Digest: Isr4WbQnM32VgO0ccNfgmYK30t+ii0bFh/k0cfSuRXVvw0X/hK0np06A
+ 4+uUsWey
+
+Name: com/silabs/ss/platform/api/capability/CapableRegistry$LazyInstanti
+ ator.class
+SHA-384-Digest: 7f+VEr8q5x7RZRJKr2+HT2LPXV8ljUWzBkZv2/5dECeAYpuq4XJi8Ckq
+ AvoWmyKp
+
+Name: com/silabs/ss/platform/api/capability/Capability$4.class
+SHA-384-Digest: yhkY4HHlPLgxlFYYWqlEJ1WIyoVxSbiWWpqaC2YHyjsjDtFcpLk6imjU
+ afIHRhcr
+
+Name: com/silabs/ss/platform/api/capability/ICapabilityId.class
+SHA-384-Digest: Ahj82aApUY4E3CFp0fABajHltAVtKA2VRpO9dUcHhfCejG9KR9A9Lyhv
+ 5Uso+rTC
+
+Name: com/silabs/ss/platform/api/capability/ICapabilityInput.class
+SHA-384-Digest: b+Fz0Pc+RTo3T9RBtfXrnIlZi5lx8UwMPc34XVjls6CHgpM3iau5sv2i
+ csjDrYwW
+
+Name: com/silabs/ss/platform/api/capability/CapableException$Type.class
+SHA-384-Digest: KIUvPt36osyTniZzWcVtOqIR1VQGOTB5mP/09ah1B9vBUOEW0awUhxAM
+ QgiwEK7j
+
+Name: com/silabs/ss/platform/api/capability/CapableException.class
+SHA-384-Digest: G+g2RXA4RimXhnbFEYugkIWVo63EWSCPS80XuAG2V2FwNe1w+DV7b8v9
+ aEDKsGmr
+
+Name: com/silabs/ss/platform/api/capability/Capability$4$1.class
+SHA-384-Digest: ETq6kqnDTctQ3OucYPmqReTWXEcQVHWFGiW00KKduKBlROHICYqjN5JO
+ cyIdVLRb
+
+Name: com/silabs/ss/platform/api/capability/CapabilityMappingExtensionPa
+ rser.class
+SHA-384-Digest: GPNUmczzvuVt8hZQJnkKKHlZ2mRkBCsGZzlnJ6PvW0RSUhSRUvHXxHgh
+ rrB+1GEf
+
+Name: com/silabs/ss/platform/api/capability/Capability$1.class
+SHA-384-Digest: zcPLy4e2ssXjch+SkpLClhQhdMTj6I2MFAHwuGGcercqBIw3LP531oQy
+ JkIhjDx/
+
+Name: com/silabs/ss/platform/api/capability/Capability$3.class
+SHA-384-Digest: dOFKC112X1YDYqv7h5yMAkZsO6AeI8sfWTZkIlJURGmtYYYgmt2Kt25r
+ gd2g6ndO
+
+Name: com/silabs/ss/platform/api/capability/ICapable.class
+SHA-384-Digest: /Eo8xwJfBzJR3ibZ/Oo4aL543CU00RAECz9exM8G3aEwvKOUDfyoLFne
+ jZKvFSWy
+
+Name: .api_description
+SHA-384-Digest: swAiwxBTH1NmCHlMCQiJc1KgobwVTF59IBcdVO1p/k3M0m+m9GN00xtD
+ SEzNirB4
+
+Name: com/silabs/ss/platform/api/capability/CapabilitySetupExtensionPars
+ er.class
+SHA-384-Digest: D5treYtIgZGut4Ss9HkzgyeC4AH5kgJQLswDGAwQnXRwMYgKqu+Hsiu8
+ 1LTffV2c
+
+Name: com/silabs/ss/platform/api/capability/IRedoStorage.class
+SHA-384-Digest: vGrZ3e1mzY/KInWXTSxJ12Af5qdebhDGJLGDOetfp+k9/SViEtxgIYSy
+ hVRqri1h
+
+Name: com/silabs/ss/platform/api/capability/CapabilityMapping.class
+SHA-384-Digest: 4Lrhu3oSFLxkPsJx8196fio+wtwOjy68jOUEMqkQqg53Ox8pqqMpZYG1
+ q6aDiTGx
+
+Name: com/silabs/ss/platform/api/capability/ICapabilityCreator.class
+SHA-384-Digest: exvOG31Bk1QQKPjmKkhwLJ6yMXhWv2H+4CKKozJTuCbRk+nsDf1lOGus
+ Iefb4Yjb
+
+Name: com/silabs/ss/platform/internal/capability/CapabilityActivator.cla
+ ss
+SHA-384-Digest: MhlS4s7zMP4dN4b72JYUtsq41CocQFo9wOfe1xkmLxR8SV/uym+ArZKb
+ lo0grdo9
+
+Name: com/silabs/ss/platform/api/capability/ICapabilityFeedback.class
+SHA-384-Digest: c2glK1+cyc/rJaz97nTojAvparPpiPGoXiyl6A4HBAfCB+ZlFAWUEXf6
+ H1bqhKVa
+
+Name: com/silabs/ss/platform/api/capability/MappedCapability.class
+SHA-384-Digest: ssSp6Zs/pWQwFrZ4+n9EdRNJ6jrRRwgVuMNW29Yh0gPQae+JAuW1veXp
+ 4npiINrj
+
+Name: com/silabs/ss/platform/api/capability/Capability.class
+SHA-384-Digest: /GH6YN5tNal6Bo6UEw3iQueb/UqlF9og6c7Iq3PIxvIu446TQW7NJzMp
+ s5obRCR1
+
+Name: com/silabs/ss/platform/api/capability/CapableRegistry.class
+SHA-384-Digest: aXX+Ij3YproVbvNJTvSCow/NNvYLd5C5XNe4ctWSCkcZKVryqbMew1g0
+ LR8T4RGZ
+
+Name: com/silabs/ss/platform/api/capability/ICapableListener.class
+SHA-384-Digest: ECy/8Dzvp0a/XD1vz9FdaPBT/qFDgKTvDAUxCKIbMtVwNMZdyEvNrIgg
+ NJJwNfs9
+

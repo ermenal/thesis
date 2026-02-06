@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.silabs.ss.platform.descriptor.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="com.silabs.ss.platform.descriptor.core" id="Properties" name="Properties"/>
+      </appInfo>
+      <documentation>
+         This extension defines properties that may be referenced from PropertyFactory and EcoreTypeUtils
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appInfo>
+            <meta.element />
+         </appInfo>
+         <documentation>
+            Definition of types, which allow for an extensible system of classifying the semantics and serialization of values, especially for properties.
+         </documentation>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="unbounded">
+            <choice>
+               <element ref="typeConverter"/>
+               <element ref="type"/>
+               <element ref="listType"/>
+            </choice>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="property">
+      <annotation>
+         <documentation>
+            Define a property for a type.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="key" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Key for a property entry.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="value" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Value of a property entry.
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="type">
+      <annotation>
+         <documentation>
+            &lt;p&gt;Definition of a type (MType).
+&lt;/p&gt;&lt;p&gt;
+This defines atomic types.  For lists or enums, see listType and enumType.
+&lt;/p&gt;
+         </documentation>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="unbounded">
+            <element ref="property"/>
+         </sequence>
+         <attribute name="name" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Name for the type.  If in the form &quot;dotted.parts.then.name&quot;, this is its global identifier.  If in the form &quot;name&quot;, the bundle name is used as the prefix for the id.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="label" type="string">
+            <annotation>
+               <documentation>
+                  Human-readable label for the type.
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="description" type="string">
+            <annotation>
+               <documentation>
+                  Description of the type.
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="type" type="string">
+            <annotation>
+               <documentation>
+                  &lt;p&gt;The type of the value, which is a URI to an EClassifier feature name (e.g. somePackage.eNS_URI + &quot;#&quot; + &amp;lt;element&amp;gt;, as in &quot;&lt;tt&gt;http://www.eclipse.org/emf/2002/Ecore#EString&lt;/tt&gt;&quot;) or a Java class name reachable from the dependencies of the current plugin, in the form &quot;&lt;tt&gt;pkg.pkg.classname&lt;/tt&gt;&quot; or &quot;&lt;tt&gt;my.bundle.id/pkg.pkg.classname&lt;/tt&gt;&quot;.&lt;/p&gt;
+&lt;p&gt;If blank, the parentId must be set.&lt;/p&gt;
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="default" type="string">
+            <annotation>
+               <documentation>
+                  The default value for the type.  If unspecified, the type&apos;s underlying default value is used.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="parentId" type="string">
+            <annotation>
+               <documentation>
+                  If specified, the identifier for the type from which this one is derived.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="isBean" type="boolean">
+            <annotation>
+               <documentation>
+                  &lt;p&gt;If true, the type is treated as a Java Bean and will be automatically converted back and forth to a JSON string using the properties implied by #getXX() and #setXX(...) pairs.&lt;/p&gt;
+&lt;p&gt;Only the fields named by the getter/setter pairs are persisted.&lt;/p&gt;
+&lt;p&gt;The class must provide a zero-argument public constructor.&lt;/p&gt;
+&lt;p&gt;Each class returned by the getter will be implicitly registered as a bean type in the type registry (in the context of the containing class) if there is no other type supporting the classs.&lt;/p&gt;
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="isJackson" type="boolean">
+            <annotation>
+               <documentation>
+                  &lt;p&gt;If true, the type is treated as a Jackson serialization type and will be automatically converted back and forth to a JSON string using the Jackson libraries.&lt;/p&gt;
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="listType">
+      <annotation>
+         <documentation>
+            &lt;p&gt;Definition of a list type (MListType).
+&lt;/p&gt;
+         </documentation>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="unbounded">
+            <element ref="property"/>
+         </sequence>
+         <attribute name="name" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Name for the type.  If in the form &quot;dotted.parts.then.name&quot;, this is its global identifier.  If in the form &quot;name&quot;, the bundle name is used as the prefix for the id.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="label" type="string">
+            <annotation>
+               <documentation>
+                  Human-readable label for the type.
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="description" type="string">
+            <annotation>
+               <documentation>
+                  Description of the type.
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="elementType" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The identifier for the MType of each element value.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="default" type="string">
+            <annotation>
+               <documentation>
+                  The default value for the property, as a space-separated list of elements.   NOTE: there is currently no support for handling elements which themselves contain spaces.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="parentId" type="string">
+            <annotation>
+               <documentation>
+                  If specified, the identifier for the type from which this one is derived.  The parent must also be a list and have a compatible element type.
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="typeConverter">
+      <annotation>
+         <documentation>
+            &lt;p&gt;Declares a custom string / Object converter for a given MType.
+&lt;/p&gt;&lt;p&gt;
+If multiple converters specify the same type id, they are applied from most specific to least specific against the forOwnerClass (i.e. the concrete class of the owner is tested first, followed by its interfaces; then the superclass and its interfaces; and so on).
+&lt;/p&gt;
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The qualified identifier (&amp;lt;group&amp;gt;.&amp;lt;name&amp;gt;) of the MType to handle
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The converter class.
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn=":com.silabs.ss.platform.api.descriptor.core.type.ITypeConverter"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="forOwnerClass" type="string">
+            <annotation>
+               <documentation>
+                  If specified, the class of the owning IDescribable for which to apply the conversion.
+
+If not specified, java.lang.Object is assumed.
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn=":com.silabs.ss.platform.api.descriptor.core.IDescribable"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         [Enter the first release in which this extension point appears.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         [Enter extension point usage example here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="apiinfo"/>
+      </appInfo>
+      <documentation>
+         [Enter API information here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="implementation"/>
+      </appInfo>
+      <documentation>
+         [Enter information about supplied implementation of this extension point.]
+      </documentation>
+   </annotation>
+
+
+</schema>

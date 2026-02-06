@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension-point id="closet" name="Closet" schema="schema/closet.exsd"/>
+  <extension-point id="closetProvider" name="Closet Provider" schema="schema/closetProvider.exsd"/>
+  <extension-point id="studioVersionProvider" name="studioVersionProvider" schema="schema/studioVersionProvider.exsd"/>
+  <extension-point id="analyticsHandler" name="Analytics Handler" schema="schema/analyticsHandler.exsd"/>
+
+  <extension
+        point="com.silabs.java.utils.stockVariableSupport">
+     <stockVariableFactory
+           class="com.silabs.ss.platform.internal.rcp.core.variables.BaseStockVariableSupplier">
+     </stockVariableFactory>
+  </extension>
+    
+     <extension
+         point="com.silabs.java.utils.studioPreferences">
+      <provider
+            class="com.silabs.ss.platform.internal.rcp.core.preferences.EclipsePreferenceProvider">
+      </provider>
+   </extension>
+     <extension
+           point="com.silabs.java.utils.runtimeProvider">
+        <provider
+              provider="com.silabs.ss.platform.internal.rcp.core.StudioRuntimeProvider">
+        </provider>
+     </extension>
+  
+
+</plugin>

@@ -1,0 +1,82 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Silicon Labs Compatibility Framework
+Bundle-SymbolicName: com.silabs.ss.compatibility;singleton:=true
+Bundle-Version: 1.2.0.202506061735-1855
+Bundle-Activator: com.silabs.ss.compatibility.rcp.internal.Activator
+Bundle-Vendor: Silicon Labs
+Require-Bundle: org.eclipse.core.runtime,com.silabs.java.utils
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-ActivationPolicy: lazy
+Export-Package: com.silabs.ss.compatibility.api,com.silabs.ss.compatibil
+ ity.api.engine,com.silabs.ss.compatibility.rcp.engine.api
+
+Name: com/silabs/ss/compatibility/api/ICompatibility.class
+SHA-384-Digest: /jXNemvs7e2v7tWU6WyC5X0xujUbNqHHr76KndCixu4AZrBI2h0Fkp90
+ OXCnMzX0
+
+Name: plugin.xml
+SHA-384-Digest: ocoSd1dy9xhcZRUgnDURUqREqMIUz/DNiSskgosCfANLOqZiei2MxsJf
+ 1IyZ2hli
+
+Name: com/silabs/ss/compatibility/rcp/engine/api/ICompatibilityEnginePro
+ vider.class
+SHA-384-Digest: t2YnwWHGpab81QXpnh6KoTHZtVhGYdZXyH/m1ZwpsOC4/niX7BRwevlr
+ y0DliMMG
+
+Name: com/silabs/ss/compatibility/api/engine/ICompatibilityManager.class
+SHA-384-Digest: t+y0tuZRe44ibsyEFiTNygZ8spTs90rC8wHvM49Es+ydlh6SdAfPQkEp
+ b02ljHbr
+
+Name: .api_description
+SHA-384-Digest: PUIgaYNJfG8BL0bR12eNi8gxZQUoUh/x5iz+qS2qK1m2vusPqoTV5Pfw
+ TNZgc+r3
+
+Name: com/silabs/ss/compatibility/internal/NullCompatibilityExpression.c
+ lass
+SHA-384-Digest: r7HJsDRduV5Q7XuGY41mF4fs+TQLGQmw3UBIBtgN5zF4K0NDgiZp9Bd3
+ Wa4yEnuS
+
+Name: com/silabs/ss/compatibility/internal/CompatibilityManager.class
+SHA-384-Digest: be5OMQKHWu6OaI410Ha88pkzmH9QXkiXO1t4p3Bk8IWJyv0WdLLYSJZz
+ RiNDGCQo
+
+Name: com/silabs/ss/compatibility/api/ICompatibilityContainer.class
+SHA-384-Digest: JKR1E9Ocfu5w50RtutiDFt3PtrbfF8QjSI91auc9Ug+t0Bbp6zJLWG1m
+ GpqjbsAx
+
+Name: com/silabs/ss/compatibility/rcp/internal/PlatformCompatibilityLoca
+ tor.class
+SHA-384-Digest: FEVoqrXqT7edljm7DCSpJGEiRKDmBhQbbbG6/PO5VkquDC/JwaoN37WQ
+ FgGTXHu8
+
+Name: com/silabs/ss/compatibility/api/engine/ICompatibilityProvider.clas
+ s
+SHA-384-Digest: 4QgnM4TY+NSNqVLCp33pbd5CIHV1eC1X1DEjOhvNgXbY4ctjuiGFIiBK
+ tj1YxJSy
+
+Name: com/silabs/ss/compatibility/rcp/internal/Activator.class
+SHA-384-Digest: PArDhEiW0awG/HZ4frY8q2zzkF75UrbE8JquRX5Zf/57zlECcva/APtQ
+ pbeeTksC
+
+Name: com/silabs/ss/compatibility/api/engine/ICompatibilityManager$IProv
+ iderLoader.class
+SHA-384-Digest: ZD86+hsdeUnBnM7znnTK1ognWIC5Pra+E5XwsBMYE73ocZLcC3K5Qk1M
+ tUAyeZqt
+
+Name: com/silabs/ss/compatibility/api/ICompatibilityContext.class
+SHA-384-Digest: DVLIuXhgIJwZjR00WWIUWGCesu75S4GzKN1jhGHjOQQ9ypO2wAjhqnBr
+ dAIoiny9
+
+Name: com/silabs/ss/compatibility/api/BaseCompatibleExpression.class
+SHA-384-Digest: 1Fan3u2C7Ywmc7JJJvhtpO+NbrmKTASFG4uNsp5tjqnjAG3oQ3QfE41h
+ ZBoH0bCC
+
+Name: com/silabs/ss/compatibility/api/ICompatibilityEntity.class
+SHA-384-Digest: Pl0b8/cgXk6OjFzVAv3xzrGkxHihhWj6a2GQNWWZ3f8vZ1NuInuojnoK
+ qmoh0v/3
+
+Name: com/silabs/ss/compatibility/api/ICompatibleExpression.class
+SHA-384-Digest: NMiziTbonqzmHMlyDdxpHxEG/9JsTd+ZtW/2qWxGbZW3AR0EylgQiGC1
+ /ZB4YQSv
+

@@ -1,0 +1,82 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UC Templating Support
+Bundle-SymbolicName: com.silabs.ss.framework.project.generator.template;
+ singleton:=true
+Bundle-Version: 5.3.0.202507110635-874
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Require-Bundle: com.silabs.java.utils,com.silabs.ss.platform.rcp.core,or
+ g.eclipse.core.runtime,com.silabs.ss.platform.scripting.core,com.silabs
+ .ss.platform.content.core,slf4j.api,com.google.guava
+Bundle-Activator: com.silabs.ss.framework.project.internal.generator.tem
+ plate.Activator
+Export-Package: com.silabs.ss.framework.project.api.generator.template
+Bundle-ActivationPolicy: lazy
+
+Name: plugin.xml
+SHA-384-Digest: CtQdkWtCkWJhIH0T7EXwmnK3F2jfGXbRX7X/wIrNooJYfbNfaOSByCVo
+ BEbjcEiw
+
+Name: com/silabs/ss/framework/project/internal/generator/template/Python
+ JinjaTemplateGenerator.class
+SHA-384-Digest: +UDfqetdVvzY5VAJTVPVrKHilnLWn+Qz4/crf8fj/fCBrJyuTzqldjTT
+ O6R9Sk/P
+
+Name: com/silabs/ss/framework/project/api/generator/template/ITemplateGe
+ neratorFactory.class
+SHA-384-Digest: NL4nCjODxZKux6B1ESPdNuJIq7A3RWbUkRiqDQiwrZDfJPgX7ULzoFqy
+ oGee6bqD
+
+Name: com/silabs/ss/framework/project/internal/generator/template/ITempl
+ ateGeneration.class
+SHA-384-Digest: bTyl5jbi2NO97cDoz+ldyRjWGNxrv64YY3Z99jraXZSHG8mQ/y/2HW8+
+ 7Nzv1F/E
+
+Name: com/silabs/ss/framework/project/internal/generator/template/JinjaT
+ emplateGeneratorFactory.class
+SHA-384-Digest: qbn+uoqOv05TQLUMNse5eGiOiVyie49ndQ/MYUQSmyMXJwMdSYOF1CFm
+ ye/0/7FW
+
+Name: .api_description
+SHA-384-Digest: rahzI1QScI9dxSWkWU9W9y6iBcTTTiChY8U9G+3Ur+42wHaVEC8nf316
+ tgClyiGG
+
+Name: com/silabs/ss/framework/project/api/generator/template/TemplateMan
+ ager$NamedFactory.class
+SHA-384-Digest: bJehLT1PB9JgvnhOoCuAYy0n/g0+QcYutjNufgfyWnkCrQWJpZUVYZoD
+ QZ8SptwO
+
+Name: script/jinja_uc_interface.py
+SHA-384-Digest: yiF9+zBQuOB1WBngrotqo3PXOs51XKSKjDNWANO83NNMe4pYfdUCp/IF
+ u6u53/v+
+
+Name: com/silabs/ss/framework/project/api/generator/template/TemplateCon
+ tribution.class
+SHA-384-Digest: k2q8one9rHMFNAUjwZYOMPBf6E5+ZwOoQI3cut3/dhzMEltKVM2XF86W
+ N+4qjgYb
+
+Name: com/silabs/ss/framework/project/api/generator/template/ITemplateCo
+ ntribution.class
+SHA-384-Digest: jpPW0yVm1ZKDt9rlVFweGc6WA8cI2BjsaXYxc6R6nbXfrVEuYXJwVXKQ
+ uGKt2nGW
+
+Name: com/silabs/ss/framework/project/api/generator/template/ITemplateGe
+ nerator.class
+SHA-384-Digest: F4RHwFVgS6ifWibcTceRmz33My/trscgWxbS8mugr7B6yAIKTL5wubMi
+ ILey8Zk2
+
+Name: com/silabs/ss/framework/project/api/generator/template/TemplateMan
+ ager.class
+SHA-384-Digest: RimN2dAAyVsqcsJE5UYYFLdOxnSGVdFy2HT7Wkbf7H5jmqrd1CuYEqTG
+ 0+oFd11W
+
+Name: com/silabs/ss/framework/project/internal/generator/template/Templa
+ teGenerator.class
+SHA-384-Digest: nglXptCMvFlCY/oBueICCU+MuqgpsuOb4gnRy8hO4jinOTGnmdPVGgLy
+ aUY/nL4X
+
+Name: com/silabs/ss/framework/project/internal/generator/template/Activa
+ tor.class
+SHA-384-Digest: lHj8k3XV7SKgMgcFFuaebT7WSfUX1wNSQTo5LlTXUqZUsqIJiW7/ybjJ
+ 7UO8z37s
+

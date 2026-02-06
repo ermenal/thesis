@@ -1,0 +1,4935 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: ClLDXV0qW5wJwnCEjX/j5HAGmfqKton80eFPMgvR0Y1RDua
+ t3D/JNeBmCNlFynuJ
+SHA-384-Digest-Manifest-Main-Attributes: 26jiT35YriRYXiFayHTsKZwBS06XCd5
+ cY6Bz59f3RvpYZQKaRWda58gXDFSblOzi
+
+Name: com/silabs/ss/framework/uc/core/api/comp/ImmutableRecommendation.c
+ lass
+SHA-384-Digest: 2gFYJfSzZuRHZYd4Hc5hVUx9rj0K6wac11qJl40alcO6Zvzgu8L9sr4j
+ xT+MRskk
+
+Name: com/silabs/ss/framework/uc/core/api/editor/UcEditorFile.class
+SHA-384-Digest: R/couT5v+7yo/ZwIuOL+9gkdGO3p0brx5sK+1RguTkRaWD2pE/sZlnFf
+ Y29If5Jl
+
+Name: com/silabs/ss/framework/uc/core/api/ImmutableUcMacro.class
+SHA-384-Digest: Y9XLlFoWCqg7TqDQgN4W49BLqytLTEfg1LdeZY3xM3bd70oU8QUv/xCp
+ 9fPkksgT
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$S
+ bomOrBuilder.class
+SHA-384-Digest: UhY7QVHAYYlvSow6xVV1wrsLQXk4Es9KMRWUjrZUNCNRP+74DX4ocPPm
+ +1G1+nU2
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcGenerationContext
+ .class
+SHA-384-Digest: iILOFHRzYPWlKQCiDoKOnLU0DNqRQ8yXsyBDZ6R4FEIdmbki8U7g1y3a
+ vSWWiMI6
+
+Name: com/silabs/ss/framework/uc/core/api/model/IPostBuildScript.class
+SHA-384-Digest: 5MbrhrxArt49J9xtQspE/ozOshmhyTVNoPpDiy6YwyqiKJ102oscbgBc
+ IUzwpk2v
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyProject
+ ValidationModel.class
+SHA-384-Digest: PstWLPE84SnmPElsPbuV+F7K4uVh8pr/TOPEdUMbbLSNevdHiZLoMKBz
+ aeYuMIDO
+
+Name: com/silabs/ss/framework/uc/api/project/generator/KeilProject.class
+SHA-384-Digest: t2fzFgpnt7QYXuXTv5NZlkW5raMFc0ZG+QFUkiQBPR09jHLuccnpj27r
+ U2BLH5n/
+
+Name: com/silabs/ss/framework/uc/core/api/project/gen/IConfigurationGene
+ rationLogic.class
+SHA-384-Digest: aDbBsCYfxIr3FQwtNpWxXaEtbEb7plJ0Ih6hgLIF12Xcfh8TPB7ebi32
+ PlS0CNpG
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/solution/Sol
+ veableBlueprint.class
+SHA-384-Digest: RC2Db82kO2QoW/E3SeQ7ToSA7+YEYtHFVgBVeWFClpIYJnYPs3BKkoZc
+ zOSpWFIz
+
+Name: com/silabs/ss/framework/uc/core/api/comp/ApiPartaker.class
+SHA-384-Digest: LN7TrzmA4xRePAX8GpFzDXtyJcAwPf6gvQf85uVTw3Stbz6mRBKjNZ0B
+ h7eQWUjh
+
+Name: com/silabs/ss/framework/uc/internal/api/project/setup/UcConfigurat
+ ionValidator$HandlePython.class
+SHA-384-Digest: Vc3LGrc3jv56cGrCRkGCjls6wAz0iYkH1N9wLg0YVxI0dYSnGORQEI4A
+ In9dJLyi
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$R
+ esolvedInclude$1.class
+SHA-384-Digest: 9GNzwevpL8eQonZetAoqeknxyGCgrGsHNaPOpEtwwCYkxV/jjj9lA1OE
+ TCRbkSe8
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/IUcProjectState$
+ IHardwareSetter.class
+SHA-384-Digest: HjLmOBuIlD6NUBQG3RHHyIwnmJxWeXzno3YDN4aQatwvalxxQvWXwXkr
+ 7sfIeOJN
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/UcSbomProjectUtils.class
+SHA-384-Digest: qWr/0guccgrYitL9Mqg9tgt53ty3e/G+nfzq7z1vcDYe516/tRaTno0X
+ 7DLNUmfU
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/IHighlightHint.cl
+ ass
+SHA-384-Digest: /ed+X8BhKDTC+VoY/b/ONa1hkJG1VJ6mXxmmuULothb/+t96FkaC54Kx
+ HaQVLFk8
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IMetaParseEngine.class
+SHA-384-Digest: 6pjAexB3qsT4svXpBD6V6brACT+4pqE3nxLgCd4o6lpbFkvpzWV03Skh
+ XdQvFGCF
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcw/UcWorkspaceInc
+ ludedProject.class
+SHA-384-Digest: iVObaq+45tZhnwIigUin8lXI0D4T8K81kJ7yKvVgA9Azdb0HYLgesk2X
+ +ZxGvGsH
+
+Name: com/silabs/ss/framework/uc/core/api/IConditional.class
+SHA-384-Digest: XVCNOAgOaBFNCZqAACFPZjJXUefHoelmWZPitFbx2Inn05YZYlepfq4K
+ ExfoXqm0
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcvKey.class
+SHA-384-Digest: I9dHgHDZtaf370rQsX21wgC4p2DbBKwTAmXTYQLBPwTZGJ6PLYHa/gJ7
+ Mlo5b51g
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/ParseEngine.class
+SHA-384-Digest: d1bCuMWZdtl0Y3MWVNCpLR2UCOBxANZFOAIByUjxLqyCLq4IH/wzhIjq
+ SAnjq2AV
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/BaseUcSdkCommon$LoadRe
+ sults.class
+SHA-384-Digest: jsGxQEYKM/gY/a//r5k8erVjlEhMW6qYnLQCCW7pocyQXSHLW8WcoN1K
+ 51eRyB7H
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcWorkspaceGenerato
+ r.class
+SHA-384-Digest: cRwvE7WGogeW5buTQu/u8NF0iLBIg8V3iDnemV274uv+vgQfcm9zyMBJ
+ 94ZO6aET
+
+Name: com/silabs/ss/framework/uc/core/internal/toolchainsettings/UcToolc
+ hainMappingValue$UcMappedToolOption.class
+SHA-384-Digest: 6GlG5BoAueA/pzXPSoLLQutUZ7h7S0XpWuOMki8Prbjvmw7zb467jCu+
+ 1vUAbtXq
+
+Name: com/silabs/ss/framework/uc/core/api/exception/UcSdkNotFoundExcepti
+ on.class
+SHA-384-Digest: DzLtqj4lUHVMlVmUP3lhmgv2EKkW7RHhpLTz+54Dd/uWd0U2KJflp//h
+ g+v6Az4p
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/CommonParseAlgorith
+ ms$IdType.class
+SHA-384-Digest: strVyptOHpKikkQGGQ0fOJffL70M3wBDMacZZhD/NXhoVFUGt5BtRlvZ
+ /VXBV29s
+
+Name: com/silabs/ss/framework/uc/core/api/comp/package-info.class
+SHA-384-Digest: 13JRXCvvtuFrwvxnVvriCSpyAgmOEMa41/AA9hvwSaHrgMRJnFHn2nOU
+ oLqa2w9t
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IssueMetadata.class
+SHA-384-Digest: PJeWPtq8h4e2GB5j8O3K6VBGssDnSE0UhWC6sa1SmhVKFfvQeLsCtwRO
+ lUXvwtQu
+
+Name: com/silabs/ss/framework/uc/internal/project/setup/ProjectDependenc
+ ySetup.class
+SHA-384-Digest: Fde2eeI82mUO/nVb6LGxg0tRPvJRAH7I7CDyUm6Vqo4uSZtsrQX0bH06
+ lQdjjXEK
+
+Name: com/silabs/ss/framework/uc/core/api/setup/IAcSetup.class
+SHA-384-Digest: DADhR3HUkzfY8EANw45qFmjsxQLIQqYnaJr4K3zhZ/3bkIy/Ld2bWXHi
+ SHF+pI1H
+
+Name: com/silabs/ss/framework/uc/core/api/IComparableId.class
+SHA-384-Digest: Nbw3Yelrmp9O73i17nvNyC3s1F1n2QdNPukYStfOqkSltAFa2KT2pgk8
+ hjaZeiXR
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IConflict.class
+SHA-384-Digest: BT1/ICeeXD4M31EJdgfhpcgEuKtubMGVYycC8BuzBTVRQjqqzLYWKHpR
+ F7+gQRWn
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$R
+ ecommended.class
+SHA-384-Digest: On6g2q2sgdNsCujvvvgtB+3OGPHMBL88c22USmVrsjvALEDOzDO3QU1D
+ rpqEReUn
+
+Name: com/silabs/ss/framework/uc/core/internal/api/model/slcw/SlcwRegist
+ ry$WorkspaceHandle.class
+SHA-384-Digest: 1Xw+Kl90HF7ZT9gq5yt84evfaGwnNcktuHH7qH2PZmzeQwy1r7qbVijy
+ PlZAIPWF
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcu/IScriptedRule.class
+SHA-384-Digest: dhr34+3+y9ntI0dj1pVgVzDvkKd5OR5i6mlT04fxml1VCaTcaBhzp0FP
+ JXeJbLHH
+
+Name: com/silabs/ss/framework/uc/core/api/slt/SltInstallerFactory.class
+SHA-384-Digest: 2vreT7PDLASkl7bUpz0sZNOxOqW6fmpjuCSD5diNZew3+4Zk71NIDntA
+ P4iCd2Sa
+
+Name: com/silabs/ss/framework/uc/internal/api/project/setup/ScriptType$C
+ omponentUpgrade.class
+SHA-384-Digest: +LVsjRK2xDr+X3Y3HSVRli1dV4aJ/c8U/3TZ4WRJfGJft0mB4XaewpUO
+ GQ1YQJni
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcPostBuild.class
+SHA-384-Digest: Mm30WEP9Te0PX6r8ENO1qF84CmnU4JJN1L4IZ0BKSbVbmsSdFZWx3Qye
+ QcxXtLdY
+
+Name: com/silabs/ss/framework/uc/core/api/setup/IUcSetupExtension.class
+SHA-384-Digest: Q/ST+aSluC0oxsVZJJtECX9Cf/YLueYC+6Zpmi9J/RMjYEC/7BAQzYsr
+ H9h3Lho6
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$R
+ ecommended$Builder.class
+SHA-384-Digest: zRNJx7WSKDbIrcnhUh+992UOLFtDCjA/8UcRV+OC3KrWwtUYlBYXa8yF
+ VZ52OnBX
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$6.class
+SHA-384-Digest: 3hlBdyzRD8sy1cQCCeJZjF2lHQvfIqUVO/MavPIBHuqGPlYSBvEA7ZrY
+ M+FZd7wn
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ oolchain$Builder.class
+SHA-384-Digest: sGi4FF4f8pemLz93/VgDLXDNL90UpXr+mo64eTd3LxD4UxBlHcd3fpdz
+ bPRiMkE2
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$7.class
+SHA-384-Digest: mQSzh2WzSjuWNXFEQ/ueH+I/uGDMUG5OK/TgUqITX9BEegZDtwQlgf8k
+ QF3HJd3e
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/DocSilabsComLink.cla
+ ss
+SHA-384-Digest: r6eVmfw44XHGDIsd+09St181ge7826FVSoU8Dg8AEksRDPkn5Ri7uLyl
+ nydfWLUP
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcAutoSolverSettings.
+ class
+SHA-384-Digest: 0bVrpJgTANtTCU23/hntidDS+tAdkY23V+bcCDt0Rk1SCdxxy2ioPr1n
+ O6JuRxqT
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/UiHintIdVisibilit
+ y.class
+SHA-384-Digest: 1/Dm/dKMMkkXNrXt/7qqDxrf4gPRme2US8vOIhDN+xixJC1agkpiAitM
+ VgUIlatb
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$R
+ esolvedIncludeOrBuilder.class
+SHA-384-Digest: 2Xsy8q1j5bbXoBzqdLVUHoruC8rHokkDiD4Qmm+7IUkY7sCYkwkcipfu
+ ewXwTBsD
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyQuickFi
+ xApi.class
+SHA-384-Digest: hkd+Fr7C9jfACpJdiCnydLu0y4mVti3zXGxV/3/IdONltOq+oKBYqN+N
+ DTs6qHf3
+
+Name: com/silabs/ss/framework/uc/core/api/validate/IApiTypedIssues.class
+SHA-384-Digest: Glo/FGzq+9hlLhiQyaIME3cAzUabeMJ7yWYRbp5gEE/RVM8vwKXS+JPn
+ vfv+FRTK
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/UcSdkDescriptor.class
+SHA-384-Digest: ZpRMEnwT9UzHnxn4nfM6ocbCM52z68fz+tHC0yDJ5JZbGDxWqZVUk43c
+ HYaGpC5g
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$R
+ ecommendedOrBuilder.class
+SHA-384-Digest: ZMAmF2eBQZZ9UZq6ftUqcthcZPulVs+yvcKfswsIGZifqrsZ99kqfkkz
+ F88si7NX
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IMetaWriterCustomiser.cla
+ ss
+SHA-384-Digest: fGOJfnv66Yux+tigZPKF69nGRl6uAcLP5L2NYcpLNVMDMQgoHx0xXbr+
+ 2IIWXKor
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/UcHardwareHandle
+ r.class
+SHA-384-Digest: /Q6PyUJ4WN5wp3c/zbqH0HkcHmR5c4Wj5LJrMf75tYsWytvneJ7krCwN
+ bxAOSl6T
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IMetaParseStatus.class
+SHA-384-Digest: yhTRNzfSarGTZVUvSDzILvQAyjv1PIcYX0kDSE0/DteOM+2XRke6CX5h
+ zNgYslOt
+
+Name: com/silabs/ss/framework/uc/core/api/tree/NTreeMutable.class
+SHA-384-Digest: WqnYXpklPorOQRANHlp3cKqwfaA+lNIc6YwkuhvRv96HPYT1lriQOiFd
+ WtqvD6Yr
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcw/PostBuildScrip
+ tSlcw.class
+SHA-384-Digest: 5JUFuPjQC9kT9BiHfAwemvquezX8POi0up3AezkZVHZ+/fcqD8Vmk6tH
+ IALXbVVl
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/ParseStatus.class
+SHA-384-Digest: Gja7waQmqAiu3NFr96e7DlLyTm0KcKE+K0eYoa4KH4gt9qMdHnlwVZkU
+ EciegTPC
+
+Name: com/silabs/ss/framework/uc/core/internal/upgrade/exception/UcUpgra
+ deException.class
+SHA-384-Digest: vsTcMKzYqc6F71XNWkxcjGtX78EkcJbPM3eQcxK4DWiizyaTqqay07fs
+ 0s8AGjGN
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$A
+ piRule$Builder.class
+SHA-384-Digest: KQph9bqWavnuzKuIn5dTCZk20rAmOXejnCT6wCSzZqh7jK7v0j0xPJlo
+ PhfGpAbw
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ omponent$1.class
+SHA-384-Digest: 986/x2BRDBOCZwAYuF1hjYCTIA7dDP3IJqDArpGmo1LIA1Fo9A9xkrdu
+ m5MQ1duz
+
+Name: com/silabs/ss/framework/uc/core/api/validate/ValidationContext.cla
+ ss
+SHA-384-Digest: 4Yx7KVv4aZ7ooTQVzh2HuL1DrSKQzZZheHNJkpUlgBvgNJ94PmWd80SD
+ GIqLWpIm
+
+Name: com/silabs/ss/framework/uc/core/internal/model/python/ConfigChange
+ .class
+SHA-384-Digest: PWPguYrb4yCd9yD4UNGvirnmTglcog1OHmuggQw20/7x6PNaJdQQSWP1
+ Civo1GDw
+
+Name: com/silabs/ss/framework/uc/core/api/internal/project/gen/MergeCmsi
+ sOnly.class
+SHA-384-Digest: gCy0Ner1GcsPl3K1YMfOr/Wr9pXpjvUFrQTwG6dMTrx6v5N91TC/Xlxc
+ ltfIC2BY
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$26.clas
+ s
+SHA-384-Digest: t97e7takuhywvm4f5nhsCg4R/E0fLz8Mc46XOqDS045yT7Nnr+wcAA1u
+ Z0H+sEof
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$U
+ pstreamSegment.class
+SHA-384-Digest: dWOAz7+6toAZRZF9WbZuV01gCXEejCLGDNfOciQAgJ9zxc9R3B1cCGfE
+ cy0WD2dX
+
+Name: com/silabs/ss/framework/uc/core/api/ResolvedInclude.class
+SHA-384-Digest: kiqenFW1BYxunOTge6M6R6UcjRAGC5X0Q5JpX1R0lvB6SmoJ+uGCr1xV
+ uPB1EgJX
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$1.class
+SHA-384-Digest: xueLjd61n7gTBSpPTSLDRRSjrJEXUwzJxxX9mZQQKNajEQX+lFG/PeOt
+ Intrdn3r
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/ISessionToolchai
+ ns.class
+SHA-384-Digest: gRZi1Xf99qrck9MxkSclVAAxJWqwE0VPgvNBhGmUupoRVDBYfIeT6sPc
+ /LHiRosG
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/slcu/Slc
+ uParser.class
+SHA-384-Digest: W3kWQuS3a+DANdtVjnDOevX9dC6JMrr8etHgo4PM+mtBK49yqEAUi0Up
+ GsEpVQzF
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$2.class
+SHA-384-Digest: Ucndmt1A948e8dDyEOZSmcHUp8xNgaBBSSZaWoejswydAxsb7XmxDZNO
+ LqiJrwyF
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/CategoricVisualis
+ ationHint.class
+SHA-384-Digest: B/Jt+PmQ4ppcUSsDqKqZVK8N7itIy1BqdtmIszwu+Z2K7amNHk2ojyJm
+ D3cIPbiS
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/ucmetada
+ ta/UcMetadataWriter.class
+SHA-384-Digest: QhbNSspuya4SFeIRKY8p76sjfPx4RMmMPeIoSOUoMxp+F7c+MQq0OoUY
+ STBGeFin
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/JinjaSbomOutput$1.class
+SHA-384-Digest: rGpN1z0mWimKehruL+RCwK4bvttPkrh/2PMPW6eFg5omJArEoAowsHzA
+ TD0IHYif
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ oc$1.class
+SHA-384-Digest: +pX7Hvxj7D3zGZtOnIOgYPFNGKvvTwKs5cPzXIokJQ16jLB2gBj2KLmT
+ VJz4gRpx
+
+Name: com/silabs/ss/framework/uc/core/internal/model/UcFrameworkContaine
+ rImmutable.class
+SHA-384-Digest: 5Q6YsydVWRoUxxXi/FAcCk6S7GO9X56csQE0eBfXxarETUL6bL8tKypd
+ XKo4IzIo
+
+Name: com/silabs/ss/framework/uc/core/api/comp/ConfigFile$Builder.class
+SHA-384-Digest: 7j7EvjxLORaCz0rYZf3M2gIJ/thLfweYj9KLw2EiiKF1/dsGjL52ScL0
+ kZ3Q1PZp
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IOverrideable$OverrideRes
+ ult.class
+SHA-384-Digest: pKF12tONY/avqtj13ftOOHP7F+ZKZLEa65V+G6LqjpdSgLEFtz00YXMR
+ N1Nm8Gzs
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/CommonParseAlgorith
+ ms$ParsingFunction.class
+SHA-384-Digest: 8XlNiwchfF2DOp807x4X1omp093RflzJsVFCXQ1lIMm8LMRmv+yoL6gN
+ t7fCqGJy
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyScriptL
+ ibrary.class
+SHA-384-Digest: 1C75tOYULayTl17VbhWKVKeTNr+F2GbpxDjJyPvS+Vr7AP2fkgP9vYGl
+ F9GnEp+b
+
+Name: com/silabs/ss/framework/uc/internal/project/setup/SlcToolchainSett
+ ings.class
+SHA-384-Digest: bdvexBWSZCQSbZt1I0XixbHUSAunHLkwIKgfE9fbtzaK1AiLkMKLgBy1
+ 5MzrDgpy
+
+Name: com/silabs/ss/framework/uc/core/api/comp/Instantiability.class
+SHA-384-Digest: G9zjG9Z6lJyh6lM+aWURir6FJaBQ1u8bTpjpkjNiQ1ouh433xfM5OlfQ
+ rX71mVO+
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/ParseTaskManager.cl
+ ass
+SHA-384-Digest: 1XDHuwHCRpyPXHZPn3IMvwQbvCnpHsrPefjCfmDclVJhGXHBzrhvNhCC
+ 6EFffrbE
+
+Name: com/silabs/ss/framework/uc/api/core/IAdapterPackAc.class
+SHA-384-Digest: zqIHpXC8r5MtYmeUN1bUL2GLZfzhNow0Jh2Yq01K7xvu9Yv9BJKWxXyx
+ q+5PcpWt
+
+Name: com/silabs/ss/framework/uc/core/api/meta/DefaultMetaPathResolver.c
+ lass
+SHA-384-Digest: OBZv5OJxT3oSz0S10d4Oj8e/au8ryRe4NW/aQl/1BtIfiHBuj4nv82In
+ swBv+cd/
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slpb/UcPostBuildCon
+ stantVar.class
+SHA-384-Digest: yO0Emngjh/s+3bQb4GI1YB7T95N3t30a27/vjS1U9vnNt8UVZ5VtTN+3
+ w0IcCTrY
+
+Name: com/silabs/ss/framework/uc/core/api/context/IUcContextSnapshot.cla
+ ss
+SHA-384-Digest: Di8ZRzdaems72aBcJhJ39rj5aKfY/DlbXYvhVbtCr+4vu5F0+ySw1SIt
+ d0trbVtz
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$30.clas
+ s
+SHA-384-Digest: 5RwT6vjLLZd89fYmzsrnUA2BmZDYKvtZ2A7nKe381p86DLm9OiW1DUVJ
+ lavdMD9U
+
+Name: com/silabs/ss/framework/uc/core/api/validate/ComponentRule.class
+SHA-384-Digest: ORGC4/L6KRE+18el+xj48MHVCfhC+pi6SOMw6kF58z19GQgZZUq684fJ
+ YbWk+3Eo
+
+Name: com/silabs/ss/framework/uc/core/api/IUcExtension.class
+SHA-384-Digest: aEo/SiUR0NWRVG2QuMp6AmafdTHhMrKM5C1RpBEzMb570bNUYrfhgfKq
+ DgVBEQb/
+
+Name: com/silabs/ss/framework/uc/core/api/rule/package-info.class
+SHA-384-Digest: cYMz9FNo2PYuuX4Hb39d7t9tE5e3Xl1N1UNZGLishFnpGEn83Pc2SV5S
+ 46YcrINo
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcw/ISlcwRegistry.class
+SHA-384-Digest: tOcg6KB43t+qh2vPDCF+oeMhBIrL05R0+d2ChF/wqpzcXoB1/c2vltd2
+ 7077S3bZ
+
+Name: com/silabs/ss/framework/uc/core/internal/project/UcCommonPersister
+ .class
+SHA-384-Digest: vHEQ265HB+gDnOKdcpCNVfo2N3K6yWjMpoMjnTDRlz6hUGPgbCnYHAx0
+ Pjq3uaQd
+
+Name: com/silabs/ss/framework/uc/core/api/comp/SelectionMeta$Who.class
+SHA-384-Digest: 5FapxG38R7wBwUcYAqzc7kjtUu6UTVXqR+uAM5vrWoLMjey1JLj4LCYS
+ J57dIvsC
+
+Name: com/silabs/ss/framework/uc/core/internal/validate/AdditionalPartak
+ er.class
+SHA-384-Digest: MmiRZS5KSFJZvGiytX5mfdPsRu9qQ62OZmRYaK2Vq39ww+D+6lBmwOpy
+ LlztPKDC
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ onfigFile$1.class
+SHA-384-Digest: sNyHb3QfbtJN/dc1Y1r5PfxDoLU/gN/gSmf2j+8UJzldl5cCo4km/snG
+ 0DYd5JcE
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/UcProjectTransferOpt
+ ions.class
+SHA-384-Digest: GnX9cvFcJ2lAOHBlsqr/hsv7zVRTELkyagpJDJs/kgRUT3zRBGaFbLyg
+ iCACLyZ3
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcw/IUcWorkspaceInclude
+ dProject.class
+SHA-384-Digest: uBLghrhsbmtHkVzMP8SCsjB9Of3rzBKu4rzPM2PKm0U/jf7VrK1+7AHy
+ BjkHqJUZ
+
+Name: com/silabs/ss/framework/uc/core/api/validate/ApiExpression.class
+SHA-384-Digest: TTHwczhDPGxpGtmF73jNP3gVH9o0ABlnS1gMnQipB92jUsypBjwt99OD
+ VR4SZmih
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$S
+ ourceEntry.class
+SHA-384-Digest: AtGkTAUw6A39O0MqtOMr/XrCvMFqQm2JQpO9nijKwoRG4XhpdamzKZe1
+ M7SESmE8
+
+Name: com/silabs/ss/framework/uc/core/internal/meta/CmsisAnnotatedFile$T
+ ype.class
+SHA-384-Digest: w+DcSOS0zaPY9u0yMYKI1EID6eAdI5J49kTd47M5RzGDhkvmMmRjZrU7
+ LTnKajJ9
+
+Name: com/silabs/ss/framework/uc/core/internal/project/UcProjectDelta.cl
+ ass
+SHA-384-Digest: faABQvh2R7xY3x9Y3E68PcXW/bg0VC3OSU7/pZAl1VsmgOIeTVirvrMK
+ LmeW7+md
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/CycloneDxJsonOutput$Cyclo
+ neDxJsonProperty.class
+SHA-384-Digest: PadIYmFk4E5rAxv6Q3EQzJ7vn5QABZe/TgIdBmm+6yuayPYgH88XVGst
+ 6hL2d2pm
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/RequirementL
+ ock.class
+SHA-384-Digest: odOOv44G5SdA7dZORtUB0itQjxuhnd7CK+7kd/+GJux+73wffLJPnDpD
+ fOWUrzoP
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/MultiComponentInstan
+ ceData.class
+SHA-384-Digest: Nct9i0ySS/mAboqr4W7lItnsd2QJwAxJgjs2PYyZlEx8HAiZIT275E2z
+ cAL/xWZO
+
+Name: com/silabs/ss/framework/uc/core/internal/api/context/IUcContextExt
+ ension.class
+SHA-384-Digest: HVqgafHF0nnEr26rIoRxlscHB3sC5TJnOvzI0uhWgLtUbpJrvExjuSef
+ xjSOIYWt
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcu/ComponentDualU
+ pgradeRule.class
+SHA-384-Digest: E3tqitt1w9LTbbCdi2PoroebT3iSVZKZcdMPNrXGYCTZPgzl+0OesPFM
+ tjtG8cd6
+
+Name: com/silabs/ss/framework/uc/core/api/gen/IGenerationContext.class
+SHA-384-Digest: u7CYAA6uPRPuRuzMQu6d4xGHN0tHj0ld7oI+703Mv49KQMWxxY9ijcPl
+ dKanTVNm
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/UcConfiguration.clas
+ s
+SHA-384-Digest: owD4Rj6FS1hE/BoQvoMisaZyZIoA8Cu1crjvH4XuvnLKNM2kmXIrMKdR
+ Gj4IXClL
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/UcHardware$KitMa
+ pper.class
+SHA-384-Digest: sV8S7Ec0sSiiL4DCwy7NKpKB6QVx7kqNSQMcYlMgGP9mDhlQXau6ORde
+ 6S5/40Cx
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/ComponentRootMetaRe
+ solver.class
+SHA-384-Digest: iOdQK4cBd4o4r6ofZs80O/FzBNwbxtGPdJfj46hq59ILm8YExZP71lwy
+ P47g/tMf
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$18.clas
+ s
+SHA-384-Digest: M0WuDrHV5tQsAOrRwvaA0+QRk50e6eGeiQEZdlplwMVwHsJPRNXuqtaP
+ F4amGv3D
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ evice$1.class
+SHA-384-Digest: q5lmGKO471UWH9K/raE9IaMR1zHSMyiGfi9yIdn4apdrxbgQLE7H0oKj
+ /NeyXbV8
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slpb/UcPostBuild.cl
+ ass
+SHA-384-Digest: iIfLXvFMT937+ardi9DmJOYjNhLJ/7CE4wj/43YtIdSzGG66eLodqrsy
+ pfz7ZnNm
+
+Name: com/silabs/ss/framework/uc/core/internal/project/UcProjectDelta$Bu
+ ilder.class
+SHA-384-Digest: f9E1vcV5CDUcri5A2Z6xgkhgcZLitQ1WUWqFDqadVz1nKKZNx0F4phds
+ 9WFY5aIi
+
+Name: com/silabs/ss/framework/uc/core/internal/validate/choice/NoKnownCh
+ oice.class
+SHA-384-Digest: 2NWFhQib4Mlt4RrlfJ9R6UvpR/hh4kfdHSEFJZl1Noa4zq04r8Dd0nEz
+ VXOSUZU0
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$13.clas
+ s
+SHA-384-Digest: 8DWbf98EwNxKp00KOr/+c3tvVI32G53wiEOaQ7HMxLRtUThmWOgbJU1t
+ 3ay8jTN+
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccParser.clas
+ s
+SHA-384-Digest: 7Vvcl2/tWJE2GUWczpQizWbHVnu96MwDfcfFjV2clkVkU9v4OyM2+Dxg
+ UR+/5P/W
+
+Name: com/silabs/ss/framework/uc/core/internal/project/UcProjectDelegate
+ Skeleton.class
+SHA-384-Digest: PneRCYdsux66kTmCDTiPbCCybK3YjUsHcHoL4VE2TeBuOWgnYs2PfyhL
+ n7RDpd3Z
+
+Name: com/silabs/ss/framework/uc/internal/api/project/setup/ScriptType.c
+ lass
+SHA-384-Digest: fZ/YG0zPvzlsVumQKMs6/qmkg6HlBCFU+mvNbP07d/9bSx5MFhtFyv4b
+ /sMVAhsP
+
+Name: com/silabs/ss/framework/uc/core/api/json/JSONUtilities.class
+SHA-384-Digest: 3o+g7KBI0Xgcfs43lFQsAwZQMQtzAOIC0VzD64OAsdM7UTveO83G9mjb
+ u2tshaZD
+
+Name: com/silabs/ss/framework/uc/core/internal/upgrade/ImmutableProjectU
+ pgraderSettings.class
+SHA-384-Digest: fFi3Y5ZYtt9Bz9mtyLXoycKCIOsA5faA0KOSejvgH1p9RSnTuFSZtjps
+ 8ePtIWud
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/UcAutosolveU
+ niverse.class
+SHA-384-Digest: LH/9sGrUmJFqmT3GpqgS0sE1/P0sz1Hpcw81fjgckKzsLICa9ExCuIAl
+ za3ee0z/
+
+Name: com/silabs/ss/framework/uc/core/api/editor/IUcEditorMetadataStore.
+ class
+SHA-384-Digest: Xpw/aoN+ZX277vumln9Ov4zfTxrgpwWMUoDcRsBqnPg2zh4TCEchAopP
+ wXyY6a1q
+
+Name: com/silabs/ss/framework/uc/core/api/validate/ValidationIssue.class
+SHA-384-Digest: ZipnLv58K8PnoCHizQD4yNthMVOocgOtWpFLfgQ59oNuZEQyNDpyP1AC
+ Ymdn3Gll
+
+Name: com/silabs/ss/framework/uc/api/sdk/SlcSdkProperties$ID.class
+SHA-384-Digest: f2tGtzORe+7rsHjz3nMf8GJmZUJZ1BqYvWSGWBJyiHAju3k9UC3rk8rm
+ on+1eK07
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcDocumentableLibrary.cl
+ ass
+SHA-384-Digest: OkS8H1IIDk+e1Cn/fVvmEhSjTIutg4Q9TYn+E2No/XwvwQSlMRmMP+0E
+ TYpBXrJW
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$E
+ ntry.class
+SHA-384-Digest: uWA8RqsPU0DUCgi0DqeTPt5eUK2XtOIoyz4s/JgqLGsiT/rQ2/Awu9ro
+ 2fw5IcWS
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/IMetaSearchable
+ .class
+SHA-384-Digest: w5vobht9tsyV1jSTV6jd3LDHdgd8cvB2g72yg4SsjhRyqrYmQjL5CtHY
+ 9E6jYDBW
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/parser/SltConfigP
+ arser.class
+SHA-384-Digest: e1tITdW+NbgliOdp8BOHpgQm17qglyFzAl6vtkcqy2BovFCbVDcR3Gx0
+ nrP/xMrW
+
+Name: com/silabs/ss/framework/uc/core/api/ComponentApiBaseEval.class
+SHA-384-Digest: GwpCTGXR6oJgdu5NbveLnoxFOYYJ9YU3shOR5ofd4xUq6plEG9fjRSh4
+ aJ2mMwzH
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/slcu/Slc
+ uValidator$SlcuInterpreter.class
+SHA-384-Digest: GErXDQmMBPjRQpcU+XMlz0HpwZ1uTkf9EB2M+K8LRppuf/7VHdP0l+V0
+ Cj0CNQiG
+
+Name: com/silabs/ss/framework/uc/core/api/meta/package-info.class
+SHA-384-Digest: 9ebOCCWC/Hw7Lp3bv4Kv+fXjZWiRD88HVufwgLJQWxpoN8oKdZxGEVyd
+ HFOqkPu5
+
+Name: com/silabs/ss/framework/uc/core/api/model/ucmetadata/IUcMetaSbom.c
+ lass
+SHA-384-Digest: uzD2QQpJw9NbBNtaP1KgOHdbqMdnl/tiG9OlCpXGsciD9aqm238Sr3Qt
+ 5NoVe81F
+
+Name: com/silabs/ss/framework/uc/core/api/setup/IUcUpgradeableSetup.clas
+ s
+SHA-384-Digest: 6VJY6BMwNL6NViAUHLD691lLSHItpcZtfXAWh64F50yBD5F/ZrLp2Fx8
+ sMTJBYGg
+
+Name: com/silabs/ss/framework/uc/core/api/setup/UcSetupModel$LazyInstant
+ iator.class
+SHA-384-Digest: 5NmIMJ0s+pQHBVIutvSKYAw4Xnn1DOwLfzarG1Bng3jhRY+hdcNABjWK
+ /RUzkQpP
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ onfigFileOverrider$1.class
+SHA-384-Digest: sR5rHXLyeqFJW0qJxSKnU3IoiaY6NjmdukFmOz53C4HnEXi2vS8Mxwoh
+ j18Myw4j
+
+Name: com/silabs/ss/framework/uc/core/internal/model/python/ConfigChange
+ $RemoveChange.class
+SHA-384-Digest: ILJ5gtoFqDoVS/r3eWXoFf+dQFm/qJL3Dt7y7yNqTyNWc9o+fSWcZ0WG
+ CNt9gA4N
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$B
+ oard$Builder.class
+SHA-384-Digest: lZmrSjRFdyVDek8+jr72O2wWsn7JSHmv3ec7bIdkLHsIU6TmYy+0I377
+ AcU3yU1n
+
+Name: com/silabs/ss/framework/uc/core/api/model/ucmetadata/IUcMetaToolch
+ ain.class
+SHA-384-Digest: pcinDRFKWNI9mZFt7kN0utp4Z8O+7gHgAeUy7IWaPdRiBWSZgREKwUhL
+ Mx/Kuwwt
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ omponent$Builder.class
+SHA-384-Digest: aZ/HTOlKYaS06r4vGbvp4t/bY2qjnSuzte9SSpiefvyhR61dAcXSnHkG
+ RkK90/Dn
+
+Name: com/silabs/ss/framework/uc/core/api/IUcProjectFramework.class
+SHA-384-Digest: H5pEMbuisbrUY6BXkvbFYmD04lUQk+TNqOwRkf71oDwmLJcSXKo8EzFM
+ lgRYJSYz
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$P
+ intool$Builder.class
+SHA-384-Digest: TY93mwct5HoDpwxOB/Ury8fkiF5/zDtUg7KKfnO9IwmyYoT4ZCOdbVv7
+ jyoPattm
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/SpdxJsonOutput$SpdxPackag
+ e.class
+SHA-384-Digest: LTCW3Yuk4YmzGaV3eVgiBIj+msNDgsSXKSGYy1A+ou8OiJP48EqLeWCF
+ reLi5+7h
+
+Name: com/silabs/ss/framework/uc/core/api/upgrade/ProjectUpgrader$Upgrad
+ eEnablement.class
+SHA-384-Digest: YZpMi3/F1biEYEZgLCrIuH+t6mQZDNDQYKW39c88ADvU+glW0UjjJn3K
+ My9/SIfe
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IMetaFileReader.class
+SHA-384-Digest: /Oh7405VHQt5+vYsnaDtAgIqxckfudCiE24RFGGiBLse7TSJKhZTHZM3
+ fS8+HEwN
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/UiHintIdHighlight
+ .class
+SHA-384-Digest: pobfmVFQwmE3zjTryMoFNK5Qs8Y6W/IyRiv8S9blFcWOBUpnKLMWXkRB
+ g/3GTlzK
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ oolchain.class
+SHA-384-Digest: ioJpiuxPZxVxNZ96bix4WFcmvpTEjlz9ETV9eFwcGWPbdx1wKrFLiYUX
+ 43JUtJkF
+
+Name: com/silabs/ss/framework/uc/api/project/IUcConfigurationChanged.cla
+ ss
+SHA-384-Digest: wBBx2GaSryRl2IxmRLdzdyRgLnSbcBvmnO+GneExpAKd11VwkHGJQi95
+ c3U5+79w
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$2.class
+SHA-384-Digest: ot8ZdGjhQYXOTKgXssLqtw1CB6VSuIaCEeZTEYH2EPYtpUYxd9tHIr/7
+ Fu8KOcCo
+
+Name: com/silabs/ss/framework/uc/api/project/generator/ProjectFileModelU
+ tils.class
+SHA-384-Digest: RUJ2uDc9Uf/YOzOEnPcLvUJNRd2dq/T5tYk00V9OythHufGcGcIOFofY
+ GouuJuw/
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache.c
+ lass
+SHA-384-Digest: sX61pFPCZbzY+YKx5KTOjwnOlgMYvlr716frB+49Uv2R4C9xIWXYI8yD
+ ILw3YcKV
+
+Name: com/silabs/ss/framework/uc/core/api/meta/SourceFile.class
+SHA-384-Digest: Om8amCgmn1mD//LxXvsSu1htq0IOTcY5XbkqHsNppBNyx337yBNSlHfI
+ EHO4YC7I
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$E
+ ntryOrBuilder.class
+SHA-384-Digest: m3u5BcJMsX25VCChz7k7RH2TGHeu1MmHkRdAzTtAy7xTx0D18xri7Hfa
+ Jg5LorMj
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/UcTransferOwnership.
+ class
+SHA-384-Digest: cZu++GStcn5kYbSW00Itel9UDCl2q4/u8yS/Qipp40ZfWenLNnISLZ1u
+ tOdO1AZK
+
+Name: com/silabs/ss/framework/uc/core/api/comp/ComponentQualityUtils.cla
+ ss
+SHA-384-Digest: 3B6TJ0qDUOgUIyVBCkeK23zCp5iA53jVyRSPPCKjl+hEczY0zB2KoGoi
+ QZh257un
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$M
+ acro$Builder.class
+SHA-384-Digest: 4i3Md9lBsVF5vmmzldeQns/CWasDg5hu8m+J6mltq5CEPj6uYpNUt5QZ
+ 6J2MMqI8
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ ondition$Builder.class
+SHA-384-Digest: QMjsEGoNFfj3fZzUDzYQGSxzorBWyopsIkP+oXhI8h4vifG6PCPckdXT
+ VpfZIdLp
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SdkKey.class
+SHA-384-Digest: 3aXlfpCTqvoyi+/dJ5pvoAEdPIWrBkwUAtfkPBX5qL+uhw1pJIdoROVV
+ yUiKzz6H
+
+Name: com/silabs/ss/framework/uc/internal/api/validator/PrecisionApiVali
+ dator.class
+SHA-384-Digest: kiHOShZLDjngORK5eEjTksJYdj/nsWXR+dLlzQOCnJNTpp4icpyP++du
+ kVdsBoIz
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ ondition$1.class
+SHA-384-Digest: fWm1i5FNwAjDnlWldrDJ9i3cADWZDcHDe5BWOJcr6MlMjPe0AM2Kz1vV
+ To0WKgW2
+
+Name: com/silabs/ss/framework/uc/core/api/log/UcLogging.class
+SHA-384-Digest: iXQvNhGtWWHcPfF36tOyDUEwMIC+ZtsQhFeakzlXa/S0a4ceWXHpwc7w
+ kciToU3v
+
+Name: com/silabs/ss/framework/uc/internal/api/project/setup/UcPythonEngi
+ ne.class
+SHA-384-Digest: NnNMHyAaftZFok25JmJ4C1yPOdT9Mi8flAAkJ7rgSyErcb+z02dxUa1y
+ ExUa1F15
+
+Name: com/silabs/ss/framework/uc/core/api/gen/IUcGenerationContext.class
+SHA-384-Digest: +vsRTYh/LjzYgkahkRBtJFgALLbFWD/9kaus3tEKxmwLJAsCoh4eAB//
+ UbCI+wVw
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcThreadedGeneratio
+ nUtils.class
+SHA-384-Digest: YOg1LRfeL6rD0OjKKLbX0C5CEzbhfhduyENFmJ9uDrAxCH2EdigOuHN5
+ jDZLLjb4
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$27.clas
+ s
+SHA-384-Digest: mBQNmJdrKvsbv5MOIm/fiDxVYYDB0vm2aQXBAicv96lptNsKMmuX3Ido
+ eDsRDjDO
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IMetaPathResolver.class
+SHA-384-Digest: LSGkuCQjDk5x5b2Gyqrxfa0oXiS2a7SLTGdCftjih6CUJkcTXgZK8pZU
+ oCVUlN3L
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/UcSbomGeneratorModel$Sbom
+ Sdk.class
+SHA-384-Digest: ob8momrQHsBNV2ls3UFTR04TgsUJGpkX0NeeUIUCS8J5ZsYbfHSbJd6L
+ Q3p9WxVn
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/IUcAdditionalFr
+ ameworkProtocolFinder.class
+SHA-384-Digest: dxLbIUhD/bner7vyHIPkM1bZpjyFvN+qAxxcXyu1uwyrzodE8OpwIqfi
+ XVVQeUES
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$8.class
+SHA-384-Digest: tlEuEoDOzX0m//Wzr7BZXdG9+7yl7Yhm65e9ahzPrGBzXO4IWQfbS0+n
+ Z1DB97CP
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$F
+ ilenameOrBuilder.class
+SHA-384-Digest: CLfyTuECGElR0zuB7PCfqVmBJNKNvJiseQBCkX8Ecsfjo7KpBCVubqU2
+ zgJ8/rsB
+
+Name: com/silabs/ss/framework/uc/core/internal/upgrade/UcLuaUpgradeRunne
+ r.class
+SHA-384-Digest: JeLONMwpj2UdGm9nEzLo2qE8utbP7Xx+dAuUstHfM1o0pGHyK1IyvlKB
+ TSwrwxhK
+
+Name: com/silabs/ss/framework/uc/core/api/exception/MultiException.class
+SHA-384-Digest: EYTuRnEoODOcVOLoL4wl4m9ZGLjEVo7Pn+qtWO9hqqvgk3tpYJigfF8g
+ hyXYiDzJ
+
+Name: com/silabs/ss/framework/uc/internal/project/options/UcToolOptionMa
+ ppings$MultiOptionMapperFactory.class
+SHA-384-Digest: M3MkQ6GK5zmbyM+SEPmBbT0YiVQ+ydZrm7pvnAcNbhoP47kUMcB/VmXG
+ m4jZFxtY
+
+Name: com/silabs/ss/framework/uc/core/internal/model/uihint/HighlightHin
+ t$Builder.class
+SHA-384-Digest: 82n4e0+ZRb3eU55xtunvyOasHjBV95tAqKTdSnMlMTe3JAks2NCixIpw
+ DmJew/Py
+
+Name: com/silabs/ss/framework/uc/core/internal/model/uihint/HighlightHin
+ tEntry.class
+SHA-384-Digest: nxYqZQiplAAExOGLbHthx6uIs6Q62YLFgXHj2zjYm09TjPzrer8mbBi3
+ sNk859ly
+
+Name: com/silabs/ss/framework/uc/internal/project/setup/UcMetaDetailsGen
+ erator.class
+SHA-384-Digest: bRGRgakrx9zqLa9T9xBppx1nTMD2JjwwXWp2bftI+w5pzq+dRx3/kTx8
+ qt2F0zsP
+
+Name: com/silabs/ss/framework/uc/core/internal/api/config/DefineParser$S
+ tate.class
+SHA-384-Digest: hEWyrZwhnmUtplNNlfuR/qq5PWpcXep59F3metOmo79udDzH7NI4BM21
+ /yw2w6i9
+
+Name: com/silabs/ss/framework/uc/core/internal/Activator.class
+SHA-384-Digest: Yy7ntBqJ9fOfB1vwLUfnSC29BmqH88oen7kbu8CwQwk+DOBp2uO97WKL
+ phx6ezDv
+
+Name: com/silabs/ss/framework/uc/core/internal/api/config/DefineParser$M
+ ultilineCommentMode.class
+SHA-384-Digest: IE9a9JydRJ4f7WggNP/yPqUxAK8RDNs55VoCF+2f16LZjXMcGn1B1HLc
+ l4nFfxYj
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/UiHintId$1.class
+SHA-384-Digest: 5lLxGqrpTjtYxLzlMjsbpZ+eV4J0vQI+djsE7w43BqYMc8bOLt3povwI
+ CId/PE0/
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/UcHardware$Board
+ Mapper.class
+SHA-384-Digest: zeE2vzvnVpLc5xhDE2Vj2wu9/OajInlIpOyi0gzz7+1m25zHNfzWtfTA
+ Fn3W5sQX
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$S
+ ource.class
+SHA-384-Digest: RWOEt+YEcMbdBBowQCOtgIUiavbWuADC1OzeuK64L2ac4DPWfDk5/nkI
+ 3qlcx7cY
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcThreadingGenerato
+ r$GenerationTaskContext$GenerationContextContainer.class
+SHA-384-Digest: GwwSEHqfVbdI7pzsIXdfvjnee2coJH5R1FZxhpy9NVfxaezXWzYES2LM
+ P6xwz1a5
+
+Name: com/silabs/ss/framework/uc/core/api/tree/Tree.class
+SHA-384-Digest: W7mLJmmvDYbTB9DuvKYMT2vX7ve6sTzM588Zp7CDn7aZ43qCjxPiIBZZ
+ UEVZuYSK
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/solution/Res
+ olutionMultiMaybe.class
+SHA-384-Digest: CskIIOSKiDIjqZ1J9P55P0/feVrhI3shWFkvijcaSJGIQyWjkYnMchSQ
+ OOIqgbEM
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcp/SlcpProject.cl
+ ass
+SHA-384-Digest: kVwDu0dZi1hmJMkI7sfWnB5ZPe1jhplZ8fJyP6XtbnAfe9DeGJo1KsZb
+ o3ETmx4k
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IConfigHeaderParser.class
+SHA-384-Digest: hYCJ6YfB1vhQ5kR/m94HrVKKdA5+7l9ZLCpqmdC2zYTCQbNUT9T1+uAT
+ Fbit2g++
+
+Name: com/silabs/ss/framework/uc/core/api/setup/ManagedSetupExtension.cl
+ ass
+SHA-384-Digest: dzZuLDbm2F87zBRs1U/zqE27CQZi3/9V73P/40w85dKDp2bCaZt1WNCW
+ dMCO//CV
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcRecommendsValidator
+ .class
+SHA-384-Digest: 6IP2qk0A9PBD9/Nt0UlCb6N1K5I5EM0EYLVSp9pOZ3dVPiKbrYPZFqAF
+ xeduxbnW
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/UiHintIdString.cl
+ ass
+SHA-384-Digest: ejbfpf/CCYACLHg5DxENvy9vMnETYE1LCRM/d9+wIdLc6tYd9FDyZhAs
+ fGSUOBZJ
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/SltWriteoutOption
+ s.class
+SHA-384-Digest: 0BHcSUNXiEU58+5fd6z1GBa8bvhumJGFZOkZU/C5k2/kwV/dWbxwsB+c
+ WtZTDBs6
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/UcProjectTransferOpt
+ ionsNone.class
+SHA-384-Digest: oKA3b2SSpORVJxpIxqpgg7sTqB+CDVMX3+eK6CIKwAMvLYYD4U0A3AxC
+ fXxsAizO
+
+Name: com/silabs/ss/framework/uc/core/api/log/UcAnalyticsSettings.class
+SHA-384-Digest: Lbjvbq+nZMqn/NOuXM/6RGAo3SnSBb8RgDmwv/0hmeQd54CO8PpuLewW
+ aZS23S/P
+
+Name: com/silabs/ss/framework/uc/api/project/generator/XideProject.class
+SHA-384-Digest: 8VxcypqwKXZF4tuLU5RFfyf/7XWMvQ5foEDr1umob8o2L0ai6w9/HFQu
+ 8rQLTgz0
+
+Name: com/silabs/ss/framework/uc/core/api/validate/sdk/SdkValidationResu
+ lt.class
+SHA-384-Digest: bn63lHC34PmpcHk8/uROjv7s1TrHRjSsGP5A4UxHjLYaGzYFgdLPjf1j
+ zDxciMQ+
+
+Name: com/silabs/ss/framework/uc/api/project/IUcContextSearchQuery$DataD
+ irectory.class
+SHA-384-Digest: kn+sFaHBmiFcxqtf9b/2yDJT6VPtqn6YWvIv8vckeCpc1PT4/PIJw3AJ
+ Pxzm63/K
+
+Name: com/silabs/ss/framework/uc/core/api/validate/ConflictIssue.class
+SHA-384-Digest: yHRIvFPPDD8hp+hFy5tZnV4QgyBpgDFlIoXj+9G7EU6LTzEPQhoCek5y
+ OQvB2EQ9
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$B
+ oard$1.class
+SHA-384-Digest: c7T87ZVEblS/1fvRNhBguAHMNFR5GBSEKs/XwNfQ4/VllBmsvJR+d8M5
+ NM0n/Bjj
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/UcCustomBoardHan
+ dler.class
+SHA-384-Digest: 3JbvZWHEoNnsmnJqHiXVc/aLL8UpN2ul6ytPmKFbQk2zUz6t5tEfVF5L
+ PVUIYUli
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcw/UcWorkspaceSna
+ pshot.class
+SHA-384-Digest: AEbaROMpc95sWDPT4ROZwlpyDA/YpbdX3nmzajFz/oecfmW/GpzeglVf
+ KBDDKgQX
+
+Name: com/silabs/ss/framework/uc/core/api/model/ResolvedConfigFile.class
+SHA-384-Digest: BwYLlDR+HCLYMzUHLlJlS2pNts9GHvx3PcVjEXoYMexGUoScXE6ek00J
+ Cd9CpRqe
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/UcAutosolveM
+ ultiverse.class
+SHA-384-Digest: P7HUiMlP9iHFTSgdf7BaZaGYNVl1WkQNUuW+t5kof0KI6nO/yiJYASZC
+ YP7Vr1kI
+
+Name: com/silabs/ss/framework/uc/core/internal/model/CompatibleSdkMappin
+ g.class
+SHA-384-Digest: yXYbIze0WbHl3LnKK5vxv2+mZvlwzle7wiHlLP0sR1VxOp3QPxB8+5pS
+ rpfGJdFC
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcw/UcWorkspace.cl
+ ass
+SHA-384-Digest: R0TRM4aeykPriOa2jScEHi3HdZCFhXQXZWr/mrNaXH1cPRZ4nbAfYrhJ
+ 2F/8A2qh
+
+Name: com/silabs/ss/framework/uc/core/api/log/UnifiedLogger.class
+SHA-384-Digest: wavIPRT/r0qiYQzBwmfPfLJEVjdOr70t+RIga2oD8ORDav8pvk1CrgSB
+ D20YIRZO
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ emplateContribution$Builder.class
+SHA-384-Digest: nISyiam/x09GWtSO5CuHf48FHLsHkkRhOXyWZriTFJOv9n3n/M5YdpGo
+ 4kXLIKsi
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcvParser.clas
+ s
+SHA-384-Digest: xq/cF/A8E1aQ8lET3yKDlUEZhCyQmB3vWBC3KJaMC5oudqzd4NvGUY6p
+ ATtz4o7A
+
+Name: com/silabs/ss/framework/uc/api/core/package-info.class
+SHA-384-Digest: HZP9VgSefKO3m2LFva9BnjstZh3851y4OU+XtuOaJfOybdMqHhBlG2NI
+ dlvOG7mD
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/SolveableBlu
+ eprintPlans.class
+SHA-384-Digest: 9pXdd28Byt9kdnzA6fuc3Mz6dS1luyWxe1U2BQ/16G8zHXz/6Ad6HqfP
+ C1Xve8bV
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/IUcAdditionalFr
+ ameworkFinder.class
+SHA-384-Digest: nGUqkNMCywfgjFaY/md4Byz5KHGFToPGffrIHqL134Nf93KoQbcERhSF
+ kB5yeTKF
+
+Name: com/silabs/ss/framework/uc/core/api/slt/SltInstallerFactory$SltIns
+ tallation.class
+SHA-384-Digest: l54kfwQzORFf6nnk5LFegGapsiLmShH/VIzbmPDdQkYgFaaPZwQteFe+
+ +KyuSmB8
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$34.clas
+ s
+SHA-384-Digest: ylzxnh364wSDOdqubQNpxi7u86bsCpIsI3MVwo0tQC7heNaOKNMaxIGp
+ iPavhaOo
+
+Name: com/silabs/ss/framework/uc/core/api/setup/IProvidedSetup.class
+SHA-384-Digest: PQKbrYA18TfiGyNsJYuHNp+3W4j8MhAIZgTwqdigQhQZKAGAUV7fc7hi
+ MrW7TLY3
+
+Name: com/silabs/ss/framework/uc/internal/lua3/LuaUcLoggerFunction.class
+SHA-384-Digest: BnBe+4U43Kwjj+P1zpVtvm98CxaDmfJ1PxyDs3cLRMnPxk7WvA7Vz1D5
+ oMDxa7iG
+
+Name: com/silabs/ss/framework/uc/core/api/UcFramework$UcFrameworkContain
+ er.class
+SHA-384-Digest: mlWw/RUuB7wY56WKHN9zBKTDJm84up00OIfgH42TEw7HAXfPb4ZI5aU9
+ lypm344B
+
+Name: com/silabs/ss/framework/uc/core/internal/api/config/DefineConfigMo
+ del.class
+SHA-384-Digest: BRPl2fTEYZWYfpgSpUeF78sgl01TZ8KUB0nq/1uXuYaKSqlC+4BCv/Ll
+ OQODcsQ7
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/SpdxJsonOutput$SpdxRelati
+ onship.class
+SHA-384-Digest: BftnTPzFa3vu/2+RG4c6sSUOms1u8j9OuRtYE+/LMQtWBy6fjoABo4PD
+ LMbSqBur
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/CycloneDxJsonOutput$Cyclo
+ neDxJsonComponent.class
+SHA-384-Digest: Y/Pyt38dpwdUXaUr2OKx+cnCRfSx3jbDElceFh+cgDalnk1jI0a/uAl8
+ vYHG2RS4
+
+Name: com/silabs/ss/framework/uc/core/internal/model/ucmetadata/UcMetaDe
+ vice.class
+SHA-384-Digest: eJEpvGICxNX6N9fZS0LPzeLBsZ/Iqc/Ddq3P3PxvWsGPZWBDR9Nh0HlH
+ Au1yarWF
+
+Name: com/silabs/ss/framework/uc/api/sdk/UcSdk.class
+SHA-384-Digest: IxngRBJbRfpnH2fyB9tJV8ASJGsRse9/BwxHDSRqVLZy2Gdijq8WPaGS
+ CGC4FWUV
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/slcw/Slc
+ wWarningsValidator.class
+SHA-384-Digest: XRVZ1k8HvQiP574VoNmen+Ygp+AVeWK1vrpL9j+m7HK9AygkUikQ56GD
+ S6pECEJ1
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/UiHintId$2.class
+SHA-384-Digest: gY5rtmGDWMmwK+zs5eV5qSzA6/aKyzGJ3Inq43poMb6uJ4V65Y+BsLBG
+ lR5cNE0W
+
+Name: com/silabs/ss/framework/uc/core/api/pintool/ABRequirementMetadata.
+ class
+SHA-384-Digest: 6iK+EIjiSv0oJGJLcv/vMwuG1OAkob4cTsrrkkP8k8Fw91L/JM3VvrVv
+ bb7q3Fwk
+
+Name: com/silabs/ss/framework/uc/core/api/setup/IUcSetup.class
+SHA-384-Digest: YBMaUWm+1iy2qtNNsikC2giTublRwolZVbDMEIjyn6L8zzwmyUjmPvQ1
+ y8rEebVO
+
+Name: com/silabs/ss/framework/uc/api/project/IUcContextManager.class
+SHA-384-Digest: RdWMMKe4QeJH8kt9gDB0OzUGHOwzI9wMsA+TNWr3RPErZYRrzelpn6Ur
+ ytT+3513
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ onfigFile$Builder.class
+SHA-384-Digest: ClsHx1/SfjicRoxyryKLJfqqLOudfTnPtPUIxxf16+jPAwIMFRzzPfmA
+ +/Ivlhqv
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/JinjaSbomOutput.class
+SHA-384-Digest: vzvrtjU62T5RP2tasjCc9AqGwp7+t8kpssIqo6sgadJ8rcmXsnqRbGFF
+ VAqbIXWg
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/UcAutosolveU
+ niverse$RecommendationTaken.class
+SHA-384-Digest: jXgrFJprfK21G9ctzPhAE8Mz1nDtgnyf8brUDrfCJ2IO4tQwj0CzuUVX
+ ztDsBQWk
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/UcSbomGeneratorModel.clas
+ s
+SHA-384-Digest: 9/5n69RgjxW6H9thfcYY7sYbHp/G+aUeaDs5j/HCx32ukaYypyG/TXx7
+ LosyPsGs
+
+Name: com/silabs/ss/framework/uc/core/api/model/IExpressionInterpreter.c
+ lass
+SHA-384-Digest: HzXc6s9AbsPIL6hb7nQffcJI/MrfVMpTMNsCrQUKnAPR8ivpA9Cl4I1r
+ Aawa5UX+
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/SpdxJsonOutput.class
+SHA-384-Digest: w7zHRdeq6IHsdWXP2aP3Vvyt5AAsdt+lvTAECxxRF+p4Y6YuD1v++HAy
+ YH32qmR1
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/UcSdkProtocolDetector.
+ class
+SHA-384-Digest: SctsbECggI6lzvWO0uvGner7xaJVOK4qdYUwDpRGZbiP6NZZiMkklxkb
+ sTBlH1DZ
+
+Name: com/silabs/ss/framework/uc/api/sdk/IUcSdkManager.class
+SHA-384-Digest: OOB6VVkPqHO/XTV5Vbe9kAUYTr0iHsWAjaZG6iDrfWHdGfdvEJHju1W+
+ y151607g
+
+Name: com/silabs/ss/framework/uc/core/api/slt/SltConfig$SingletonHolder.
+ class
+SHA-384-Digest: I2WqQD0MRNuRrJxtH0h6w0Chc+prqRLgs/3VlVT3qUmKxPEJdWhcOJIj
+ F+Fn9zGK
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyProject
+ UpgradeModel.class
+SHA-384-Digest: 0fNg1hrszihnAL5nb+HSOkWhx3JjGZ7z5oKR8r+w+TmtDvxhMhfHbcyf
+ ZEoN57fc
+
+Name: com/silabs/ss/framework/uc/core/internal/UcAdditionalFramework.cla
+ ss
+SHA-384-Digest: DPX3K2PP2TU4KKoyhRe+P/rmmNO1h4twddOGPJAzyovjpwxbhcu+MW9D
+ 57dvAxIz
+
+Name: com/silabs/ss/framework/uc/core/api/comp/SdkDocumentationTable.cla
+ ss
+SHA-384-Digest: Kc4epiW7zCKJilHhRV0KBjxUkn80fckgt2c3tBAv0QB/o6HhRtU04DOY
+ Hm8BZxLP
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/SltConfigManager.
+ class
+SHA-384-Digest: PKhNF5KJXGB1NbX9kVTscvcMkKLzQvF7T7S4qU1GXXKg7dYRv9E7FnbE
+ T/zizDkP
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyProject
+ Model.class
+SHA-384-Digest: ML+5HvcsoomMEJl3O7aHzBnC//zdsEhL2qce/A3kBifdYKKArgycw1z2
+ HjUeKLRP
+
+Name: com/silabs/ss/framework/uc/core/api/internal/project/gen/UseSdkFil
+ e.class
+SHA-384-Digest: zQmq6yavPetDwHbGgAA47BedQXQMK95ObphXmf4uIubQn2AWjEISqpOJ
+ mY+rAKei
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/ucmetada
+ ta/UcMetadataParser.class
+SHA-384-Digest: q1NKR9pgfOY8+IweXQgl8YeDcv8ULKkjcQYYfWKY4SLUZd801pbc0L32
+ qlJJMsH1
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcComponentConfiguration
+ $SplitSelection.class
+SHA-384-Digest: 7xpxfpAQmgsyaiNxGW6NmPxeamTgOg9aCEDqlFKdHAHWqWvisPnODu6S
+ lv82GC3e
+
+Name: com/silabs/ss/framework/uc/api/project/generator/ProjectFileReader
+ .class
+SHA-384-Digest: XjY5fhRpc6/CUBF3QPJM39XNdxJUEFQTGJBJTzC4Qt0KdejUt0zWzK6+
+ BlzaGXCx
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcw/IUcWorkspace.class
+SHA-384-Digest: wgtiuf3Akd8j4FDQePpDdpg1InIvCjC+abs09bX+GDKPNFXhNXgBt7jH
+ NkXkq4yQ
+
+Name: com/silabs/ss/framework/uc/core/internal/validate/ApiTypedIssuesIm
+ mutable.class
+SHA-384-Digest: lHfwL4+Uju7EiLGLXLj6ocUL4iV2nMkjFzxQrZBqzz2VKC5dRAz5f3Nk
+ P8c6Pir4
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$17.clas
+ s
+SHA-384-Digest: Ib/n5lL0rPpHVjzsr9ZEF1aAHI6TU4eQ1lxX31eoe5rFAFM6CyHMn8nE
+ KEXP/6QH
+
+Name: com/silabs/ss/framework/uc/core/api/UcProjectFramework.class
+SHA-384-Digest: sF6thEDNy+9NsC7s6ykWpaIWFAwUihKLCN2cOcjbhIV3DBSdtbTgpq2j
+ 1QBE7EeS
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/UcHardwareDelta$
+ Builder.class
+SHA-384-Digest: TQh5RmREdHWBzUHRoj7lgb0FyJ3MxyHuarJu25Q3yVwcncZthG0Qnh+D
+ UTXWrZj+
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/UcRegistry.class
+SHA-384-Digest: eRh47wv8a9eDatpNE02bmoQzHdSCVU98G8fEhmo4J+CPF613QDifxxUg
+ RPZ12rC1
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcw/IUcProjectExportedD
+ ata.class
+SHA-384-Digest: R1KSKrH1fyJ1nhSrKVohlFfj/Nbkso1b095Qf6ol7rE9qA9/g0tSjZhK
+ 2sDRT3Qj
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ ache$1.class
+SHA-384-Digest: XutL3QOvORhXvuzFc0mQqiLHpwICc22tNUFzpJhOilwFHE1mSjIXU3+i
+ GAA31Lbs
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ emplateContribution$1.class
+SHA-384-Digest: GfD67LlXxJRuZFScBPJBUjhLvky6i54jinMXPiU/DAVQA3PRh7Gev3O2
+ RUf8UaFM
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/IUcSbomOutput.class
+SHA-384-Digest: j1g8NWky/7niZ8noasyAIGPJBsQafKJj6O0cFpFSkXpBN+cfqT0nj+Cx
+ H9/007ui
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/CommonParseAlgorith
+ ms$YamlConditions.class
+SHA-384-Digest: hyHuw5KTXUnGb9UqHtQx0XANe7KCG1tCup1gPt9cDlBu0iSHAG9mXGiv
+ ZgNcIz8P
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/DocSilabsComLink$1.c
+ lass
+SHA-384-Digest: uBWl7qJLthpfRwjxFs3e+rNfBnxUHfjhPA+avazuRcvm9big9R8Cb6Jv
+ +yJGNzhx
+
+Name: com/silabs/ss/framework/uc/api/trace/OpenTelemetryContext.class
+SHA-384-Digest: Y5aoPfbaa5t8GquFuJYlS4Re91z2QpBp5iemGkUi9V7+e5Ln/bgtp7AS
+ tFd4hpHQ
+
+Name: com/silabs/ss/framework/uc/core/api/model/ICompatibleSdkMapping.cl
+ ass
+SHA-384-Digest: 0a+ZqloGF1RL5WkG0zP+6nGJk21jyH5tQ2YusiGA1jcWBzlrb+G/MRCV
+ 7hb0rTxS
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slpb/UcPostBuildSlp
+ b.class
+SHA-384-Digest: B4lVrDhgAIBa+ZKIW03KsZ/tK5+wKePEty8hlt4bWBUzMepClzwAmxHa
+ +n+9CQCM
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcThreadedGeneratio
+ nUtils$GenerationError.class
+SHA-384-Digest: 269kU0XtS/m/R0rBslyLztRjq3lVwjg2ZRyMWgrClcO4oPj5HXjlIwpL
+ oVqpC3aj
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$17.clas
+ s
+SHA-384-Digest: sKBJJ4/mSoDafFSeaYH2J3clhjSzIxxX8jsa5PoJzBWdojaLknYkebXD
+ C6YmJiU8
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ emplateContribution.class
+SHA-384-Digest: rERBc+ZWkjatlYf/DCg7tuoCIWEuzgMDtw1GCAd4LealESDXRDaOYgec
+ xBc6/MjB
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcProjectTransferOptions
+ .class
+SHA-384-Digest: ooOmOeV+1pt9CaEnCgbLvWa+F27lkTetOLO7qyKeH2k8iBmhLxQXp3sy
+ N6mCvZTt
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/UcSdkProperties.class
+SHA-384-Digest: dkm0QSe8GJugqzH6R4xQOxyoF2cyKmRqOki3vRnRAmnSlf1xIY4OUCkK
+ hjhAwTZZ
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcFrameworkContainer.cl
+ ass
+SHA-384-Digest: e5Nka2OcwDxjAqk94GjtS0U8rhucTQyP1+4PY3J3IbEmormX4cvXoWw+
+ pWzRYVLh
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$U
+ pstreamSegment$Builder.class
+SHA-384-Digest: W41fi/aYWjcWp/CEeJn1+xBvjFRW+sq9KKH8C5irua42jmqz0B5KYJgM
+ 4YI0VP3T
+
+Name: com/silabs/ss/framework/uc/core/api/editor/SlToolFileParser$SlWrit
+ er.class
+SHA-384-Digest: hRyJkTF5XnZUCabcCnRYq1i6ypFzHtVPEx206zWgAsefz+zJdFnPWtI2
+ jenFQ1kk
+
+Name: com/silabs/ss/framework/uc/core/api/comp/UcComponent$Builder.class
+SHA-384-Digest: ipj269LwpoxogOR+81SjO9yyHhZFGeJpAMqpxishi2DOCRst4V5w1N2s
+ bXaI3pGF
+
+Name: com/silabs/ss/framework/uc/core/api/IUcFrameworkExtension.class
+SHA-384-Digest: 0lgo8P7a6Pc9KH8W6DIcnMQaTTeix1doO/cw2QM8lxk6y5ebBLMO49u9
+ /B85HoZ4
+
+Name: com/silabs/ss/framework/uc/core/internal/api/upgrade/UpgradeCataly
+ st.class
+SHA-384-Digest: qp9uj1shc/biVArK1nnTCiNgw8qMusdxiekrkMK5ezMemiVaOv6Ce5CU
+ c6S/cfe2
+
+Name: com/silabs/ss/framework/uc/internal/lua3/package-info.class
+SHA-384-Digest: 8h6jXDoWDLqojc5bwYuA+r34iVHP/mOn+BOrmVUqVhdMwP7MObzntm6t
+ GbuAraxB
+
+Name: com/silabs/ss/framework/uc/core/internal/persist/PropertyBackedPer
+ sistedCliConfig.class
+SHA-384-Digest: SG7t+WzVY0qjsCypJe4EfP3bDQEAARnuyH+MB3iKBohhWDvPUVD7OJ97
+ XnaOnHMM
+
+Name: com/silabs/ss/framework/uc/internal/project/setup/package-info.cla
+ ss
+SHA-384-Digest: vpgqnFdr4iIx4Mf18NqfqcmHA9FWnL8nTpvj/9Hxo+Qo3oYTp1VrOGVO
+ HvH68AjN
+
+Name: com/silabs/ss/framework/uc/internal/context/package-info.class
+SHA-384-Digest: wzeiLtK9YWcueGsUQo55DJyloNyR60MhxcsxH8PAszHFqfkrfe1OIQaT
+ nEig9n8x
+
+Name: com/silabs/ss/framework/uc/api/cli/WorkingDirectory.class
+SHA-384-Digest: jmLuuuVOcoswrIk1whP3spdMoGtpafWqV63gx4Is1kCFH4Jjue8/Ywwp
+ gLNjRSaH
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/undo/Chunk.class
+SHA-384-Digest: 9mRGLQGEI5hxomqdiE8tgwENE2D06d4mpR0i0QVv8NEtrc353id+strg
+ LWRrXQKe
+
+Name: com/silabs/ss/framework/uc/core/api/comp/Overrideable.class
+SHA-384-Digest: HGSXXygtjVjvASbelC7y69sr26fQoqA3eGL4aAAEZ3lGOCNBt6gUuFCD
+ T/1bU1EL
+
+Name: com/silabs/ss/framework/uc/core/api/ILibrary.class
+SHA-384-Digest: 3ZuNo9NEz7O+i3sM3hfW6/qfO96eodzpvrsal0m/9xAF1IJE9dAZt+CQ
+ bSClQrvk
+
+Name: com/silabs/ss/framework/uc/core/api/slt/SltConfigUnitResult.class
+SHA-384-Digest: nzSJIzwtOegZoxo3wWId5dxKCVbhXvNX8PdN7Y99wfgeYdoVO/kiKZhU
+ /os9EaD/
+
+Name: com/silabs/ss/framework/uc/core/api/LibrarySdk.class
+SHA-384-Digest: GeivkZTd77GUlQBDS79g3dpCPV29fmf5gRogmdZffMBEvLZf5shOKSTh
+ IGmBHvXK
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ ynamicValue.class
+SHA-384-Digest: YORnYpVOkyjVX23nwEBY+aLys7CjootKp+UFOvJgZXYMFqozDLmJoH+k
+ 6zyltGCa
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcComponentContainer.cla
+ ss
+SHA-384-Digest: +DTNa0ZBhrtkfymTceSSEzNR0h+wIFfC492BI0VTqnaeXkvtLiW7fIeL
+ ZcRN+7Zu
+
+Name: com/silabs/ss/framework/uc/core/api/rule/ApiRule.class
+SHA-384-Digest: 66ovg2+9ELDRUHc2WgYGjTgHUkUMpk1CP4Q9daglB3h8s75ZNxvv+XdE
+ A7U7mkei
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$31.clas
+ s
+SHA-384-Digest: Yw1tUGycRnjxtfEoM/3QSgE+hn9lBrnk1pjBDDMdQVCgTh1DWcEDOsVU
+ oopTSJ0r
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$F
+ ilename$1.class
+SHA-384-Digest: //IgPKCEe61nj3ixpEGys/2xcmtSdUrXTxrtGZx8bYwg43v2HdpjYg5b
+ faSrWA8c
+
+Name: com/silabs/ss/framework/uc/core/api/validate/ExclusivityIssue.clas
+ s
+SHA-384-Digest: TtV2ezpLwzgX3noQZj8e+oNdUF1P0SI9E9KUbsIsIi0zwpckPRiUwfxe
+ p6FulNig
+
+Name: com/silabs/ss/framework/uc/api/project/generator/IProjectFile.clas
+ s
+SHA-384-Digest: hr0X3wFUuOXx3n/Zk0IbiA2yVEtt/TEQ8KDU46vUltI+BvFIYyO8avyD
+ j8YhrBnH
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ onfigFileOverriderOrBuilder.class
+SHA-384-Digest: FIk3rqpR+QDa2jMSnwXgrtq2LF20CuhznKYlUgMZTggH3xL3j2z4scPk
+ QuJ/Gf9S
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcGenerator$Project
+ GenerationData.class
+SHA-384-Digest: hUIBdjrgk3H98b9fPHiQUdf91OZ6SPsfVgVvtb2VwoljVkN4UW5/77tk
+ J7HLQxAM
+
+Name: com/silabs/ss/framework/uc/core/internal/project/AutoselectionCach
+ e.class
+SHA-384-Digest: QLGMLiHNyqemcbFZK6CQd9H7u6YAGQjq+LCf9D8b+EDwGMTugloWp63O
+ 8DGlo56V
+
+Name: com/silabs/ss/framework/uc/internal/project/setup/UcConfigurationG
+ enerator.class
+SHA-384-Digest: G4v4+fs8Bk/BgkEziEFYYGjZvaAzsBqVN5QpnPIYnjSod8Xd23t9aleV
+ TADN3GzT
+
+Name: com/silabs/ss/framework/uc/core/api/context/IUcSdkContent.class
+SHA-384-Digest: dsSLVfT4i0pnM74IFEUsxtU+uNXurhLPieSnOkhhFFOXlt1ZHtOajHzE
+ PJTIVLSW
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcw/UcWorkspaceSlc
+ w.class
+SHA-384-Digest: b5EAcKihBPHENLMqdxMhiBwI4BECdW5g6UngCQTVgC4xKp2QoocNhtg9
+ SRIivDFO
+
+Name: com/silabs/ss/framework/uc/core/api/setup/ManagedSetup.class
+SHA-384-Digest: nAKgy3XlnMvXq4p3fRINTrcJVv1+8a3II6Hm+sjYDGkE/VP0dFeWdvLs
+ hMxnhkrw
+
+Name: com/silabs/ss/framework/uc/core/internal/api/comp/TransformableUti
+ ls.class
+SHA-384-Digest: fmLgyILZ3x3mYHpe/0DIIiFD6pEdNVWrWrSjSwKQhEFjs1GHDrwLWmu9
+ WJIKVAfo
+
+Name: com/silabs/ss/framework/uc/core/internal/api/validate/ProjectToolc
+ hainApiCalculation.class
+SHA-384-Digest: hrtodLJE1wd3KiGu/jhIYjqP5PR/MpPx1wOcWWdXtD0C4Lszm+S5bbLo
+ fc2vYxpr
+
+Name: com/silabs/ss/framework/uc/core/api/slt/SltConfig.class
+SHA-384-Digest: mZjpeYermNR2zmHcS4sKgl8ec/trU2k7FYCCnTJLlF8igOCmOSc6DVl1
+ 3QO5lP9J
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IMetaSource$1.class
+SHA-384-Digest: Il19vHieU8TlUXeDA7rtKfMloLkKJDYscotJVXU1pzf/zen5+8GxBIVQ
+ TrmbQ1XZ
+
+Name: com/silabs/ss/framework/uc/api/sdk/IUcSdkProvider.class
+SHA-384-Digest: w3lWJC8NEIy3cxIPT3VVZtNtc619LP0wgAI9iMPcpgUGj1xx0xgVCIAg
+ Vct3lKQ0
+
+Name: com/silabs/ss/framework/uc/core/api/comp/ImmutableComponentContain
+ er$Builder.class
+SHA-384-Digest: WBYisGel1AIW4liuuTJ1aDwgLr9OAzt1y/B52vIAzLuALmWg3ohkJVi7
+ FgBoA0c3
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/UiHinter.class
+SHA-384-Digest: Z8dAIl2/h6o/euEDp4b1yF1I9ojAvAcJoF1P23qxbJorcKq0QoAk0Twf
+ rp+ctD/t
+
+Name: com/silabs/ss/framework/uc/core/internal/api/config/DefineParser$S
+ tateContext.class
+SHA-384-Digest: ScpQ3H6uK5noGrvI2/H4SzVGL0ojk5C4OiuVI/3UZq2/0C0co7Xg3jbH
+ 0qShsRiB
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/solution/Res
+ olutionUnobtainable.class
+SHA-384-Digest: 0xebSJT301q197RwFJvNy1Gjek6jP1lMr6+4Qzo5hQsqaOI+J7vWgrva
+ h8SWB8Dj
+
+Name: com/silabs/ss/framework/uc/internal/project/options/UcToolOptions$
+ Toolchain.class
+SHA-384-Digest: VOIkA5bBZOJwOsbFZ9P0kHyDfWoSYCaX0qL43DmQXVCYg0ulicO+Ji9K
+ giwoLXbp
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$10.clas
+ s
+SHA-384-Digest: Z5Xl7Qmn674xtADziFaiSxLIpX6Y1AAqf+fM+5WDYB04p8Wfm2w3Jc72
+ lDuBJyad
+
+Name: com/silabs/ss/framework/uc/core/api/example/SlcTemplatePackageInst
+ aller.class
+SHA-384-Digest: NVI4c4FdHtf9Kq5lgDMQEX8pnYf/bfGfLXt3GAQESq8+ol8W638R3CWo
+ zBK5HAs7
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcProject$RequirementsB
+ reakdown.class
+SHA-384-Digest: MMd9mYuqjeTJ3QfH2orcId2N1M2lXJFSONru0laCwO+B9BSAbmuAlkx2
+ PQURyUTu
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$P
+ intoolOrBuilder.class
+SHA-384-Digest: sMU4dx/hfUWPfDud2dl0rDeHeOkHopodGpxU/FW6dmwAC0k1sKDjE+ee
+ fNmUwuWf
+
+Name: com/silabs/ss/framework/uc/core/internal/model/python/ConfigChange
+ $Action.class
+SHA-384-Digest: gVoTZ2BZCH+nHVpZ2eVs27xsCYNRKnmw1HyQlKFV3dD8OzuLUmCTgSkE
+ kAIWSKTs
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/VisibilityHint.cl
+ ass
+SHA-384-Digest: 8nnqFbozyr0rK1PlKCuK5jZp5LM5PIKTfAG+XHLMnqMdhcjIh5aNb7hQ
+ QHHEoXxG
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$19.clas
+ s
+SHA-384-Digest: pWTCn271YZd/bMsWsHwFfkiKEhfAzRnwA0f3onlz/+q29r9bc8e6Nfhu
+ SibB5NXq
+
+Name: com/silabs/ss/framework/uc/internal/project/options/UcToolOptions.
+ class
+SHA-384-Digest: M6b/2vPwPCdU/cdkQhN9bhrrMQTlhGzP43VVxzjU9Do3sPn1BAoSEC20
+ NWkADs/B
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcGenerationContext
+ $UcCompatibilityKey.class
+SHA-384-Digest: b8uRV/s5iEq5+0gjZ6sb/r879i+ePH1hdXznMPu1k/bgu9/0LuWRkvOM
+ gVTcjnBi
+
+Name: com/silabs/ss/framework/uc/core/internal/api/config/DefineWriter.c
+ lass
+SHA-384-Digest: 482KlYBNUqllaNjVL/SmHvUzNWYd3Gr7ECxMu97vKCFWxETU5g0+H81x
+ IeJL2qkC
+
+Name: com/silabs/ss/framework/uc/core/internal/api/model/slcw/SlcwRegist
+ ry.class
+SHA-384-Digest: krqYjMxhqJAtWf9i2kb3+yr+h7yEzhr5m5fdScVdU0Y+DBm5DG53EeqY
+ q+GS1NwH
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$M
+ etadata.class
+SHA-384-Digest: nBQ6xGOTNAmPmLqtYSNKq5ev+8cw5foVUppcv/vYr8pRwCjwbEtrd+51
+ GIaHfJR4
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcComponentConfiguration
+ Header.class
+SHA-384-Digest: 6BTc1Hz6RN1wpF8TwwKLHPE26LnI2ihRXIJ86EOJOeCNsQodJmDp9uYQ
+ q2tc7yR4
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/UcProtocolExten
+ sionFrameworkFinder.class
+SHA-384-Digest: POrpma6i+0PpjUsgHmsRZBYC7IByElTpxAoGMVxsyQlf1W0FYl8scM8c
+ kJBebjef
+
+Name: com/silabs/ss/framework/uc/core/internal/model/python/ComponentCha
+ nge.class
+SHA-384-Digest: 42THz6Ylg45+2v9bcwDfmC+o6+tI6RKDkcNiShTmGzcor8cAA4nvtFi4
+ AriMAUUY
+
+Name: com/silabs/ss/framework/uc/core/api/meta/ParseIssue.class
+SHA-384-Digest: DZ56i1YxlN5y1pPh9meEP0+aeOkhn2DfdsdUTpcXScoD1VQ3NC8wsIaa
+ vtu0ojVB
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcBuildSettings.class
+SHA-384-Digest: 7eZxSj+v16q4+MJ1Yx/axO90GHTDVQERZgvTKMOk6uXOjT6VPempxoQo
+ 37Qw/7r2
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$E
+ ntry$Builder.class
+SHA-384-Digest: 5fr/z51aLPoJ18ZNl9mr4tCIXr8E3oWTRQ7d5LnYwlENDY3elAlPnSdJ
+ ZyW4jQKu
+
+Name: com/silabs/ss/framework/uc/core/api/slt/ISltConfigUnit.class
+SHA-384-Digest: T7CmRJS8GD6+3EfjNiAbC7W4A9BWeEuJi2/BXlVuN/vyLkuXVk0/54Qi
+ IptFP+kW
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/UCJsonSc
+ hema.class
+SHA-384-Digest: qzZvxMWL3ZxbZ3sTn2Ry/tkVbVslJszFXfoosUj5FQikczv351ucg7VY
+ u6vIoh2P
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/package-info.class
+SHA-384-Digest: udiBxiT00Mne0B2D+rx/0A+VJys9EYU8tbHDWt4yU8Wy4c9rivgVodfj
+ HPpQtaHQ
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/apack/AdapterP
+ ackAc.class
+SHA-384-Digest: nGs+L/syPxg5mwGTEuJMl9io9Pgn5Hlf+7NsgeLMYW4rVC3tfCQTAdMX
+ w1v0bE9G
+
+Name: com/silabs/ss/framework/uc/internal/validator/LuaScriptValidationR
+ unner.class
+SHA-384-Digest: iDunYKo4QwFz4lztYrLRWjz2CxcYhMd6ilxMr/wI9Jd3t4FkySy9QKbp
+ pFddYLBf
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcw/UcWorkspacesUt
+ il.class
+SHA-384-Digest: x/wi4T/2HX/zt2pZ3ZE1ILzAw9t6LfUl3TwLKSofTJikyn1GM4XHf3xY
+ xyb7uBfH
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$M
+ emorySegment$Builder.class
+SHA-384-Digest: d3DrO4aITfg1dOaNZgPnEBMPFVNMX2wCF/tIJdSLbvt+D2k5ATgbzeOo
+ kogx8EIs
+
+Name: com/silabs/ss/framework/uc/core/api/comp/UcSdkReference.class
+SHA-384-Digest: F3isPWTzS6ZbQOW4zPk5DGPWxPWVwgcB1XSUJB504x7p9XMPo/fadvD/
+ DWYL/S0o
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$M
+ acro$1.class
+SHA-384-Digest: sJLQXQtGUdIeK6CSWQVNBO5TF8MiUc9gUmYhvGiMx06avaw50VjFAE4Q
+ fgwrQbNL
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ emplateFile$1.class
+SHA-384-Digest: pZKr8SyDFZEl2ZhtBj4esX1FlcTev6uMYM7j/3qQmEarjv3aNyE+L9CR
+ sK4KeEcB
+
+Name: com/silabs/ss/framework/uc/internal/lua3/LuaConfigurable.class
+SHA-384-Digest: 42MWibIsfYC2Idw9iNUz/1eGPf36a7WYfJvNd8QRlf6WQbcfzzADxSmM
+ mF16wZxx
+
+Name: com/silabs/ss/framework/uc/api/sdk/IUcSdkDetector.class
+SHA-384-Digest: fBNHYn23thRFDIVRYITH3mGE7O5swbedf1H+iqX9tRrn4MVb99feo04a
+ ZXryJyvw
+
+Name: com/silabs/ss/framework/uc/api/sdk/IUcSdkExtensionManager.class
+SHA-384-Digest: /X41zMSIriBGQjwqay0XI5nOLiCPmhYZpE1GSLytGg68UXFvYN7YR8DR
+ YqpMaQdC
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcu/ScriptComponen
+ tRule.class
+SHA-384-Digest: dimprcu3ZRB9DurA0kNSnotjM3OtPOh/0wLBnSdKyDkyp2SHL+NnrvQ7
+ 7zkbGZVF
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/UcSbomGenerator.class
+SHA-384-Digest: 64kFO2jaO4BXXTlv8kO/lZcfqegalc3tLGwQ140T2jbk5soVeSOCbhfG
+ J8XLE5nT
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$S
+ ourceEntryOrBuilder.class
+SHA-384-Digest: cf4+4tvA1LdJ/AFy5vYpiQr64ICIr3q3xeG0jhE14SaVQ2qaHgXGV9d+
+ f6XNEnC6
+
+Name: com/silabs/ss/framework/uc/core/api/context/IUcContextChangeListen
+ er.class
+SHA-384-Digest: sYT+4cVz2GAVtgkZGyOvGRpA+ePLYzXnqjX9vMx7cV7i6XTo+jQ/So0Z
+ bVda77vZ
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcTransferOwnership.clas
+ s
+SHA-384-Digest: lfcNJ+3oxaO4Gurjl4jXGAAgkzgPVwz3+a9lX4bwDuBrlnljaueHavIC
+ kGnu92iC
+
+Name: com/silabs/ss/framework/uc/core/api/model/ucmetadata/IUcMetadata.c
+ lass
+SHA-384-Digest: J1GW0z7uwtUF3Ge5HMOfTV1uwxKVEBn7HjPbd3TKZQOK+KGu7zyAlsB9
+ 0QRTUL4x
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IMetaFileParser.class
+SHA-384-Digest: 4a9XlOHNmmdl7NBIVbB3vq2goxzlBX1HB/ZSYvimkKI3ZqyLUpNaVVI+
+ Qc6zou4j
+
+Name: com/silabs/ss/framework/uc/core/api/ConfigOverrideMap.class
+SHA-384-Digest: wsZ783y1vroRDISUd0sS5ld4laJbCeZ0kfKqEH9WzhQBApuHBjni72cc
+ 1ECXHs6C
+
+Name: com/silabs/ss/framework/uc/core/api/project/gen/ConfigurationGener
+ ationLogicMutable.class
+SHA-384-Digest: BYaKtB+klfF5oX/bVvKYZ7LjWBSHm+t9uE7Y3LCHbmNbc9wZbawCTF+h
+ gbU1vuQB
+
+Name: com/silabs/ss/framework/uc/internal/api/validator/IUcScriptValidat
+ ionRunner.class
+SHA-384-Digest: VT3rrDgg8AIir2SNTj8zhLLS4ZLqDH5LJZvCVmbnjMXCGdAJgC3/YHvr
+ xKFI16aH
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/UiHint.class
+SHA-384-Digest: egQMrYIL+oIjrA6NF4IylTm2cQ0CaQu/y4qr3/DGsJ8DFYAXW3R1l/3K
+ R290OBc3
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyProject
+ Validation.class
+SHA-384-Digest: ZcRaxZQ4x0yq9HivgdTXVzICFSTxlq9Q8rWLlSGdd7xWSnyGHMvJE1M9
+ 2SEv0Rld
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcThreadingGenerato
+ r$BaseUcGeneratorJob.class
+SHA-384-Digest: F1aNXawqREQcveZZV8WkZtK7z+PA96nTr7kujfvxVWqdbwqApQt+Nlz5
+ EfNCtcJR
+
+Name: com/silabs/ss/framework/uc/core/api/setup/ILightWeightSetupData.cl
+ ass
+SHA-384-Digest: BZobUN0syw//OUlx/0KJlP3QQeqcWmDNU7+9Xd2DpRVMiYUScbQFr4Do
+ lxRO279t
+
+Name: com/silabs/ss/framework/uc/core/api/model/ucmetadata/IUcSdkDefined
+ Metadata.class
+SHA-384-Digest: M0cxYRLlHnXnESMrotwXq6lGrbHI3wqptuyjWx7PWEr5VvX5Yj0uYANE
+ HHRFM+y/
+
+Name: com/silabs/ss/framework/uc/core/internal/toolchainsettings/UcToolc
+ hainSettingSchema.class
+SHA-384-Digest: mvFiW8dLY6Xt0MUAyXwNsYrFotMOaw3aScYe+UlISHV0Y1BX/XAStHyU
+ ND401rzE
+
+Name: com/silabs/ss/framework/uc/core/api/model/ucmetadata/package-info.
+ class
+SHA-384-Digest: GHAlsXPFcCZo3EUVyppbnUk64nZb+2l2mlHPp6U6Q6ihekEL5WQfktre
+ EflCZiEd
+
+Name: com/silabs/ss/framework/uc/core/internal/validate/choice/Unfulfill
+ edChoice.class
+SHA-384-Digest: JGA6MHQhqiCqGi8h/4ZRPu86Zy1ulz292qCd7Tf13ERUErv5/pzN70DW
+ vSlUgT28
+
+Name: com/silabs/ss/framework/uc/core/api/setup/IUcSetupData.class
+SHA-384-Digest: hA+8GkOLvYMapppMPpoxUJxn8yykkQWR4RQ9xO4+G7KyaSZqtVad/U5Y
+ vrkLdzZ9
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/BaseUcSdk.class
+SHA-384-Digest: k0M4uB95QTvpW1SE34CjMtUkS767VftolAFC0NKjMZodWnRTqKPabJVz
+ dMCikixa
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcu/IScriptedConfigUpgr
+ ade.class
+SHA-384-Digest: 6LvKVp3JQWkm70WrlJCwYF8ice62U7jG7D4fkQ0k3qzKhk0iE4XR1PNt
+ 7UoQwmWR
+
+Name: com/silabs/ss/framework/uc/core/internal/api/config/DefineParser.c
+ lass
+SHA-384-Digest: H8MVuldADRZsHeqIyqoYXuKDXI24D72V5DzcuNqZxQ4GF40G0VZjjZpQ
+ E3DiTwV8
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$12.clas
+ s
+SHA-384-Digest: EnPICw909MDVj8l7XpJv9orVy78gnrFForLYjEHPiZWn5jC7VhVdZuiD
+ vTHhmwNg
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/YamlReader.class
+SHA-384-Digest: FtfB+9Wfo9zEXYKFFeIZJzBVgRo9kn1IAG15rN+J6K8NMlhtURqFDxIU
+ EAIx/2DH
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$M
+ acroOrBuilder.class
+SHA-384-Digest: GjfOGUYqdeE91dRiGcmMpRToPBY/0/dzW/uHWAsyBvD/XKcaLa6nPsY4
+ SeFZzmcO
+
+Name: com/silabs/ss/framework/uc/internal/api/project/setup/ScriptType$V
+ alidate.class
+SHA-384-Digest: aGhwI6PHCzS0fgkqk4ovVBc4hR25r4FbsW01bk0qtFgWzzlyXGF2VZkM
+ jN6Exeyf
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcTemplateFile.class
+SHA-384-Digest: agUWiot2otB0pCfFCGEL8Sk7yXyTG7tS7Wb4qlDIjZ7NExRMPIB7MCyS
+ 3toSkjnn
+
+Name: com/silabs/ss/framework/uc/internal/lua3/LuaSlcGlobals.class
+SHA-384-Digest: uKrNtMvpQPOEh1ebkjNucOwDvE1r2sY3HEJo+uvwU8FU/dCXLXx5nBV2
+ W4EITEL3
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyCompone
+ ntId.class
+SHA-384-Digest: fBF+0dc3u19krLAA6/WexBpCaVECDM+tBbqqIsX8aXYCv1HC3Et3azq7
+ +ECPbseo
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcw/UcWorkspacePro
+ jectsModifier.class
+SHA-384-Digest: osluAJWGZZO23W331UeuAwkcjk4tTCsjy4O4idZpANXLGkkJ8NPykHBE
+ pcg6P2Fb
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcComponentConfiguration
+ Mutable.class
+SHA-384-Digest: dALIUaSrpaZjSn3DvquaO1Trl5FtCysLGAqxPdF2FPiINWyfk12RbFqk
+ 6ddLAXzT
+
+Name: com/silabs/ss/framework/uc/core/internal/upgrade/UcUpgradedProject
+ .class
+SHA-384-Digest: b1DCCjuVN64aHqwPLojqtyDrRCDP2cFJi9c7iefDC1WsdN3nY9UXvjNV
+ RnXc1rhj
+
+Name: com/silabs/ss/framework/uc/core/api/setup/ISetupId.class
+SHA-384-Digest: Km9iMfVnjwGkm5HxPUIaFlZVVtE0kEDN3HWJ+s8s2tkAupPaHi6aE9Gz
+ 8ZIefIzr
+
+Name: com/silabs/ss/framework/uc/core/internal/toolchainsettings/UcToolS
+ ettingsContainer.class
+SHA-384-Digest: GsJKjAwqqCgvnk6210v4+RK8HqoDrIKk9hr5S246PZxMYqsNk0hut4Um
+ 4z43OYnk
+
+Name: com/silabs/ss/framework/uc/core/api/comp/ComponentQuality.class
+SHA-384-Digest: szRJDHkgPmmfBxfR/vRnq9bE2CdWfJ9aCKfJyylomOiJgy6TBBAOCZR5
+ EOyDFXe9
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$M
+ etadata$1.class
+SHA-384-Digest: Bul5iOylvdCT5o5nc7AEuM+aV0ryLtLyvppyT9CGtVQgzoF2cQMaZNNs
+ v1oRjVy0
+
+Name: com/silabs/ss/framework/uc/core/internal/persist/CorePersistables.
+ class
+SHA-384-Digest: K/YRuGkO8pEO99AHLd3joVbDMhUIeKZ9zbT/1AoVHjXvFzGeOALRwKXy
+ LIhKU/hX
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slpb/SlpbWriter.cla
+ ss
+SHA-384-Digest: h/fZ4SIb9Sl87/Gc0rTbAiH2Yl2b7krc2iJmHPeU3irC11KyP9aTDy2d
+ 2dPd7oPp
+
+Name: com/silabs/ss/framework/uc/core/api/comp/Customisation$Builder.cla
+ ss
+SHA-384-Digest: nLk54f0gXzUz+nytzk3vnhTLC3uABh7hkVT326P/vsXLGHAihtCEhPYU
+ auMkPDAs
+
+Name: com/silabs/ss/framework/uc/core/internal/persist/EmptyPersistedCli
+ Config.class
+SHA-384-Digest: OlU5l6JSkghrZDn/O86014ib+A6cPpSkW/8uzlM+VUtnJkSRTqmXJpZK
+ b+ww+iSz
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/MappedUiHinter.cl
+ ass
+SHA-384-Digest: yWzyhBjNlQS/3VmebBw+q9C9xIr/NKNL5zLe32JY09dDsUA4KfGDzrcA
+ PcCSRxZs
+
+Name: com/silabs/ss/framework/uc/core/internal/model/IUcProjectMutablePa
+ rser.class
+SHA-384-Digest: 2MOwSnWp5I3CRFCnx6JAR+TXQtsRD/iWlAJ/Bq2YL0xnDW1QxsYU7Plg
+ pwpbfM3z
+
+Name: com/silabs/ss/framework/uc/core/api/internal/project/gen/MergeCmsi
+ sAndPintool.class
+SHA-384-Digest: kmugJszQbsBbWAgBaK8ijjPWOmzWJw2PegCL0ANh5jfyXoJZLMhauO6z
+ FS+NfGZU
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcGenerationContext
+ $MapKey.class
+SHA-384-Digest: LyJb/HLuV50NsNpIWqWyO1I5wU/ftXfKtt7kDSPJZjDMcidNEnIzIIsc
+ GDkpXyMc
+
+Name: com/silabs/ss/framework/uc/core/api/validate/IUcApiWhatIfValidatio
+ n.class
+SHA-384-Digest: kxvSEotEQHDPtbFEzUh3SJiKPc6JQVyiPgzHf+HrnAsi4h/yNMMCwpNw
+ hnF068Rk
+
+Name: com/silabs/ss/framework/uc/core/api/ConfigOverride.class
+SHA-384-Digest: c/6bVm0U2uD9W0ytF3pxa8q5sG116LxJeqOgnGg68mU4w1jKbxr20ofc
+ /ul6s/n9
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/UiHintId.class
+SHA-384-Digest: UzfigBuNOzGhYSkhotrjAVx+DhTLjG/5iTUeF5ypndk0TzRX61sLIkU/
+ UH1/pu6b
+
+Name: com/silabs/ss/framework/uc/core/api/project/gen/ConfigurationGener
+ ationLogic.class
+SHA-384-Digest: hbC8Zy96tdsCq9ohEGFlmKVinqnmTTEmByzgbB8o8/La8POOkZw+5tkh
+ g93JqOEy
+
+Name: com/silabs/ss/framework/uc/core/api/upgrade/ILastGenProperties.cla
+ ss
+SHA-384-Digest: dlAoOdGFFDOKN/lcDSvNpRWVElTNiUxRyJbztFDQGgSdnxsvr2Mfq08D
+ 5dU6jEvk
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$K
+ it.class
+SHA-384-Digest: oWhtsy2Tqow7GQh5+kVN3F3Y+GZlfhUwu3PoGS/TFXivBBycwHnYwmCD
+ Xn08TlRq
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcu/IDeclarativeCompone
+ ntUpgrade.class
+SHA-384-Digest: 3pmNhCAvbDPoGSQj0hcTWxcRvo/ik4qDA0iGnVUvW2wW2vxK5TCbH8Oj
+ drNcErTe
+
+Name: com/silabs/ss/framework/uc/core/api/upgrade/IProjectUpgraderSettin
+ gs.class
+SHA-384-Digest: 0uQUE5bmp+kyTAP7Xvx/k/+MPDjsRQew4zvYp9FFFKINpkwpNxN/fxG9
+ 3y67mTDj
+
+Name: com/silabs/ss/framework/uc/core/internal/api/context/OriginalSdkBa
+ sedApackLoading.class
+SHA-384-Digest: muBP3b5/XkzOrNJJU00/axNgvtOW9Bj3qVYK1vaI59JSUF5Lwp5bG+Ul
+ 62jnlXBy
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IComponentInstanceData.cl
+ ass
+SHA-384-Digest: QbUBQoZ9fdnGa950fWND//fVTNJMH8e+k7IrPHmVxtPBDzls40btmwV2
+ gNcBsA59
+
+Name: com/silabs/ss/framework/uc/core/api/gen/IUcGenerationChangeContain
+ er.class
+SHA-384-Digest: 09aU2iMQ9cLc96/9BpZnFf2csff8T9l+daX7HIItnf/WcoKvhshsWNzO
+ Pxutuwjo
+
+Name: com/silabs/ss/framework/uc/api/project/generator/package-info.clas
+ s
+SHA-384-Digest: sIzhGfC867q5nU3/elU1xrDMUCO4JNDLdfzk7SsYgqteyhVKeu1ZTKd9
+ C3wchQ/D
+
+Name: com/silabs/ss/framework/uc/core/internal/api/model/ImmutableShared
+ Export.class
+SHA-384-Digest: yjFc75NyzUK8nKfo9tHKJmnp5vK1v0n9efJnQbErMkLczTIp1KW4qjvk
+ CAl4cnxR
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcThreadingGenerato
+ r$GenerationTaskContext.class
+SHA-384-Digest: G6iX/L7rj8U0Q2yj+YOXHrjNP8dcmdflmwBNvux2UG1Jse5fNY239u6S
+ br9+aUrC
+
+Name: com/silabs/ss/framework/uc/core/api/setup/UcSetupId.class
+SHA-384-Digest: g43bgvPTKUWGjq38m3qsUGS3zDIIyt2cq7MYuOHIbH80vOor3HZJNPj5
+ UaveRxQc
+
+Name: com/silabs/ss/framework/uc/core/api/meta/UcFactory.class
+SHA-384-Digest: BTKXMwqBsMJICP6xE6bQxTzYoEAlVcyaTfi1OLqxfLUiGDKoGESUuogK
+ cDpk0gyY
+
+Name: com/silabs/ss/framework/uc/core/api/context/IUcContextChangeListen
+ er$ChangeType.class
+SHA-384-Digest: A920h2QVDS7o5WVA053+X6vpEBBaTr/oGEIBwcllMKE/aarqFug3ha+x
+ iJNwvd8j
+
+Name: com/silabs/ss/framework/uc/core/api/gen/IUcConfigCrc$ConfigChange.
+ class
+SHA-384-Digest: jTVqPNia9OXX2IHFAAHuwQI7Uv2e1gJpv1CpN1KwoQ/VGE2f/ej73LQM
+ 4GQk65rx
+
+Name: com/silabs/ss/framework/uc/core/api/comp/UcProjectComponent.class
+SHA-384-Digest: XmcyYAy5Y5hcTu0sqbxXCntq/OaehcR3XGafAZjPEnoVZ//6HcdwI6yP
+ bsopXJDK
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$O
+ verriderOrBuilder.class
+SHA-384-Digest: LviLhIAERNQaISnfAt0qNJuR8qFk2OWo9zxn0xms3B/KtH9df/2JGvIW
+ bvWIILd+
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcConfigResolver.class
+SHA-384-Digest: /1HE3O66iDURAydwaU6m1BN1u9nao+/xMXYwSpsr5YXz+g0t63uID30n
+ hUE/Q9Qm
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$14.clas
+ s
+SHA-384-Digest: MlsEitlXcYFu7BlO8Lw+pTIzEEms57mcMEwzvt57QBVXh8BPlClbWyDh
+ Ik7uDOqG
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyProject
+ UpgradeApi.class
+SHA-384-Digest: 5G4okOvihDzRVlQqFdsoKlo7RvLwj9DKqyrArpppJdFDeOYfNk5NGaAK
+ CUHByEgJ
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcu/UpgradeRuleCol
+ lection.class
+SHA-384-Digest: PhnryoamGr1z2BmjDG+5+ooFAvDahK1QkpFKf2JkiTIAOCO/C349q46M
+ vJxFA27Y
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IImmutableComponentContai
+ ner.class
+SHA-384-Digest: pvC488TSk595+3Xhd9A144XIRRiqmq8xAzjnQ9Ro+oOh/D9mVK2vCfS3
+ gEOxMaOp
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/CycloneDxJsonOutput.class
+SHA-384-Digest: YToZHoeRJcQKyPeaj54nPxSu9lRPNSxnjYgQ9w84VzuUmj6XIfyYIbEl
+ m+la0Fwu
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcDocumentable.class
+SHA-384-Digest: q8W1wstswj2Gr8BgpxGCBGmIiVwf63xvne7bURAtdgx1VfOtFmW9DCwZ
+ 342TVtp6
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcp/ISlcpProject.class
+SHA-384-Digest: vgorkapiuH33TxW3p9FTbG05viv6ouCqcO080xjWDfsETVDDRut65IB3
+ ZYcyzL+k
+
+Name: com/silabs/ss/framework/uc/core/internal/validate/ApiCalculator.cl
+ ass
+SHA-384-Digest: Sd3HjaVs0GsO2StfAvxLfo5I3SaDnZ1yD8IhagUCEtxp/PEa5P1fpPyG
+ R1JcX+iQ
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcPostBuildConstantPath
+ .class
+SHA-384-Digest: 3sr+s2WfKWmUJc8BSk9m+72LB3uhEAl0t50brcWjX/CqqrJDNluxvenD
+ lvWMTTke
+
+Name: com/silabs/ss/framework/uc/core/api/slt/SlcConfigProperties.class
+SHA-384-Digest: 8seWQ/uE3Jorxe1vzdq3K5sXgfmBAJ3pUssr1Jp1mMMznW+ahr7aUR8z
+ +RYPhv1W
+
+Name: com/silabs/ss/framework/uc/core/api/setup/IUcSetupModelListener$CH
+ ANGE_TYPE.class
+SHA-384-Digest: Cb5FBBgZBx3RhVlvBoknaddOUGU6qvpOFeJb9EXbq+P9620G/t83uzzB
+ 0YTZxKey
+
+Name: com/silabs/ss/framework/uc/core/api/model/IExpressionInterpreter$B
+ asicInterpreter.class
+SHA-384-Digest: XY4aeh8YfxsJUqA5i/6u6DFbqZWmZBDJbyTPR3Wmolk+f6mP0JShepFw
+ L7AK54BR
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcw/IUcWorkspaceProject
+ sModifier$IUcWorkspaceProjectEdit.class
+SHA-384-Digest: xJDG2qBp43bGFdp2NivxUfJlh/EMcOdJxqUzWbiPAcySsHQ3vwrEyQ27
+ kfjRjv4R
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$Project
+ Parse.class
+SHA-384-Digest: 5QD52cSyjr5+egCmgXLAbGHyfazzWaPjMAS053Izn7W1wen2uYRhkoqz
+ nLFFCdUd
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ ynamicValue$Builder.class
+SHA-384-Digest: ONqpwsfSUhmb7BXaoCZqPugxqHhZuvaXcQpiSf36K0K07zHo9pKmxkpO
+ 4We7cUJu
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/UcHardware$UcHar
+ dwareData.class
+SHA-384-Digest: /n8m/xpvQV4U/OVjJaDM/+0/z4RUaTFY4PG1KDoUmNe82IRoiha+0e4H
+ Eo8c5V1Z
+
+Name: com/silabs/ss/framework/uc/core/api/log/IUnifiedLogger.class
+SHA-384-Digest: EXcu5xmneuOMTar3nupeiV+wahMJbumdMFLhk0b8AbbExRdVhwM/FCgK
+ QPXnKjma
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$15.clas
+ s
+SHA-384-Digest: VJXKr1A6Sryv21U7X2AUiwCYneqGX/r7OLTNffz6CDT5ywB/9dXu4hkN
+ wpCNFtd8
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ omponentOrBuilder.class
+SHA-384-Digest: 9AqTqqsJQyNlt9aqUr36LLv1uEhO05qIFbv1ewIaGq3BvhGCSX5ei+uN
+ yUij2mh8
+
+Name: com/silabs/ss/framework/uc/core/api/IUcCoreFramework.class
+SHA-384-Digest: VM1sUCE32g2rCNGFWjllt17JbOFqUeIVevN8QC2rPCjzS0VRk1jY6jn/
+ /kUz5HDs
+
+Name: com/silabs/ss/framework/uc/core/api/project/gen/TransferTypeManage
+ r.class
+SHA-384-Digest: C6r1OYECUkxtWGHOQSyrTY/YqVXgc8A2cWKUnkUk+14KHTnx4yXupUgc
+ TrGm8UQl
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcApiUtils$AutoSelect
+ Result.class
+SHA-384-Digest: NFi4pBMGm3CPTldp1BB1HAp6xbvP8brLj+RSeCamRasMJVliWhDKvN10
+ fQL0Buvm
+
+Name: com/silabs/ss/framework/uc/core/api/gen/InMemoryCrc.class
+SHA-384-Digest: Ze3D6Rx98vL7OjPa0GCFWRUv8sborFykNkGGSr80Qb8CaQsyyDwTP32q
+ Xk+AAcVn
+
+Name: com/silabs/ss/framework/uc/core/internal/project/UcContextManager$
+ 2.class
+SHA-384-Digest: HGQ8/3FExlIdML32WXzQ3XB1eDGk05ACM87xhk2lFQ4+emb89jKrhHO+
+ oeYtPNG+
+
+Name: com/silabs/ss/framework/uc/core/api/UcFramework$UcFrameworkConstru
+ ctor.class
+SHA-384-Digest: O5BrUU3sRtEWFinBofMdDiltLqntDplJoaT/kdHQAPFhI+y0JUIvzIqT
+ uOgMzmKV
+
+Name: com/silabs/ss/framework/uc/core/api/IUcMacro.class
+SHA-384-Digest: dBEBb1T5B5EzGEEd+uALYOxomD8Uwkt+mJ0qQLWDgtxA84cONu1/ck5L
+ 81Q2REni
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$M
+ etadataOrBuilder.class
+SHA-384-Digest: mwHCGuMA++O5ua2Vohn9V0PTYIXSA70xmGc5VPCj9wGYSj22hA6vIWQo
+ SK8Z0jJt
+
+Name: com/silabs/ss/framework/uc/core/api/gen/IUcConfigCrc.class
+SHA-384-Digest: BHw1LmuzP1LLipdCNpznyd9YleecszK2IQEYmhKVIeDXkw5MJqKz+6/J
+ kYS4GEhC
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/ComponentApi
+ Tuple.class
+SHA-384-Digest: VaOkkk3IkXdmkC5MyzfHDJHplwFr+6EQz1TyfjbqBVEKnYOSnjh4uhYS
+ vYB/tN8G
+
+Name: com/silabs/ss/framework/uc/core/api/tree/Trees.class
+SHA-384-Digest: 86VN5YdU5RViXWAsgTJnuPquKHThXUXRu6BjY4DtvMhJQoViZ7fSp6cd
+ 9q9oc/y6
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$14.clas
+ s
+SHA-384-Digest: NvXV1FISXQXmXsnlgQUio0Us/yTg8/JS+Q5ZVgxxhmPiLE5/34aSaZ8X
+ ZdFVClMj
+
+Name: com/silabs/ss/framework/uc/core/api/setup/BaseUcEmptySetup.class
+SHA-384-Digest: T9uAsrlPspGJAHV+mLkxRG0fKTiQkcpaJvIoDXWMJ1bWeIrIX17Wmjkp
+ iPLXK+xM
+
+Name: com/silabs/ss/framework/uc/api/project/generator/Makefile.class
+SHA-384-Digest: W7u4DJEoMkqM5Clj8OYYSY6EIYj648U2ycgX5neeZiALm7NMeouIV8pK
+ hanu/k0L
+
+Name: com/silabs/ss/framework/uc/core/api/exception/SlcExitCodes.class
+SHA-384-Digest: HI5InfqHO+8pBpexGuVslFtObcsA3uZ2sr/oMKp6ulyjyFHoEwiBDLzA
+ EtL+wVb3
+
+Name: com/silabs/ss/framework/uc/api/python/validator/PyTarget.class
+SHA-384-Digest: 49wZFeasOpkgQ02w1qc/6YpeTvlvqxG+V0kCiLTO5e1myFyPmbpni8uP
+ J2HYcbJV
+
+Name: com/silabs/ss/framework/uc/core/api/IUcFrameworkCommon.class
+SHA-384-Digest: v8t7gdG+G8niUyVoB3XM6fVyImX9+JI5UCAnTdTNDeqYGQ0SB4C1jOd8
+ 74wulLfm
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/UcTransferOwnershipN
+ oDirectory.class
+SHA-384-Digest: fgK1BUiXh7YFLKso9v9crgk89PMkpJkJThEQx2K/O0QhCenkbgLVs96/
+ +0qrTvOt
+
+Name: com/silabs/ss/framework/uc/core/api/meta/ParseIssueGrouper.class
+SHA-384-Digest: zdOq8R0jwC8QfY4lwpaUVREYwKluRqb4dNB/zUYcEV85Y8cPP+bgLATC
+ 9T/mHb4X
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$O
+ verrider$1.class
+SHA-384-Digest: GyQaE9oOOygdVeY+RFv2KO+XPHczdEXWsZq49QmJ4FONzO3l/8v3IvMp
+ oMbNmvYU
+
+Name: com/silabs/ss/framework/uc/internal/project/setup/UcTemplateGenera
+ tor.class
+SHA-384-Digest: Dc6D2RpsyAYCcnnAgtt5fzY3IHVwmfJco6Xr6naOqT8L0ti2RnCUmhRe
+ B6PXb3V6
+
+Name: com/silabs/ss/framework/uc/core/internal/project/UcContextManager$
+ 1.class
+SHA-384-Digest: AYIiBTmk6sWpyYKovCDKzVy4Hl4Il8qAC2UrAYT3YpQOVoYrpHA7gmJH
+ AxQtmQov
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/BaseUcSdkCommon.class
+SHA-384-Digest: J1JH5/gEUVT7bHluPipFlO9js0JgkJ4CIXWcU6rGoa/EDA+GdQ4RFtP9
+ uzO+enNS
+
+Name: com/silabs/ss/framework/uc/core/api/meta/exception/UcParsingExcept
+ ion.class
+SHA-384-Digest: L0IgPcrk1oPI76ZnmFrIp7wP7EWxPsP2943qNhOGDaEDk4zPyX0Lo2+V
+ vtLQ1sFt
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slpb/UcPostBuildPar
+ ameterSlpb.class
+SHA-384-Digest: s/vUSsgZffr/xoHHYxZ7S3Yiau0RmSiObmho9HA0LhduFIGUjen8Npyh
+ wdNVIID7
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/UcSbomOutputTypes.class
+SHA-384-Digest: 3VlqnfASeq/70wOq6XRFanjHzDh4EskasIaYdfCjG1txAPKhYZqmZMWa
+ 3thLPeok
+
+Name: com/silabs/ss/framework/uc/api/project/IContextCreationIssue.class
+SHA-384-Digest: AXMGKpJ7+2HF+9YJ1JAvF5TP6l1HOF7sRgkIfRk3bgX5ceupnPxP8U0U
+ 5T0MHwGu
+
+Name: com/silabs/ss/framework/uc/core/api/IUcProjectBackingStore.class
+SHA-384-Digest: coVDpL+Osq6LV+TKARIplH3kIU2jJQw9A2Au2JfPXBCEw4J0W9OaCEsd
+ BnKKWOuC
+
+Name: com/silabs/ss/framework/uc/core/api/setup/IUcSetupMetadataProvider
+ .class
+SHA-384-Digest: ctvdtyR26sgCd7axE5sry2rwTsPCQsLsrJw7do2fnuCgIqWIyIw1xEp2
+ +MIuKnj6
+
+Name: com/silabs/ss/framework/uc/core/internal/api/UcAdditionalFramework
+ Utils.class
+SHA-384-Digest: XoVw+OL2VPEPTOHyzCBMk3vbkB0wW8JLjIuTxFj9OOej+Lz3CXAWTraA
+ v62oVRRf
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$B
+ oardOrBuilder.class
+SHA-384-Digest: 17kEJX+8BdgMsQoNeHO+7WK4/MoHsPO5LT299c2Rb/2SfuO596CsAnmi
+ dTwpbkHZ
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$15.clas
+ s
+SHA-384-Digest: k9jnTja0MGYR02dNX1GgtOVCgGs0zO/28TtI5J1jNutYBQ3V4cz8rYrl
+ NbtVpluI
+
+Name: com/silabs/ss/framework/uc/core/internal/api/project/state/Session
+ ApackManager.class
+SHA-384-Digest: e9VXuZvaEAP/GddehE8eMmfU4AAIOO5uxSqeFAwLmNnkytqbZp7iiKPy
+ FMQ4u1pf
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$F
+ ilename$Builder.class
+SHA-384-Digest: kQKDbWTYeSTWlGOEGp6PrVfHXsV+vT64lgytrtVByAq1nzr8KWm57oFn
+ Katp5ZZE
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/GenericDocumentation
+ Link.class
+SHA-384-Digest: Y0wELckiqc/HIFskEocsgakLUcGBCyr64dm0fcG/ACjlIthwMq0ps1y9
+ bmEtAeoA
+
+Name: com/silabs/ss/framework/uc/core/api/validate/choice/IUnfulfilledCh
+ oice.class
+SHA-384-Digest: BOdi8+B2q2UWfqYMqI0exrYO4NRVpXlW6S0oqUxytcDOzyFIHgsKxogt
+ nFW8WMDk
+
+Name: com/silabs/ss/framework/uc/api/project/generator/ProjectTypeId.cla
+ ss
+SHA-384-Digest: +4yielM521P2MqI9S0GelJCv8PCQoui1cPQuemE+Hzy+8ewqkYLr34vU
+ t0WJGiMV
+
+Name: com/silabs/ss/framework/uc/core/api/rule/ApiId.class
+SHA-384-Digest: Y7f8pljkkBsKnSmpffRI/SOFrZGQs/Iujachaj3W9kvcYgal3K963gPR
+ sjuO7Fai
+
+Name: com/silabs/ss/framework/uc/core/api/slt/ISltConfigProcessingIssue.
+ class
+SHA-384-Digest: 57r0e4nXDI6UzuSoNsULkmwA8JrFTzciaLKYs3JZSrytg7MEaR0UcWx/
+ asQEPOS/
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IComponentCustomizer$1.cl
+ ass
+SHA-384-Digest: dsbuD4XVF5x7MO1nD/8ApURkRbFRdarHwqOodQDK+6dg+d9Uuuy1p4FN
+ f3YXB6jp
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/UcSdkProperties$ID.cla
+ ss
+SHA-384-Digest: amdRwiddCOYviOjFxowlOB4Bs4R8KEtSY92iuWt1SLHQoweAfdlk+Cg7
+ c0tX95I9
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcGenerationUtils.c
+ lass
+SHA-384-Digest: m2kWH7P96Ee7ra2gfc3pl2vH0nYBbrhKaZuBWkExGAgnocI0P41wwjXs
+ lcEUROPq
+
+Name: com/silabs/ss/framework/uc/core/api/IUcPersister.class
+SHA-384-Digest: Zv2MspFEnKSULhGJrWzPfteW3AUauxuEQIuuK4XYnbmyNJrvK6nCr4qA
+ tWkxGk5e
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcProjectComponent.class
+SHA-384-Digest: 2rCPB7PNpOeA36bHW2bN2jNvZHtCLMa/8LTZUsXMxwH0PBPMGfK4UBXe
+ Hi26tl4D
+
+Name: com/silabs/ss/framework/uc/core/api/servlet/WebConnectionUtils.cla
+ ss
+SHA-384-Digest: b5CbE7g4jCv7zn3LGQ/tVxkQ+fIjacdzLYnlpOWYPpHqGTwOXYG2uwSv
+ 11LypHVr
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/apack/package-
+ info.class
+SHA-384-Digest: smUxfvy2gsyndajPOAvAPupgv38nytjKT5Q2qTLZySe+1e918DuyigD/
+ aGvkCxac
+
+Name: com/silabs/ss/framework/uc/core/api/log/UnifiedWrapper.class
+SHA-384-Digest: T5VuvqrLSyOCCTulRmdWNMNYdklE0p7KBPzfP42pysvRXQoOzYt0oMyv
+ HySUI4Q/
+
+Name: com/silabs/ss/framework/uc/core/internal/toolchainsettings/UcToolc
+ hainSettingSchema$Types.class
+SHA-384-Digest: Qbe8aqV9ekLDHm7Z+1Ns4bo88P3qzQQg71dpAIxuzQcooyVa+Wky5/DT
+ 6I2+a5RT
+
+Name: resources/json_schema/slcw_schema.json
+SHA-384-Digest: MqHGkZATQJ8XKt1TM4DziShoSuWwet7bg2ix5eZWZJKzuJnBVdvIPrRi
+ pHdoELtS
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcWorkspaceGenerato
+ r$WorkspaceGenerationData.class
+SHA-384-Digest: zYK6BUBAdpkhCjGdZpNiNxcb+KhpHjM/tB5KCu4SWN2L3hF6UHPXHptC
+ j88pZjur
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$P
+ intool$1.class
+SHA-384-Digest: OPTaYq944qZEfynNy+QkN8CD6X6jIZ3GU0kn0aUTM+G9h1vgYaASJFml
+ 6fN5Nb7i
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpParser.clas
+ s
+SHA-384-Digest: ckozLWcLA8uWLPQ5hyWQaAT4YjTrESBR1MU+aGN3Clr0i3/delJG8t+8
+ NTs/WzFy
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$10.clas
+ s
+SHA-384-Digest: 1oZXmiIRo9UUdiLpmXbQrWNyLMwf4MtwtzJEdVBGDr/iS9svJohX3F8S
+ XtsnVUp7
+
+Name: com/silabs/ss/framework/uc/core/internal/model/uihint/HighlightHin
+ t.class
+SHA-384-Digest: FS0dqmilwJ0QFURz2+tN7gqZPd5Ovh5/Cid9xaN4tsAiKQr+f31LRNcE
+ 403MA+Yi
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcu/IDeclarativeConfigU
+ pgrade.class
+SHA-384-Digest: hKt7bhUJKmYCwMpOHMJHrQa+J0kZ2LGPB52Pie28059mhDA7yIPBT+0d
+ RJyO7PKX
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcu/DeclarativeCom
+ ponentRule.class
+SHA-384-Digest: wlDDWuDDhWgN9aoOTyE9EpzJtrYiAEWeEOyfKQDN2O3wisUpHTeGKhcq
+ DBhtsgYi
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/UcSdkManager.class
+SHA-384-Digest: sm3Mm4/2aXyTbUf+mnWxDMTH5Ub10HTVrfT1ymvFGBkUUbPI+2cVeXyF
+ 5+wHBvux
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SpecVersionMile
+ stones.class
+SHA-384-Digest: yFIttacuwk789E+ZOM7AX73xuatnAcRJWNloynsUaVEWMqBKLLLuZaFj
+ VlZ1xWCb
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IMetaParseEngine$ParseRep
+ ortingLevel.class
+SHA-384-Digest: KdyuhVwQ+TeVtuLppd5gJQarYyYsgdP+r85ZBlM1nMEzBxW2n1zobhz4
+ erG0af1+
+
+Name: com/silabs/ss/framework/uc/core/api/upgrade/IUcUpgradeContext.clas
+ s
+SHA-384-Digest: 6s++OqC54ZyxagSaGKAIQF197Pc+0TcF3m1f4q1MWqZ7/96MXZwH7YQ5
+ Nky6Xhlk
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$18.clas
+ s
+SHA-384-Digest: U8V2bQcTtPnTqEAaFLyyRZ34EARBYdri+uKU+o50xBsiEd1kiuSInD9K
+ K+X7L60q
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$13.clas
+ s
+SHA-384-Digest: v3IFQ7PftebAMax2FSPwrXYwmJrRh/QjqBURHutD98Z1s+ZMMVt6+3Kl
+ mvzUpYzP
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SdkParser.class
+SHA-384-Digest: HbR8zdaHgWnawrbsuNJZv1cFaysByWeOiKI2hNzmYa11jXHqeqt4cJf6
+ gczd0AeU
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/solution/Res
+ olutionAmbigious.class
+SHA-384-Digest: xWoqSpkLhpZ1NzMT+Ki4I2zR9bpPF3e3ND8s+/vxIAT1twDOSDz+DCQV
+ ++ejwYQX
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/PathSource.class
+SHA-384-Digest: aU3ecYun5eQ7zylC72kfQXHW77/Rj/EVk0YN+htHpCbYffgsTnatnrEQ
+ Dj/PQ27H
+
+Name: com/silabs/ss/framework/uc/api/python/validator/ConfigValidationIs
+ sue$ErrorType.class
+SHA-384-Digest: 9SV/amWt+97eSyvUCFCYne0+B4Oy1sndDT6wHvWXjOcm6x3Gp/xQsuu4
+ JSYownoU
+
+Name: com/silabs/ss/framework/uc/core/api/setup/SetupParser.class
+SHA-384-Digest: 6JsIPe+exPzG1z0rpfq9qo9MNex1kcSLCICclPspbNC4Dhk9yRWw94yg
+ Vs2GzU4C
+
+Name: com/silabs/ss/framework/uc/core/api/setup/EmptySetupData.class
+SHA-384-Digest: j+Gyc4l0jrDrUJk6zwGYQOGAx/zoKXEyCLX4vbRq7zhFL2Gc2JnfQRwa
+ /v0fmZBn
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ acheOrBuilder.class
+SHA-384-Digest: fDhHWZH4cCcGsNuA9C6jOsoa7iVve1fB+kZR+p+2Z/mNjPmLWx37QvCm
+ +FlkGL/3
+
+Name: com/silabs/ss/framework/uc/core/internal/project/UcContextManager$
+ 3.class
+SHA-384-Digest: J8cWYPPvGgIB0jxhlrv7sX4D8mMrZJdafuygx8UbpOeCePK9cqT2sHPf
+ a0E8j/0S
+
+Name: com/silabs/ss/framework/uc/core/internal/meta/MarshalledSource.cla
+ ss
+SHA-384-Digest: hdwcEnHSxhkVAKk43udYeQSi9rFUDvwGLP6R0DUPsrQSXxgtWC+RAiN1
+ OY61ruMU
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ ondition.class
+SHA-384-Digest: fi2qnHWwjOCxnXxEv6aGtNMWa374pz8D5QqL34sMVmS1Bvm2zeREHRnp
+ TlNL7CgB
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/solution/Res
+ olutionAbsolution.class
+SHA-384-Digest: s9Ij1H3RlpYFS2LSjA8OvefHmtwKJHjPAEK65jgBj6+A1F59eK8O4Y5J
+ vOlFs2Tg
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcApiWhatIfValidation
+ .class
+SHA-384-Digest: FOTucN7yfqn1j01Uj4m6/TeD76IH5xAYSKXMupO7SgaC29BdM5klbmqI
+ BA0vyXIL
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ onflictsOrBuilder.class
+SHA-384-Digest: q9XGGdl3QqudLNGJyRLPsgExu31/izD+/erlPQFVhx0xNs8CvrJZ66VM
+ u0KfzMSy
+
+Name: com/silabs/ss/framework/uc/internal/context/UcContextExtensionSetu
+ p.class
+SHA-384-Digest: 4rCwxC6DybCzcSx6WacOC9/xnXipi4lPZWr3sKmuHhznDa8LuS+T62kA
+ h8eTSHCp
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcMappedToolOption$Acti
+ onType.class
+SHA-384-Digest: Mtd0H2tyS7CKArcKtXsY2W97Ne1WTN9Z72+5txJdB+NlOLFkZcOoGKvp
+ ANK7srpF
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$31.clas
+ s
+SHA-384-Digest: SnaM6JJGFK9Ke5pbYfZHYy9eiXTvk/IjEKIqcS9xpR3uXmvPunR+cKvp
+ E1ZjoXVk
+
+Name: com/silabs/ss/framework/uc/core/api/validate/sdk/SdkValidationIssu
+ e.class
+SHA-384-Digest: bLRgEm7+VccSxAfo82dg6DKSbr3MPSFBMVzZWo/JcFfl77xy26KhG9kH
+ Y4+NkbnK
+
+Name: com/silabs/ss/framework/uc/core/api/Recall.class
+SHA-384-Digest: VSaE4rGZRXoA6K8ZV74dXD8FKJ45n4Ggkb+08vRb+7bkR2urNCEDImtq
+ y1EZ0pkj
+
+Name: com/silabs/ss/framework/uc/core/api/tree/Trees$DepthNodeIterator.c
+ lass
+SHA-384-Digest: xz0IdmkYFm1qsP1m0o5ywDFMUjosUoRJtMy4CoOLYyjt9v6/Pl4q6zdy
+ nrkY4c7i
+
+Name: com/silabs/ss/framework/uc/core/api/exception/MultiExceptionContai
+ ner$Builder.class
+SHA-384-Digest: fu640Qnfbhlr7FMEsD/L45/Jzmzh9BBWFmFjtVfMLTa0+EsYUmmTvnmx
+ z7YWqTA7
+
+Name: com/silabs/ss/framework/uc/core/api/validate/FilterAccessibleResul
+ t.class
+SHA-384-Digest: 4Fide+GXAU3/I0tl3ZAX9Om1zCZgkqDiCFOqUVcHyA+tXzlRM1+dMRh5
+ hEJAlqR+
+
+Name: com/silabs/ss/framework/uc/core/api/slt/InvalidSltFileCheckedExcep
+ tion.class
+SHA-384-Digest: Obhq4zGqa6GM1O9ZbNougHmBq9ogajI2lG4dE1ZB9aqEjp+wn5kTgRvj
+ jdWrxQ3e
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/CycloneDxJsonOutput$Cyclo
+ neDxJsonLicenseExpression.class
+SHA-384-Digest: WjMflXqHo7XCTx7opF8lzzueWCQYq3Lth1KG1LCHEOLMC71g43CkB+cR
+ zmuAk8u4
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/UcSbomGeneratorModel$Sbom
+ Upstream.class
+SHA-384-Digest: pG6dm0pfPXiaVHJzb8HhoD1uTFR4ml1onNg/Wb83WgJj3DExwwW2fB/9
+ YhIEahTY
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$11.clas
+ s
+SHA-384-Digest: MBZHoh4y1u14mO7+QZ7Ci2Ptn4bR18bxlxk+ZYUbPWHG0hh0YPulqfSM
+ qatNgJcG
+
+Name: com/silabs/ss/framework/uc/core/internal/model/uihint/ResolvedHigh
+ lightHint.class
+SHA-384-Digest: k1mmDt7CSFzwfjM9KYhBBYcKVtB8rJ3ihZp089B5PyZVZ/kZ2uPHbMeu
+ rdnigI9w
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IUcSourceFile.class
+SHA-384-Digest: NjoyOXwpTXWeTqoZhNaLrdPFZXxyI31vm9Lle/lQ62ITbNfUkgO29lP/
+ amJ7sxTl
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ onfigFileOverrider.class
+SHA-384-Digest: u+fDhwDN/+Dqir1OJkrfCDGnohi7Uz1ICIhyp0mU71CLJ0X6BwmPtTWn
+ sQ0M865t
+
+Name: com/silabs/ss/framework/uc/core/api/comp/ValidationScript.class
+SHA-384-Digest: fZ6c0b3OhDvwhNNjvEAOckiQ0y0ASHOfekbaaLJbvS2VSgyIjCk1Y/EK
+ JrdwGKwe
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$19.clas
+ s
+SHA-384-Digest: qJXw+DzHfIrMoqO+0PWIy8LPYukSlUKYgZ0SGXSoLIeGL5f+TbZafFKI
+ HxgZvSQR
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$M
+ emorySegmentOrBuilder.class
+SHA-384-Digest: k01SBuEFxWn5CvKI5hu2FDThy/R1TZoMyaMvwG8gyThF7+TkFEFRpa3X
+ mmO3uTFE
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$U
+ pstreamSegmentOrBuilder.class
+SHA-384-Digest: OmgMeRclf6L0JQvByAk97cEdXHgJ7H0zcsSFj8fldIshAXyOid3Dboy1
+ 9U8HgVIT
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$K
+ itOrBuilder.class
+SHA-384-Digest: 7QRlvhaOj9nyROdbroF55B7jXyiuDDM0zCz23j+LoCas0BuNwNEi4v88
+ hmwWwXU2
+
+Name: com/silabs/ss/framework/uc/core/internal/api/cache/ComponentCache.
+ class
+SHA-384-Digest: e2lI6k0zqWVmOUXd48W5H3sdwoAb8wfiM//HR2YSBjO6WZrq6hUpam+I
+ q6+u/AYE
+
+Name: com/silabs/ss/framework/uc/core/internal/api/config/ConfigMetadata
+ .class
+SHA-384-Digest: HacKXG4qxphzRa59zd8IBJmn5TvVaX/ThX+ZpmgVRxIxiKDQkd0ynw/q
+ MjxcovZk
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$30.clas
+ s
+SHA-384-Digest: CL9GzAIu4Eh97U41rDMSEfK15uhic+GbJBYqnU3r+OSN451zvcH6nhVx
+ itpfJ66/
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$12.clas
+ s
+SHA-384-Digest: 54R7ECm1/QNPa5xecho0bUf35bnff+AB5QYs5p4/zGYome3jsdqH9nKD
+ Uhj3Iybz
+
+Name: com/silabs/ss/framework/uc/core/internal/api/model/ImmutableShared
+ Import.class
+SHA-384-Digest: +dv+IVNvJaHJs6SNvP0CddsiiiT5N2anUc01NU5U8GHo0dDhfUeEYwPH
+ +W0JpXxt
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ ynamicValue$1.class
+SHA-384-Digest: 0kP5nXNvQkW0h+e7zfgWEiTZZFQQshkwdZylMDAZmkH2lExgL9pBZ040
+ ps7w3Qyu
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$F
+ ilename.class
+SHA-384-Digest: x0eBIBd6Ab5qbN5fF/bZ2Xj/8IFLmqDFPjraLJ5DhFCAGkUCTpTYa9vL
+ AfFr54DK
+
+Name: com/silabs/ss/framework/uc/core/internal/toolchainsettings/UcToolc
+ hainMappingValue.class
+SHA-384-Digest: 0dX/Jq/ZSCmlxiykilIXRVJhceRUalE7OiLREMkM6b5+iHuC/0X9bBhF
+ VvQlQZtu
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/solution/Res
+ olutionConcrete.class
+SHA-384-Digest: bZhYMfaohtt3Mp110MLh40J7eWvl83ThCvqUudDiz55ldVnKLvP1A6Ai
+ f1wpQ/VQ
+
+Name: com/silabs/ss/framework/uc/core/api/IUcSharedMetadata.class
+SHA-384-Digest: r6IpEYotfEKi31OfrsNcjsML67GWF30TjUun4GJxQuR+2X5M0YyoNhXF
+ mfseaQHr
+
+Name: com/silabs/ss/framework/uc/internal/generation/workspace/SlcpWorks
+ paceSetup.class
+SHA-384-Digest: RxxXSn30l25JUjqIF0y4FNcPJgQJIqHnBeRPosZ0A25PiKSQtuuj7nuz
+ 7XvPochJ
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$S
+ ource$Builder.class
+SHA-384-Digest: c6WcMPXjdAKpsQfveZFZaHO3x2npvn2apZPN4GEgdgdycvn7z2NkZhDF
+ zRgnQfhI
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey.class
+SHA-384-Digest: D5UfTiGZsMODus+/Dxh5nejY8GzeK9IAY8Suo4B3Q+015hpsrOfb12VK
+ qpTTuRje
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/IMetaWriteable.
+ class
+SHA-384-Digest: RS6i80NnBi1oL5ntZLmVHH44ID8yegirGUniUBR3egSfxWLVJO8Pp0Qn
+ xb6hlfZp
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IRecommendation.class
+SHA-384-Digest: hNKR3YtEUATKB+JSlgefMPAFAtpFnJmkGu8PvW7tH5Ce5thIyfWbutZu
+ jgtUXQR1
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/parser/SltConfigP
+ arser$NocturneOfShadowState.class
+SHA-384-Digest: WUbv7RiENv9DidooaKUQWtPMNagmkEuhRp+pTSoAEL8vbPNZnHGwDQbr
+ K4PNLfjq
+
+Name: com/silabs/ss/framework/uc/core/internal/hack/autoselect/scarborou
+ ghfair/package-info.class
+SHA-384-Digest: kVFicUjQOmzhlqGkDWC90W9cVqtVQQ9ZasBsODzcT8Yhy1csbU0FDadx
+ A/RRICoa
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ oolchainSetting$Builder.class
+SHA-384-Digest: uMSoNDff1vmdQcQlD2cJxYRQl9sht5e4MUs0mICGYTN423pyEq80Om2n
+ oj+8whnP
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/apack/UcUpgrad
+ eResultJson.class
+SHA-384-Digest: 7RkCWidZt4KtSy5VefOKTS8I8BOlgpBuVVHnpZqm+ViTdSvEE5C3jgSP
+ 4tf3CIr+
+
+Name: com/silabs/ss/framework/uc/core/internal/project/UcContextManager$
+ 4.class
+SHA-384-Digest: Bt/txvkgxCCKH/8XX97UHzjqjbaygVTB4e4kt5p9BujDcbj3p4GtU55H
+ Dhcw99fn
+
+Name: com/silabs/ss/framework/uc/core/api/validate/choice/IApiValidation
+ IssueChoice.class
+SHA-384-Digest: gjvwMh3iWKR3RfTkmQtBGobFH1MMwj9+DDmkE/NNtAHMtyLV8L/1UEEH
+ +KXB+dOQ
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcw/SlcwRegistryManager
+ .class
+SHA-384-Digest: sUwjmTvEuWbpH8beFlCfMIxb0u8czzj2MHixaloFg6HVWMDbH0O5/Chp
+ es6GcyN5
+
+Name: com/silabs/ss/framework/uc/core/internal/api/config/DefineParser$C
+ ommentChoiceMode.class
+SHA-384-Digest: 7e2L6DVjhu9ix+E/LXdaqxcgkXXfV6tnfOUfiM1EMLeiWD7q+DD1P4tV
+ yBK4YddA
+
+Name: com/silabs/ss/framework/uc/core/internal/IUcComponentInternal.clas
+ s
+SHA-384-Digest: SDM8Zm7TxWnn25b2a3CrN3EPqZdtRTOQUjBwHx1oB0HjBaURFaELpV5F
+ p29J3Tsn
+
+Name: com/silabs/ss/framework/uc/core/api/upgrade/ProjectUpgrader.class
+SHA-384-Digest: qwzhqZG2rn0Zud2N/7F/Jcl1QzQQbsl8NtMLwA/+Wd+tYYopT/kxAO6p
+ q6c85yHp
+
+Name: com/silabs/ss/framework/uc/api/project/UcContextRequest.class
+SHA-384-Digest: TALq/XGZPfRH3FnqhCx10Tp4PdZZAiTqPV7i67hihkuoPPsOvuylVkQ9
+ tb7RZ9Xy
+
+Name: com/silabs/ss/framework/uc/core/api/editor/SlToolFileParser.class
+SHA-384-Digest: QnO3olJIeICPZu7i5f4hHDD9XkyOMenk4EO0E0+vuqxFZvM9hWCSo/gy
+ BJ6gSuMg
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/slcw/Slc
+ wValidator.class
+SHA-384-Digest: TsXQ2554MwPiSxbGIWkFhfuACImnIs+h4zwDU9jgSAMri3bTOUFBLPwk
+ KFtoRr/b
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcu/ScriptConfigRu
+ le.class
+SHA-384-Digest: w90F9ScWjaAr2tPPzN+Tw9hLvzOrOvxVMRHheiZ/BkPmkcyA3FebbPd+
+ ZEsqPQAo
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcApiUtils$ResolvedSe
+ lectedWithApis.class
+SHA-384-Digest: wvO2flPRWm7gMBsF3O3i8+G79COL0cZ5Ev86pN5lHe1XfZ+xz2hQuYni
+ oEOaRici
+
+Name: com/silabs/ss/framework/uc/core/internal/project/state/UcIncrement
+ alBuildSettings.class
+SHA-384-Digest: vBEuhrrTuXfhRh9Nwr+kXqKa3X4JlRgwTsGZK643UZh2hW22X6oAm4/C
+ GNTXCq/C
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/SltConfigUnit.cla
+ ss
+SHA-384-Digest: bMQKCEXErR5nOt3VvN3GJDZgSy0abtsTqF454UBc6vwjFBZH4hMQ+yOa
+ mJ09G9nc
+
+Name: com/silabs/ss/framework/uc/core/internal/meta/CmsisAnnotatedFile$A
+ nnotation.class
+SHA-384-Digest: OvaL4se4US0Pxpj1WVpKAJTsg1CzVBHBllgpvFO97iFjXVIHFP2OXv73
+ tY6b7z4x
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ evice.class
+SHA-384-Digest: Fwf2ZLlbLhKCxl08AUZ2IEbFsi8X5d7wHScOprx/BDUuVXaCRvjAWy+W
+ dAsAnUMZ
+
+Name: com/silabs/ss/framework/uc/core/internal/IUcFrameworkCacheable.cla
+ ss
+SHA-384-Digest: JP8l66vf4Ujx/kPAXn3C0d86XGuNLddLkLI+7vuA9UOHEK/BIcmX5pE0
+ /nrcE9NJ
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$11.clas
+ s
+SHA-384-Digest: kqFuXYqUeh6J6CNjy/5Sgx87QP4TNJ5m2gO2nL87mGuucN6km+kBnqg8
+ K78KA/Ua
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/SpdxJsonOutput$SpdxExtern
+ alRef.class
+SHA-384-Digest: yw7k4cwb0yODoJeH/oH0mbKgygCVna2SO1h3JbTiqahN2zkrn8NC3e9u
+ ew1AJMyh
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcThreadedGeneratio
+ nUtils$IUcGenerationData.class
+SHA-384-Digest: jNSb1AtoFW8rEpgF8spOl2YNj+nIgpV3SbOM7Fw6FdkykvhsMehyEoG1
+ AaIrPZd/
+
+Name: com/silabs/ss/framework/uc/api/project/IUcProjectContextSwapListen
+ er.class
+SHA-384-Digest: Hp+X9fZMTL+IupIwmdYnUaSAr7bLJ1hJL00Kuv/k3mwPGpySXM8x/yU2
+ ffr02JNf
+
+Name: com/silabs/ss/framework/uc/core/api/comp/ImmutableComponentContain
+ er.class
+SHA-384-Digest: 27CFImzL3ZWHNJn0ZwVC1W0EQNuHNmh/jHfeachLKMHJgFgtY5q5YBhW
+ NFx+SH+E
+
+Name: com/silabs/ss/framework/uc/core/internal/api/log/UcCoreLogControll
+ er.class
+SHA-384-Digest: Lu+ZC6FJUPY8wz4TflleF7ZRs5BuoJP27NW8kIo8LDXaeGHpAA93oaw6
+ XGYiSQV0
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyTargetF
+ actory.class
+SHA-384-Digest: jd/w+tiNLLNClbO1JyOgdMGRL1/pT6uzqlCZaFSTtj9BkENh6nHF5Efs
+ M5M0a5OB
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/IUcIncrementalBu
+ ildSettings.class
+SHA-384-Digest: Uh1HCEawqFMAJnPR122d4WVWEogTYL+v9wuxjtnNOukeOAwfzpY4MMU6
+ Yk/NbP9L
+
+Name: com/silabs/ss/framework/uc/core/internal/api/config/DefineParser$C
+ harByCharState.class
+SHA-384-Digest: J7kh5LjOVFfilHyZGMz/eNzboYP6xr81BoaeVd+o27wGy2IyFybjkBWm
+ ngW0m+ph
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$S
+ ource$1.class
+SHA-384-Digest: 17yzcPFS0xfleCorR0ffua5DJXfv5NlPN0BhCWzzzF/qu51a03nRrwCy
+ XQjrVgiR
+
+Name: com/silabs/ss/framework/uc/internal/api/project/setup/package-info
+ .class
+SHA-384-Digest: ZSu62uefvfVhsuMqGiPjIvErVY1tI9nK+sWiuNptRnBhxcPhjDL772w0
+ d6yLjvBo
+
+Name: com/silabs/ss/framework/uc/core/internal/project/UcContextManager.
+ class
+SHA-384-Digest: uh7F7XQSl+YsIu/Qp6Pt0zS0Wj4z2ca07ars6wUctwRAJhd4RcABdqEa
+ 1hORSkqu
+
+Name: com/silabs/ss/framework/uc/core/api/model/ISharedImport.class
+SHA-384-Digest: skLqybdtG0J+7og6FDZRegJ+M2tlE44Zs6M+DbMYzpj2wkOe8ruAo8MF
+ JmwJ++LK
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcPostBuildStep.class
+SHA-384-Digest: 6PdmFZl4HDnXqZBFK6z1Rs2rkZ1IQ9ZjhrKQkgjB/033avJIay9h6+Ls
+ RshlnFF3
+
+Name: com/silabs/ss/framework/uc/core/api/upgrade/IUpgradeCatalyst.class
+SHA-384-Digest: Z1sYDQWo1y+ut7rBjqKp7oLy6FPtUWS4K6xi92fJjHr9Kfc+7T9nLTPm
+ EtTw2Xki
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ emplateFile$Builder.class
+SHA-384-Digest: icJxnvrJt7mSSu/PgRCO2nf38uIU8QEBjwVlqJTSOlD5cJYti6HIE8Ie
+ EehsGI4x
+
+Name: com/silabs/ss/framework/uc/core/api/IExpressionEvaluator.class
+SHA-384-Digest: /1VesjOQtyUQHRTCJlDBvvbiBFeDfVny7Jf+2ubmqyQicKFNZS6IHEIA
+ GZd2tZcD
+
+Name: com/silabs/ss/framework/uc/core/api/model/ucmetadata/IUcMetaKit.cl
+ ass
+SHA-384-Digest: CGol297Zy00GJ9UrjvpIZp7MpSzpd1zK8YaCP6qHY3rcLrbXjNoGegOq
+ uKHUCt/4
+
+Name: com/silabs/ss/framework/uc/core/api/comp/Overrider.class
+SHA-384-Digest: 4a7TH8Ty612mLnSngJhMx/M2YOszA5YKrRYx3iTwSv2syYHYDNq6c8PZ
+ qZG7/cKN
+
+Name: resources/sbom_jinja/cyclonedx.xml.jinja
+SHA-384-Digest: Sb1SuBlA3OPom/J62oMIOfQALVM52dU9O1qAwB9eaf4A3RKmGlqpZ7H7
+ C2+/Tde5
+
+Name: com/silabs/ss/framework/uc/core/api/ToolchainSetting.class
+SHA-384-Digest: mnoZH77iVE3lskyjz3kPOlXSk8e3RPm/Vrinx/O9/QXNVlVOdVNSjKQy
+ J3Lv31+M
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$32.clas
+ s
+SHA-384-Digest: UPMXs5QylQZQtFFX/OiDd5aQx31cqg3YDV3viL6rx6EthfwTyYpf22V8
+ 3zGK01/e
+
+Name: com/silabs/ss/framework/uc/core/api/upgrade/UcUpgradeResult.class
+SHA-384-Digest: g+eiWKOD3ZCsReoRekzeQ9DAhxXxEIF5lR5omMG0gDQd0jx4vYPTaiPD
+ iVqaLWvb
+
+Name: com/silabs/ss/framework/uc/core/api/slt/SltInstallerFactory$SltIns
+ tallationErrorException.class
+SHA-384-Digest: YU6LUxG6Ht/XKIcZ5g0+R+kk+fQVU3uuAfNm1LUXXpImc9uBQ7ML+3VD
+ T/pX6Aw7
+
+Name: com/silabs/ss/framework/uc/core/api/validate/RecommendsIssue.class
+SHA-384-Digest: VMDf4CEXEM1m1hVdoLpK66mT6D3WFQISvEmwSX1g05knLkFMtVqDaNax
+ jtdNjQg4
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ oolchainSettingOrBuilder.class
+SHA-384-Digest: l9mJBEMNcq3b/JB1LJrN/8DK7HjpVVHP9JiD8MKtJB5/d7OoNHNDQ59e
+ ZUcMCnaQ
+
+Name: com/silabs/ss/framework/uc/api/project/IUcContextSearchQuery.class
+SHA-384-Digest: bHiMfO6JsuQDgWCh9ypRkCG9+fupFP/gn3XQK9+2fIiXkwzKjc8ofkkT
+ Jvtea7oL
+
+Name: com/silabs/ss/framework/uc/core/api/gen/ProjectDataCopy.class
+SHA-384-Digest: HVu15Myjow/EpoGVqwh6Vyjg5m1COfbPcW/KbO/728UTAbnjJlAX/U+5
+ S3wVGQ7a
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcp/SlcpExports.cl
+ ass
+SHA-384-Digest: 7bCkWU9LvO8WRYnkkHkXOWaoz6tn60dVR8HxfvhQ5t78VGup89Kb2sub
+ f2GshrGV
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyQuickFi
+ xFactory.class
+SHA-384-Digest: iJTYWVRLLDF1vLhB8XOgYH6siS9J0vvqJopKFmAp+liTs0AOcXhK1QwU
+ IYGgCL+y
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcBaseDocumentable.class
+SHA-384-Digest: c4Cpw0yPjiQB6MRe8yqaeHn8p82bfSbNw35rIAuFLjauIrXkYZHodxBy
+ +ULZrdw2
+
+Name: com/silabs/ss/framework/uc/core/api/slt/CoreSltConfigProperties$ID
+ .class
+SHA-384-Digest: B8Bg3Z0os21Ne6OPtfwTBzxb2g64+Ssi14Joi6laR+XvlxcShbe8FxAy
+ LW3zDGp5
+
+Name: com/silabs/ss/framework/uc/core/api/setup/UcSetupModel.class
+SHA-384-Digest: DTAfM4l3Mq8s5jEpM3BNwCLJUQF4oQ4o9ZR5tf3m2Znipw/QIDUt1kJK
+ waRW6wnv
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$16.clas
+ s
+SHA-384-Digest: w7HBqgBLO4hsCvrZHprK99i7c6cTZoi3KXyWJPckVkEolKtR/zy6WTyl
+ 3jIkSeX+
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IComponentCustomizer.clas
+ s
+SHA-384-Digest: H+yS9vioby96I2DUlXnk1EtfMF0yAru1pN0wekz79HGU3eDhRGUnkAg6
+ VKgZu8Sm
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcThreadingGenerato
+ r$UcProjectGenerationTask.class
+SHA-384-Digest: UkmXNDCA7nV3ESXmxwcF0P/1ePyQkEszaweksJYH5cdG2PJxNLDpTNCP
+ QW3TCv1Y
+
+Name: com/silabs/ss/framework/uc/core/internal/model/python/ComponentCha
+ nge$Action.class
+SHA-384-Digest: n5bf4xPGHqSPefef154lZ4qjlNuTlGMpUaOX/OyNrF8Kw5ud2orvr59m
+ C+nlTyBx
+
+Name: com/silabs/ss/framework/uc/core/api/upgrade/UcUpgradeResults.class
+SHA-384-Digest: ngcz8SB5w2AOGJuADqKvojPq17TqJxK0UKXPSkS1o/F+vjZbroQIoyOE
+ h6rknCeW
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$32.clas
+ s
+SHA-384-Digest: Pvwq7K2NFbsvJcQFDXzMePHDA14o8L1S6jdBVnVYZlRi4gd97FN2WMao
+ 0Iu2P1rK
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyProject
+ Api.class
+SHA-384-Digest: Fb9i5kPm921eDS0sHcV0mfytXSIFSsjcpzUQzyjA+QSdJoqeeljjuARR
+ gtOcp9pB
+
+Name: com/silabs/ss/framework/uc/internal/context/UcProjectState$Hardwar
+ eSetter.class
+SHA-384-Digest: gzvelUN33Ahq8vEZ7nPzouZx1KusYzVKe+tacEtTbBaOxpI1EeEyGTCU
+ ttu2HlTf
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcProjectMutable.class
+SHA-384-Digest: sD1Bvmn/3oenjYbh8JvmFwI3pGoGtuSIrCSbwpe3dzF9nsqMxtIKiQWr
+ 5C4HyomA
+
+Name: com/silabs/ss/framework/uc/internal/generation/workspace/NewWorksp
+ aceSaver.class
+SHA-384-Digest: dkl4hohIQSzm/0oc2TjVNndCFFs79O+ajGyCTJ7j1ArMtOk76/v/u49O
+ mPzef92T
+
+Name: com/silabs/ss/framework/uc/core/api/projectfilter/IProjectFilters.
+ class
+SHA-384-Digest: y2tt/BCkfCIrQsXEA67h2OWESuAk/9YEQ4A1sKqhRsNwi9E+A2WOdEEm
+ qr36t6P8
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/ComponentProtoUtili
+ ties.class
+SHA-384-Digest: kqcjgTdrFYG6MuJc88KugryGiMpKoDMHNxEMnWTytxgz9WgYBhejspFt
+ 1Wb7aiFh
+
+Name: com/silabs/ss/framework/uc/core/api/editor/SlToolFileParser$SlPars
+ er.class
+SHA-384-Digest: Hll5jvFPcvtAp/P8jfnZEmDBxHQCGzQroBNwBB8G3j3RTGG84sdJ3GYi
+ ztxtCQcV
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/IResolvedHighligh
+ tHint.class
+SHA-384-Digest: uXjZ1ligVp8P59T1r6nE5CKp0fGL3+hDogNgGZoikDmBjdvfsvo4mDB1
+ Xc48by/y
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcPostBuildGenerati
+ on.class
+SHA-384-Digest: NOyyqK3UK7ZLvjSMgO+VFw/NIKHCo6IrzHnZLQ3uO7rkCXxB9l4Ht5Ag
+ AY6ACmxz
+
+Name: com/silabs/ss/framework/uc/core/internal/api/backup/BackupFileUtil
+ s.class
+SHA-384-Digest: cQ4GqIWMzzRBQiSoteUOcQ+vb0WXPHYImn6XjckNIQFn6MRJzDcUslSc
+ fyQonj2n
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcProjectChangeListener
+ .class
+SHA-384-Digest: S2A80NVQy4TMsW1hAKbeVpT+gKz0GFMxeuSGuWPH455Ugd4HS/Qf6MmK
+ 9v/D0nZ5
+
+Name: com/silabs/ss/framework/uc/core/internal/model/ucmetadata/UcMetaSb
+ omUpstreamSegment.class
+SHA-384-Digest: BZvRMbkxCS4zcaF6HKvU/zw3yYZtYh1N/8fIWOvfwZvxRwjTGZKU6x8q
+ UwAfXTEE
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/apack/AcSystem
+ State.class
+SHA-384-Digest: 5UfyHnKpqZWHYVYBbY2PGQgWjo9T/U5TTYRz1gFC9ikTiH3v2RSPXkHU
+ A1U83K0H
+
+Name: com/silabs/ss/framework/uc/core/api/UcTemplateContribution.class
+SHA-384-Digest: Y6VZe3MNwh9M6PrqQd32Sr0xpfhfGtdtJOXP2pqSNldYFuq2apbuOfY9
+ l9PG/VMY
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$16.clas
+ s
+SHA-384-Digest: fkjsNWmRezEMSgf61Y0NBpWQZNlqJSALV1Gvb6Syywy7R0QPWN9WOPFB
+ apZ/UPOc
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ evice$Builder.class
+SHA-384-Digest: XyMacbyIxkYkL7qjOMvKkeMYW8GpTdMWHvdAAXNzQlEmRPkh9iTbcubZ
+ LETFvEev
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/parser/SltConfigP
+ arser$RelevantCategory.class
+SHA-384-Digest: cp2Z4AqCN3pDGtEYtnJIHi1opECxaKgTScXyI+f/j7Lv19BuCvBgHGnZ
+ 4RSdyOuY
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/UcSbomGeneratorModel$Sbom
+ Component.class
+SHA-384-Digest: ofFP3Z4IEMK4TALX3w3bUxceoJZcEbYq8q2OitP6a2FnjzuADeVu+53P
+ /AKvbo8J
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$4.class
+SHA-384-Digest: DhpfCLE1oFZODXIDQrji4KyAs34SBlGyYNOIlra0UeyGxCZDXMShAa2I
+ dJCmw175
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/UcHardware.class
+SHA-384-Digest: D+J716kWuco+nQjvYvLILEeOgCmdebIKcxB9BzNo5lkpoK8mSxdclSXk
+ p/6UVRGj
+
+Name: com/silabs/ss/framework/uc/internal/lua3/LuaComponentId.class
+SHA-384-Digest: uITg07EaeiUqOX4OxHxmKM7JkKrTeRZbuQP7bvEYNm6CPlgZprnD9AHq
+ fSd3K2I3
+
+Name: com/silabs/ss/framework/uc/core/api/project/gen/ConfigFileGenerate
+ Logic$UserChoice.class
+SHA-384-Digest: XYjR2uR2ZfBoSAabzppSD8M3LtAF4op4VI1nztxfpYXGHFFJC8RH4tgt
+ QdekGGRs
+
+Name: com/silabs/ss/framework/uc/core/api/LibrarySystem.class
+SHA-384-Digest: yM3MC2aEEGsRyZKYJAzFhnwysJ2UjvKDytYla2IppHZ1l0qsgu+aASJc
+ oyXNh4mU
+
+Name: com/silabs/ss/framework/uc/api/generation/package-info.class
+SHA-384-Digest: hSOVd8tMlmwitpw2CmKkYPi6RvP25HgKvjk53yWOpiGh3C1TDiV8F86D
+ GcZMemHS
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/JavaProje
+ ctValidationApi.class
+SHA-384-Digest: U9u4jNqmeBS3WybF+Zv65zSMgK07/224apU1mErctFsN0i1ricEcTg48
+ pvxTYtXN
+
+Name: com/silabs/ss/framework/uc/core/internal/validate/choice/ProjectAl
+ readyValid.class
+SHA-384-Digest: H08s9gK5RkjKdTiHIn70+qqNcjYRVFaX5eXjqkQUm2N+HN8xTL69+D9F
+ F2/Lu9mH
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$29.clas
+ s
+SHA-384-Digest: 1ubXlw37ni7skxGxHl0WeagyOo8dUzuhflEiqGV/jfWddc0LLuZ2GzJ7
+ mpcZmVTl
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcProjectContainer.clas
+ s
+SHA-384-Digest: WfGA7rHZOjXRXF9ex109rg/ogtr7F6IMM9/8JJcY9ixl3xlAx+HSR4XC
+ 6ApxPGhE
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/undo/SelectionChunk.
+ class
+SHA-384-Digest: HIoIjW4R29R6voWVq/MuGlsBJk9TX0dZ9UGChyk9iJCCjU2AMDnd52/r
+ Jq/MALOr
+
+Name: com/silabs/ss/framework/uc/core/internal/api/UcAdditionalFramework
+ Utils$UnmangleResult.class
+SHA-384-Digest: 0ELGhZ2VJX9dsXsKLc11I1q1WYrdxl35Gj81PtxAYJ0iEeE/9ADlsyU7
+ 7uIiJ6hF
+
+Name: com/silabs/ss/framework/uc/core/internal/context/UcContext.class
+SHA-384-Digest: sPIa3sFnaDdw+ZzVdv4aS71rxWr2RsJxrln68Z9ztHuYYBOX7WUAx5CB
+ OxVqnilk
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$L
+ ibrary$1.class
+SHA-384-Digest: OIRUVLM39j/ek+0pCEYFyhGnjbDeacpuCcFkuvodbVntX0dQiyk2oUCY
+ DPs5A6ZU
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ ocOrBuilder.class
+SHA-384-Digest: DAg8QEnRXpRS6uoD0ZkeKfA8hg+oBTMB0ZIbaQHWO6929IY5b5k6PMem
+ NNTv9J82
+
+Name: com/silabs/ss/framework/uc/core/internal/model/ucmetadata/UcMetada
+ ta.class
+SHA-384-Digest: UF2OJu0JSIMOV0AFvu7yz57Y3gDs8Xf5jJgkO72tk5CO2YcBLTswTWEn
+ 14cQgidb
+
+Name: com/silabs/ss/framework/uc/core/api/comp/UcComponent.class
+SHA-384-Digest: GoQRAU5OBvlkbV13RBaHAf7T1bgbi+orVYgTD5BrhkWFrZPw934x5fNf
+ CGyQLrHz
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcp/ProjectCompone
+ ntReference.class
+SHA-384-Digest: yBb77KRz4/T1my78ctJghXuyk353IiikSE1mSu5Yp9jkWAQJ64OD/+Wd
+ leeQontr
+
+Name: com/silabs/ss/framework/uc/core/api/internal/project/gen/CmsisPint
+ oolMergeUtility.class
+SHA-384-Digest: HzE61a/+VLrKh6WSIoiKPZXm/3FzfcVR4o+azlMiWuFxIbhZIziEGIg2
+ 9VQatRlO
+
+Name: com/silabs/ss/framework/uc/core/api/model/ucmetadata/IUcMetaBoard.
+ class
+SHA-384-Digest: U3KuOI1MQ5zOpKAl6HGu6eONyd130MptDJAKK8/uyV6DaPw+rmrjJpxu
+ cOAzfNX8
+
+Name: resources/json_schema/slcp_schema.json
+SHA-384-Digest: n0XGLAvQMVyx1Q+3OCpsj59mq00Tk+yPt7Hno8Wl3Xq27NMA6m3Ikh83
+ Co1hcrXY
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcApiUtils$ApiNode.cl
+ ass
+SHA-384-Digest: Ard5QnCRfMLA1SDvBvYahMC6BKmjfUsJ6ARQrOSB0IdJxxpk8H1J6wkJ
+ 1R/oQcxs
+
+Name: com/silabs/ss/framework/uc/core/api/comp/Customisation$CloneInfo.c
+ lass
+SHA-384-Digest: zctPmpU8hSVDZq6P+8fkdrzQJEqZDTwA7eqmtis24imzl7GM3kUHq1+b
+ vmtleSNL
+
+Name: com/silabs/ss/framework/uc/api/sdk/IUcSdk.class
+SHA-384-Digest: EP0p3XQzWQJaGJum/7fPK+8MjtlFTgyLiYZJ0RgzYjEYBzRO0BR7mRWk
+ PVdfaonl
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/JavaProje
+ ctUpgradeApi.class
+SHA-384-Digest: C+6i+qDt0JLh/3s89DNVp8pXW9ypsqMe6NOFDONxcEwauDZhqeDYoDSy
+ N0JaLEZF
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/UcHardwareDelta.
+ class
+SHA-384-Digest: izopo8vl34OgQtdoME3eRYbMfWX+1nyD+A/ZNEljIRrzXZSSx5vjLO6I
+ UcKV/v/M
+
+Name: com/silabs/ss/framework/uc/core/api/validate/sdk/ValidationType.cl
+ ass
+SHA-384-Digest: Bk+q3IfgoWJ0bU9F+4Q4DKcwnvHzpBZlchOdL2gJQWTmx7td8vwfOwOM
+ vEmitcHB
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/apack/AdapterP
+ ackAcProvider.class
+SHA-384-Digest: UUJ3rDaiUDuciOye8pjuAgvkjBSjUGlCfwcMuMmcdolFX5gyCkBb4jYT
+ POc0H3Dk
+
+Name: com/silabs/ss/framework/uc/core/api/sdkextension/IUcSdkExtensionId
+ .class
+SHA-384-Digest: ehMtia+neJpamAe2P4OJoi24X3oAATQIRekl8LnAk6hC1qdhVDVUb+ZI
+ 7aqVifdJ
+
+Name: com/silabs/ss/framework/uc/core/internal/model/python/ConfigChange
+ $ValueChange.class
+SHA-384-Digest: 8wD1joIB8u4q8NimX1Rs8WK+fSCjA8yTz940HlN39xFGQQ5D1HapkoI/
+ Ww26BRQE
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ ynamicValue$ValueType$1.class
+SHA-384-Digest: NpzqRnxwwLJ99C//PfsiayZEYqTPuNBC0jgD4GtDm/rCN/aLQJxsOoD+
+ 7RQSgDR+
+
+Name: com/silabs/ss/framework/uc/internal/project/options/UcToolOptions$
+ CCompiler.class
+SHA-384-Digest: 41IOT3CtagEc5vL6eiO6GqQ3vFHrbxBS1FCzyNbohn8lGE6NgYpcu9Be
+ UfwZ46kj
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/slcu/Slc
+ uParser$ConfigurationUpgradeDeserializer.class
+SHA-384-Digest: byZufSWaiJDIPp302al3smUPf5NkgLNnKiY9Kzytaw4Z9tkq4tdNdpl6
+ hO8RpKk6
+
+Name: com/silabs/ss/framework/uc/core/api/comp/Customisation.class
+SHA-384-Digest: JefpkUQzXhz5VEbRmRvr484GTRGhI9XcG2nuM6g8vmJ+TIenL5EK5lNa
+ lG14Gd/6
+
+Name: com/silabs/ss/framework/uc/core/api/validate/choice/IProjectAlread
+ yValid.class
+SHA-384-Digest: pP4R90MtATFiWc7A2cd++P4kdhYGMb4V5dC+j16jEUQ3eg0atH67bZPa
+ QYndsE0A
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcComponentConfiguration
+ .class
+SHA-384-Digest: 0DaBuEPZZ7kGfF1ArggLgLNQ4/LNW3TiS8a/Li4XO6tRfAGfYa/TkDJd
+ xC8DNHNy
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ onditionOrBuilder.class
+SHA-384-Digest: Lb6H7Yi3LGl7U4PLfN1aomAx3/011/F9AgfZkLE28KWTcJ/p9riSgaJF
+ qFOqU6Rv
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcComponent.class
+SHA-384-Digest: tzXoT077uXpOVe85fFU/XHl5yGW9+SqWGOGWRD+rPRfvfTK086WxUe5k
+ zVpnWQPm
+
+Name: com/silabs/ss/framework/uc/core/internal/project/UcContextManager$
+ SingletonHolder.class
+SHA-384-Digest: 7x27ybsqn0sdRVXKXI2HmdV5ouUElsPlVacpxRJb4oz1rw0GyhXTTh0A
+ 163QUz4H
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$24.clas
+ s
+SHA-384-Digest: pAN7+vi8O90xWh2RiPQjGW4o7ApBWQj4JqG000Ckyp4rdOgDttVDKMn6
+ 9CBvhC9L
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IMetaFileWriter.class
+SHA-384-Digest: QFkciA5H+IAQNrkLg29pJoYu/+YHpmJIAwR5rPpMN4PQUi7BR5U3LsYz
+ tn3fPYFx
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyQuickFi
+ x.class
+SHA-384-Digest: 0Ksb41SKFjpZHQ7F1XBRO3Sld13O1nIRNeu9vRCldb8g/enF9ljDkd3H
+ UICbnbac
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$R
+ esolvedInclude$Builder.class
+SHA-384-Digest: gNryy2d2TbL75ztWxOsGbu9ckhGobOreqkWLRJMUTjlR9cbTPTx1WhbI
+ b9b0wqfq
+
+Name: com/silabs/ss/framework/uc/internal/generation/package-info.class
+SHA-384-Digest: Nhx5LBTlcOdNRWFpeE8FvdFXfLUWbO/Lmyjs98NCMnWBWrQ3g4fR8ZMj
+ s8XfuqJj
+
+Name: com/silabs/ss/framework/uc/core/api/setup/SetupExtensionId.class
+SHA-384-Digest: fRKDjoGv+IujLa9iVIYw+HO3C65pxBmky3H7k6ldcS8KggD8UseDJT8W
+ 9aEyviwk
+
+Name: com/silabs/ss/framework/uc/core/api/internal/project/gen/CmsisPint
+ oolMergeUtility$RequirementBlock.class
+SHA-384-Digest: 2tUZVHX9CY1W7fWaENM01+W/iy7dKBo5Hm03FVyYYtHEFS3zJNABbJCT
+ DFwfnmzR
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyProject
+ Upgrade.class
+SHA-384-Digest: AfNa7mDl2unurfBuoQCbkMmB58eXxr7gCidC/DsExxla8yerUkDPFQNj
+ dv0SVj0d
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$5.class
+SHA-384-Digest: zK9gJACNAamNxoI9ienftpe0IaO0EGI6UilB7o80+e4GRyPC5jSU4iGj
+ G+9woRbf
+
+Name: com/silabs/ss/framework/uc/core/api/validate/choice/INoKnownChoice
+ .class
+SHA-384-Digest: t+vkmwpzXcACyB/yaf3AE1ucSk/2SQmrCwrDEgz2DklQh27kVYBdNeYe
+ ag7uAbI6
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcApiUtils$CheckCondi
+ tionals.class
+SHA-384-Digest: jCEQxNJPcaLzLf/e6KVoh/5mVF6S9S89crGQ7p04aG3XzHdmLS/CsJ6r
+ R3Ogczg5
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$S
+ bom$Builder.class
+SHA-384-Digest: bDhhPIq5GQJOzz3wuM72GfbQPfWXcFZ2zJHq8iLxyFZ2fXhO60XtETMy
+ RCqNT9QE
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/CycloneDxJsonOutput$Cyclo
+ neDxJsonAuthor.class
+SHA-384-Digest: XahbRkKYz+efK/tuQgDLQdxtOWyJnZpEBXnuwHNEVzPCw4683bVoXrAs
+ JOX1N9AA
+
+Name: com/silabs/ss/framework/uc/core/api/comp/ComponentId.class
+SHA-384-Digest: 0NFsI1bJawev6ikHrTteSuqF6PcJ4+nnMJMHtDZwEgo1Lo2IcW7ZU3Rd
+ 73qt0dsx
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcu/IScriptedComponentU
+ pgrade.class
+SHA-384-Digest: WBR5pVEAVRFYc6b8PCSAKaiYTbVpqyrCW2V4uLcLYqP+c4rLYartD/79
+ nZlKmLlV
+
+Name: com/silabs/ss/framework/uc/core/api/validate/ApiChoice.class
+SHA-384-Digest: q7UCnVr+V9RQ1OvKQeZVfrhTVIHVJ5FNWKd5cilRIEndIkX9UB3M566i
+ 4hlsDYpP
+
+Name: com/silabs/ss/framework/uc/core/api/project/gen/TransferTypeManage
+ r$TransferTypeProviderImpl.class
+SHA-384-Digest: r39sxNX/Yc/EjZBs5XcIaD/4u6+rCIpx1oVCOSIzygJBSf/488IOLc8m
+ r7hvvJff
+
+Name: com/silabs/ss/framework/uc/core/internal/upgrade/UcUpgradeContext.
+ class
+SHA-384-Digest: TC3JJNdXJ/69C/giBOAp8+3wUDCwenbCGMnpmbIRnO/WE9ugKKqd2JPR
+ 5tPVpX9L
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/SingleComponentInsta
+ nceData.class
+SHA-384-Digest: Fa8ZJQsrecF/6JbxcEyrj8LVAy5oYwROvNnuxobhNgeWpoo1VzNnvrmu
+ GRPhoGKD
+
+Name: com/silabs/ss/framework/uc/core/internal/persist/PersistWarningEnu
+ m.class
+SHA-384-Digest: hLgEXxIlQ269++8OlreQxzRgxW2yJMBgIbvWTBkTgfPgRCwQ0/6LTd9A
+ J/2bjXbU
+
+Name: com/silabs/ss/framework/uc/core/internal/persist/package-info.clas
+ s
+SHA-384-Digest: Dmnv/6BvVB/qB6rh/GiUVMz6LjmQx668RDoJNBMpO1byeCAofhPzGHl7
+ 4/9rB5ln
+
+Name: com/silabs/ss/framework/uc/api/generation/UcGeneration.class
+SHA-384-Digest: 91Qa3ySYeTABz/dC96br2Gt4OlxLmZThN7OjYJfNDAWmCOOny9ISBQpd
+ pZOkdd5f
+
+Name: com/silabs/ss/framework/uc/core/api/model/ucmetadata/IUcMetaPintoo
+ l.class
+SHA-384-Digest: 7pm2MQFoRRKoTuW27ToZxgsHYvuL4QWuwOOvn1R6gkL1H6jmPevzS69d
+ cdLYqkOd
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/Identity
+ ErrorInterpreter.class
+SHA-384-Digest: EbKfHUKFfArsTTxvk7TX2nr3VY3i/op+hHlcFRix3rB3icrtQRyLKLYB
+ +Aii6wGj
+
+Name: com/silabs/ss/framework/uc/core/internal/hack/autoselect/scarborou
+ ghfair/ScarboroughFair.class
+SHA-384-Digest: s4cpnd2vgxcfAs9/Lk3oMhCVOqMoMpD/V8Gn+rhk+NOhl723z7bvWqS6
+ 0007WD3f
+
+Name: com/silabs/ss/framework/uc/internal/generation/workspace/UcWorkspa
+ ceTranslator.class
+SHA-384-Digest: p7UDoLWg5AnUo2RxoC1u9WPGho4TfKqVc9ZDJUCi+0zJnO8CHpEXFzq9
+ qi7BR32i
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ ache.class
+SHA-384-Digest: fsCDJrmw12cUKTGgZ7n7rRkDMdQW5JUFla4o4Z1b9FebPpQ4xYs3C+/L
+ x9CAhUoB
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$9.class
+SHA-384-Digest: CXQJRb+k+ce4A6cC+EklEuNDVfOzmV3J/JkeIapi4whNJqp40lx1+RCc
+ XrsWKYEm
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/undo/ChunkGroup.clas
+ s
+SHA-384-Digest: eC5EuI3viJ3nUo6E8frl7DuemZNV57BFY6i5FjjjOOH9d30eNiVIp+2m
+ S49dvy72
+
+Name: com/silabs/ss/framework/uc/core/api/model/ucmetadata/IUcMetaDevice
+ MemorySegment.class
+SHA-384-Digest: IKbsdZLu0DZ8ERcw1W+RM3T6WESofT0BhAVBIcPAbjFpJMXetMTJe7Ah
+ 14wFgTVk
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/component_cache.pro
+ to
+SHA-384-Digest: CBiFgIEdE5DopV2OUIi3mDiGCdJ7IiD5s61t9ee64GPNmRcbpty7yJeI
+ nX3pBtLl
+
+Name: com/silabs/ss/framework/uc/core/api/validate/sdk/SbomComponentVali
+ dation$SbomReference.class
+SHA-384-Digest: P/sstEyHSN2gbuqUs6TvTE3Dd8QVSZ8Gxczr7i2ZGsQIIA5hoOzLo6UG
+ TF4/u2Yg
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcw/IUcWorkspaceMutable
+ .class
+SHA-384-Digest: 4H6od47YRkaByaEihKRM0wf2PwGUoisyJat7Oge6ytgREmEvZsuueaiK
+ XfN9XhTg
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcComponentExtension.cla
+ ss
+SHA-384-Digest: jsCdjvVBBE0s3xvFcF4bS659n4Pr/SBknp5ZrzPOrE6PhEKQk0ogt4Ka
+ 2GY/ElA+
+
+Name: com/silabs/ss/framework/uc/core/api/validate/choice/IExclusivityCh
+ oice.class
+SHA-384-Digest: ShylC16KrHK1HVvJNrzr3ismupHbHNNBwBvwYjXYKv/7c/tQUpmIpRs6
+ RsJ5CsE8
+
+Name: com/silabs/ss/framework/uc/internal/project/setup/UcDefaultGenerat
+ or.class
+SHA-384-Digest: dEkRp6/R642zenBbWkaZbBEwlZQx3kmujpr6XHu9QU73D48Yb9lI9VUS
+ 5G5PZFVs
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey.class
+SHA-384-Digest: RyxbGNI46JntnU5wdXpmSBN5AqEHt4bGMPGN3WJSQHN3DqhS+h0yWdON
+ YaQe/a8/
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/UcSbomGeneratorModel$Sbom
+ Data.class
+SHA-384-Digest: GblgHZQFBf0lWtaT70hkpU0BLkYknfo1q70qKD0rGRkbgG9XbC6PrXkF
+ 7oxXb8sJ
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcThreadingGenerato
+ r$UcSetupGeneratorTask.class
+SHA-384-Digest: paIkq5VG7M9ZA8ol31h3b0C5puqP9rntCgfxaifWJ92osh/GZ48B3DYR
+ zME3Iiju
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$28.clas
+ s
+SHA-384-Digest: hRKveJG7njQlYRBEi3FyeiM/LMP965hkC0a61qfUXg4xH7RGXovI+GGH
+ 9MWSoByc
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcMappedToolOption.clas
+ s
+SHA-384-Digest: u0DU2bkO1Vl7YHRoJfchKYGq+vu+/iil6luw5wcLWFMo8ICjoFQ/Iob9
+ WOyXBqEs
+
+Name: com/silabs/ss/framework/uc/core/internal/meta/CmsisAnnotatedFile.c
+ lass
+SHA-384-Digest: gViNGoOAKRonTYXRJYT/IQD1b+DLjBesljKN/x+oxV1LqVOuoVP05Gza
+ jWVYE8MW
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/CommonParseAlgorith
+ ms$UiHintSource.class
+SHA-384-Digest: PJ6STt+v4DUbEWMke7JLuVub5V7/+vmm9vlKvXiImsb6+seGAAK+U2pc
+ 27WZn4p+
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcu/IUpgradeRule.class
+SHA-384-Digest: 4O4wya9mi8EcGssvN0wLv5n36P6rI7OIs379nXsIS6L+kCSg7S7X21wo
+ 5VGwjlzi
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ onflicts$1.class
+SHA-384-Digest: hDePGLOyZhcKlA2EDglmbmHB2AUB00RzLksUkS/kupPgugqtuU7+C64H
+ k/xIaOBs
+
+Name: script/py_runner.py
+SHA-384-Digest: FLUAR0D50YuJ9Jq5xBdvNOt8v3ZU6cpKtsU81grgsP7Fuhzwo/JEyl4B
+ afsA4bU/
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/ISessionApacks.c
+ lass
+SHA-384-Digest: Cv67lk4ozadn2PZZApy8A9vM+twnQTRPFAdogRaNXJrwnZPa+GKL2V/e
+ TA0Tvawr
+
+Name: com/silabs/ss/framework/uc/core/api/example/SltConfigSdkDetector.c
+ lass
+SHA-384-Digest: vAE+kKVDP8KsMQeZUKlYgNSIF3cCx+qQh+ihP3EmTKup7OQV/WD7OCUk
+ dg2FDoqn
+
+Name: com/silabs/ss/framework/uc/core/api/IUcAdditionalFramework.class
+SHA-384-Digest: Hs1vD0X5yiGEhrYVw1UHmPz4RU3sxLX6Z5A055aVrIUHoezqUA///Vgq
+ 88BlvnM9
+
+Name: com/silabs/ss/framework/uc/core/api/IUcExtensionHolder.class
+SHA-384-Digest: AoYeETm0U6yn72EpQhgxtHdL9UkZr6xXTm86p0I1DLW2iL/Z3uEeqmKv
+ wKTTuPGU
+
+Name: com/silabs/ss/framework/uc/core/api/UcFramework$IUcFrameworkResult
+ Container.class
+SHA-384-Digest: 2BrM1OP/MkZyVoazUGDbQT/EiEYmYaZOlXNogDN8rKLF679ghUMUMX/y
+ kz0o/TjR
+
+Name: com/silabs/ss/framework/uc/core/api/upgrade/ProjectUpgraderSetting
+ sBuilder.class
+SHA-384-Digest: rNjnAuUmQw0am15DmzDmATC3qb6e7Di+JTVXGLw6BrBH3qYtXUQ9S69a
+ roZulnZ7
+
+Name: com/silabs/ss/framework/uc/core/api/exception/UcException.class
+SHA-384-Digest: Eb8F/q/D330tgn3DRDBabghtw0qTS4CGUTuiL1TggZqd/2WrOfXYsirz
+ 3nOEw332
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ ynamicValueOrBuilder.class
+SHA-384-Digest: XYfw9RqES4KEGGj7bVvQFbYprZfxN1HTobrq/kYXSH9KT7DZ6szUKluw
+ 6Wo//L37
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/SltConfigManager$
+ CacheEntry.class
+SHA-384-Digest: Zj90OQUJlvKdmFp0K/ruFiqNJ1ExcK8sB3WnU1ItWBvnZ2qRViK6kofD
+ FrSQeOTb
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcp/IProjectComponentRe
+ ference.class
+SHA-384-Digest: +qAs0cvt8WhfBC7Cyhj8ZNXXnzgt0xc2PI/dnsOQUlfB3Xb3AIKbHcBU
+ ofU6M2pj
+
+Name: com/silabs/ss/framework/uc/core/internal/validate/choice/Exclusivi
+ tyChoice.class
+SHA-384-Digest: besK76lqn0qgbGbMY/fX++bOrqXwaDaSiNd83rc3dldHKMP/hTrHBoUQ
+ tQNz+hrb
+
+Name: com/silabs/ss/framework/uc/core/api/slt/ISltConfigManager.class
+SHA-384-Digest: yAVrvcb57jVd7q0ISrAlsqCgRJVPQP2YPHn4J8TLE6GlBuxrVJIL/XY2
+ TULdc+/+
+
+Name: com/silabs/ss/framework/uc/core/api/validate/choice/IApiValidation
+ IssueChoice$SealedInstances.class
+SHA-384-Digest: 0g6gG0lfjBqlKzkzykI60YgoHLMW28Con0IJqa9EXMHIOdv4S0IjxlKi
+ KBOEm8Er
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/parser/InvalidSlt
+ FileException.class
+SHA-384-Digest: XRwNNMfDjuDU+cTcLXlttzzaWnwVlVb1QQfDZAO2CjdI6gZExCqQG2zN
+ K5evL1Th
+
+Name: com/silabs/ss/framework/uc/core/api/editor/EditorMetadataStoreExce
+ ption.class
+SHA-384-Digest: fgZCsrU7yIklmRWmAPz3e3c1bFBu+kxsVRxe4VT0R3FxXCiE51ZFj2+T
+ k5tuQAod
+
+Name: com/silabs/ss/framework/uc/api/project/UcProjectUtils.class
+SHA-384-Digest: xaGrom14Ka8J9u6zSk25b9X/c9iOqIzkjsE0jXTXoqiT+VVUVZ7J9O9U
+ 9yvcYVre
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IOverrideable.class
+SHA-384-Digest: 8mvXZFfhhBJlj0sIUvH+PTNIuvnZR0cYskxO0vTwZXkLLwOXJFm0Xare
+ k8Jf5sk0
+
+Name: com/silabs/ss/framework/uc/core/internal/model/ucmetadata/package-
+ info.class
+SHA-384-Digest: bpNbH+7OegYTjLMJ2IyxpWXS/VqyJG78gBjOetSMtmgeg5YzeZKlnERL
+ LosKyE1S
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/Recommendati
+ onSource.class
+SHA-384-Digest: OXlWDPcVBJ9Whn5g5atinVkD1cbOmsPX+OCWLgyT1Qn7MJEvz1cM+tCP
+ m6yhcjKZ
+
+Name: com/silabs/ss/framework/uc/core/internal/upgrade/ProjectUpgraderIn
+ ternal.class
+SHA-384-Digest: DfflnJ4HIOtZFGriSc9aYHcMEUfRn6CD3Lr9Iu8akmzVhMlCQ5pLLgL8
+ II5mNveR
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/parser/SltConfigP
+ arser$SltParserState.class
+SHA-384-Digest: FP5PjZxl8Z62BTWOMeBtWCsmkcpzwNgQJropMkvnDrnW75PKzkk1DYmF
+ FkfdGZHZ
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IOverrider.class
+SHA-384-Digest: 4ZrMlTxcGrYqJ10Yv9chbtsWcNpP7xcXUf0o1c3/Zegfgf6G2G/h5u/A
+ INX53Ie0
+
+Name: com/silabs/ss/framework/uc/core/internal/model/ucmetadata/UcMetaBo
+ ard.class
+SHA-384-Digest: jWAUreXwV7tdb2WdwBs/ZwpYUwuhNdahGmaokXjPbTZ+YL6K5TKXBJEK
+ Bg35GlcO
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcComponentContainerMuta
+ ble.class
+SHA-384-Digest: nYzGZhOTyJwvxL7n2gX4OEX5iogezQQo8kIOa3lplG7qYDQqQT2RnIws
+ wN5hD12J
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/SelectionCho
+ ice.class
+SHA-384-Digest: 2UqdDgUBt/2u+HHdbRpWTvcAJAQJ15XdcmccpeLjgpRN/BbiUv6mAGEk
+ 3ZWZo3Nx
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ emplateContributionOrBuilder.class
+SHA-384-Digest: 4FsZfaimxtf42x5kQMkl+ZxK331ox9YemkQP7r3I+UT2qBTqNdaaYRYu
+ JL8XVYWl
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ oolchainSetting.class
+SHA-384-Digest: 01LcKhJKUMNoplR4CEGX1nS6i8Hdv3vWEu8CT0SYvdXB2LlJIXfcOQRp
+ V4tKPf9F
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcApiValidator$UcApiV
+ alidatorImpl.class
+SHA-384-Digest: 6Y2hseiAbKfr5QoLdRMJJAQsbPtXV9Y3KJXCO8bDcnQZ/mdEmitfOdpO
+ khOCeGxp
+
+Name: com/silabs/ss/framework/uc/internal/validator/PythonScriptValidati
+ onRunner.class
+SHA-384-Digest: 6D7hxMiQmLiG86BWPiMkLDrRddHMnrQUec9KE1Vvj6kHqJbpNTGMMLkm
+ JqbzuJQ7
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$S
+ ourceEntry$Builder.class
+SHA-384-Digest: ZX74Li/zieQ0RGBITUxwpaPkdEgd8Or8/oIjYY/XM39TNSfi5nf0vsmn
+ Bxds1nsZ
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcw/ISlcwRegistryMutabl
+ e.class
+SHA-384-Digest: DHJ2IUY68DNh3OkMBUP9g/uzihkpMforc2O3c87WnjW6AmHx/PqB1H6F
+ jGl8H2wL
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/parser/SltConfigW
+ riter.class
+SHA-384-Digest: GGUkIFKn1ZUugDkWfZil4MZOmEMBydjNwgiKlZK3+Oc2PioaFzH/XPq+
+ 7640BxVs
+
+Name: com/silabs/ss/framework/uc/internal/project/options/package-info.c
+ lass
+SHA-384-Digest: +wtzAW7/U6UpxlIpa8vEn+8AjMLWHCatPdelDq3KmAIquXuU3rcggxoE
+ //vuwyxt
+
+Name: resources/json_schema/slcu_schema.json
+SHA-384-Digest: YbvO2AEx+cIRmNkAvFTaUdpCqYg4EW6MTVnrvmqBJAEkEUCFjzyi+cTs
+ wt63T2Sd
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ emplateFileOrBuilder.class
+SHA-384-Digest: wYabxw5t3q8T/wZXQW2jH5uzpbIcFvfCuGC6nHOTvS3cOoGagcBrGooA
+ My+hJae1
+
+Name: com/silabs/ss/framework/uc/core/internal/persist/PersistedCliConfi
+ g.class
+SHA-384-Digest: hfOA+PygNFspghTIoZE5abcyoXiIPw97kaVQQnuQvcV5/oxDbsxcPSAR
+ FQhKP2rj
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyConfigu
+ rableProjectRef.class
+SHA-384-Digest: lYgehr+Qk/FTehHd5hN+XuGyZI9A6CNx8VabJMvIAmLhzzFgQd11pI6I
+ Jc19KF3k
+
+Name: com/silabs/ss/framework/uc/core/api/project/gen/TransferTypeProvid
+ er.class
+SHA-384-Digest: JNaK6AfkBr/eCud8ua+Yl62h2pvyQ1PTg1G0jsGSy/ee1GZB5kz6VQGq
+ 8mnHFLaZ
+
+Name: com/silabs/ss/framework/uc/core/internal/toolchainsettings/UcToolS
+ ettingsContainer$UcToolSettingsContainerBuilder.class
+SHA-384-Digest: FkQj+n/RvuWjrpD9c1cBeUTxklR9z3KdjfIwZK6KwCbUlN/xbMmGrxoh
+ qjFRF64e
+
+Name: com/silabs/ss/framework/uc/core/internal/upgrade/IUcScriptUpgradeR
+ unner.class
+SHA-384-Digest: cx/xiOarZyGoKuPRTd9qAyFAnJ4OXku0phOszBJ26n677gOvtPaaVQ5Z
+ uwixSPV2
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcu/IUpgradeRuleCo
+ llection.class
+SHA-384-Digest: 1c6roTudr+9S63oVO8gMdnGoZB8lC8lmVeqHVHv3e9pSDJlIUaw0npL6
+ dx+8kedN
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$29.clas
+ s
+SHA-384-Digest: 3gLmREw8Q2STyoTThdUZOGtNFOSV+dNfVWrJhbnbABSH+xaViYGC+331
+ wTt73u2T
+
+Name: com/silabs/ss/framework/uc/internal/api/project/setup/ScriptType$C
+ onfigUpgrade.class
+SHA-384-Digest: rOymICH9UBzdsHsfhiNT3f/ZJzDrOuaGmXgLVaRCzR0zJpZJ3hFj2cC5
+ 9u70meCT
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/SpdxJsonOutput$SpdxCreati
+ onInfo.class
+SHA-384-Digest: yjm1X4cijYer2aeN2v7/dU/56mBKQwEjtp6Ck1CJdfz/QlEWu00is3R0
+ ZS8uMoN/
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcu/DeclarativeCon
+ figRule.class
+SHA-384-Digest: kw0urfkMwm4VxaBnWPG7tfGTti/Jn6shAFazSPDSzX02Z/MEr2hH3t7/
+ ZxlOHTN6
+
+Name: com/silabs/ss/framework/uc/core/api/slt/SltConfigUtils.class
+SHA-384-Digest: 060R6HzpegmBZGZiBdmEWKXtuAB1OLpus2fGnryKZGou//IXEYb9wNLl
+ xybLKYZI
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SdkParser$Exten
+ sionFileParser.class
+SHA-384-Digest: VTi65Frhm2cczs63iqtk1SY4u4Ad/VU6tatp3Qm/1LWPtByXfeJQ6iQ3
+ f4/EBT1a
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/apack/AcSystem
+ State$AcEqualityState.class
+SHA-384-Digest: NJ/lMnRnDVoEoyexETt1IklbKHp+2PBj1r89nX7YQQoe7S4gg+sJPZzl
+ G9I0pB60
+
+Name: com/silabs/ss/framework/uc/core/api/model/ucmetadata/IUcMetaSbomUp
+ streamSegment.class
+SHA-384-Digest: 0AO3ph5UfMBCA1TlM8h2x/spdubiS0RpMNbc0/zuRIETVQhe5AWCKdx9
+ U0q57PGJ
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$33.clas
+ s
+SHA-384-Digest: c6IoKGOcLHGUNIYqGdoATfsFc6kMiY02RXQGD+euAEDMiwFViFixuKmF
+ Ddp3jFjS
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ emplateFile.class
+SHA-384-Digest: niZvywkhtuP/WCOJV7ZDCgyvOPSMiDVyDVL+gYLvluid1B6m8iWdUera
+ qaseRf3s
+
+Name: com/silabs/ss/framework/uc/internal/project/options/UcToolOptions$
+ Linker.class
+SHA-384-Digest: bZP5xuW59z5yyULDMMmClAmITw/ml1vXGON4+z3DuisQfUjNI2us/F5l
+ Wb7JGeF/
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$O
+ verrider$Builder.class
+SHA-384-Digest: YLkS4SlUjSdDskUvJ6Wee4wgChARih6x1X4O2KtVxlA6ADbvnjw+7VGA
+ DBGrp59a
+
+Name: com/silabs/ss/framework/uc/internal/context/UcProjectState.class
+SHA-384-Digest: s5YEAMKems6LJyHnuP7/LUzpWTtibkcVr0wqgzeMOIoANdkdavW0INX4
+ /9CuT2mT
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcApiUtils$CallApiExp
+ ression.class
+SHA-384-Digest: yQdByY5Tqn21yUiWol5/rBEbO0itI722iV3L/7+BaLrZyx2oLgvCHQqc
+ RHiIS5mo
+
+Name: com/silabs/ss/framework/uc/core/internal/api/projectfilter/Project
+ Filters.class
+SHA-384-Digest: WnzEBZZtiErRrZdNSX9SnHmz7jynBNVHMzT5bYo22fwY6fMnXccWHOkO
+ mcFgL+E3
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/UcSdkExtensionManager.
+ class
+SHA-384-Digest: 6hG6X3kDJePVoe1QpxM2cu/KPV0T6MSe+wWTVcwNC2pUJx95eqmReJNx
+ mLfa8Dmk
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcThreadedGeneratio
+ nUtils$UcThreadedGenerationTask.class
+SHA-384-Digest: dQiVacfF05qOnl3frnGM+ER67DzUvvMqgxKO9EjjQ2R3gGv82KukPtz7
+ 515oRKdO
+
+Name: com/silabs/ss/framework/uc/core/api/ImmutableConditional.class
+SHA-384-Digest: VEJpin6vLV6Ft4Q++M9q75D60ouzUQOVZ3AE7glUzpSQzdgK9wgBWDDg
+ v/3e/3r9
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$E
+ ntry$1.class
+SHA-384-Digest: eqMCUOewQFeExd8fKZGtMOZk8L7w+8vdU5KkJQ00Mskyrkzp5v/4QUwR
+ FchHywqB
+
+Name: com/silabs/ss/framework/uc/core/api/exception/MultiExceptionContai
+ ner.class
+SHA-384-Digest: TpGoRmcBSMkcNWOvv2Qx9rgqK+RwF32ZhhkjLD7TRxQxsfmdJKAYTSju
+ 76cI9/5D
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/CycloneDxJsonOutput$Cyclo
+ neDxJsonSbom.class
+SHA-384-Digest: DD8mkxZO4QJN8jqgTafMvUXl5yn1Jkd4kg9Q4ZI5GY8luhRiVhB2WqbI
+ Xa7mE+o8
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcw/UcWorkspaceInc
+ ludedProjectSlcw.class
+SHA-384-Digest: f5c7AMPuw8h4BxBneeaRzF7L30NmgGZUNTD/IJd9RcLxFgN/elvBjgJK
+ NrXH2PNp
+
+Name: com/silabs/ss/framework/uc/core/internal/model/ucmetadata/UcMetaKi
+ t.class
+SHA-384-Digest: pdvcbWSZPAtXfnIxj1xSKvie2IPDNPgbhvQm1ccyGHHkle5ULsdOv1Aj
+ jwl4sEjF
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/apack/AdapterP
+ ackAcData.class
+SHA-384-Digest: 77bEP2+ddP1lSVFLEBwQdMsW0vhiugae7QZEvT+nOMiwqPuY0CdkvWvL
+ 6b8adnrb
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ onflicts.class
+SHA-384-Digest: 8erxioOB5t0z5Kn9QeLYUQXI2kUBo9j1nAb9NpQixM/vuWpR981+X5sg
+ kR30Qxur
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/IUcProjectState.
+ class
+SHA-384-Digest: BCxOvpdHWWdmO/DnNPCsxQUe1mF8GopKAeQ553sLfkWWtAh3SGCdBrLe
+ RxDC1yYr
+
+Name: com/silabs/ss/framework/uc/core/api/comp/RecommendedInstance.class
+SHA-384-Digest: brGnQgP3kSKw+ZhB9FxAVXXMsIHCH8TF582xOCWHpTBYdw00M57qqQ6g
+ 8IGY0Z36
+
+Name: com/silabs/ss/framework/uc/core/api/comp/SelectionMeta.class
+SHA-384-Digest: FHawNmmaRljKEKmGCdySIdBGnYWOoUZUPkfLUMoh1ljfcfxllQD8fozU
+ /nnCzQjA
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$S
+ bom$1.class
+SHA-384-Digest: ztmdeH1cgV8Dmfla6pccvokqDHi8q3DdtzCpGkDSdd+bDJUpAlv4aVHP
+ tTsBJd8q
+
+Name: com/silabs/ss/framework/uc/core/api/comp/UcInstancedComponent.clas
+ s
+SHA-384-Digest: YeEvrgEQivfC99OY4CeLs/7Td2A3/emd/7smXESMeOdkbUzALn6AbsfE
+ sk4RDXij
+
+Name: com/silabs/ss/framework/uc/internal/project/options/UcToolOptions$
+ GeneralCompiler.class
+SHA-384-Digest: 5iZxuCwHlOQ4GeG3It3zmdKYlSCE09xk8r05OeIarnFMbUjvWBbDsSRd
+ Zx0Esmyd
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/SingleComponentInsta
+ nceData$DefaultState.class
+SHA-384-Digest: qvR5w+Td8gajgwwC6+ZJ9OQdU8ZxhwT5u7ROKxSxjtWcftEQ0xJMOfqb
+ dZq4hdvX
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$M
+ emorySegment.class
+SHA-384-Digest: E7prm44aaGZuhLKeX9wEfc8ws4bykMed1Rod7lzdJd0MII2wiDyKmiqy
+ 5oF3+8VJ
+
+Name: com/silabs/ss/framework/uc/core/api/Condition.class
+SHA-384-Digest: gyrPzAZeywCHLbFkGDy4ZO/v7Xxa9o5J47JgMn7zs5atXNdKi2xsiK/e
+ IgX9expP
+
+Name: com/silabs/ss/framework/uc/api/sdk/package-info.class
+SHA-384-Digest: Apu/ScL+p0T/uROBnAL8CuC7b398oBpdhwIJmda/carO4i80Goq0RK51
+ GHObbCGg
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/JavaTarge
+ tApi.class
+SHA-384-Digest: NSEbWnnwYLoaxbGCxi74MeeGZaAnAUntMa1E50XujVRWA/SQkuVVU9SQ
+ HHAGkghY
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/ParseTask.class
+SHA-384-Digest: YyA/FUGv++tD7/csW2Laaxm/LSjh84t5HTNqB672d2cHiNqS7+IolPbk
+ 85vUNAs8
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IssueMissingInstances.cla
+ ss
+SHA-384-Digest: ilRSIBx4n/bRifP9svP7FrOKzvmOj6Uwbb/Y9x2uomnCufARnuAaO0Y0
+ gH4e81GR
+
+Name: com/silabs/ss/framework/uc/core/api/IUcBackingStore.class
+SHA-384-Digest: 7QulqjfVYjNIMaoxAmudMnqscG98PpgPtfHb71SdB/ttFDy6aam0OuOj
+ AWE6slBb
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/UcJsonSc
+ hemaUtils.class
+SHA-384-Digest: DyeMmEgCvRHzHc97xOTqCT7H+kszsWKR7OXmYytWtLRvjrRBPKWR7hiW
+ BHKvMEa6
+
+Name: com/silabs/ss/framework/uc/internal/lua3/validator/LuaTarget.class
+SHA-384-Digest: mopoGkRsRCmxBeD7oMf+DrVSa4eVsMU/JG/aF+VuVDfKvFr/2af3PhNy
+ xafVS06R
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/UcHardware$BaseH
+ ardwareMapper.class
+SHA-384-Digest: G//kdr8r+q9dXtAH/cJs/HAUxrjXnAw+5Qn46zwxjEwl1EOGlggyBtNz
+ YhK6HDuT
+
+Name: com/silabs/ss/framework/uc/core/api/setup/SetupId.class
+SHA-384-Digest: hZCzJ7pTSqprcnqivfrOknsoT3l8Kx4H0sbjfE9xjwDt7MadGn283RqX
+ 6sSepMr1
+
+Name: com/silabs/ss/framework/uc/core/api/context/UcGenerationStatus$UcG
+ enerationLogger.class
+SHA-384-Digest: JG0ewR66aNB+DFUKteHznbqXuUQbd77I9oYX+5rvh9gjAHGtPaCgiozc
+ E+JO2xck
+
+Name: com/silabs/ss/framework/uc/core/internal/api/validate/UcApiUtilsIn
+ ternal.class
+SHA-384-Digest: hY1dbRJ6IWRbpQHzO+1NoqCEGRmjxbrecAkXyUwnGRDklmTwDOftt4nX
+ SCsQfFzk
+
+Name: com/silabs/ss/framework/uc/core/internal/upgrade/UcProjectUpgradeS
+ napshot.class
+SHA-384-Digest: sW4KgGjolOYCmOirlZt4em6zEJ1RzRCwOImNrf8cYzk699+pBa/DGWsX
+ +SUSJC0r
+
+Name: com/silabs/ss/framework/uc/core/api/project/gen/TransferConfigFile
+ Exception.class
+SHA-384-Digest: 3vXAHDLF5ghGYJz8hT8btNokGAMVBw3/2K6WBHGG4w7RgFcWCp9BAIvJ
+ dT6a9wAo
+
+Name: com/silabs/ss/framework/uc/core/internal/api/log/UcCoreLogger$UcUn
+ ifiedLogger.class
+SHA-384-Digest: xhHgGKabhxbv9IcyY0Wya6skvolvQaCOqyYumirctR1a9eWWobeNwidG
+ vge7eyr1
+
+Name: plugin.xml
+SHA-384-Digest: pfkLoNVtGvx/rplKIBc2+wkvaZL4dh+Nf0XNcWTnaJj8DO+/EZnDt1mQ
+ ejZPClUn
+
+Name: com/silabs/ss/framework/uc/api/sdk/IUcSdkDescriptor.class
+SHA-384-Digest: dbihv9UlTUy7OR+t9X0f+jMD3zYas0eZT6nfNMhnuxa8ERefecYiTQSU
+ llCNNLbB
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$6.class
+SHA-384-Digest: Qa3+hdKm2uycTdH31mUOF84z2K/KBBFQ33yDUNSENMHckHQinhfLhvVh
+ IpVag25b
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcu/UpgradeRule.cl
+ ass
+SHA-384-Digest: iQt405RNbw4ulQ0VjhGdcA5HROLOYEXOZ/vKJ3/xiJjJrL/KOS6HHJi6
+ 2qjsZlE4
+
+Name: com/silabs/ss/framework/uc/api/validate/ScriptValidation.class
+SHA-384-Digest: 6p0UU8Gg6gYXXnFBNHrUp5V7f0VID0RaR/UxaySuT+9DfLlTiscH5EVS
+ U3zPzLpy
+
+Name: com/silabs/ss/framework/uc/core/internal/api/context/IUcSetupSessi
+ onStrategy.class
+SHA-384-Digest: 1nIunfjlfLMUeCDZ1GM8Gjd3ucSwkRzFqmtXcF+cXXq1292hpEDr/YsL
+ /a2iYkAH
+
+Name: com/silabs/ss/framework/uc/api/python/validator/ConfigValidationIs
+ sue$Severity.class
+SHA-384-Digest: IhGmLqadrKwLIVi9cO2+9G/lLjxhXxQI4NhSsfNfHplNgv8IyE6YcnsV
+ vg5XOTaK
+
+Name: com/silabs/ss/framework/uc/core/internal/project/UcProject.class
+SHA-384-Digest: cLU2kwJ3LBm8UBLl9Mw8zVcf62yQ5l6+gmFjp+H+cIin6wVrd/8PLxaB
+ 1Sp8KJ9G
+
+Name: com/silabs/ss/framework/uc/api/project/IContextCreationIssue$Issue
+ Type.class
+SHA-384-Digest: KQhr9kX90D3yKZmuBaCblSZoXP6T3Mrd1xjeweuR6gWr3bqcYsz2N67n
+ lKkkRrPi
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$S
+ ourceOrBuilder.class
+SHA-384-Digest: XbELF9Wjm+4Vhfz7ZVeLJxv/ASBDpSArfExfmEVH78KpEhb1nbRqX2x9
+ 3n8hs1MD
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcProject.class
+SHA-384-Digest: 2J4pCr4A74nZhOI+oqhAx69/BzdQ3FFGmwy1NKjxGLz2lzNV0zvToQuF
+ eTobXcgJ
+
+Name: com/silabs/ss/framework/uc/core/internal/upgrade/LastGenProperties
+ .class
+SHA-384-Digest: DQ2+wc3z1kM7T+ie6f+AoKQD/1xv6rxJfRzYQfzrPEvFemLXxqRb1bJI
+ aeEmCA83
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$S
+ bom.class
+SHA-384-Digest: 6Eb26aN1RYq9u3F9heSoKnBChUXNNZtYGCBOCXlf7woMjw4Z+e6co0s5
+ zAH90fKB
+
+Name: com/silabs/ss/framework/uc/core/internal/model/ucmetadata/UcMetaDe
+ viceMemorySegment.class
+SHA-384-Digest: mjAai7uMl7/cBM0c7GoxcsIjUHr9a6ks2EOLC11v/AwUZCLwPFBGj3nR
+ 0wG1XJHS
+
+Name: com/silabs/ss/framework/uc/core/api/UcFramework$UcFrameworkExtCont
+ ainer.class
+SHA-384-Digest: /BOhEmcg1t+GzZn5nxx7s/lF5hOlmlRXD7vA6X8DxXFSVlijSyoKLOLC
+ nbeGXwye
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ oolchainOrBuilder.class
+SHA-384-Digest: sSMzX9D+DYWEt8pFJlJsFcYf/2uUAWCn+RL8FnNpkgD0x5KuQ3aL5zIq
+ T43SM7n6
+
+Name: com/silabs/ss/framework/uc/internal/project/ProjectSaveResult.clas
+ s
+SHA-384-Digest: qxNxp9sDScDWkVyUl4wtVDM5LsXS87R+WlWU8Aug31xKabE5S44zv734
+ vgmscqkA
+
+Name: com/silabs/ss/framework/uc/internal/project/setup/UcProjectModelTr
+ anslator.class
+SHA-384-Digest: dpwpVBp2hmFa1ViKMO1JU6fhL4mhsDKGlVB4U7KWMiBOlHao2hQt6Mzy
+ RW11UNmW
+
+Name: com/silabs/ss/framework/uc/core/internal/hack/autoselect/scarborou
+ ghfair/SolutionTemplate.class
+SHA-384-Digest: fRiPocd75E2990hJPLFoMG2spgPLV6w3p4SX4T4OiRgsh2MZGaIxTz36
+ 7zG0uKpX
+
+Name: com/silabs/ss/framework/uc/core/api/upgrade/UcUpgradeResult$Status
+ .class
+SHA-384-Digest: pIzWydo+z8Gy+xWkJQPFtVdGmg/QH8mZDEHeqCe39dd/Zg1BDgJOJ9yJ
+ t/a1uoJp
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/solution/Res
+ olutionIndirect.class
+SHA-384-Digest: DxCqGDlXQ39PNHhkBXZYjwrJhMFi3ZGkp4OiYdcrTnw/G3SNQOQ7sDVN
+ tqd6WuUu
+
+Name: com/silabs/ss/framework/uc/api/python/validator/PyTarget$TargetTyp
+ e.class
+SHA-384-Digest: 70TjH8myoSBR5m5V0jymRka9ObIA24zR7AirXcg8E/mD4A5X1O0ruXyV
+ +esjDRpy
+
+Name: com/silabs/ss/framework/uc/core/api/gen/IUcGenerationContext$IUcCo
+ mpatibilityKey.class
+SHA-384-Digest: waSlM+tfoYRgoCZXTbGlSw/R+W2Lt3G5ku72wel2gen+vnYLMF8XhSil
+ J9CcJX0y
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$5.class
+SHA-384-Digest: UcF82X9aysg77fpktIoPb5Xl3fZ4wuGZq30T4ZazJdkKhxutbzAU+/19
+ m1W2oFMZ
+
+Name: com/silabs/ss/framework/uc/internal/project/setup/SlcToolchainSett
+ ings$SlcToolchainOptionSet.class
+SHA-384-Digest: wI5JK/ZEsGrrZcLxxLHsZq6dLzIwgOGsRE5xZMF4JTjSFxhzLKWJWFr9
+ tOjoQBg8
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$M
+ etadata$Builder.class
+SHA-384-Digest: Oqd6jF1DdY4BYMrBJM4ZZyi8hdqM2wr0xGEysU+lz517w3nPOTdlX8Ob
+ Io9L8kRJ
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ onfigFileOverrider$Builder.class
+SHA-384-Digest: EJ1H/9A4wE0XF7zQpoQsQlKn/gxkvNVWMtqWR0P0cVH5O0ek86dAM5gk
+ bsu2OBqJ
+
+Name: com/silabs/ss/framework/uc/core/internal/persist/PersistEntryStrin
+ g.class
+SHA-384-Digest: sgQ5+B45BdOM8fsHastfX5cebSqPC1r4+2d91B7kdM4xL7/dxP8yku2r
+ pWJWbBuI
+
+Name: com/silabs/ss/framework/uc/core/api/IUcFramework.class
+SHA-384-Digest: Bl9sCuz9b8L7VNYXGrfdIFlpScqQTh4gtlFRyJT0B446QNxGalKA4q/4
+ L2ydio+D
+
+Name: com/silabs/ss/framework/uc/core/api/gen/IUcProjectGenerator.class
+SHA-384-Digest: 02xhZGKSIGPsmbu/Th38umyXyXzsG0OEg2Lmp7MNWrfoBd9h5hSn2vbz
+ yKWMoO/T
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/package-info.c
+ lass
+SHA-384-Digest: 3xz2Chlxgr+7noTcrEjpumsNswA9+qPQ5XhFd00vKUxvAymWWqiWiVOq
+ kd0vN0Y/
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/UcSdkProvider.class
+SHA-384-Digest: nDLRJLlWKKF6hV1FhV8OZDVWNbA5+t8otAvzPTbQ+ZW35Or0lepXDjqT
+ mE9xb+Rg
+
+Name: com/silabs/ss/framework/uc/core/api/context/UcGenerationStatus.cla
+ ss
+SHA-384-Digest: /uq2knfZOK/yWcOCaFLWrs8SL5+Zrecf8lP0M5b07wNPgXY4GzmGS0nN
+ 7FFHbqQB
+
+Name: com/silabs/ss/framework/uc/core/api/FrameworkId.class
+SHA-384-Digest: x20aMTFsc8+1eUKVOafvhFZuXLcGFoJFeZh4aAWJm648V4CPY3lX+hDb
+ 2lxOy/Kj
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slpb/UcPostBuildCon
+ stantSlpb.class
+SHA-384-Digest: 2HaDG3a1YPg3x6lDQse6/+zXIe3csiGMKEvh3UqRCZzEdyPONzVyJjNm
+ UOeRxsV4
+
+Name: com/silabs/ss/framework/uc/core/api/validate/sdk/UcSdkValidationUt
+ ils.class
+SHA-384-Digest: PiT3JvZlWSH08RgvU/X1ZHZGPzHnCEGSBiVcg+N1phrwOU2qrPNcqB+V
+ pwC6BEXW
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$25.clas
+ s
+SHA-384-Digest: lrb05uD8hkSqbr46v+MHdUY9Eo6RzMb64BkXxUTB8O5HfLLXfWgRwZL1
+ HUFyBM76
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/SltConfigProcessi
+ ngIssue.class
+SHA-384-Digest: hDZZ8yDTDDn1meiOs8TKGoEvrzk+H1CIHE9RYDQJEjeJz8t2PKH/YWoV
+ K+MDl0OV
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ onfigFile.class
+SHA-384-Digest: BwQz14ufuC7W/LwUmHvjvR1AI34ayEtntKEax9kPoYfzStR6RHoNKzWA
+ AAeKOzNT
+
+Name: com/silabs/ss/framework/uc/core/api/validate/IUcApiValidator.class
+SHA-384-Digest: HQdGM9p9m8eF0srWFvOiYQb4aozXv/uQHRxJVy//+ilhKCO/06t99IEB
+ X2yrCdgR
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ oc.class
+SHA-384-Digest: Yp6+VY2uCjVhtYQSaD/A/EypibHycCVdudqqoSIX/SmXW0IaAjklN0a5
+ hD6DhXDs
+
+Name: com/silabs/ss/framework/uc/api/project/generator/RichProjectFile.c
+ lass
+SHA-384-Digest: +2nXiqzbkcExsQ2iHp6dgG1/QWjQsCj0wh1YDyms7HM8jMNIMe0PXfyh
+ +nwyKoGm
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$1.class
+SHA-384-Digest: Rmjbw4frLfRjXmrI53PXco0yhMfoBslwzh7SOCgyDrSRkuDX+nJLpiWW
+ 7V+RUJwn
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcu/ConfigurationD
+ ualUpgradeRule.class
+SHA-384-Digest: JwmhQHFyd5HlELLrR2zhjBNE08qvnM5a7LQTPQ9DYkiy2xKVt3b3nTJ6
+ 4qmgCGvT
+
+Name: com/silabs/ss/framework/uc/core/api/validate/DeltaSet.class
+SHA-384-Digest: 88SInsJKmCpsYQVWE/lKMgmS5bnJNBlaZxiGrBU2SUfq/QhxdBzi847e
+ 0h6n24Hj
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$O
+ verrider.class
+SHA-384-Digest: GOEVGEiNjZ0fg8CRKNUFyvTLMP3I2s8uj8AUWTqqS6oPejWxB8uXiz4a
+ Q8+drsR/
+
+Name: com/silabs/ss/framework/uc/core/internal/project/state/SessionApac
+ ks.class
+SHA-384-Digest: m8vLJ+9rA8wFDCUzoNIpncYq1FVFDzHQKqER+BftO9giC+tPE6MIeL+a
+ 7xVgIqmp
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$R
+ esolvedInclude.class
+SHA-384-Digest: kKfSYE1EvumkbfAbLMUGmbMgohYsXR3GPtKhMt5To8u8R8FUAxymadqT
+ 0tAC0S/L
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/CycloneDxJsonOutput$Cyclo
+ neDxJsonMetadata.class
+SHA-384-Digest: EVMwgKWDaA4F3g4wCcIEEpPDRXbkL6AAkEYk6M+lMCQVCO2trlzL/Zod
+ JX5nygXj
+
+Name: com/silabs/ss/framework/uc/core/api/tree/TreeMutable.class
+SHA-384-Digest: 0VUB7nUSjY2GJOqTAN7gwHNx/9FeC0/J1Js3H1YZKQE0ekNDuDYD/anI
+ PGkg7fE5
+
+Name: com/silabs/ss/framework/uc/internal/lua3/validator/LuaQuickFix.cla
+ ss
+SHA-384-Digest: TLHJ4vtHGlx+1ZwK7tejnGL0asmVFKHDpi/+j5glWoLYzG/4+QlEjZCv
+ mGtmaUg3
+
+Name: com/silabs/ss/framework/uc/core/internal/api/config/DefineParser$N
+ ormal.class
+SHA-384-Digest: VzWEI88IE1Giy5czTuJfDsd8Hyj1e15M6FFnEsaKPo9/fOGvrcYoZLW+
+ Dklsp0hu
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/parser/SltConfigP
+ arseResult.class
+SHA-384-Digest: NMrm4fhaVIdMhyrK4nvbSVI08DkImsMGMGfpKjAyWSYozrB5B4USIoWO
+ 30UrlskI
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcPostBuildParameter.cl
+ ass
+SHA-384-Digest: P4YcFHuE4aLv842daA8h5YMhFwakMJXO3tfQlGXMxLnwlBRyol5H7XUj
+ xNiBZu0/
+
+Name: com/silabs/ss/framework/uc/core/api/project/gen/TransferType.class
+SHA-384-Digest: VPA46Qey2do41i82Y/Xdw8aFntuJg08tiwqSbmxq3NCY2J8+A+4h4rwL
+ cPbVJ/jO
+
+Name: com/silabs/ss/framework/uc/core/api/gen/GenerationCustomisation.cl
+ ass
+SHA-384-Digest: cOn14ZTvE+J2D4Kv/D5uErZah6ceWOcrcoecf4u3PsZ5AVB6jJcINfxa
+ Fd6WfpnC
+
+Name: com/silabs/ss/framework/uc/core/api/model/slpb/IUcPostBuildMutable
+ .class
+SHA-384-Digest: XbMfT1nD59xg30dsjIYgrns1Oildjq1+CWAuJyx1v7WOBr2+vTce6Ga6
+ lg62+Egg
+
+Name: com/silabs/ss/framework/uc/core/internal/hack/autoselect/scarborou
+ ghfair/ScarboroughFairState$RequirementLock.class
+SHA-384-Digest: aMzmxnXV8x/n0vF1BY8U6crEyNBrdptw3gZ9grg8SPQEmgbcUKksgODh
+ g393g9CZ
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$R
+ ecommended$1.class
+SHA-384-Digest: tv3ilEJHunFSOVDEQgmPh/eQLMm9rto3OjBB6dSfI0n8r4JOmCukVy7j
+ ki2060NE
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/UcHardware$Toolc
+ hainMapper.class
+SHA-384-Digest: j9DdfBdXGvHlPa0NONoFf7yTd3KsZ0ok0TkkYvlHsTX6p5mF6jY8dkg7
+ okWZxtXz
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/CommonParseAlgorith
+ ms.class
+SHA-384-Digest: yKjsIHFPqiXwXRDwzzMad1+1tMiMdC3+mo2sZ9ijcRngyq0xQcd+8X+0
+ OtRlsUML
+
+Name: com/silabs/ss/framework/uc/core/internal/api/context/SltApackLoadi
+ ng.class
+SHA-384-Digest: 8FDtBzN3VUuvJXkgc21O8JZbfGcI4Q2FfsQBQM2NX1VPRD5coFTynOQ+
+ PU11JxxK
+
+Name: com/silabs/ss/framework/uc/internal/lua3/validator/package-info.cl
+ ass
+SHA-384-Digest: TIbQFgInCKhdmPfNWtz/pMLK01TmY8Bf7g2Rhw9G7Hw0CEuM/DONoBY1
+ 6P7lJBA9
+
+Name: com/silabs/ss/framework/uc/core/api/validate/ApiValidationIssue.cl
+ ass
+SHA-384-Digest: R8FyXn5rEanNkfo8uRY32L6Ho93Eb+RzUo2NERlcrJR72OyxInwGYcOi
+ qWbCdmZ6
+
+Name: com/silabs/ss/framework/uc/api/cli/package-info.class
+SHA-384-Digest: kyLL3oBvI18tLb32XIMtqoZkAjAEakG6ipd9IRMdPnweFk0Hr2wEGbkf
+ xex/E6JC
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$20.clas
+ s
+SHA-384-Digest: s+cE17rtYBJWhO2RGxDU4AJKH5P4aC1mlTpmFkTSYyvlM43r9MSQ7Qs2
+ 9VIvTUsx
+
+Name: com/silabs/ss/framework/uc/core/api/setup/IUcSetupProvider.class
+SHA-384-Digest: gR/ZbghJy4JU5n5hxWpRhWNZ4JlVOSWl0eTDMOeNYfeDzh9WiXciv2cx
+ IIpagTxC
+
+Name: com/silabs/ss/framework/uc/core/internal/project/state/SessionTool
+ chains.class
+SHA-384-Digest: kt83WcnMb83/exgjXCBHxm7FQEkjDiXRa8JbMX/UjhLVDpb26HjMRmk+
+ ZXIL07sd
+
+Name: com/silabs/ss/framework/uc/core/api/meta/SlcpWriter.class
+SHA-384-Digest: fPTN846tNCKBjqMlBSj9RgaZzVLuJ43Z5Nsbgyf1WCstOEvhy4yqUTYR
+ JmIsoeCF
+
+Name: com/silabs/ss/framework/uc/core/api/validate/ApiAdjacencyFunction.
+ class
+SHA-384-Digest: S1bUQELhnTIhyhRRBdgaNIAPodvSYlNLjZXWlNIr+vZc4q9D7LSrYzZx
+ D/RNJBJn
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/CategoricVisualis
+ ationHint$Builder.class
+SHA-384-Digest: q9Ze2Kk0JKg6J4XFW/+CdoB8CAzKSexM7NwGfeQu9w5VXafKSmFO1a8P
+ IJFSMEFh
+
+Name: com/silabs/ss/framework/uc/core/api/model/ISharedExport.class
+SHA-384-Digest: UJ5gTvq1SUMmkIasBmGe9W1CzVVfn+LP85ywFXK09z2NvuNu15Zzfsln
+ 70WeLsa0
+
+Name: com/silabs/ss/framework/uc/core/internal/persist/PersistEntryWarni
+ ng.class
+SHA-384-Digest: OzZTWppwH1D8GlkjUiXmUiWDYEJdK6MIlBMz9Pv7FFUsOvR38x/nBWoC
+ r6wCDxwH
+
+Name: com/silabs/ss/framework/uc/api/generation/UcParameterizedGenerator
+ .class
+SHA-384-Digest: vSnp5FGJB/jGwyYKZnYisKyNQMyfPd0tFadJtVXMkxvOyOU3BoT99JJq
+ 8E1iSKBs
+
+Name: com/silabs/ss/framework/uc/api/project/generator/SlsprojProject.cl
+ ass
+SHA-384-Digest: JvY356kazSd8EUOkYHcBAY6w4kZH92ThH+9W/Xw89Ak/sA2HC44sCCwq
+ pQa67ljU
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$P
+ intool.class
+SHA-384-Digest: XFQMrcxUfKJ/H7HWVY9yvMbKIAZNfnlotqYiJU4uZ9hsXb/hrCUebkDs
+ eLR/ntRw
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcSdkReference.class
+SHA-384-Digest: siG+gTA9o4SN8JmLv/lTToeRNUsCKXD0mvZA2RZQZ5N7OfTka9ZIj+xp
+ KfEUQ/iW
+
+Name: com/silabs/ss/framework/uc/core/internal/api/config/DefineParser$I
+ gnoreRestOfLine.class
+SHA-384-Digest: CTNS31GUS3C4vmnYFfQ81i9+50TLDJrvShEm4oKEN9puC6Ykt9jDWjzq
+ hiJrQbKA
+
+Name: com/silabs/ss/framework/uc/core/api/UcFramework.class
+SHA-384-Digest: 39dmU8EASff3ojb0KuSL95DiU/N72txgTh3noIG9GUz390nMBZldtHT9
+ RVsCFyCj
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcComponentConfiguration
+ $InstanceInfo.class
+SHA-384-Digest: Nu8HYJkWe78VT/ynEA/ZDi+DvEufONpWvWcBwAzSvB04CjSPCeRSISec
+ qT60719Z
+
+Name: com/silabs/ss/framework/uc/core/api/context/IUcContext.class
+SHA-384-Digest: t5wn8ZGsmVAxBgmpr3+xyK5QJW9BRJzBghYnXG93Ee8k5z1aDyNkNkCX
+ 6KPaUjW9
+
+Name: com/silabs/ss/framework/uc/core/internal/persist/PersistEntrySet.c
+ lass
+SHA-384-Digest: mnt6xpOgX+uVTjLiNwQSAeo3qUSHnORS3EXuGu92pms1ACdcjabND4N9
+ X7V/rfUG
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcMProjectChangeCon
+ tainer.class
+SHA-384-Digest: a6GkrmA0D4dv2s/caUrLrSgNDINg/2UxExZkozvDrfgaG7YNK+WOT8Ak
+ AR3uCIn0
+
+Name: com/silabs/ss/framework/uc/core/api/exception/UcConfigurationExcep
+ tion.class
+SHA-384-Digest: YNPABYiW0tLQeQft7ab9RaBjW0uD2zyk5ixoj1tBxachPTLeGGPTZtvE
+ GtIl9ZWe
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcAutoSolverSettings$
+ Builder.class
+SHA-384-Digest: xYGGS4E4pRLdmZRm8Ce23xerL6BTqj9VWImya5Yg0FVMSwXBDUfXe4nM
+ 5Cnba0MP
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$L
+ ibrary$Builder.class
+SHA-384-Digest: 6pmdqUrihT2h+ioTd9qRldhcDBI1fBlnmxNQozTSII7Wc2+88MG5BLYn
+ BhEBJTyb
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ oolchain$1.class
+SHA-384-Digest: DpEamSy/M3CXxK/PNOufGzE9QMvivnIXgSpnYMFC2GxLWZUdYpkPI0aK
+ NoZiU0n2
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/UiHintId$UiHintId
+ Skeleton.class
+SHA-384-Digest: QgPPxAALwC8yLcSmMG1NnHbDhsfUlno+lWz4GuY24EuFyOY5fM3tATju
+ qhsNtnKJ
+
+Name: com/silabs/ss/framework/uc/core/internal/persist/IPersistedCliConf
+ ig.class
+SHA-384-Digest: 5HIQpndioc7E3zHB55+dc5+scYK2CEMsgUzC4MV4VDg8vbGkXn4IrPHs
+ 2pxW8E3V
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcGenerator.class
+SHA-384-Digest: mdMN2M0f3qEui4FmR8Z4iOGtx8UILbrZ0vkaXdp4AAN757AA4DuR6LDo
+ RLPobSDt
+
+Name: com/silabs/ss/framework/uc/core/internal/model/ucmetadata/UcMetaTo
+ olchain.class
+SHA-384-Digest: zY/euO/U4ysdR6yDSaYW25fC1AQkrWUYtEFnvElVFiUYwrOl8pWTXPnN
+ koyMoKc8
+
+Name: com/silabs/ss/framework/uc/core/api/meta/IMetaSource.class
+SHA-384-Digest: +SINfYs4IZVcqPgR8W/069B5V8q5RR6CHybRkNLep9bn7rEVI8zSBu1n
+ NEpak7DM
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcApiValidator.class
+SHA-384-Digest: BCL0f/6eBdzmwCtOtiUEdPRoAZVqt1nK1sigSCYuML9thPhEPP9MipNG
+ PeI5pWiu
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$20.clas
+ s
+SHA-384-Digest: kOkttJ523xDPWHpq2RERP9uGJqB88UACRzEd8t8Q5xnoJvmhDz8PDqow
+ EVlGJOLM
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/UcProjectExtens
+ ionFinder.class
+SHA-384-Digest: hsiag1PcWHQzzDbASu2vjhkK0md7aWfYOFDGIaI0UhvXWtHOU/PbNqzN
+ 0jdDt0z/
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/package-
+ info.class
+SHA-384-Digest: eTXKEIVfK4aD6QwsQBaLLbFTLd0A9BtRr6NCKaVHPNyIPuC/N85zjc7i
+ hewcqcAX
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/YamlWriter.class
+SHA-384-Digest: 3zkSia2yR81MYpAVE+NmNRWrc2ZojuBbxAB1C3i6G+byOaKLeJrSZTiy
+ JgIfEw9F
+
+Name: com/silabs/ss/framework/uc/core/api/IUcProjectPersister.class
+SHA-384-Digest: VCJuqTcXdqMNVs4WPHL9jBQUCimz7s0CoEEDobVs/JMWmcrEtE/4cBYb
+ V8eIeNM6
+
+Name: com/silabs/ss/framework/uc/core/internal/project/IUcContextManager
+ Internal.class
+SHA-384-Digest: J/VmugGGfG4yNYK7oRj0of5QdDxBoAhxYbBO9mmc3crF6sUPisL7N1Bd
+ SL5yBvbu
+
+Name: com/silabs/ss/framework/uc/api/python/validator/ConfigValidationIs
+ sue.class
+SHA-384-Digest: YYuJr7Xl2t29vyw4JaYZJF1AAf7OB5nRWjIAYg4hRImEqlWfyTJRXUTW
+ bqJl68w4
+
+Name: com/silabs/ss/framework/uc/core/internal/api/comp/ConfigFileGenUti
+ l$NormalGenerationProjectData.class
+SHA-384-Digest: EVX0+mC6uq1DfyRJh9ZjvTYcz8kQcqP7+bx2bJOoYSJ1qEV8XdcQ9Aev
+ 2v08RIW9
+
+Name: com/silabs/ss/framework/uc/internal/context/UcContextSnapshot.clas
+ s
+SHA-384-Digest: xpK7zH48lkN/DfME3iC/Mc636kcYgLKXsoj5C9vb8tP+l5ALK68eprT8
+ PdtyidiJ
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$L
+ ibrary.class
+SHA-384-Digest: u+VBELLHf2O/PkxgpHaMx7FJFyv3bQf1G8T7bILLLXlI1IRzucBDPHD+
+ AnwhRp9h
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/CycloneDxJsonOutput$Cyclo
+ neDxSupplier.class
+SHA-384-Digest: ZF46ZQMPnk6jQberIzZ/AnUPhXhtMEAndoZCKhvDZ2bUetNXWAGa2gB9
+ 0mukm5Ch
+
+Name: com/silabs/ss/framework/uc/core/internal/persist/PersistEntry.clas
+ s
+SHA-384-Digest: txhg0T0JmSKqrqg6YKjAvTnG77YZv5PK/zsMYqT9Y1/vioOIncmyptXG
+ SwTDw6ut
+
+Name: com/silabs/ss/framework/uc/api/project/generator/ProjectFileModel.
+ class
+SHA-384-Digest: /DuYaHn9nPjFPwASBs8Ea42IdfmdfOpCWasJ/Kg2C9kzOgWHFznld4gE
+ PSkcZyZS
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcw/IUcWorkspaceMu
+ tableParser.class
+SHA-384-Digest: xudyxRL7R7+Ic+2pSn7kzFepqXTWaLwvLRg8oY3l3jsJfTPc4+OlonZV
+ 7/DBtcJR
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$4.class
+SHA-384-Digest: D+5jPC5NhbCHhgHmRb9+I95CZeg9PAfFmLi2jQbzIGHQxGCrgNyoEK+J
+ pN3m3YiA
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/SpdxJsonOutput$SpdxJsonSb
+ om.class
+SHA-384-Digest: QKOWl7RtoGzgDBbsbQASCBk2d5ecCAxXnMeiK3XvVA1A7kPdzhX+So+z
+ zBUuArI6
+
+Name: com/silabs/ss/framework/uc/core/internal/api/comp/UcTemplateFile.c
+ lass
+SHA-384-Digest: NjeUwgcOzcldiHxnPxBjuznX4QCxyeQjzvkz+vMf1ob/o5kFPwgPfwxA
+ R1JatOL3
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/CycloneDxJsonOutput$Cyclo
+ neDxJsonPedigree.class
+SHA-384-Digest: Eco5I0qaMtbEICOgUD+tnyknZVFo6w3jvk7tOwLMVjPiP/Xfa0Eo0vJb
+ JfCtgq/1
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slpb/UcPostBuildSte
+ pSlpb.class
+SHA-384-Digest: jRUC48DBQ1NEzCaQC+r4HDZC3EEWsA0TQuLVReCABCbjqG0xIvIlmJqv
+ PSWdRO6C
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/parser/SltConfigP
+ arser$RootLevel.class
+SHA-384-Digest: pmNgtx3rUQK5Y5KJGwgh66b3DAyWha78mALhZ1Dy+tE20u62xH2hpYmV
+ /fwK+S2G
+
+Name: com/silabs/ss/framework/uc/api/sdk/SlcSdkProperties.class
+SHA-384-Digest: P1laQnQEO2kuS0o1ITtixnC94UJexXjskGBepz5Qrt5TNebSaeSNVI+4
+ wY7Zd+OD
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/slcu/Des
+ erialiserUcSdkReference.class
+SHA-384-Digest: jY4zdKUgTE0dgs7GsVI9t3bujhUfbfX+/b8ka0ce7xV5GgMmSGre6//8
+ t/dNoEB3
+
+Name: com/silabs/ss/framework/uc/internal/project/NewProjectSaver.class
+SHA-384-Digest: owb3+5nKE8/4OVgpIAvch2I4ErDWajT+ovfNBo2y+aETSQhaS9XiNTLR
+ /7itepqN
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$3.class
+SHA-384-Digest: Hmx/mPInkbRciizhniwK4698k9vwz9ofOHVWbtY0vLAM2kbcqFlGJjRe
+ 0Ux34T4i
+
+Name: com/silabs/ss/framework/uc/internal/project/options/UcToolOptions$
+ Assembler.class
+SHA-384-Digest: /ECIqqt2FMFS6e0JQTG26b4icJEfGrFwvIP9yiBnb0pwfA+64CrQ3HrN
+ b2kbeedF
+
+Name: com/silabs/ss/framework/uc/core/internal/project/UcProjectSetup.cl
+ ass
+SHA-384-Digest: QLCdfLr3Xk1fq6T6m+6LXSV/lmJQMr3NaU1EBSbRckqG3OojE+RQvuoX
+ TJ3gZ3ah
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcProjectDelta.class
+SHA-384-Digest: zrn9v5yBro3aKmnRgwFdiwVX83CsoUOBiMrGONBF1UxMVlQX4WuEDho7
+ u/MgXeBJ
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$23.clas
+ s
+SHA-384-Digest: qylOBaY7JRMKkDgbyAoiFj96G2b4J78QbvdEgWhTpNqd1axrZh2TnL5u
+ 2W34a23u
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/JavaQuick
+ FixApi.class
+SHA-384-Digest: gSDk030s02aHhvhfa1Pk8Lnaklxp2juTUACrFchmpbuHFStTekRpo2Uy
+ 7sIhs+lu
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$S
+ ourceEntry$1.class
+SHA-384-Digest: x564eGBhqrswpCf2oj92zik184TyNVaL6iNjgOb7NCG8ywqAvYY4MVhD
+ qMW1AWTP
+
+Name: com/silabs/ss/framework/uc/api/project/generator/EwpProject.class
+SHA-384-Digest: p4JLEc05YCj8dkFd6rFwk9FbOVL9bDZEWPudLy0ouJbbIW/cdjbGsBFZ
+ mC1WnI6M
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ onfigFileOrBuilder.class
+SHA-384-Digest: +kqE7sYYwBy5Mur3qWSz9Uhi/dGdl9VSmQ0MZJnEYLdEsQBw57p7+8vy
+ TM2ni4Lf
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/SelectionInformation
+ .class
+SHA-384-Digest: 9yHNb2yadi+jSGeUL41rhzVHXdosKUGJ16QTqSRFL9ojH1SXRWWWf+Gt
+ eUNW/ACM
+
+Name: com/silabs/ss/framework/uc/internal/generation/UcThreadingGenerato
+ r.class
+SHA-384-Digest: bm0j46lSm3f9b/uB2aSxdI37z+xVFQrGIPulzrrFCmm81kSLmBZMpqTf
+ sQg6KzoW
+
+Name: com/silabs/ss/framework/uc/core/internal/comp/undo/ChunkUndoManage
+ r.class
+SHA-384-Digest: leur3dN8kPwsJZTtrH4mbbHfhmq4ZT984uKD0zBtzYPhj7D3aMcPapYx
+ RwGshZiB
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyConfigu
+ rable.class
+SHA-384-Digest: Sii/7sFojJQUwwv6xjTl8c2qqxbyW/S8a6ex5wu0jiSFseBhqKz/kIL7
+ DRaiuowp
+
+Name: com/silabs/ss/framework/uc/core/api/project/gen/GenerationFilename
+ Constants.class
+SHA-384-Digest: FT5+0g+8e2DFLC3ElDjhDtodM+h/HriSOcEU52BNxctizA59nUyMSURH
+ g8PDchFO
+
+Name: com/silabs/ss/framework/uc/core/api/comp/ConfigFile.class
+SHA-384-Digest: zKtCCRYci2TAAX0dEKahsw6RopuBSgIGuDMvv1U1NsRcg3sbtL4uSKWF
+ FNb9I2Ga
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$T
+ oolchainSetting$1.class
+SHA-384-Digest: Ooi2CyZhBlosj/Wk460uIL9QqtCtz4pqFp+GkT53+LjFVxD3TXC6Plw4
+ U8n4T2F9
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyCompone
+ ntIdProjectRef.class
+SHA-384-Digest: BXLBCRCD2+TpYZVagT5IpJKTWBxzA/ZjLn3Tzdf62HajHO27JJ8qC0pT
+ JeVAlbiR
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/apack/AcSystem
+ State$AcStoredState.class
+SHA-384-Digest: Yuxn0qbKbMlcyY9OTCfYnWxYVwSWRoHLwwFW+v/pLJgWo8QYURUGR4ds
+ 8EJZgrH0
+
+Name: com/silabs/ss/framework/uc/internal/lua3/validator/LuaValidationGl
+ obals.class
+SHA-384-Digest: JGafYbQXfNMXgeLiVuJGkt/wP6lBC/CmjMvBK2k+qONhD35WnNLo3nIF
+ M88eSvm1
+
+Name: com/silabs/ss/framework/uc/internal/context/UcContextExtensionSetu
+ p$UcContextExtension.class
+SHA-384-Digest: U9bDQFhNaQXsZZBeRiJqjJ6p1CfS+dfPAkU1PAwNRXUB7fbwqB/gxmgU
+ Qo/Ns/w0
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$M
+ acro.class
+SHA-384-Digest: pvfz85kuQKLMUKwGFliYMkWMjsakJoaYJWq0UUK7hGJ26mjCX8kZRPUg
+ W1AQZEqr
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/UcHardware$PartM
+ apper.class
+SHA-384-Digest: Whi1ULISuS6imkvD7sRMgAqB3spJ/h5uc2i2Bq6yYwVy1xncTVx5xWlh
+ h7kDrmVO
+
+Name: com/silabs/ss/framework/uc/core/internal/security/SlceExtensionSum
+ mariser.class
+SHA-384-Digest: CipRPUf18iUyveYlcQSC/wGXCCEF3+BScxrQzaHcGPHO6EbVAZ1foFCH
+ GcJeV6Fh
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$27.clas
+ s
+SHA-384-Digest: fTepQTiMM4AExN5juoBctKlOgzfP+u2gFB1V2hxUP+oZaZ8bf2qO/HhH
+ iOtZU7f0
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcPostBuildConstant.cla
+ ss
+SHA-384-Digest: AIOfAblUYmnJDCw5SVh4i8dr5fSEmB9PK1z75f9IFmgfv14xW09gkvae
+ hvT9w/1l
+
+Name: com/silabs/ss/framework/uc/internal/project/UcContextSearchQuery.c
+ lass
+SHA-384-Digest: UMNC5Y65qW0RTiBVtlcM6hipmArSCeXAXaTmSukrNvo9b4Yqq/r+hFxC
+ vHkLGSxW
+
+Name: resources/sbom_jinja/spdx_bom.spdx.jinja
+SHA-384-Digest: 4KmIFLPrnW79P47KoTCpeWj3+AWDmIqesL0h+VnmZDaoqJysDtBoev3B
+ m5tLTENF
+
+Name: com/silabs/ss/framework/uc/core/internal/toolchainsettings/UcToolc
+ hainMapping.class
+SHA-384-Digest: L3/u8BFI26HQSeynvuTAUf9aL7EfdN0cBSoXHWJKtGXQq9wC0S2rmanf
+ x73mG/1h
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/ucmetada
+ ta/UcMetadataValidator.class
+SHA-384-Digest: 0vkEUi81hrytWr94cSh3NTeTOKqDtcY99K9NOJUvqtxD8S9DL/GUFmOv
+ aqXYF9SY
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcw/exception/Duplicate
+ WorkspaceProjectIds.class
+SHA-384-Digest: 8LEGeAy+t9i9WiPvtPpCwDr8cXVnf5wK+3M2rtwaiz6WXWEwR37dAygV
+ vwD6V9CD
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$8.class
+SHA-384-Digest: 1UuLizgaDw24ZpmEjwFfskD5kK/pvPw6wrdwPdJP8C4jkdUKLds40Hvm
+ yyBjJVkY
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcw/UcProjectExpor
+ tedData.class
+SHA-384-Digest: vkMV6KZDtZAD/gE8n4XlEpp3Hkfq+BzG2ZIrU0Tits0Nt0HMfrSEqfgb
+ cBcvLIlk
+
+Name: resources/json_schema/slcc_metadata_schema.json
+SHA-384-Digest: NFOnvX/OP4PpYubdsuKn5UwvzIdH4C+Eo9XUrQIuuDQ8FtSoPnQXGvPk
+ O4yxiukG
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$B
+ oard.class
+SHA-384-Digest: phtTMcM7o2oVny+1QHrxhYfxlW3B2QuU3HicKaRcsYITXNhKxP10lBgi
+ n0fPll5B
+
+Name: com/silabs/ss/framework/uc/core/api/IUcProjectPersister$1.class
+SHA-384-Digest: EuRd+6/z+O3iY2wJUWAqcdXUBYop636iulTB5SwQhDI8ZniUIE/vR47q
+ hVDBilwL
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$22.clas
+ s
+SHA-384-Digest: PBfahgvPusmsq4QgI80r4EsTSfYJRkzD4ZmSxxpdZS9HzaLkjSj6gluo
+ aanFW7HQ
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcp/PathWithFileLi
+ st.class
+SHA-384-Digest: EHF3CVbU9vGKVMknxP8ZCzUEGZj7/EX5CZgR1ZZwWD8SBL+u4My9ZLOV
+ 5/x1INsw
+
+Name: com/silabs/ss/framework/uc/internal/api/project/setup/UcConfigurat
+ ionValidator.class
+SHA-384-Digest: FEDNwuVBDjzHHeobge9AuQD1xazTDpWCRyoLvZkXSmnocbirmPmMIMcS
+ A/9j+knJ
+
+Name: com/silabs/ss/framework/uc/core/internal/model/ucmetadata/UcMetaPi
+ ntool.class
+SHA-384-Digest: hiwDBw/kQQWS81Mt3ft6sh6VOX7WEXHddOsfFD71xoZpYLywWWOuEGDs
+ GIuPcKR4
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/slcu/Slc
+ uParser$ComponentUpgradeDeserializer.class
+SHA-384-Digest: S+USoufCTWUVWIRg0Cgm3dCgRaZ9V9+ofRfzTrX1lGFpe3ScHpsZla3/
+ yTdsURFE
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$3.class
+SHA-384-Digest: kq+GK3UN+A/7sU8BpqEoRcvg6OWqa+mG9K7gMkv8ZTFM8atDQEsjJoEN
+ mqgWFk98
+
+Name: com/silabs/ss/framework/uc/internal/project/setup/ProjectPostBuild
+ Setup.class
+SHA-384-Digest: sEmRmZ+K7v8+RdXJ6tEKZYdag5D3Ep4KuNYXA76Muxtr5/55sUICTrMd
+ DBqVQDvN
+
+Name: com/silabs/ss/framework/uc/core/internal/api/log/UcCoreLogger.clas
+ s
+SHA-384-Digest: cP887AyH9Kuv7KG4sYKWWL+1CKSdtwq4kBQpOZFqKAyffMacdCTaONdW
+ SO3Ckrr0
+
+Name: com/silabs/ss/framework/uc/core/internal/toolchainsettings/UcToolc
+ hainMapping$UcToolchainMappingBuilder.class
+SHA-384-Digest: bay9f3XZp3uvtQqGGeUu396TpSZ+amQwlWxQrmSPo7cisXM+dtcTngA3
+ 4DieG5qC
+
+Name: com/silabs/ss/framework/uc/core/internal/api/context/UcContextSess
+ ionConfiguration.class
+SHA-384-Digest: 34nSD7nmktIs1Hl8sRcWeYVVXMQCO0JAjOQUmbdLR7j72++baQxKNbZa
+ M5ZaCEGn
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$A
+ piRule$1.class
+SHA-384-Digest: y4VA0Z1PXboUxLNgfsp3jNXnf/E9L2kGE17jj1k9+0tAZXUjeMlOYVM2
+ KXKk71rr
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slpb/UcPostBuildCon
+ stantPath.class
+SHA-384-Digest: 6lG+/P+eqnmfADJQ1lElH8TAQlyx+jut64hQlpl9u2AdcRWo2NOjJpPt
+ IehOfRiN
+
+Name: com/silabs/ss/framework/uc/core/api/validate/sdk/SbomComponentVali
+ dation.class
+SHA-384-Digest: gj3ORDn9dPjbVyV/XJp6dvEAiOdn/3b1SwXYEnqn1iUxvxMMN/lTfAwK
+ SN6/F6QX
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/solution/Res
+ olutionMayBeFound.class
+SHA-384-Digest: iJqH4SGw6AvpnN5k2aVPllI7lwPEjgNTgfYBtwyavrRxzfufc6Th9vsh
+ ZPmoXrgr
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/UcSdkExtensionUtils.cl
+ ass
+SHA-384-Digest: x7MvuUlyAHC+nLRUEXpWAZi6fT8a/xfZ0xqP6qHy6WfpogE3rlfqAJAx
+ kluTYp12
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$22.clas
+ s
+SHA-384-Digest: B4pfQXsznJ7guli3/fT5mxRwjq1PYHOMAVLsHCBj6kLgkT0IzFtpShSw
+ xI27xHwd
+
+Name: com/silabs/ss/framework/uc/core/api/setup/SetupExtensionParser.cla
+ ss
+SHA-384-Digest: HJfJYBEHrQBgfQzf/sXSB8USl2IIjrfk4A0DK7hS+BIVWwAa2lM0lxCq
+ tg3Meo4K
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ ache$Builder.class
+SHA-384-Digest: FFMJ5YR2VZWx+ZJIOOygJ76hVNGyFfbm71WRYNLG68CPSweTM1c5oxbR
+ QHCBWFlm
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ eviceOrBuilder.class
+SHA-384-Digest: 2pSebGihmkc4/+4ahEklnsZOsvjBFS7Bf8tk8acvCE03zi8Ua5877GFl
+ 9Mch8smr
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlcpKey$21.clas
+ s
+SHA-384-Digest: rBqqHrQjD+QTJlB0cObUTjRfulF5VCCMGYgjOhN30KnOXo+ypr1K2Xxj
+ ZHFQ2iru
+
+Name: com/silabs/ss/framework/uc/core/api/slt/SlcConfigProperties$ID.cla
+ ss
+SHA-384-Digest: 2G1bdyPiEWmm0gkZUgYSY7q2oceIjfLHBTk2zOv6lUoSuz0uVM9uHmfX
+ nqbyhHU4
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/AcContextContr
+ oller.class
+SHA-384-Digest: 2zfiJdtNdfmcjPikxV+uJzyNyqfTqmw+OY7Nf4ZfwTaFgdCx2q5DPgG5
+ Oer30qzd
+
+Name: com/silabs/ss/framework/uc/core/internal/api/comp/ConfigFileGenUti
+ l$TransformLine.class
+SHA-384-Digest: CNLpl/08Imr61fJQtWEgzn6CdraiZoJ7XU6Lc8tmwo6s4cvKR0U2kLvs
+ 6tzOXE6l
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/AcInputDirecto
+ ryMonitor.class
+SHA-384-Digest: 7kiSDs5Q62DT3cSeeoTFmZMpojsCO8tTQ27VP7mumhYRXpjvH3+Qoxhk
+ ayj6vXOO
+
+Name: com/silabs/ss/framework/uc/core/api/meta/MetaFileHeader.class
+SHA-384-Digest: mwngrdjNY4UVXGf0FDAnOd6zhd1O+6PnSil7drWPDeYwVh6p1g+YfFTD
+ /1firqhf
+
+Name: com/silabs/ss/framework/uc/core/internal/api/project/IUcSortedProj
+ ectGenerator.class
+SHA-384-Digest: n3dwplzjQH6z4bxpoc3LRKm4p4scr3jpESNp3H+wZxxPVWjI8w4WZs9P
+ wSbNn3sF
+
+Name: com/silabs/ss/framework/uc/core/api/slt/CoreSltConfigProperties.cl
+ ass
+SHA-384-Digest: RVVGd21ek4GJj2snurVCDXpE9Id5TiBc4GJMVfRdZVNzNtFhDVqGJzL4
+ aY9+1mkT
+
+Name: com/silabs/ss/framework/uc/core/api/sbom/CycloneDxJsonOutput$Cyclo
+ neDxJsonExternalReference.class
+SHA-384-Digest: iqHp4qt1wrQ8pvZ3v87QyKpRoIsfPMkfO+Z13sbqHjeIyENxsV7iZzZG
+ T76d+zlJ
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$21.clas
+ s
+SHA-384-Digest: smQykTo5Q9BnhvGaES2XsaOpdXTRQjvDMGenZLBqXul/nT2g/QdKfNqU
+ 0emMC5es
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/ucmetada
+ ta/UcMetadataWriter$1.class
+SHA-384-Digest: D5JrDLYNWh7NlqTZIvYQOW/oJF/Fd9tPexXY7o45ax+g/ijhZZcPMAV3
+ 3Q8eHWnC
+
+Name: com/silabs/ss/framework/uc/core/api/model/slcw/IUcWorkspaceProject
+ sModifier.class
+SHA-384-Digest: C1XDE6iYsaspJzHLxfsNaH5/E6K5HNEnicNPMt+0ElSFyxvFUJqk2mhH
+ egg4MxMd
+
+Name: com/silabs/ss/framework/uc/core/api/setup/IUcSetupModelListener.cl
+ ass
+SHA-384-Digest: 9uAV1BJWiGJla08vkmI6d5LutizZ7m/20UmINl9WQ0MLt/DnyWWYzi3z
+ FhqRSuB6
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$7.class
+SHA-384-Digest: fLYCxT1SB3YhLaFY8FlM7dL5p5tGb/WynJAv1GrZ6N7w66lWLNrKUzsy
+ hEuM9IoW
+
+Name: com/silabs/ss/framework/uc/core/api/project/state/UcHardware$Varia
+ ntMapper.class
+SHA-384-Digest: CbVsEWnec1GKYGWg7G+0Sfu0uWb7M+0Sa3eWD9l1TeOs4zNi9JiuoNLK
+ CciWJXhe
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UnfulfilledIssue.clas
+ s
+SHA-384-Digest: IP+R1LWNaKuGYYwMUranVskze/GZfFlRu3E26ol/yMmgbdqZZVWI4z7x
+ Q0Hgi+2b
+
+Name: com/silabs/ss/framework/uc/core/internal/model/slcw/UcWorkspacePro
+ jectsModifier$UcWorkspaceProjectEdit.class
+SHA-384-Digest: A8jxmXfpoLHFnK8DDpNo4zl+1PBdu8IC72abBHVldnX8gzwzDJFdUEeA
+ QMeUt3lh
+
+Name: com/silabs/ss/framework/uc/core/api/UcFramework$Builder.class
+SHA-384-Digest: Au2V2OFojJoH2eXANPTY6q4t1/TZiW8Sx9cJmpVsT4QF+sLli0u63FdD
+ fbeQuoZe
+
+Name: com/silabs/ss/framework/uc/core/api/meta/ParseIssueUtils.class
+SHA-384-Digest: ohe+vQLHA+V9YN9hjwYisiHo3fXyt/ESVDicPwaZR5imvDGpiqRg0CN0
+ ispYILyP
+
+Name: com/silabs/ss/framework/uc/internal/project/ContextCreationIssue.c
+ lass
+SHA-384-Digest: lUENAUFy/nYsE+mBSAl6TmMLhnAanC7jXNYr4Flw3nFL+GgLAtFFJk7O
+ eb+BlyGg
+
+Name: com/silabs/ss/framework/uc/core/api/tree/Trees$DepthTreeIterator.c
+ lass
+SHA-384-Digest: dg/tenyqgEH61GO/BkLq9YwOzNgGU8zGDjSuABWfZe2ia3wlYgK64F03
+ lbhDY7MW
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$28.clas
+ s
+SHA-384-Digest: D2vLI9fpK/ZKGz1x5gqoUojmBMspdpWjM2bdOgWpyixbWYzi2ym7kWbB
+ utNXMyMh
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/package-info.class
+SHA-384-Digest: TktYiqTuJJld0STpPd06D9PkUgLnfEGv3KdoX5IB9I3XwvAAXq4KNiVo
+ 4+3dOfqj
+
+Name: com/silabs/ss/framework/uc/core/api/sdkextension/ImmutableSdkExten
+ sionSoftReference.class
+SHA-384-Digest: Oyyi9rWUKWSV7N0s04ZdCqyd/T0RIyiF71MKfqkYxaLVrfLIIZ68wJoM
+ aknwGcQ9
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/PotentialSol
+ ution.class
+SHA-384-Digest: oBnFdpRoeisUwWihTCUonoY/5LGPOZD+rghzR4C716a89/OfLlUlmX3k
+ 883pfCTK
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ ynamicValue$ValueType.class
+SHA-384-Digest: NU5sH4VC3/jGauX73TXszyYdF+F9yIkKNTCOZGc0EzBV8ioPYFpJvUmS
+ 5XvpIn2H
+
+Name: com/silabs/ss/framework/uc/core/internal/project/SlciFile.class
+SHA-384-Digest: qHOG7werN2RVndadbaZ/xwHEGx39z4rjcaJJG9sE45H50z07chXn2uiW
+ KZ98G26G
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/slcu/Slc
+ uValidator.class
+SHA-384-Digest: aDe8HYgV4rlg13McbKLfpq4eiwg4CUBoEc1lGN6P4KvHJ+YeiG4rFNS8
+ iApSt+lM
+
+Name: com/silabs/ss/framework/uc/core/api/model/IUcToolSettingsContainer
+ .class
+SHA-384-Digest: CDZNo2zPkqtQa4RvYN6uZBDNCSH0ixzcTZ+uso9IERXe4T1jo9gShi5L
+ wlk1kmUl
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$M
+ emorySegment$1.class
+SHA-384-Digest: h5nnVhvtZ0qjSpdeJ8wmSL/fB69nL9hV7RqzUX5OWHveZptZbTbM7n2a
+ yn63qerm
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/UcDescriptorUtils.clas
+ s
+SHA-384-Digest: KpY2CaZ9C17f7a4lFQXGvLirJS7h25Pp4NoDVrXXzLcWkds1+6eHrJMT
+ qk3aT2VR
+
+Name: com/silabs/ss/framework/uc/core/api/slt/ISltWriteoutOptions.class
+SHA-384-Digest: Q6aLaxd9vyKZBvVXH0NpQ+7Kh8viY7U6nHeTuopvZBu8TTmuguZBQay8
+ Z2qIcWO8
+
+Name: com/silabs/ss/framework/uc/internal/api/project/setup/UcPythonEngi
+ ne$PyLogger.class
+SHA-384-Digest: A++POeE0fCigoE2k7JC1yboej4YOr0vP9LZLp2tqYPpgmj78iCVOzLOE
+ YFH4QVRf
+
+Name: com/silabs/ss/framework/uc/core/api/model/ucmetadata/IUcMetaDevice
+ .class
+SHA-384-Digest: CODxo49FZO3Hg87mfk1JTPNQHiRRvEL3zksCVYlBLYgBPjjVMm7eo9Lk
+ Qa57gNeP
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$A
+ piRule.class
+SHA-384-Digest: 6OkOKE7nUATV78szfqsOUVYnQv5KEOp7m6GJ7HKnONlCdn6i0FRZ9jbl
+ aS0ScQyA
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/solution/Res
+ olutionFound.class
+SHA-384-Digest: +Kdkw9ECjORo70W3fr7IHib/yFctszI38ye0+gnzSVdSPncNAX5lvmDZ
+ mQ9Vuwvy
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/apack/SdkAdapt
+ erPackWatcher.class
+SHA-384-Digest: gr0I2NR9sLMO4Stqn9sN92zJrBaW0C6vqpyRrx4LAF383o/bcf2qL45W
+ ocNNMF04
+
+Name: com/silabs/ss/framework/uc/internal/api/sdk/UcSdkDetector.class
+SHA-384-Digest: FkC1f5ua8SZAGr9CMSXWXrU5WfjP5z3hZbMpWACZ9miOawNqoC5o51K/
+ hb0LVrP+
+
+Name: resources/json_schema/slpb_schema.json
+SHA-384-Digest: /o0z3Xdy6s0XsEXT66pFAyS/3Wf9y2d/URhwUmggyr47eh8ZyVn1uAat
+ JCnNYA1/
+
+Name: com/silabs/ss/framework/uc/core/api/comp/IUcUriDocumentable.class
+SHA-384-Digest: ZBGvMAiX35C8yzcojtyMaFF+LTn03aHu/bXYcw4CbHWWt+I56usQDkbT
+ SC1h0HGq
+
+Name: com/silabs/ss/framework/uc/core/api/internal/project/gen/KeepProje
+ ctFile.class
+SHA-384-Digest: egWdKZaa7LXwBL4qPrh5/pqL7a1xqjb2/z5LF2qzwxzTxqMFk7B+wip0
+ zyvfS/Dj
+
+Name: com/silabs/ss/framework/uc/core/internal/model/python/ConfigChange
+ $NameChange.class
+SHA-384-Digest: rgp5s1PpCu1OpmC/jd0orL4KJsWFluJ6i+iYUryxmYByaRX0BSGqjE7E
+ E+NDOaqo
+
+Name: com/silabs/ss/framework/uc/core/internal/model/ucmetadata/UcMetaSb
+ om.class
+SHA-384-Digest: SwXBRrQ32jZhWFyU/7076xV8MSIjcVLXgH8JxnRqQMrqljmL/S2Le+KW
+ FwNdwUNx
+
+Name: com/silabs/ss/framework/uc/core/internal/hack/autoselect/scarborou
+ ghfair/ScarboroughFairState.class
+SHA-384-Digest: cgcghwtto8ls2rleFTQNhD/itGByA2URB+bWiMJxQ0lu9tDk0kYKkxSe
+ 14txT7qm
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$26.clas
+ s
+SHA-384-Digest: riJudohao11D8FPGEEDSpCRNpth9qJekvuwaoL4hrpO+M9neT9vPh08R
+ RHZiDnMT
+
+Name: com/silabs/ss/framework/uc/core/api/setup/IUcSetupLaunchable.class
+SHA-384-Digest: VMq9aWK8bmjhTacr+PU2m4EO1R2ptO5YCBozgHicqYcfU4yP6AkIdzuh
+ p5sESrrU
+
+Name: com/silabs/ss/framework/uc/core/internal/hack/autoselect/scarborou
+ ghfair/NewSolutionWithApis.class
+SHA-384-Digest: Jce2yQVe5iqGJu0j/47Si4QLDEdftENu7/nnJnWuyWgwEiuaUzl0jmTt
+ ktA54TSp
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcApiUtils.class
+SHA-384-Digest: qc/VqE5tS1NR+WvLDf/fWLer6FxYGqpWSo+R4w/7lYpJu7XmElh6HsAk
+ b0V1CQOi
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcApiUtils$InstancedR
+ ecommendationResult.class
+SHA-384-Digest: YwS29ZxIr256FK5thxALs3o/jbr9E4AjneeRM335ANNmuron3SidIlSS
+ A2tNPKLp
+
+Name: com/silabs/ss/framework/uc/core/internal/api/model/CommonPostBuild
+ Script.class
+SHA-384-Digest: zMFMdQs3STrb1y+M03CF7QI1YiU1ENbIFqaaLn7GkPaDatS5xuSYhgKs
+ 6r+r8rqe
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$23.clas
+ s
+SHA-384-Digest: hOjqFvtf24wwwABMM287JFXf3332FVzh9BIOzdGRosk4kPS2htUK1MTb
+ CzgdpTKW
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlctParser.clas
+ s
+SHA-384-Digest: POVlHbleTcHIVhOI3p5MINqE23MVNzdTUv7hgEXK2LPvmcptL+3kLKbU
+ WyEMjZIl
+
+Name: com/silabs/ss/framework/uc/core/api/validate/ApiChoiceResult.class
+SHA-384-Digest: bi6k70XfOMfE7lu/tpK5GId+eqPuJ63hefG+vzOSCJ7PIUnYwMA7CBn4
+ amvpgBeQ
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$L
+ ibraryOrBuilder.class
+SHA-384-Digest: KN+PH+DyWKTaekk8krGChzZZPYLUPIUiO8l1geSqpiroFkf0jJyB/dZ0
+ I7G9FmpZ
+
+Name: com/silabs/ss/framework/uc/internal/api/trace/SlcTelemetry.class
+SHA-384-Digest: 2D/XoEJklTqnelrh8cNTLD7Vh7D5JjDiDaq6Sq5ZyVCqWp4ggf9EepWD
+ tw8FUZ6h
+
+Name: com/silabs/ss/framework/uc/core/api/validate/sdk/UcSdkValidationUt
+ ils$1.class
+SHA-384-Digest: F8JiruB31bId/0izgjVfpdh0jBout1Vvm3sb2+njgpD/1px35S07ydbb
+ AidQniRE
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/slpb/Slp
+ bValidator.class
+SHA-384-Digest: PGuXw2IiWBf0qdId/9mOuA6MqOTXpJk4cB51AgnMEaYTscf4ITGEgPY2
+ hQzINzDV
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$9.class
+SHA-384-Digest: PNTk1acdvCqfE/0w+ubAOKNa6QqZThXmB3PtdTWxpHzeIPxukw6gOjyL
+ XWsyWBtV
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$25.clas
+ s
+SHA-384-Digest: vav/AxsoNxxpyyaXOc/2KuoEvUSJ0ayzwntXFef84J9EuneuYx1Ymnzw
+ zPsh5iQy
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/apack/AcSystem
+ State$AcFileState.class
+SHA-384-Digest: m7VNCizVon6eb6NVVSxgvjYikkWhRddfKSz2v6LVqa5IMl/rfb8bXOLE
+ v+yvikrN
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$A
+ piRuleOrBuilder.class
+SHA-384-Digest: bC2nrMzS9zRtDB4hR5cvD6wyOls9/78ZRryXfuHqtq0lRa7AdEkqzNZt
+ yHOhZr5x
+
+Name: com/silabs/ss/framework/uc/core/internal/model/python/ComponentCha
+ nge$Action$2.class
+SHA-384-Digest: qWer1EO1uQZBZZmiibYdRA5XDW/oS6J/drkuki6wEUvz6qQOX5gSJE7G
+ r5NPxJPz
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ onflicts$Builder.class
+SHA-384-Digest: +IMBR2aQJqa6K65ckWIFAGaQbKPxahun1zRYOcxyuHb6v7KHXAXiCdyr
+ B+umSJkv
+
+Name: com/silabs/ss/framework/uc/core/internal/parse/CommonExportAlgorit
+ hms.class
+SHA-384-Digest: BPDaw58xf1TYGBmSGjRhKVooaUoTHePy0K4+YmcIPBtZEjilS+Swg3Az
+ Engefwis
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$K
+ it$1.class
+SHA-384-Digest: W8mUzH2NGw92xBG+KEmKZPOz9nYIYfVOozfKEqJFV3ToD8FS0kaKAxn+
+ Id7/kP+n
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlctKey.class
+SHA-384-Digest: lyWlcEpH3Yvi5Mv2UCtkGEfKJiDZX1Ex45gOA/DPifoVZMLtAn5m3xgu
+ pD13w227
+
+Name: com/silabs/ss/framework/uc/core/internal/setup/acts/apack/AdapterP
+ ackAcUtils.class
+SHA-384-Digest: 5bZqzStEAAbsRZE0XwzbVim7RwRZgIzjtN/ZwoA4E1aVAMqmO2/G6Exz
+ I48cEK2s
+
+Name: com/silabs/ss/framework/uc/core/api/context/IUcContextSessionConfi
+ guration.class
+SHA-384-Digest: GtV/GdRc47kysaLhesJUBgbrWoB8Uc9dHODM+TXITirxJt18kvy7iKs2
+ vG4Q5Rlo
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$K
+ it$Builder.class
+SHA-384-Digest: c95J/JIW7WVSXRaoGspGRNOIS93roOllmHWcBkPaRbn98qk0TcVA0Phx
+ L1gTLqu1
+
+Name: com/silabs/ss/framework/uc/core/internal/api/nresolve/solution/Mul
+ tiverseSolutionReport.class
+SHA-384-Digest: 73hEQHpNd+ePwCKtrOVsUjwTdkG7cezNvRCHmcxpLqvL81iZsB83IKnK
+ mNqYdsmz
+
+Name: com/silabs/ss/framework/uc/core/api/model/uihint/MutableUiHinter.c
+ lass
+SHA-384-Digest: 6PwrNeyXtdwiPK+ytp5LvsiN8XE4PqRuoWXkWo7WJh4UKVtaYoi7JJ4b
+ oXT20Vje
+
+Name: com/silabs/ss/framework/uc/core/api/project/gen/ConfigFileGenerate
+ Logic.class
+SHA-384-Digest: +4D9Nrg2zBpJQWR1Xu1NohdBtT6738SN+3zgMmJSvFO2poi+sy4/mYNz
+ Y6hJsJnd
+
+Name: com/silabs/ss/framework/uc/core/internal/core/Conflict.class
+SHA-384-Digest: YGjzvFLgyPpC7ME8riyfxJR3fJWp5qQ1RYAq1EBvSMYfm4jt8QGBFha1
+ 00MEydWo
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/SlccKey$24.clas
+ s
+SHA-384-Digest: gKHlJqiuxM1RR4O/ZGMQVWFBo484svQQdu17XxaZKgdI1t9nx9kLf1SE
+ /ayxU3Xi
+
+Name: com/silabs/ss/framework/uc/core/api/meta/SlccWriter.class
+SHA-384-Digest: +e3AbJnlAl5FWB8guXs/SFyWpe6rA5KyGYqt9M/kAjLD/2TPqb/Tnzsv
+ o9sE5X4W
+
+Name: com/silabs/ss/framework/uc/api/project/package-info.class
+SHA-384-Digest: IsCWYgSOq/08MOpiqmB41IPIqwzXXY3mLJv3CnR7/uW4uawIEZRI3WNG
+ MhWe3HCn
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$D
+ oc$Builder.class
+SHA-384-Digest: Op9PQgbyHbmu/NozTY1GS+Mmueer8eDzaN+tF6gMGQ22YJ/Yy8M1ih0c
+ 3EHvUfEb
+
+Name: com/silabs/ss/framework/uc/internal/project/options/UcToolOptions$
+ CppCompiler.class
+SHA-384-Digest: kNFMB26d7aRn1TLCCnAP8JEynJfgzCTbux+kWsYUNSfsDrBjINMvOqwD
+ szvNrKPg
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$U
+ pstreamSegment$1.class
+SHA-384-Digest: 1eVmjEfjTCr6yI3nE8RTX5t43dbHdFXNK4UF8aSpD8GfRJvFQDUlVEys
+ WUZLocfK
+
+Name: com/silabs/ss/framework/uc/internal/api/python/validator/PyProject
+ ValidationApi.class
+SHA-384-Digest: hxygmGKzsWV8+WjpdCzE7JdNq3KfIz3AvdDzJwTzAJI+OUdCJBesGge4
+ YW5iKMWk
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/slcw/Slc
+ wWriter.class
+SHA-384-Digest: gbSD+G49FzE4GCsQf0CbunYIB+iIBqA8o1dzN/W4RoIwVq0f2miL4jdW
+ ya4tEtHW
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/slpb/Slp
+ bParser.class
+SHA-384-Digest: ADhQQzPVzUSVI9igo9RRlYLhxdo1pSuAgckF5nteZr6+0Z/3K8isac6B
+ LR8fz50F
+
+Name: com/silabs/ss/framework/uc/core/internal/model/python/ComponentCha
+ nge$Action$1.class
+SHA-384-Digest: wRLs2otzsxVSINP8BhzyNbjKllukm9u/6nAQDT6nFoIE54KzsUTr4vTN
+ 7MLKrpdH
+
+Name: com/silabs/ss/framework/uc/internal/project/options/UcToolOptionMa
+ ppings.class
+SHA-384-Digest: IsIUBTEXBMzGamGpVuN1R1IksTbKXfUjpW8p82FQelHkTgID55H8xxOJ
+ R+EzFcSC
+
+Name: com/silabs/ss/framework/uc/core/api/validate/UcApiUtils$SelectedWi
+ thApis.class
+SHA-384-Digest: PKkJCqGF4Dwbbm30ewyHcRfv4jtATMRrT6AEseeX4LmSyxqSEy0tfWhA
+ yUiZi/xn
+
+Name: com/silabs/ss/framework/uc/core/internal/cache/RawComponentCache$C
+ omponent.class
+SHA-384-Digest: u1l1O+gaBzYcyb/ssO8JGWtoOlhT3+2nHRQvwVpwrZARidwx+l2kMSMs
+ astZLxJQ
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/IErrorIn
+ terpreter.class
+SHA-384-Digest: Ivkm34VqQR9w+IQavGD3YVVSzt7YOQH5jqQ5caB3iTqOgYEm6m67InqT
+ /p+1Bh0Z
+
+Name: com/silabs/ss/framework/uc/core/internal/api/comp/ConfigFileGenUti
+ l.class
+SHA-384-Digest: XPQyy0kYUsic8N2dz4ENb1vj8WdgWrCqNmNqfP+mouTNg1wWpXDjR7q3
+ 7l9DziXF
+
+Name: com/silabs/ss/framework/uc/core/internal/api/parse/schema/slcw/Slc
+ wParser.class
+SHA-384-Digest: u7qwNRzBDi+Eso8IkyGCBk3Tg+lHCBmsYbL0v90AArybKuaDYBPvjc2H
+ 4iIdZhWv
+
+Name: com/silabs/ss/framework/uc/core/api/sdkextension/IUcSdkExtensionSo
+ ftReference.class
+SHA-384-Digest: rAbWoI7uOPqgPRqv3qLIwnHJTOhrw1A9YLg04jqRgAjbTKcsSawYLJD1
+ 2+ph/TaW
+
+Name: com/silabs/ss/framework/uc/core/internal/api/slt/package-info.clas
+ s
+SHA-384-Digest: ikjfMsUJ8nMix9jJNtYJMOcuk5j34Lqo9bEEwt2WeyY5yj4/B+KdqmzU
+ 51R6rb32
+
+Name: com/silabs/ss/framework/uc/internal/api/trace/SlcTelemetryUtils.cl
+ ass
+SHA-384-Digest: tnRkl5GaZiJw8gNaXuWBDrQ6lrw6Cc1r4sskuupTgC3sBBYJ9xcL2jQt
+ Guca6SpX
+

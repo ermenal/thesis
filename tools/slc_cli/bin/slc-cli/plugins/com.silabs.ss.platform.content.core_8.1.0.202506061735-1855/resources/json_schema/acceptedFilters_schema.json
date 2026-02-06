@@ -1,0 +1,30 @@
+{
+  "$id": "https://silabs.com/schemas/platform/acceptedFilters.json",
+  "type": "object",
+  "properties": {
+    "filters": {
+      "type": "array",
+      "description": "List of filters that are allowed to be displayed in Studio UI",
+      "items": {
+        "type": "object",
+        "description": "A single filter group",
+        "properties": {
+          "heading": {
+            "type": "string",
+            "description": "The heading label of a filter group"
+          },
+          "values": {
+            "type": "array",
+            "description": "A list of acceptable filters underneath a heading within a filter group",
+            "items": {
+              "type": "string",
+              "description": "A valid filter within a filter group"
+            }
+          }
+        },
+        "required": ["heading", "values"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

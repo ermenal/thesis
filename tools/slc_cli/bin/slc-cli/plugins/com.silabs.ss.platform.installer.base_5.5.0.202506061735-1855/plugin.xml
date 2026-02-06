@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="packageTypes" name="Package Types" schema="schema/packageTypes.exsd"/>
+   <extension-point id="installerservice" name="InstallerService" schema="schema/installerservice.exsd"/>
+   <extension
+         point="com.silabs.ss.platform.installer.base.packageTypes">
+      <type
+            id="board"
+            label="Board Metadata">
+      </type>
+      <type
+            id="kit"
+            label="Kit Metadata">
+      </type>
+      <type
+            id="part"
+            label="Part Metadata">
+      </type>
+      <type
+            id="appnote"
+            label="App Note Metadata">
+      </type>
+      <type
+            id="presentation"
+            label="Presentation Metadata">
+      </type>
+      <type
+            id="demo"
+            label="Demo Metadata">
+      </type>
+      <type
+            id="tool"
+            label="Tools">
+      </type>
+      <type
+            id="toolchain"
+            label="Toolchains">
+      </type>
+      <type
+            id="sdk"
+            label="SDKs">
+      </type>
+      <type
+            id="none"
+            label="None package type">
+      </type>
+      <type
+            id="familyProduct"
+            label="Family Product">
+      </type>
+      <type
+            id="apack"
+            label="Adapter Packs">
+      </type>
+      <type
+            id="autoInstall"
+            label="Automatically Installed">
+      </type>
+      <type
+            id="inspectUsb"
+            label="Inspect USB Support">
+      </type>
+      <type
+            id="earlyAccess"
+            label="Early Access">
+      </type>
+      <type
+            id="solution"
+            label="Solutions">
+      </type>
+      <type
+            id="stack"
+            label="Stacks">
+      </type>
+      <type
+            id="commonSdk"
+            label="Common SDKs">
+      </type>
+      <type
+            id="autoUpdate"
+            label="Automatically Updated">
+      </type>
+   </extension>
+
+</plugin>

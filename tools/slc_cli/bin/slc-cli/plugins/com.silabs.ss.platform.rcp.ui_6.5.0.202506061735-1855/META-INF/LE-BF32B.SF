@@ -1,0 +1,1156 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: q9l7sODVzhe1QvUHuDSBIUuzRd68QKKuc+jKucwFZhiBrMG
+ lr/1dOpuxno88tI5m
+SHA-384-Digest-Manifest-Main-Attributes: PAixxZFTxSz7hffX8kJRMWhYOTzIvd2
+ V2GMtAzJEFy3XkHzB3tzKyvLZ3QVrOVwe
+
+Name: plugin.xml
+SHA-384-Digest: v4dJd5RcBEcBllEyYMRupIlz4HPqaKafApJlSW2ekZZ76FhhMaDVmlim
+ L1apoie1
+
+Name: com/silabs/ss/platform/api/rcp/ui/ColorConstants$SystemColorFactor
+ y.class
+SHA-384-Digest: fIo3CiObcWnCtvdW/a4BnuPUKWBrCIr2BeiknmFnLYPce7N8mYp5Dp64
+ u2DuzDds
+
+Name: com/silabs/ss/platform/api/rcp/ui/TimeTriggeredProgressMonitorDial
+ og$1.class
+SHA-384-Digest: jWzmqZsD99KoJZelk2GvJz3uf3DUCBiyNyKo1hICpStl9jDCjZr+UW+U
+ ficld4nk
+
+Name: com/silabs/ss/platform/api/rcp/ui/FileSelector.class
+SHA-384-Digest: Ha+fz14pnhdQXlxAms4O6ToAFYdBvYnojg5IOcGQiYsoqRihR+lGLq+Y
+ //5y8nO2
+
+Name: com/silabs/ss/platform/internal/rcp/ui/OpenAPIServlet.class
+SHA-384-Digest: tXy5ncUy3JsKzFC090hBC7lbFWqoq9g8EnPmuCiKc5UIyRh7Q/EJkB8h
+ Tq9ovj1O
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput$7.class
+SHA-384-Digest: VFYtK9nxWe3hKuFrtDqpbveE4nC+lGH/Ke9lSWhe4I8aVK8FUzJgDzJj
+ 70n4QtiQ
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/ColumnViewerSorter$2.cla
+ ss
+SHA-384-Digest: xcC4E79QWkHL6ggGlrb0UN+0VHC/+TuIYDhSVSmyuBMeeEK/8Kw/ce/9
+ rbBwr42I
+
+Name: com/silabs/ss/platform/api/rcp/ui/InfoComposite$1.class
+SHA-384-Digest: rxG8LRH/kOtacxJwv9IrJ65u/goBKJdAFsVH77C8kiG+tg3OZaVEAXNq
+ 335wQYbi
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/PropertiesEditor$Property
+ ContentProvider.class
+SHA-384-Digest: GVbxDQYDB/9KtnTzEaNW0SYfNK5Ew0UiQJkDMCjxINldRawj541s1+Ly
+ QLHtTbZu
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SlushBucket$3.class
+SHA-384-Digest: TxoT4ON3yscMUJFSgD0KW2J0uZaaLAH+PHtH4KT1VM3F/i2Fhog4SDRf
+ Hpcf3+1Z
+
+Name: com/silabs/ss/platform/api/rcp/ui/FilteredCheckboxTree.class
+SHA-384-Digest: ksC+o+lXlr+3hPGyx+nmpstTb14bgUKMxACZoPSAM/65J+8AZS2LlFQS
+ WCq7qcHk
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/swagger-ui-standalon
+ e-preset.js
+SHA-384-Digest: DnmxFvQXi5MuArOtqssjwlKOSYdpqAUxOhhXOkVqwGSZmPFiKxewtg+A
+ vx6FUHRB
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/swagger-ui.js.map
+SHA-384-Digest: gf4sV6l6gBhnlwAJQ9q7G4mcQeoZn2bcyQ2DuZFs/SpNMUriluPqTXrO
+ zoVv9ou7
+
+Name: com/silabs/ss/platform/api/rcp/ui/RunCommandDialog$5.class
+SHA-384-Digest: RyLhBY8lutV3/3k+wYdXjeCcAdGYcMjqmlJyBkvDFrCgRRdDJiXm0a3u
+ TlWlqDfY
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/StatusLineArea.class
+SHA-384-Digest: wAIoSla7MAgN7TuSBfAR3s3sOCNdoxDTZ4pDfLuk9znsR8QHocCADmwd
+ U0lUql6b
+
+Name: com/silabs/ss/platform/internal/rcp/ui/ConfirmationService.class
+SHA-384-Digest: ljApBP80q/ESF1XKzAu31rm78Miys6u98OMH9eZnQvZDCo2eJsS4htXQ
+ uFsBW2R1
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SLSToolTip.class
+SHA-384-Digest: inZHJBqND/g8UI1cFaDQxy3lbfow0lKdTiONPSPUz9ZJE9ZqULAybR+h
+ Q97hMARZ
+
+Name: icons/ascii.png
+SHA-384-Digest: DKcPoA0COEua9I5sHusm9CseLgX645HabFYhjWF6lAfQxSiYtY7+Rkse
+ pD9nuje3
+
+Name: com/silabs/ss/platform/api/rcp/ui/ColorUtils.class
+SHA-384-Digest: +IJfDQ9mUpIgOpVWVwRCPyNXEb+KicG5AJsOTaddtv0xEq4MLbsM9q+F
+ L2nxrpFs
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CSashForm$1.class
+SHA-384-Digest: Vz8aAfkitzgzYa1p/e8shvTsBHOfAoBlb3ygGSv7hhocPYcQxY94ZBPD
+ 7E8rdjvm
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SLSToolTip$2$1.class
+SHA-384-Digest: ikLFcEnHwXztwh6ZK8XFHPsi3JQqyAtU16qrZ9pbZEH4WUxqIw7J/3VM
+ SYRAVsD6
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/StatusLineArea$1.class
+SHA-384-Digest: LThjr+P1XbHdSmjjvlxAHv0JOW8nZ9/HNcd9ITu1REGSfM/22yqSa99i
+ morayLME
+
+Name: data/dialog.css
+SHA-384-Digest: rzpCGQ5VXf6ZKGFrlxLXsW3/4qMB2OJ4cTj7bbL1k7n5y1tItQ6rnsZV
+ 55fEpN5k
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/CheckGreyTreeHelper$5.cl
+ ass
+SHA-384-Digest: IUu9cMyOZ3aP10z2lXVNebniEBT4WZynfpGPMmuU+1T3zpUTEhkC5oi7
+ ey+1/lfG
+
+Name: .api_description
+SHA-384-Digest: UXGQQ9M/N5vRuRPKiQtWsXyJQwItGc07ONowTXxtdc7KAT1imBzy4DQs
+ YMHWPIkH
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput$1.class
+SHA-384-Digest: edsdnUpzfow0m8BcZsb0szYNu8/E16edStwx4Mu/xng02VqH3DdSEI4a
+ a5E7EP5T
+
+Name: icons/test.png
+SHA-384-Digest: 4cE1hvwL7t7UeMOLOg87E2J7BxZgMsckV4wU1QKuZDza1cUQYEhMUe2m
+ 6o1q8T00
+
+Name: com/silabs/ss/platform/internal/rcp/ui/RcpOpenAPI.class
+SHA-384-Digest: pRQGF1UL8sqwwoiBNGLmcCHkzufsNygzkHedvVjRVPeenfxAz8jXlgA5
+ Mh9IytkQ
+
+Name: icons/settings.png
+SHA-384-Digest: /w1NmXr3LaZezobMoRbJPu/S98FAMaSYwNgRQpfHn7uAfi6/men/M0K6
+ HgVIh1Kp
+
+Name: icons/corrupt.gif
+SHA-384-Digest: JA8StgJzpm8McD+6VNQXLvAV1v2A17N871Z1SvTjwPIPJQDUsTshCpg/
+ Zpe402rY
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/MultiPathChooserUI$1.clas
+ s
+SHA-384-Digest: VbhDyD+wXwNFJ0aVMdif0W44vhTHjXRmaloJSCyzw3PjXwX8ZHlqKpr3
+ A0dSO0eA
+
+Name: com/silabs/ss/platform/api/rcp/ui/FontPool.class
+SHA-384-Digest: bQ4TpD3/UP3Ol7E5w0HdARaYud48aFwKXLySraBW9EeFacTNHaNtx9Xu
+ U8hwN2bo
+
+Name: com/silabs/ss/platform/api/rcp/ui/FontUtils$6.class
+SHA-384-Digest: 1dzDsqJH8MiEaUYEJR5Bw6Iqsp3hJAn9mTul5XslVI/Ckl2lvreQcTk6
+ 17n9yByO
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/ISLSToolTipListener.class
+SHA-384-Digest: c+/WG+Dxze3d+JyDYSZVGXhs+jLzx5LDcqqFiKXOFMvNFr1pHyYKSawJ
+ WJNOTEAq
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput$TreeNode
+ ViewerFilter.class
+SHA-384-Digest: h9WbXSAt/qsr5rzp+UYdHBEs+TPM8bY2yCgXKZfIst2P0MNmbAzBJzjT
+ j4Gczw3b
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput$2.class
+SHA-384-Digest: D9xMBKArMSEEiKuJbUQI3eyWBQsXmcSBT0mtFfzTr5RDxAiFJ5p/XyQu
+ w85z6usL
+
+Name: com/silabs/ss/platform/api/rcp/ui/GUIUtilities$4.class
+SHA-384-Digest: KqqQoT/JBjQbaoVe3CgcHc13bNH0O8jd6fhjgDlgHHxoKA2TDI+Wcds4
+ r0xSDyt3
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/CheckGreyTreeHelper$Stra
+ tegy.class
+SHA-384-Digest: wRtBz+m4VK5aoarMZf/1VOu9QjQYdeUABklhAQAIN+ZVhX2WWF5G5gZi
+ to+ye1Cu
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SLSToolTip$4.class
+SHA-384-Digest: 5mgxTCIx5hH3Hmvv78a59aIf4Pl349nQpTdaDPemAkhybBzYPuE2nJ09
+ ffAJSrIA
+
+Name: com/silabs/ss/platform/api/rcp/ui/SWTUtils$2$1.class
+SHA-384-Digest: xyuqBpKKwV75bkhEyKO/5XZC0Mx0jPgjSfIDKBdSakZ6MsE7S1WvBkP1
+ EPdRTpPh
+
+Name: com/silabs/ss/platform/api/rcp/ui/IOpenApi.class
+SHA-384-Digest: t4Mcq5FSsGjVKUcUdyLp8NebH6qHfogA1NWE3sazTXM7nXK4WEf+yOlT
+ YbRYmF5I
+
+Name: com/silabs/ss/platform/api/rcp/ui/DialogUtils$4.class
+SHA-384-Digest: OV53qplYujXWPGrtS8U4z8l6tvolzixq9ZjF8KPFlv9Ztp1SJX0Yn7pD
+ /e/wLTbE
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/oauth2-redirect.html
+SHA-384-Digest: hMIdi47kxICC9XOLPwcUQ6I/JTvEzy3Jv2uoc238CvmyxzxJfzm/nSbz
+ +nepZrO7
+
+Name: com/silabs/ss/platform/api/rcp/ui/SWTUtils$2.class
+SHA-384-Digest: Dc4OM5ldT5/1cJNEEnoJ/Mf9z4tc1Ku7KCVY5cG5ke4mzjNPr0aYS75z
+ dzqsh/2Y
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput.class
+SHA-384-Digest: Iwu9tu73R7hLZwdpCcw3R2IHOEswFCCL4ghWbJo2tKVfj/K2+Nj9Qens
+ I4FXbivY
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTagGroup$1.class
+SHA-384-Digest: yMRz++zxmCibb21Q4Bud8954KoiSXf0W59AK5+4oKpqiZY8/tho9ns5z
+ ZNLLXJp9
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SlushBucket$9.class
+SHA-384-Digest: G2GHstYUMbtJZdjggQ+iGNsE/QVyZQAPiHhLDRdJvP3Ow1A7QQKVbQQ9
+ UWHRcupZ
+
+Name: com/silabs/ss/platform/api/rcp/ui/InVisionUtils$ColorType.class
+SHA-384-Digest: DR345q6i3/V4+Ra76zvNVcqMv/dnuYcFyVo9OikKwbnwfV1KZma94kd9
+ /0YKJnsW
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SlushBucket.class
+SHA-384-Digest: jn51GUXrlLP39aXcIljXnEQ91DVpeo8DsB+MPRJ+6WQb+IXAt/+xEkRl
+ UfNatiuk
+
+Name: com/silabs/ss/platform/api/rcp/ui/InfoComposite.class
+SHA-384-Digest: 15+uFj8NELtgGvz/bOoMOXOS313mq1C5+L3v20VE6fcQwVg+IMErwqZ0
+ syZMGT1M
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SlushBucket$4.class
+SHA-384-Digest: sn7r7Jr8A3zz7jxqRKqbiVW/QeemxV5ZDOOcqL4s5jL/7Eo5hRiGnlX5
+ 81v0VGfl
+
+Name: com/silabs/ss/platform/api/rcp/ui/SLSWizardDialog.class
+SHA-384-Digest: /3OawXxMiLpDAOxCyEF4+qjqlgCsShitpfbqHecjO85Ym6H/QyU4b6nd
+ xi81XVDn
+
+Name: com/silabs/ss/platform/api/rcp/ui/StatusReporterUI$1.class
+SHA-384-Digest: CZrT7zR5RXRPURJsMpBnAoCyHYgLNb21iQkf2fuJbvuVZGgGFScMgeAK
+ wO/J2cbA
+
+Name: com/silabs/ss/platform/api/rcp/ui/RunCommandDialog.class
+SHA-384-Digest: ZPeUXF69I8y/Hh7mQrcs2dJaQbbbsapixX1Nfw21RCzNiCPoWnuObqDE
+ hdrs/K9p
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/swagger-ui-es-bundle
+ .js
+SHA-384-Digest: 4XoQeMMA2xMrkCBwi7MJwajPek/1eqfRObUPOX80bZ6mbbTJTyu7A8/Q
+ eYHya0Fb
+
+Name: com/silabs/ss/platform/api/rcp/ui/CursorPool$1.class
+SHA-384-Digest: cTJUm62GB20dcTXSiKBb4dIdJJcZOIym/EVcvwKG8gdUkUQ1t5sf02ft
+ cv7kijTj
+
+Name: resources/Roboto-Medium.ttf
+SHA-384-Digest: qj023eSqRZEJM75LL6ekcxJBoby/t3Xi33hk8V8Wpa/CA5eyVh8BuKxV
+ cXSh6q0D
+
+Name: com/silabs/ss/platform/api/rcp/ui/WorkbenchUtils$1.class
+SHA-384-Digest: eetnfla0/bgifW2uxRjvPJ0p/rtu7+UPRNqYVSIBcnZf4v31xvlGxhP0
+ St4Sx5LG
+
+Name: com/silabs/ss/platform/api/rcp/ui/IColorConverter.class
+SHA-384-Digest: c+v8zKubARdMFd8Woot4m+TtGnyyP3s3L6BofnY2nWIhoDj5/XkWBD5J
+ Qblj5LzM
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/MultiPathChooserUI$Remove
+ ButtonSelectionListener.class
+SHA-384-Digest: 23AYSSk4hhwPQ/0I4tuSlOdA2jc/5GJaUK7g1qxEsn09nPEd0gq+KGeF
+ 7EJMe8Kc
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/swagger-ui-standalon
+ e-preset.js.map
+SHA-384-Digest: JIeHBFBffN61rP6fSHd8mw94P9ts+RXYFvodPjcr7d6l5mUSa6Cng7kX
+ 2l/mA+kv
+
+Name: com/silabs/ss/platform/api/rcp/ui/IColorContainer.class
+SHA-384-Digest: ZPCH7dOsFbQTvLnclx0XJgSM0ZvbmHsV2YUyipcskFt9SCWAg+dlfPAZ
+ jfOnObzi
+
+Name: com/silabs/ss/platform/api/rcp/ui/DialogUtils$3.class
+SHA-384-Digest: VFNGllObCTpFbgebI8EKF31FFrzrUB6vcyOposEjsh6aJ7IYMnMa7IMz
+ lnjArscK
+
+Name: com/silabs/ss/platform/internal/rcp/ui/ConfirmationService$1$1.cla
+ ss
+SHA-384-Digest: AQcoQ0VItL8IazJTPGywctHnesyqLrFeW4AxEruORJdtMg6g1V6tu6BZ
+ 1tOPZcJk
+
+Name: com/silabs/ss/platform/api/rcp/ui/SWTUtils$1.class
+SHA-384-Digest: u+2dl1YBsyv+PPol8HcFUdnf5TGlEUjywQxjcaNEODLaD2dyVRjzAZfz
+ YxcObmyS
+
+Name: com/silabs/ss/platform/api/rcp/ui/option/IOptionWidgetListener.cla
+ ss
+SHA-384-Digest: pyOpGy7JVDOAJ2/WGTRh/g3qi7pZVXZOgKb22P3E7IQ9PXhtVS+3YhGu
+ BKy8y5AZ
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/swagger-ui.css
+SHA-384-Digest: wXqZTA7mokYlEwQArr3r4GsR8Uc2ZneD7ckRDWPs3ymYPVp3BaVDk3GE
+ LDmgz5ha
+
+Name: com/silabs/ss/platform/api/rcp/ui/GUIUtilities$5.class
+SHA-384-Digest: 1JQGeAQi63GX92+/MRZp6ho5C2RJxRmdbAeDiGgdHJgTZ9UFQJyhx5vW
+ SIWY6VuW
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/CheckGreyTreeHelper$1.cl
+ ass
+SHA-384-Digest: udnD+986f2mGAdbAsX6pn2PutpiCkGTi7CwUGzn/r9Ub2Uy9hngJf0uh
+ FfzDxUWv
+
+Name: com/silabs/ss/platform/api/rcp/ui/RadioButtonHelper.class
+SHA-384-Digest: HQxVbBZo0fC+j5nYsEd+xzJW3W+0FUNkWDTyOtkyhR870DNsyjAKFcGP
+ Yg/caQhv
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/CheckGreyTreeHelper.clas
+ s
+SHA-384-Digest: o9s/wysVgjRvsVhIUvOyJXxZepEWCbu879jT2A83Er0Tx6Yz1zg8nMLk
+ KEj5xj9x
+
+Name: icons/refresh.gif
+SHA-384-Digest: VBWhEgUX3vAf5mybyGRfIUbIaVU6XpBjJqufCkFkoyP2cCn7js70bygU
+ CuP4J+5U
+
+Name: com/silabs/ss/platform/api/rcp/ui/option/OptionWidget.class
+SHA-384-Digest: YAFBeQ7pK/0XvDxBw+2tn/oK/Eva2+dFGq7UU8FKSF8sFvyEN/OuMpbp
+ 6daeVhYt
+
+Name: com/silabs/ss/platform/internal/rcp/ui/NotificationService.class
+SHA-384-Digest: czTTKfPDUyURq6cFAbz3fhSSjM3MRKcMtdkTpH11U54lLCkjuycoVVbi
+ zGdIe2p4
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/swagger-ui.js
+SHA-384-Digest: seuH9KUSA496Th169K5Uvx6nLUx5myApL+DNkdc2mI4Vmu/mMtBWeokD
+ 9A24W5RL
+
+Name: com/silabs/ss/platform/api/rcp/ui/IWebsocketBroadcastEvent.class
+SHA-384-Digest: Q7x6LFEEXnY12yJSx5t75qk4MxFir3FYX6xpawXf7VXCo0ELD5ejfwbl
+ eEGZHV2Q
+
+Name: com/silabs/ss/platform/api/rcp/ui/InVisionUtils.class
+SHA-384-Digest: dwjqid8oz1W6Xcb8sN1tvr2X4x+lVsy5TuLnyBVZmIofToMz4R2Up1cD
+ cVbUBWuu
+
+Name: com/silabs/ss/platform/api/rcp/ui/SWTUtils$3$1.class
+SHA-384-Digest: sNVjg0cSSNfxt6X/cGyxL0u3ZPcU4KKVUczEgmxTggy+PWGFqxwWrrj+
+ qDjBy58/
+
+Name: com/silabs/ss/platform/api/rcp/ui/GUIUtilities$6.class
+SHA-384-Digest: 3yrs5IaH9vGOatMCpmoCsSIZlbniRdhVjKNHnnucURghkSt6TGWmVolb
+ iDu3+Dj2
+
+Name: com/silabs/ss/platform/api/rcp/ui/FontUtils$2.class
+SHA-384-Digest: SmMdQEWGhhd4Y4VzcB5e3YAyZct1P+EPNnoiSKVrnG15HTtWwzHtLhLU
+ e2M2IwFJ
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CExpandBar$2.class
+SHA-384-Digest: BH1ouTC4ebH0+FxiGwKo4/rPFTHN91va1EUXKyNjriZxFAijfEeKuUT/
+ SUxoROxY
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CExpandBar.class
+SHA-384-Digest: GOmcQNLMKKWbVx0F5CgkmTioxEJGIyOM6Mdog9VVnG2FtCxWXIrnXMyE
+ l1UIBcmS
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CSashFormLayout.class
+SHA-384-Digest: ugOB2x2mdjYki5OIzuF+nAzF8e27wQGpDLODSRFVQCZJ0V3UKYmRDunN
+ 1DaqFC2Z
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/FileLabelProvider.class
+SHA-384-Digest: GP2IW8nH/Fknl8AReDsMTSv1UmKAg2ETdKK4Q079EdvfSMOlNYUIFpSY
+ jMGSmAnc
+
+Name: com/silabs/ss/platform/api/rcp/ui/DialogUtils$2.class
+SHA-384-Digest: T1lcTn51mZI8Cqen0hib5MApqnZV9oaauapyJAGBedfqHo/fuK1okufk
+ H5adoocY
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/favicon-32x32.png
+SHA-384-Digest: lJk622+vwVzDzpAKKgQr182PHOFADmwE1PVUuKENzdncbj3gMIFru+1b
+ mcx7yKK4
+
+Name: icons/clear.gif
+SHA-384-Digest: +siWWxZkbhglJhLYeoNxjiuO8QgOi/4es6mGotfAAFMv5xg8NkWtCCKP
+ k/blN9Nw
+
+Name: com/silabs/ss/platform/api/rcp/ui/ThemeUtils.class
+SHA-384-Digest: xzc+WWKd0RkwgelNVPQIOX0HxfQqsY4DrpTObI/0ipT4Msk8jBREhM4a
+ AQFFs1+H
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/swagger-ui.css.map
+SHA-384-Digest: kBAdRYBF9sJ0nB+8Do6gOomIKN61hu5EMqhzQqtubhB0ZXMQ3P7V505t
+ VwIikAGl
+
+Name: com/silabs/ss/platform/api/rcp/ui/DirectoryDialogHelper.class
+SHA-384-Digest: IXJiaWl1CvgsUxTSXFKYPmPcXNeEqIY817WlS3FGZNRwumawpXNvo14O
+ zOsel7Q9
+
+Name: icons/warning_obj.gif
+SHA-384-Digest: Sh9zLZIVyUbtkluQIKhF5xVlfxXliFIiq+9d05TSxrxdyGGLjsX07fml
+ zi+rQ46r
+
+Name: com/silabs/ss/platform/internal/rcp/ui/EventWebSocketCreator.class
+SHA-384-Digest: QYyA5/HkUSif6jdNoUMWiQFTk5l+oifQilOzLeNo/NHxyp2EiJop/FVF
+ kr3HlaWP
+
+Name: com/silabs/ss/platform/api/rcp/ui/SWTUtils$3.class
+SHA-384-Digest: hPP4o26BxAZNqumHxeThwsLucyDPebzSN5f5d8liFtLkH7byH5JhJ6Uo
+ fsJEzXWz
+
+Name: OSGI-INF/notificationService.xml
+SHA-384-Digest: 0cCj/zaF/sTIVY1DKwu4WxWZJDwNPLyT8ueU/rnp8YBplO9LB8ouPfH0
+ 5ZDaHOvT
+
+Name: com/silabs/ss/platform/api/rcp/ui/GUIUtilities.class
+SHA-384-Digest: Y2NPfkA08zvQhWxfgmz0lqw54owPX4V947+1Ni4Rte4qoasbGG0vA6eN
+ B0hmJOlI
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/absolute-path.js
+SHA-384-Digest: 3f6LJoLD/QdWfxvN2PYpDHL2aH11dLZVe+MRTvn85IdtP9QKYzkVHmFY
+ KAvufgOP
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SLSToolTip$3.class
+SHA-384-Digest: QS4xuNbTDxAwkyi4MPNfx7vVob07cAGQRnBRMBuH9A2hW79qdU/JtKfd
+ lMTZCaHy
+
+Name: com/silabs/ss/platform/api/rcp/ui/RunCommandDialog$1.class
+SHA-384-Digest: KoEq+CtwB4wHC7BVCEqS9/IWV1KzRgOyVW41DRPr2/LXk4cihHqkjjFg
+ pAnRlSfQ
+
+Name: icons/down.gif
+SHA-384-Digest: tdlfA4OHLbH2b3cI+mds3bMJLpjYapexIUEkCumJzrLQjWCecw0jiCs8
+ tlJiTU6a
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CustomMessageDialog$1.cla
+ ss
+SHA-384-Digest: uCJgsZtOBZ/APTCwQuhRylgUA+q/dZgY5GYLynvp9d39qeBEhmMm7Kyl
+ hPc/62xr
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SlushBucket$2.class
+SHA-384-Digest: TkwzqDQbx+HmJcifQ1i7poWGNODIZ2LpR6ho308w9Ynb0LAlHwV6g+2c
+ YZTYjhVD
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/InfoWindowButton.class
+SHA-384-Digest: KqYmLXV7CcB4+Dhfy1Hzwru2W5HLnKsLof1PRy3uw55jlPgC3tqEW+5W
+ yBsnFbiT
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CustomMessageDialog.class
+SHA-384-Digest: viO6Nxo1yRnaiC0VGGMjL+QmKEA7XOf13aibXBm005HkEgfBPbDdyMIw
+ 85zVirs6
+
+Name: com/silabs/ss/platform/api/rcp/ui/ImageDescriptorRegistry$1$1.clas
+ s
+SHA-384-Digest: xTfSgm7qzZ+/9L/5LlgOSpV2+cGZw0fV47zGlyiSa8AudpCOuI873lnx
+ 9K5bAp6+
+
+Name: com/silabs/ss/platform/api/rcp/ui/DialogUtils$1.class
+SHA-384-Digest: gxEhgbBmAAipWPLFdVpphuYhA0c7uRvNXUvk/VbkTHMP3iwRXs4c0cRK
+ yTDA+ljq
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SideButtonBox.class
+SHA-384-Digest: 02E04icISrHoRKMSS3VNgKxe37NVEkBHMHQYx2DNLR5t1CvFmsZXhZ6l
+ 1znGVqvs
+
+Name: com/silabs/ss/platform/api/rcp/ui/SWTUtils$3$1$1.class
+SHA-384-Digest: YzbSvN9dvygi4GfvwwMC6NsTEABKwOTystRMkkG+w6z0E4NDAoCzg7hx
+ qoiQ2Sr9
+
+Name: com/silabs/ss/platform/api/rcp/ui/StatusReporterUI.class
+SHA-384-Digest: XXmXl3lT+8Nid2K4Yi238jIXEDXb/YWBlQppHsSvi2usfqw5dkIJvNDL
+ dnwWshCk
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/CheckTableHelper.class
+SHA-384-Digest: FLiR5ASkC7OzQSjQljbRiox5KoM8Yx1MYGm/P4D88iO4xJR1ngwDLcnE
+ kYDvNrEC
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/StatusLineArea$2.class
+SHA-384-Digest: xF9OEbW/swkBVYAuFFeYlTOiGyniXhaLia75XT8/wOAiyX6ZXdfkvCd1
+ 8YyRVmmC
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CustomMessageDialog$2.cla
+ ss
+SHA-384-Digest: dbM7EY0wkiAq6RP0aLTj7adjTQTdSXEnvarLOuVu12Dp3gBrrapDdnIk
+ Q11Bk+XA
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SlushBucket$1.class
+SHA-384-Digest: Z9quIMGn3kvRr9yM/nPPwnY6CPqoo1s3O6wHUgt3i31JYPwZt1+SVnjB
+ YmGngUJm
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/ColumnViewerSorter$Colum
+ nSorter$1.class
+SHA-384-Digest: Wl056rL55h1NHSTXlTsP9Kz5PscYbjyIwr82AjwVTe7+Y+J6tCPxrLlE
+ O+5LGebn
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/MultiPathChooserUI$PathMo
+ difyListener.class
+SHA-384-Digest: KL1IwFFiGJzruKm+JJQFB/6B1Iur2Ym7A73vFLIES9ekVW4+Ztv9pJ5w
+ 8EAc410O
+
+Name: com/silabs/ss/platform/api/rcp/ui/TestUtils.class
+SHA-384-Digest: erADW6JwkE/nVNfbu0h8iIqmoyxCJ9b5tu4OyefO6fRxJ7J+e3LdI085
+ UJ/gGjGy
+
+Name: com/silabs/ss/platform/internal/rcp/ui/EventWebSocketServlet.class
+SHA-384-Digest: yleNyxMEs44A4+v6OJOMZyjq6xs7Rk80/6CpNI26X0P1F9ML3pv5kMMx
+ DCsMVDUy
+
+Name: com/silabs/ss/platform/api/rcp/ui/FontUtils$GcCallable.class
+SHA-384-Digest: r3pxCjwyw4DMFggCHmtrlkNhJOybAjWGL9reQkjIINLxkiMcb9MaDkY0
+ zZQ96k+U
+
+Name: com/silabs/ss/platform/api/rcp/ui/LayoutUtils.class
+SHA-384-Digest: xmjNclCBpmnxPYgwRsW4bgJUoQ0EE26swQbwuu2yuks2IOBmnQlNXcIT
+ C9qFCQDB
+
+Name: com/silabs/ss/platform/api/rcp/ui/FilteredCheckboxTree$NotifyingCh
+ eckboxTreeViewer.class
+SHA-384-Digest: ErpSPz6O6E+u2paudLgoThp1eIx9ibOvCClnT7aOdIr9R5O5+q2pDFBi
+ rwRVcgFA
+
+Name: com/silabs/ss/platform/api/rcp/ui/SWTUtils$3$3.class
+SHA-384-Digest: vNPL/c471tAJmHyYjGUPi0s2Y44jczumISi3FvPGK+cbzmbbnhcZPhMj
+ H/WJ8NfQ
+
+Name: com/silabs/ss/platform/api/rcp/ui/IToggler.class
+SHA-384-Digest: DrXUdvhoprrjh7jWmzdoVvFoFlfRb/2ChJ9dpD+1bbvkJFS7QV9cttZa
+ iFjr+yX8
+
+Name: com/silabs/ss/platform/api/rcp/ui/option/OptionUiProvider.class
+SHA-384-Digest: XxcmssFs64PD9wB0xb6/aRitN7bwGIdtc5aXEWkzZzAyVQfjPUoHctoO
+ RA0p8pKX
+
+Name: com/silabs/ss/platform/api/rcp/ui/ProductUtils.class
+SHA-384-Digest: ZfYjXfvdKX0Qj0D3hyL8jMbAaITLx/WhXVXyiK7OMJQgeg2RvwcHr2ps
+ PKDtQSFT
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/ColumnViewerSorter$1.cla
+ ss
+SHA-384-Digest: 7fh0Fah3AfK3GBYi+fOcSqyDMYk62gNFkclIt3eaMVaSG/MqfQMpKBfL
+ ZxXf6zUI
+
+Name: com/silabs/ss/platform/api/rcp/ui/ColorConstants$ABSampleAppCreati
+ on.class
+SHA-384-Digest: XeB0lFiJcaf/Wv1O0yEcyj5ApeuJQE4xcPXeSI0Wru6qObNlAED0FIVM
+ iwqW8p5o
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CSashForm.class
+SHA-384-Digest: oxQobGKyRW8Z4tOKMTctLXZJ54v2VTq6+gpQnbP83iOS0djOkixPmNU9
+ LOQI759b
+
+Name: com/silabs/ss/platform/api/rcp/ui/IFileSelectorKey.class
+SHA-384-Digest: 0dwZloscMoSmP2/Lha4+KwoHo2FI5nqPCapsfvXbDTmCWBbvO1SVH3Zl
+ h0NAXo3U
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/index.js
+SHA-384-Digest: UdliGqPu1eG6DKdrUc9e9aSXAm/JWuxCb2I9lABN0GoqABrZwrhDass8
+ tl1QJw4p
+
+Name: com/silabs/ss/platform/api/rcp/ui/TimeTriggeredProgressMonitorDial
+ og$2.class
+SHA-384-Digest: PhPH/FJUTo1h6VVJewbiWZ1BUn9t70+A6ZzBpRzlp3iXf/J91aiXIdLF
+ qRjphDWV
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CExpandBar$1.class
+SHA-384-Digest: M6rRRayrQ5KC2pSNJ9GWitCxj/DyNYqomdSIeREOYzjYWDo6zIMCdsJD
+ uYDTjFGV
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/MultiPathChooserUI$IPathC
+ hangedListener.class
+SHA-384-Digest: cIERq6Vls5+eMu0ccfzTNoOo1wXE8h5XeVYC84XT45tbb30wAFOaUxEy
+ tFDESNGs
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/CheckTableHelper$1.class
+SHA-384-Digest: 9TzYZ3CRYOLmRhO2196d3ICoBc1vyquwfRKnfVyFHbiEJbE2qlaStDTJ
+ PnZesXeY
+
+Name: com/silabs/ss/platform/api/rcp/ui/IContextMenuProvider.class
+SHA-384-Digest: a5+kI+BPbSd7E/P8N5dJIojY8YacLrm7ugjdI7A5Ww7UrwVIunC5c/RZ
+ Iu1uAV2f
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SLSToolTip$2$1$1.class
+SHA-384-Digest: 7cEa8oIXCLy8HLBWFCVMijMC1JddicWWrQsLY0JLXWlBtWpDv269DUbw
+ tVggS8/n
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/EventTable.class
+SHA-384-Digest: dg9ODUYip7FH0SyWZGKsgmMa1sieW7ERJ0PqmpYw+yiva0QlPVN2PVqh
+ fEnFAmaE
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SLSToolTipAdapter.class
+SHA-384-Digest: ECN82evNefh2VjkbTyFntF8XUh2Fi49FbvsdGWWfFPGVQY0QU0t6L6y6
+ +IG43VVG
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SLSToolTip$1.class
+SHA-384-Digest: EfdhHXhiTeO6ZqphTkwUTZZdou6+AQnY7l6ut0xE8ZRF/hpHaBEwj8Tt
+ 9Zd1izvo
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/CheckGreyTreeHelper$Chec
+ kStateProvider.class
+SHA-384-Digest: YzPE3Aqorz3+it8WwqyYRhvZiCDHFyPhTXJdl/S7EAfG85UkW57xWvu7
+ YCX0+5uy
+
+Name: com/silabs/ss/platform/api/rcp/ui/InfoComposite$2.class
+SHA-384-Digest: ql2WftKq4e/cctZedBXYXA5z1729zyaN/nfz3FrRJ3Sa3fhoNHeDvPYc
+ HbQ28x9M
+
+Name: com/silabs/ss/platform/api/rcp/ui/FontUtils$1.class
+SHA-384-Digest: OdKE2GmtLQsxZt2wn89/QrhHukYLT1UNj+K3trCMvKT1WjMexhJpP0BH
+ XmYHhSTr
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/ICheckGreyTreeHelperList
+ ener.class
+SHA-384-Digest: KM7svMBWWu7Ozc9mJ+tbIhFCm8W8sRzalZKdP9uMLrbbOUpWmdF6bZdw
+ zezVMuhf
+
+Name: com/silabs/ss/platform/api/rcp/ui/SWTUtils$4.class
+SHA-384-Digest: 2eQ3wIqAIv680W0PvrrGKodrvggBljqQkDcL8tzaHixheKlt1tIXY3Od
+ bfWobvzq
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/README.md
+SHA-384-Digest: eWcsMej07rs2/fRDZYz9EPvLY6vVNVkGexnEb3TMUQtW9waEE8Bd2mwo
+ Kfw171Lw
+
+Name: com/silabs/ss/platform/api/rcp/ui/RunCommandDialog$8.class
+SHA-384-Digest: 1gj6fdltoOTAdyA+dHX7c0ajzitI6aeqEIB4IKKOUaA3Kx1gpDHvsvs9
+ xfAjK4Sn
+
+Name: com/silabs/ss/platform/api/rcp/ui/TimeTriggeredProgressMonitorDial
+ og.class
+SHA-384-Digest: nM61VCrm4K5LWPazCQSZ7EjDsZomEuaokJwSRs7ziIwJN7H6yccyOv5P
+ tuPtaXYZ
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/ColumnViewerSorter.class
+SHA-384-Digest: zdrysnV6qVAL/7CjEWgAozmS+qwd7EWzWsJDELRdl1txmduNY65pBc0N
+ asqqsep7
+
+Name: com/silabs/ss/platform/internal/rcp/ui/Activator.class
+SHA-384-Digest: bYxdiqmmY/QRHfuIu4K6Hersxn0vk7WHLWUWdwuhauLRwtqW6TWgE2Kw
+ nB3d8y3O
+
+Name: com/silabs/ss/platform/api/rcp/ui/SWTUtils.class
+SHA-384-Digest: yyDAucKZUECNrOf3xPJzik/CyuNmUkl3XqOBVk3CyX7L4hjPPLRlq+yw
+ 8/H+MNgs
+
+Name: com/silabs/ss/platform/api/rcp/ui/PartAdapter.class
+SHA-384-Digest: kjLVOrLtBwQoK1cEEco4cgUmrLfzMMcqinWePqv228cnz9qGT4c1BY5W
+ XXl8uR//
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/favicon-16x16.png
+SHA-384-Digest: F87v8U1T1ODrAtMKI5yy7jYlsIwEGNpNrQxp1eJ4E20JnAOm5lKz9SP9
+ 09saWNF6
+
+Name: com/silabs/ss/platform/internal/rcp/ui/ConfirmationService$1.class
+SHA-384-Digest: +rcSaMdXcj8BLzMCXtCNtg7UR5dptaM3xeytqsjr/NiOu6zL5pzRJgke
+ 6gyjBp3Z
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SLSToolTip$1$1$1.class
+SHA-384-Digest: NMqDvoU8TvQRkuG3f/+LXYH0POgZH04zxLm/l6ljyS20WLLuyLJ9NGHR
+ IuU9oCbD
+
+Name: com/silabs/ss/platform/api/rcp/ui/SimpleTextEditor.class
+SHA-384-Digest: e4dX1MTnNG2AWAGwWAPCC4G1lISCOdXK4xlmaP6wletLqqfvGE57f873
+ +3G31LBK
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/PropertiesEditor$1.class
+SHA-384-Digest: PNWJXBaBKdcCsXeIx+rPHK52h8rEPZf+Iv6CISaYqKFIVG5L2P3UAmLi
+ jUGSYDbh
+
+Name: com/silabs/ss/platform/api/rcp/ui/ImageDescriptorRegistry$1.class
+SHA-384-Digest: 0X3aAxQ2GryqK8G3Rv0eoPyct/j4lHxEUK80UTj1dH74wN0q8POWJ87a
+ ejJPxQ8K
+
+Name: com/silabs/ss/platform/api/rcp/ui/RunCommandDialog$2.class
+SHA-384-Digest: Vc0wgHVAebHDyxIeuEkk3i1i6Fgvpqx6vD0oX9xFLuOJRTo9l1gNaVzd
+ HcWaUBmB
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SlushBucket$6.class
+SHA-384-Digest: PRqiUG+JeKpsU4LWsVPNtMmGauBn7AOD3l1vWrWaTUqDtbhf1KuUgQQA
+ bVuZPpw8
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SLSToolTip$2.class
+SHA-384-Digest: 4mbT8Mfpa+RUXUbfshMYA5g7a5UKBFcXfz95pu8+qXHxeozzTTO5dXKN
+ J7MPybZz
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput$4.class
+SHA-384-Digest: Xc4uvFKdzsBOG7a4r5aYLlvJOLncWh39L4UfGPBXkBRolKgP39OLCjkg
+ aZkxM9ch
+
+Name: com/silabs/ss/platform/api/rcp/ui/option/OptionDialog.class
+SHA-384-Digest: 7pQaWi3Cei4A+5ijfK448D5UF0J9oDUC5djgX21e5owv/16MUk053w9X
+ fhizjwZq
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/StatusLineArea$StatusLine
+ LinkListener.class
+SHA-384-Digest: hGbgTIuLnTWXYHUO7UJi0ttRf/Wt97m25Z6pyj1fWCJxouHAPQOST+HI
+ ya1FAD5K
+
+Name: OSGI-INF/runnableService.xml
+SHA-384-Digest: FFTTCz7TW+am7ypg0TBOa1XBOTGyI9SY+bexBNyFg5HLz03IAia35Jyj
+ xzKkvd+3
+
+Name: com/silabs/ss/platform/api/rcp/ui/FontUtils$3.class
+SHA-384-Digest: plnyuZBnC/gEi5A8gqn9KsQS6vTpy4Q213zGt2k3pUDGo7GLZYf6TKcQ
+ xBZapJwX
+
+Name: resources/Roboto-Regular.ttf
+SHA-384-Digest: CD1tc35BNFL8gC+tND+ctS13IcntpqE53eWWajSH2ilfVth00ncT0wZb
+ G3QJ3ruW
+
+Name: com/silabs/ss/platform/api/rcp/ui/SWTUtils$3$2.class
+SHA-384-Digest: GLob3WlLAEiwX387WLq0YxWqxMsfZ1jRK6FtyZIjxP+JGCplyH89G7H6
+ wLax77IA
+
+Name: com/silabs/ss/platform/internal/rcp/ui/ExtensionDriverStartup.clas
+ s
+SHA-384-Digest: EReX9YuhZfOpQjHwHsAOmqhE7y+WxH4VOi3CfDDdkPGybukJrEW6gL0o
+ qTEs3j5J
+
+Name: com/silabs/ss/platform/api/rcp/ui/InfoWindow$2.class
+SHA-384-Digest: QkPTNOb0mbbmo+0vX2tIHLC0x+5J8afrzvW7A13K0oaQ9RG6bjztNZuv
+ WBQXQe5l
+
+Name: com/silabs/ss/platform/api/rcp/ui/WorkbenchPartAdapter.class
+SHA-384-Digest: oGowh0EPLoY1wWrHBQv5SfvKcCrTgaiMWsaYi6rC0Ju3rHFSlFJ6AoSC
+ bSdh62Tw
+
+Name: com/silabs/ss/platform/api/rcp/ui/WorkbenchPartAdapter$PartVisibil
+ ityListener.class
+SHA-384-Digest: 6GPb0Pgk3HmgZsNV5eZ+3cEP7WgIPTy8BnNIHS94QXW4u44Wy9xqygyK
+ TNL5/3bp
+
+Name: com/silabs/ss/platform/api/rcp/ui/WorkbenchUtils.class
+SHA-384-Digest: kbF8haEan86/78jIFLQSroB9FLZ0UV8VZueJXvoKcNyCZY65CQzHB30e
+ JT/9UuFP
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/swagger-ui-es-bundle
+ -core.js.map
+SHA-384-Digest: TvgB9/hiqR69qKWueiNudnY9bl4hPh2UuUvroRvIw8CdcKEqWCPnPSaj
+ zIsrPN37
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CSashFormData.class
+SHA-384-Digest: 51ZtoB56sOEUguGKrxG2ZcqB269REoi3kgUVzh+Fz3TsZZ+vENrCd9eS
+ I2G/xo/f
+
+Name: icons/remove.gif
+SHA-384-Digest: ewz/cHlcSMJRmriKOYDJKIIUmV8na7q4U2yv23RDbF+QW/FmV04HTo1L
+ yhKDWSFp
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput$IMatcher
+ .class
+SHA-384-Digest: j1yMQ+aECr+nShRWBpv3J+W10xMrXhyk1LmGEJ6POcLnOhD+s0oVsh1T
+ Ai+1N5cM
+
+Name: icons/info.png
+SHA-384-Digest: vTlmieZSTI1gais2UGu8pptk35IPgGJo2VQwLgUfDzswLCXTBWKIs+js
+ IcYqiynI
+
+Name: icons/play.gif
+SHA-384-Digest: QXhdu/6r4TcdlYgLDPCdhBYtB/5Q4EpDQtVqAomIjnGAhViFJCWpw4it
+ 4HHVPIob
+
+Name: com/silabs/ss/platform/api/rcp/ui/CursorPool.class
+SHA-384-Digest: kSXGV/9PNwwQsfiyytWgMxpIAgtitVsSGbExhosEE1f2fWvsLxvdVMok
+ JTeMIiR9
+
+Name: com/silabs/ss/platform/api/rcp/ui/StatusBarContribution$1.class
+SHA-384-Digest: 4hrktpHD/DwNJPBFKryx8t7nlMT660mx9KGk1ZcyCrEMdmeF7HsHIsVX
+ mL6/nXKS
+
+Name: com/silabs/ss/platform/api/rcp/ui/ImageDescriptorRegistry.class
+SHA-384-Digest: 5M+cPmkBpREluVwGB3XxhC4jYeM/RROexXcWPsCIeTptkatYfdjjxPr5
+ SD7/s3++
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CExpandBar$3.class
+SHA-384-Digest: mFRPa4kKspLU+JjCvyKFU2yyRfAMgUGs09l9mqg0RuGU3rTKn91KGUW9
+ 4mTpgZkB
+
+Name: com/silabs/ss/platform/api/rcp/ui/RunCommandDialog$3.class
+SHA-384-Digest: WtoA9qQPGlHB3da75+C6lBNCwLko0xwPA2UGXDSzru6IjK/K1kmE3XwF
+ Ny1beKhH
+
+Name: com/silabs/ss/platform/api/rcp/ui/StatusBarContribution.class
+SHA-384-Digest: I0I/JEEWjCJmsvf+gr8+VKqixZZFsBKYPBoGWnpKZoDYJNbzYY+zjkYv
+ ++TwRfyN
+
+Name: com/silabs/ss/platform/api/rcp/ui/FontUtils$4.class
+SHA-384-Digest: McKPmIaDrvVOes5SllhHIRZcpu8PzFfz39nEmwARpTbJ7b3BnXmA03bj
+ xwHbAzaj
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput$9.class
+SHA-384-Digest: IJuk1CQ1YEeEQVc8BYC52I0MFJwIqInhoc32NbdlgYtxXfRM2BFIFc+8
+ X+zw5kGd
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/MultiPathChooserUI$AddBut
+ tonSelectionListener.class
+SHA-384-Digest: SbbUqpBLhzFsMI2ozpLyaSHX7+Wy9TsMk0bbeD+fUPhWJxkU50ObKMwA
+ xy2huX0+
+
+Name: com/silabs/ss/platform/api/rcp/ui/CoreIcons.class
+SHA-384-Digest: d7o9T++QbcYMg4viRBeE5c03cewbq2cHw6NLRFnXh+jEKMAuj7xAIPrN
+ CusJfT8V
+
+Name: com/silabs/ss/platform/api/rcp/ui/PlatformUtils.class
+SHA-384-Digest: SUzNc5CnneiLU/OtNugqPxvaYn8sv0MyOUb9Ve4Z7XfuVvjMiHGUKYHy
+ LCZk6R94
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTagGroup$ITagGroupChange
+ dListener.class
+SHA-384-Digest: wu1vA0HoIrhWyAQwZw3OHR43IdgHceRp85Kwyz6UyXoIRfNV45G9UI5f
+ dsjZ0rM+
+
+Name: OSGI-INF/confirmationService.xml
+SHA-384-Digest: 7OR2So9+7VO8P1mre/GXuYAQIsJuCDR/mLDWY/jFGaQxdS2xK++EBLH3
+ 4nDmIe/n
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/CheckGreyTreeHelper$2.cl
+ ass
+SHA-384-Digest: 9mEpwskb0YukIl5Ub/qi6GMqL4Ym70WOYCtL3j7w47KPoOmgWN4LhT11
+ dwxrVmRB
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/index.html
+SHA-384-Digest: HmnSYzXkB0EyGBY8h1JKmnhp2+Qjw/od2i2vCv2X261okKwHKjQyx4lB
+ 0ZGvTSiD
+
+Name: com/silabs/ss/platform/api/rcp/ui/FontUtils.class
+SHA-384-Digest: 7U30kBce9zqF8YmiZj+FUBuhlW5bT+j4GiUae6KkYFP99lBKdR7aJ4vr
+ BWG7c8n9
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/PropertiesEditor.class
+SHA-384-Digest: TC/mRm8/gJ6cKlXvbgZVuQ1t1lHeda70uz73FSipQ5fmAfrffrJB6Xr5
+ zqNoP3PU
+
+Name: com/silabs/ss/platform/internal/rcp/ui/OpenAPIServlet$OpenAPIDefin
+ itionsParser.class
+SHA-384-Digest: ezHpy4DcivOg3jDMpapi3AogIrAXZqByuQEv1iIVF/N8gu+SQ2aT+ran
+ cg0y1LRx
+
+Name: com/silabs/ss/platform/api/rcp/ui/RunCommandDialog$9.class
+SHA-384-Digest: wpq2N+Z4AnQ5j/okP+ekKyHIeIWAwYuVh1FYDibd7kgJXKhxg0oXN6uB
+ +HaUHz1O
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/swagger-ui-bundle.js
+SHA-384-Digest: 0AstVT+h1souliV5pxOldMjrgHiX80BR71xKgyIOnRRqZcKtIl58XmlI
+ xYMeQBjg
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput$3.class
+SHA-384-Digest: /v4TbkajIZnQjyjv0t7Ec5LzE5Qo66i3hbKXWBJY5X6ksVFQTK0RkSNE
+ 4B4jhKOp
+
+Name: icons/up.gif
+SHA-384-Digest: G5Jh+5yHlywpnOpJSmsYGv5oNCBRDF//ISdw/9X2KzNk4Hucz/m2Pcfh
+ IxKOX/64
+
+Name: com/silabs/ss/platform/api/rcp/ui/StatusBarMessage.class
+SHA-384-Digest: E6ffpDjeJ2SBpQ0OAsch1OiInnfCbXq2g/4VrSf/y9QiFzG5bAmHcS+5
+ Jy9Ar6if
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput$MatchesT
+ reeViewer.class
+SHA-384-Digest: YxvihzGb8as36htjEez4EDezdD8kGV1OItpULci6rV59AdpVsh64AnZt
+ OhjpBMhL
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/DirectoryContentProvider
+ $1.class
+SHA-384-Digest: QnBTKrwrygCjs0Vwg5HhG6tii6jhkfE54yJLN8cmq1rYg1+IENiUqGxc
+ NJTkWxzi
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/StatusLineArea$LinkData.c
+ lass
+SHA-384-Digest: CoHJ9BG0p8wLLdS8NLbXTjAmBFNTv1TJdnW3psT+rOiKSVCjwZHfqyE7
+ RoL6nxTZ
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/CheckTableHelper$CheckSt
+ ateProvider.class
+SHA-384-Digest: zGKyiQy/JzCZ9QoSjXDEU+otcyoJbhdzGaPCxTVWDPoo2GqyoHvwVYXd
+ 84JoVczh
+
+Name: com/silabs/ss/platform/api/rcp/ui/PlatformUtils$1.class
+SHA-384-Digest: 8eHKiS7ioQuO7imP6kxi8fTgtIOh2e8Oi0spgDvyqqY2AnCC1GsztpSF
+ OSxIldFr
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTagGroup$CTagControl.cla
+ ss
+SHA-384-Digest: 0/s9stDIFtLw3tsDVWMbQ/8c5RbYdW1wW5J0qnw5aKi/44dS/M8fQqLF
+ B0zb9OVH
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/swagger-ui-es-bundle
+ .js.map
+SHA-384-Digest: a6ElOKefqPaki28H6QUII0nGPTLPO39t9kj5QJF9110YSuwE3Lyxyfqi
+ TRanqzfA
+
+Name: com/silabs/ss/platform/api/rcp/ui/FontPool$1.class
+SHA-384-Digest: 9zJq8zgqhBya4eTx4eEZDOKrCs0sWX1HygWWhXrUH5puQeQvFmscrh90
+ uulqCmuM
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/MultiPathChooserUI$FileBr
+ owseSelectionAdapter.class
+SHA-384-Digest: IerTv/ZsNhAZ9TwUHeCZNeQaLNzHsqEMa32zYkB83U3Sa5RcLS/q5SYN
+ w1N7nR2s
+
+Name: com/silabs/ss/platform/internal/rcp/ui/RunnableService.class
+SHA-384-Digest: SsTRNgdywF3Cs08kdM5SRyAjMDtFgOz9c2G80TD4yWqv9V2BfVylIlEY
+ KBfsofid
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTagGroupViewer.class
+SHA-384-Digest: kv0YrbA5aRfz/wfrpE6weO4bLMc6KONvplTHfaXFYW9qDbV0AKZyF0C0
+ m1pIRTHi
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/CheckGreyTreeHelper$3.cl
+ ass
+SHA-384-Digest: bk+oyVcpPSqlwcHdqnhVAno3uk1+L9yWITTUciAM7Fggr43Gjpump61r
+ KMVciHza
+
+Name: com/silabs/ss/platform/api/rcp/ui/option/IOptionListValueContainer
+ .class
+SHA-384-Digest: 9KSW6JhIXZou7aBR66sBB8l0dxPDSHAmSUaxV/usA+pbqDkfTDHtOfnD
+ 5GafRrfp
+
+Name: com/silabs/ss/platform/api/rcp/ui/ColorPool.class
+SHA-384-Digest: Y6PJohkP7VdZvCvKnbhkEKGrukeARoPKdtYbC47wBjqGLjIUWCXrZIAn
+ FqOjMnYM
+
+Name: icons/error_obj.gif
+SHA-384-Digest: XarU/H9Jw+6ylqC/o7Ei+gTZpkWmo4zLVgTsfk9kkIcZ1nCjHZi62ec4
+ NAnBVE6z
+
+Name: icons/stop.gif
+SHA-384-Digest: 0xIIMgcdFttf50UqjBaPP/coYRhMDFTU9W7klAIKmwQYRFiZCjS4gZQ0
+ zqN7EzMK
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/PropertiesEditor$Property
+ Holder.class
+SHA-384-Digest: eGXzuUO7OSlBxbnJwVNBC1UHnWn7MI2Z0MzmJEObPlb6+ZhKxmOQ4nqW
+ 7kOiq9YM
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/CheckGreyTreeHelper$4.cl
+ ass
+SHA-384-Digest: /Szgz28WZh9bom/6UyXekaHyCUAgOKQ4jaTBFoW6pAxOeBiXOLrKQo0M
+ OHdasN1F
+
+Name: com/silabs/ss/platform/api/rcp/ui/FontUtils$5.class
+SHA-384-Digest: DUfOIYZVxzErqjlkPHFO76QIg3QV4XRc7sMw8oelKv7Mo2o5ELtdQZrj
+ UyvBVqxt
+
+Name: com/silabs/ss/platform/internal/rcp/ui/UiServicesServlet.class
+SHA-384-Digest: jm++LCj1UsUm2vXHR9jAr4pcqr2P5tYT92c7xudWrQBXCCWb24/VfHx/
+ qo0P2Kig
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/PropertiesEditor$Property
+ LabelProvider.class
+SHA-384-Digest: DLMHZuUsV7rNwZcha/2bhqEycTwRdR0TN6C4Y94T3SplB/hrVlGEdnDC
+ sUz/xu11
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTagGroup$CTagControl$1.c
+ lass
+SHA-384-Digest: XzCh0yNG09JUYlaE+beOQDzUeIAr+bkt0YwoqiLLAG4F4PSN1UW3jF3W
+ Prc0tjSu
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/swagger-ui-es-bundle
+ -core.js
+SHA-384-Digest: kQw3Un8E95uB80KLtoLQmC7gZRk+FU3LG26mk3U4QJitaVEWz7M4Bi18
+ KWvzEZnU
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput$8.class
+SHA-384-Digest: pf0obtAYhSkOtP71ndmnS2CuJ6n+L2AEiiB03Xnah/IZYiFNq8g1OS/3
+ 5JnzGnYI
+
+Name: com/silabs/ss/platform/api/rcp/ui/InfoWindow.class
+SHA-384-Digest: f8uaD2WCEWKRNBfC0f9d3cyj6A0uVAeJclvAYK1sFjdR7KPvv8+t6iBu
+ aGRM2XEP
+
+Name: com/silabs/ss/platform/api/rcp/ui/GUIUtilities$3.class
+SHA-384-Digest: naJXbbpVuMSDzasKXo2H0HvieqJdm3Df1kRSrEvKExI1G35EEOmFCgU4
+ rUbfSTGN
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/swagger-ui-bundle.js
+ .map
+SHA-384-Digest: muqNu1odvdMv6qTjMVMrAXKj0QW1tbwc1AOlq8LUzn05tE17/Et6mld7
+ FYBQcq6o
+
+Name: com/silabs/ss/platform/api/rcp/ui/RadioButtonHelper$1.class
+SHA-384-Digest: 22PnVrpkvbiCtWj0zacLrZKBKGOg0h5Gkpf0Y4rhjVActAOsxN28Jnjr
+ G6voewC9
+
+Name: com/silabs/ss/platform/api/rcp/ui/RunCommandDialog$4.class
+SHA-384-Digest: uvyv62a5sMKYLrcP3EaHVI3ylSNTmwaa4SYWAX//MOyU3YF6PLyvAepw
+ HPCp6OA+
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput$5.class
+SHA-384-Digest: wkhCUPJG3C35tDmlv7gWvyBaykZB6ln5kPriECQ8Y0dec9p5udqOLpjh
+ apQ76e79
+
+Name: com/silabs/ss/platform/internal/rcp/ui/Activator$1.class
+SHA-384-Digest: /gmN9FRPdy1VdCowGKhN6IR29ZaS6qsu0OnLzX2cIJtglXq5m2532/Aj
+ n9/35Zw6
+
+Name: icons/add.gif
+SHA-384-Digest: lZvWwK6CSgytfOojOheoU6F9mBRvPyJu0hDh/eYj/GkpLs9j/X5L9CPw
+ JKezSYMx
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/ViewerUtils.class
+SHA-384-Digest: tWFENRTgEzMadzR5v+G+sRW4sTmASXpTYCpUTiBJthuGIAp+KK+UU3KF
+ 93kegZfs
+
+Name: com/silabs/ss/platform/internal/rcp/ui/ResourceRegistry.class
+SHA-384-Digest: ITNzJKK+asoJboZXLw0iRlpq7zd89Th4N/GATUMMqRQXO3VVclg0hKil
+ t3OAQVic
+
+Name: data/install_only.txt
+SHA-384-Digest: wX2iA1TQuL5n0w5B2rRXCEeTuAfwV0YZAYx4wU9wPwp9RZoXK8cyML3W
+ JyW7I3kw
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/ColumnViewerSorter$Colum
+ nSorter.class
+SHA-384-Digest: jG/Rqniz9ShY+maJuzxrrDyZRtGD1oGz5B20mulCqAgDOOiibErB25LB
+ aNpu1jQ3
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/package.json
+SHA-384-Digest: GUAJrYNJpwl8H7dK8r7Cjlg0my0jFiFjs3/6qrzQPm93z/KoD5ehMD6e
+ r9t4Wye3
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/InfoWindowButton$1.class
+SHA-384-Digest: /s8PkwmukbKQdSLE1ehXf74iDzuvrDVvLT9t9JShJ3kebOjJnIL2i/BW
+ QEkPlZCK
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SlushBucket$5.class
+SHA-384-Digest: joSC8EePhEbV+J++LzXELRD57C3YwC8kHVJCcZahRDBaVZwdCCqN1rdF
+ n2LDEzyi
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/IMultiPathChooser.class
+SHA-384-Digest: G4CotOAX4aM+JXvTDs9969msPWwH53W4yKRgOJzmYLiif3gg0k++eOG1
+ rgONy4cU
+
+Name: com.silabs.ss.platform.rcp.ui/openAPI/apidefinition.json
+SHA-384-Digest: WIYUXaI3LUU8OxCgZP7mD2WZ5twj5WKeE151a/DBdUpN/02q5ZdY22Qx
+ Bjqnn+ce
+
+Name: com/silabs/ss/platform/api/rcp/ui/InVisionUtils$FontType.class
+SHA-384-Digest: iCPCf4AwOu7M3sIEa09XOLarqDwBZTR29/e9yhpw7YYg4UlB64lgIo9Y
+ pu204D7k
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/CheckGreyTreeHelper$6.cl
+ ass
+SHA-384-Digest: 8XHR/aMpBctj4Pgm9CXnad2dSjWzL5/sFYxUDyneRX2u/R7fSJ7u/Nbr
+ hWwyp1d4
+
+Name: icons/new_banner.png
+SHA-384-Digest: 2DMvBFMbilppb4GIiDaPyczcQjp8yLWa7pneq7q3CY8q6C1iKYk1Tzvk
+ R51WcRLJ
+
+Name: icons/info_obj.gif
+SHA-384-Digest: s4u0HayQPxNOructnH6zkl+pLkG2CKRCanKkJG8ny21jqKdVhNKROVf8
+ F0xg5VnP
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SlushBucket$8.class
+SHA-384-Digest: iKcFVYo13AMmQuJoGTeZE7UTbA1+dTrr7he0P1wiJMblxI0HPmT1qzCz
+ j5Hvqp2M
+
+Name: com/silabs/ss/platform/api/rcp/ui/viewers/DirectoryContentProvider
+ .class
+SHA-384-Digest: KF2p/jRGzckrQWZrdVW2lKWyZCB53P0HyJb6Ko7PgRFMlGRVsbGu5X4U
+ 4nzmT9QS
+
+Name: com/silabs/ss/platform/api/rcp/ui/GUIUtilities$1.class
+SHA-384-Digest: J5hMkL+BEN6/8KonrPk6K1OCckNvJmLp+JbfvmIGNeaniRBNFjDydMTZ
+ cmANdPbu
+
+Name: com/silabs/ss/platform/api/rcp/ui/RunCommandDialog$7.class
+SHA-384-Digest: 05MGom2p9AqmpmZ/sNIl+LlZuxQut1xA2pawV1HePzn9fahmslJAyydV
+ tbDuKLkn
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/MultiPathChooserUI.class
+SHA-384-Digest: ej0/uRluXfwyHsUagMHcy/6NTadwGCH+gUodrii48z1zQ9f5opOykthm
+ 6YKhhqO2
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput$10.class
+SHA-384-Digest: +3DhDaO915hJhxpTwd0QJmJoAWOnWydr/cmhjkmXRfNtHSRkm+k8uN7Y
+ 7MWasm+D
+
+Name: com/silabs/ss/platform/api/rcp/ui/DialogUtils$5.class
+SHA-384-Digest: 8HyXCxe+Nhm6s1vpweiqiVDXURUQuNzHr1d+ZRxKGTPMMDDA0wtAm7k/
+ 0cWVj2FG
+
+Name: com/silabs/ss/platform/api/rcp/ui/InfoWindow$1.class
+SHA-384-Digest: ij3dJLOAPywx5m9ZwjPQnTaz5nIWcKXn8HPAdxmnuvyIrjtlx1Oui8iA
+ +pxRobDH
+
+Name: com/silabs/ss/platform/api/rcp/ui/ImagePool.class
+SHA-384-Digest: FY7DzVZO7tayZDEJvD23Klv0B/33rKpzUkbHT/UYgMafpawBojs8fLa2
+ 5GW2A4OF
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CExpandItem.class
+SHA-384-Digest: ZbKhFNNABT0LqPMzA+u7xd9iQTaO8Vrpe8eM/eDXtVYLphrRNyqzOU4W
+ 5Kr/5Ddn
+
+Name: com/silabs/ss/platform/internal/rcp/ui/UiServicesServlet$LaunchSel
+ ectFolderDialog.class
+SHA-384-Digest: ZZaob2qp4mEudDZgydCMlbsswdNSm2C7MInDdg1vm603gRloX7eSllYQ
+ dMt9o0Uu
+
+Name: com/silabs/ss/platform/api/rcp/ui/IThemeListener.class
+SHA-384-Digest: bBucUfNFqf/zjih6mv7Xj/mt+FGKR/BsTqEhDiTq/coAJ2AdVOIdG/ML
+ e4oewlaX
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/InfoWindowButton$2.class
+SHA-384-Digest: C0fQwO+upmkhu3nQPkX9q3i0CoIaXCObzPhNqTp0HG/qNeMpMaqmHEI1
+ qmPB/nTl
+
+Name: com/silabs/ss/platform/api/rcp/ui/IImageContainer.class
+SHA-384-Digest: FlyTrJiommINFXu2YovM/BcwvW+w0B9CnvbpBS5nFGKvaLKoMWOYNygw
+ bewlH+RY
+
+Name: com/silabs/ss/platform/api/rcp/ui/EditorUtils.class
+SHA-384-Digest: UnlVsXKej6g4iA4mNO0Fe2Gbt8TA3q0HTjxeZf2ZM/lk09d5nz0k5EFm
+ 2D2M0MfT
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTagGroup.class
+SHA-384-Digest: 1usaOmiPHKivygsB+0mPDtdNpqUx0OfnmrsPcW5NCjvPB2QT5fLL/yvP
+ mAyYswnI
+
+Name: com/silabs/ss/platform/api/rcp/ui/IToolBarUtils.class
+SHA-384-Digest: wPJ03Jhn2vPJhK7A7L2Is5uSo9quakyk3pEGiW4G4GZykR5mOWQwWOY7
+ OkfoLPTL
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SLSToolTip$1$1.class
+SHA-384-Digest: ko5B5AxKqQeH0qIOK3EgXE6wLNSbeJ/Bgf/xTCGcmemKQoCqkooN8rJo
+ LtFvXc61
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CTreeViewerInput$6.class
+SHA-384-Digest: gAmNcXbb4gyRsBr0XWs7OROd/BS8SUqDUsnLKgDW9sNLrEsvtkRbatUY
+ I2DsQxIv
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/CustomToolTip.class
+SHA-384-Digest: OszaPBdArkz/u4IzHUp9z9or27JY1wV72iYFYigxF7yK3iwjKt25l3Lz
+ +XSmyek2
+
+Name: com.silabs.ss.platform.rcp.ui/swagger-ui-dist/temp.json
+SHA-384-Digest: HAqtv/EDplv3uMip2y4gL0nmh2l9gGi0cMetx7ZBDiJ9gfLYHWqkeY+l
+ QxGrTxGJ
+
+Name: com/silabs/ss/platform/api/rcp/ui/IPerspectiveUtils.class
+SHA-384-Digest: UsWmWGFKDOrfJqutQCY1UNzYmm/ix3Pq5DEvPoPE79tkfzbr8mzsCgkG
+ QfgRNXqJ
+
+Name: com/silabs/ss/platform/api/rcp/ui/custom/SlushBucket$7.class
+SHA-384-Digest: QMaX59dp3UKHamZX34Ulyyxz1KDSbcazpKWAlG5znaMF/l574fwK90mx
+ X2NiCA21
+
+Name: com/silabs/ss/platform/api/rcp/ui/GUIUtilities$2.class
+SHA-384-Digest: Ti59l8wk/erAQQATAHgbUO/6q7rVuyhL2PujQYssc8xygoW+ZARjIItd
+ a0NLQgBX
+
+Name: com/silabs/ss/platform/api/rcp/ui/SWTUtils$1$1.class
+SHA-384-Digest: Y5bbld4+OM8izHcQkGbhkZfFafqDSsU0PJwOw0C7mcy/8fMJdO4pnj1m
+ q9mumEwz
+
+Name: com/silabs/ss/platform/api/rcp/ui/ImageUtils.class
+SHA-384-Digest: pLuMYI/ORKfFsp7dzV4UYTMRXVAJb7QtwJp8accK+hzMNIksNoEZ86Ta
+ 3HK9jfFV
+
+Name: com/silabs/ss/platform/api/rcp/ui/ColorConstants.class
+SHA-384-Digest: acsMsNUrZWVIEDveaCv2Z9yI4BuLzbXygafvaBN8VK+iBVRboY/AZHdi
+ F/uvXi8/
+
+Name: com/silabs/ss/platform/api/rcp/ui/DialogUtils.class
+SHA-384-Digest: zY6lKKVRwbJFqkubnz2ThjHTjZO55Zz5yXas9TR+H4llK+85QVuSQqp4
+ 9DFe/Swb
+
+Name: com/silabs/ss/platform/api/rcp/ui/RunCommandDialog$6.class
+SHA-384-Digest: 9flnGEY7JMK+hhi1EaEQBesBeLkCLBPO7osgYzpYReykn9Rx4p5CcjyA
+ iCDVfvsx
+

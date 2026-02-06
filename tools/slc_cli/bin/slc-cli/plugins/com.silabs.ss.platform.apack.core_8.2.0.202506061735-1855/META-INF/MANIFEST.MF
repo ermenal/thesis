@@ -1,0 +1,416 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Adapter Pack Core
+Bundle-SymbolicName: com.silabs.ss.platform.apack.core;singleton:=true
+Bundle-Version: 8.2.0.202506061735-1855
+Bundle-Activator: com.silabs.ss.platform.internal.apack.core.Activator
+Bundle-Vendor: Silicon Labs
+Require-Bundle: org.eclipse.core.runtime,com.silabs.java.utils,com.silab
+ s.ss.platform.rcp.core,com.silabs.ss.platform.content.part.core,com.sil
+ abs.ss.platform.content.core,org.eclipse.e4.core.services,org.eclipse.e
+ 4.core.contexts,org.eclipse.e4.core.di,json,com.silabs.ss.platform.perf
+ ormance.recording,jakarta.inject.jakarta.inject-api
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-ActivationPolicy: lazy
+Export-Package: com.silabs.ss.platform.api.apack.core.execution,com.sila
+ bs.ss.platform.api.apack.core.function,com.silabs.ss.platform.api.apack
+ .core.model,com.silabs.ss.platform.api.apack.core.model.external,com.si
+ labs.ss.platform.api.apacklib,com.silabs.ss.platform.internal.api.apack
+ .core;x-friends:="com.silabs.ss.platform.apack.ui,com.silabs.ss.platfor
+ m.product"
+Feature-Level: 12
+
+Name: plugin.xml
+SHA-384-Digest: /LkHlni6jgw5llio+hh05vfrBq67/NCQgQM1dAFc4fLYdq3NzSBP+YEq
+ ndnOBEcZ
+
+Name: com/silabs/ss/platform/api/apack/core/model/FunctionType.class
+SHA-384-Digest: lhg4EvKoX3TnZYVvx8I1lA6XTRwySxXRVJx6aa7DutJM6gtxU84i/h5Z
+ ajyWKlb3
+
+Name: com/silabs/ss/platform/api/apack/core/execution/ParserRunnable.cla
+ ss
+SHA-384-Digest: akHFokzY//NTp+2i1shbrmTKBq0jz+ke2BqhISCIpXsTCQ6EzR0FILkt
+ 4VKndmlz
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/AdapterPackSo
+ urce.class
+SHA-384-Digest: 6Zesqegmnbm8PP0tzn58ykCL+tWLrs4oWfWg9t3LWhK/Dn59I9KB/0C3
+ gSlyuvX5
+
+Name: com/silabs/ss/platform/api/apack/core/model/IAdapterPackLibrary.cl
+ ass
+SHA-384-Digest: ThqAajjBipDPKBZ1aEald9kiDxFILQI3U8oj4ZQJWJh9uLVy54j9Ng7b
+ QGV1IYho
+
+Name: com/silabs/ss/platform/api/apack/core/model/IAdapterPackFunctionFi
+ lter.class
+SHA-384-Digest: YvG7H3a/oq+D/dvxRlnVxBY0mm++8JuP0FUTQTKkI+FYvzS7xoE4uQl/
+ nWykoWu4
+
+Name: com/silabs/ss/platform/api/apack/core/model/IAdapterPackTest.class
+SHA-384-Digest: OcQHQQmt0jKB+iBFe+wQHVJ3DidqPoFfs33OQ4IXF5h8VU5N+s2T0Zsr
+ F0dOh+M3
+
+Name: com/silabs/ss/platform/api/apack/core/function/DetectionLineHandle
+ r.class
+SHA-384-Digest: pyhYqvwdK7Bl7SVFfaOhTjm1OQG6i9AXeWwR1mZSUEhszyXcPAMH4rj0
+ BCKKuhvg
+
+Name: com/silabs/ss/platform/api/apack/core/model/AdapterPackManager$1.c
+ lass
+SHA-384-Digest: w3n8F1r7bGfV8jRYfGDTaxdjHHgbHfscqKZs/ACek/OBh4PGF384gTdo
+ RpN6EB64
+
+Name: com/silabs/ss/platform/api/apack/core/model/ManagedFunction.class
+SHA-384-Digest: HlOxkR0bJ7oAjY1CIJbe1TVxowzZrOB1/6gdKmA9tV66IH5SurrZTsXo
+ sYot0jZ2
+
+Name: com/silabs/ss/platform/api/apack/core/model/ManagedFunctionParser.
+ class
+SHA-384-Digest: dU4AAK/vjGeTT3o0F36bfeZcHGFO8hQbA6f8PDHMkWNkZFXA9kSAp9lW
+ okeOobcK
+
+Name: com/silabs/ss/platform/api/apack/core/model/FunctionArgument.class
+SHA-384-Digest: IONO0X00zD9UbSJ7aPwazdYo/DIKhroWs6/sBRiQ2/AWLvLmlqX/CBVD
+ rPeJE2k1
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/AdapterPackEn
+ vironment.class
+SHA-384-Digest: B4xTat26PO7AiD5WYe9MjsvxHh7ofevmhEKhSlCm5vS0sunvN+jg1lwu
+ 9DRuKz0O
+
+Name: schema/apackInfoBlockHandler.exsd
+SHA-384-Digest: D34mClSxatlUQvTo3EGdsiZCrEJbKWfTnXsVSkkQNL1t9z0ofGnf2gNI
+ 6T2l4nOx
+
+Name: com/silabs/ss/platform/api/apack/core/model/AdapterPackManager.cla
+ ss
+SHA-384-Digest: 3oYM4sXWoJQB/3FyZy+mOoeNgSZN0h07zEbSH86beGGP9OD2uHvplMR8
+ 4bKkdeq1
+
+Name: com/silabs/ss/platform/api/apack/core/model/IAdapterPack.class
+SHA-384-Digest: 6ByxxZU7FE0epkSc6n6IewiG22NhPQHfzojRZisuHnXB05gXz6Eem4Am
+ MMwTLub1
+
+Name: com/silabs/ss/platform/api/apack/core/model/AdapterPackFunctionFil
+ ter.class
+SHA-384-Digest: GaC+kdqP4Y256JEXkUREVc0O34p8PMvfdv2OCzk9r7fgoN3ww0OSM2Rl
+ FWbYO4/d
+
+Name: com/silabs/ss/platform/api/apack/core/model/AdapterPackManager$Laz
+ yInstantiator.class
+SHA-384-Digest: qi1ceBCpNLrv/bir06HBnGLI6hUa3zUvvAHn5dGxZduWOc8m0osJlNo8
+ dluMdAua
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/ExternalAdapt
+ erPack.class
+SHA-384-Digest: yzRXZunz5I+tFy7+Lou+Y+NVA5rwJ3qqjmS44NA5UqXTBb5I6jhixVZY
+ qrLPTBQy
+
+Name: com/silabs/ss/platform/api/apack/core/execution/TestRunnableComman
+ d.class
+SHA-384-Digest: i+/YV5yPMjsMk2UzHFcjIDVaqoH+cQ99TpFy4IvCRicr60Ku0zNJxBAl
+ EviYZ6Ws
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/Executable.cl
+ ass
+SHA-384-Digest: Qm0ZcZNUS9+yvVRHSToIqLtCw8GbB5cBJEhqXG2QtRiixTpSj4a43GRL
+ zuAnvWaD
+
+Name: com/silabs/ss/platform/api/apack/core/model/IAdapterPackEnvironmen
+ t.class
+SHA-384-Digest: ukHDoJNdzavLBuKlynRHM14nWoS05SNnCeYxtKY+TFSq9mUYITdYQ9o9
+ OvqCql/9
+
+Name: com/silabs/ss/platform/api/apack/core/function/SimpleLineHandler.c
+ lass
+SHA-384-Digest: NgOth+kPcrdcq4VeudqnhlC++/AXaeOY8m0R1akZBZBezOlgjoVy0lJE
+ 1z2krcY1
+
+Name: com/silabs/ss/platform/api/apack/core/function/OutputSink.class
+SHA-384-Digest: ijyxhu4MFN3np7COY44sptBfvoj5auyPut0t173IGjrkET9XGjdWrpGz
+ CucO7WGe
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/InfoBlockMeta
+ file.class
+SHA-384-Digest: czPnmMebG7n3BBzkpf/ORWBVpJ3rTznjwqnW12OOZcOdW873o0Wq78aC
+ ta04xnLL
+
+Name: com/silabs/ss/platform/api/apack/core/model/IAdapterPackJobListene
+ r.class
+SHA-384-Digest: pE90HlIny3lHnDl/3Ew3CzbzfDXmq0s9c13jL0DqyOXwVL1PoWtDDiCp
+ BhH4gTMN
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/IProcessCreat
+ or.class
+SHA-384-Digest: U01rv1vljAHZhsMj00D7Qvee6kspbjx0VSlOW2Rxzp1sosNZXSIdLR0e
+ xiSnYmPL
+
+Name: com/silabs/ss/platform/api/apack/core/model/AdapterPackComparator.
+ class
+SHA-384-Digest: ZMnc/x7dH9Hd5pZ+loxmcwThAKZ023Y484pVVBvQuFRmbrBHGnwMBXY0
+ Mn2Gtbxn
+
+Name: META-INF/p2.inf
+SHA-384-Digest: rmCoCrI0SU6wdPPkdHdgxh8ocFfS8rDdc8lWtMXIy9Y6jeQ8wN11DzKk
+ U+CmPSfb
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/IAdapterPackM
+ etafile.class
+SHA-384-Digest: pzi+1o28OaTjxyQFhRtEaojjza39yUf1AqQnskQ+DsKH0EDUBZkpdZRI
+ eFnAFbC+
+
+Name: com/silabs/ss/platform/api/apack/core/model/IAdapterPackInfoBlockH
+ andler.class
+SHA-384-Digest: oHnd6viF+QXKe8O7/vJXq6ulXa7eYI+ST/nTfH2gL19sC9h7pRy8XZZr
+ Utuwsc8s
+
+Name: .api_description
+SHA-384-Digest: Yo1IIxb0Vi90XG2Cn7vo4/oor2IiTNTPpXnoqxS6BQLUkILUkM/8RkEg
+ MHeoQhwB
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/ProcessJob.cl
+ ass
+SHA-384-Digest: r5sAq1cWcryinh23EPP8e/u5WVgyyU2+VjbrTlgnJWJ0WbcRQx4yv5an
+ sCnaH10a
+
+Name: com/silabs/ss/platform/api/apack/core/model/AdapterPackJob$1.class
+SHA-384-Digest: qiRrl7fM8mMbsIZK2YhqFVrQXirdP01bf2wcNSrkpzE/eYw54FIsL4h3
+ eY+j+6hg
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/ProcessThread
+ .class
+SHA-384-Digest: GVuHBXi9UqYAvTrrUfe4zf3sh056WG/AhQBxySi68hTB2xsxl8J279ij
+ le63F5Ko
+
+Name: schema/managedFunction.exsd
+SHA-384-Digest: 3y48qtobcMOWz6b4rEzuS/+mlLh4Z/gbptgqpgtDGsIeoKwnfHYduRhE
+ LmBDiQlI
+
+Name: com/silabs/ss/platform/api/apacklib/ILockListener.class
+SHA-384-Digest: fnoGn5NcoYEX57CiYwO7gfMnOhz8Df0lU6epVml0/EQL2IpzNSjrMCgc
+ 3Jh17pEq
+
+Name: com/silabs/ss/platform/api/apack/core/model/IAdapterPackLifecycleL
+ istener.class
+SHA-384-Digest: WmM9mJgZk4kNQHabA7j4X8qxmef+qALtQEzOvFWx8Da5XIHa/rUhD4uV
+ J4sY/g/l
+
+Name: com/silabs/ss/platform/api/apack/core/model/AdapterPackException.c
+ lass
+SHA-384-Digest: B/j1zwH3N42HEokqrvi8qf3hyVx9W4soUBonyD8QVBnwpLHJoYCxZTqK
+ yIwgZ0Xt
+
+Name: com/silabs/ss/platform/api/apacklib/SiApack.class
+SHA-384-Digest: 29Ldjm86ElyZ8hfRheTI0m1puf3y7mNkrPkeFxOzS2YI3tgcuLIn+m7w
+ 2uBAU7SE
+
+Name: com/silabs/ss/platform/api/apack/core/execution/TimedApackJob.clas
+ s
+SHA-384-Digest: scao0p2kkrnXLwu715vllrjzj6IctAI+odnt8cF8+ftWxBDUU/11IDqY
+ OMqyMf84
+
+Name: com/silabs/ss/platform/api/apack/core/model/AdapterPackManager$Lif
+ ecycle.class
+SHA-384-Digest: 7YlsXCBQBmlrqFE8i5WufT0Hy+dPASRGOhqQoLB4cfnj5K5hqv6kAaNE
+ UWLhNa3N
+
+Name: com/silabs/ss/platform/api/apack/core/model/IAdapterPackAction.cla
+ ss
+SHA-384-Digest: rYxb8j9a1SaXaqKS7BDLjV06mq2dpShYTPAxLuGDYBKW6iodjOb83uU5
+ 96BXCNy2
+
+Name: com/silabs/ss/platform/api/apack/core/execution/Executioner$LazyIn
+ stantiator.class
+SHA-384-Digest: hpuAKPoZ+CC3M9/kWeRy9dmTbhcbXOp+gXig5nsOURqvoLYGJ4A0ARo5
+ xECStjka
+
+Name: com/silabs/ss/platform/api/apack/core/model/IPlatformSpecific.clas
+ s
+SHA-384-Digest: xB1E0I//o4YRBFv07MLjUX40bYC2f4rIy8rpuwJt/ZGUZmOLZga8Und7
+ ACasWpzO
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/ExternalTest.
+ class
+SHA-384-Digest: gYlFRT5+VKjfg9p3RBXPcg3KOoWGEp7uF5/nso0wNUyys0fwMAspThMQ
+ m9ivvCIy
+
+Name: com/silabs/ss/platform/api/apack/core/function/ProgressLineHandler
+ .class
+SHA-384-Digest: QO9zF5umGa+wbWM1t9ls7NAIkWkRmWaHjK0gjw9C9JLAiOvsirKRGCnN
+ u5pU8wCo
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/LinkMetafile$
+ FileVisitor.class
+SHA-384-Digest: LfB/fWKhQecb5aspHumkUDjLWrJRkZaqsSs1hSD4aLcJ8TuuLM+0IyJl
+ zQUBKEeL
+
+Name: com/silabs/ss/platform/api/apack/core/model/IFunctionArgument.clas
+ s
+SHA-384-Digest: C+5E12MfYlkfIoY/HV4o3tL+mqw6Auc/jTuKwdw5HW2UrrXLXC1DCSYm
+ /Grymd2i
+
+Name: com/silabs/ss/platform/api/apacklib/LockInfo.class
+SHA-384-Digest: 2VRTu77oeJDcAAdF+xKI1OxAxxZXplSE9WFLi+tpnx/LMSvVBw5UFXOW
+ 5So1SWEj
+
+Name: com/silabs/ss/platform/api/apack/core/execution/Executioner.class
+SHA-384-Digest: nu222NDz9quxUlhFsZn0nVCP21j196OvqSExOsUIY8wBZnMgP/UKDllF
+ +XjbYfsJ
+
+Name: com/silabs/ss/platform/api/apack/core/execution/ExecutionerAnalyti
+ csData.class
+SHA-384-Digest: ELsF3X9FIjyEeGkPK1vc/c5p1vEAJvpQTLod55PWSbMeE7X4ulTDNA9Q
+ aopIO4S2
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/InfoBlockHand
+ lers$AdapterPackInfoBlockParser.class
+SHA-384-Digest: /pOGOQdUzrSwiCdRq/CCvCvQ4UW+ZentAoB0LrwPJ+0eu5l3PqlecdlO
+ rYIYBF+R
+
+Name: com/silabs/ss/platform/api/apack/core/execution/IExecutionerListen
+ er.class
+SHA-384-Digest: Lq14bH4ci/0nF03QZ0wELphdqHkOuA8vbLMSymzefGOY7JBg23Y6Ib2R
+ R87Al6l5
+
+Name: com/silabs/ss/platform/api/apack/core/model/CommandLine$ArrayPatte
+ rnDecorator.class
+SHA-384-Digest: fwee/SqwntBgQPp8TShHHZib9D+q5NpqRginwgQiY07jV9z8KFAQ8YcY
+ GOWEUbod
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/IAdapterPackL
+ inkMetafile.class
+SHA-384-Digest: LiCj+ztdyC5Ai8r/KKF+yHyeA4aD+k2Y16qiYWeg4eH4h/6/cBLstxAh
+ 9E7YQOyk
+
+Name: com/silabs/ss/platform/api/apack/core/execution/IErrorFilter.class
+SHA-384-Digest: zXGIphPKym9/yiqSEYYQYYRjFylfP0OIOWe2U050Or8Ibu3iWbL7sFqL
+ NH1TdEJ+
+
+Name: com/silabs/ss/platform/api/apack/core/model/IAdapterPackTest$Metho
+ d.class
+SHA-384-Digest: NyyMzDYRNlu2jsaSeUaPSdHKIa6PB9TFZk28zOL6rVDX6JH3D0gX8RUB
+ IKE4auWp
+
+Name: com/silabs/ss/platform/internal/apack/core/Activator.class
+SHA-384-Digest: fLlsq1eNB8ZML4QxIZZd3Yi5cujm2yEhYYjAhtKTl4Yu49piOSTBl2wD
+ TKRvnNQ/
+
+Name: schema/adapterPack.exsd
+SHA-384-Digest: ztCZdJcu98H0UO8BJbJ96E04GAtlnc/gJJJdKeVF1QWCdR6dNqq2a5wB
+ Bjd5KrnN
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/InfoBlockHand
+ lers$BlockHandlerContainer.class
+SHA-384-Digest: rvgrM7Ksdn0CwLv0a8D0I+3k1ivkdbXLLejWw2SZJNYrycTaw0m/trbJ
+ F6jhR2nx
+
+Name: com/silabs/ss/platform/api/apack/core/model/CommandLine.class
+SHA-384-Digest: XvtmmyLoya22wbWM9TOx9ZSq5XR6RvC/2DYKvPR3sHDw2ffgsBDobA2S
+ 1eNFkeDe
+
+Name: com/silabs/ss/platform/api/apacklib/SiApack$LockInfoSupplier.class
+SHA-384-Digest: LV/KYXsuUVIxQIIuwl2m77zaUG1Lggc/b1uX6lcrc+euvSQsRwIIuWY1
+ ZYNIFzkN
+
+Name: com/silabs/ss/platform/api/apacklib/SiApack$LazyInstantiator.class
+SHA-384-Digest: 7WQZqcsTHaA7m0qPKa/DGqsfl960gyzuHFLwme5HwBhmrR5a+n44aAKk
+ 0uaoKi0p
+
+Name: com/silabs/ss/platform/api/apack/core/model/AdapterPackJob.class
+SHA-384-Digest: 6RkuWZpsv9Bal8o4byG5x3hHUhBpPgQCG9SlQVxzo5CFXmuojHu4fnw0
+ 1A3oGDUP
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/Function.clas
+ s
+SHA-384-Digest: GX6H6QjaUywvjhjLLuDDIJOJHKu3q0ZottXNnsNNZTRu140Aj+aG3aia
+ tgf3QpOA
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/JsonMetafile.
+ class
+SHA-384-Digest: zXLTfGmFYL5PPdw6yWIm3+6H3dePuCPLOF1DTu1qgGNPqE6mdVTL4ybb
+ WnMwS6Nr
+
+Name: com/silabs/ss/platform/api/apack/core/function/OutputCollector.cla
+ ss
+SHA-384-Digest: 54FWAKLBj/+TsuyDJFGTr9PWytNDLA1alKZprJSXonbsI6vJBVpkkiMc
+ 68GfZcHs
+
+Name: com/silabs/ss/platform/api/apack/core/execution/DefaultExecutionCo
+ ntext.class
+SHA-384-Digest: gE6yHcjiHli5Tl+OlYB/mL9/89BvHLnpRV08IWAjQVQ5YOizQloohfXh
+ 16pnW0b7
+
+Name: com/silabs/ss/platform/api/apack/core/model/IAdapterPackJob.class
+SHA-384-Digest: ZGaHtr+RJyqE657sjVS4hVsR60r3HC5xXlNZWogZIvIy2sfS8FAhAC8Z
+ r64NudMM
+
+Name: com/silabs/ss/platform/api/apack/core/model/AdapterPackManager$Log
+ Control.class
+SHA-384-Digest: VGm73AbXJIkagxC0UTl2W23nplJcxTSlyJl11vA1Lc4wtxY2sXnRNqbP
+ /UsXcPz/
+
+Name: com/silabs/ss/platform/api/apack/core/model/IAdapterPackJobCreator
+ .class
+SHA-384-Digest: +2wc4pJR19u0BIQRxmXtyRLbbj/coC2DZ8MAUCwdki25Ya6+YP5S0MlL
+ nuLMbZOG
+
+Name: com/silabs/ss/platform/internal/api/apack/core/AdapterPackPreferen
+ ce.class
+SHA-384-Digest: +NK1R++z+KymkOUFuKQhSqwIEJeosYLFSJigx7+xpcOaU2kIY9T33ILz
+ 29Rfky8j
+
+Name: com/silabs/ss/platform/api/apack/core/model/IAdapterPackFunction.c
+ lass
+SHA-384-Digest: Es74UmXgQrPksxAzWAoEcicKl1SdWbE60fHhgT0h8LFhPDBNvEoJj49G
+ 0t9SyQ+3
+
+Name: com/silabs/ss/platform/api/apack/core/execution/ErrorLoggerLineHan
+ dler.class
+SHA-384-Digest: 1O2iNGqt5zVJJpPxa0OawAGMzUCA/sOwdubcCRtv1U48SgSgAF4Ct/1F
+ 7R1mhUTU
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/InfoBlockHand
+ lers.class
+SHA-384-Digest: 2LM4MdjPS5WUJkKwj14cApviMVSM++nsY3/bcYM7JtV2R940lKo2cvd5
+ 7IuwGhly
+
+Name: com/silabs/ss/platform/api/apack/core/execution/IExecutionContext.
+ class
+SHA-384-Digest: SbG1jn7ay585OjVJBJK4Les8qqNBxVH76/IZns+G1vh3QKDzb50UIEPK
+ wnbz2T8B
+
+Name: com/silabs/ss/platform/api/apack/core/model/IManagedFunction.class
+SHA-384-Digest: KbNofpZOmy+P8/Ht2jmsnxumcsnPRTSia5gXVQYLV6w69HCRrxDiKwmF
+ QeJwmU2R
+
+Name: com/silabs/ss/platform/api/apack/core/model/ExecutionMode.class
+SHA-384-Digest: pp47AAcl211ct2AyeW+0xRjHwv42CW4RCmwWMqduOQF0z5NAFqzON2Bq
+ 1oZwWW1T
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/Function$ExeF
+ ilter.class
+SHA-384-Digest: u6dNT1p7MM15WtZVXJ0KuOwSJLGhmitUyvLH6rDFCJV6zhhe7Jv8rkAT
+ 0CRw3Fsw
+
+Name: com/silabs/ss/platform/api/apack/core/function/InstallLineHandler.
+ class
+SHA-384-Digest: n7C0TWp0D8bGonrMczBWayGhQSSx9libjd2aVhDbcggTrxSVLwV8adD7
+ 2a3fkscC
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/LinkMetafile.
+ class
+SHA-384-Digest: 7LFwMH/hv74iSspmF8JClcxXxBi2B1iH7V+rUM5ProvGloNME7WPe0jS
+ Vo3Ng2Wi
+
+Name: com/silabs/ss/platform/api/apack/core/model/AdapterPackParser.clas
+ s
+SHA-384-Digest: G03NdTjwxUtupEUyjZw7iRi4qs3tvM7cQPSNajfREqJ6rmI4/oHcLdaO
+ IY3wbwez
+
+Name: com/silabs/ss/platform/api/apack/core/model/external/ExportedLibra
+ ry.class
+SHA-384-Digest: NrQij+xvUhQRakU1GGCEEGQPOn7xTxuH8rYMmSKq4QMv92VU2lcd3SHp
+ DoIXzPWZ
+

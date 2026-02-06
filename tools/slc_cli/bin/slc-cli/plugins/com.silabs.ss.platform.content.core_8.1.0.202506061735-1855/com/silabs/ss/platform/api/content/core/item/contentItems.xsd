@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.silabs.com/ss/ContentItem.ecore" xmlns="http://www.silabs.com/ss/ContentItem.ecore"
+	elementFormDefault="qualified">
+
+	<xsd:element name="contentItems">
+		<xsd:complexType>
+			<xsd:choice maxOccurs="unbounded" minOccurs="0">
+				<xsd:element name="contentItem" type="contentItem"></xsd:element>
+				<xsd:element name="contentItemData" type="contentItemData"></xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="contentItem">
+		<xsd:choice maxOccurs="unbounded" minOccurs="0">
+			<xsd:element name="property" type="property" minOccurs="0"
+				maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element name="description" type="xsd:string"
+				maxOccurs="1"></xsd:element>
+		</xsd:choice>
+		<xsd:attribute name="itemURI" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="description" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="label" type="xsd:string"></xsd:attribute>
+	</xsd:complexType>
+
+	<!-- I should be able to extend contentItem, but for some reason, the XML 
+		editor then thinks I haven't actually inherited elements, although attributes 
+		work, so I've simply copied things -->
+	<xsd:complexType name="contentItemData">
+		<xsd:choice maxOccurs="unbounded" minOccurs="0">
+			<xsd:element name="property" type="property" minOccurs="0"
+				maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element name="description" type="xsd:string"
+				maxOccurs="1"></xsd:element>
+		</xsd:choice>
+		<xsd:attribute name="itemURI" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="description" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="label" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="tags" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="uiPath" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="keywords" type="listOfStrings"></xsd:attribute>
+		<xsd:attribute name="category" type="categoryValue" />
+		<xsd:attribute name="priority" type="xsd:int" />
+	</xsd:complexType>
+
+	<xsd:complexType name="property">
+		<xsd:attribute name="key" type="xsd:string" use="required"></xsd:attribute>
+		<xsd:attribute name="value" type="xsd:string" use="required"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:simpleType name="categoryValue">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Application Notes" />
+			<xsd:enumeration value="Data Sheets" />
+			<xsd:enumeration value="Data Shorts" />
+			<xsd:enumeration value="Errata" />
+			<xsd:enumeration value="Quick Start Guides" />
+			<xsd:enumeration value="Reference Manuals" />
+			<xsd:enumeration value="Release Notes" />
+			<xsd:enumeration value="User's Guides" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="listOfStrings">
+		<xsd:list itemType="xsd:string" />
+	</xsd:simpleType>
+</xsd:schema>

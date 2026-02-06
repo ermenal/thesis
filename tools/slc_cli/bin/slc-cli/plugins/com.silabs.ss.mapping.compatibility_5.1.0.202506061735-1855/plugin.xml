@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.silabs.ss.compatibility.compatibilityEngine">
+      <compatibilityEngine
+            class="com.silabs.ss.mapping.compatibility.internal.impl.MapCompatibilityProvider">
+      </compatibilityEngine>
+   </extension>
+
+</plugin>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="IStudioDebugOptions">
+   <implementation class="com.silabs.ss.platform.internal.content.core.StudioDebugOptions"/>
+   <service>
+      <provide interface="com.silabs.ss.platform.api.content.core.IStudioDebugOptions"/>
+   </service>
+</scr:component>

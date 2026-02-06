@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component name="com.silabs.ss.platform.sdk.core_6.7.0.202506061735-1855" version="1.2">
+    <plugin id="com.silabs.ss.platform.sdk.core_6.7.0.202506061735-1855"/>
+    <package name="com.silabs.ss.platform.api.sdk.core" visibility="1">
+        <type name="ISDKManager" restrictions="3"/>
+        <type name="SDK" restrictions="0">
+            <method name="setTestManager" restrictions="8" signature="(Lcom/silabs/ss/platform/api/sdk/core/ISDKManager;)Lcom/silabs/ss/platform/api/sdk/core/ISDKManager;"/>
+        </type>
+        <type name="SdkExtensionUtils" restrictions="4"/>
+        <type name="SdkTransientController" restrictions="4"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.sdk.core.protocol" visibility="1">
+        <type name="IProtocolDescriptor" restrictions="3"/>
+        <type name="IProtocolRegistry" restrictions="3"/>
+        <type name="Protocol" restrictions="6">
+            <method name="setTestRegistry" restrictions="8" signature="(Lcom/silabs/ss/platform/api/sdk/core/protocol/IProtocolRegistry;)Lcom/silabs/ss/platform/api/sdk/core/protocol/IProtocolRegistry;"/>
+        </type>
+    </package>
+    <package name="com.silabs.ss.platform.api.sdk.core.scripting" visibility="1">
+        <type name="ISLSSDKModule" restrictions="3"/>
+    </package>
+</component>

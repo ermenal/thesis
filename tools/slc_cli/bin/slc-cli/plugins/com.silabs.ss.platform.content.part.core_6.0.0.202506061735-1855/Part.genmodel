@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.silabs.ss.platform.content.part.core/src" creationSubmenus="true"
+    modelPluginID="com.silabs.ss.platform.content.part.core" modelName="Part" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../com.silabs.ss.platform.descriptor.core/model/Studio.genmodel#//model"
+    interfaceNamePattern="{0}" classNamePattern="{0}Impl">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
+    <genAnnotations source="selectedPackages">
+      <details key="http://www.silabs.com/ss/Part.ecore" value="Part.xsd"/>
+      <details key="http://www.silabs.com/ss/Studio.ecore" value="Studio.xsd"/>
+    </genAnnotations>
+    <details key="directoryURI" value="."/>
+  </genAnnotations>
+  <foreignModel>Part.ecore</foreignModel>
+  <genPackages prefix="PartModel" basePackage="com.silabs.ss.platform.internal.content.part.core" resource="XML"
+      disposableProviderFactory="true" fileExtensions="part,parts" ecorePackage="Part.ecore#/">
+    <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
+      <genAnnotations source="Part.xsd">
+        <details key="http://www.silabs.com/ss/Studio.ecore" value="Studio.xsd"/>
+      </genAnnotations>
+    </genAnnotations>
+    <genClasses ecoreClass="Part.ecore#//MCollection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Part.ecore#//MCollection/groups"/>
+    </genClasses>
+    <genClasses ecoreClass="Part.ecore#//MPartGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Part.ecore#//MPartGroup/parts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Part.ecore#//MPartGroup/groups"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Part.ecore#//MPartGroup/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="Part.ecore#//MPart">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Part.ecore#//MPart/parent"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

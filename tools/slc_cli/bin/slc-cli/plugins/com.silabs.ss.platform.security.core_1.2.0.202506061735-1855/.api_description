@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component name="com.silabs.ss.platform.security.core_1.2.0.202506061735-1855" version="1.2">
+    <plugin id="com.silabs.ss.platform.security.core_1.2.0.202506061735-1855"/>
+    <package name="com.silabs.ss.platform.api.security.core" visibility="1">
+        <type name="ISecurityState" restrictions="3"/>
+        <type name="ISecuritySummary" restrictions="3"/>
+        <type name="ISignatureCheckedSecurity" restrictions="3"/>
+        <type name="ISignatureSkippedSecurity" restrictions="3"/>
+        <type name="ISigningResult" restrictions="3"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.security.core.trust" visibility="1">
+        <type name="ITrustedDescriptorStorage" restrictions="3"/>
+    </package>
+</component>

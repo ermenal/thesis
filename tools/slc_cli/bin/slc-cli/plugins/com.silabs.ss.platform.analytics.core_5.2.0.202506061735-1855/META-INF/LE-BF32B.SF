@@ -1,0 +1,49 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: TBxK34IpuYuaBWo2Bv2Oz4Cdu+jDD0D+LgwidYVDZKGF/+G
+ 74YXyrBLiwX3jYwEW
+SHA-384-Digest-Manifest-Main-Attributes: bSx8pXtmZjZOEt9Uf5anznr1b6vQ536
+ X82dYRFjsQhV378QG/XB7jygWNH2R8+No
+
+Name: com/silabs/ss/platform/internal/analytics/core/AnalyticsEventHandl
+ er.class
+SHA-384-Digest: uxg3wsBzT8iXJUMPKz57J/lvhchQRzO07oK1+rmfgBt3l8YL1a+c2sWC
+ c1UUfDua
+
+Name: plugin.xml
+SHA-384-Digest: +AvwC4bfbr/Y2c5kv5BlpktVedwUynaAoEyDGMN+1LCmcevdpaDJCTP3
+ +7b0Ywqb
+
+Name: com/silabs/ss/platform/api/analytics/tracking/TrackingModeManager$
+ TrackingMode.class
+SHA-384-Digest: hKo07pxCxuHYhewbZ9pj/87GqYPYBBqmepX6hlq+U3KXAoqtyQaqsChy
+ PV8XdQYr
+
+Name: com/silabs/ss/platform/api/analytics/core/IAnalyticsContentUpload.
+ class
+SHA-384-Digest: nPvSyGu/y08mB9wux4RY/XUuFLZqN34wl41cxvHo7/GK7/36W5Q3YGVP
+ 1TpXZTNq
+
+Name: com/silabs/ss/platform/internal/api/analytics/core/AnalyticsUtils.
+ class
+SHA-384-Digest: C+6guRSEPYLnyzACDiMSSiDoeJrwqK9RSLsy+zjoKyF4vkjoDKBAPlSf
+ aq0U6XGi
+
+Name: com/silabs/ss/platform/api/analytics/tracking/TrackingModeManager.
+ class
+SHA-384-Digest: TURgcXZxZ0QgikYa7JqdOnqS4O68IZCvst53Zgt75T81uJO3fCGbT3Px
+ 9I1s3RZe
+
+Name: com/silabs/ss/platform/internal/analytics/core/Activator.class
+SHA-384-Digest: UXXxxSvTcs7c1MbWRZcId+eDAv2nUpSLdeMJBHT52sN6JODNUuCdWHcq
+ pEoFbinE
+
+Name: com/silabs/ss/platform/api/analytics/core/StudioAnalytics.class
+SHA-384-Digest: Mrw1EJVkGqk3gtYSHiTN/15FNLV6oU1Zb+RmjPphjovHWSKiByROuVj6
+ l6nw232i
+
+Name: com/silabs/ss/platform/api/analytics/tracking/TrackingModeManager$
+ TrackingModeListener.class
+SHA-384-Digest: du+talftXotLYsQYrqTo3F4a4aGI5x6SQ0zHdHDfxFj2XBGcmQ+pehtm
+ hAl1+CUL
+

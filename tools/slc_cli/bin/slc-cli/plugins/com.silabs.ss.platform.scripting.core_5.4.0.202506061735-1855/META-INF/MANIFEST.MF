@@ -1,0 +1,413 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Scripting Core
+Bundle-SymbolicName: com.silabs.ss.platform.scripting.core;singleton:=tr
+ ue
+Bundle-Version: 5.4.0.202506061735-1855
+Bundle-Activator: com.silabs.ss.platform.internal.scripting.core.Activat
+ or
+Bundle-Vendor: Silicon Labs
+Require-Bundle: org.eclipse.core.runtime,com.silabs.java.utils,com.silab
+ s.ss.platform.rcp.core,com.silabs.ss.platform.content.core
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-ActivationPolicy: lazy
+Export-Package: com.silabs.ss.platform.api.scripting.core,com.silabs.ss.
+ platform.api.scripting.core.annotations,com.silabs.ss.platform.internal
+ .api.scripting.core; x-friends:="com.silabs.ss.platform.content.part.co
+ re,  com.silabs.ss.platform.scripting.core.tests,  com.silabs.ss.platfo
+ rm.scripting.python,  com.silabs.ss.platform.scripting.python.jep,  com
+ .silabs.ss.platform.scripting.ui,  com.silabs.ss.platform.content.board
+ .core,  com.silabs.ss.support.jep",com.silabs.ss.platform.internal.api.
+ scripting.core.server;x-friends:="com.silabs.ss.platform.scripting.ui,c
+ om.silabs.ss.platform.scripting.core.tests"
+
+Name: com/silabs/ss/platform/api/scripting/core/annotations/Wrap.class
+SHA-384-Digest: xpnk43B7NDXl4BcX18F1/MgNVMmNlgs765ujE4cdLItDUSoVwmP9Y0o4
+ I2fYpMhX
+
+Name: plugin.xml
+SHA-384-Digest: zwXQgEuxzJh/jgYaIHr1jEkSvvoGeVhIe4sqrVvWMR2qjPb6meiBXtRr
+ r9TrsYYZ
+
+Name: com/silabs/ss/platform/api/scripting/core/ScriptModuleUtils$listCo
+ mparable.class
+SHA-384-Digest: k9sHbVLFKTQvESBOjETsI5WlknX++ETY5M5lWUTZYb20HCCoPDeKEWIO
+ 0RGIKKqp
+
+Name: com/silabs/ss/platform/internal/scripting/core/ScriptStreamWriter.
+ class
+SHA-384-Digest: 7R7cIvgJ3IJJyaK3pQQFQB/pe3kUNyGhera9q3OH+HasBM32O9trInnG
+ 5E/CD2d+
+
+Name: com/silabs/ss/platform/internal/scripting/core/server/ScriptBroadc
+ astThread.class
+SHA-384-Digest: Q+gQw8q6F/wXix/PF6HNv+PsgvFrVc6ODOqRVau2hjyywD5Fjk3p7Hym
+ /m41iGGT
+
+Name: com/silabs/ss/platform/api/scripting/core/ScriptModuleUtils$1.clas
+ s
+SHA-384-Digest: HIQqgR6gRJYa9uONZY8nPEesTNMfqp4Zey0WeKAKWUt92/P2/UKMAuYJ
+ NH1eOQt6
+
+Name: com/silabs/ss/platform/internal/scripting/core/DualWriter.class
+SHA-384-Digest: m0vQNkYHQBuoGW3GK9TZXHbAz3aNnjn7hEDDB8BsvRyMqMwnkwnALTSS
+ kjfutsU4
+
+Name: com/silabs/ss/platform/api/scripting/core/IScriptModule.class
+SHA-384-Digest: U09ASOIkrMzuLFaY8rLXh89lyuBOOvmu2JTXnlmgjAjbFc6upzhenLFw
+ BbB3v8i1
+
+Name: com/silabs/ss/platform/internal/scripting/core/SLSCoreModuleProvid
+ er.class
+SHA-384-Digest: 8R1fI4A7NAd7sAAcViLtug0+/w9DwptSUAxE1ndc8eajytLGamcwIr9p
+ avikvJ63
+
+Name: com/silabs/ss/platform/api/scripting/core/Script.class
+SHA-384-Digest: Q7boLYqe2pvva9iGkBMN0vVoHtsNMVLPdyxXuvCMmO01fANgYY7+W6C9
+ Mq2fZ7zJ
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/server/ScriptSe
+ rverUtils.class
+SHA-384-Digest: 5XGvqa0OFp6HJ1WuKCHMCrmHM/Ox4JD+d3fXFRVqDNo75eK0ABIIPnEM
+ fJ4jGynT
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/ScriptPropertie
+ s$ID.class
+SHA-384-Digest: igmatWPldmfM69BAzPaWIriYR1ln1AJ/neqELER/Qj4eL98BMLwXl9Dd
+ lOn49Wxs
+
+Name: com/silabs/ss/platform/api/scripting/core/IScriptMonitorProvider.c
+ lass
+SHA-384-Digest: /0pwxJ5dY7kA1sRtO1gi9XB8N9pC0CH4ZiweUr1qyjNbqprduEAyjnlb
+ 3pKzrGq0
+
+Name: schema/scriptSupport.exsd
+SHA-384-Digest: g3t6C3AW0MqhDL9VlY8Miv/+zFTlR5S7QNDX+yIFhP+olESUYh6s7xG2
+ lazoAPUq
+
+Name: com/silabs/ss/platform/api/scripting/core/IScriptMonitor.class
+SHA-384-Digest: Qh8Y6MriTzFYgeo1oyghS+jV21MB4oTb7XsPT51ggh0UXLii1Z+/heST
+ tXYTKHzM
+
+Name: com/silabs/ss/platform/api/scripting/core/annotations/NoScript.cla
+ ss
+SHA-384-Digest: hhVzEUPYRxSKP1LGsFj0KNE/e8TBKtbz1d+OOP+xrjHyNxkpz52TGvMm
+ IJ83G5V3
+
+Name: com/silabs/ss/platform/api/scripting/core/ISLSScriptAPI.class
+SHA-384-Digest: othUX7OU9skvnAtlQ4p6BDxRQZuCnuwOj23a82IaFPU2h99Ym9Hd6dFq
+ KJJ+QUuo
+
+Name: com/silabs/ss/platform/api/scripting/core/annotations/ScriptName.c
+ lass
+SHA-384-Digest: u/7Fy9nsTZF5YpgqK7h2FQo7ySTNwRSaNzECFhEvQ4zcLrNf8NcmbQ83
+ RrgzR00l
+
+Name: com/silabs/ss/platform/api/scripting/core/ScriptUtils.class
+SHA-384-Digest: F92KO0wgyz8YePgyHiFFwGczSo5CI3siebZ+munJwfvhqg0QSuTGA5eh
+ BonQdKhZ
+
+Name: com/silabs/ss/platform/internal/scripting/core/ScriptMonitorMultip
+ lexer.class
+SHA-384-Digest: 0goPy5Gu1MCWtrpuYeL/slvxebXUzb6UCf+sz8cm0xzhUrg3Ecu70F+u
+ jCxFNEW8
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/WrappedScriptEn
+ gine.class
+SHA-384-Digest: GXimkP4XvGa3i6Jugj6iX2BuFSOy86ApP8IFZh6dNGwfzTrNjjtM/sdQ
+ UnIhOoeE
+
+Name: com/silabs/ss/platform/api/scripting/core/IScriptArrayIndexingClas
+ sExtension.class
+SHA-384-Digest: itEps2ZwwCTUQ4X6rnbXVqgd2SANgFmdXU/5ny4xjh5ETNFGhZ5uusWx
+ 4Qh6XqGn
+
+Name: com/silabs/ss/platform/api/scripting/core/BaseSLSManagerModule.cla
+ ss
+SHA-384-Digest: 5Q73iKJ66eLimaLBF4i286OsEKjUEZ1Bq88L3rZ5NYwyUc1CLg2/fC9Q
+ bzG+66nM
+
+Name: com/silabs/ss/platform/internal/scripting/core/SLSCoreModule.class
+SHA-384-Digest: zY+Nyav0hAtUlb5i3vZ39CqJ0ZujpU4dUyUY70tPaGfEdfswxb2eb5qb
+ 7mTss2o5
+
+Name: com/silabs/ss/platform/internal/scripting/core/server/ShutdownServ
+ erException.class
+SHA-384-Digest: voQVe0ozCLKVMmObOSUI+arRPAg/lnyyDYSDRrkO3wXozfNmRzT5NMga
+ 5ACF/9yw
+
+Name: com/silabs/ss/platform/api/scripting/core/IScriptRegistry.class
+SHA-384-Digest: O0QvQ0LEocjBYj2kSTzmZZO1FX49RFG0S7gUr4LLsI/43u9j5XbG77eO
+ xJAtHoaq
+
+Name: com/silabs/ss/platform/internal/scripting/core/server/ScriptServer
+ $1.class
+SHA-384-Digest: WMrwI3vyBJF4vFEol7gv8sbW9kwd/SgadxVTkm1STzbA00g6a53L0m11
+ Pb2sb4BZ
+
+Name: com/silabs/ss/platform/internal/scripting/core/ScriptModuleRegistr
+ y.class
+SHA-384-Digest: K03kkZWhe7M2kC89V/iG1OxAZr/4j9JlQPkFXR+vXfneFJZ2ucmrqUy6
+ /14SLsV5
+
+Name: .api_description
+SHA-384-Digest: rD4q9+B/G3HEdM8zvicanHEudgCpC1eHjIaDpBmT6XkXQjjR5xF/zJfA
+ g118RNNC
+
+Name: com/silabs/ss/platform/internal/scripting/core/SLSUriModuleProvide
+ r.class
+SHA-384-Digest: iogFf9xSSmIR0hQZN5mb4iTZiiPe+03UFHVsILLmAUWebzCo1HMDdpxH
+ ht39SjoQ
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/IScriptStreamMo
+ nitor.class
+SHA-384-Digest: 8SNC2tKbRd6BLgBOfK0UfN4foTqGqrzfkjZC+JMJdEa63psvrZCnTId/
+ HjdLi2yH
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/BaseScriptEngin
+ eConfiguration.class
+SHA-384-Digest: Tial8jYnfEI7DqREMwTTC8TncXKvIORe4Zzbs2VyGQV0y/VID87Z5eyA
+ yeKBZxjB
+
+Name: com/silabs/ss/platform/api/scripting/core/IScriptModuleProvider.cl
+ ass
+SHA-384-Digest: PrB/4hHPiWbdq3rhoRQyynLEx6Yj+7lhrtxOq28Gy4PVFZb1pqWUvmCf
+ gUa0gu60
+
+Name: com/silabs/ss/platform/api/scripting/core/Script$SingletonHolder.c
+ lass
+SHA-384-Digest: mUjq02zYQ5o0etjDBpcvjaFmassDciHAtcYzyBcFG/1YWJ4hn2s6f0AI
+ h4BRl1Bl
+
+Name: com/silabs/ss/platform/internal/scripting/core/ScriptModuleRegistr
+ y$2.class
+SHA-384-Digest: kgsYYqZ1yC1MjuFBhixNfBjQ6GbQAl1eGFDC/3oPrV6h1bMxbNcsL3sH
+ +ow38dQy
+
+Name: com/silabs/ss/platform/api/scripting/core/ScriptModuleUtils$2.clas
+ s
+SHA-384-Digest: G9+L2a87ghzD7zeK8TZj73MQETMk6goA73msbnOyeU/nrXDOF7zgSfdc
+ 7eZXJZ3a
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/server/ScriptRe
+ ply.class
+SHA-384-Digest: EldvEcAvyBrxkhw4cONFfQrFGz0F6J3ZzfyuCSlLv4F3lVV7Y5WD4PH+
+ yjGn3/8c
+
+Name: com/silabs/ss/platform/internal/scripting/core/server/ScriptServer
+ Thread.class
+SHA-384-Digest: rWRtVnDD/9aNxoIIUinBW+wcwq15w1uRUGU9aDjLp/yzyE7G4p0N0ZVr
+ IoKY5NFx
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/server/ScriptSe
+ rverConstants.class
+SHA-384-Digest: 7i9P09GLBlK/ZJ4rKaMq8MRC1nhkZC0givmG7MdX3Az3CODphKKopy/n
+ oYdnK0TR
+
+Name: com/silabs/ss/platform/api/scripting/core/ScriptModuleUtils.class
+SHA-384-Digest: w+H0/Nfk3aAtbKASYIIdm/aFwMmicirGSJvVaN3gGBeeXVxsm++xIZer
+ 5ux1bwFj
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/IScriptStreamTe
+ xtMonitor.class
+SHA-384-Digest: pTfCM654+V7CX05hfLJ0/2x5+FauHSO+m7ts1Z/xL8h2tsn0rHTS/6iC
+ MPgqm7jk
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/server/ScriptCo
+ mmand.class
+SHA-384-Digest: ZB/4Sx2FkGvQeMGNNr5s2UeGj+7mcJoCbM9KP9y7Ya2rdYqxhDhh7KJv
+ zqRqN38A
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/IScriptStreamLi
+ neMonitor.class
+SHA-384-Digest: B5kge0Pa9gKmW/GpyyB1kEMb+UmE4JjrK0MuMjRI1z0ZS/ypO35Hht8c
+ FJZUCYbD
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/ScriptPropertie
+ s.class
+SHA-384-Digest: 6rzQqr0E4mb2aCdpkz7fVN5ldErMnaIhl0zSsfwOXhLB4TnoRsWeAXjO
+ T4KI7Dzf
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/SLSScriptAPI.cl
+ ass
+SHA-384-Digest: NO3jDbf6jYPx6htmLYD+VYugulx8A4aM1POXBYMzYYW/xn6GtZLJ0Y/s
+ O5JBzMh7
+
+Name: com/silabs/ss/platform/internal/scripting/core/ScriptRegistry.clas
+ s
+SHA-384-Digest: kGvNzIrErr8waXy/4mgY0+eNykvGODkdzzxqO6lCu8oFEmsj5fJPXnPu
+ pKI3tf9I
+
+Name: com/silabs/ss/platform/api/scripting/core/IScriptAttributeReadingC
+ lassExtension.class
+SHA-384-Digest: 8cVHTqxzbaBlEWTKFOhrD2AUUcEAIfX9g87c+kmG9zm8A/v0CNuzP7d6
+ M88wcsYX
+
+Name: com/silabs/ss/platform/internal/scripting/core/server/ScriptClient
+ Info.class
+SHA-384-Digest: AV4gVbZ5hK5bCFM8RCOezKoyK/34Ayhp8wJVJXDewONZEDHbuJwdnGO0
+ gSdyGNUC
+
+Name: com/silabs/ss/platform/internal/scripting/core/server/ScriptServer
+ Application.class
+SHA-384-Digest: gGQkqhnHqmVhVwkApOtNjm7KT5xfcX6PTbpsfU+1+4g6KPqsdtLIUjnQ
+ herJ2GZ9
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/BaseScriptStrea
+ mMonitor.class
+SHA-384-Digest: EKS/xoxh2NY9OpeT38HgQ2IQ/5okNl51Kr8Fge98swr9AjN/5Sm6Y+U7
+ VNSVhz6p
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/server/ScriptCl
+ ient.class
+SHA-384-Digest: 72OjRV95j68VLt7crKEE1pWncO14nwZBHcocwBI0TJmIsnqguidI9s0b
+ YE2Naw7Q
+
+Name: com/silabs/ss/platform/api/scripting/core/ISLSRegistryModuleBase.c
+ lass
+SHA-384-Digest: kzdXVpGJirdd1gMUPgfN/vxCsfNUYep45+LDfNvcuR+ye9QuSDWVMQRq
+ tyUAnVUh
+
+Name: com/silabs/ss/platform/internal/scripting/core/ScriptModuleRegistr
+ y$1.class
+SHA-384-Digest: TlBB73NnZQTqFLi+nix+7F9lFaBfhq8FSzKE0SOszU/dTfKaXcYwjOXi
+ nXw3KOFs
+
+Name: com/silabs/ss/platform/api/scripting/core/annotations/NoWrap.class
+SHA-384-Digest: uv/lGXTQKPQuz3YU1geG3Kf8j3TY7ApMiscRraqVkT7AZajgENk8vtGl
+ 419AlIU5
+
+Name: com/silabs/ss/platform/api/scripting/core/ScriptEngineContext.clas
+ s
+SHA-384-Digest: tf8K1/UBVLGy93nX1Hq7bQpW7QXlhF4UOPJgY/hajNgn5yiwB9IimZtn
+ h1DjUqvc
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/IScriptModuleRe
+ gistry.class
+SHA-384-Digest: sw5WDThKB4Q7M9Qy2TFyD1NgeGPGXmfFzeOxfB5vJb9MovzaKS73dfDE
+ nHBJbK0L
+
+Name: com/silabs/ss/platform/internal/scripting/core/WrappedManager.clas
+ s
+SHA-384-Digest: 7Wn6Oubn52kzEx8VC4t9zzxkIh+cqybnht5MFFKwU8otdUgsq9N78vvd
+ 6ahOFqE4
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/BaseScriptMonit
+ or.class
+SHA-384-Digest: DxKNdO1Gk6gx39naigLNSeT4uM7J5qwYEJkJ1xfKiNtpah0B+VnTMk+I
+ 6uRRked9
+
+Name: com/silabs/ss/platform/internal/scripting/core/SLSUriModule.class
+SHA-384-Digest: nIj9aKaeviUHkXAwjXnxdlTuWU6uBSuDQLlxTLlRTiQq5EMCzsAUnhbR
+ dohhWWwE
+
+Name: com/silabs/ss/platform/api/scripting/core/annotations/IncludeStubs
+ For.class
+SHA-384-Digest: /pJdnfM6DYrp3MGc171I/jtGW9ShMfNV5DFdd5Njr9lJz9Ua/7LRi23+
+ c+qwqEkO
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/SLSScriptAPI$1.
+ class
+SHA-384-Digest: DNiiMRXvzzfweLNWi/Skeo/+wsgX2wjqs09VIkT9DodKvnCnQDgdQQW0
+ +894zxKQ
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/SpecificScriptE
+ xception.class
+SHA-384-Digest: IV0YhG0gL5gTyiMHDpXW5DszVk41nLGQCp+dFIoYVWyL3M7nyHrJP5W6
+ U5MKgsxu
+
+Name: schema/internalScriptSupport.exsd
+SHA-384-Digest: wk7yLAfl9zpq5oZhaApO3sSqFywNJfIOIdleOC9v3deuKyP5DArfrSwx
+ yP9XyLMJ
+
+Name: com/silabs/ss/platform/api/scripting/core/annotations/NoUnwrap.cla
+ ss
+SHA-384-Digest: llDXjx3fQA6GmNfb5t6SpoeRX2Ji91edsVuV470KjR7Zm1Ta+9wCEvDA
+ IkmaR3PH
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/BaseScriptStrea
+ mTextMonitor.class
+SHA-384-Digest: TcpRuN9eM2TMJRA518sBC8Xi+c3CGCj+ZvOABVVIIF2kZKVZt2VzBlDF
+ u5/I5Zv3
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/BaseScriptStrea
+ mLineMonitor.class
+SHA-384-Digest: IKSgkinSpS4xvsz5h/hWG6307hcFDo2BWtiiOhJnFpBMQQqzGFwYIrGA
+ bLA/+1wd
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/BaseScript.clas
+ s
+SHA-384-Digest: OwjjacwkPuXQnCBv7KumanQT6bboWoeOP/3BzqO5P6hGKgah97853O/D
+ VEOfoYNz
+
+Name: com/silabs/ss/platform/internal/scripting/core/server/ScriptServer
+ .class
+SHA-384-Digest: 8oWT4c0fwXnpMLdNU4OMPgBOqoMWrNv2gnbMt2lld61m4ZQmZUj7RyuG
+ 8mvZJzJo
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/IScriptModuleRe
+ gistryListener.class
+SHA-384-Digest: LMgCA4SLo0OV+czAK/2NUMH7XvaYPAxZlZJ6B7HTT2swkNX7iOE5z405
+ vbT5uUyC
+
+Name: com/silabs/ss/platform/internal/scripting/core/server/ScriptReplyE
+ xception.class
+SHA-384-Digest: jjl0+FN8WWTg7Gcf20S0jDgEDWgY1N6mzF2zM01i67V2EXDpvgBw/jAC
+ l5ATU7p5
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/SpecificScriptE
+ xception$Code.class
+SHA-384-Digest: 7wDYZlD97GEUldQZMDpdsa9EVU2WaS8TXZXo8cuateos1sWLHXv+mMsP
+ OywE3SQC
+
+Name: com/silabs/ss/platform/api/scripting/core/ISLSUriModule.class
+SHA-384-Digest: 6bzo9Q98YK9C6NgXRCxGkk663V5at94oNarndwkT1PXuG9LVz8EsS1LU
+ jpUBv33Y
+
+Name: com/silabs/ss/platform/api/scripting/core/ISLSCoreModule.class
+SHA-384-Digest: m4iPn83XNDKLCkIn0mWhxYlDlI/Is/XqDOAWBzRXKF6WrZ7Hs4Mn8vF3
+ XMfSo8G/
+
+Name: com/silabs/ss/platform/api/scripting/core/ISLSScriptAPI$Exception.
+ class
+SHA-384-Digest: Ayn2wrD1UsIyiIS11hk4+mg9qP0MZIeRC8Ir5HK7ckBayj5Im53PXjpT
+ l1IzS4n8
+
+Name: com/silabs/ss/platform/api/scripting/core/IScript.class
+SHA-384-Digest: YjlTw1X4fwcz1KmZrOwwfnZurKLl3RvwMonhXBnAzSQ5cudQw7+VDTh6
+ Cfa0rvzw
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/ScriptModule.cl
+ ass
+SHA-384-Digest: 6STTC70YtdkUK5Pc6hHBvM/+8iaamSycMLhGZ/qeGVk5FjSIm5xBAIjh
+ y0SKDL0F
+
+Name: com/silabs/ss/platform/internal/scripting/core/Activator.class
+SHA-384-Digest: 2+PAhyaZjs/KFQI92zTfzQcc2585D9mI+neCx04u1ZJYqUcP4G6lHfxd
+ +YzDHpny
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/IScriptMonitorP
+ rovider.class
+SHA-384-Digest: BHNtJPujo1aTs7VA+ZQF/As7WkgRIOh414g59TdILEdlFGAqLg/Fshdu
+ 9WTNK6WZ
+
+Name: com/silabs/ss/platform/api/scripting/core/BaseSLSRegistryModule.cl
+ ass
+SHA-384-Digest: /h2QnvQiAayp4V6ENL2745bcRxm8JPbpiMZLC8QdHjB2bUB80hKg1oHJ
+ q0j5UK2q
+
+Name: com/silabs/ss/platform/api/scripting/core/IScriptEngineConfigurati
+ on.class
+SHA-384-Digest: akzmaqM387tjolewo9ON8YLuhMHgdvmnG8Sjj4L77ZKUsJxfeBsPJ6ve
+ IKJbW6rc
+
+Name: com/silabs/ss/platform/api/scripting/core/ISLSManagerModuleBase.cl
+ ass
+SHA-384-Digest: QsOfRrDKWgVj+vikxUbzbKnT2wYCWpKi+wxuS802SJbDx93XUqKU8T3R
+ Idbl1mNu
+
+Name: com/silabs/ss/platform/internal/api/scripting/core/ScriptModule$Si
+ ngletonHolder.class
+SHA-384-Digest: 4tDoh5WzcEw7Uf38bY5aWqPeFQZlUdcquJ1K/FO1WSF18iqsjhv88EE+
+ oxT2By85
+

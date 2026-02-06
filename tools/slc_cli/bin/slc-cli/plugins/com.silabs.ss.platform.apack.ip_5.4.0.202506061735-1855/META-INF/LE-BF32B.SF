@@ -1,0 +1,109 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: JPpQF0vWlJMUfv3tVSyz+a+jTeuiZC7rzz7AuNoAiYtUAgj
+ MnN+H11B27jwIMNJK
+SHA-384-Digest-Manifest-Main-Attributes: gHvnUH7vTwA9XSBdVp62u1ITPmnXq+y
+ lrnYFTbVjrD3+PfwQx2K023KMInkPPwIh
+
+Name: plugin.xml
+SHA-384-Digest: 8METlgIAdgLUJTGLvsTqoAi8cE2SbjGuDJdnaRxBKgsOALDnqTCwm5tC
+ bo5UOxBR
+
+Name: com/silabs/ss/platform/api/apack/ip/DiscoveryRxRunnable.class
+SHA-384-Digest: zWw53e28vMOCN4XwSRsFFlHv46+e10B8mMueSxtrOPd5P4HG3ejRsFBF
+ YpkA5hjy
+
+Name: com/silabs/ss/platform/api/apack/ip/EthernetDeviceCreator.class
+SHA-384-Digest: zYG6TsLPvdYp2AugW7JznHSSn5l82kYBhy+UE/MzwkCCKQearBS/3UDI
+ bbK3Is+p
+
+Name: com/silabs/ss/platform/api/apack/ip/JLinkDiscoveryRxRunnable.class
+SHA-384-Digest: DTdZ6LQtr9raMiGwfRDPFDu9jjhVnztO4/BDZi6ZTI7u6ywK1gPuLhFj
+ P6Hhxzvk
+
+Name: com/silabs/ss/platform/api/apack/ip/DiscoveryProtocol.class
+SHA-384-Digest: cHWRCv/lOoFBG53PHH026eWGGexqHTlEEjGUCPPJMMOAy/DItzIQt3p5
+ F7SkcfeD
+
+Name: com/silabs/ss/platform/api/apack/ip/DiscoveryMetaKey$DiscoveryTag.
+ class
+SHA-384-Digest: htbAABc0FvmdBVwfwegwbgESJsYAmKu0GDbznSGwSXlgB99Mp6urJO2h
+ oqKUgPgO
+
+Name: com/silabs/ss/platform/api/apack/ip/IpDiscoveryKey.class
+SHA-384-Digest: MydSHFe7BTJbfvxwlPLysb4QeXC1I4xXSWhEM5r7dTKwR52qiXagAx9u
+ OT+9XJPn
+
+Name: com/silabs/ss/platform/api/apack/ip/IpDiscoveryTarget$Mode.class
+SHA-384-Digest: RxGJnDtlZVWGsN8q5kQ/kvHc7T7MOkHcyKyi8WZ15VWz2elHiHj9IB5Y
+ RJN4NpQF
+
+Name: com/silabs/ss/platform/api/apack/ip/IDiscoverySender.class
+SHA-384-Digest: 3viDWk4n/T2CcXmg0MOlmmLx9aggD+b7iNHQK2nu1Zd73m5D45xONnmr
+ /TmIfqZG
+
+Name: com/silabs/ss/platform/internal/apack/ip/ui/UdpDiscoveryPreference
+ Page.class
+SHA-384-Digest: oRQhbLCo5dXx/YlP40Gnwgra3DGds+/z2CpjoMtgts97acm3Tk1f1r49
+ amfv7G81
+
+Name: com/silabs/ss/platform/api/apack/ip/DiscoveryException.class
+SHA-384-Digest: LrYEfhPEsPP3PLPjeQhJs7S7GPmvl3at/gMFsBHgN+0OFBxL9uYOu2jK
+ 6roA/2FD
+
+Name: .api_description
+SHA-384-Digest: 6PRoPLvvHfgZbWqBZp4scWWepoLh4wm9xp/RX2vImwm0akiH8mLfPo9x
+ DGFMsPmY
+
+Name: com/silabs/ss/platform/api/apack/ip/DiscoveryPreferenceUtils.class
+SHA-384-Digest: dJRB+BbTZWfO+DyNODx6y/kuK7YulHEF4QYKL592PxJ+Og79WqxUm4S2
+ NT0SKGsG
+
+Name: com/silabs/ss/platform/api/apack/ip/IDiscoveryHandler.class
+SHA-384-Digest: mqs+gcB6+CWeH/y44JwBpHrTgZ28Bm5TUxrm+o6jkkDImAsFhkYEBl9v
+ 8LoIuqLj
+
+Name: com/silabs/ss/platform/internal/apack/ip/ui/SubnetWidget.class
+SHA-384-Digest: 6KuRJbNqcbSjFivrJUJjeFFD63F11FxpErUKfStmNApdYCmMGPcC35Y2
+ qSXQbr73
+
+Name: com/silabs/ss/platform/api/apack/ip/IpDetectionInfo.class
+SHA-384-Digest: P/T0mhZRq7MElVcbXnRmxSglvnnQLxf5avvmNmRjCQHSobHF6rPF3Bpg
+ x5enh01V
+
+Name: com/silabs/ss/platform/api/apack/ip/JLinkEthernetDiscovery.class
+SHA-384-Digest: GBTjcwjlmI57cqGksw7eNLhdtGdJuyJ94GPLl13ot8zZl45DrzvRaALn
+ xXHx0yvI
+
+Name: com/silabs/ss/platform/api/apack/ip/EthernetDiscovery.class
+SHA-384-Digest: /s87FClkpRZm4wFQHGhrxEP13tT6feXfqTWXsG8J8wOAnnQY2fqDdRfJ
+ N/GDzEUi
+
+Name: com/silabs/ss/platform/api/apack/ip/IpDiscoveryTarget.class
+SHA-384-Digest: iHe0E07Z/hQzamE7xH3/lzNlxve08udJJ7CeMt3a7JA47KzJZZFlqMBr
+ FvtAyMwq
+
+Name: com/silabs/ss/platform/api/apack/ip/JLinkIpDetectionInfo.class
+SHA-384-Digest: f6zPU+exiEh9tnKH0ioP8rMAC/L06Qk3jiYZckIHbC2gNDFcqUOG6mVq
+ 1+pTIawB
+
+Name: com/silabs/ss/platform/api/apack/ip/EthernetDevice.class
+SHA-384-Digest: QaIVLZkIeM/NGCQU1PvHTLK4/lbHGAjbZsFfU1d7kOXLUej/sq8Y2mAd
+ krKqdAl3
+
+Name: com/silabs/ss/platform/api/apack/ip/DiscoveryMetaKey.class
+SHA-384-Digest: 6/ILbCIiL5ayKeBKcrJRutD4a1kwqurmpJCXwprwZoQwD8QJ98NrcM8d
+ 4zvmxde9
+
+Name: com/silabs/ss/platform/api/apack/ip/DiscoveryTxRunnable.class
+SHA-384-Digest: Xvpp1WFsnJ9mF1W3P/cp4n85HlxNBLgxF4joaagNH3CqxEeyw8vGTp4d
+ V8ibWuJr
+
+Name: com/silabs/ss/platform/api/apack/ip/DiscoveryPreference.class
+SHA-384-Digest: LBXva9Dqw96LxjejTd3GZl3FNS4ck2BXg8YRcCxt0x4QUN+CNZgnNZ6A
+ kcwPX3RU
+
+Name: com/silabs/ss/platform/internal/apack/ip/DiscoveryActivator.class
+SHA-384-Digest: 03S1JUd5pwWjRg19QuHSXFVuAkuVFCv0K4SSPXvCvVqsgFPq4/cQfQ0V
+ 9nWbtAWH
+

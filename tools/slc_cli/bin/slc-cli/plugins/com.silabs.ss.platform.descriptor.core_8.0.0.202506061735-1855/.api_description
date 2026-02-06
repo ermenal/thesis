@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component name="com.silabs.ss.platform.descriptor.core_8.0.0.202506061735-1855" version="1.2">
+    <plugin id="com.silabs.ss.platform.descriptor.core_8.0.0.202506061735-1855"/>
+    <package name="com.silabs.ss.platform.api.descriptor.core.compatibility" visibility="1">
+        <type name="ICompatibilityQuery" restrictions="3"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.descriptor.core.hardware" visibility="1">
+        <type name="IHardwareContext" restrictions="3"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.descriptor.core.manager" visibility="1">
+        <type name="BaseDescriptorManager" restrictions="0">
+            <method name="loadFromPrefs" restrictions="8" signature="(Lcom/silabs/java/utils/preferences/IPreferences;)V"/>
+            <method name="savePrefs" restrictions="8" signature="(Lcom/silabs/java/utils/preferences/IPreferences;)V"/>
+        </type>
+        <type name="BaseManager" restrictions="0">
+            <method name="addProtectedListener" restrictions="8" signature="(Lcom/silabs/ss/platform/api/descriptor/core/manager/IManagerListener;)V"/>
+            <method name="removeProtectedListener" restrictions="8" signature="(Lcom/silabs/ss/platform/api/descriptor/core/manager/IManagerListener;)V"/>
+        </type>
+        <type name="IDescriptorManagerConfig" restrictions="3"/>
+        <type name="IEvent" restrictions="3"/>
+        <type name="IManagerConfig" restrictions="3"/>
+        <type name="ManagerConfigFactory" restrictions="2"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.descriptor.core.model" visibility="1">
+        <type name="MDescriptorEMap" restrictions="8"/>
+        <type name="StudioModelPackage" restrictions="3"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.descriptor.core.model.impl" visibility="1">
+        <type name="ESynchronizedAdapterList" restrictions="8"/>
+        <type name="EcoreEMapWithNotifyAndEquals" restrictions="8"/>
+        <type name="MTypeImpl" restrictions="0">
+            <method name="updateIdFromName" restrictions="8" signature="(Ljava/lang/String;Ljava/lang/String;)V"/>
+        </type>
+    </package>
+    <package name="com.silabs.ss.platform.api.descriptor.core.property" visibility="1">
+        <type name="CoreProperties" restrictions="4"/>
+        <type name="ExternalDescriptorPropertyAccess" restrictions="4"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.descriptor.core.property.model" visibility="1">
+        <type name="IPropertyAccess" restrictions="1"/>
+        <type name="IPropertyRegistry" restrictions="3"/>
+        <type name="IWriteablePropertyAccess" restrictions="1"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.descriptor.core.registry" visibility="1">
+        <type name="BaseDatabaseRegistry" restrictions="0">
+            <method name="addProtectedListener" restrictions="8" signature="(Lcom/silabs/ss/platform/api/descriptor/core/registry/IRegistryListener;)V"/>
+            <method name="doFindDescriptor" restrictions="8" signature="(Ljava/lang/String;)Lcom/silabs/ss/platform/api/descriptor/core/IDescriptor;"/>
+            <method name="removeProtectedListener" restrictions="8" signature="(Lcom/silabs/ss/platform/api/descriptor/core/registry/IRegistryListener;)V"/>
+        </type>
+        <type name="BaseRegistry" restrictions="0">
+            <method name="getLoadingErrors" restrictions="8" signature="()Ljava/util/List;"/>
+            <method name="loadFromPrefs" restrictions="8" signature="(Lcom/silabs/java/utils/preferences/IPreferences;)V"/>
+            <method name="savePrefs" restrictions="8" signature="(Lcom/silabs/java/utils/preferences/IPreferences;)V"/>
+        </type>
+        <type name="IDatabaseBackedRegistryConfig" restrictions="3"/>
+        <type name="IExtensionBackedRegistryConfig" restrictions="3"/>
+        <type name="IInternalRegistry" restrictions="3">
+            <method name="loadFromPrefs" restrictions="8" signature="(Lcom/silabs/java/utils/preferences/IPreferences;)V"/>
+            <method name="saveToPrefs" restrictions="8" signature="(Lcom/silabs/java/utils/preferences/IPreferences;[Lcom/silabs/ss/platform/api/descriptor/core/IDescriptor;)V"/>
+        </type>
+        <type name="IRegistry" restrictions="3"/>
+        <type name="IRegistryConfig" restrictions="3"/>
+        <type name="RegistryConfigFactory" restrictions="2"/>
+        <type name="RegistryProperties" restrictions="4"/>
+        <type name="RegistryProperties$ID" restrictions="4"/>
+        <type name="RegistryUtils" restrictions="0">
+            <method name="getDependentRegistries" restrictions="8" signature="(Ljava/lang/String;)Ljava/util/Collection;"/>
+        </type>
+    </package>
+    <package name="com.silabs.ss.platform.api.descriptor.core.registry.plugins" visibility="1">
+        <type name="IRegistrySecurityTrustPlugin" restrictions="3"/>
+        <type name="RegistryDependencyProvider" restrictions="0"/>
+        <type name="RegistryDependencyProvider$DependencyData" restrictions="8"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.descriptor.core.toolsinfoservice" visibility="1">
+        <type name="IToolsInfoService" restrictions="3"/>
+        <type name="ToolInfoRequest" restrictions="0">
+            <method name="loadInfo" restrictions="8" signature="(Lcom/silabs/ss/platform/api/descriptor/core/toolsinfoservice/IToolsInfoService;)Lcom/silabs/ss/platform/api/descriptor/core/toolsinfoservice/model/ToolInfo;"/>
+        </type>
+        <type name="ToolsInfoService" restrictions="4"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.descriptor.core.toolsinfoservice.model" visibility="1">
+        <type name="ToolInfo" restrictions="4"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.descriptor.core.trust" visibility="1">
+        <type name="IDescriptorTrustHandler" restrictions="3"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.descriptor.core.type" visibility="1">
+        <type name="TypeProperties" restrictions="4"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.descriptor.core.type.converter" visibility="1">
+        <type name="InternalJSON" restrictions="2"/>
+        <type name="JSONObjectTypeConverter" restrictions="8"/>
+    </package>
+</component>

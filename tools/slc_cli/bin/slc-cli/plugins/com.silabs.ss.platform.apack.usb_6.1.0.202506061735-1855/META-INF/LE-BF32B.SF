@@ -1,0 +1,76 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: ncY8SGdG58fwG5JnR+f67nTgKkzs6fqu5vgQ4cP4A/GgThq
+ kcmcAdGAevEEBNTjM
+SHA-384-Digest-Manifest-Main-Attributes: nQUIVvFli2DBIUb4uE9y12blAqgdcRa
+ r2PKW+q7/B5ybp2If8579hzAMcl5S+Foh
+
+Name: plugin.xml
+SHA-384-Digest: YERnJoufnC+/LVhtK6WA922ks9OifpLhIO1lbe0M3lHQgxYv3swPmaiT
+ j97Jkcop
+
+Name: com/silabs/ss/platform/api/apack/usb/UsbDeviceInfo.class
+SHA-384-Digest: WENJZFHyaLBAd8z/viwPpNpB2fKIdIRqZyxK85k44KHvCf0aAazfbS3E
+ H+vKaX+S
+
+Name: resource/usb.ids
+SHA-384-Digest: o0iIrTEzO6KTNoYFHjhKkTbPxzIwHUr9FbJLBGJyfBvYKVMVHFcCd5/m
+ z9a2uqUm
+
+Name: com/silabs/ss/platform/api/apack/usb/UsbVidPidManager$UsbNames.cla
+ ss
+SHA-384-Digest: vubhm37XROlDnkIwTqztS3E+hMTf3ufLJcXaIEbhINnYoSPTdTtQ23dO
+ TfqmHVqB
+
+Name: com/silabs/ss/platform/api/apack/usb/UsbVidPidManager.class
+SHA-384-Digest: qYdXcDVGhuH+GsOI3qKc2UvZKkLTnqPV7/gweYSHGE5EDPstmOMQ3Ymn
+ 2Pi4+2YE
+
+Name: com/silabs/ss/platform/internal/apack/usb/UsbDetectorLineHandler.c
+ lass
+SHA-384-Digest: PYMbffxQUn5qHyCCEI3g0RwY5U7vXozg/o4RXA6hqvShlGgJQ+xOngHs
+ 5keckEol
+
+Name: .api_description
+SHA-384-Digest: 2ZBt3Vl+yMsdX5GEF9Vl2ib62HPaVw+9CVnJIqIKX/Dmm3KTH+v2G+xg
+ xgKKMMgY
+
+Name: com/silabs/ss/platform/api/apack/usb/UsbManager$LazyInstantiator.c
+ lass
+SHA-384-Digest: fxh/RHZLEzffxULwVAJvcrwaI/5RmYkOzZsJGpEF09neiQWFxFpIuEqk
+ OUj7Vh1x
+
+Name: com/silabs/ss/platform/api/apack/usb/UsbVidPidExcludeRules.class
+SHA-384-Digest: aZ+gQGC7JBKNonhgAChk0yPuEg6oUwtW4DuaP6QO84S2GtN2UArZ060A
+ jim+LrBO
+
+Name: com/silabs/ss/platform/api/apack/usb/UsbVidPidManager$LazyInstanti
+ ator.class
+SHA-384-Digest: Q0jDg2/tlp8wSO31gJqeNRVXAbxL9toNXD6XEh0pRE5JNdPlffb86G2V
+ 4FMMQ6ct
+
+Name: com/silabs/ss/platform/api/apack/usb/IUsbListener.class
+SHA-384-Digest: xKjozJt8KZAqZ402cK/xB8iVgIhNPSLOzfOizFHQxYIEWNEjnesNNYF8
+ KFuqNgbM
+
+Name: com/silabs/ss/platform/api/apack/usb/UsbManager.class
+SHA-384-Digest: 4lxS8LRsCd2fxXliV7f4RoIkAhGhx26f5ZMd8uWb+gmnEAu1isMZwplC
+ 5F7IswlI
+
+Name: com/silabs/ss/platform/api/apack/usb/UsbMonitorExecutionContext.cl
+ ass
+SHA-384-Digest: LFRjX8GDDfOlFQ64PW80GDZFqF6/OmszBLWqVDK1cFSP4Qk+l58G9F2Y
+ bwj3MpxG
+
+Name: com/silabs/ss/platform/api/apack/usb/UsbManager$1.class
+SHA-384-Digest: e5pTDgUDQhGKFSQny1rsKXJLqNsn2xLitaLgJkEdwZ3BrU8xYzZzFf3R
+ KACynaRY
+
+Name: resource/excludeRules.info
+SHA-384-Digest: ZzsB3T3C9WEMXcuJ5m3V62MiJwSU9hUF7hrLpGEyGe3Jbyi6o6SZ1cBN
+ Hol2c/Gc
+
+Name: com/silabs/ss/platform/internal/apack/usb/UsbApackActivator.class
+SHA-384-Digest: 44GqYlAF/UbZdSHHJxAai6mJIvZWEnnbInQs5h6FdD9tj25pYRZ8Eu1d
+ 4WsT5lRN
+

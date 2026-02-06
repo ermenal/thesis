@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="managedFunction" name="Managed function for adapter packs." schema="schema/managedFunction.exsd"/>
+   <extension-point id="adapterPack" name="Java-based Adapter Pack" schema="schema/adapterPack.exsd"/>
+   <extension-point id="apackInfoBlockHandler" name="Adapter Pack Info Block Handler" schema="schema/apackInfoBlockHandler.exsd"/>
+   <extension
+         point="com.silabs.ss.platform.apack.core.managedFunction">
+      <function type="detect">
+      </function>
+      <function
+            type="postinstall">
+      </function>
+   </extension>
+</plugin>

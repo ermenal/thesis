@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component name="com.silabs.ss.platform.content.core_8.1.0.202506061735-1855" version="1.2">
+    <plugin id="com.silabs.ss.platform.content.core_8.1.0.202506061735-1855"/>
+    <package name="com.silabs.ss.platform.api.content.core.asset" visibility="1">
+        <type name="AcceptedStudioFilters" restrictions="4">
+            <method name="&lt;init&gt;" restrictions="8" signature="(Ljava/nio/file/Path;)V"/>
+            <method name="clearAcceptedStudioFilters" restrictions="8" signature="()V"/>
+            <method name="testInstance" restrictions="8" signature="(Ljava/nio/file/Path;)Lcom/silabs/ss/platform/api/content/core/asset/AcceptedStudioFilters;"/>
+        </type>
+        <type name="AcceptedStudioFiltersAssetValidator" restrictions="4"/>
+        <type name="IAsset" restrictions="3"/>
+        <type name="StudioFiltersUtilities" restrictions="4"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.content.core.assetpath" visibility="1">
+        <type name="AssetPath" restrictions="0">
+            <method name="setTestManager" restrictions="8" signature="(Lcom/silabs/ss/platform/api/content/core/assetpath/IAssetPathManager;)Lcom/silabs/ss/platform/api/content/core/assetpath/IAssetPathManager;"/>
+        </type>
+        <type name="IAssetPathManager" restrictions="3"/>
+        <type name="IAssetPathRegistry" restrictions="3"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.content.core.item" visibility="1">
+        <type name="IAppnoteRegistry" restrictions="3"/>
+        <type name="ICategoryRegistry" restrictions="3"/>
+        <type name="IDocumentRegistry" restrictions="3"/>
+        <type name="IImageRegistry" restrictions="3"/>
+        <type name="IPresentationRegistry" restrictions="3"/>
+    </package>
+    <package name="com.silabs.ss.platform.api.content.core.metadata" visibility="1">
+        <type name="IMetadataManager" restrictions="3"/>
+        <type name="IMetadataRegistry" restrictions="3"/>
+        <type name="Metadata" restrictions="0">
+            <method name="setTestManager" restrictions="8" signature="(Lcom/silabs/ss/platform/api/content/core/metadata/IMetadataManager;)Lcom/silabs/ss/platform/api/content/core/metadata/IMetadataManager;"/>
+        </type>
+    </package>
+</component>

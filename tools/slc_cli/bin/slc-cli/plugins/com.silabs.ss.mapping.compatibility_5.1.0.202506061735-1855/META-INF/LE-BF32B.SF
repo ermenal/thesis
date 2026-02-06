@@ -1,0 +1,120 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: A/sG6mYkFOAH90ZdsIBU/6ms4eILyj1y65Bfe6zqDL+hTyN
+ iST76N/uIy1Gh40hk
+SHA-384-Digest-Manifest-Main-Attributes: xZ+d8cHEM1k5A9NoEUW4FaYbyWtesay
+ kDbbKD7yC16zRJTi5WD/GdjsNVKsE65uH
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibili
+ tyUtils.class
+SHA-384-Digest: VZGgzJ7rHFyUIKF4ohojsdDFsIX8H3mPO/X3E5Ivgu+ZdRphTDlO+6Pd
+ uBFL0G8j
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarLexer.tokens
+SHA-384-Digest: etGlUJE4F/vH53qAzqgdgP2MfOb5jlzq+WedyMMGQ8g8Oa/+CslAFZBs
+ UeqxkT+X
+
+Name: plugin.xml
+SHA-384-Digest: Zv986ppOhSoaf9Ga19Vq5+JAYRAXQJn7IkUcfsFKxy7+5PxJvwZv2cAI
+ fMR7/ilK
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$ProcessWithInputContext.class
+SHA-384-Digest: R3uISOLKRr60pGS9f35xqfBcXvolnpL6FOcUpnFAiYF/08N9DfNiiQvi
+ Twt0PbK4
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$BracketExpressionContext.class
+SHA-384-Digest: BK7E+l2h3nkWgId91nqzGVDENaF/KlWkdfV+mKZaDextTf8DRW6AWfoQ
+ idQZ0FB9
+
+Name: com/silabs/ss/mapping/compatibility/internal/impl/MapCompatibility
+ Provider.class
+SHA-384-Digest: ZiZ8ZoPlPjUMOf6k2jeNDCqsG5QUg+2fYBF7d04pXqlCsNZz+HUf3lnm
+ q3iwxW4P
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibili
+ tyContext$MapCompatToken.class
+SHA-384-Digest: UXdav9siCWw/ULSsUbZLJT0PfGav407GWfqTwudr3m+40B55aHTJYbkM
+ GHSlDWqu
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$ArrayValueContext.class
+SHA-384-Digest: xQFRNCEKU3TdgpGec1nuid0ztZeAoYh9GPs/xX0iAaGepsQ3qhbsoyQR
+ ahBXCv+U
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser.class
+SHA-384-Digest: 3OBG57aa1IbjbL1gjUOMsTG7MhJGpYn5CCsj1fQ2oafzQuY/hMDuyhGn
+ 4XL8l5ql
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammar.tokens
+SHA-384-Digest: Pf0nyWuiijXUVDzkO71Dr6159o35ksdGsEiBHpInf4jlxG5BzaJnVwIQ
+ W4GYCl3Z
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibleS
+ tate.class
+SHA-384-Digest: Rs9PKfN4PTrJFH2mQsaawar1QmOKQ8hhudTNvfvupkUfk/HDSDrBEO4v
+ mfJG6K2j
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibili
+ tyEngine.class
+SHA-384-Digest: +8kuywQYBewxodR6eoefpeGzvjk8z804GrR7mm1ZTwNIwZ0qs3YA0c13
+ IFCFGHU/
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibili
+ tyContext$MapCompatEntity.class
+SHA-384-Digest: AioMMyjnpa4w0GiE6t1NrxeHLdbH7EVATW5ucLOludF4JvV+4lVIwir5
+ nYx3Da6y
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$TypeLogicalContext.class
+SHA-384-Digest: P6Y9uquiiNV9H/QMljlaquCzV15RAQk+9hX3n/VEjwnoS+IN6U39N3Uw
+ 3uj106Rd
+
+Name: com/silabs/ss/mapping/compatibility/internal/impl/MapCompatibility
+ Expression.class
+SHA-384-Digest: AdjgUgzwu64omDYOaKG450epQ/13pdJvcuR5hwWuxIe7xvcqMtRT6Jiw
+ POCjcRP7
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarLexer.class
+SHA-384-Digest: KDQNprlKlJnUdK454rNrVLWgcg/BSa3TK6+FMbvF6WvauZWIjx4MKcj5
+ 7joyEgGy
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$TypeCompareContext.class
+SHA-384-Digest: /LTOPpVVl1DPUkPGzVgwRI3ROLGCuK94c+nBHLf/ixq3Cd2aI92gurMe
+ ltOu8Grs
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$ExpressionContext.class
+SHA-384-Digest: FY0QBKCx3Q26CvAzWFzWvq3Zc3Fzz/DYoRXX0HSpw+12ym0slPKrcYCB
+ 1y7Sfpzd
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibili
+ tyEngine$Compatible.class
+SHA-384-Digest: 4/uEa3OhXmJXj+WHvVyOUW2uRQSOilhRsGu8jNX7kFDASYTiHlygy8kf
+ LqQmOUFA
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/MapCompatibili
+ tyContext.class
+SHA-384-Digest: hS/gkXwHtn2gXr/3jHQFEMtqoFTL9VS9oGnyBcnTa1tuUuNwNplaqGbB
+ RfhOxDCZ
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$BaseValueContext.class
+SHA-384-Digest: LP6xoeAiwDZQCIuwXLV907eoBqqnXkQgKWKxOpUSPWtecfYwSPXb93tm
+ bUR6fS0/
+
+Name: com/silabs/ss/mapping/compatibility/internal/engine/generated/MapC
+ ompatibilityGrammarParser$ComparisonExpressionContext.class
+SHA-384-Digest: 1oG0f9TjNtm4Q/hJ/JwTd3grD02pOiq2NUj5KN0JtT38J5+f52APK2Zs
+ xNWon/VD
+
+Name: com/silabs/ss/mapping/compatibility/rcp/internal/Activator.class
+SHA-384-Digest: WoY/9UMwcCNfFR+bTzEpoth9XV+hP39aR9DGMuhv2SAkyrLuMTVtV9Er
+ hj7xr7g+
+

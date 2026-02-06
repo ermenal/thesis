@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component name="com.silabs.ss.platform.demos.core_5.6.0.202506061735-1855" version="1.2">
+    <plugin id="com.silabs.ss.platform.demos.core_5.6.0.202506061735-1855"/>
+    <package name="com.silabs.ss.platform.api.demos.core" visibility="1">
+        <type name="DemoModelUtils" restrictions="0">
+            <method name="saveDescriptorsToFile" restrictions="8" signature="(Ljava/io/File;Ljava/util/Collection;)V"/>
+        </type>
+        <type name="IDemoDescriptor" restrictions="3"/>
+        <type name="IDemoRegistry" restrictions="3"/>
+    </package>
+</component>

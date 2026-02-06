@@ -1,0 +1,10 @@
+!SESSION 2025-10-26 08:26:03.494 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.8
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  configuration
+Command-line arguments:  -os linux -ws gtk -arch x86_64 configuration
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-10-26 08:26:04.367
+!MESSAGE Logging bundle not found: com.silabs.ss.logger, logging not initialized.

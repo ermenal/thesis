@@ -1,0 +1,1326 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: UhS+Ew50vcmL6XzB+P//qoiWqK0PFR9kXzPW2NhcJWdpQLQ
+ ugc5YDJcCZPBxg/Qc
+SHA-384-Digest-Manifest-Main-Attributes: 4DsgCOuHTz4mXU1Iw53rhZsnnsQzlyy
+ asP8Ktywkpr+PXdapPe3mflpf5BdeJjRq
+
+Name: plugin.xml
+SHA-384-Digest: ATYXJXGtNZHYaHwb6ZL2g7/x1gnWinR73r2A6qZjAB1KC5VMhPT5RiNu
+ ZCprRxba
+
+Name: com/silabs/ss/platform/internal/api/descriptor/core/type/BaseListT
+ ype.class
+SHA-384-Digest: Swu5u+ogSJ5b9skwmawB0tyaWr7+Ih7NUYou4F1h211fz3v30y/Xm+rZ
+ efE5s5vb
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/IDatabaseBacke
+ dRegistryConfig.class
+SHA-384-Digest: cL08sS6/XhypXGtCLnULqOCIK/cc1U854IFt97w9dt/mfwxLuMps/JC8
+ viujHZW/
+
+Name: com/silabs/ss/platform/api/descriptor/core/trust/DescriptorTrustPr
+ operties.class
+SHA-384-Digest: 2sqXR2+Q2mxW7SogcJGhiE9xpXv123m3MdXQ06bTv9P/EMcBe0ni8rF/
+ jAUgg/SS
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/IRegistryStart
+ upListener.class
+SHA-384-Digest: 9ya/Y4Z3kIfWxaP0AGdSnsnu0fsO1qKZLgLAUH90QlgVQ8NDSYCy/jii
+ Afu8WpdG
+
+Name: com/silabs/ss/platform/internal/descriptor/core/Activator.class
+SHA-384-Digest: 8ltiMz9rURPHgV0ajmB5Nhb4/PtKBjAFbs6aioqjowCYV+AfUUauk3pY
+ xUlnDyoK
+
+Name: com/silabs/ss/platform/api/descriptor/core/DeviceFiltering.class
+SHA-384-Digest: p1ssjOZnLYPctbnGSm8MbPdpJB8Yfw9L5yjTqrDd9muklfiK0QfHNsGT
+ k6lqNndI
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/RegistryConfig
+ Factory$BaseDatabaseBackedRegistryConfig.class
+SHA-384-Digest: qHA5j5yNsuwxoXkLudKOl1YN73zB/WAYPbzZiYKMU7pSrEq/m5OXnEXb
+ 0OSuQqio
+
+Name: com/silabs/ss/platform/internal/descriptor/core/type/converter/Str
+ ingToStringMapTypeConverter.class
+SHA-384-Digest: qG3zjSjdV6dglKKlv8Ij0xT2cR6OSgahmiU92Fh7VJA85g11H3mxPOXV
+ wmOEMjF3
+
+Name: com/silabs/ss/platform/internal/descriptor/core/compatibility/Stud
+ ioCompatibilityProvider.class
+SHA-384-Digest: /okFUaVD2GDWFoKRbiv32wGLPW9qW1lLr3eg6Pf/PIMyfGSN9OhKpWap
+ ssHh9mHa
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/BaseEntityProvi
+ der.class
+SHA-384-Digest: hdiNHutUK3q/Gjwnd/ncwqiyeQwHzhe4E33EJwgcFThaZA5N67jyIimZ
+ ScDpNwKw
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/ManagerUtils.cl
+ ass
+SHA-384-Digest: 3wWM6YLuTGi4VS6HjlXyWQheQ2BYmvPpT+xE7yKgrJ0W4z8gCTGmLbBf
+ dMzM4CgQ
+
+Name: com/silabs/ss/platform/api/descriptor/core/BaseVersionedDescriptor
+ Entity.class
+SHA-384-Digest: fc3CzwryeMDEmSVo2jrbnazA6L2NhStd39TMq9Pn3kF6ASnhYt9xUI9E
+ b6oTM+FP
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/converter/JacksonT
+ ypeConverter.class
+SHA-384-Digest: H+8AiErhe/hRXFWmX7NkTVo/bTyrnVkHgQTk6irKCQ5wzA1fqzptgQdB
+ Hkh1hbqs
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/MPropertyGroup.cl
+ ass
+SHA-384-Digest: dyHZQQaVivw6AggG6WL2M6FbZbgLdRLbbUo6G5JHkR+cy6kYnLR8Rdeo
+ E7OggwN0
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/IPropert
+ yMapper.class
+SHA-384-Digest: CO1ZnoiZ3erZFpmxmSkN5jZAcASOe9JfhlAXlvgMs8tamy3kJYW1Denp
+ e2e1QCy7
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/IDatabaseBacke
+ dRegistry.class
+SHA-384-Digest: MVdpWVTQYwHQpZ/gccEvcUdHCCW7ZGmYVP3Y+6jaE1hvvdPN2Tg885Rg
+ 5bbfuABJ
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/BaseManager.cla
+ ss
+SHA-384-Digest: yXCos9r2YVfiIDcwq59GKfjhOhf66qRT/D0obEnncetGjQn0G1Nd/wzl
+ AzQlHhRZ
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/IEvent.class
+SHA-384-Digest: IOYbddgtmbkNa4ZhrIcpxod6e0bGh7SJ3pmYLhydF9Dgy5Furu5phVb2
+ sLVgEvuO
+
+Name: .api_description
+SHA-384-Digest: kFBG43bF2TbE9VB0a0JatFSdBKo7NXcbltmwMb95VwH9GktdyiDZdLna
+ ZBUvcnQt
+
+Name: com/silabs/ss/platform/api/descriptor/core/BaseDescriptor.class
+SHA-384-Digest: Yh6Dwknot7RFLcQTrQkyr0rI5SIgAW6b1a6isA7FtChE/N6MN4TuFIEO
+ F0ab/5rB
+
+Name: com/silabs/ss/platform/api/descriptor/core/IDescribableVersionedEn
+ tity.class
+SHA-384-Digest: EVXDTg7TlB/0VbFpDI0qsK/ndaU6chXGaC4PrqJ/cj3V0iB8B7tvC939
+ iWztBt35
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/util/StudioModelA
+ dapterFactory$1.class
+SHA-384-Digest: Piuvicfd8gT/ynX36yzIH3qBUsAWeLa9Ih93oEGu5LvbvUcm1q6X9PLQ
+ rySJlTIz
+
+Name: schema/registryStartupListener.exsd
+SHA-384-Digest: IQVkq54ZPZR3zlxVxqRobNbOLkyIEvcXS4Qt+A6SZikuJ5ZrJgmr+EmH
+ VmqNVLL0
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/IManagerListene
+ r.class
+SHA-384-Digest: MagTgkQIeb3J/vetApf4KFAbvf3KIXsOANT9yp6V7dF/y8iOEg84+3E2
+ La2zq165
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/MListTypeImp
+ l.class
+SHA-384-Digest: JhwZZfIG7kDzI2vwFHoV8y5Y88JFRhjQ0fO7Z2DU/rjBsNsNtWJ28ruF
+ O7kQb/Xk
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/BaseDetector.c
+ lass
+SHA-384-Digest: vimH1sXlckLoyRDVWIeE+550dPBN8LIidH85z1nMUPSiOZXC1SovFl9M
+ V0vgvKmP
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/plugins/IRegis
+ tryPlugin$RegistryLoad.class
+SHA-384-Digest: tt/KQyQ300H9kQ2QXpVR0w85PFJsDvqYVcUHI8psi0pGobEF0o6JVy70
+ kMCRGfHq
+
+Name: com/silabs/ss/platform/api/descriptor/core/trust/DescriptorTrustUt
+ ils.class
+SHA-384-Digest: D1xjj7fhUHVZC5QQ5tWTwUPxZR2M+mQaaaBUiR3wXPbc9JMoquAviYTE
+ y3FXFpLo
+
+Name: com/silabs/ss/platform/internal/descriptor/core/compatibility/Stud
+ ioCompatibilityExpression.class
+SHA-384-Digest: za4EUelxds6Rj9JgENADGjOJsrkvwiDfZT2ySEbUywwyL8BzB2+OHPON
+ oRTt4eru
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/EcoreEMapWit
+ hNotifyAndEquals$1.class
+SHA-384-Digest: tDQPLL/JdBadr+itz0tQZeVJhwnWMiAgWpD5tzp/virJ8AApqZNa66mj
+ gMJqfAK3
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/BaseDatabaseBa
+ ckedRegistry.class
+SHA-384-Digest: E5wvXujjqlSoT8JPh+jkeAyxdeUaq55Ex82O7IbhW622g9Mh46eGIjdl
+ HROUBwpc
+
+Name: com/silabs/ss/platform/internal/descriptor/core/property/PropertyR
+ egistry.class
+SHA-384-Digest: Yb7BYqut8cIavdM9d3q/wqRXZL5d/RoqB2lwIATXeMoaaVntWGY7jlAk
+ Pnd/IyuE
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/util/StudioModelX
+ MLProcessor.class
+SHA-384-Digest: C7PbJKe0jZfJdtkHg2b95AoZlqmrEnSS14JuOoshXP8fgEucG66Xl05G
+ neQn3mcN
+
+Name: com/silabs/ss/platform/api/descriptor/core/IDescriptorInternal.cla
+ ss
+SHA-384-Digest: VEaAr8g2aUPYr+po9itz6dMS+/uGS2K0k6AFmhRstXqeEVmBjgxpUkMi
+ CvVVRUIE
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/MDescriptorEMap.c
+ lass
+SHA-384-Digest: zxpgIRaU/HYEB9HfCelREtHUjZUKwDty2FAoaAH6o05RsJaCO21bnLOV
+ NhL6VnIA
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/IDetector.clas
+ s
+SHA-384-Digest: G22wsYJ+LbeY/gjjXgEf9g59MB6TaPFZ2Nx1+HAVGzUE6/ACdrY5dYn+
+ GFnyuB8U
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/plugins/Regist
+ ryCacheProvider$CacheData.class
+SHA-384-Digest: fPDl+59OoDN/XDMQAl1Bmonyb0jq9Dr35+J1xtGmvaleEhsD0h4KW7bT
+ DgIRAU2P
+
+Name: com/silabs/ss/platform/internal/descriptor/core/type/converter/Cla
+ ssPropertyConverter.class
+SHA-384-Digest: kTfV3nfNVRGgnFsKshmlUAFKpI1lgz9Xo0gc3KWiHHdRvka0BYNQlfHF
+ OLGk1gcl
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/Property
+ ConversionUtils.class
+SHA-384-Digest: b0PH5KWwn1R8Uhwidu8HzvZGuwKUmSqiqrJSET3K4KEVTkOSi264nViT
+ UmgOjsky
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/CoreHardwarePr
+ operties$ID.class
+SHA-384-Digest: NH5GVPvZ68K/dbEOk1OsLw6ggIJpFRTDU3aQYCf0bMl09TgPKpDNWglz
+ nxl9pLo7
+
+Name: com/silabs/ss/platform/api/descriptor/core/compatibility/Compatibi
+ lity.class
+SHA-384-Digest: z+lXMYXxiqoiw2hHnZgw7I4noK/RVH4zfJ3y6Io6n9Cbu9g9Eh/NfpXX
+ ZBUEFlil
+
+Name: com/silabs/ss/platform/api/descriptor/core/toolsinfoservice/IToolI
+ nfoResolverProvider.class
+SHA-384-Digest: Vw7tx5H18H0KFnllVEVTFFB+26HEQucZYsfmbkA5vD6k4qhyhPTnY+aQ
+ BUfQdAvP
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/IPropert
+ yRegistry.class
+SHA-384-Digest: bdF++mMMnNzEjyimPcm8jt1peM5cJTRMZbkEwNkEhbT5cRQSMw6hXtwP
+ Rqi01Dkk
+
+Name: com/silabs/ss/platform/api/descriptor/core/trust/IDescriptorTrustH
+ andler.class
+SHA-384-Digest: BVyxfoSZmpqHcu+eHPD8yFLPtm/wYBES5bZ3RITJTW9CBUyJmZjDlyHt
+ NFUx7YSR
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/StudioModelFactor
+ y.class
+SHA-384-Digest: tU45Pr2hNQFkABHARBtpRjnORrjhodhMKBtII0A0ZICo0h7l+s8WnXYs
+ ytE7b05z
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/CoreProperties
+ $ID.class
+SHA-384-Digest: NcOcjBhuJpmCb/hmrPbGkod27mUFRzQEWYTP9yKuy4s6AKpnChKqX2fl
+ p8eWR4Ec
+
+Name: com/silabs/ss/platform/api/descriptor/core/IWriteableDescriptorEnt
+ ity.class
+SHA-384-Digest: Fxj5kzrZi6KZ1KwDpN9jNX46RebOC15QP0H/D1ozGC6mVuUa+jHUYjDi
+ W2GoiBir
+
+Name: com/silabs/ss/platform/api/descriptor/core/toolsinfoservice/ToolsI
+ nfoService.class
+SHA-384-Digest: 9J705QyGrnGsqfqGlGWDb0v6YAqH8XtlL62z5aKf12MYJ2OgnYiJRWO3
+ VrbMqTp0
+
+Name: com/silabs/ss/platform/api/descriptor/core/BaseVersionedDescriptor
+ .class
+SHA-384-Digest: 5YbRZp4ssFOfaMjbWatFPEJaw7n+5K0rXIe8u+XidR14CJ620ApVaiuh
+ 3KwxsEaj
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/RegistryConfig
+ Factory$BaseExtensionBackedRegistryConfig.class
+SHA-384-Digest: iMfggrPR2D89zyfPPtmTnliLtm53gPaopoYXgY/MtWRJ/f0zu4RedVUi
+ ENgwU22v
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/util/XMLLoadStudi
+ oModel.class
+SHA-384-Digest: xa44+WLObBQessKdmKeboej1g78biL/zEg0KPFtecONrz7vRwOnSbffN
+ FFLXx+Bz
+
+Name: com/silabs/ss/platform/api/descriptor/core/compatibility/BaseDescr
+ iptorCompatibilityAdapter.class
+SHA-384-Digest: JP0G69uFf7niBePkGTMNOtxbUEs00RKP9nvCB8IbztgfxrjJ7gEK9OEo
+ wtnNXXR1
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/converter/BeanType
+ Converter.class
+SHA-384-Digest: cSHle4Eaip1cPN5bCyobMqWE7BcZCzWnRVCHyG3YEBM3bPMAxzlx3wlF
+ sjU//0qS
+
+Name: com/silabs/ss/platform/internal/descriptor/core/type/converter/Str
+ ingListTypeConverter.class
+SHA-384-Digest: tQYqwoY/YfUA4UFJ+sNhvJHIfF/foM5VdbEZNk2YogIUVklKeMLUXhi5
+ p5wFWPpt
+
+Name: com/silabs/ss/platform/internal/descriptor/core/registry/plugins/R
+ egistryEcoreListenerPlugin.class
+SHA-384-Digest: jwRtgrZxM53b84nNxTpmYAJQY4JX5c7UaNpIhly97BQwXRlIlLSWvm5W
+ 8Jo+fzrx
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/MDescriptorProper
+ ties.class
+SHA-384-Digest: sEsYAMMGzjLN6zXq3OQ05iijW/KJapZMDbMgg3ON075qA6W+xD96jSJ+
+ Z2klaGox
+
+Name: com/silabs/ss/platform/internal/api/descriptor/core/type/NullType.
+ class
+SHA-384-Digest: 4aB1S1NW1TCCIrwqy//LT+5mp2I6or9CdWBPVFtdOaYg9fGQqtWaMfaW
+ 1mm4Cqyx
+
+Name: com/silabs/ss/platform/internal/descriptor/core/registry/RegistryP
+ referenceUtils.class
+SHA-384-Digest: nECdbokIxC8A7oOvu+LZFEsFGBxJM/9DW6SOTBqhuntG4zgbXFj+a07H
+ ghi8X1Fi
+
+Name: com/silabs/ss/platform/api/descriptor/core/BaseDescriptorImpl$1.cl
+ ass
+SHA-384-Digest: DCXubYgNHbJS6chcSRteWf7C4U8vzxNKZgjomfKrS45OS990wM2M+3iu
+ KwQgirE/
+
+Name: com/silabs/ss/platform/internal/descriptor/core/compatibility/Comp
+ atibilityQueryState.class
+SHA-384-Digest: Z2mFt7QLkmYaivFeGCDJ+QCaG9+MWKYC+cpl3q1CbVoEt6DuAmL4QrbH
+ naetfiXj
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/IWriteab
+ lePropertyAccess.class
+SHA-384-Digest: b6dGb7uS0SvMNxbkjJp6DlMkG6VWStIcWaXWyGvQKSOM/0zTJR9u1kim
+ Y7StIOYt
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/RegistryProper
+ ties$ID.class
+SHA-384-Digest: QdTfeaF/qwQdWNw4a2vfmT+v+BVbzP3xSjIdeLgJUua8uQBMt4DHl7y8
+ fUDfrW/x
+
+Name: com/silabs/ss/platform/api/descriptor/core/IDescribable.class
+SHA-384-Digest: yZpsOZdFhKT+TFsafkKruMl0jWWR8z0wkNSA51bxUPhYb2hxcJMbtvO/
+ w+8qdiKC
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/StudioModelPackag
+ e.class
+SHA-384-Digest: 77BEDjxtb9mM+eneIdD4xf9mWtNFjBL8gvb/sGeXVp4J5YHzIvUEdKZW
+ O+fp8kgc
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/EcoreEMapWit
+ hNotifyAndEquals.class
+SHA-384-Digest: 4t3xznu/doHwazOjJHpZtd/uYyxcmDYYX97AZt+NNZI8Xlmjex0XHhpf
+ g3xZ6ptR
+
+Name: com/silabs/ss/platform/api/descriptor/core/IWriteableDescribable.c
+ lass
+SHA-384-Digest: mcwi95/ZQVi9/IDeBLUpKr2lnz4PdcTxb6RW06kmdEjcPiP00Hvwq0J6
+ pqfHHpmc
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/RegistryUtils$
+ SynchronizedRunJob.class
+SHA-384-Digest: dcfOhqynQhCAciitNUUNAiyInaBjmzKs2fKd44ji3e09pERr8tsurWNf
+ fOg7VkT9
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/StringToStri
+ ngMapImpl.class
+SHA-384-Digest: 3NUmwlhBQ/eVLhz28ndAzzNBeS2sP3Tnhq9j8kW7fxbCpbpNXFBtT/h1
+ oeD3zOUC
+
+Name: com/silabs/ss/platform/api/descriptor/core/compatibility/ICompatib
+ ilityExpression.class
+SHA-384-Digest: xZSXEW1pJhbxGkLBLn1EVxl1vOS4Ob4PAQy0OtB2Oe7yRdwPzw2oEvzT
+ jHCzyKbX
+
+Name: com/silabs/ss/platform/internal/descriptor/core/registry/plugins/R
+ egistryEcoreListenerPlugin$RegistryMDescriptorEventConverter.class
+SHA-384-Digest: C45/A9yrYaSappbFWsWWXKaGyH50aNF5pukJhl60v0ekB6B5PK3lrkls
+ 2F9vDg0W
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/IListType.class
+SHA-384-Digest: DUW68B6luu9QwQj2jlO2UrHG/jU7zDE7tmPUsIfle58FUq96CCFD3cqd
+ FSyEaren
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/MDescriptors
+ Impl.class
+SHA-384-Digest: 8GXDvrbIptWMnNpbTwC7qq0SulausNSuZBVcZRLUJtgIG18Za+CeStyv
+ WHecBt8F
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/ManagerUtils$Re
+ turnState.class
+SHA-384-Digest: wCHsA9VrMJimOCd9SJtudqg//jBnKoEZ0CqviS2OlBicJU87lCVIVLHw
+ 6wn5lUzx
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/IPropert
+ yAccessListener.class
+SHA-384-Digest: XwWiHRK9p/JdyMFq/5Et6yobBFCfacUtMR1ZrF81yNwGBDTnymotrVFR
+ P6ZqCYyE
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/SingletonAccess
+ or.class
+SHA-384-Digest: FPQg+Z4sdAo1+NbJWP2GpIO2W1gBnIlkvtHelJH/9ya8W5Tw+fa6GYK8
+ AxdWlhPZ
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/IEntityManager.
+ class
+SHA-384-Digest: PMYNauAxCGr7QpZmgDg9BTCdGx0BQlHR7rDVR/V0FuuRVyveoONKjXlq
+ QOC2Y2JB
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/IExtensionBack
+ edRegistryConfig.class
+SHA-384-Digest: 2wuNwvm4uGv60R5k09DBJ81/jaD4lKMAXA1NtwjDhBV2Bw9NKfeo6KW4
+ vinBoJGB
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/Types.class
+SHA-384-Digest: cZ6mdYtHvbhbu338Q7YL3wMTLzoqXwYtpHhNNiKTQ/xcLZgvuP+mKPsS
+ 1LHYmRuh
+
+Name: schema/hardwareProvider.exsd
+SHA-384-Digest: zJ2rn8jkEBSPFbPgcolkmlioKoRYqjVNJdUXEtRd3PamYSnmlJ3PJJPJ
+ 3xGYlR8G
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/BaseManagerList
+ ener.class
+SHA-384-Digest: pc34wrF5Fb46s7iKVCOIxpSGSJfZyUpVK6uGADPu3DRwEJ7HxTzIhuDG
+ +oZv7Xhe
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/MDescriptorI
+ mpl.class
+SHA-384-Digest: oRncFKTi8NzN7VvsUxzlN6AKWpMYqpykSz2R8bGJPqgWSqSui44SGRZA
+ 3zEuWgDF
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/ManagerEvent$Ma
+ nagerEventType.class
+SHA-384-Digest: cCr6X+SMFMNxEBokIz5iAUrISxYNVVQAL9NNMxMPaoo/GvjMOgl5l/k7
+ 4vubv61u
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/MBuiltin.class
+SHA-384-Digest: L/5fD3U1RBqmlGrlBsNyXN/UBCWwCOWgkNqUxI0qdljQ1DNx8QYzXtbd
+ rGzdZ7NH
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/IRegistryListe
+ ner.class
+SHA-384-Digest: DTxw8M/WhOy4ExTS5LaxnYHGXN9aO4IniTqSz+WksvIg7EnEcNS8VeWa
+ tQMSBiKF
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/RegistryConfig
+ Factory.class
+SHA-384-Digest: 0hC756XyNykIEJjaY6JY/v1vpjAvEH6dlpolbzH5gBisPveCk5Bt86Hf
+ vaGEi9xY
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/StudioModelP
+ ackageImpl.class
+SHA-384-Digest: kSqvIC8kG1yDp9mq7Dc+YMINqmgzIcW9INUq3VvjUC8zlYXmOH4SJEVv
+ PyC4iuS3
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/IType.class
+SHA-384-Digest: j/84FxbezTzFtNr7cCIxYX9g1hB7gw6h87Y16GpY6+CMwnXlk+JRDUl5
+ 00xSlUIV
+
+Name: com/silabs/ss/platform/internal/descriptor/core/toolsinfoservice/T
+ oolsInfoServiceImpl$1.class
+SHA-384-Digest: lbRuqxvWqsTsziNBnxYtXG48sw81fdxyBt2txFsjRxDlZSOlK1Xm67jQ
+ wRY6v79x
+
+Name: com/silabs/ss/platform/api/descriptor/core/IInstallableEntity.clas
+ s
+SHA-384-Digest: pMV7f1hw7B6AXQkXLsGlDEUIAsRFHWIk9zqOdZUhUg/ldKrXLi0surCG
+ KaB6vspT
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/IPropert
+ yAccessListener$ValueChangedEvent.class
+SHA-384-Digest: ufOWO0yLNwS/XovK1GKXA5WSEchLeDfPox1I0v1VKbBvNvptLRHBACpI
+ aSB28Bhc
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/RegistryConfig
+ Factory$BaseRegistryConfig.class
+SHA-384-Digest: FpuEqCh55uzJZkl8JmyV8mDnVVfjSSOu1YthpiWKNV/nglPtHuTECiRJ
+ bnItXFpm
+
+Name: com/silabs/ss/platform/internal/descriptor/core/compatibility/Comp
+ atibilityExpression$TerminalCompatibilityRule.class
+SHA-384-Digest: sYWQo8YU1JWJsynLOkumBy49uBp6fgI3chjN5HYcDuuwXzhyepKccAv2
+ x6B5YbuS
+
+Name: com/silabs/ss/platform/internal/descriptor/core/hardware/HardwareE
+ ntity.class
+SHA-384-Digest: 7hd7xbCkm684/EAxK7YuZgMiWDa9rtTthx3vzM5XE2cyHxV1D8YZGttN
+ WGdDUsTw
+
+Name: com/silabs/ss/platform/api/descriptor/core/toolsinfoservice/IToolI
+ nfoResolver.class
+SHA-384-Digest: XpWW4Oi6uN4FC8DdNwsje5NNpeJ/OBalenY4vbx6OeJzNAsnWDQlRHoL
+ y0K4bZuI
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/plugins/IRegis
+ tryPlugin.class
+SHA-384-Digest: jt8Hd8gbaGPoIVtonG8sxhRx2R+F/OssVIAZuqYPbwJc+rkYS9AAXToh
+ DBHxySV3
+
+Name: com/silabs/ss/platform/internal/descriptor/core/compatibility/Comp
+ atibilityExpression.class
+SHA-384-Digest: EiGa6ewpfFoQpFmmctIVfYf89hGZnlc/hQ87x/3t50oE0Gu9YdghrW1Y
+ YS1xSooR
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/Property
+ $SingletonHolder.class
+SHA-384-Digest: EYeLVLv9cNy4gwXsow8FeyCVPlB7j7Ih+HcOLNcVfwbdmzaLmrzc972a
+ l7Wb4ZeE
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/ManagerConfigFa
+ ctory.class
+SHA-384-Digest: t53xjludu7c1fYvcmNU+jjZMn72JJQuUruEqxq/qSpGjnAtVMbYoJ5Ht
+ ZZ8f/uMc
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/MProperty.class
+SHA-384-Digest: lkmC6UJifIKyYVmo6YxBPjTAcbwDH/oAKfaVKSviybiR0S22+7gwdDLl
+ W1pdfVh0
+
+Name: com/silabs/ss/platform/internal/api/descriptor/core/type/BaseType.
+ class
+SHA-384-Digest: KvS/MzgAXQdeczZtxYcNy3dUgVvDgGBgIs8gxNCC5Zcl8JHuCd/zXrv/
+ uoAbuqxv
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/converter/Internal
+ JSON.class
+SHA-384-Digest: kIZLtOZ9/NWq0S5XK9p9M6E8d3Nhz/pAgX0lVCQHCF4ByIUPDFKUYKpJ
+ bwN7HraN
+
+Name: com/silabs/ss/platform/api/descriptor/core/BaseDescribable.class
+SHA-384-Digest: ZzREKtYtjNZ8Zh+DcRZHwubzgGk4Fcykql0iTbQ80lr5X4TLCLHDMt0a
+ ogganOZQ
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/IVersionedManag
+ er.class
+SHA-384-Digest: RYRyjFs3PvZNfULBnYS3tyBJKP3tpKQF+QBnHsYkedCbXNhNU+AW83Cw
+ +gsJ8Saj
+
+Name: com/silabs/ss/platform/internal/descriptor/core/property/PropertyR
+ egistry$PropertyConverterInfo.class
+SHA-384-Digest: BSF3V7h0+I5xku/lLtzaHy0j8AdaMDzYWTpik3pOEm2ZyJJdSzBpeNJ3
+ 7kMQ/w/U
+
+Name: com/silabs/ss/platform/internal/descriptor/core/toolsinfoservice/T
+ oolsInfoServiceImpl.class
+SHA-384-Digest: x7whoK9mKHPJVlgHN8KPaPnnigvfkU/pkOBhwPJ69PYKxU2YnZZz2DGP
+ gCWV3eM7
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/Types$SingletonHol
+ der.class
+SHA-384-Digest: HAQnuMuMJf5DgxIK17QaeHDOU6e/6QzB3/oGjRA10UQ2TQeDzfrFeu8j
+ h9dM3JwH
+
+Name: com/silabs/ss/platform/internal/descriptor/core/registry/plugins/R
+ egistryCachePlugin.class
+SHA-384-Digest: zXievR19eWYCVvdAbyX6sWrX/JDTqiFBEAUjz97mEvoh9GqZMewwWJ2z
+ 12dPQc2q
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/BaseProp
+ erty.class
+SHA-384-Digest: OxL5Jf1N4cfDGunOttTFCEAYucVh+Fcr7oYded1F7CpUXuk/e1MLQVgH
+ fYOjiYQo
+
+Name: com/silabs/ss/platform/api/descriptor/core/IWriteableDescriptor.cl
+ ass
+SHA-384-Digest: FYAoYwBjFYvYrYUZPqnDfmlwxPexRK9g9ekhp9Wz14h1DB/202byF/vm
+ OlSGMAKh
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/CoreProperties
+ .class
+SHA-384-Digest: pfRsKBevk3m8AxewB+hafdI1OFaFJ3jiXWbBTo93ResD4eGnTG+NKboa
+ Tq1CVQ3g
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/TypeConversionUtil
+ s.class
+SHA-384-Digest: HrgYtwJCz/LZb7FrLIb/47yc5QICMEFv3CSry+pgiFfQ3Z1R8Oniwe6y
+ /R6+s7N8
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/plugins/Regist
+ ryDependencyProvider.class
+SHA-384-Digest: 8BV5bolsGrHZq3cznUMA61aUcY5F3yj8SwhxSZT8MPrrHG4ApMbcZXyM
+ tgNOJ7re
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/BaseManager$Eco
+ reRegistryNotifier.class
+SHA-384-Digest: /W+or5lHjv9jVVANFqY8pVCXDqcOTXtaGDp5OZ2goo4X/fvZVi1p+eCx
+ azjGxYeU
+
+Name: com/silabs/ss/platform/internal/descriptor/core/type/converter/URI
+ Converter.class
+SHA-384-Digest: FOz6HQAMLhdqNec7LQzWvrc7BrWNE7wjsTXkNi0fbUnz+V6CoXaVMej+
+ +WAd59Cy
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/CoreHardwarePr
+ operties.class
+SHA-384-Digest: 2u5RDOknO7YZ2XkaVx2I7gBybaZD+SDrxJ1LwNdXgydxfh0uOQMSdnlR
+ lkkjM3JO
+
+Name: com/silabs/ss/platform/internal/descriptor/core/registry/plugins/R
+ egistryTransientDescriptorPlugin.class
+SHA-384-Digest: byuPZ/8E6tG9QZ/FIn/VF/AnnpQVzz5YFjN7jZseLQqMXKImCN0ySYLp
+ ydiUaR7F
+
+Name: com/silabs/ss/platform/internal/descriptor/core/compatibility/Comp
+ atibilityExpression$RegexRule.class
+SHA-384-Digest: DjPOiw2Zo8WtBMmw7S2MWKjZq75ssg/8X7XG/ahDwO80fmcUzujYfVPh
+ NZsBSYJg
+
+Name: com/silabs/ss/platform/api/descriptor/core/compatibility/IDescript
+ orCompatibilityAdapter.class
+SHA-384-Digest: GO3aKGl0DLqWLbpZNt1uTZza1TNOmWzb5tkAv8r5jRwyNt7MJBBdBjMU
+ yRiOQvVx
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/util/StudioModelX
+ MLHandler.class
+SHA-384-Digest: sIvNttJkswFUoK5A6BOtHsNbgXcAzP0gUts/IrrEdU9VKtq5Wu7N+o0k
+ uTgokIzQ
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/CoreTypes.class
+SHA-384-Digest: +u88Kva+BeEWD9o7Y7xNpKvmeYoz2NyDu4ZROlJ124dF9eBC1HMu5S+l
+ PKfivOVH
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/ManagerConfigFa
+ ctory$BaseDatabaseBackedManagerConfig.class
+SHA-384-Digest: U5MkSdM3ifgCHNhfk8i2bhlThLc+9I/BwmajSYlW2uu6EuN3RkkodKNU
+ snJSIIX1
+
+Name: com/silabs/ss/platform/internal/api/descriptor/core/type/TypeRegis
+ try$TypeConverterInfo.class
+SHA-384-Digest: 2BoX2ZYm+XwumsrrUuGijFHx/pG76pJat6gYnRGLF7zrfuc7mLDoWsqR
+ bFUSh7iP
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/MElementType.clas
+ s
+SHA-384-Digest: d/s6/0GdeIS1hRe/TISPtYD3j3qMSCYHQn3bSQc9U3RkUWsewYMR/PuL
+ VQe0G1jl
+
+Name: com/silabs/ss/platform/api/descriptor/core/hardware/HwCompatUtils.
+ class
+SHA-384-Digest: QqIxDq4KJOScD29A/8G+8On+YcWWyC/ubf+uECdAbYNV16JPy6JuvOCN
+ 198vvg7a
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/ManagerConfigFa
+ ctory$BaseExtensionBackedManagerConfig.class
+SHA-384-Digest: +XgU04w0mF67NrCVnEcR00/vsY4n+AWo68WZrbpQMY2EB9xIGKavzSE+
+ fsl+lS6m
+
+Name: com/silabs/ss/platform/api/descriptor/core/trust/DescriptorTrustPr
+ operties$ID.class
+SHA-384-Digest: bN9uj1B/kZR23EFVbeWssKMMhubgcZaAGm1mY0VnBnSL2Ewgg4OEl02C
+ 4MaqMTAM
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/RegistryUtils.
+ class
+SHA-384-Digest: OAhbMTvQvx+Jzv01FWLKtvfTpgqH4SOiE9PlEGKq6P2wOkaeqVE1+4Be
+ fpU0zA6c
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/IManager.class
+SHA-384-Digest: UuQiQ4jVDcvCrwjh2LPM2byR8U6YKdyX2UqxbxlwDDOmLbIqRGAKM8hq
+ QvLjLWEA
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/IExtensionBack
+ edRegistry.class
+SHA-384-Digest: pqvQexBZwntB5jkUz+uM0kRI7oexJ5raX4cgY8Bcs/b7bykYOSdn2uX9
+ K5QizMpS
+
+Name: schema/toolInfoResolver.exsd
+SHA-384-Digest: CI3l17R4TYvN8smb+YsnBCBGEARiTmu3A7gebgkSqTXKXJ6erdZi27xU
+ dK3zzMhM
+
+Name: com/silabs/ss/platform/api/descriptor/core/toolsinfoservice/ToolIn
+ foRequest.class
+SHA-384-Digest: Kvm9krF6ZOPwuSnJjd0LryD/w2APhaHFZar/84mTNfwDM3WnkOpACUlS
+ UBX/3bV8
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/ManagerConfigFa
+ ctory$BaseManagerConfig.class
+SHA-384-Digest: dAqnkajFNhrfwvY5nVMu7aUm9sOj+scyBnviXvxw5bTH8LUulJTXbOPI
+ kBLhsqng
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/TypeReference.clas
+ s
+SHA-384-Digest: Po+3xQh10EuUqpCjYi3G7MdXZWf25mI8R+gkiz1w3VkMvCnNtEmMXs5B
+ V+RE+xCl
+
+Name: com/silabs/ss/platform/internal/descriptor/core/compatibility/Comp
+ atibilityExpression$AllRule.class
+SHA-384-Digest: Sin9AmB3u/sVkE0KW3jjif24ce772LE09NpSsVYPUvOCK5z9G7GMjl6S
+ Xb77pqzs
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/converter/Internal
+ JSON$Binary.class
+SHA-384-Digest: 5xNxAYQne/ZrcZqBWVZVvrvA2vWrhTp/wXroZIhdtnLLqrtPHzREwb+u
+ nk4GSMaR
+
+Name: com/silabs/ss/platform/api/descriptor/core/toolsinfoservice/ITools
+ InfoService.class
+SHA-384-Digest: 6tIK99drtwUdsHOBsWIGJrg3R5R68luxdgekiupJbjoZragFW7gLPpSC
+ rMyrzGAt
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/IPropert
+ y.class
+SHA-384-Digest: 3NPfYsFxkhSI+9EML7Ms7iYWPDfYq9lH50FDPuJHDkUFzvZFbiWH1t0V
+ DzcJNluu
+
+Name: com/silabs/ss/platform/api/descriptor/core/BaseDescriptorEntity.cl
+ ass
+SHA-384-Digest: fE9ffHF1W3Ka1CUIy9MRFqRpgonh1TtMIKIq64p6GVKfpURB/5cIJ7og
+ ZPuSI+Nb
+
+Name: com/silabs/ss/platform/internal/descriptor/core/type/converter/Ver
+ sionPropertyConverter.class
+SHA-384-Digest: Rw3eQYYel+W5kppNoktoP2RGmIMgNkXGSuO25T2ivZoHEED66jAtaD7X
+ qPccOR/R
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/RegistryDescri
+ ptorUtils.class
+SHA-384-Digest: CWaJzNOFG839k19FvaQLk/yeb0+tBTChHZf4HhM19oaSCeiFxaSe6lQw
+ +4JFFJgq
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/CoreTypes$ID.class
+SHA-384-Digest: Tzrv8D5yS/SaweXqIVYiv1nowLk/0Hr22O5+mmQsu/v7EKMKjgyeeO2D
+ oqTKrhMB
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/plugins/IRegis
+ tryPluginProvider.class
+SHA-384-Digest: FSwu3U0BSWehhfO7iNMxUvGaTB2E1MXiypey1FPca7yYhpQIkW8JB2Js
+ uDWYOQAJ
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/IDescriptorMana
+ gerConfig.class
+SHA-384-Digest: cKRD0QQbQikk92NabPaoMyDh9KQblkmPjf9qrTR8P3y3KI7AGpH6zNRt
+ Yw6011UQ
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/BaseProp
+ ertyAccess.class
+SHA-384-Digest: VdkROXMvwoT3CwRfQlLlFhNGvV61WBTC569iBcrKsRPQVFILnUI+qwS8
+ cFb1i63T
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/MPropertyGro
+ upImpl.class
+SHA-384-Digest: Bx2P+VDLt2mEwHup5X0PqSedDsKtsA10LgsMNfOmmJmTQE+Bp9Yp+tWy
+ vTJW5RDd
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/IStudioPropert
+ ies.class
+SHA-384-Digest: L1rAdtaR4UYJI5KspAibylZfPLVPq/w7czn+yCE6oT45h3+6tQBozg00
+ I/VuuHCL
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/StudioModelPackag
+ e$Literals.class
+SHA-384-Digest: jZfzgW7rdDatRaowCeE9509dqzSO6WLS28C2iRZo8TKT5GvhgNjENZ1j
+ KfYLdXI1
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/MDescriptorP
+ ropertiesImpl.class
+SHA-384-Digest: GVAFox0YqRyNYbErzvIp6qxsjoQKZtea2n6JeZmaOjSLiUCGyAkka72C
+ IJkwg2Ki
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/plugins/Regist
+ ryCacheProvider$CacheValidator.class
+SHA-384-Digest: 7Ae/Qv/nsEmrZR6jDK72heBrr/GNxsvIZlgqKIb1VPhj3nQuT5t6l+jW
+ tzyAijgJ
+
+Name: com/silabs/ss/platform/api/descriptor/core/toolsinfoservice/BaseTo
+ olInfoResolver.class
+SHA-384-Digest: 9jvZ4VBydU4Xn7ZsC3ogYpwfHCZ8i+agEz944P+j1LDhxkkl3yaG5N7W
+ qIfZKE2E
+
+Name: com/silabs/ss/platform/api/descriptor/core/compatibility/ICompatib
+ ilityQuery.class
+SHA-384-Digest: ahcYOu/Gy38wog7PO6AexGhNbSxqyD7HbdkylcYvQ2Q9YuQ9ZZIxM9hU
+ 0jEAKF50
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/MElementType
+ Impl.class
+SHA-384-Digest: ZXxAifaNscChSPn6HMN1u8Viad4vrw7yhCd1CMGg9Ygn8K37ozg5D84k
+ bbg8vG6n
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/MDescribable.clas
+ s
+SHA-384-Digest: jmaHTcIhuVhtzlS0VQHeWRNyBJH2KY6T3Hnd+FC0eoklUSMx4pKFISx2
+ +BGqCdgU
+
+Name: com/silabs/ss/platform/internal/descriptor/core/trust/DefaultDescr
+ iptorTrustHandler.class
+SHA-384-Digest: +ArURI9NaVEaldeXlOho9f3B5dEvwWdFvy4ItkV3stTIxGCwLdhgyxD8
+ npK3XiFW
+
+Name: com/silabs/ss/platform/api/descriptor/core/BaseExtensionDescribabl
+ e.class
+SHA-384-Digest: adMPI0zC7ptZEkMJuqaFs8dDCAaT93qdo/c5MLnS74k3MquyLvq+Z+Rl
+ QR1Ictpb
+
+Name: com/silabs/ss/platform/api/descriptor/core/BaseDescriptor$1.class
+SHA-384-Digest: UUhoce+ZXVyBhe23y0chI2EZfXUD9uv4MPzPbkvri3qtxrubksDobCNw
+ ilDcpgEP
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/DescriptorProp
+ ertyMapper.class
+SHA-384-Digest: efoz/HnbSK06EV97JSAzm3Os7EUAmHV392NwrrJvB5pQZt5mu1cj3+tr
+ B59ZfErZ
+
+Name: com/silabs/ss/platform/api/descriptor/core/IDescriptor.class
+SHA-384-Digest: e6j02YRncu9CgltiFBi750LNw+HGV3/hzkYuwFwMCsEV69S+/P+77bJa
+ LClmCQAm
+
+Name: com/silabs/ss/platform/api/descriptor/core/utils/EmfXmlFileEncrypt
+ Decrypt.class
+SHA-384-Digest: oUyRW6GYxVNIXq17i8Gu08tCzUD/hLN3lPrQlSBnxbfAMd0NtbQ9X5qY
+ DhhX4Rib
+
+Name: com/silabs/ss/platform/internal/descriptor/core/hardware/HardwareE
+ ntity$1.class
+SHA-384-Digest: XvcjMx+IcixJ3qrOO0ZXYlKDwFPL5SqS05A/OzoO8v0b0jbPOx9UOvLJ
+ EkO0giwM
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/IPropert
+ yAccess.class
+SHA-384-Digest: s6jIueBDVRBvh6eQDGG1XqM4OpspJJCXAn63wKKxLDhXm3U7i40/Kt8p
+ 5Vb2eyql
+
+Name: com/silabs/ss/platform/internal/descriptor/core/registry/RegistryP
+ luginAccessUtils.class
+SHA-384-Digest: TMOJgBqPvw4lvy5TLOFDrFg6SWSxA5q7bg/IvhK5B52j+cmi+0z+GzWG
+ +ka+jUa2
+
+Name: com/silabs/ss/platform/api/descriptor/core/hardware/HardwareContex
+ tBuilder.class
+SHA-384-Digest: psGa+YWwjCGXW8fKiPo/0Cuuqbajf5HsWDXTSVLC6wFZkFRGrpDrq72V
+ BRwCGSrM
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/IPropert
+ yConverter.class
+SHA-384-Digest: U/Uat+3RYeKFxFiIl62GDgTy+dlCqqItKrUGYkUr2m8vQ+XeHC5DedST
+ lXRbKF7u
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/ManagerEvent.cl
+ ass
+SHA-384-Digest: Ou//pg7RXoIxPhcNr3PVf9X7jJfVHLmHrb3q0xyBUp+xlt/RqdmbJAgz
+ q14SvkAM
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/BaseMapEntityPr
+ ovider.class
+SHA-384-Digest: x6PL78RmDQUs0QD/efM2qWlwoDCe9hTu946unrno8UyApqa4WgKsl8SX
+ YYUnllz5
+
+Name: com/silabs/ss/platform/internal/descriptor/core/compatibility/Comp
+ atibilityExpression$Action.class
+SHA-384-Digest: tCB0c1LVhGVxb909Bcociup/Cfj0O70G1RD7GVTkyxjZVXGwkD8x2rda
+ nXNv6OQo
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/MListType.class
+SHA-384-Digest: vKY8ld4QaEUy52OnKO0qphL8bE1l4Ym4NVFevvYn/Ea9yQOG73ReXGWH
+ kFw9t/gq
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/BaseRegistry.c
+ lass
+SHA-384-Digest: Ci7fU7c6r8DSkPzumY/9xDPyjmpp4GIQGp0P9TaNo1IBttwuxQ1c2OL2
+ pUk2pxKc
+
+Name: com/silabs/ss/platform/api/descriptor/core/IWriteableVersionedDesc
+ riptor.class
+SHA-384-Digest: fw/O9cTCSQ9dGiyoOan3SWZGnlPXOiMyj3Oi/9Nx67s02Aa22OhIu3J5
+ b+q4Qr2r
+
+Name: com/silabs/ss/platform/api/descriptor/core/IDescribableListener$Wh
+ at.class
+SHA-384-Digest: 04XuRPwvvdLs23E+QjU2Mbgk94JGFUyOICWDDFpWafq3hgWr8NgKP3BQ
+ KjPJFNrx
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/MVersionable
+ Impl.class
+SHA-384-Digest: L8ElRkW8nfq32ZU0Ou89qOHdiE+pAvL9T26SLoL/tOL3PFX8cUcv62+N
+ Rfu979gk
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/PropertyProper
+ ties.class
+SHA-384-Digest: aGvAUIDHG4j7HDsylNkTdgS6ixgl6FTrgMyUBUG1L+8WrXT3qT3TtBf4
+ iQuyBiwO
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/BaseDescriptorM
+ anager.class
+SHA-384-Digest: hTKdJvrm5VX2kv0J27pi+QaNfdeYkE8hJbCtSKLVC+huaDQPmLd2ccuH
+ CxhREB0q
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/EcoreEMapWit
+ hNotifyAndEquals$MyDelegateEObjectContainmentEList.class
+SHA-384-Digest: 8alYtgW6Ob3UAZTNBNUbUjGEhXz9fsSYijtdcS430tTJUgXwIYtyz9Z8
+ ThDEa4GL
+
+Name: com/silabs/ss/platform/internal/descriptor/core/property/Descripto
+ rPropertyLookup.class
+SHA-384-Digest: hFtQmjXO8o7SEBMWEOMs2lS314a8oxfpRCeIj8DjQOIHWz33+YkzEt69
+ HXJ/J6DN
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/BaseManager$Ign
+ oreNullConcurrentHashMap.class
+SHA-384-Digest: JNAXXlbciZbr5cT7dJsmZbmT3Sbc+qWO2e71KckLRxDe3cyA1yd3E/L1
+ fM0XBvS5
+
+Name: com/silabs/ss/platform/internal/descriptor/core/toolsinfoservice/T
+ oolsStockVariableProvider.class
+SHA-384-Digest: aipluUM2yQqgnEIvuPERT18H9gMvqfz2H6gTqbyw335JMSL5atWX8Y0l
+ 3XczjTZC
+
+Name: com/silabs/ss/platform/api/descriptor/core/toolsinfoservice/model/
+ ToolInfo.class
+SHA-384-Digest: aIHDE9s2zFgwyDszJcMuSi/IJw7fVOYFqAx/bpPQT+O6CenlnU8XOF+z
+ 2G3xAcrs
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/util/StudioModelR
+ esourceImpl.class
+SHA-384-Digest: pRn/bvCtIQ5qbmzS9paJgNQTNXDY17r0Q8khWQ/dJL5uSbyrCItPuG5i
+ le4alkON
+
+Name: com/silabs/ss/platform/api/descriptor/core/IDeviceFilterNotifier.c
+ lass
+SHA-384-Digest: gI3JUUCNgIVYycaHhKGA/NeH5iLR4Q6Mgh3x+hCpOrHsWQkMmWHnmbDQ
+ gLqEQbtR
+
+Name: com/silabs/ss/platform/api/descriptor/core/IModelDescriptorInterna
+ l.class
+SHA-384-Digest: S5o8L2w030v02YbflxrqYNop5JL0PrPd8L/XFEhiRu+X8a+OelnX//Z9
+ H7t7KXsr
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/ExternalDescri
+ ptorPropertyAccess.class
+SHA-384-Digest: Gxg88Kgh5xfOkOEU9Y69pMWfQ/lTQGaZAOU37igrA0+qZv9Z9M+TWNzX
+ GZ+BIAKy
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/util/StudioModelR
+ esourceFactoryImpl.class
+SHA-384-Digest: vkC4h2kQglUTDiakX+6JAUKVyio6SXIm7Oi9t4kfOQtGzR6eUVXgCXFp
+ Em+XPMXA
+
+Name: com/silabs/ss/platform/internal/descriptor/core/type/converter/Uin
+ tTypeConverter.class
+SHA-384-Digest: zsl1lHWiUXt6u0mQlVTJ7uUELNnRMuKRvpjWZ7XVweKjL0Vsy/iOoMNK
+ ZkbdBqrl
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/IRegistryConfi
+ g.class
+SHA-384-Digest: b5+M6Vq4030xgrVERES7gE4HdKqiDix5Anr4eo8d7ZSDrlvZXZUS1R9M
+ I2ER05zH
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/BaseStri
+ ngStoredPropertyAccess.class
+SHA-384-Digest: tudjZWZA1qtp7hgXjDqYKtjl8BWLaEqR9vUVsm8AsUG1wU4p+LmdClrs
+ gBJeFvyB
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/MTypeImpl.cl
+ ass
+SHA-384-Digest: BQAEjl/61owd706K/yNPmF5V3sjoc4/ryo54fWr6tHbiMBfG6wlOrPF6
+ XITgXD/w
+
+Name: schema/registrySupport.exsd
+SHA-384-Digest: VJAj0IVGnsERHL4ehxV5yJmZV1ZDDzMb8tOwmzGsbOHeonBf+VJGwWhW
+ Kyld8xGJ
+
+Name: com/silabs/ss/platform/internal/descriptor/core/compatibility/Comp
+ atibilityExpression$FailRule.class
+SHA-384-Digest: uJXb9MVd7vHU4j00dyYXdEMpumx/dplmzHfdPWdOg+oR3DDKYKWhGCe5
+ 1e7XUDoC
+
+Name: com/silabs/ss/platform/internal/descriptor/core/compatibility/Comp
+ atibilityExpression$CheckPropertyRule.class
+SHA-384-Digest: H62vHVh0tNucyVn6Wtxo5DeRFmSyuaWYiZLEeRjJnHhtbWoXVD1EPGxI
+ FbJwSAaA
+
+Name: schema/registryPlugin.exsd
+SHA-384-Digest: os4YR7e1jJsnEemBkcFbnpI2jtvLepWShY1ln9hv8NyOS4ycM5ZeyMl5
+ Ps4ok2Ad
+
+Name: com/silabs/ss/platform/api/descriptor/core/IWriteableModelDescript
+ or.class
+SHA-384-Digest: Z/gzZtrq3KlEynVY/9nN11VtJR/cXf0gfk3TuMZ18qXhzEikaFjwSr1w
+ 84OF9Sim
+
+Name: com/silabs/ss/platform/internal/descriptor/core/property/Descripto
+ rPropertyAccess.class
+SHA-384-Digest: jpHdHIaTq9eZyCA48bVEXbKE9IEI+j44Q3Amt7BrnWHWA8IzlzBDRQzH
+ N5wVS1UW
+
+Name: com/silabs/ss/platform/api/descriptor/core/utils/EncryptedResource
+ FactoryImpl.class
+SHA-384-Digest: YsiSpzq5BAi2I8UjNlBwp67eJJPk2ZOzTuJQtKJbpU17q74MyyRiczS0
+ ZXsk3Ald
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/plugins/Regist
+ rySecurityTrustProvider.class
+SHA-384-Digest: qL1CTRoOSiHzB3fdHpBGsHOJLJHoF6aNMgiuH5q6zJboirAXzRm+hJGa
+ bh+LICL8
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/converter/JSONObje
+ ctTypeConverter.class
+SHA-384-Digest: 1EUThNFbj5cfE3Fq+RLTgxFs7AKfPJ5So2bODDysaptDB70iij8mqoHd
+ 7YBDABXu
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/util/StudioModelA
+ dapterFactory.class
+SHA-384-Digest: ECRym4fB5vYyUvP7UUwQNICIFAV/YUXnMeI4KH/tYOaKpPDGyLMMcA4r
+ UPxEOkSq
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/ITypeRegistry.clas
+ s
+SHA-384-Digest: oEt5xs6hSefAk+928JnBoNSZ/H0A10Yqqj+/DtZbn30W5/C3A1pWOy09
+ cDt0gbD0
+
+Name: com/silabs/ss/platform/internal/descriptor/core/type/converter/Int
+ TypeConverter.class
+SHA-384-Digest: 2qC2trHnKQUwz9mE0KP2/2nAkp+tvcKEUfAKh6GQCqn4jSUwTLRTCz3r
+ 9cHY6Yrb
+
+Name: schema/typeSupport.exsd
+SHA-384-Digest: IxShciMGsRT7w+WZIKkbGzq/232tXHzD/bPGVJ38ABbv97Tqk85wZpeH
+ tqXBdo9O
+
+Name: com/silabs/ss/platform/api/descriptor/core/DescriptorUtils.class
+SHA-384-Digest: LYG7ekQf8L4g8/fXfXoDL6pMpUe1hISbD7dkssTE1VeNe1dvddKWfah8
+ kiT33uTu
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/BaseVersionedMa
+ nager.class
+SHA-384-Digest: /+A3rbQ6TwGcxKHAduRUq0oJ+vsdVyyul6x6mohfjNv7vMWPJoCZI+Vp
+ pTVt9Yyn
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/MDescriptors.clas
+ s
+SHA-384-Digest: yYkKKbNxh8DMLjqKrPOg+RMjKUAvzsHnFWqavTSIb10FcP1GSttJXqEx
+ P1YNKU33
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/MPropertyImp
+ l.class
+SHA-384-Digest: VUxWowlE9F/IxCiGE6ScCnc5hG/5JTsmKOdXSm2G7rv8u9EgqrjKkUQD
+ l3I6cvgf
+
+Name: com/silabs/ss/platform/api/descriptor/core/IDescriptorEntity.class
+SHA-384-Digest: rE8PqC2XIDnphMzznq9Rk/3JP1gjBuBegnixHRmpAXlJ7Kdck4DUY3vG
+ Zvkrq70M
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/EcoreTypeUtils.cla
+ ss
+SHA-384-Digest: mPx+dXE280lZgE2hlpDc0v8EFhBZuCMTPPjTAO3YvW+tuJPDz09V7HW5
+ uYscesDW
+
+Name: com/silabs/ss/platform/internal/descriptor/core/type/converter/Pat
+ hConverter.class
+SHA-384-Digest: iw/Lgw9kamDJJV+oiQ4jcW9cpnMQGz4ROClMRsSfEQXaZA8xSO97q9Vv
+ TLRP5lEU
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/IInternalRegis
+ try.class
+SHA-384-Digest: D7FpcG79YQBP3eawdU/4ZcvJgI8UNuYecADIOVfGt1eeSwr9EAL/Pe2o
+ T+UijRCQ
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/MDescriptor.class
+SHA-384-Digest: MaUoDcsP5jlFQoFv/5OyOvTzPtcCwb656S7tzaYQBvNQmCR0oXKFXWjv
+ tMJJjNS4
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/MType.class
+SHA-384-Digest: +Y88iDl+ZOWoIsW0urAk1HhcMnnbY5o2KcwMANwvDZ8XOdgtTx1HNBeq
+ 6RZdc6VY
+
+Name: com/silabs/ss/platform/api/descriptor/core/IDescriptorProperties.c
+ lass
+SHA-384-Digest: pHzLpvoTF0VtzZpi8IRL9P2jNRyze9a3Y7E6YhH09M8ttITDfxXpK3x9
+ LV07Qkdz
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/IDescriptorMana
+ ger.class
+SHA-384-Digest: FN0iRzEoX0bg2JvBwqrrDkWzeuTmGB7MOzq5Q4XeEfYYmDiOZpBN4NH2
+ 58kg7H2I
+
+Name: com/silabs/ss/platform/internal/descriptor/core/type/converter/Com
+ patibilityTypeConverter.class
+SHA-384-Digest: gwf97uaKEIQt397Bd5rJV4olaiUeTmOFjCbZVaosKnkSYr5ylEhDV0eE
+ rphUX3vZ
+
+Name: com/silabs/ss/platform/api/descriptor/core/BaseDescriptorImpl.clas
+ s
+SHA-384-Digest: +auScjSt2NMwv5kWlNpFMHGKsezuD+OYJKptg4lLt5XW0Kek5JauUUf8
+ 3cDHUoUs
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/IElementBasedType.
+ class
+SHA-384-Digest: w2JVHlP7pPnT+C34V4OmgaP9tmp57Yi2N0Wcqrj5LPJUol8YYHDv7tmb
+ 0muSqv7h
+
+Name: com/silabs/ss/platform/api/descriptor/core/utils/DescriptorExtensi
+ onUtils.class
+SHA-384-Digest: Jg8dGb4sQqGb2NSy4cnw62fm1010toQhFe69OankMHS2OlAiN/rCuzz9
+ RXF9wAO7
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/util/StudioModelU
+ tils.class
+SHA-384-Digest: S4FQh0BbaLvegP3Bc5QKm2+DLMWvfEmciNT04I2Hz11T/1BbWq5tnzfe
+ 3ar5NaeU
+
+Name: com/silabs/ss/platform/api/descriptor/core/BaseVersionedDescriptor
+ $1.class
+SHA-384-Digest: B3bftmnengwPPTr2+rng9aDqfHeEqu5gKl6IrouS2hUWE7kEyg8/5U5d
+ MLegMrhv
+
+Name: schema/propertySupport.exsd
+SHA-384-Digest: UdsDa1FfTDQqNOozCauoYrCw9LPNt/hDSAzfpxGZXVM1fmZOoDXDoif2
+ E0Z3uTZv
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/plugins/IRegis
+ trySecurityTrustPlugin.class
+SHA-384-Digest: sV6CJ1ABeRBgChgFfn8/bjFp22Ra2KJgIO2C1uGlBksEYfoxsm9a/jDk
+ kb2SByFo
+
+Name: com/silabs/ss/platform/api/descriptor/core/toolsinfoservice/ToolsI
+ nfoService$InstanceHolder.class
+SHA-384-Digest: L57UkxPfBRX4XHsYRTvuLyDwGYhAboPCE0yzmu8RblCx9CN860FL+vYy
+ V4fCGLXP
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/StudioModelF
+ actoryImpl.class
+SHA-384-Digest: QBA6xfAs2omLfNpDTi0zQOVsbMoDOYRmcAzeSb9oMpNJLR8GPZ2vzhhI
+ S3XMv+5Y
+
+Name: com/silabs/ss/platform/internal/descriptor/core/registry/plugins/R
+ egistrySecurityTrustPlugin.class
+SHA-384-Digest: a/b+hZwD6253+AV8Kg0YMQ9SH+A57m6x2Ven0B8Hr1f0lOxtBxtMacBX
+ gkLQJ3n4
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/BaseDatabaseBac
+ kedManager.class
+SHA-384-Digest: xm0VAPEuI/5sppY5D5HbKRjuCPIJR1zVBnaTCx3JUb0o9CIQ7AXpF+8m
+ fWNzQ0PJ
+
+Name: com/silabs/ss/platform/internal/descriptor/core/registry/MDescript
+ orEventConverter.class
+SHA-384-Digest: GT59/cfLwHksj45XNwRxuSj+5Jmq7HFm1u/a2PNUsjFfUbrpdZkHWvrx
+ ccTePoCc
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/util/EcoreIdentit
+ yCopier.class
+SHA-384-Digest: X4Rk4MDU8W+e5Hs9faumPG8NUSDvECzx4Mo1VhkPCywQbJeQNLwlpgdt
+ 7s3c63P1
+
+Name: com/silabs/ss/platform/internal/descriptor/core/compatibility/Comp
+ atibilityExpression$CheckIdAndQualifierRule.class
+SHA-384-Digest: xcPo1DGOPCmthmYvZ47VuXlvNcaHEMv/9Ak2ca4y9PYdaqkKBMDGWm06
+ tTle6te6
+
+Name: com/silabs/ss/platform/internal/descriptor/core/compatibility/Comp
+ atibilityQuery.class
+SHA-384-Digest: mDl4i5C7cNO1ASEFl/UQSerCJqB1Hz8qqbRGrz0hbRGUxgp12Zw39Bxs
+ mSrrPOoE
+
+Name: com/silabs/ss/platform/api/descriptor/core/IVersionedDescriptor.cl
+ ass
+SHA-384-Digest: OAwWAL6B+IwLWcJNGnQF0uCAoGFLEii9tjLj1lkR2Yr4FTFt48Pz/m0B
+ tOQdWSnR
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/util/StudioModelS
+ witch.class
+SHA-384-Digest: Mc63BEcXJu2NgGnGTu1Zt9rvtgcvy4/qZc0YRsDGqeIhXsJSI1zHQL4n
+ D2OD1G5k
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/RegistryProper
+ ties.class
+SHA-384-Digest: FeQ4bcoaxFciYTunlLYTR6IHBmuouYKp+4XJT1KZM8VixuaudsPcvBX9
+ pVOAlwxy
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/IEntityProvider
+ .class
+SHA-384-Digest: U5Y69Osed8nElSBDFROf6c1CYosU8KlIkfB2a4Qoke28OgRmRGlSmlye
+ AayT6DBU
+
+Name: com/silabs/ss/platform/internal/descriptor/core/compatibility/Comp
+ atibilityExpression$IGrammarRule.class
+SHA-384-Digest: uzQSld0z3UdIxxyYZUCw5wRWK45oSfWyqMazENjMrP/gly48DUD46IbB
+ +JqFY0qA
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/BaseDatabaseRe
+ gistry.class
+SHA-384-Digest: x37HA9gUyZc7cvnLSkuycKEvmXoS/Myz9AUO+lN3FLg8En2ngDgMzvjw
+ LmZz1QWr
+
+Name: com/silabs/ss/platform/internal/api/descriptor/core/type/TypeRegis
+ try.class
+SHA-384-Digest: qHRtXHJiUvOnvxUjAlBaVGkszlerphu6tvjgzYmZfXD2ZxLKGtYo9LSx
+ HbaDqvRU
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/IDetector2.cla
+ ss
+SHA-384-Digest: OWNOiu3/XPduSzomlN53qBfxIMMIkoJSnKcf+JXhEhFVlYzL2s6iDaWR
+ 9F8q08xo
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/TypeProperties$ID.
+ class
+SHA-384-Digest: /p3HKIdMHnHVL6O+1xO+rEhLvxQDJitGJbGbeXcccylv5NY02ih5GO6N
+ lPChsZlT
+
+Name: com/silabs/ss/platform/api/descriptor/core/IVersionable.class
+SHA-384-Digest: KlpejdEi0l+iXbUyQ4ttbMIdwX3TgPIr2424f7OGuQbm8xWh3dSVSDOW
+ h5B1LUf4
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/plugins/BaseRe
+ gistryPlugin.class
+SHA-384-Digest: WDKrum5zIQvtpJ6etH5uUxbZpS+U9bPGuhGXiKuJ3tbc92959JRESIdq
+ YDlG8YVz
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/TypeProperties.cla
+ ss
+SHA-384-Digest: WB6RoV6KjY4MGa8nsfkRyfUWj7yCAcpS+Vas2bJ+kBBR6bz0tg6qXUKv
+ s/9FRMRO
+
+Name: com/silabs/ss/platform/api/descriptor/core/IDescribableListener.cl
+ ass
+SHA-384-Digest: Gc+djUndjIpuxGSzFh0FP6Dn2b3Q8qDz8dcZHOibVzeDMFQGYCAecdBI
+ imAeJPcJ
+
+Name: com/silabs/ss/platform/internal/descriptor/core/hardware/HardwareC
+ ontext.class
+SHA-384-Digest: wHwnOhnj9srXaDZjnBrfzXKDzrn7fUjzWuanJ5jxiOI9PhTFuqnHpkT+
+ aeTtywE/
+
+Name: com/silabs/ss/platform/internal/descriptor/core/registry/plugins/R
+ egistryDependencyPlugin.class
+SHA-384-Digest: yMxKOhKz9wIRO8yuyM2s/R+HVcHAyhFChE2SzgN0s4qnfDWDh542NNxR
+ g8SGlC9K
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/ESynchronize
+ dAdapterList.class
+SHA-384-Digest: TVXwEV4MXH87ZdhvGiLrnS5ZVXPmrDpeLJYGfswLdKJPqxwhS96PKoMx
+ Qy14qz2p
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/PropertyProper
+ ties$ID.class
+SHA-384-Digest: 4u6yjIJpclKv8mDc0CkKgkFhpDVz3Amq/A+gdMBJuO4+Zm0LQ3EX5nyc
+ OgvWpwgy
+
+Name: com/silabs/ss/platform/internal/descriptor/core/hardware/HardwareH
+ andlerManager.class
+SHA-384-Digest: e2jcYM8AoPJLsU673Ax8lMtThJSCyNtEmeNjKB1YR7zCMy+WHBQ6UVyj
+ GUCvJy7l
+
+Name: com/silabs/ss/platform/api/descriptor/core/manager/IManagerConfig.
+ class
+SHA-384-Digest: uhJG/ptqQ/PUMA+JWnpIBNXR2Dd8i12uOWADy08XUKOyu92e/1jZScgL
+ 6RxrCcvv
+
+Name: com/silabs/ss/platform/internal/descriptor/core/type/converter/Uin
+ tHexTypeConverter.class
+SHA-384-Digest: XHuZHsUoAtse5j+RRKMLu+N1wUTL9B8evU5ZegUDR9Au+VzkEtlrgKo/
+ Gi+Kmeus
+
+Name: com/silabs/ss/platform/internal/descriptor/core/registry/plugins/R
+ egistryDependencyPlugin$1.class
+SHA-384-Digest: kgSbILVXcR6mOesRB1611K0cQswcY8RI3pPoErpcIPIY2NG+2x+QbekS
+ 7NX+w6wJ
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/BaseExtensionB
+ ackedRegistry.class
+SHA-384-Digest: TVfqKzFU8PjWhIHVnD05JQlXQbrrqJDfB9aVETIjhUS/q1TohRyeEscY
+ u76m/P/7
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/plugins/Regist
+ ryDependencyProvider$DependencyData.class
+SHA-384-Digest: 1mBO3VQsH2h+3wR/05OYWDZ+Htn1t9vEcWr7+04Lng+MLo4p8aj7h6F5
+ zVhUpGwJ
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/impl/MDescribable
+ Impl.class
+SHA-384-Digest: riI0Kdm5qH3AiUlLDCSqZxL9GLQsuup4fIhu/sOwrtQuSXKd1IunudDW
+ pjzexsX6
+
+Name: com/silabs/ss/platform/api/descriptor/core/type/ITypeConverter.cla
+ ss
+SHA-384-Digest: ytHQVyIrhsbB0SKuRE0YuIDYXZwKStOdXmP4UKzBK6mJnOFWx0YJw5Wf
+ yRzuQPU2
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/IRegistry.clas
+ s
+SHA-384-Digest: +NzwRES11F7gJDSVT8CI7lYfD/hKJPZlRpyAiQzf7G45v7Bj4jn7wk+z
+ unNUpO2a
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/Property
+ .class
+SHA-384-Digest: j52mLNjAicdQ40rTh+MerGpmk3bVe9WaBI+ReejoRdC2+qVXBz4wG0sk
+ eBsRWLOo
+
+Name: com/silabs/ss/platform/api/descriptor/core/hardware/IHardwareConte
+ xt.class
+SHA-384-Digest: ZJBkC1Wz3bMcoCL9TISyKVuvpsXUBKykvBeqqvmpb/XzZdez2qEriuoI
+ 78jex+ep
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/BaseExtensionB
+ ackedRegistry$HandlerInfo.class
+SHA-384-Digest: 0gc+cI3dyyBumayXJ/QymR0iSEEArn+0nN3dzJlaHfXJ3I60ZElSW2jE
+ vbuYz2U0
+
+Name: com/silabs/ss/platform/api/descriptor/core/property/model/IPropert
+ yGroup.class
+SHA-384-Digest: 0DC7rcdZqeqTsM3XIywbjEOGoIvBu0cBoOPCtY1WvqDBHkkBnwQlg6RV
+ TRw5YE5y
+
+Name: com/silabs/ss/platform/api/descriptor/core/hardware/IHardwareHandl
+ er.class
+SHA-384-Digest: r1B6l2W3AvzObCoNkFM+AcML4GsAMOp/GRAqY+eBDdY6qQWW9sHUlIko
+ Rx4aE8W4
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/plugins/Regist
+ ryCacheProvider.class
+SHA-384-Digest: YWuJlXKtvKXT16Mg0Of07IpC6hxUDS5DD/t38Wl6YdNv5yzWSPpaT4eR
+ u58vboR9
+
+Name: com/silabs/ss/platform/api/descriptor/core/model/MVersionable.clas
+ s
+SHA-384-Digest: DXmlRI6tueg37qIlxLfER/EtRcSzbkzbGypBeEi+qmA0gzMYDMvZa6gQ
+ NKS8xYEO
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/RegistryEvent.
+ class
+SHA-384-Digest: 7SuN6tbajPRvwQOTsJF9l47aHQBhVitZrZvDy0x4u8uomrZCW82ScoBU
+ fptB3G98
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/RegistryEvent$
+ RegistryEventType.class
+SHA-384-Digest: vA+EcQ3uaA0ajeU+fcMbV7YZXLelZU4ILDqiOWGUy7RDBVAMD0KYRguI
+ 8CD2FgWU
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/plugins/Regist
+ ryTransientDescriptorProvider.class
+SHA-384-Digest: E8gtcdLohbKkL5a+xvJZf7wSmZIK53ltvPE8UAZ0+wg0L98bwd77qzOV
+ aKISb9TO
+
+Name: com/silabs/ss/platform/api/descriptor/core/registry/IRegistryDepen
+ dencyProvider.class
+SHA-384-Digest: omw2M4cdIAewgDAP7iZmM94W1I/9IlY+oMH7SaC8ZgBBhO0D+LTBpqd1
+ uJ1kzkgz
+
+Name: com/silabs/ss/platform/internal/descriptor/core/type/converter/Har
+ dwareContextTypeConverter.class
+SHA-384-Digest: hSjT8ZVIBxnjcVOsTb5vCSChl+MDQR06iNy6x4TRoouycTq/rtGFTWx/
+ OD5BHmwt
+
+Name: com/silabs/ss/platform/internal/descriptor/core/property/BasePrope
+ rtyGroup.class
+SHA-384-Digest: ZrhGGhrJWYVwguuRWSBRO51E5pFBLTEk8Fd9v+5+9YFHMEyxCUVa/Sio
+ LvwpNHlc
+
+Name: com/silabs/ss/platform/internal/descriptor/core/property/Descripto
+ rEntityPropertyAccess.class
+SHA-384-Digest: 5zRRYVFa5Mu6vd/k4ovtmMsdF9ldtS9QSwo29FInojLbwJKjXq5PbN1g
+ BhQPuuXt
+

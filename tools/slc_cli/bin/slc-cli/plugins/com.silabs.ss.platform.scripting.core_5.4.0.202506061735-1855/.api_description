@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component name="com.silabs.ss.platform.scripting.core_5.4.0.202506061735-1855" version="1.2">
+    <plugin id="com.silabs.ss.platform.scripting.core_5.4.0.202506061735-1855"/>
+    <package name="com.silabs.ss.platform.api.scripting.core" visibility="1">
+        <type name="ISLSCoreModule" restrictions="3"/>
+        <type name="ISLSManagerModuleBase" restrictions="1"/>
+        <type name="ISLSRegistryModuleBase" restrictions="1"/>
+        <type name="ISLSScriptAPI" restrictions="3"/>
+        <type name="ISLSUriModule" restrictions="3"/>
+        <type name="IScriptRegistry" restrictions="3"/>
+    </package>
+</component>

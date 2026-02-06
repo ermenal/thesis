@@ -1,0 +1,114 @@
+Signature-Version: 1.0
+Created-By: 21.0.5 (Amazon.com Inc.)
+SHA-384-Digest-Manifest: Y9y0bX+QzopCvi2nWsV3ltzKPqN9oC9k1StV+/IOVysY95h
+ 5jZy7TKjkYSsfearQ
+SHA-384-Digest-Manifest-Main-Attributes: pWhGQ1lNtkn1efm3tRj0zB4dCp0/+B5
+ WYKyXACdDNd/cJxzaOTHuNv9ORPQfkWox
+
+Name: com/silabs/ss/platform/api/installer/base/PackageType.class
+SHA-384-Digest: Ky94fYthwy/xhquf9v7fJKKOPa/JG21qY9rnXu94JuayB4zmuZmbwdvm
+ Nv09Egq6
+
+Name: plugin.xml
+SHA-384-Digest: nqMXXZpFYePFOfcVEPwV/p/QbsNwlnWTr0m0OhdAAWxEsVQAtFjUEuRt
+ cwHX0aVD
+
+Name: com/silabs/ss/platform/api/installer/base/PackageInstallationReque
+ stInfo.class
+SHA-384-Digest: SxSamWl1TizMUYlk53tiH4yKwVFR7bHdilZkicuMPIWifInFmOmX0k5c
+ matQ+/Yo
+
+Name: com/silabs/ss/platform/internal/api/installer/base/LicenseAssetUti
+ ls.class
+SHA-384-Digest: /EIvsASaL3pLivooJCouWu4LvudbTeeIMOBj+W0bptVzAaA7OXZacfIu
+ C9WUtWLE
+
+Name: schema/installerservice.exsd
+SHA-384-Digest: xbJU8+Q1JKR8wyqLoheNBneYH6n+Zt36+Kd61V5cQuEMC20spYl9guzJ
+ vzgf5QIc
+
+Name: com/silabs/ss/platform/api/installer/base/SecureArchiveInstallerUt
+ ils$Unit.class
+SHA-384-Digest: FLq7LxTgDrAwrFjes2BOQO4uyDoM+pFb32W504K72mNZeQ+8Tp6D1TJh
+ n7PF6VwT
+
+Name: com/silabs/ss/platform/api/installer/base/SecureArchiveInstallerUt
+ ils$Property.class
+SHA-384-Digest: xdzYVv9c6mMBMl6aEd31GiovgaDBjv7wA7z9KuIt5eEj0QDp5uh5Y3+l
+ ew5+/Y6f
+
+Name: com/silabs/ss/platform/internal/installer/base/internationalizatio
+ n/messages.properties
+SHA-384-Digest: SWfatkkcm12eMDKHWmdPkFKu6tMl2pK8AiBlUY06vek/oK8RX8umNccT
+ Iw3N4HrB
+
+Name: com/silabs/ss/platform/api/installer/base/InstallationNotifier.cla
+ ss
+SHA-384-Digest: lxf6M7FAHrj8sLWtcNijmxtkGpQi0HqttmLl0G38CeP/Jb35RgIXEkQ0
+ ewSFQMN9
+
+Name: com/silabs/ss/platform/api/installer/base/SecureArchiveInstallerUt
+ ils$MetadataRepo.class
+SHA-384-Digest: ZXFj55Jm7FmiMIhG6GBk0kDFy2bG4XN6g98EiopXs4R7RRATUrJZDmWw
+ 2VQTm2Am
+
+Name: .api_description
+SHA-384-Digest: KcSqxegbnkwMbJiD0jg507C/5gZJbC1FjgI+qjNYpNNr/FNonAe9WrWn
+ 4xE9Zhyn
+
+Name: com/silabs/ss/platform/internal/installer/base/Activator.class
+SHA-384-Digest: JLogTyxlLU39YX/n1QahjybLIHtm3Pwz7YMXEydrumHKg5WUSsyPbzSk
+ x3hrdgIL
+
+Name: com/silabs/ss/platform/api/installer/base/ISecureArchiveInstallerU
+ tils.class
+SHA-384-Digest: eORgWKMtyW7TvpLoOXlj6lVA1F+D3A3KMEDJNDK63ss0g5cfc5Gr/84Y
+ ZXBtwNTB
+
+Name: com/silabs/ss/platform/api/installer/base/SecureArchiveInstallerUt
+ ils.class
+SHA-384-Digest: Uy06AZCXRb0flKjFCslVj2OG/SaNgCXEnZwzvni1FXSSc/36JzYR1OiY
+ g2oneRfs
+
+Name: com/silabs/ss/platform/api/installer/base/IInstallationChangedList
+ ener$InstallationEvent.class
+SHA-384-Digest: 8NuVPaLYpmDtWyr8i1AhAyvX3W2F1z4YLVHh8lYur6yTC8mjbZkEf1Fd
+ G4DuP5+R
+
+Name: com/silabs/ss/platform/api/installer/base/IInstallationChangedList
+ ener$InstallationEvent$InstallEventType.class
+SHA-384-Digest: EKclmTVhnsZOkVvWsQAlt8P0aEa/D6ulnnaVKd+1yhJklDxBIyiEWIEX
+ pML4Rzha
+
+Name: com/silabs/ss/platform/api/installer/base/IInstallerService.class
+SHA-384-Digest: 3c9GNMzRDJrl7wUbqfocjcEwvJa4pSh/0yxSLLmJE4cSmtObj9Oq5HRJ
+ mNtLOV/P
+
+Name: com/silabs/ss/platform/internal/installer/base/internationalizatio
+ n/Messages.class
+SHA-384-Digest: 5xCcViBaCqrx4t4kUPiW8ZrraczhatGgcpg8mTJIbRh+qd3EugMMSyWy
+ Qn55qHcm
+
+Name: com/silabs/ss/platform/api/installer/base/IInstallationChangedList
+ ener2.class
+SHA-384-Digest: hXfXQwBp9M+3VNljPUKaxqtGwupGtmXMvjVPOSi3KPWG1hi1C7dF1/YW
+ Z5GCJAF6
+
+Name: schema/packageTypes.exsd
+SHA-384-Digest: t4mDv3Stisva45NYZngmj9A2IfzKKHN2Tq4aRt3EI3kVYfinr8K+5/ls
+ yhW2oJWB
+
+Name: com/silabs/ss/platform/api/installer/base/IInstallationChangedList
+ ener.class
+SHA-384-Digest: VXPvAggdF8rX4r9HQARDs3o8fU+vHQKkPb/n2sCXziu/ozfO956rveg+
+ i/X/BOrG
+
+Name: com/silabs/ss/platform/internal/api/installer/base/LicenseAssetUti
+ ls$1.class
+SHA-384-Digest: 7EApzd3FIKf1HgZ1xw+kgULc2p0+8zsTiiwG2PFJhWdrnqxbPdIpfGMl
+ RiTXNN0S
+
+Name: com/silabs/ss/platform/api/installer/base/PackageTypes.class
+SHA-384-Digest: bpykLJHCf+ULq3XZOlhtvnB35BcQnZEhKquFKocqsbPhXqWvyv4yKeme
+ ZVvuiEWI
+
