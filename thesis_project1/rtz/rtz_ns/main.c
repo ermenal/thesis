@@ -94,7 +94,7 @@ int main(void)
       clock_t start_time = clock();
       while ((clock() - start_time) < CLOCKS_PER_SEC * 60) {
         clock_t curr_clock = clock();
-        char[] to_print[100];
+        char to_print[100];
         snprintf(to_print, 100, "curr clock: %lu\n", (unsigned long)curr_clock);
         print_nsc(to_print, strlen(to_print));
         transmit_nsc(payload, PAYLOAD_LENGTH);  
