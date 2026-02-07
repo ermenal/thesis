@@ -74,6 +74,8 @@ SL_ATTRIBUTE_ALIGN(RAIL_FIFO_ALIGNMENT);
 #define OTA_CHUNK_EXPECTED_BYTES 62u
 #define OTA_TX_TIMEOUT_MS 50u
 
+static uint32_t packet_counter = 0u;
+
 _Static_assert(OTA_CHUNK_DATA_BYTES > 0, "OTA frame configuration invalid");
 _Static_assert(OTA_CHUNK_DATA_BYTES == OTA_CHUNK_EXPECTED_BYTES,
                "Unexpected OTA chunk size");
@@ -618,6 +620,8 @@ void sl_rail_util_on_event(sl_rail_handle_t rail_handle, sl_rail_events_t events
                                                         &packet_info);
     if (handle != RAIL_RX_PACKET_HANDLE_INVALID) {
       if (!rx_packet_ready) {
+        printf("Received packet %lu\n", packet_counter++);
+        /*
         if (packet_info.packetBytes <= OTA_RX_BUFFER_SIZE) {
           RAIL_CopyRxPacket(rx_packet_buffer, &packet_info);
           if ((packet_info.packetBytes >= (SECURE_COMMAND_SEQUENCE_LENGTH + 1u))
@@ -632,6 +636,7 @@ void sl_rail_util_on_event(sl_rail_handle_t rail_handle, sl_rail_events_t events
           printf("RX packet too large (%u bytes); dropping\n",
                  (unsigned)packet_info.packetBytes);
         }
+        */
       }
       RAIL_ReleaseRxPacket(rail_handle, handle);
     }

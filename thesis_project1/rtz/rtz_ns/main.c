@@ -25,13 +25,14 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 
 #define PAYLOAD_LENGTH 16
 static uint8_t payload[PAYLOAD_LENGTH] =
     {PAYLOAD_LENGTH - 1, 0x01, 0x02, 0x03, 0x04,
   0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x00 };
 
-static volatile bool send_packet = false;
+static volatile bool start_test = false;
 static volatile bool packet_received = false;
 
 extern bool boot_state_commit_proof_of_life_nsc(void);
@@ -49,12 +50,12 @@ void SW0_IRQHandler(void)
 
 /*
 * Handler voor button pressed forward van SW
-* Bij button press: zet send_packet flag om in main loop een packet te sturen
+* Bij button press: zet start_test flag 
 * + toggle LED
 */
 void SW1_IRQHandler(void)
 {
-  send_packet = true;
+  start_test = true;
   toggle_led_nsc();
   NVIC_ClearPendingIRQ(SW1_IRQn);
 }
@@ -85,12 +86,16 @@ int main(void)
   // print_nsc("SLOT B: In NS main, na boot commit\n", sizeof("SLOT B: In NS main, na boot commit\n") - 1);
 
   while (1) {
-    if (send_packet) {
-      send_packet = false;
-      print_nsc("Transmitting in NS\n", sizeof("Transmitting in NS\n") - 1);
+    if (start_test) {
+      start_test = false;
+      print_nsc("Starting test\n", sizeof("Starting test\n") - 1);
 
-      transmit_nsc(payload, PAYLOAD_LENGTH);  
-      payload[PAYLOAD_LENGTH - 1]++;
+      // During 1 minute, send as many packets as possible.
+      clock_t start_time = clock();
+      while ((clock() - start_time) < CLOCKS_PER_SEC * 60) {
+        transmit_nsc(payload, PAYLOAD_LENGTH);  
+        payload[PAYLOAD_LENGTH - 1]++;
+      }
     }
     if (packet_received) {
       packet_received = false;
