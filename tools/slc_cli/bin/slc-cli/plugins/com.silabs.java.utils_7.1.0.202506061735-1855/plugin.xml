@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.4"?>
-<plugin>
-   <extension-point id="com.silabs.java.utils.studioPreferences" name="studioPreferences" schema="schema/com.silabs.java.utils.studioPreferences.exsd"/>
-   <extension-point id="stockVariableSupport" name="Stock Variable Support" schema="schema/stockVariableSupport.exsd"/>
-   <extension-point id="runtimeProvider" name="runtimeProvider" schema="schema/runtimeProvider.exsd"/>
-   
-</plugin>

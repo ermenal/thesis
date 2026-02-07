@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.4"?>
-<plugin>
-   <extension-point id="com.silabs.ss.platform.ideprovider" name="IDE Provider for Simplicity Studio" schema="schema/com.silabs.ss.platform.ideprovider.exsd"/>
-   <extension-point id="com.silabs.ss.platform.idelauncher" name="IDE launcher for Simplicity Studio" schema="schema/com.silabs.ss.platform.idelauncher.exsd"/>
-
-</plugin>

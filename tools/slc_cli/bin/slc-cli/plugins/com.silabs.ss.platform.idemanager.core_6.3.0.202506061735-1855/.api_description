@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<component name="com.silabs.ss.platform.idemanager.core_6.3.0.202506061735-1855" version="1.2">
-    <plugin id="com.silabs.ss.platform.idemanager.core_6.3.0.202506061735-1855"/>
-    <package name="com.silabs.ss.platform.api.idemanager.core" visibility="1">
-        <type name="IDEPreferenceManager" restrictions="6"/>
-    </package>
-</component>

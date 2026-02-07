@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="IAssetService">
-   <implementation class="com.silabs.ss.platform.internal.api.content.core.asset.AssetService"/>
-   <service>
-      <provide interface="com.silabs.ss.platform.api.content.core.asset.IAssetService"/>
-   </service>
-</scr:component>

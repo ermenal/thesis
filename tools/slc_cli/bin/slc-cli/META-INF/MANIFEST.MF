@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Created-By: 21.0.5 (Amazon.com Inc.)
-
-Name: readme/readme_eclipse.html
-SHA-384-Digest: XQGIxygWw4kB21RK70nxhm2O2F8YQBHKUd1Y9aZYree6KRRE/DO7RIRT
- QxDGRMwm
-
