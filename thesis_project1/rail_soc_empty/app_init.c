@@ -86,6 +86,11 @@ static volatile bool rx_packet_ready = false;
 static volatile uint16_t rx_packet_length = 0u;
 static uint8_t rx_packet_buffer[OTA_RX_BUFFER_SIZE];
 
+// Packet counting for 1-minute measurement
+static volatile uint32_t packet_count = 0u;
+static volatile bool measurement_active = false;
+static sl_sleeptimer_timer_handle_t measurement_timer;
+
 typedef struct {
   const uint8_t *data;
   size_t length;
@@ -115,6 +120,7 @@ static size_t gbl_write_tag_header(uint8_t *destination, uint16_t tag, uint32_t 
 static bool transmit_packet(const uint8_t *payload, uint16_t length);
 static void send_ota_update(void);
 static bool wait_for_tx_idle(uint32_t timeout_ms);
+static void measurement_timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data);
 
 void buttonCb(uint8_t intNo) 
 {
@@ -578,10 +584,38 @@ cleanup:
   }
 }
 
+static void measurement_timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data)
+{
+  (void)handle;
+  (void)data;
+  
+  measurement_active = false;
+  printf("\n=== 1-Minute Measurement Complete ===");
+  printf("\nPackets received: %lu\n", (unsigned long)packet_count);
+  printf("====================================\n\n");
+}
+
 RAIL_Handle_t app_init(void)
 {
   RAIL_Handle_t rail_handle = rail_app_init();
   printf("Updater device initialized. Press Button 1 to start OTA update.\n");
+  
+  // Start 1-minute packet measurement
+  packet_count = 0u;
+  measurement_active = true;
+  uint32_t timer_ticks = sl_sleeptimer_ms_to_tick(60000); // 60 seconds = 1 minute
+  sl_status_t status = sl_sleeptimer_start_timer(&measurement_timer,
+                                                  timer_ticks,
+                                                  measurement_timer_callback,
+                                                  NULL,
+                                                  0,
+                                                  0);
+  if (status == SL_STATUS_OK) {
+    printf("Started 1-minute packet measurement...\n");
+  } else {
+    printf("Failed to start measurement timer: %lu\n", (unsigned long)status);
+  }
+  
   return rail_handle;
 }
 
@@ -612,28 +646,36 @@ void sl_rail_util_on_event(sl_rail_handle_t rail_handle, sl_rail_events_t events
   }
 
   if (events & RAIL_EVENT_RX_PACKET_RECEIVED) {
+    // Increment packet counter if measurement is active
+    if (measurement_active) {
+      packet_count++;
+    }
+    
     RAIL_RxPacketInfo_t packet_info;
     RAIL_RxPacketHandle_t handle = RAIL_GetRxPacketInfo(rail_handle,
                                                         RAIL_RX_PACKET_HANDLE_NEWEST,
                                                         &packet_info);
-    if (handle != RAIL_RX_PACKET_HANDLE_INVALID) {
-      if (!rx_packet_ready) {
-        if (packet_info.packetBytes <= OTA_RX_BUFFER_SIZE) {
-          RAIL_CopyRxPacket(rx_packet_buffer, &packet_info);
-          if ((packet_info.packetBytes >= (SECURE_COMMAND_SEQUENCE_LENGTH + 1u))
-              && (memcmp(rx_packet_buffer,
-                         secure_command_sequence,
-                         SECURE_COMMAND_SEQUENCE_LENGTH) == 0)
-              && (rx_packet_buffer[SECURE_COMMAND_SEQUENCE_LENGTH] == OTA_RSP_SLOT_INFO)) {
-            rx_packet_length = packet_info.packetBytes;
-            rx_packet_ready = true;
-          }
-        } else {
-          printf("RX packet too large (%u bytes); dropping\n",
-                 (unsigned)packet_info.packetBytes);
-        }
-      }
-      RAIL_ReleaseRxPacket(rail_handle, handle);
-    }
+    // if (handle != RAIL_RX_PACKET_HANDLE_INVALID) {
+    //   if (!rx_packet_ready) {
+    //     if (packet_info.packetBytes <= OTA_RX_BUFFER_SIZE) {
+    //       RAIL_CopyRxPacket(rx_packet_buffer, &packet_info);
+    //       if ((packet_info.packetBytes >= (SECURE_COMMAND_SEQUENCE_LENGTH + 1u))
+    //           && (memcmp(rx_packet_buffer,
+    //                      secure_command_sequence,
+    //                      SECURE_COMMAND_SEQUENCE_LENGTH) == 0)
+    //           && (rx_packet_buffer[SECURE_COMMAND_SEQUENCE_LENGTH] == OTA_RSP_SLOT_INFO)) {
+    //         rx_packet_length = packet_info.packetBytes;
+    //         rx_packet_ready = true;
+    //       }
+    //     } else {
+    //       printf("RX packet too large (%u bytes); dropping\n",
+    //              (unsigned)packet_info.packetBytes);
+    //     }
+    //   }
+    //   RAIL_ReleaseRxPacket(rail_handle, handle);
+    // }
+    
+    //printf("Releasing packet \n");
+    RAIL_ReleaseRxPacket(rail_handle, handle);
   }
 }

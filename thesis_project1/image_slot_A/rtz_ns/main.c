@@ -31,7 +31,7 @@ static uint8_t payload[PAYLOAD_LENGTH] =
     {PAYLOAD_LENGTH - 1, 0x01, 0x02, 0x03, 0x04,
   0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x00 };
 
-static volatile bool send_packet = false;
+static volatile bool start_test = false;
 static volatile bool packet_received = false;
 
 extern bool boot_state_commit_proof_of_life_nsc(void);
@@ -54,7 +54,7 @@ void SW0_IRQHandler(void)
 */
 void SW1_IRQHandler(void)
 {
-  send_packet = true;
+  start_test = true;
   toggle_led_nsc();
   NVIC_ClearPendingIRQ(SW1_IRQn);
 }
@@ -85,12 +85,14 @@ int main(void)
   // print_nsc("SLOT B: SLOT A: In NS main, na boot commit\n", sizeof("SLOT B: SLOT A: In NS main, na boot commit\n") - 1);
 
   while (1) {
-    if (send_packet) {
-      send_packet = false;
-      print_nsc("Transmitting in NS\n", sizeof("Transmitting in NS\n") - 1);
+    if (start_test) {
+      start_test = false;
+      print_nsc("Starting test in NS\n", sizeof("Starting test in NS\n") - 1);
 
-      transmit_nsc(payload, PAYLOAD_LENGTH);  
+      while (1) {
+        transmit_nsc(payload, PAYLOAD_LENGTH);  
       payload[PAYLOAD_LENGTH - 1]++;
+      }
     }
     if (packet_received) {
       packet_received = false;
