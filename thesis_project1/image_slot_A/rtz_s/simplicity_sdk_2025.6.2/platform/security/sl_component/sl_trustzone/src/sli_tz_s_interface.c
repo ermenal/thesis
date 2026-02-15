@@ -31,6 +31,12 @@
 #include "em_gpio.h"
 #include "rail_types.h"
 #include "second_main.h"
+#include "sl_sleeptimer.h"
+// static volatile uint32_t packet_count = 0u;
+// static volatile bool measurement_active = false;
+// static sl_sleeptimer_timer_handle_t measurement_timer;
+
+
 #include "sl_rail_util_init.h"
 #include <stdbool.h>
 #include <stdint.h>
@@ -65,6 +71,7 @@
 
 //------------------------------------------------------------------------------
 // Macros
+
 
 extern bool boot_state_commit_proof_of_life(void);
 
@@ -508,4 +515,36 @@ bool boot_state_commit_proof_of_life_nsc(void)
 {
   return boot_state_commit_proof_of_life();
 }
+
+// static void measurement_timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data)
+// {
+//   (void)handle;
+//   (void)data;
+  
+//   measurement_active = false;
+//   printf("\n=== 1-Minute Measurement Complete ===");
+//   printf("\nPackets received: %lu\n", (unsigned long)packet_count);
+//   printf("====================================\n\n");
+// }
+
+// SLI_TZ_CMSE_NONSECURE_ENTRY
+// void start_rx_test_timer(void)
+// {
+//   packet_count = 0u;
+//   measurement_active = true;
+//   uint32_t timer_ticks = sl_sleeptimer_ms_to_tick(60000); // 60 seconds = 1 minute
+//   sl_status_t status = sl_sleeptimer_start_timer(&measurement_timer,
+//                                                   timer_ticks,
+//                                                   measurement_timer_callback,
+//                                                   NULL,
+//                                                   0,
+//                                                   0);
+//   if (status == SL_STATUS_OK) {
+//     printf("Started 1-minute packet measurement...\n");
+//   } else {
+//     printf("Failed to start measurement timer: %lu\n", (unsigned long)status);
+//   }
+// }
+
+
 #endif //TZ_SERVICE_SYSCFG_PRESENT || TZ_SERVICE_MSC_PRESENT

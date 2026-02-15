@@ -42,12 +42,15 @@
 #include <stdio.h>
 #include "sl_common.h"
 #include "rail_config.h"
+#include "sl_sleeptimer.h"
 #include <string.h>
 
 #define CRC32_INITIAL_VALUE 0xFFFFFFFFu
 #define CRC32_XOR_OUT       0xFFFFFFFFu
 #define CRC32_POLYNOMIAL    0xEDB88320u
 #define BOOT_STATE_CRC_LENGTH (offsetof(NvmBootState_t, crc32))
+
+
 
 typedef struct {
   NvmBootState_t state;

@@ -93,7 +93,8 @@ build/debug/project/second_main.o: second_main.c \
  simplicity_sdk_2025.6.2/platform/emlib/inc/em_msc.h \
  simplicity_sdk_2025.6.2/platform/emlib/inc/em_msc_compat.h \
  simplicity_sdk_2025.6.2/platform/emlib/inc/em_ramfunc.h \
- autogen/rail_config.h
+ autogen/rail_config.h \
+ simplicity_sdk_2025.6.2/platform/service/sleeptimer/inc/sl_sleeptimer.h
 simplicity_sdk_2025.6.2/platform/service/interrupt_manager/inc/arm/cmsis_nvic_virtual.h:
 simplicity_sdk_2025.6.2/platform/service/interrupt_manager/inc/sl_interrupt_manager.h:
 simplicity_sdk_2025.6.2/platform/common/inc/sl_core.h:
@@ -191,3 +192,4 @@ simplicity_sdk_2025.6.2/platform/emlib/inc/em_msc.h:
 simplicity_sdk_2025.6.2/platform/emlib/inc/em_msc_compat.h:
 simplicity_sdk_2025.6.2/platform/emlib/inc/em_ramfunc.h:
 autogen/rail_config.h:
+simplicity_sdk_2025.6.2/platform/service/sleeptimer/inc/sl_sleeptimer.h:

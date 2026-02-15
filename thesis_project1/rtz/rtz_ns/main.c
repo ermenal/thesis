@@ -33,6 +33,7 @@ static uint8_t payload[PAYLOAD_LENGTH] =
 
 static volatile bool start_test = false;
 static volatile bool packet_received = false;
+static volatile uint32_t packets_received = 0;
 
 extern bool boot_state_commit_proof_of_life_nsc(void);
 
@@ -89,22 +90,24 @@ int main(void)
       start_test = false;
       print_nsc("Starting test in NS\n", sizeof("Starting test in NS\n") - 1);
 
-      while (1) {
-        transmit_nsc(payload, PAYLOAD_LENGTH);  
-      payload[PAYLOAD_LENGTH - 1]++;
-      }
+      // start_rx_test_timer();
+      // uint32_t dummy = 0;
+      // while (1) {
+      //   dummy++;
+      // }
     }
     if (packet_received) {
       packet_received = false;
+      packets_received++;
       char rx_buf[PAYLOAD_LENGTH*2];
       uint16_t packet_bytes = download_packet_nsc(rx_buf, PAYLOAD_LENGTH*2);
 
-      char to_print[200] = "RX PACKET RECEIVED: ";
-      for (int i=0; i<packet_bytes; i++) {
-        snprintf(to_print + strlen(to_print), 200 - strlen(to_print), "0x%02X ", rx_buf[i]);
-      }
-      snprintf(to_print + strlen(to_print), 200 - strlen(to_print), "\n");
-      print_nsc(to_print, strlen(to_print));
+       char to_print[200] = "RX PACKET RECEIVED: ";
+       for (int i=0; i<packet_bytes; i++) {
+         snprintf(to_print + strlen(to_print), 200 - strlen(to_print), "0x%02X ", rx_buf[i]);
+       }
+       snprintf(to_print + strlen(to_print), 200 - strlen(to_print), "\n");
+       print_nsc(to_print, strlen(to_print));
     }
   }
 }

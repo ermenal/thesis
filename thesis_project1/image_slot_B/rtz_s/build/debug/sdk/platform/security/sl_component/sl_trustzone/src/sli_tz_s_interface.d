@@ -84,6 +84,7 @@ build/debug/sdk/platform/security/sl_component/sl_trustzone/src/sli_tz_s_interfa
  simplicity_sdk_2025.6.2/platform/radio/rail_lib/common/rail_types.h \
  simplicity_sdk_2025.6.2/platform/radio/rail_lib/common/rail_assert_error_codes.h \
  config/sl_rail_util_init_inst_config.h ../../boot_state.h \
+ simplicity_sdk_2025.6.2/platform/service/sleeptimer/inc/sl_sleeptimer.h \
  ../rtz_ns/autogen/export/tz_service_config_autogen.h \
  simplicity_sdk_2025.6.2/util/third_party/mbedtls/include/psa/crypto_types.h \
  simplicity_sdk_2025.6.2/util/third_party/mbedtls/include/psa/build_info.h \
@@ -270,6 +271,7 @@ simplicity_sdk_2025.6.2/platform/radio/rail_lib/common/rail_types.h:
 simplicity_sdk_2025.6.2/platform/radio/rail_lib/common/rail_assert_error_codes.h:
 config/sl_rail_util_init_inst_config.h:
 ../../boot_state.h:
+simplicity_sdk_2025.6.2/platform/service/sleeptimer/inc/sl_sleeptimer.h:
 ../rtz_ns/autogen/export/tz_service_config_autogen.h:
 simplicity_sdk_2025.6.2/util/third_party/mbedtls/include/psa/crypto_types.h:
 simplicity_sdk_2025.6.2/util/third_party/mbedtls/include/psa/build_info.h:

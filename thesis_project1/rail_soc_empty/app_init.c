@@ -601,20 +601,20 @@ RAIL_Handle_t app_init(void)
   printf("Updater device initialized. Press Button 1 to start OTA update.\n");
   
   // Start 1-minute packet measurement
-  packet_count = 0u;
-  measurement_active = true;
-  uint32_t timer_ticks = sl_sleeptimer_ms_to_tick(60000); // 60 seconds = 1 minute
-  sl_status_t status = sl_sleeptimer_start_timer(&measurement_timer,
-                                                  timer_ticks,
-                                                  measurement_timer_callback,
-                                                  NULL,
-                                                  0,
-                                                  0);
-  if (status == SL_STATUS_OK) {
-    printf("Started 1-minute packet measurement...\n");
-  } else {
-    printf("Failed to start measurement timer: %lu\n", (unsigned long)status);
-  }
+  // packet_count = 0u;
+  // measurement_active = true;
+  // uint32_t timer_ticks = sl_sleeptimer_ms_to_tick(60000); // 60 seconds = 1 minute
+  // sl_status_t status = sl_sleeptimer_start_timer(&measurement_timer,
+  //                                                 timer_ticks,
+  //                                                 measurement_timer_callback,
+  //                                                 NULL,
+  //                                                 0,
+  //                                                 0);
+  // if (status == SL_STATUS_OK) {
+  //   printf("Started 1-minute packet measurement...\n");
+  // } else {
+  //   printf("Failed to start measurement timer: %lu\n", (unsigned long)status);
+  // }
   
   return rail_handle;
 }
@@ -623,11 +623,22 @@ void app_process_action(RAIL_Handle_t rail_handle)
 {
   (void)rail_handle;
 
-  if (start_update) {
-    start_update = false;
-    send_ota_update();
-    printf("Update process finished. Press Button 1 to try again.\n");
+  while (1) {
+    // Spam packets continuously
+    static uint8_t dummy_payload[OTA_FRAME_LENGTH];
+    memset(dummy_payload, 0xAA, OTA_FRAME_LENGTH);
+
+    RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST0);
+
+    RAIL_WriteTxFifo(rail_handle, dummy_payload, OTA_FRAME_LENGTH, false);
+    RAIL_StartTx(rail_handle, channelConfigs[0]->configs->channelNumberStart, 
+                 RAIL_TX_OPTIONS_DEFAULT, NULL);
   }
+  // if (start_update) {
+  //   start_update = false;
+  //   send_ota_update();
+  //   printf("Update process finished. Press Button 1 to try again.\n");
+  // }
 }
 
 void sl_rail_util_on_event(sl_rail_handle_t rail_handle, sl_rail_events_t events)

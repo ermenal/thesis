@@ -102,6 +102,8 @@ void print_nsc(const char *data, uint16_t length);
 SLI_TZ_CMSE_NONSECURE_ENTRY
 uint16_t download_packet_nsc(const char *buffer, uint16_t max_buffer_size);
 
+SLI_TZ_CMSE_NONSECURE_ENTRY
+void start_rx_test_timer(void);
 
 #ifdef __cplusplus
 }
