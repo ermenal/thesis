@@ -89,10 +89,7 @@ int main(void)
       start_test = false;
       print_nsc("Starting test in NS\n", sizeof("Starting test in NS\n") - 1);
 
-      while (1) {
-        transmit_nsc(payload, PAYLOAD_LENGTH);  
-      payload[PAYLOAD_LENGTH - 1]++;
-      }
+      start_benchmark_nsc();
     }
     if (packet_received) {
       packet_received = false;
@@ -104,7 +101,7 @@ int main(void)
         snprintf(to_print + strlen(to_print), 200 - strlen(to_print), "0x%02X ", rx_buf[i]);
       }
       snprintf(to_print + strlen(to_print), 200 - strlen(to_print), "\n");
-      print_nsc(to_print, strlen(to_print));
+      // print_nsc(to_print, strlen(to_print));
     }
   }
 }

@@ -49,6 +49,18 @@
 #define CRC32_POLYNOMIAL    0xEDB88320u
 #define BOOT_STATE_CRC_LENGTH (offsetof(NvmBootState_t, crc32))
 
+// benchmark stuff
+void measurement_timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data)
+{
+  (void)handle;
+  (void)data;
+  
+  measurement_active = false;
+  printf("\n=== 1-Minute Measurement Complete ===");
+  printf("\nPackets received: %lu\n", (unsigned long)packet_count);
+  printf("====================================\n\n");
+}
+
 typedef struct {
   NvmBootState_t state;
   uint32_t page_address;

@@ -492,14 +492,18 @@ uint16_t download_packet_nsc(const char *buffer, uint16_t max_buffer_size)
   // Validation ...
   (void)max_buffer_size;
   RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
-  uint8_t temp_buf[32];
+  uint8_t temp_buf[80];
   uint32_t packet_bytes = download_packet(rail_handle, temp_buf);
   // if (status != RAIL_STATUS_NO_ERROR) {
   //   printf("download_packet failed: %lu\n", status);
   //   return status;
   // }
   // Check evt temp buf eerst
-  memcpy((void *)buffer, temp_buf, 32);
+  memcpy((void *)buffer, temp_buf, 80);
+
+  //benchmark stuff 
+  packet_count++;
+  printf("Packets received: %lu\n", packet_count);
   return packet_bytes;
 }
 
@@ -507,5 +511,25 @@ SLI_TZ_CMSE_NONSECURE_ENTRY
 bool boot_state_commit_proof_of_life_nsc(void)
 {
   return boot_state_commit_proof_of_life();
+}
+
+SLI_TZ_CMSE_NONSECURE_ENTRY
+void start_benchmark_nsc()
+{
+  packet_count = 0u;
+  measurement_active = true;
+  uint32_t timer_ticks = sl_sleeptimer_ms_to_tick(60000); // 60 seconds = 1 minute
+  
+  sl_status_t status = sl_sleeptimer_start_timer(&measurement_timer,
+                                                  timer_ticks,
+                                                  measurement_timer_callback,
+                                                  NULL,
+                                                  0,
+                                                  0);
+  if (status == SL_STATUS_OK) {
+    printf("Started 1-minute packet measurement...\n");
+  } else {
+    printf("Failed to start measurement timer: %lu\n", (unsigned long)status);
+  }
 }
 #endif //TZ_SERVICE_SYSCFG_PRESENT || TZ_SERVICE_MSC_PRESENT

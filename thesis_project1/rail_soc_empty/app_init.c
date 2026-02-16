@@ -79,7 +79,7 @@ _Static_assert(OTA_CHUNK_DATA_BYTES == OTA_CHUNK_EXPECTED_BYTES,
                "Unexpected OTA chunk size");
 
 static uint8_t ota_packet_buffer[OTA_FRAME_LENGTH];
-static volatile bool start_update = false;
+static volatile bool start_test = false;
 static bool ota_in_progress = false;
 static volatile bool tx_in_flight = false;
 static volatile bool rx_packet_ready = false;
@@ -125,7 +125,7 @@ static void measurement_timer_callback(sl_sleeptimer_timer_handle_t *handle, voi
 void buttonCb(uint8_t intNo) 
 {
   (void) intNo;
-  start_update = true;
+  start_test = true;
 }
 
 RAIL_Handle_t rail_app_init(void)
@@ -600,34 +600,41 @@ RAIL_Handle_t app_init(void)
   RAIL_Handle_t rail_handle = rail_app_init();
   printf("Updater device initialized. Press Button 1 to start OTA update.\n");
   
-  // Start 1-minute packet measurement
-  packet_count = 0u;
-  measurement_active = true;
-  uint32_t timer_ticks = sl_sleeptimer_ms_to_tick(60000); // 60 seconds = 1 minute
-  sl_status_t status = sl_sleeptimer_start_timer(&measurement_timer,
-                                                  timer_ticks,
-                                                  measurement_timer_callback,
-                                                  NULL,
-                                                  0,
-                                                  0);
-  if (status == SL_STATUS_OK) {
-    printf("Started 1-minute packet measurement...\n");
-  } else {
-    printf("Failed to start measurement timer: %lu\n", (unsigned long)status);
-  }
+  
   
   return rail_handle;
 }
 
 void app_process_action(RAIL_Handle_t rail_handle)
 {
-  (void)rail_handle;
-
-  if (start_update) {
-    start_update = false;
-    send_ota_update();
-    printf("Update process finished. Press Button 1 to try again.\n");
+  if (start_test) {
+    // Continuously send dummy packets
+    static uint8_t dummy_packet[OTA_FRAME_LENGTH];
+    
+    while (1) {
+      // Wait for TX FIFO space
+      while (RAIL_GetTxFifoSpaceAvailable(rail_handle) < OTA_FRAME_LENGTH) {
+      }
+      
+      // Write dummy packet to TX FIFO
+      RAIL_WriteTxFifo(rail_handle, dummy_packet, OTA_FRAME_LENGTH, false);
+      
+      // Start transmission
+      RAIL_Status_t status = RAIL_StartTx(rail_handle,
+              channelConfigs[0]->configs->channelNumberStart,
+              RAIL_TX_OPTIONS_DEFAULT,
+              NULL);
+      if (status != RAIL_STATUS_NO_ERROR) {
+      printf("RAIL_StartTx failed: %u\n", (unsigned)status);
+      break;
+      }
+      
+      // Wait 1000 milliseconds before sending next packet
+      // sl_sleeptimer_delay_millisecond(1000);
+    printf("packet sent\n");
+    }
   }
+    
 }
 
 void sl_rail_util_on_event(sl_rail_handle_t rail_handle, sl_rail_events_t events)

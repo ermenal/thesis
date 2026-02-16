@@ -106,6 +106,9 @@ uint16_t download_packet_nsc(const char *buffer, uint16_t max_buffer_size);
 SLI_TZ_CMSE_NONSECURE_ENTRY
 bool boot_state_commit_proof_of_life_nsc(void);
 
+SLI_TZ_CMSE_NONSECURE_ENTRY
+void start_benchmark_nsc(void);
+
 #ifdef __cplusplus
 }
 #endif
