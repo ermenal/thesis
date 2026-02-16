@@ -21,10 +21,7 @@ AppSlot_t boot_state_get_inactive_slot(void);
 bool boot_state_mark_update_pending(AppSlot_t target_slot);
 bool boot_state_commit_proof_of_life(void);
 
-// Packet counting for 1-minute measurement
-static volatile uint32_t packet_count = 0u;
-static volatile bool measurement_active = false;
-static sl_sleeptimer_timer_handle_t measurement_timer;
+bool secure_start_packet_measurement(uint32_t duration_ms);
 void measurement_timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data);
 
 #endif /* SECOND_MAIN_H */

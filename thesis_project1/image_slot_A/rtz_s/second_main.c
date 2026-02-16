@@ -41,6 +41,7 @@
 #include <stddef.h>
 #include <stdio.h>
 #include "sl_common.h"
+#include "sl_status.h"
 #include "rail_config.h"
 #include <string.h>
 
@@ -50,15 +51,45 @@
 #define BOOT_STATE_CRC_LENGTH (offsetof(NvmBootState_t, crc32))
 
 // benchmark stuff
+static sl_sleeptimer_timer_handle_t measurement_timer;
+static volatile bool measurement_timer_active = false;
+
+bool secure_start_packet_measurement(uint32_t duration_ms)
+{
+  uint32_t timer_ticks = sl_sleeptimer_ms_to_tick(duration_ms);
+  if (measurement_timer_active) {
+    (void)sl_sleeptimer_stop_timer(&measurement_timer);
+    measurement_timer_active = false;
+  }
+
+  sl_status_t status = sl_sleeptimer_start_timer(&measurement_timer,
+                                                 timer_ticks,
+                                                 measurement_timer_callback,
+                                                 NULL,
+                                                 0,
+                                                 0);
+  if (status == SL_STATUS_OK) {
+    measurement_timer_active = true;
+    return true;
+  }
+
+  printf("Failed to start measurement timer: %lu\n", (unsigned long)status);
+  return false;
+}
+
 void measurement_timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data)
 {
   (void)handle;
   (void)data;
+  measurement_timer_active = false;
   
-  measurement_active = false;
-  printf("\n=== 1-Minute Measurement Complete ===");
-  printf("\nPackets received: %lu\n", (unsigned long)packet_count);
-  printf("====================================\n\n");
+  // NVIC_SetPendingIRQ(SW2_IRQn);
+  TZ_NVIC_SetPendingIRQ_NS(SW2_IRQn);
+
+  //measurement_active = false;
+  //printf("\n=== 1-Minute Measurement Complete ===");
+  //printf("\nPackets received: %lu\n", (unsigned long)packet_count);
+  //printf("====================================\n\n");
 }
 
 typedef struct {
@@ -743,7 +774,8 @@ static void send_slot_info_response(AppSlot_t active_slot,
 void buttonCb(uint8_t intNo) 
 {
   (void) intNo;
-  NVIC_SetPendingIRQ(SW1_IRQn);
+  // NVIC_SetPendingIRQ(SW1_IRQn);
+  TZ_NVIC_SetPendingIRQ_NS(SW1_IRQn);
 }
 
 /*
@@ -1049,7 +1081,7 @@ SL_CODE_RAM void sl_rail_util_on_event(sl_rail_handle_t rail_handle, sl_rail_eve
         while(1);
       }
       // Laat NS weten dat packet klaar is
-      NVIC_SetPendingIRQ(SW0_IRQn);
+      TZ_NVIC_SetPendingIRQ_NS(SW0_IRQn);
     }
   }
   else if (events & RAIL_EVENT_CAL_NEEDED) {

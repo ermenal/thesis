@@ -25,6 +25,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
+#include "system_efr32fg23.h"
 
 #define PAYLOAD_LENGTH 16
 static uint8_t payload[PAYLOAD_LENGTH] =
@@ -33,8 +34,11 @@ static uint8_t payload[PAYLOAD_LENGTH] =
 
 static volatile bool start_test = false;
 static volatile bool packet_received = false;
+static volatile uint32_t packet_count = 0u;
 
 extern bool boot_state_commit_proof_of_life_nsc(void);
+
+
 
 /*
 * Handler voor packet RX forward van SW
@@ -59,10 +63,21 @@ void SW1_IRQHandler(void)
   NVIC_ClearPendingIRQ(SW1_IRQn);
 }
 
+// timer expired 
+void SW2_IRQHandler(void)
+{
+  print_nsc("\n=== 1-Minute Measurement Complete ===", sizeof("\n=== 1-Minute Measurement Complete ==="));
+  char to_print[200] = "\nPackets received: ";
+  snprintf(to_print + strlen(to_print), 200 - strlen(to_print), "%lu\n ", (unsigned long)packet_count);
+  print_nsc(to_print, strlen(to_print));
+  print_nsc("====================================\n\n", sizeof("====================================\n\n"));
+}
+
 void init_NVIC_irqs(void)
 {
   NVIC_EnableIRQ(SW0_IRQn); // Radio RX event 
   NVIC_EnableIRQ(SW1_IRQn); // Button press event
+  NVIC_EnableIRQ(SW2_IRQn); // Timer expired event
 }
 
 int main(void)
@@ -87,6 +102,7 @@ int main(void)
   while (1) {
     if (start_test) {
       start_test = false;
+      packet_count = 0u;
       print_nsc("Starting test in NS\n", sizeof("Starting test in NS\n") - 1);
 
       start_benchmark_nsc();
@@ -102,6 +118,7 @@ int main(void)
       }
       snprintf(to_print + strlen(to_print), 200 - strlen(to_print), "\n");
       // print_nsc(to_print, strlen(to_print));
+      packet_count++;
     }
   }
 }
