@@ -1,0 +1,17 @@
+---
+parameters: []
+constants:
+- name: "workspace_name"
+  value: "rtz_ws"
+- path: "rtz_s/rtz_s.slpb"
+- path: "rtz_ns/rtz_ns.slpb"
+steps:
+- task: "convert"
+  output: "artifact/{{workspace_name}}-combined.s37"
+  input:
+  - "{{trustzone_secure_binary}}"
+  - "{{trustzone_nonsecure_binary}}"
+- task: "convert"
+  output: "artifact/{{workspace_name}}-combined-signed.s37"
+  input: "artifact/{{workspace_name}}-combined.s37"
+  keyfile: "{{private_sign_key}}"
