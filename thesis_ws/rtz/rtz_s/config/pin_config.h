@@ -146,6 +146,22 @@
 // [EUSART0]$
 
 // $[PTI]
+// PTI DFRAME on PC02
+#ifndef PTI_DFRAME_PORT                         
+#define PTI_DFRAME_PORT                          SL_GPIO_PORT_C
+#endif
+#ifndef PTI_DFRAME_PIN                          
+#define PTI_DFRAME_PIN                           2
+#endif
+
+// PTI DOUT on PC03
+#ifndef PTI_DOUT_PORT                           
+#define PTI_DOUT_PORT                            SL_GPIO_PORT_C
+#endif
+#ifndef PTI_DOUT_PIN                            
+#define PTI_DOUT_PIN                             3
+#endif
+
 // [PTI]$
 
 // $[MODEM]

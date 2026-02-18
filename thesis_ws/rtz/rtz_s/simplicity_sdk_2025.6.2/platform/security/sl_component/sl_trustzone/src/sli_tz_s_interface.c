@@ -28,13 +28,6 @@
  *
  ******************************************************************************/
 
-#include "em_gpio.h"
-#include "rail_types.h"
-#include "second_main.h"
-#include "sl_rail_util_init.h"
-#include <stdbool.h>
-#include <stdint.h>
-#include <stdio.h>
 #include <string.h>
 
 #if defined(TZ_SERVICE_CONFIG_PRESENT)
@@ -51,9 +44,16 @@
 #include "tfm_crypto_defs.h"
 #include "psa/client.h"
 
+#if defined(TZ_SERVICE_PSA_CRYPTO_PRESENT)
+  #include "sli_tz_service_psa_crypto.h"
+#endif
+#include "sli_tz_service_syscfg.h"
 #if defined(TZ_SERVICE_NVM3_PRESENT) || defined(TZ_SERVICE_PSA_ITS_PRESENT)
   #include "sli_tz_service_nvm3.h"
   #include "nvm3.h"
+#endif
+#if defined(TZ_SERVICE_MSC_PRESENT)
+  #include "sli_tz_service_msc.h"
 #endif
 #if defined(TZ_SERVICE_PSA_ITS_PRESENT)
   #include "sli_tz_service_its.h"
@@ -62,112 +62,14 @@
   #include "sli_tz_service_se_manager.h"
   #include "sl_se_manager_types.h"
 #endif
-
-//------------------------------------------------------------------------------
-// Macros
-
-extern bool boot_state_commit_proof_of_life(void);
-
-#if defined(TZ_SERVICE_PSA_CRYPTO_PRESENT)
-psa_status_t tfm_crypto_get_key_attributes(psa_invec in_vec[],
-                                           size_t in_len,
-                                           psa_outvec out_vec[],
-                                           size_t out_len);
-psa_status_t tfm_crypto_reset_key_attributes(psa_invec in_vec[],
-                                             size_t in_len,
-                                             psa_outvec out_vec[],
-                                             size_t out_len);
-psa_status_t tfm_crypto_open_key(psa_invec in_vec[],
-                                 size_t in_len,
-                                 psa_outvec out_vec[],
-                                 size_t out_len);
-psa_status_t tfm_crypto_close_key(psa_invec in_vec[],
-                                  size_t in_len,
-                                  psa_outvec out_vec[],
-                                  size_t out_len);
-psa_status_t tfm_crypto_import_key(psa_invec in_vec[],
-                                   size_t in_len,
-                                   psa_outvec out_vec[],
-                                   size_t out_len);
-psa_status_t tfm_crypto_destroy_key(psa_invec in_vec[],
-                                    size_t in_len,
-                                    psa_outvec out_vec[],
-                                    size_t out_len);
-psa_status_t tfm_crypto_export_key(psa_invec in_vec[],
-                                   size_t in_len,
-                                   psa_outvec out_vec[],
-                                   size_t out_len);
-psa_status_t tfm_crypto_export_public_key(psa_invec in_vec[],
-                                          size_t in_len,
-                                          psa_outvec out_vec[],
-                                          size_t out_len);
-psa_status_t tfm_crypto_purge_key(psa_invec in_vec[],
-                                  size_t in_len,
-                                  psa_outvec out_vec[],
-                                  size_t out_len);
-psa_status_t tfm_crypto_copy_key(psa_invec in_vec[],
-                                 size_t in_len,
-                                 psa_outvec out_vec[],
-                                 size_t out_len);
-psa_status_t tfm_crypto_generate_random(psa_invec in_vec[],
-                                        size_t in_len,
-                                        psa_outvec out_vec[],
-                                        size_t out_len);
-psa_status_t tfm_crypto_generate_key(psa_invec in_vec[],
-                                     size_t in_len,
-                                     psa_outvec out_vec[],
-                                     size_t out_len);
-psa_status_t tfm_crypto_generate_key_custom(psa_invec in_vec[],
-                                            size_t in_len,
-                                            psa_outvec out_vec[],
-                                            size_t out_len);
-psa_status_t tfm_crypto_generate_key_ext(psa_invec in_vec[],
-                                         size_t in_len,
-                                         psa_outvec out_vec[],
-                                         size_t out_len);
-#endif
-
-#if defined(TZ_SERVICE_MSC_PRESENT)
-uint32_t sli_tz_msc_get_locked(void);
-uint32_t sli_tz_msc_set_locked(void);
-uint32_t sli_tz_msc_set_unlocked(void);
-uint32_t sli_tz_msc_get_readctrl(void);
-uint32_t sli_tz_msc_set_readctrl(uint32_t value);
-uint32_t sli_tz_msc_set_pagelock(uint32_t page_number);
-uint32_t sli_tz_msc_get_pagelock(uint32_t page_number);
-uint32_t sli_tz_msc_get_userdata_size(void);
-uint32_t sli_tz_msc_get_misclockword(void);
-uint32_t sli_tz_msc_set_misclockword(uint32_t value);
-#endif
-
-#if defined(TZ_SERVICE_SYSCFG_PRESENT)
-uint32_t sli_tz_syscfg_read_chiprev_register(void);
-uint32_t sli_tz_syscfg_read_dmem0retnctrl_register(void);
-uint32_t sli_tz_syscfg_set_dmem0ramctrl_ramwsen_bit(void);
-uint32_t sli_tz_syscfg_clear_dmem0ramctrl_ramwsen_bit(void);
-uint32_t sli_tz_syscfg_get_dmem0ramctrl_ramwsen_bit(void);
-uint32_t sli_tz_syscfg_mask_dmem0retnctrl_register(uint32_t mask);
-uint32_t sli_tz_syscfg_zero_dmem0retnctrl_register(void);
-uint32_t sli_tz_syscfg_set_systicextclken_cfgsystic(void);
-uint32_t sli_tz_syscfg_clear_systicextclken_cfgsystic(void);
-#endif
-
 #if defined(TZ_SERVICE_ATTESTATION_PRESENT)
-psa_status_t sli_tz_attestation_get_public_key(psa_invec in_vec[],
-                                               size_t in_len,
-                                               psa_outvec out_vec[],
-                                               size_t out_len);
-psa_status_t sli_initial_attest_get_token(psa_invec in_vec[],
-                                          size_t in_len,
-                                          psa_outvec out_vec[],
-                                          size_t out_len);
-psa_status_t sli_initial_attest_get_token_size(psa_invec in_vec[],
-                                               size_t in_len,
-                                               psa_outvec out_vec[],
-                                               size_t out_len);
+  #include "sli_tz_service_attestation.h"
 #endif
 
 #include "sli_tz_s_interface_funcs_autogen.h"
+
+//------------------------------------------------------------------------------
+// Macros
 
 #if defined(TZ_SERVICE_NVM3_PRESENT)
 
@@ -460,52 +362,5 @@ int32_t sli_tz_s_interface_dispatch_simple_no_args(uint32_t sid)
   }
 
   return simple_function_table_no_args[sid]();
-}
-
-SLI_TZ_CMSE_NONSECURE_ENTRY
-void toggle_led_nsc(void) 
-{
-  GPIO_PinOutToggle(gpioPortB, 2);
-}
-
-static uint8_t temp_buf[16];
-SLI_TZ_CMSE_NONSECURE_ENTRY
-uint32_t transmit_nsc(const uint8_t *data, uint16_t length)
-{
-  // 1) validate pointer met cmse check addr range
-  // 2) copy data naar local temp secure buffer
-  memcpy(temp_buf, data, length);
-
-  // 3) Transmit met secure radio
-  return transmit_packet(temp_buf, length);
-}
-
-SLI_TZ_CMSE_NONSECURE_ENTRY
-void print_nsc(const char *data, uint16_t length) 
-{
-  printf("NW message: %.*s", length, data);
-}
-
-SLI_TZ_CMSE_NONSECURE_ENTRY
-uint16_t download_packet_nsc(const char *buffer, uint16_t max_buffer_size)
-{
-  // Validation ...
-  (void)max_buffer_size;
-  RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
-  uint8_t temp_buf[32];
-  uint32_t packet_bytes = download_packet(rail_handle, temp_buf);
-  // if (status != RAIL_STATUS_NO_ERROR) {
-  //   printf("download_packet failed: %lu\n", status);
-  //   return status;
-  // }
-  // Check evt temp buf eerst
-  memcpy((void *)buffer, temp_buf, 32);
-  return packet_bytes;
-}
-
-SLI_TZ_CMSE_NONSECURE_ENTRY
-bool boot_state_commit_proof_of_life_nsc(void)
-{
-  return boot_state_commit_proof_of_life();
 }
 #endif //TZ_SERVICE_SYSCFG_PRESENT || TZ_SERVICE_MSC_PRESENT

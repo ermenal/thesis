@@ -43,7 +43,27 @@ static const iovec_fn crypto_function_table[] = {
 
 #if defined(TZ_SERVICE_PSA_ITS_PRESENT) || defined(TZ_SERVICE_NVM3_PRESENT)
 static const iovec_fn nvm3_function_table[] = {
+(iovec_fn)sli_tz_nvm3_init_default,
+(iovec_fn)sli_tz_nvm3_deinit_default,
 
+(iovec_fn)sli_tz_nvm3_read_partial_data,
+(iovec_fn)sli_tz_nvm3_read_data,
+(iovec_fn)sli_tz_nvm3_write_data,
+(iovec_fn)sli_tz_nvm3_delete_object,
+(iovec_fn)sli_tz_nvm3_open,
+(iovec_fn)sli_tz_nvm3_close,
+(iovec_fn)sli_tz_nvm3_get_object_info,
+(iovec_fn)sli_tz_nvm3_write_counter,
+(iovec_fn)sli_tz_nvm3_read_counter,
+(iovec_fn)sli_tz_nvm3_increment_counter,
+(iovec_fn)sli_tz_nvm3_erase_all,
+(iovec_fn)sli_tz_nvm3_get_erase_count,
+(iovec_fn)sli_tz_nvm3_set_erase_count,
+(iovec_fn)sli_tz_nvm3_repack,
+(iovec_fn)sli_tz_nvm3_repack_needed,
+(iovec_fn)sli_tz_nvm3_resize,
+(iovec_fn)sli_tz_nvm3_enum_objects,
+(iovec_fn)sli_tz_nvm3_enum_deleted_objects,
 
 };
 #endif // TZ_SERVICE_PSA_ITS_PRESENT || TZ_SERVICE_NVM3_PRESENT

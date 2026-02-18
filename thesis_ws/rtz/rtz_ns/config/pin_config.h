@@ -56,6 +56,14 @@
 // [PRS.SYNCH3]$
 
 // $[GPIO]
+// GPIO SWV on PA03
+#ifndef GPIO_SWV_PORT                           
+#define GPIO_SWV_PORT                            SL_GPIO_PORT_A
+#endif
+#ifndef GPIO_SWV_PIN                            
+#define GPIO_SWV_PIN                             3
+#endif
+
 // [GPIO]$
 
 // $[TIMER0]
@@ -119,9 +127,41 @@
 // [I2C0]$
 
 // $[EUSART0]
+// EUSART0 RX on PA10
+#ifndef EUSART0_RX_PORT                         
+#define EUSART0_RX_PORT                          SL_GPIO_PORT_A
+#endif
+#ifndef EUSART0_RX_PIN                          
+#define EUSART0_RX_PIN                           10
+#endif
+
+// EUSART0 TX on PA09
+#ifndef EUSART0_TX_PORT                         
+#define EUSART0_TX_PORT                          SL_GPIO_PORT_A
+#endif
+#ifndef EUSART0_TX_PIN                          
+#define EUSART0_TX_PIN                           9
+#endif
+
 // [EUSART0]$
 
 // $[PTI]
+// PTI DFRAME on PC02
+#ifndef PTI_DFRAME_PORT                         
+#define PTI_DFRAME_PORT                          SL_GPIO_PORT_C
+#endif
+#ifndef PTI_DFRAME_PIN                          
+#define PTI_DFRAME_PIN                           2
+#endif
+
+// PTI DOUT on PC03
+#ifndef PTI_DOUT_PORT                           
+#define PTI_DOUT_PORT                            SL_GPIO_PORT_C
+#endif
+#ifndef PTI_DOUT_PIN                            
+#define PTI_DOUT_PIN                             3
+#endif
+
 // [PTI]$
 
 // $[MODEM]

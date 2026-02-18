@@ -29,8 +29,9 @@
 
  MEMORY
  {
-   FLASH      (rx)  : ORIGIN = 0x08026000, LENGTH = 0x1E000
+   FLASH      (rx)  : ORIGIN = 0x8040000, LENGTH = 0x40000
    RAM        (rwx) : ORIGIN = 0x20008004, LENGTH = 0x7ffc
+   BOOTLOADER_RESET_REGION (rwx) : ORIGIN = 0x20008000, LENGTH = 0x4
  }
 
 ENTRY(Reset_Handler)
@@ -47,6 +48,13 @@ SECTIONS
     __Vectors_End = .;
     __Vectors_Size = __Vectors_End - __Vectors;
   } > FLASH
+  .bootloader_reset_section (NOLOAD):
+  {
+    __ResetReasonStart__ = .;
+    . = . + 4;
+    . = ALIGN(4);
+    __ResetReasonEnd__ = .;
+  } > BOOTLOADER_RESET_REGION
 
   .stack (NOLOAD):
   {
@@ -64,26 +72,26 @@ SECTIONS
     __bss_start__ = .;
     *(SORT_BY_ALIGNMENT(.bss*))
     *(COMMON)
-    . = ALIGN(4);
+    . = ALIGN(32);
     __bss_end__ = .;
   } > RAM
 
 
-  .noinit (NOLOAD) : ALIGN(4)
+  .noinit (NOLOAD) : ALIGN(32)
   {
     *(.noinit*);
   } > RAM
 
 
-  text_application_ram : ALIGN(4)
+  text_application_ram : ALIGN(32)
   {
-    . = ALIGN(4);
+    . = ALIGN(32);
     __vma_ramfuncs_start__ = .;
     __text_application_ram_start__ = .;
 
     *(text_application_ram)
 
-    . = ALIGN(4);
+    . = ALIGN(32);
     __vma_ramfuncs_end__ = .;
     __text_application_ram_end__ = .;
   } > RAM AT > FLASH
@@ -220,8 +228,8 @@ heap_size = heap_limit - __HeapBase;
   } > RAM
 
   __heap_size = __HeapLimit - __HeapBase;
-  __ram_end__ = 0x20008000 + 0x7ffc;
-  __main_flash_end__ = 0x08026000 + 0x1E000;
+  __ram_end__ = 0x20008004 + 0x7ffc;
+  __main_flash_end__ = 0x8040000 + 0x40000;
 
    /* This is where we handle flash storage blocks. We use dummy sections for finding the configured
    * block sizes and then "place" them at the end of flash when the size is known. */
@@ -246,6 +254,6 @@ heap_size = heap_limit - __HeapBase;
   ASSERT((linker_storage_begin >= (__etext + SIZEOF(.data))), "FLASH memory overflowed !")
 
 
-  app_flash_end = 0x08026000 + 0x1E000;
+  app_flash_end = 0x8040000 + 0x40000;
   ASSERT( (linker_nvm_begin + SIZEOF(.nvm)) <= app_flash_end, "NVM3 is excessing the flash size !")
 }

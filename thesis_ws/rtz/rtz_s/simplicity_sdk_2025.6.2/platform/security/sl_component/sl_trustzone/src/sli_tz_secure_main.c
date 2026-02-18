@@ -28,31 +28,22 @@
  *
  ******************************************************************************/
 
-#include "efr32fg23b010f512im48.h"
-#include "sl_main_init.h"
-#include <stdio.h>
 #if defined (SL_COMPONENT_CATALOG_PRESENT)
   #include "sl_component_catalog.h"
 #endif
 
 #include "arm_cmse.h"
+#include "em_device.h"
 #include "psa/crypto.h"
+#include "sl_memory_manager.h"
 
 #if defined(SL_CATALOG_GECKO_BOOTLOADER_INTERFACE_PRESENT)
   #include "btl_interface.h"
 #endif
 
-#if (_SILICON_LABS_SECURITY_FEATURE != _SILICON_LABS_SECURITY_FEATURE_VAULT) \
-  || (defined(MBEDTLS_PSA_CRYPTO_STORAGE_C) && defined(SLI_PSA_ITS_ENCRYPTED))
   #include "sl_se_manager.h"
-#endif
-#if defined(MBEDTLS_PSA_CRYPTO_STORAGE_C) && defined(SLI_PSA_ITS_ENCRYPTED)
-  #include "sli_se_version_dependencies.h"
-#endif
-#if defined(MBEDTLS_PSA_CRYPTO_STORAGE_C) && defined(SLI_PSA_ITS_ENCRYPTED) \
-  && defined(CRYPTOACC_PRESENT)
+  #include "sl_se_manager_util.h"
   #include "sli_se_manager_mailbox.h"
-#endif
 #if defined(CRYPTOACC_PRESENT)
   #include "psa/internal_trusted_storage.h"
   #include "sli_psa_driver_common.h"
@@ -60,14 +51,10 @@
 #endif
 
 #include "tz_secure_memory_autogen.h"
+#include "sli_se_version_dependencies.h"
 
 #include "sl_mpu.h"
 #include "fih.h"
-#include "mijn_tz_setup.h"
-#include "second_main.h"
-
-extern bool boot_state_manager_init(void);
-extern bool boot_state_commit_proof_of_life(void);
 
 // -----------------------------------------------------------------------------
 // External symbols
@@ -286,13 +273,8 @@ int main(void)
   }
 
   // Configure interrupt target states before any secure interrupts are enabled.
-  // FIH_CALL(configure_interrupt_target_states, fih_rc);
-  // if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
-  //   fatal_error();
-  // }
-  fixNVIC();
-
-  if (!boot_state_manager_init()) {
+  FIH_CALL(configure_interrupt_target_states, fih_rc);
+  if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
     fatal_error();
   }
 
@@ -348,54 +330,45 @@ int main(void)
   // We should configure the SAU as early as possible in order to avoid odd
   // PPU security faults when accessing peripherals (e.g. CMU) after they have
   // been reconfigured by the SMU.
-  // FIH_CALL(configure_sau, fih_rc);
-  // if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
-  //   fatal_error();
-  // }
-  // FIH_CALL(configure_smu, fih_rc);
-  // if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
-  //   fatal_error();
-  // }
-  // FIH_CALL(configure_mpu, fih_rc);
-  // if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
-  //   fatal_error();
-  // }
+  FIH_CALL(configure_sau, fih_rc);
+  if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
+    fatal_error();
+  }
+  FIH_CALL(configure_smu, fih_rc);
+  if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
+    fatal_error();
+  }
+  FIH_CALL(configure_mpu, fih_rc);
+  if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
+    fatal_error();
+  }
 
   // The NS app should not be able to write to secure flash (including the
   // bootloader). As an extra layer of protection, we will enable flash page
   // locks. This also stops the NS app from being able to erase the S code
   // using the MSC service, which is another benefit.
-  // FIH_CALL(enable_page_locks, fih_rc);
-  // if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
-  //   fatal_error();
-  // }
+  FIH_CALL(enable_page_locks, fih_rc);
+  if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
+    fatal_error();
+  }
 
   // Initialize the Memory Manager ahead of the PSA Crypto init, in case PSA
   // needs to utilize dynamic memory allocation.
-  // sl_memory_init();
+  sl_memory_init();
 
-  // volatile psa_status_t psa_status = PSA_ERROR_GENERIC_ERROR;
-  // psa_status = psa_crypto_init();
-  // if (fih_not_eq(fih_int_encode(psa_status), fih_int_encode(PSA_SUCCESS))) {
-  //   fatal_error();
-  // }
+  volatile psa_status_t psa_status = PSA_ERROR_GENERIC_ERROR;
+  psa_status = psa_crypto_init();
+  if (fih_not_eq(fih_int_encode(psa_status), fih_int_encode(PSA_SUCCESS))) {
+    fatal_error();
+  }
 
-  config_sau();
-  config_smu();
-  config_mpu();
   FIH_CALL(enable_ns_fpu, fih_rc);
   if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
     fatal_error();
   }
-  sl_main_init();
-  printf("In secure main, voor init radio\n");
-  // printf("SLOT A: In secure main, voor init radio\n");
-  // printf("SLOT B: In secure main, voor init radio\n");
 
-  init_secure_radio();
-  printf("In secure main, na init radio\n");
-  // printf("SLOT A: In secure main, na init radio\n");
-  // printf("SLOT B: In secure main, na init radio\n");
+  printf("Net voor ns jump\n");
+
   start_ns_app();
 
   // Will never get here, as non-secure software doesn't return.
@@ -958,14 +931,6 @@ static inline void enable_smu_security_fault_interrupts(void)
  * everything points to the secure world, and this function redirects all
  * intterupts to non-secure to better support existing applications.
  *****************************************************************************/
-#define RADIO_INTERRUPT_PRIORITY (3) // A mid-range priority
-
-const IRQn_Type radio_irqs[] = {
-    FRC_PRI_IRQn, FRC_IRQn, MODEM_IRQn, RAC_SEQ_IRQn, RAC_RSM_IRQn,
-    BUFC_IRQn, AGC_IRQn, PROTIMER_IRQn, SYNTH_IRQn,
-    HOSTMAILBOX_IRQn, RFECA0_IRQn, RFECA1_IRQn, HFRCO0_IRQn
-};
-
 static fih_int __attribute__ ((noinline)) configure_interrupt_target_states(void)
 {
   fih_int fih_rc = FIH_SUCCESS;
@@ -991,28 +956,6 @@ static fih_int __attribute__ ((noinline)) configure_interrupt_target_states(void
   NVIC_ClearTargetState(SYSCFG_IRQn);
   NVIC_ClearTargetState(MSC_IRQn);
   #endif
-  NVIC_ClearTargetState(LDMA_IRQn);
-  NVIC_ClearTargetState(FRC_IRQn);
-  NVIC_ClearTargetState(FRC_PRI_IRQn);
-  NVIC_ClearTargetState(SYNTH_IRQn);
-  NVIC_ClearTargetState(MODEM_IRQn);
-  NVIC_ClearTargetState(RAC_SEQ_IRQn);
-  NVIC_ClearTargetState(RAC_RSM_IRQn);
-  NVIC_ClearTargetState(BUFC_IRQn);
-  NVIC_ClearTargetState(AGC_IRQn);
-  NVIC_ClearTargetState(PROTIMER_IRQn);
-  NVIC_ClearTargetState(HOSTMAILBOX_IRQn);
-
-  for (uint32_t i = 0; i < (sizeof(radio_irqs) / sizeof(IRQn_Type)); i++) {
-    NVIC_ClearTargetState(radio_irqs[i]);
-    // NVIC_SetPriority(radio_irqs[i], RADIO_INTERRUPT_PRIORITY);
-  }
-  
-
-
-  // NVIC_ClearTargetState(GPIO_EVEN_IRQn);
-  NVIC_ClearTargetState(GPIO_ODD_IRQn);
-
 
 #if defined(TFM_FIH_PROFILE_ON) && defined(TFM_FIH_PROFILE_HIGH)
 
@@ -1188,10 +1131,8 @@ static fih_int __attribute__ ((noinline)) enable_page_locks(void)
 __WEAK void start_ns_app(void)
 {
   // Set stack pointer.
-  uint32_t ns_msp = *((uint32_t *)(FLASH_BASE + TZ_NS_FLASH_OFFSET));
-  uint32_t ns_psp = *((uint32_t *)(FLASH_BASE + TZ_NS_FLASH_OFFSET));
-  __TZ_set_MSP_NS(ns_msp);
-  __TZ_set_PSP_NS(ns_psp);
+  __TZ_set_MSP_NS(*((uint32_t *)(FLASH_BASE + TZ_NS_FLASH_OFFSET)));
+  __TZ_set_PSP_NS(*((uint32_t *)(FLASH_BASE + TZ_NS_FLASH_OFFSET)));
 
   #if defined(TFM_FIH_PROFILE_ON) && defined(TFM_FIH_PROFILE_HIGH)
   // Verify MSP_NS is not glitched

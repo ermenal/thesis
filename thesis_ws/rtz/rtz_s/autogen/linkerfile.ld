@@ -29,8 +29,8 @@
 
  MEMORY
  {
-   FLASH      (rx)  : ORIGIN = 0x08008000, LENGTH = 0x1E000
-   RAM        (rwx) : ORIGIN = 0x20000004, LENGTH = 0x8000
+   FLASH      (rx)  : ORIGIN = 0x8000000, LENGTH = 0x40000
+   RAM        (rwx) : ORIGIN = 0x20000004, LENGTH = 0x7ffc
    BOOTLOADER_RESET_REGION (rwx) : ORIGIN = 0x20000000, LENGTH = 0x4
  }
 
@@ -245,8 +245,8 @@ heap_size = heap_limit - __HeapBase;
   } > RAM
 
   __heap_size = __HeapLimit - __HeapBase;
-  __ram_end__ = 0x20000004 + 0x8000;
-  __main_flash_end__ = 0x08008000 + 0x1E000;
+  __ram_end__ = 0x20000004 + 0x7ffc;
+  __main_flash_end__ = 0x8000000 + 0x40000;
 
    /* This is where we handle flash storage blocks. We use dummy sections for finding the configured
    * block sizes and then "place" them at the end of flash when the size is known. */

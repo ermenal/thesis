@@ -3,7 +3,7 @@
  * @brief Power Amplifier configuration file.
  *******************************************************************************
  * # License
- * <b>Copyright 2025 Silicon Laboratories Inc. www.silabs.com</b>
+ * <b>Copyright 2020 Silicon Laboratories Inc. www.silabs.com</b>
  *******************************************************************************
  *
  * SPDX-License-Identifier: Zlib
@@ -50,7 +50,7 @@
 // <o SL_RAIL_UTIL_PA_VOLTAGE_MV> Milli-volts on PA supply pin (PA_VDD)
 // <0-65535:1>
 // <i> Default: 3300
-#define SL_RAIL_UTIL_PA_VOLTAGE_MV          3300
+#define SL_RAIL_UTIL_PA_VOLTAGE_MV          1800
 
 // <o SL_RAIL_UTIL_PA_SELECTION_2P4GHZ> 2.4 GHz PA Selection
 // <RAIL_TX_POWER_MODE_NONE=> Disable
@@ -64,6 +64,16 @@
 // <RAIL_TX_POWER_MODE_NONE=> Disable
 // <i> Default: RAIL_TX_POWER_MODE_SUBGIG_HIGHEST
 #define SL_RAIL_UTIL_PA_SELECTION_SUBGHZ    RAIL_TX_POWER_MODE_SUBGIG_HIGHEST
+// </h>
+
+// <h> PA Curve Configuration
+// <s.50 SL_RAIL_UTIL_PA_CURVE_HEADER> Header file containing custom PA curves
+// <i> Default: "pa_curves_efr32.h"
+#define SL_RAIL_UTIL_PA_CURVE_HEADER        "pa_curves_efr32.h"
+
+// <s.50 SL_RAIL_UTIL_PA_CURVE_TYPES> Header file containing PA curve types
+// <i> Default: "pa_curve_types_efr32.h"
+#define SL_RAIL_UTIL_PA_CURVE_TYPES         "pa_curve_types_efr32.h"
 // </h>
 
 // <h> PA Calibration Configuration

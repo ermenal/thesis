@@ -10,7 +10,7 @@ referenced in this SBOM.)
 -->
 <bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
   <metadata>
-    <timestamp>2025-10-31T01:53:31Z</timestamp>
+    <timestamp>2026-02-18T16:15:03Z</timestamp>
     <authors>
       <author>
         <name>Silicon Laboratories, Inc.</name>
@@ -35,8 +35,38 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:bootloader_app_properties" type="library">
+          <name>App Properties</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:bootloader_interface" type="library">
+          <name>Bootloader Application Interface</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>MSLA</expression>
+          </licenses>
+        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:brd2600a_a03" type="library">
           <name>BRD2600A rev A03</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:button" type="library">
+          <name>Generic Button API</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -65,6 +95,106 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_burtc" type="library">
+          <name>BURTC</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_letimer" type="library">
+          <name>LETIMER</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_prs" type="library">
+          <name>PRS</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_se" type="library">
+          <name>SE</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_smu" type="library">
+          <name>SMU</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_usart" type="library">
+          <name>USART</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_wdog" type="library">
+          <name>WDOG</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:fg23_dk2600a" type="library">
+          <name>FG23-DK2600A</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:gpiointerrupt" type="library">
+          <name>GPIOINT</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:hfxo_manager" type="library">
+          <name>HFXO Manager</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:iostream_recommended_stream" type="library">
           <name>IO Stream: Recommended Stream</name>
           <version>2025.6.2</version>
@@ -85,6 +215,26 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:nvm3_source" type="library">
+          <name>NVM3 Core (source)</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:power_manager" type="library">
+          <name>Power Manager</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:printf" type="library">
           <name>Tiny printf</name>
           <version>2025.6.2</version>
@@ -95,8 +245,98 @@ referenced in this SBOM.)
             <expression>MIT</expression>
           </licenses>
         </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_lib_singleprotocol" type="library">
+          <name>RAIL Library, Single Protocol</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>MSLA</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_util_callbacks" type="library">
+          <name>RAIL Utility, Callbacks</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_util_dma" type="library">
+          <name>RAIL Utility, DMA</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_util_init" type="library">
+          <name>RAIL Utility, Initialization</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_util_pa" type="library">
+          <name>RAIL Utility, PA</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_util_recommended" type="library">
+          <name>RAIL Utility, Recommended</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:silabs_core_memory_manager" type="library">
+          <name>Memory Manager</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>MSLA</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:simple_button" type="library">
+          <name>Simple Button</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:sl_system" type="library">
           <name>System Setup (sl_system)</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:stdio" type="library">
+          <name>Standard I/O</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -154,37 +394,38 @@ referenced in this SBOM.)
             </ancestors>
           </pedigree>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:mbedtls_source" type="library">
-          <name>Source Code</name>
+        <component bom-ref="simplicity_sdk:2025.6.2:udelay" type="library">
+          <name>Microsecond Delay</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
 	      </supplier>
           <licenses>
-            <expression>Apache-2.0</expression>
+            <expression>Zlib</expression>
           </licenses>
-          <pedigree>
-            <ancestors>
-              <component bom-ref="mbedtls_source:v3.6.2" type="library">
-                <supplier>
-                  <name>Trusted Firmware</name>
-                </supplier>
-                <name>Mbed TLS</name>
-                <version>v3.6.2</version>
-                <pedigree>
-                  <notes>Mbed TLS is a C library implementing the PSA Cryptography API, cryptographic primitives, X.509 certificate manipulation and the SSL/TLS and DTLS protocols</notes>
-                </pedigree>
-                <externalReferences>
-                  <reference type="website">
-                    <url>https://github.com/Mbed-TLS/mbedtls.git</url>
-                  </reference>
-                </externalReferences>
-              </component>
-            </ancestors>
-          </pedigree>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:ustimer" type="library">
+          <name>USTIMER</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
         </component>
         <component bom-ref="simplicity_sdk:2025.6.2:dmadrv_core" type="library">
           <name>DMADRV Core</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_util_init_core" type="library">
+          <name>RAIL Utility, Initialization Core</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -203,28 +444,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:board_control" type="library">
-          <name>Board Control</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:emlib_eusart" type="library">
           <name>EUSART</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:device_init_core" type="library">
-          <name>Core</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -253,16 +474,6 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:emlib_system" type="library">
-          <name>SYSTEM</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:clock_manager_init_hal_s2" type="library">
           <name>Clock Manager Init HAL Series 2</name>
           <version>2025.6.2</version>
@@ -275,16 +486,6 @@ referenced in this SBOM.)
         </component>
         <component bom-ref="simplicity_sdk:2025.6.2:psa_crypto_trng" type="library">
           <name>TRNG</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:hal_gpio" type="library">
-          <name>GPIO</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -313,8 +514,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:event_handler" type="library">
-          <name>Event Handler</name>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_ldma" type="library">
+          <name>LDMA</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -323,8 +524,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:tz_service_syscfg" type="library">
-          <name>SYSCFG Service for TrustZone Secure Key Library</name>
+        <component bom-ref="simplicity_sdk:2025.6.2:nvm3_default_config" type="library">
+          <name>NVM3 Default Config</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -362,58 +563,8 @@ referenced in this SBOM.)
             </ancestors>
           </pedigree>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:memory_manager_region" type="library">
-          <name>Memory Manager region</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:iostream" type="library">
           <name>IO Stream</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:emlib_msc" type="library">
-          <name>MSC</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:tz_sl_interface_crypto_key_funcs" type="library">
-          <name>tz_sl_interface_crypto_key_funcs</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:device_i2c" type="library">
-          <name>Device Manager I2C</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:sl_system_compatibility" type="library">
-          <name>System Setup Compatibility Layer (Baremetal Only)</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -442,26 +593,6 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:device_init_emu" type="library">
-          <name>Energy Management Unit (EMU)</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:debug_swo" type="library">
-          <name>SWO Debug</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:enum" type="library">
           <name>Enumerations</name>
           <version>2025.6.2</version>
@@ -472,8 +603,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:interrupt_manager_cortexm" type="library">
-          <name>Interrupt Manager Cortex-M</name>
+        <component bom-ref="simplicity_sdk:2025.6.2:power_manager_core_impl_sleep_loop" type="library">
+          <name>Power Manager: Core implementation</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -502,8 +633,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:sl_main_memory_init" type="library">
-          <name>sl_main Setup</name>
+        <component bom-ref="simplicity_sdk:2025.6.2:mpu" type="library">
+          <name>Simple MPU</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -512,8 +643,18 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:sl_string" type="library">
-          <name>String Functions</name>
+        <component bom-ref="simplicity_sdk:2025.6.2:nvm3_optimization_disable" type="library">
+          <name>NVM3 disable optimization</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:sl_main_memory_init" type="library">
+          <name>sl_main Setup</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -592,48 +733,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:emlib_gpio" type="library">
-          <name>GPIO</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:brd2600a_config" type="library">
           <name>brd2600a config</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:tz_secure_key_library_ns" type="library">
-          <name>tz_secure_key_library_ns</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:tz_common" type="library">
-          <name>tz_common</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:device_clock_hal" type="library">
-          <name>Device Manager Clock HAL</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -652,28 +753,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:iostream_eusart" type="library">
-          <name>IO Stream: EUSART</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:memory_manager_pool" type="library">
           <name>Memory Manager Memory Pool</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:emlib_ldma" type="library">
-          <name>LDMA</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -692,75 +773,6 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:sl_main_custom_main" type="library">
-          <name>SL Main custom main provides</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:mbedtls_slcrypto" type="library">
-          <name>Silicon Labs Mbed TLS support</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:tz_sl_interface" type="library">
-          <name>Interface for TrustZone Secure Key Library</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib AND BSD-3-Clause</expression>
-          </licenses>
-          <pedigree>
-            <ancestors>
-              <component bom-ref="tz_sl_interface:v1.5" type="library">
-                <supplier>
-                  <name>Trusted Firmware</name>
-                </supplier>
-                <name>TrustedFirmware-M (TF-M)</name>
-                <version>v1.5</version>
-                <pedigree>
-                  <notes>Trusted Firmware for M profile Arm CPUs</notes>
-                </pedigree>
-                <externalReferences>
-                  <reference type="website">
-                    <url>https://review.trustedfirmware.org/TF-M/trusted-firmware-m.git</url>
-                  </reference>
-                </externalReferences>
-              </component>
-            </ancestors>
-          </pedigree>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:sl_assert" type="library">
-          <name>Assert Functions</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:device_clock" type="library">
-          <name>Device Manager Clock</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:tz_iovec_check" type="library">
           <name>tz_iovec_check</name>
           <version>2025.6.2</version>
@@ -771,38 +783,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:component_catalog" type="library">
-          <name>Component Catalog</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:emlib_emu" type="library">
-          <name>EMU</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:emlib_cmu" type="library">
           <name>CMU</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:clock_manager_runtime_hal_s2" type="library">
-          <name>Clock Manager Runtime HAL Series 2</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -850,67 +832,8 @@ referenced in this SBOM.)
             </ancestors>
           </pedigree>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:hal_eusart" type="library">
-          <name>EUSART</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:iostream_eusart_core" type="library">
-          <name>IO Stream: EUSART Core</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:dmadrv" type="library">
           <name>DMADRV</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:mbedtls_core" type="library">
-          <name>Mbed TLS</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib AND Apache-2.0</expression>
-          </licenses>
-          <pedigree>
-            <ancestors>
-              <component bom-ref="mbedtls_core:v3.6.2" type="library">
-                <supplier>
-                  <name>Trusted Firmware</name>
-                </supplier>
-                <name>Mbed TLS</name>
-                <version>v3.6.2</version>
-                <pedigree>
-                  <notes>Mbed TLS is a C library implementing the PSA Cryptography API, cryptographic primitives, X.509 certificate manipulation and the SSL/TLS and DTLS protocols</notes>
-                </pedigree>
-                <externalReferences>
-                  <reference type="website">
-                    <url>https://github.com/Mbed-TLS/mbedtls.git</url>
-                  </reference>
-                </externalReferences>
-              </component>
-            </ancestors>
-          </pedigree>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:sl_core" type="library">
-          <name>core</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -929,8 +852,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:emlib_common" type="library">
-          <name>Common Headers</name>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_util_pti" type="library">
+          <name>RAIL Utility, PTI</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -938,55 +861,6 @@ referenced in this SBOM.)
           <licenses>
             <expression>Zlib</expression>
           </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:tz_util" type="library">
-          <name>tz_util</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:tz_sl_interface_crypto_rng_funcs" type="library">
-          <name>tz_sl_interface_crypto_rng_funcs</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:mbedtls_platform_dynamic_memory_allocation_config_default" type="library">
-          <name>Default dynamic memory allocation macros for mbedtls</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib AND Apache-2.0</expression>
-          </licenses>
-          <pedigree>
-            <ancestors>
-              <component bom-ref="mbedtls_platform_dynamic_memory_allocation_config_default:v3.6.2" type="library">
-                <supplier>
-                  <name>Trusted Firmware</name>
-                </supplier>
-                <name>Mbed TLS</name>
-                <version>v3.6.2</version>
-                <pedigree>
-                  <notes>Mbed TLS is a C library implementing the PSA Cryptography API, cryptographic primitives, X.509 certificate manipulation and the SSL/TLS and DTLS protocols</notes>
-                </pedigree>
-                <externalReferences>
-                  <reference type="website">
-                    <url>https://github.com/Mbed-TLS/mbedtls.git</url>
-                  </reference>
-                </externalReferences>
-              </component>
-            </ancestors>
-          </pedigree>
         </component>
         <component bom-ref="simplicity_sdk:2025.6.2:device_peripheral_hal" type="library">
           <name>Device Manager Peripheral HAL</name>
@@ -998,48 +872,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:cmsis_core" type="library">
-          <name>CMSIS-Core</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Apache 2.0</expression>
-          </licenses>
-          <pedigree>
-            <ancestors>
-              <component bom-ref="cmsis_core:5.8.0" type="library">
-                <supplier>
-                  <name>ARM-software</name>
-                </supplier>
-                <name>CMSIS_5</name>
-                <version>5.8.0</version>
-                <purl>pkg:github/ARM-software/CMSIS_5@5.8.0</purl>
-                <pedigree>
-                  <notes>The CMSIS is a set of tools, APIs, frameworks, and work flows</notes>
-                </pedigree>
-                <externalReferences>
-                  <reference type="website">
-                    <url>https://github.com/ARM-software/CMSIS_5</url>
-                  </reference>
-                </externalReferences>
-              </component>
-            </ancestors>
-          </pedigree>
-        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:interrupt_manager" type="library">
           <name>Interrupt Manager</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:emlib_core" type="library">
-          <name>CORE</name>
           <version>2025.6.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -1136,6 +970,712 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:clock_manager_runtime" type="library">
+          <name>Clock Manager Runtime</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:memory_manager_retention_control_hal" type="library">
+          <name>Memory Manager Retention Control HAL</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:device_peripheral" type="library">
+          <name>Device Manager Peripheral</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:nvm3_default" type="library">
+          <name>NVM3 Default Instance</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:psa_builtin_key_support_se" type="library">
+          <name>Built-In Keys</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:se_manager_mailbox" type="library">
+          <name>SE mailbox utilities</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_util_rssi" type="library">
+          <name>RAIL Utility, RSSI</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:power_manager_handler_implementation" type="library">
+          <name>Power Manager: Handler</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:mbedtls_source" type="library">
+          <name>Source Code</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Apache-2.0</expression>
+          </licenses>
+          <pedigree>
+            <ancestors>
+              <component bom-ref="mbedtls_source:v3.6.2" type="library">
+                <supplier>
+                  <name>Trusted Firmware</name>
+                </supplier>
+                <name>Mbed TLS</name>
+                <version>v3.6.2</version>
+                <pedigree>
+                  <notes>Mbed TLS is a C library implementing the PSA Cryptography API, cryptographic primitives, X.509 certificate manipulation and the SSL/TLS and DTLS protocols</notes>
+                </pedigree>
+                <externalReferences>
+                  <reference type="website">
+                    <url>https://github.com/Mbed-TLS/mbedtls.git</url>
+                  </reference>
+                </externalReferences>
+              </component>
+            </ancestors>
+          </pedigree>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_gpio" type="library">
+          <name>GPIO</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:board_control" type="library">
+          <name>Board Control</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:device_init_core" type="library">
+          <name>Core</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:power_manager_core" type="library">
+          <name>Power Manager: Core</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_system" type="library">
+          <name>SYSTEM</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:hal_gpio" type="library">
+          <name>GPIO</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_lib" type="library">
+          <name>RAIL Library, Core</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>MSLA</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:event_handler" type="library">
+          <name>Event Handler</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:tz_service_nvm3" type="library">
+          <name>NVM3 Service for TrustZone Secure Key Library</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:tz_service_syscfg" type="library">
+          <name>SYSCFG Service for TrustZone Secure Key Library</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:memory_manager_region" type="library">
+          <name>Memory Manager region</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:bootloader_interface_s2" type="library">
+          <name>Bootloader Application Interface Series 2</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>MSLA</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_msc" type="library">
+          <name>MSC</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:device_i2c" type="library">
+          <name>Device Manager I2C</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:tz_sl_interface_crypto_key_funcs" type="library">
+          <name>tz_sl_interface_crypto_key_funcs</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:sl_system_compatibility" type="library">
+          <name>System Setup Compatibility Layer (Baremetal Only)</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:power_manager_deepsleep" type="library">
+          <name>Power Manager: Deepsleep</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:debug_swo" type="library">
+          <name>SWO Debug</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:interrupt_manager_cortexm" type="library">
+          <name>Interrupt Manager Cortex-M</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_util_features" type="library">
+          <name>RAIL Library Features, Core</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>MSLA</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:sl_string" type="library">
+          <name>String Functions</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_util_power_manager_init" type="library">
+          <name>RAIL Utility, Power manager init</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:nvm3_default_flash_backend" type="library">
+          <name>NVM3 back-end for default instance in flash</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:tz_common" type="library">
+          <name>tz_common</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:tz_secure_key_library_ns" type="library">
+          <name>tz_secure_key_library_ns</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:device_clock_hal" type="library">
+          <name>Device Manager Clock HAL</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:iostream_eusart" type="library">
+          <name>IO Stream: EUSART</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:sl_main_custom_main" type="library">
+          <name>SL Main custom main provides</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:mbedtls_slcrypto" type="library">
+          <name>Silicon Labs Mbed TLS support</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:tz_sl_interface" type="library">
+          <name>Interface for TrustZone Secure Key Library</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib AND BSD-3-Clause</expression>
+          </licenses>
+          <pedigree>
+            <ancestors>
+              <component bom-ref="tz_sl_interface:v1.5" type="library">
+                <supplier>
+                  <name>Trusted Firmware</name>
+                </supplier>
+                <name>TrustedFirmware-M (TF-M)</name>
+                <version>v1.5</version>
+                <pedigree>
+                  <notes>Trusted Firmware for M profile Arm CPUs</notes>
+                </pedigree>
+                <externalReferences>
+                  <reference type="website">
+                    <url>https://review.trustedfirmware.org/TF-M/trusted-firmware-m.git</url>
+                  </reference>
+                </externalReferences>
+              </component>
+            </ancestors>
+          </pedigree>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:sl_assert" type="library">
+          <name>Assert Functions</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:device_clock" type="library">
+          <name>Device Manager Clock</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:component_catalog" type="library">
+          <name>Component Catalog</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_emu" type="library">
+          <name>EMU</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:clock_manager_runtime_hal_s2" type="library">
+          <name>Clock Manager Runtime HAL Series 2</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:hal_eusart" type="library">
+          <name>EUSART</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:iostream_eusart_core" type="library">
+          <name>IO Stream: EUSART Core</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_common" type="library">
+          <name>Common Headers</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:mbedtls_core" type="library">
+          <name>Mbed TLS</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib AND Apache-2.0</expression>
+          </licenses>
+          <pedigree>
+            <ancestors>
+              <component bom-ref="mbedtls_core:v3.6.2" type="library">
+                <supplier>
+                  <name>Trusted Firmware</name>
+                </supplier>
+                <name>Mbed TLS</name>
+                <version>v3.6.2</version>
+                <pedigree>
+                  <notes>Mbed TLS is a C library implementing the PSA Cryptography API, cryptographic primitives, X.509 certificate manipulation and the SSL/TLS and DTLS protocols</notes>
+                </pedigree>
+                <externalReferences>
+                  <reference type="website">
+                    <url>https://github.com/Mbed-TLS/mbedtls.git</url>
+                  </reference>
+                </externalReferences>
+              </component>
+            </ancestors>
+          </pedigree>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:sl_core" type="library">
+          <name>core</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_util_built_in_phys" type="library">
+          <name>RAIL Utility, Built-in PHYs Across HFXO Frequencies</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:tz_util" type="library">
+          <name>tz_util</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:rail_util_protocol" type="library">
+          <name>RAIL Utility, Protocol</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:simple_button_core" type="library">
+          <name>Simple Button Configuration</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:tz_sl_interface_crypto_rng_funcs" type="library">
+          <name>tz_sl_interface_crypto_rng_funcs</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:mbedtls_platform_dynamic_memory_allocation_config_default" type="library">
+          <name>Default dynamic memory allocation macros for mbedtls</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib AND Apache-2.0</expression>
+          </licenses>
+          <pedigree>
+            <ancestors>
+              <component bom-ref="mbedtls_platform_dynamic_memory_allocation_config_default:v3.6.2" type="library">
+                <supplier>
+                  <name>Trusted Firmware</name>
+                </supplier>
+                <name>Mbed TLS</name>
+                <version>v3.6.2</version>
+                <pedigree>
+                  <notes>Mbed TLS is a C library implementing the PSA Cryptography API, cryptographic primitives, X.509 certificate manipulation and the SSL/TLS and DTLS protocols</notes>
+                </pedigree>
+                <externalReferences>
+                  <reference type="website">
+                    <url>https://github.com/Mbed-TLS/mbedtls.git</url>
+                  </reference>
+                </externalReferences>
+              </component>
+            </ancestors>
+          </pedigree>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:cmsis_core" type="library">
+          <name>CMSIS-Core</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Apache 2.0</expression>
+          </licenses>
+          <pedigree>
+            <ancestors>
+              <component bom-ref="cmsis_core:5.8.0" type="library">
+                <supplier>
+                  <name>ARM-software</name>
+                </supplier>
+                <name>CMSIS_5</name>
+                <version>5.8.0</version>
+                <purl>pkg:github/ARM-software/CMSIS_5@5.8.0</purl>
+                <pedigree>
+                  <notes>The CMSIS is a set of tools, APIs, frameworks, and work flows</notes>
+                </pedigree>
+                <externalReferences>
+                  <reference type="website">
+                    <url>https://github.com/ARM-software/CMSIS_5</url>
+                  </reference>
+                </externalReferences>
+              </component>
+            </ancestors>
+          </pedigree>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:tz_service_nvm3_common" type="library">
+          <name>NVM3 and ITS service helper component for TrustZone secure library</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_core" type="library">
+          <name>CORE</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:hal_sysrtc" type="library">
+          <name>SYSRTC</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:emlib_timer" type="library">
+          <name>TIMER</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2025.6.2:sleeptimer" type="library">
+          <name>Sleep Timer</name>
+          <version>2025.6.2</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
         <component bom-ref="simplicity_sdk:2025.6.2:psa_crypto_common" type="library">
           <name>Common</name>
           <version>2025.6.2</version>
@@ -1164,26 +1704,6 @@ referenced in this SBOM.)
               </component>
             </ancestors>
           </pedigree>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:clock_manager_runtime" type="library">
-          <name>Clock Manager Runtime</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:memory_manager_retention_control_hal" type="library">
-          <name>Memory Manager Retention Control HAL</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
         </component>
         <component bom-ref="simplicity_sdk:2025.6.2:sl_common" type="library">
           <name>Common Functions</name>
@@ -1223,26 +1743,6 @@ referenced in this SBOM.)
               </component>
             </ancestors>
           </pedigree>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:psa_builtin_key_support_se" type="library">
-          <name>Built-In Keys</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2025.6.2:device_peripheral" type="library">
-          <name>Device Manager Peripheral</name>
-          <version>2025.6.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
         </component>
         <component bom-ref="simplicity_sdk:2025.6.2:sl_main" type="library">
           <name>System Setup (sl_main)</name>

@@ -6,3 +6,6 @@ thesis_project/thesis_project_s/build/debug/sdk/platform/bootloader/api/btl_inte
 *.s37
 *.out
 linker_objs
+*.o
+*.d
+*.txt

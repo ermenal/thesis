@@ -33,8 +33,6 @@
 
 #include "sli_tz_util.h"
 #include "psa/client.h"
-#include <stdbool.h>
-#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -90,21 +88,6 @@ int32_t sli_tz_s_interface_dispatch_simple(uint32_t sid,
 
 SLI_TZ_CMSE_NONSECURE_ENTRY
 int32_t sli_tz_s_interface_dispatch_simple_no_args(uint32_t sid);
-
-SLI_TZ_CMSE_NONSECURE_ENTRY
-void toggle_led_nsc(void);
-
-SLI_TZ_CMSE_NONSECURE_ENTRY
-uint32_t transmit_nsc(const uint8_t *data, uint16_t length);
-
-SLI_TZ_CMSE_NONSECURE_ENTRY
-void print_nsc(const char *data, uint16_t length);
-
-SLI_TZ_CMSE_NONSECURE_ENTRY
-uint16_t download_packet_nsc(const char *buffer, uint16_t max_buffer_size);
-
-SLI_TZ_CMSE_NONSECURE_ENTRY
-bool boot_state_commit_proof_of_life_nsc(void);
 
 #ifdef __cplusplus
 }

@@ -36,24 +36,52 @@ toolchain_settings:
 - {value: debug, option: optimize}
 component:
 - {id: EFR32FG23B010F512IM48}
+- {id: bootloader_app_properties}
+- {id: bootloader_interface}
 - {id: brd2600a_a03}
+- {id: button}
 - {id: clock_manager}
 - {id: device_init}
+- {id: emlib_burtc}
+- {id: emlib_letimer}
+- {id: emlib_prs}
+- {id: emlib_se}
+- {id: emlib_smu}
+- {id: emlib_usart}
+- {id: emlib_wdog}
+- {id: fg23_dk2600a}
+- {id: gpiointerrupt}
+- {id: hfxo_manager}
 - {id: iostream_recommended_stream}
 - {id: iostream_retarget_stdio}
+- {id: nvm3_source}
+- {id: power_manager}
 - {id: printf}
+- {id: rail_lib_singleprotocol}
+- {id: rail_util_callbacks}
+- {id: rail_util_dma}
+- instance: [inst]
+  id: rail_util_init
+- {id: rail_util_pa}
+- {id: rail_util_recommended}
+- {id: silabs_core_memory_manager}
+- instance: [btn0]
+  id: simple_button
 - {id: sl_system}
+- {id: stdio}
 - {id: trustzone_nonsecure}
 - {id: tz_secure_key_library}
 - {id: tz_service_attestation}
+- {id: udelay}
+- {id: ustimer}
 define:
 - {name: DEBUG_EFM}
 - {name: PSA_CRYPTO_PRINT}
 template_contribution:
-- {name: memory_ram_start, priority: 0, value: 536903684}
-- {name: memory_ram_size, priority: 0, value: 32764}
-- {name: memory_flash_start, priority: 0, value: 134373376}
-- {name: memory_flash_size, priority: 0, value: 122880}
+- {name: memory_ram_start, priority: 0, value: 536903680}
+- {name: memory_ram_size, priority: 0, value: 32768}
+- {name: memory_flash_start, priority: 0, value: 134479872}
+- {name: memory_flash_size, priority: 0, value: 262144}
 import:
 - {id: trustzone_secure_application}
 requires:

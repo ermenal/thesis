@@ -18,108 +18,73 @@
 // -----------------------------------------------------------------------------
 //                                   Includes
 // -----------------------------------------------------------------------------
-#include "cmsis_nvic_virtual.h"
-#include "efr32fg23b010f512im48.h"
-#include "sli_tz_s_interface.h"
-#include <stdbool.h>
-#include <stdint.h>
-#include <stdio.h>
-#include <string.h>
+#include "sl_component_catalog.h"
+#include "sl_system_init.h"
+#if defined(SL_CATALOG_POWER_MANAGER_PRESENT)
+#include "sl_power_manager.h"
+#endif
+#if defined(SL_CATALOG_KERNEL_PRESENT)
+#include "sl_system_kernel.h"
+#else // SL_CATALOG_KERNEL_PRESENT
+#include "sl_system_process_action.h"
+#endif // SL_CATALOG_KERNEL_PRESENT
+#include "app_init.h"
+#include "app_process.h"
 
-#define PAYLOAD_LENGTH 16
-static uint8_t payload[PAYLOAD_LENGTH] =
-    {PAYLOAD_LENGTH - 1, 0x01, 0x02, 0x03, 0x04,
-  0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x00 };
+// -----------------------------------------------------------------------------
+//                              Macros and Typedefs
+// -----------------------------------------------------------------------------
 
-static volatile bool send_packet = false;
-static volatile bool packet_received = false;
+// -----------------------------------------------------------------------------
+//                          Static Function Declarations
+// -----------------------------------------------------------------------------
 
-extern bool boot_state_commit_proof_of_life_nsc(void);
+// -----------------------------------------------------------------------------
+//                                Global Variables
+// -----------------------------------------------------------------------------
 
-/*
-* Handler voor packet RX forward van SW
-* Bij RX event: zet packet_received flag om in main loop packet te downloaden
-*/
-void SW0_IRQHandler(void) 
-{
-  // print_nsc("SW0 HANDLER\n", sizeof("SW0 HANDLER\n") - 1);
-  packet_received = true;
-  NVIC_ClearPendingIRQ(SW0_IRQn);
-}
+// -----------------------------------------------------------------------------
+//                                Static Variables
+// -----------------------------------------------------------------------------
 
-/*
-* Handler voor button pressed forward van SW
-* Bij button press: zet send_packet flag om in main loop een packet te sturen
-* + toggle LED
-*/
-void SW1_IRQHandler(void)
-{
-  send_packet = true;
-  toggle_led_nsc();
-  NVIC_ClearPendingIRQ(SW1_IRQn);
-}
+// -----------------------------------------------------------------------------
+//                          Public Function Definitions
+// -----------------------------------------------------------------------------
 
-void init_NVIC_irqs(void)
-{
-  NVIC_EnableIRQ(SW0_IRQn); // Radio RX event 
-  NVIC_EnableIRQ(SW1_IRQn); // Button press event
-}
-
+/***************************************************************************//**
+ * Main function
+ ******************************************************************************/
 int main(void)
 {
-  // while (1){}
-  init_NVIC_irqs();
-  print_nsc("In NS main, voor boot commit\n", sizeof("In NS main, voor boot commit\n") - 1);
-  // print_nsc("SLOT A: In NS main, voor boot commit\n", sizeof("SLOT A: In NS main, voor boot commit\n") - 1);
-  // print_nsc("SLOT B: In NS main, voor boot commit\n", sizeof("SLOT B: In NS main, voor boot commit\n") - 1);
+  // Initialize Silicon Labs device, system, service(s) and protocol stack(s).
+  // Note that if the kernel is present, processing task(s) will be created by
+  // this call.
+  sl_system_init();
 
-  if (boot_state_commit_proof_of_life_nsc()) {
-    const char success_msg[] = "Proof-of-life committed\n";
-    print_nsc(success_msg, (uint16_t)(sizeof(success_msg) - 1u));
-  } else {
-    const char failure_msg[] = "Proof-of-life commit failed\n";
-    print_nsc(failure_msg, (uint16_t)(sizeof(failure_msg) - 1u));
-  }
-  print_nsc("In NS main, na boot commit\n", sizeof("In NS main, na boot commit\n") - 1);
-  // print_nsc("SLOT A: In NS main, na boot commit\n", sizeof("SLOT A: In NS main, na boot commit\n") - 1);
-  // print_nsc("SLOT B: In NS main, na boot commit\n", sizeof("SLOT B: In NS main, na boot commit\n") - 1);
+  // Initialize the application. For example, create periodic timer(s) or
+  // task(s) if the kernel is present.
+  app_init();
 
+#if defined(SL_CATALOG_KERNEL_PRESENT)
+  // Start the kernel. Task(s) created in app_init() will start running.
+  sl_system_kernel_start();
+#else // SL_CATALOG_KERNEL_PRESENT
   while (1) {
-    if (send_packet) {
-      send_packet = false;
-      print_nsc("Transmitting in NS\n", sizeof("Transmitting in NS\n") - 1);
+    // Do not remove this call: Silicon Labs components process action routine
+    // must be called from the super loop.
+    sl_system_process_action();
 
-      transmit_nsc(payload, PAYLOAD_LENGTH);  
-      payload[PAYLOAD_LENGTH - 1]++;
-    }
-    if (packet_received) {
-      packet_received = false;
-      char rx_buf[PAYLOAD_LENGTH*2];
-      uint16_t packet_bytes = download_packet_nsc(rx_buf, PAYLOAD_LENGTH*2);
+    // Application process.
+    app_process_action();
 
-      char to_print[200] = "RX PACKET RECEIVED: ";
-      for (int i=0; i<packet_bytes; i++) {
-        snprintf(to_print + strlen(to_print), 200 - strlen(to_print), "0x%02X ", rx_buf[i]);
-      }
-      snprintf(to_print + strlen(to_print), 200 - strlen(to_print), "\n");
-      print_nsc(to_print, strlen(to_print));
-    }
+#if defined(SL_CATALOG_POWER_MANAGER_PRESENT)
+    // Let the CPU go to sleep if the system allows it.
+    sl_power_manager_sleep();
+#endif
   }
-}
-/*
-__NO_RETURN void HardFault_Handler(void)
-{
-  NVIC_SystemReset();
-  while (1) {
-    __NOP();
-  }
+#endif // SL_CATALOG_KERNEL_PRESENT
 }
 
-__NO_RETURN void Default_Handler(void)
-{
-  NVIC_SystemReset();
-  while (1) {
-    __NOP();
-  }
-}
-*/
+// -----------------------------------------------------------------------------
+//                          Static Function Definitions
+// -----------------------------------------------------------------------------
