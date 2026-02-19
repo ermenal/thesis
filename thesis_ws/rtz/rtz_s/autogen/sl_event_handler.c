@@ -2,6 +2,7 @@
 
 #include "sl_board_init.h"
 #include "sl_clock_manager.h"
+#include "sl_clock_manager_init.h"
 #include "sl_hfxo_manager.h"
 #include "sl_rail_util_dma.h"
 #include "pa_conversions_efr32.h"
@@ -35,8 +36,10 @@
 #include "sl_rail_util_init.h"
 #include "tz_secure_memory_autogen.h"
 #include "../../common/ota_protocol.h"
+#include <stdio.h>
 
-#define OTA_PREEMPT_PERIOD_SECONDS      (60u)
+
+#define OTA_PREEMPT_PERIOD_SECONDS      (5u)
 #define OTA_QUERY_TIMEOUT_US            (300000u)
 #define OTA_CHUNK_TIMEOUT_US            (1500000u)
 #define OTA_FLASH_PAGE_SIZE_BYTES       (8192u)
@@ -50,6 +53,7 @@ static volatile bool ota_rx_ready = false;
 static uint8_t ota_rx_buffer[OTA_MAX_FRAME_SIZE];
 static uint16_t ota_rx_size = 0;
 static uint32_t ota_preempt_ticks = 0;
+static bool secure_runtime_initialized = false;
 
 static RAIL_Handle_t secure_rail_handle = NULL;
 
@@ -64,6 +68,8 @@ static bool ota_address_is_valid(uint32_t address, uint16_t size);
 static bool ota_write_chunk_to_flash(const ota_chunk_frame_t *chunk);
 static bool ota_receive_and_program(void);
 static void secure_handle_preemption_window(void);
+static void secure_runtime_init_once(void);
+static void secure_set_radio_irq_target(bool to_nonsecure);
 
 void sli_driver_permanent_allocation(void)
 {
@@ -84,10 +90,10 @@ void sli_internal_permanent_allocation(void)
 void sl_platform_init(void)
 {
   sl_board_preinit();
+  sl_clock_manager_init();
   sl_clock_manager_runtime_init();
   sl_hfxo_manager_init_hardware();
   sl_board_init();
-  bootloader_init();
 }
 
 void sli_internal_init_early(void)
@@ -119,10 +125,12 @@ void sl_stack_init(void)
 {
   sl_rail_util_dma_init();
   sl_rail_util_pa_init();
-  sl_rail_util_power_manager_init();
   sl_rail_util_pti_init();
   sl_rail_util_rssi_init();
+  CMU_OscillatorEnable(cmuOsc_HFXO, true, true);
+  
   sl_rail_util_init();
+  sl_rail_util_power_manager_init();
 }
 
 void sl_internal_app_init(void)
@@ -148,10 +156,10 @@ void sli_internal_app_process_action(void)
 void start_ns_app(void)
 {
   const uint32_t ns_flash_base = TZ_S_FLASH_END;
-
+  secure_reclaim_peripherals();
+  secure_runtime_init_once();
   secure_rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
 
-  secure_reclaim_peripherals();
   secure_init_preempt_timer();
   secure_delegate_peripherals_to_ns();
 
@@ -168,6 +176,23 @@ void start_ns_app(void)
   __set_MSP((uint32_t)&__STACK_SEAL);
 
   fp();
+}
+
+static void secure_runtime_init_once(void)
+{
+  if (secure_runtime_initialized) {
+    return;
+  }
+
+  secure_reclaim_peripherals();
+  sl_platform_init();
+  sl_driver_init();
+  sl_service_init();
+  CMU_OscillatorEnable(cmuOsc_HFXO, true, true);
+
+  sl_stack_init();
+
+  secure_runtime_initialized = true;
 }
 
 void LETIMER0_IRQHandler(void)
@@ -215,28 +240,176 @@ void sl_rail_util_on_event(RAIL_Handle_t rail_handle,
 
 static void secure_delegate_peripherals_to_ns(void)
 {
+secure_set_radio_irq_target(true);
+CMU->CLKEN1_SET = CMU_CLKEN1_SMU;
+SMU->LOCK = SMU_LOCK_SMULOCKKEY_UNLOCK;
+#if defined(SMU_BMPUSATD0_RADIOAES)
+  SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_RADIOAES;
+#endif
+#if defined(SMU_BMPUSATD0_RADIOSUBSYSTEM)
+  SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_RADIOSUBSYSTEM;
+#endif
+#if defined(SMU_BMPUSATD0_RFECA0)
+  SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_RFECA0;
+#endif
+#if defined(SMU_BMPUSATD0_RFECA1)
+  SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_RFECA1;
+#endif
+#if defined(SMU_BMPUSATD0_LDMA)
+  SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_LDMA;
+#endif
 #if defined(SMU_PPUSATD1_AHBRADIO)
   SMU->PPUSATD1_CLR = SMU_PPUSATD1_AHBRADIO;
+#endif
+#if defined(SMU_PPUSATD1_RADIOAES)
+  SMU->PPUSATD1_CLR = SMU_PPUSATD1_RADIOAES;
+#endif
+#if defined (SMU_PPUSATD1_HFXO0)
+  SMU->PPUSATD1_CLR = SMU_PPUSATD1_HFXO0;
 #endif
 #if defined(SMU_PPUSATD1_EUSART0)
   SMU->PPUSATD1_CLR = SMU_PPUSATD1_EUSART0;
 #endif
+#if defined (SMU_PPUSATD0_EMU)
+  SMU->PPUSATD0_CLR = SMU_PPUSATD0_EMU;
+#endif
+#if defined(SMU_PPUSATD0_LDMA)
+  SMU->PPUSATD0_CLR = SMU_PPUSATD0_LDMA;
+#endif
+#if defined(SMU_PPUSATD0_LDMAXBAR)
+  SMU->PPUSATD0_CLR = SMU_PPUSATD0_LDMAXBAR;
+#endif
 #if defined(SMU_PPUSATD0_GPIO)
   SMU->PPUSATD0_CLR = SMU_PPUSATD0_GPIO;
 #endif
+SMU->LOCK = 0;
+CMU->CLKEN1_CLR = CMU_CLKEN1_SMU;
 }
 
 static void secure_reclaim_peripherals(void)
 {
-#if defined(SMU_PPUSATD0_GPIO)
-  SMU->PPUSATD0_SET = SMU_PPUSATD0_GPIO;
+secure_set_radio_irq_target(false);
+CMU->CLKEN1_SET = CMU_CLKEN1_SMU;
+SMU->LOCK = SMU_LOCK_SMULOCKKEY_UNLOCK;
+
+#if defined(SMU_BMPUSATD0_RADIOAES)
+SMU->BMPUSATD0_SET = SMU_BMPUSATD0_RADIOAES;
 #endif
+#if defined(SMU_BMPUSATD0_RADIOSUBSYSTEM)
+SMU->BMPUSATD0_SET = SMU_BMPUSATD0_RADIOSUBSYSTEM;
+#endif
+#if defined(SMU_BMPUSATD0_RFECA0)
+SMU->BMPUSATD0_SET = SMU_BMPUSATD0_RFECA0;
+#endif
+#if defined(SMU_BMPUSATD0_RFECA1)
+SMU->BMPUSATD0_SET = SMU_BMPUSATD0_RFECA1;
+#endif
+#if defined(SMU_BMPUSATD0_LDMA)
+SMU->BMPUSATD0_SET = SMU_BMPUSATD0_LDMA;
+#endif
+#if defined(SMU_BMPUSATD0_LDMA0)
+SMU->BMPUSATD0_SET = SMU_BMPUSATD0_LDMA0;
+#endif
+#if defined(SMU_BMPUSATD0_LDMA1)
+SMU->BMPUSATD0_SET = SMU_BMPUSATD0_LDMA1;
+#endif
+
+#if defined(SMU_PPUSATD0_GPIO)
+SMU->PPUSATD0_SET = SMU_PPUSATD0_GPIO;
+#endif
+#if defined(SMU_PPUSATD0_LDMA)
+SMU->PPUSATD0_SET = SMU_PPUSATD0_LDMA;
+#endif
+#if defined(SMU_PPUSATD0_LDMAXBAR)
+SMU->PPUSATD0_SET = SMU_PPUSATD0_LDMAXBAR;
+#endif
+#if defined (SMU_PPUSATD0_EMU)
+SMU->PPUSATD0_SET = SMU_PPUSATD0_EMU;
+#endif
+
 #if defined(SMU_PPUSATD1_EUSART0)
-  SMU->PPUSATD1_SET = SMU_PPUSATD1_EUSART0;
+SMU->PPUSATD1_SET = SMU_PPUSATD1_EUSART0;
 #endif
 #if defined(SMU_PPUSATD1_AHBRADIO)
-  SMU->PPUSATD1_SET = SMU_PPUSATD1_AHBRADIO;
+SMU->PPUSATD1_SET = SMU_PPUSATD1_AHBRADIO;
 #endif
+#if defined(SMU_PPUSATD1_RADIOAES)
+SMU->PPUSATD1_SET = SMU_PPUSATD1_RADIOAES;
+#endif
+#if defined (SMU_PPUSATD1_HFXO0)
+SMU->PPUSATD1_SET = SMU_PPUSATD1_HFXO0;
+#endif
+#if defined(SMU_PPUSATD1_LETIMER0)
+SMU->PPUSATD1_SET = SMU_PPUSATD1_LETIMER0;
+#endif
+
+SMU->LOCK = 0;  
+CMU->CLKEN1_CLR = CMU_CLKEN1_SMU;
+
+}
+
+static void secure_set_radio_irq_target(bool to_nonsecure)
+{
+  if (to_nonsecure) {
+    NVIC_SetTargetState(LDMA_IRQn);
+  } else {
+    NVIC_ClearTargetState(LDMA_IRQn);
+  }
+  if (to_nonsecure) {
+    NVIC_SetTargetState(AGC_IRQn);
+  } else {
+    NVIC_ClearTargetState(AGC_IRQn);
+  }
+  if (to_nonsecure) {
+    NVIC_SetTargetState(BUFC_IRQn);
+  } else {
+    NVIC_ClearTargetState(BUFC_IRQn);
+  }
+  if (to_nonsecure) {
+    NVIC_SetTargetState(FRC_PRI_IRQn);
+  } else {
+    NVIC_ClearTargetState(FRC_PRI_IRQn);
+  }
+  if (to_nonsecure) {
+    NVIC_SetTargetState(FRC_IRQn);
+  } else {
+    NVIC_ClearTargetState(FRC_IRQn);
+  }
+  if (to_nonsecure) {
+    NVIC_SetTargetState(MODEM_IRQn);
+  } else {
+    NVIC_ClearTargetState(MODEM_IRQn);
+  }
+  if (to_nonsecure) {
+    NVIC_SetTargetState(PROTIMER_IRQn);
+  } else {
+    NVIC_ClearTargetState(PROTIMER_IRQn);
+  }
+  if (to_nonsecure) {
+    NVIC_SetTargetState(RAC_RSM_IRQn);
+  } else {
+    NVIC_ClearTargetState(RAC_RSM_IRQn);
+  }
+  if (to_nonsecure) {
+    NVIC_SetTargetState(RAC_SEQ_IRQn);
+  } else {
+    NVIC_ClearTargetState(RAC_SEQ_IRQn);
+  }
+  if (to_nonsecure) {
+    NVIC_SetTargetState(SYNTH_IRQn);
+  } else {
+    NVIC_ClearTargetState(SYNTH_IRQn);
+  }
+  if (to_nonsecure) {
+    NVIC_SetTargetState(RFECA0_IRQn);
+  } else {
+    NVIC_ClearTargetState(RFECA0_IRQn);
+  }
+  if (to_nonsecure) {
+    NVIC_SetTargetState(RFECA1_IRQn);
+  } else {
+    NVIC_ClearTargetState(RFECA1_IRQn);
+  }
 }
 
 static void secure_init_preempt_timer(void)
@@ -302,7 +475,10 @@ static bool ota_wait_for_tx_complete(uint32_t timeout_us)
 
 static bool ota_send_frame(const uint8_t *payload, uint16_t size)
 {
-  if ((secure_rail_handle == NULL) || (payload == NULL) || (size == 0u)) {
+  if ((secure_rail_handle == NULL)
+      || (secure_rail_handle == RAIL_EFR32_HANDLE)
+      || (payload == NULL)
+      || (size == 0u)) {
     return false;
   }
 
@@ -458,7 +634,19 @@ static bool ota_receive_and_program(void)
 
 static void secure_handle_preemption_window(void)
 {
+  if ((secure_rail_handle == NULL) || (secure_rail_handle == RAIL_EFR32_HANDLE)) {
+    secure_rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
+  }
+
   if (secure_rail_handle == NULL) {
+    LETIMER_CounterSet(LETIMER0, ota_preempt_ticks);
+    return;
+  }
+
+  secure_reclaim_peripherals();
+  // while (1) {printf("SW query ota update\n");}
+  if ((secure_rail_handle == NULL) || (secure_rail_handle == RAIL_EFR32_HANDLE)) {
+    secure_delegate_peripherals_to_ns();
     LETIMER_CounterSet(LETIMER0, ota_preempt_ticks);
     return;
   }
@@ -466,7 +654,6 @@ static void secure_handle_preemption_window(void)
   (void)RAIL_Idle(secure_rail_handle,
                   RAIL_IDLE_FORCE_SHUTDOWN_CLEAR_FLAGS,
                   true);
-  secure_reclaim_peripherals();
 
   if (ota_query_update_available() && ota_receive_and_program()) {
     NVIC_SystemReset();

@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "TrustZone Debug JLink",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/rtz_s/build/debug/rtz_s.out",
+            "loadFiles": ["${workspaceFolder}/artifact/rtz-combined.s37"],
+            "request": "launch",
+            "type": "cortex-debug",
+            "preLaunchCommands": [
+                "source ${workspaceFolder}/.vscode/cortexm_faults.gdb"
+            ],
+            "postLaunchCommands": [
+                "echo Cortex-M33 fault helpers loaded. Run: tz_fault_regs, tz_busfault\\n"
+            ],
+            // "runToEntryPoint": "main",
+            "device": "EFR32FG23B010F512IM48",
+            "servertype": "jlink",
+            "symbolFiles": [
+                {
+                    "file": "${workspaceFolder}/rtz_ns/build/debug/rtz_ns.out",
+                    "address": "0x08040000"
+                },
+                {
+                    "file": "${workspaceFolder}/rtz_s/build/debug/rtz_s.out"
+                }
+            ],
+            // "preRestartCommands": [
+                // "file ${workspaceFolder}/thesis_ws/rtz/artifact/rtz-combined.s37",
+                // "load",
+                // "add-symbol-file thesis_ws/rtz/rtz_s/build/debug/rtz_s.out 0x08008000",
+                // "add-symbol-file thesis_ws/rtz/rtz_ns/build/debug/rtz_ns.out 0x08026000",
+                // "enable breakpoint",
+                // "monitor reset"
+            // ]
+        }
+    ]
+}

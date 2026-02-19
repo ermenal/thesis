@@ -43,10 +43,19 @@
 // Used by SE Manager service.
 #define SL_TRUSTZONE_PERIPHERAL_AHBRADIO_S (0)
 
+// Used by RAIL/SE radio acceleration path.
+#define SL_TRUSTZONE_PERIPHERAL_RADIOAES_S (0)
+
 // Used by MSC service.
 #define SL_TRUSTZONE_PERIPHERAL_LDMA_S (1)
 
 // Used by MSC service.
 #define SL_TRUSTZONE_PERIPHERAL_LDMAXBAR_S (1)
+
+#define SL_TRUSTZONE_PERIPHERAL_SMU_S (0)
+
+#define SL_TRUSTZONE_PERIPHERAL_TIMER0_S (1)
+
+#define SL_TRUSTZONE_PERIPHERAL_EMU_S (1)
 
 #endif // SL_TRUSTZONE_SECURE_CONFIG_H

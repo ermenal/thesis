@@ -19,6 +19,10 @@
 //                                   Includes
 // -----------------------------------------------------------------------------
 #include "app_init.h"
+#include "em_gpio.h"
+
+#define NS_LED_PORT (gpioPortB)
+#define NS_LED_PIN  (2u)
 
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
@@ -46,6 +50,7 @@
  ******************************************************************************/
 void app_init(void)
 {
+  GPIO_PinModeSet(NS_LED_PORT, NS_LED_PIN, gpioModePushPull, 0u);
   // enable_cycle_count();
 }
 

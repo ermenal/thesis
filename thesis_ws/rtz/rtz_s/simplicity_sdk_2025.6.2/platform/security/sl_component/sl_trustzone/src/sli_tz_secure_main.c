@@ -367,8 +367,6 @@ int main(void)
     fatal_error();
   }
 
-  printf("Net voor ns jump\n");
-
   start_ns_app();
 
   // Will never get here, as non-secure software doesn't return.

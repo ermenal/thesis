@@ -32,6 +32,9 @@
  ******************************************************************************/
  
 #include <inttypes.h>
+#include "em_cmu.h"
+#include "em_system.h"
+#include "rail_config.h"
 #if     SL_RAIL_3_API
 #include "sl_rail.h"
 #else//!SL_RAIL_3_API
@@ -54,6 +57,17 @@
 #include "sl_rail_util_callbacks_config.h"
 #include "pa_conversions_efr32.h"
 
+typedef struct {
+  uint32_t error_code;
+  uint32_t rail_handle;
+  uint32_t system_hfxo_hz;
+  uint32_t cmu_hfxo_hz;
+  uint32_t radio_config_xtal_hz;
+  uint32_t cmu_status;
+} rail_assert_debug_snapshot_t;
+
+volatile rail_assert_debug_snapshot_t g_rail_assert_debug_snapshot;
+
 // Provide weak function called by callback RAILCb_AssertFailed.
 __WEAK
 #if     SL_RAIL_3_API
@@ -65,8 +79,12 @@ void sl_rail_util_on_assert_failed(RAIL_Handle_t rail_handle,
                                    RAIL_AssertErrorCodes_t error_code)
 #endif//SL_RAIL_3_API
 {
-  (void) rail_handle;
-  (void) error_code;
+  g_rail_assert_debug_snapshot.error_code = (uint32_t)error_code;
+  g_rail_assert_debug_snapshot.rail_handle = (uint32_t)rail_handle;
+  g_rail_assert_debug_snapshot.system_hfxo_hz = SystemHFXOClockGet();
+  g_rail_assert_debug_snapshot.cmu_hfxo_hz = CMU_ClockFreqGet(cmuClock_HFXO);
+  g_rail_assert_debug_snapshot.radio_config_xtal_hz = RADIO_CONFIG_XTAL_FREQUENCY;
+  g_rail_assert_debug_snapshot.cmu_status = CMU->STATUS;
 #if     SL_RAIL_3_API
   (void) line;
   APP_ASSERT(false, "rail_handle: 0x%lX, error_code: %" PRIu32 ", line: %d",
