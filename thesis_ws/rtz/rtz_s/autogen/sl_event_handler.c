@@ -26,33 +26,21 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-#include <string.h>
-#include "em_device.h"
 #include "em_cmu.h"
 #include "em_letimer.h"
-#include "em_msc.h"
 #include "rail.h"
 #include "sl_clock_manager.h"
 #include "sl_rail_util_init.h"
 #include "tz_secure_memory_autogen.h"
-#include "../../common/ota_protocol.h"
 #include <stdio.h>
 
 
 #define OTA_PREEMPT_PERIOD_SECONDS      (5u)
 #define OTA_PREEMPT_PERIOD_US           (OTA_PREEMPT_PERIOD_SECONDS * 1000000u)
 #define OTA_QUERY_TIMEOUT_US            (300000u)
-#define OTA_CHUNK_TIMEOUT_US            (1500000u)
-#define OTA_FLASH_PAGE_SIZE_BYTES       (8192u)
-#define OTA_MAX_FRAME_SIZE              ((uint16_t)sizeof(ota_chunk_frame_t))
-#define OTA_RADIO_CHANNEL               (0u)
 
 typedef void (*nsfunc_t)(void) __attribute__((cmse_nonsecure_call));
 
-static volatile bool ota_tx_done = false;
-static volatile bool ota_rx_ready = false;
-static uint8_t ota_rx_buffer[OTA_MAX_FRAME_SIZE];
-static uint16_t ota_rx_size = 0;
 static uint32_t ota_preempt_ticks = 0;
 static uint32_t ota_next_preempt_deadline_us = 0u;
 static bool secure_runtime_initialized = false;
@@ -62,13 +50,6 @@ static RAIL_Handle_t secure_rail_handle = NULL;
 static void secure_delegate_peripherals_to_ns(void);
 static void secure_reclaim_peripherals(void);
 static void secure_init_preempt_timer(void);
-static bool ota_wait_for_rx(uint32_t timeout_us);
-static bool ota_wait_for_tx_complete(uint32_t timeout_us);
-static bool ota_send_frame(const uint8_t *payload, uint16_t size);
-static bool ota_query_update_available(void);
-static bool ota_address_is_valid(uint32_t address, uint16_t size);
-static bool ota_write_chunk_to_flash(const ota_chunk_frame_t *chunk);
-static bool ota_receive_and_program(void);
 static void secure_handle_preemption_window(void);
 static void secure_runtime_init_once(void);
 static void secure_set_radio_irq_target(bool to_nonsecure);
@@ -198,6 +179,7 @@ static void secure_runtime_init_once(void)
   secure_runtime_initialized = true;
 }
 
+// Preempt timer ISR, clear irq & restart for next window
 void LETIMER0_IRQHandler(void)
 {
   uint32_t irq_flags = LETIMER_IntGet(LETIMER0);
@@ -229,34 +211,10 @@ void LETIMER0_IRQHandler(void)
 void sl_rail_util_on_event(RAIL_Handle_t rail_handle,
                            RAIL_Events_t events)
 {
-  if ((events & (RAIL_EVENT_TX_PACKET_SENT
-                 | RAIL_EVENT_TX_ABORTED
-                 | RAIL_EVENT_TX_BLOCKED)) != 0u) {
-    ota_tx_done = true;
-  }
-
-  if ((events & RAIL_EVENT_RX_PACKET_RECEIVED) != 0u) {
-    RAIL_RxPacketInfo_t packet_info;
-    RAIL_RxPacketHandle_t packet_handle = RAIL_HoldRxPacket(rail_handle);
-    if (packet_handle != RAIL_RX_PACKET_HANDLE_INVALID) {
-      packet_handle = RAIL_GetRxPacketInfo(rail_handle,
-                                           packet_handle,
-                                           &packet_info);
-      if ((packet_handle != RAIL_RX_PACKET_HANDLE_INVALID)
-          && (packet_info.packetStatus == RAIL_RX_PACKET_READY_SUCCESS)) {
-        uint16_t copy_size = packet_info.packetBytes;
-        if (copy_size > OTA_MAX_FRAME_SIZE) {
-          copy_size = OTA_MAX_FRAME_SIZE;
-        }
-        RAIL_CopyRxPacket(ota_rx_buffer, &packet_info);
-        ota_rx_size = copy_size;
-        ota_rx_ready = true;
-      }
-      (void)RAIL_ReleaseRxPacket(rail_handle, packet_handle);
-    }
-  }
+  
 }
 
+// Free peripherals back to NS world
 static void secure_delegate_peripherals_to_ns(void)
 {
 secure_set_radio_irq_target(true);
@@ -305,6 +263,7 @@ SMU->LOCK = 0;
 CMU->CLKEN1_CLR = CMU_CLKEN1_SMU;
 }
 
+// Claim peripherals back to SW
 static void secure_reclaim_peripherals(void)
 {
 secure_set_radio_irq_target(false);
@@ -366,6 +325,7 @@ SMU->LOCK = 0;
 CMU->CLKEN1_CLR = CMU_CLKEN1_SMU;
 }
 
+// Target radio IRQs to NS or S for peripiheral sharing
 static void secure_set_radio_irq_target(bool to_nonsecure)
 {
   if (to_nonsecure) {
@@ -430,6 +390,7 @@ static void secure_set_radio_irq_target(bool to_nonsecure)
   }
 }
 
+// Start preempt timer at init
 static void secure_init_preempt_timer(void)
 {
   LETIMER_Init_TypeDef letimer_init = LETIMER_INIT_DEFAULT;
@@ -480,6 +441,7 @@ static void secure_init_preempt_timer(void)
   secure_rearm_preempt_timer();
 }
 
+// Restart preempt timer for next window
 static void secure_rearm_preempt_timer(void)
 {
   LETIMER_IntDisable(LETIMER0, LETIMER_IF_UF);
@@ -490,215 +452,26 @@ static void secure_rearm_preempt_timer(void)
   LETIMER_Enable(LETIMER0, true);
 }
 
-static bool ota_wait_for_rx(uint32_t timeout_us)
-{
-  uint32_t start_time = RAIL_GetTime();
-
-  while ((RAIL_GetTime() - start_time) < timeout_us) {
-    if (ota_rx_ready) {
-      return true;
-    }
-  }
-  return false;
-}
-
-static bool ota_wait_for_tx_complete(uint32_t timeout_us)
-{
-  uint32_t start_time = RAIL_GetTime();
-
-  while ((RAIL_GetTime() - start_time) < timeout_us) {
-    if (ota_tx_done) {
-      return true;
-    }
-  }
-  return false;
-}
-
-static bool ota_send_frame(const uint8_t *payload, uint16_t size)
-{
-  if ((secure_rail_handle == NULL)
-      || (secure_rail_handle == RAIL_EFR32_HANDLE)
-      || (payload == NULL)
-      || (size == 0u)) {
-    return false;
-  }
-
-  ota_tx_done = false;
-  (void)RAIL_WriteTxFifo(secure_rail_handle, payload, size, true);
-  if (RAIL_StartTx(secure_rail_handle,
-                   OTA_RADIO_CHANNEL,
-                   RAIL_TX_OPTIONS_DEFAULT,
-                   NULL) != RAIL_STATUS_NO_ERROR) {
-    return false;
-  }
-
-  return ota_wait_for_tx_complete(OTA_QUERY_TIMEOUT_US);
-}
-
-static bool ota_query_update_available(void)
-{
-  ota_simple_frame_t query = { .type = OTA_MSG_QUERY };
-
-  ota_rx_ready = false;
-  ota_rx_size = 0u;
-
-  if (!ota_send_frame((const uint8_t *)&query, sizeof(query))) {
-    return false;
-  }
-
-  if (RAIL_StartRx(secure_rail_handle, OTA_RADIO_CHANNEL, NULL)
-      != RAIL_STATUS_NO_ERROR) {
-    return false;
-  }
-
-  if (!ota_wait_for_rx(OTA_QUERY_TIMEOUT_US)) {
-    return false;
-  }
-
-  if (ota_rx_size < sizeof(ota_simple_frame_t)) {
-    return false;
-  }
-
-  if (ota_rx_buffer[0] == OTA_MSG_RESP_UPDATE_AVAILABLE) {
-    return true;
-  }
-
-  return false;
-}
-
-static bool ota_address_is_valid(uint32_t address, uint16_t size)
-{
-  uint32_t end_address = address + size;
-  uint32_t flash_end = FLASH_BASE + FLASH_SIZE;
-
-  if ((size == 0u)
-      || ((address & 0x3u) != 0u)
-      || ((size & 0x3u) != 0u)
-      || (end_address < address)) {
-    return false;
-  }
-
-  if ((address < TZ_S_FLASH_START) || (end_address > flash_end)) {
-    return false;
-  }
-
-  return true;
-}
-
-static bool ota_write_chunk_to_flash(const ota_chunk_frame_t *chunk)
-{
-  MSC_Status_TypeDef msc_status;
-  uint32_t page_address;
-
-  if ((chunk == NULL)
-      || (chunk->length == 0u)
-      || (chunk->length > OTA_MAX_CHUNK_SIZE)
-      || !ota_address_is_valid(chunk->offset, chunk->length)) {
-    return false;
-  }
-
-  page_address = chunk->offset & ~(OTA_FLASH_PAGE_SIZE_BYTES - 1u);
-  if ((chunk->offset % OTA_FLASH_PAGE_SIZE_BYTES) == 0u) {
-    msc_status = MSC_ErasePage((uint32_t *)page_address);
-    if (msc_status != mscReturnOk) {
-      return false;
-    }
-  }
-
-  msc_status = MSC_WriteWord((uint32_t *)chunk->offset,
-                             chunk->payload,
-                             chunk->length);
-
-  return (msc_status == mscReturnOk);
-}
-
-static bool ota_receive_and_program(void)
-{
-  uint32_t start_time = RAIL_GetTime();
-  ota_eof_frame_t error_frame = { .type = OTA_MSG_ERROR, .status = 1u };
-
-  MSC_Init();
-
-  while ((RAIL_GetTime() - start_time) < OTA_CHUNK_TIMEOUT_US) {
-    if (!ota_wait_for_rx(OTA_CHUNK_TIMEOUT_US)) {
-      break;
-    }
-
-    ota_rx_ready = false;
-    start_time = RAIL_GetTime();
-
-    if (ota_rx_size < sizeof(ota_simple_frame_t)) {
-      continue;
-    }
-
-    if (ota_rx_buffer[0] == OTA_MSG_DATA_CHUNK) {
-      ota_chunk_frame_t chunk;
-      uint16_t expected_size;
-
-      if (ota_rx_size < sizeof(ota_chunk_frame_t) - OTA_MAX_CHUNK_SIZE) {
-        continue;
-      }
-
-      memcpy(&chunk, ota_rx_buffer, sizeof(ota_chunk_frame_t));
-
-      expected_size = (uint16_t)(sizeof(ota_chunk_frame_t)
-                                 - OTA_MAX_CHUNK_SIZE
-                                 + chunk.length);
-
-      if ((chunk.length > OTA_MAX_CHUNK_SIZE) || (ota_rx_size < expected_size)) {
-        continue;
-      }
-
-      if (!ota_write_chunk_to_flash(&chunk)) {
-        (void)ota_send_frame((const uint8_t *)&error_frame, sizeof(error_frame));
-        MSC_Deinit();
-        return false;
-      }
-      continue;
-    }
-
-    if (ota_rx_buffer[0] == OTA_MSG_EOF) {
-      MSC_Deinit();
-      return true;
-    }
-
-    if (ota_rx_buffer[0] == OTA_MSG_RESP_NO_UPDATE) {
-      MSC_Deinit();
-      return false;
-    }
-  }
-
-  (void)ota_send_frame((const uint8_t *)&error_frame, sizeof(error_frame));
-  MSC_Deinit();
-  return false;
-}
-
+/*
+* Handle the preemption window: 
+* 1) Reclaim peripherals from NS
+* 2) Query the update server for available updates (not implemented in this example)
+* 3) Delegate peripherals back to NS
+*/
 static void secure_handle_preemption_window(void)
 {
-  if ((secure_rail_handle == NULL) || (secure_rail_handle == RAIL_EFR32_HANDLE)) {
-    secure_rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
-  }
-
-  if (secure_rail_handle == NULL) {
-    return;
-  }
-
   secure_reclaim_peripherals();
-  // while (1) {printf("SW query ota update\n");}
   printf("SW start query ota update\n");
+
+  // Get rail handle for inst0 
+  secure_rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
   if ((secure_rail_handle == NULL) || (secure_rail_handle == RAIL_EFR32_HANDLE)) {
     secure_delegate_peripherals_to_ns();
     printf("SW bad rail handle\n");
     return;
   }
 
-  (void)RAIL_Idle(secure_rail_handle,
-                  RAIL_IDLE_FORCE_SHUTDOWN_CLEAR_FLAGS,
-                  true);
-
-  if (ota_query_update_available() && ota_receive_and_program()) {
-    NVIC_SystemReset();
-  }
+  // TODO: Query the update server to see if an update is available
 
   printf("SW end query ota update\n");
   secure_delegate_peripherals_to_ns();
