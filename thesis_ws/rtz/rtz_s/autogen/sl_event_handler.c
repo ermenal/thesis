@@ -40,6 +40,7 @@
 
 
 #define OTA_PREEMPT_PERIOD_SECONDS      (5u)
+#define OTA_PREEMPT_PERIOD_US           (OTA_PREEMPT_PERIOD_SECONDS * 1000000u)
 #define OTA_QUERY_TIMEOUT_US            (300000u)
 #define OTA_CHUNK_TIMEOUT_US            (1500000u)
 #define OTA_FLASH_PAGE_SIZE_BYTES       (8192u)
@@ -53,6 +54,7 @@ static volatile bool ota_rx_ready = false;
 static uint8_t ota_rx_buffer[OTA_MAX_FRAME_SIZE];
 static uint16_t ota_rx_size = 0;
 static uint32_t ota_preempt_ticks = 0;
+static uint32_t ota_next_preempt_deadline_us = 0u;
 static bool secure_runtime_initialized = false;
 
 static RAIL_Handle_t secure_rail_handle = NULL;
@@ -70,6 +72,7 @@ static bool ota_receive_and_program(void);
 static void secure_handle_preemption_window(void);
 static void secure_runtime_init_once(void);
 static void secure_set_radio_irq_target(bool to_nonsecure);
+static void secure_rearm_preempt_timer(void);
 
 void sli_driver_permanent_allocation(void)
 {
@@ -198,13 +201,29 @@ static void secure_runtime_init_once(void)
 void LETIMER0_IRQHandler(void)
 {
   uint32_t irq_flags = LETIMER_IntGet(LETIMER0);
+  uint32_t now_us;
 
   if ((irq_flags & LETIMER_IF_UF) == 0u) {
+    LETIMER_IntClear(LETIMER0, irq_flags);
     return;
   }
 
-  LETIMER_IntClear(LETIMER0, LETIMER_IF_UF);
+  LETIMER_IntDisable(LETIMER0, LETIMER_IF_UF);
+  LETIMER_Enable(LETIMER0, false);
+  LETIMER_IntClear(LETIMER0, _LETIMER_IF_MASK);
+
+  now_us = RAIL_GetTime();
+  if ((int32_t)(now_us - ota_next_preempt_deadline_us) < 0) {
+    secure_rearm_preempt_timer();
+    return;
+  }
+
+  do {
+    ota_next_preempt_deadline_us += OTA_PREEMPT_PERIOD_US;
+  } while ((int32_t)(now_us - ota_next_preempt_deadline_us) >= 0);
+
   secure_handle_preemption_window();
+  secure_rearm_preempt_timer();
 }
 
 void sl_rail_util_on_event(RAIL_Handle_t rail_handle,
@@ -345,7 +364,6 @@ SMU->PPUSATD1_SET = SMU_PPUSATD1_LETIMER0;
 
 SMU->LOCK = 0;  
 CMU->CLKEN1_CLR = CMU_CLKEN1_SMU;
-
 }
 
 static void secure_set_radio_irq_target(bool to_nonsecure)
@@ -416,7 +434,9 @@ static void secure_init_preempt_timer(void)
 {
   LETIMER_Init_TypeDef letimer_init = LETIMER_INIT_DEFAULT;
   uint32_t letimer_clock_hz;
+  uint32_t letimer_divider = 1u;
   uint32_t top;
+  uint64_t desired_ticks;
 
   (void)sl_clock_manager_enable_bus_clock(SL_BUS_CLOCK_LETIMER0);
   letimer_clock_hz = CMU_ClockFreqGet(cmuClock_LETIMER0);
@@ -425,10 +445,22 @@ static void secure_init_preempt_timer(void)
     letimer_clock_hz = 1000u;
   }
 
-  ota_preempt_ticks = letimer_clock_hz * OTA_PREEMPT_PERIOD_SECONDS;
-  if (ota_preempt_ticks > 0x0000FFFFu) {
-    ota_preempt_ticks = 0x0000FFFFu;
+  desired_ticks = ((uint64_t)letimer_clock_hz) * OTA_PREEMPT_PERIOD_SECONDS;
+  while ((desired_ticks > 0x0000FFFFu) && (letimer_divider < 32768u)) {
+    letimer_divider <<= 1;
+    CMU_ClockDivSet(cmuClock_LETIMER0, letimer_divider);
+    letimer_clock_hz = CMU_ClockFreqGet(cmuClock_LETIMER0);
+    if (letimer_clock_hz == 0u) {
+      letimer_clock_hz = 1000u;
+    }
+    desired_ticks = ((uint64_t)letimer_clock_hz) * OTA_PREEMPT_PERIOD_SECONDS;
   }
+
+  if (desired_ticks > 0x0000FFFFu) {
+    desired_ticks = 0x0000FFFFu;
+  }
+
+  ota_preempt_ticks = (uint32_t)desired_ticks;
   top = ota_preempt_ticks;
   if (top == 0u) {
     top = 1u;
@@ -444,8 +476,17 @@ static void secure_init_preempt_timer(void)
   NVIC_EnableIRQ(LETIMER0_IRQn);
 
   LETIMER_IntClear(LETIMER0, _LETIMER_IF_MASK);
+  ota_next_preempt_deadline_us = RAIL_GetTime() + OTA_PREEMPT_PERIOD_US;
+  secure_rearm_preempt_timer();
+}
+
+static void secure_rearm_preempt_timer(void)
+{
+  LETIMER_IntDisable(LETIMER0, LETIMER_IF_UF);
+  LETIMER_Enable(LETIMER0, false);
+  LETIMER_IntClear(LETIMER0, _LETIMER_IF_MASK);
+  LETIMER_CounterSet(LETIMER0, ota_preempt_ticks);
   LETIMER_IntEnable(LETIMER0, LETIMER_IF_UF);
-  LETIMER_CounterSet(LETIMER0, top);
   LETIMER_Enable(LETIMER0, true);
 }
 
@@ -639,15 +680,15 @@ static void secure_handle_preemption_window(void)
   }
 
   if (secure_rail_handle == NULL) {
-    LETIMER_CounterSet(LETIMER0, ota_preempt_ticks);
     return;
   }
 
   secure_reclaim_peripherals();
   // while (1) {printf("SW query ota update\n");}
+  printf("SW start query ota update\n");
   if ((secure_rail_handle == NULL) || (secure_rail_handle == RAIL_EFR32_HANDLE)) {
     secure_delegate_peripherals_to_ns();
-    LETIMER_CounterSet(LETIMER0, ota_preempt_ticks);
+    printf("SW bad rail handle\n");
     return;
   }
 
@@ -659,8 +700,8 @@ static void secure_handle_preemption_window(void)
     NVIC_SystemReset();
   }
 
+  printf("SW end query ota update\n");
   secure_delegate_peripherals_to_ns();
-  LETIMER_CounterSet(LETIMER0, ota_preempt_ticks);
 }
 
 void sl_iostream_init_instances_stage_1(void)
