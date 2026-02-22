@@ -82,6 +82,8 @@ static void secure_reclaim_peripherals(void);
 static void secure_init_preempt_timer(void);
 static void secure_handle_preemption_window(void);
 static void secure_runtime_init_once(void);
+static void secure_force_all_irqs_to_secure(void);
+static void secure_clear_all_irqs_pending(void);
 static void secure_set_irq_target(bool to_nonsecure);
 static void secure_clear_irqs_pending(void);
 static void secure_log_irq_targets(const char *tag);
@@ -146,8 +148,10 @@ void sl_stack_init(void)
 
   printf("SW init: stack begin\n");
 
-  // TrustZone startup defaults IRQ targets to NS; force radio stack IRQs to S
-  // before secure RAIL initialization.
+  // TrustZone startup defaults almost all IRQs to NS; force all IRQs to S
+  // before secure RAIL initialization to avoid NS vector fetch before VTOR_NS.
+  secure_force_all_irqs_to_secure();
+  secure_clear_all_irqs_pending();
   secure_set_irq_target(false);
   secure_clear_irqs_pending();
   secure_log_irq_targets("before sl_rail_tz init");
@@ -410,6 +414,20 @@ static void secure_set_irq_target(bool to_nonsecure)
   for (uint32_t i = 0; i < NUM_IRQS_TO_SWITCH; i++) {
     NVIC_ClearPendingIRQ(irqs[i]);
     secure_route_irq_target(irqs[i], to_nonsecure);
+  }
+}
+
+static void secure_force_all_irqs_to_secure(void)
+{
+  for (uint32_t i = 0; i < sizeof(NVIC->ITNS) / sizeof(NVIC->ITNS[0]); i++) {
+    NVIC->ITNS[i] = 0u;
+  }
+}
+
+static void secure_clear_all_irqs_pending(void)
+{
+  for (int32_t irqn = 0; irqn < (int32_t)EXT_IRQ_COUNT; irqn++) {
+    NVIC_ClearPendingIRQ((IRQn_Type)irqn);
   }
 }
 
