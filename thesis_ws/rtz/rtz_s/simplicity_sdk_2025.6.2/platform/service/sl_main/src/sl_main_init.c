@@ -274,7 +274,7 @@ void sl_main_init(void)
 #endif
 
 #if defined(SL_CATALOG_POWER_MANAGER_PRESENT)
-  sl_power_manager_init();
+  // sl_power_manager_init();
 #endif
 
 #if defined(SL_CATALOG_SLEEPTIMER_PRESENT)
@@ -286,7 +286,7 @@ void sl_main_init(void)
 #endif
 
 #if defined(SL_CATALOG_MPU_PRESENT)
-  sl_mpu_disable_execute_from_ram();
+  // sl_mpu_disable_execute_from_ram();
 #endif
 
   // Early application initialization (post-system init).

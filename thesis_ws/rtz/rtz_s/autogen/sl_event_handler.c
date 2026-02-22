@@ -4,12 +4,15 @@
 #include "sl_clock_manager.h"
 #include "sl_clock_manager_init.h"
 #include "sl_hfxo_manager.h"
+#include "sl_rail.h"
+#include "sl_rail_types.h"
 #include "sl_rail_util_dma.h"
 #include "pa_conversions_efr32.h"
 #include "sl_rail_util_power_manager_init.h"
 #include "sl_rail_util_pti.h"
 #include "sl_rail_util_rssi.h"
 #include "sl_rail_util_init.h"
+#include "rail_config.h"
 #include "btl_interface.h"
 #include "sl_board_control.h"
 #include "sl_debug_swo.h"
@@ -27,33 +30,65 @@
 #include <stddef.h>
 #include <stdint.h>
 #include "em_cmu.h"
-#include "em_letimer.h"
 #include "rail.h"
 #include "sl_clock_manager.h"
 #include "sl_rail_util_init.h"
+#include "sl_sleeptimer.h"
 #include "tz_secure_memory_autogen.h"
+#include "em_eusart.h"
+#include <string.h>
 #include <stdio.h>
 
 
 #define OTA_PREEMPT_PERIOD_SECONDS      (5u)
-#define OTA_PREEMPT_PERIOD_US           (OTA_PREEMPT_PERIOD_SECONDS * 1000000u)
+#define OTA_PREEMPT_PERIOD_MS           (OTA_PREEMPT_PERIOD_SECONDS * 1000u)
 #define OTA_QUERY_TIMEOUT_US            (300000u)
+#define SECURE_TX_CHANNEL               (0u)
 
 typedef void (*nsfunc_t)(void) __attribute__((cmse_nonsecure_call));
 
-static uint32_t ota_preempt_ticks = 0;
-static uint32_t ota_next_preempt_deadline_us = 0u;
 static bool secure_runtime_initialized = false;
+static bool secure_preempt_timer_active = false;
+static bool secure_tx_fifo_configured = false;
+static volatile bool secure_preempt_work_pending = false;
 
-static RAIL_Handle_t secure_rail_handle = NULL;
+// TX FIFO dingen
+#define TX_FIFO_SIZE 256
+
+SL_ALIGN(RAIL_FIFO_ALIGNMENT)
+static uint8_t tx_fifo[TX_FIFO_SIZE]
+SL_ATTRIBUTE_ALIGN(RAIL_FIFO_ALIGNMENT);
+
+// RX FIFO dingen 
+#define RX_FIFO_SIZE 2048
+static uint16_t rx_fifo_size = RX_FIFO_SIZE;
+
+SL_ALIGN(RAIL_FIFO_ALIGNMENT)
+static uint8_t rx_fifo[RX_FIFO_SIZE]
+SL_ATTRIBUTE_ALIGN(RAIL_FIFO_ALIGNMENT);
+
+#define PACKET_MAX_LENGTH 128
+#define RX_PACKET_BUFFER_SIZE (PACKET_MAX_LENGTH * 2) // Extra voor appended info en RAIL metadata
+SL_ALIGN(4)
+static uint8_t secure_rx_buffer[RX_PACKET_BUFFER_SIZE]
+SL_ATTRIBUTE_ALIGN(4);
+
+
+static const uint8_t secure_probe_payload[] = "SW TX packet";
+static sl_sleeptimer_timer_handle_t secure_preempt_timer;
 
 static void secure_delegate_peripherals_to_ns(void);
 static void secure_reclaim_peripherals(void);
 static void secure_init_preempt_timer(void);
 static void secure_handle_preemption_window(void);
 static void secure_runtime_init_once(void);
-static void secure_set_radio_irq_target(bool to_nonsecure);
-static void secure_rearm_preempt_timer(void);
+static void secure_set_irq_target(bool to_nonsecure);
+static void secure_clear_irqs_pending(void);
+static void secure_log_irq_targets(const char *tag);
+static void secure_preempt_timer_callback(sl_sleeptimer_timer_handle_t *handle,
+                                          void *data);
+static void secure_route_irq_target(IRQn_Type irqn, bool to_nonsecure);
+void secure_init_radio(void);
 
 void sli_driver_permanent_allocation(void)
 {
@@ -107,14 +142,34 @@ void sl_service_init(void)
 
 void sl_stack_init(void)
 {
+  sl_rail_status_t status;
+
+  printf("SW init: stack begin\n");
+
+  // TrustZone startup defaults IRQ targets to NS; force radio stack IRQs to S
+  // before secure RAIL initialization.
+  secure_set_irq_target(false);
+  secure_clear_irqs_pending();
+  secure_log_irq_targets("before sl_rail_tz init");
+
+  status = sl_rail_tz_init_secure();
+  status |= sl_rail_tz_enable_secure_radio_irqs();
+  status |= sl_rail_tz_radio_clock_enable();
+  status |= sl_rail_tz_rfeca_clock_enable();
+  status |= sl_rail_tz_configure_hfxo();
+  // status |= sl_rail_tz_check_peripherals_secure_states();
+  printf("Status: 0x%lx\n", (unsigned long)status);
+  secure_log_irq_targets("after sl_rail_tz init");
+
+  printf("SW init: sl_rail_util_dma_init\n");
   sl_rail_util_dma_init();
+  printf("SW init: sl_rail_util_pa_init\n");
   sl_rail_util_pa_init();
-  sl_rail_util_pti_init();
-  sl_rail_util_rssi_init();
-  CMU_OscillatorEnable(cmuOsc_HFXO, true, true);
-  
+  // CMU_OscillatorEnable(cmuOsc_HFXO, true, true);
+  printf("SW init: sl_rail_util_init enter\n");
   sl_rail_util_init();
-  sl_rail_util_power_manager_init();
+  printf("SW init: sl_rail_util_init ok\n");
+  // sl_rail_util_power_manager_init();
 }
 
 void sl_internal_app_init(void)
@@ -140,11 +195,17 @@ void sli_internal_app_process_action(void)
 void start_ns_app(void)
 {
   const uint32_t ns_flash_base = TZ_S_FLASH_END;
+  printf("SW init: reclaim peripherals\n");
   secure_reclaim_peripherals();
+  
+  printf("SW init: runtime init\n");
   secure_runtime_init_once();
-  secure_rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
-
+  printf("SW init: radio init\n");
+  secure_init_radio();
+  printf("SW init: preempt timer init\n");
   secure_init_preempt_timer();
+  
+  printf("SW init: delegate peripherals to NS\n");
   secure_delegate_peripherals_to_ns();
 
   __TZ_set_MSP_NS(*((uint32_t *)ns_flash_base));
@@ -168,97 +229,111 @@ static void secure_runtime_init_once(void)
     return;
   }
 
-  secure_reclaim_peripherals();
-  sl_platform_init();
-  sl_driver_init();
-  sl_service_init();
-  CMU_OscillatorEnable(cmuOsc_HFXO, true, true);
+  printf("SW init: platform\n");
 
+  sl_platform_init();
+  printf("SW init: driver\n");
+  sl_driver_init();
+  printf("SW init: service\n");
+  sl_service_init();
+  // CMU_OscillatorEnable(cmuOsc_HFXO, true, true);
   sl_stack_init();
 
   secure_runtime_initialized = true;
 }
 
-// Preempt timer ISR, clear irq & restart for next window
-void LETIMER0_IRQHandler(void)
+void secure_init_radio(void)
 {
-  uint32_t irq_flags = LETIMER_IntGet(LETIMER0);
-  uint32_t now_us;
+  RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
 
-  if ((irq_flags & LETIMER_IF_UF) == 0u) {
-    LETIMER_IntClear(LETIMER0, irq_flags);
-    return;
+  uint16_t size = RAIL_SetTxFifo(rail_handle, tx_fifo, 0, TX_FIFO_SIZE);
+  if (size == 0) {
+    printf("SW failed to set TX FIFO\n");
+    while(1);
+  } else {
+    // printf("TX FIFO set, size: %u\n", size);
   }
 
-  LETIMER_IntDisable(LETIMER0, LETIMER_IF_UF);
-  LETIMER_Enable(LETIMER0, false);
-  LETIMER_IntClear(LETIMER0, _LETIMER_IF_MASK);
-
-  now_us = RAIL_GetTime();
-  if ((int32_t)(now_us - ota_next_preempt_deadline_us) < 0) {
-    secure_rearm_preempt_timer();
-    return;
+  RAIL_Status_t status = RAIL_ConfigEvents(rail_handle,
+                                           RAIL_EVENTS_ALL,
+                                           RAIL_EVENTS_TX_COMPLETION
+                                           | RAIL_EVENTS_RX_COMPLETION
+                                           | RAIL_EVENT_CAL_NEEDED);
+  if (status != RAIL_STATUS_NO_ERROR) {
+    printf("SW RAIL_ConfigEvents failed: %lu\n", (unsigned long)status);
+    while(1);
+  } else {
+    // printf("Config events worked\n");
   }
 
-  do {
-    ota_next_preempt_deadline_us += OTA_PREEMPT_PERIOD_US;
-  } while ((int32_t)(now_us - ota_next_preempt_deadline_us) >= 0);
-
-  secure_handle_preemption_window();
-  secure_rearm_preempt_timer();
+  status = RAIL_SetRxFifo(rail_handle, rx_fifo, &rx_fifo_size);
+  if (status != RAIL_STATUS_NO_ERROR) {
+    printf("SW RAIL_SetRxFifo failed: %lu\n", (unsigned long)status);
+    while(1);
+  } else {
+    // printf("Set RX FIFO worked\n");
+  }
+  const RAIL_ChannelConfig_t *mijnConfig = channelConfigs[0];
+  status = RAIL_StartRx(rail_handle,
+                        mijnConfig->configs->channelNumberStart,
+                        NULL);
+  if (status != RAIL_STATUS_NO_ERROR) {
+    printf("SW RAIL_StartRx failed: %lu\n", (unsigned long)status);
+    while(1);
+  }
 }
+
 
 void sl_rail_util_on_event(RAIL_Handle_t rail_handle,
                            RAIL_Events_t events)
 {
-  
+  (void)rail_handle;
+
+  if (events & RAIL_EVENTS_TX_COMPLETION) {
+    // printf("EVENT: TX completed\n");
+  }
+  else if (events & RAIL_EVENT_RX_PACKET_RECEIVED) {
+    // Download packet if targeted at SW (ota packet)...
+    printf("SW event: RX packet received\n");
+  }
+  else if (events & RAIL_EVENT_CAL_NEEDED) {
+    // printf("EVENT: Calibration needed\n");
+    RAIL_Status_t status = RAIL_Calibrate(rail_handle, NULL, RAIL_CAL_ALL_PENDING);
+    if (status != RAIL_STATUS_NO_ERROR) {
+      printf("SW RAIL_Calibrate failed. Status: 0x%lx\n", (unsigned long)status);
+      while(1) {};
+    }
+  }
+  else {
+    // printf("SW rail events: 0x%016llX\n", (unsigned long long)events);
+  }
 }
 
 // Free peripherals back to NS world
 static void secure_delegate_peripherals_to_ns(void)
 {
-secure_set_radio_irq_target(true);
+secure_set_irq_target(true);
+secure_clear_irqs_pending();
+
 CMU->CLKEN1_SET = CMU_CLKEN1_SMU;
 SMU->LOCK = SMU_LOCK_SMULOCKKEY_UNLOCK;
-#if defined(SMU_BMPUSATD0_RADIOAES)
-  SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_RADIOAES;
-#endif
-#if defined(SMU_BMPUSATD0_RADIOSUBSYSTEM)
-  SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_RADIOSUBSYSTEM;
-#endif
-#if defined(SMU_BMPUSATD0_RFECA0)
-  SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_RFECA0;
-#endif
-#if defined(SMU_BMPUSATD0_RFECA1)
-  SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_RFECA1;
-#endif
-#if defined(SMU_BMPUSATD0_LDMA)
-  SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_LDMA;
-#endif
-#if defined(SMU_PPUSATD1_AHBRADIO)
-  SMU->PPUSATD1_CLR = SMU_PPUSATD1_AHBRADIO;
-#endif
-#if defined(SMU_PPUSATD1_RADIOAES)
-  SMU->PPUSATD1_CLR = SMU_PPUSATD1_RADIOAES;
-#endif
-#if defined (SMU_PPUSATD1_HFXO0)
-  SMU->PPUSATD1_CLR = SMU_PPUSATD1_HFXO0;
-#endif
-#if defined(SMU_PPUSATD1_EUSART0)
-  SMU->PPUSATD1_CLR = SMU_PPUSATD1_EUSART0;
-#endif
-#if defined (SMU_PPUSATD0_EMU)
-  SMU->PPUSATD0_CLR = SMU_PPUSATD0_EMU;
-#endif
-#if defined(SMU_PPUSATD0_LDMA)
-  SMU->PPUSATD0_CLR = SMU_PPUSATD0_LDMA;
-#endif
-#if defined(SMU_PPUSATD0_LDMAXBAR)
-  SMU->PPUSATD0_CLR = SMU_PPUSATD0_LDMAXBAR;
-#endif
-#if defined(SMU_PPUSATD0_GPIO)
-  SMU->PPUSATD0_CLR = SMU_PPUSATD0_GPIO;
-#endif
+
+SMU->PPUSATD0_CLR = SMU_PPUSATD0_EMU;
+SMU->PPUSATD0_CLR = SMU_PPUSATD0_LDMA;
+SMU->PPUSATD0_CLR = SMU_PPUSATD0_LDMAXBAR;
+SMU->PPUSATD0_CLR = SMU_PPUSATD0_GPIO;
+
+SMU->PPUSATD1_CLR = SMU_PPUSATD1_EUSART0;
+SMU->PPUSATD1_CLR = SMU_PPUSATD1_AHBRADIO;
+SMU->PPUSATD1_CLR = SMU_PPUSATD1_RADIOAES;
+SMU->PPUSATD1_CLR = SMU_PPUSATD1_HFXO0;
+
+SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_RADIOAES;
+SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_RADIOSUBSYSTEM;
+SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_RFECA0;
+SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_RFECA1;
+SMU->BMPUSATD0_CLR = SMU_BMPUSATD0_LDMA;
+
 SMU->LOCK = 0;
 CMU->CLKEN1_CLR = CMU_CLKEN1_SMU;
 }
@@ -266,7 +341,9 @@ CMU->CLKEN1_CLR = CMU_CLKEN1_SMU;
 // Claim peripherals back to SW
 static void secure_reclaim_peripherals(void)
 {
-secure_set_radio_irq_target(false);
+secure_set_irq_target(false);
+secure_clear_irqs_pending();
+
 CMU->CLKEN1_SET = CMU_CLKEN1_SMU;
 SMU->LOCK = SMU_LOCK_SMULOCKKEY_UNLOCK;
 
@@ -284,12 +361,6 @@ SMU->BMPUSATD0_SET = SMU_BMPUSATD0_RFECA1;
 #endif
 #if defined(SMU_BMPUSATD0_LDMA)
 SMU->BMPUSATD0_SET = SMU_BMPUSATD0_LDMA;
-#endif
-#if defined(SMU_BMPUSATD0_LDMA0)
-SMU->BMPUSATD0_SET = SMU_BMPUSATD0_LDMA0;
-#endif
-#if defined(SMU_BMPUSATD0_LDMA1)
-SMU->BMPUSATD0_SET = SMU_BMPUSATD0_LDMA1;
 #endif
 
 #if defined(SMU_PPUSATD0_GPIO)
@@ -317,139 +388,115 @@ SMU->PPUSATD1_SET = SMU_PPUSATD1_RADIOAES;
 #if defined (SMU_PPUSATD1_HFXO0)
 SMU->PPUSATD1_SET = SMU_PPUSATD1_HFXO0;
 #endif
-#if defined(SMU_PPUSATD1_LETIMER0)
-SMU->PPUSATD1_SET = SMU_PPUSATD1_LETIMER0;
+#if defined(SMU_PPUSATD1_SYSRTC)
+SMU->PPUSATD1_SET = SMU_PPUSATD1_SYSRTC;
 #endif
+
+
 
 SMU->LOCK = 0;  
 CMU->CLKEN1_CLR = CMU_CLKEN1_SMU;
 }
 
+#define NUM_IRQS_TO_SWITCH 15
+const IRQn_Type irqs[NUM_IRQS_TO_SWITCH] = {
+    FRC_PRI_IRQn, FRC_IRQn, MODEM_IRQn, RAC_SEQ_IRQn, RAC_RSM_IRQn,
+    BUFC_IRQn, AGC_IRQn, PROTIMER_IRQn, SYNTH_IRQn,
+    HOSTMAILBOX_IRQn, RFECA0_IRQn, RFECA1_IRQn, HFRCO0_IRQn, LDMA_IRQn, GPIO_ODD_IRQn
+}; 
 // Target radio IRQs to NS or S for peripiheral sharing
-static void secure_set_radio_irq_target(bool to_nonsecure)
+static void secure_set_irq_target(bool to_nonsecure)
 {
-  if (to_nonsecure) {
-    NVIC_SetTargetState(LDMA_IRQn);
-  } else {
-    NVIC_ClearTargetState(LDMA_IRQn);
-  }
-  if (to_nonsecure) {
-    NVIC_SetTargetState(AGC_IRQn);
-  } else {
-    NVIC_ClearTargetState(AGC_IRQn);
-  }
-  if (to_nonsecure) {
-    NVIC_SetTargetState(BUFC_IRQn);
-  } else {
-    NVIC_ClearTargetState(BUFC_IRQn);
-  }
-  if (to_nonsecure) {
-    NVIC_SetTargetState(FRC_PRI_IRQn);
-  } else {
-    NVIC_ClearTargetState(FRC_PRI_IRQn);
-  }
-  if (to_nonsecure) {
-    NVIC_SetTargetState(FRC_IRQn);
-  } else {
-    NVIC_ClearTargetState(FRC_IRQn);
-  }
-  if (to_nonsecure) {
-    NVIC_SetTargetState(MODEM_IRQn);
-  } else {
-    NVIC_ClearTargetState(MODEM_IRQn);
-  }
-  if (to_nonsecure) {
-    NVIC_SetTargetState(PROTIMER_IRQn);
-  } else {
-    NVIC_ClearTargetState(PROTIMER_IRQn);
-  }
-  if (to_nonsecure) {
-    NVIC_SetTargetState(RAC_RSM_IRQn);
-  } else {
-    NVIC_ClearTargetState(RAC_RSM_IRQn);
-  }
-  if (to_nonsecure) {
-    NVIC_SetTargetState(RAC_SEQ_IRQn);
-  } else {
-    NVIC_ClearTargetState(RAC_SEQ_IRQn);
-  }
-  if (to_nonsecure) {
-    NVIC_SetTargetState(SYNTH_IRQn);
-  } else {
-    NVIC_ClearTargetState(SYNTH_IRQn);
-  }
-  if (to_nonsecure) {
-    NVIC_SetTargetState(RFECA0_IRQn);
-  } else {
-    NVIC_ClearTargetState(RFECA0_IRQn);
-  }
-  if (to_nonsecure) {
-    NVIC_SetTargetState(RFECA1_IRQn);
-  } else {
-    NVIC_ClearTargetState(RFECA1_IRQn);
+  for (uint32_t i = 0; i < NUM_IRQS_TO_SWITCH; i++) {
+    NVIC_ClearPendingIRQ(irqs[i]);
+    secure_route_irq_target(irqs[i], to_nonsecure);
   }
 }
 
-// Start preempt timer at init
+static void secure_clear_irqs_pending(void)
+{
+  for (uint32_t i = 0; i < NUM_IRQS_TO_SWITCH; i++) {
+    NVIC_ClearPendingIRQ(irqs[i]);
+  }
+}
+
+static void secure_log_irq_targets(const char *tag)
+{
+  printf("SW irq targets (%s): LDMA=%lu FRC=%lu MODEM=%lu RAC_SEQ=%lu BUFC=%lu AGC=%lu PROTIMER=%lu SYNTH=%lu HOSTMAILBOX=%lu RFECA0=%lu RFECA1=%lu HFRCO0=%lu\n",
+         tag,
+         (unsigned long)NVIC_GetTargetState(LDMA_IRQn),
+         (unsigned long)NVIC_GetTargetState(FRC_IRQn),
+         (unsigned long)NVIC_GetTargetState(MODEM_IRQn),
+         (unsigned long)NVIC_GetTargetState(RAC_SEQ_IRQn),
+         (unsigned long)NVIC_GetTargetState(BUFC_IRQn),
+         (unsigned long)NVIC_GetTargetState(AGC_IRQn),
+         (unsigned long)NVIC_GetTargetState(PROTIMER_IRQn),
+         (unsigned long)NVIC_GetTargetState(SYNTH_IRQn),
+         (unsigned long)NVIC_GetTargetState(HOSTMAILBOX_IRQn),
+         (unsigned long)NVIC_GetTargetState(RFECA0_IRQn),
+         (unsigned long)NVIC_GetTargetState(RFECA1_IRQn),
+         (unsigned long)NVIC_GetTargetState(HFRCO0_IRQn));
+}
+
+// Start secure preempt timer at init (SYSRTC-backed sleeptimer)
 static void secure_init_preempt_timer(void)
 {
-  LETIMER_Init_TypeDef letimer_init = LETIMER_INIT_DEFAULT;
-  uint32_t letimer_clock_hz;
-  uint32_t letimer_divider = 1u;
-  uint32_t top;
-  uint64_t desired_ticks;
+  sl_status_t status;
 
-  (void)sl_clock_manager_enable_bus_clock(SL_BUS_CLOCK_LETIMER0);
-  letimer_clock_hz = CMU_ClockFreqGet(cmuClock_LETIMER0);
-
-  if (letimer_clock_hz == 0u) {
-    letimer_clock_hz = 1000u;
+  if (secure_preempt_timer_active) {
+    return;
   }
 
-  desired_ticks = ((uint64_t)letimer_clock_hz) * OTA_PREEMPT_PERIOD_SECONDS;
-  while ((desired_ticks > 0x0000FFFFu) && (letimer_divider < 32768u)) {
-    letimer_divider <<= 1;
-    CMU_ClockDivSet(cmuClock_LETIMER0, letimer_divider);
-    letimer_clock_hz = CMU_ClockFreqGet(cmuClock_LETIMER0);
-    if (letimer_clock_hz == 0u) {
-      letimer_clock_hz = 1000u;
-    }
-    desired_ticks = ((uint64_t)letimer_clock_hz) * OTA_PREEMPT_PERIOD_SECONDS;
+  NVIC_ClearTargetState(SYSRTC_APP_IRQn);
+  NVIC_ClearTargetState(SYSRTC_SEQ_IRQn);
+  NVIC_ClearPendingIRQ(SYSRTC_APP_IRQn);
+  NVIC_ClearPendingIRQ(SYSRTC_SEQ_IRQn);
+
+  status = sl_sleeptimer_start_periodic_timer_ms(&secure_preempt_timer,
+                                                 OTA_PREEMPT_PERIOD_MS,
+                                                 secure_preempt_timer_callback,
+                                                 NULL,
+                                                 0u,
+                                                 0u);
+  if (status != SL_STATUS_OK) {
+    printf("SW failed to start SYSRTC preempt timer: 0x%lx\n",
+           (unsigned long)status);
+    return;
   }
 
-  if (desired_ticks > 0x0000FFFFu) {
-    desired_ticks = 0x0000FFFFu;
-  }
-
-  ota_preempt_ticks = (uint32_t)desired_ticks;
-  top = ota_preempt_ticks;
-  if (top == 0u) {
-    top = 1u;
-  }
-
-  letimer_init.enable = false;
-  letimer_init.comp0Top = true;
-  LETIMER_Init(LETIMER0, &letimer_init);
-  LETIMER_CompareSet(LETIMER0, 0u, top);
-
-  NVIC_ClearTargetState(LETIMER0_IRQn);
-  NVIC_ClearPendingIRQ(LETIMER0_IRQn);
-  NVIC_EnableIRQ(LETIMER0_IRQn);
-
-  LETIMER_IntClear(LETIMER0, _LETIMER_IF_MASK);
-  ota_next_preempt_deadline_us = RAIL_GetTime() + OTA_PREEMPT_PERIOD_US;
-  secure_rearm_preempt_timer();
+  secure_preempt_timer_active = true;
 }
 
-// Restart preempt timer for next window
-static void secure_rearm_preempt_timer(void)
+// On timer interrupt: execute SW preemption window in PendSV context
+static void secure_preempt_timer_callback(sl_sleeptimer_timer_handle_t *handle,
+                                          void *data)
 {
-  LETIMER_IntDisable(LETIMER0, LETIMER_IF_UF);
-  LETIMER_Enable(LETIMER0, false);
-  LETIMER_IntClear(LETIMER0, _LETIMER_IF_MASK);
-  LETIMER_CounterSet(LETIMER0, ota_preempt_ticks);
-  LETIMER_IntEnable(LETIMER0, LETIMER_IF_UF);
-  LETIMER_Enable(LETIMER0, true);
+  (void)handle;
+  (void)data;
+  secure_preempt_work_pending = true;
+  SCB->ICSR = SCB_ICSR_PENDSVSET_Msk;
+}
+
+// Execute preemtpion window in PendSV context
+// Idk of dit moet, denk niet dat het erg is om in SYSRTC ISR te doen 
+void PendSV_Handler(void)
+{
+  if (!secure_preempt_work_pending) {
+    return;
+  }
+
+  secure_preempt_work_pending = false;
+  secure_handle_preemption_window();
+}
+
+// helper ... 
+static void secure_route_irq_target(IRQn_Type irqn, bool to_nonsecure)
+{
+  if (to_nonsecure) {
+    NVIC_SetTargetState(irqn);
+  } else {
+    NVIC_ClearTargetState(irqn);
+  }
 }
 
 /*
@@ -461,17 +508,23 @@ static void secure_rearm_preempt_timer(void)
 static void secure_handle_preemption_window(void)
 {
   secure_reclaim_peripherals();
-  printf("SW start query ota update\n");
+  printf("SW preempt: reclaim done\n");
 
-  // Get rail handle for inst0 
-  secure_rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
-  if ((secure_rail_handle == NULL) || (secure_rail_handle == RAIL_EFR32_HANDLE)) {
-    secure_delegate_peripherals_to_ns();
+  RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
+  if ((rail_handle == NULL) || (rail_handle == RAIL_EFR32_HANDLE)) {
     printf("SW bad rail handle\n");
-    return;
+  } else {
+    uint16_t bytes_written = RAIL_WriteTxFifo(rail_handle,
+                                      secure_probe_payload,
+                                      sizeof(secure_probe_payload),
+                                      false);
+    printf("SW bytes written to FIFO: %u\n", (unsigned int)bytes_written);
+    RAIL_Status_t status = RAIL_StartTx(rail_handle,
+                                        channelConfigs[0]->configs->channelNumberStart,
+                                        RAIL_TX_OPTIONS_DEFAULT,
+                                        NULL);
+    printf("SW tx status: 0x%lx\n", (unsigned long)status);
   }
-
-  // TODO: Query the update server to see if an update is available
 
   printf("SW end query ota update\n");
   secure_delegate_peripherals_to_ns();

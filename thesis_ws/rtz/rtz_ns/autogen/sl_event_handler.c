@@ -21,6 +21,10 @@
 #include "nvm3_default.h"
 #include "sl_cos.h"
 #include "sl_iostream_handles.h"
+#include "rail.h"
+#include <stdio.h>
+
+#define NS_DISABLE_RAIL_INIT_FOR_DEBUG (1)
 
 void sli_driver_permanent_allocation(void)
 {
@@ -72,12 +76,11 @@ void sl_service_init(void)
 
 void sl_stack_init(void)
 {
-  sl_rail_util_dma_init();
-  sl_rail_util_pa_init();
-  sl_rail_util_power_manager_init();
-  sl_rail_util_pti_init();
-  sl_rail_util_rssi_init();
-  sl_rail_util_init();
+  //sl_rail_util_dma_init();
+  //sl_rail_util_pa_init();
+  //// sl_rail_util_power_manager_init();
+  //sl_rail_util_pti_init();
+  //sl_rail_util_rssi_init();
 }
 
 void sl_internal_app_init(void)

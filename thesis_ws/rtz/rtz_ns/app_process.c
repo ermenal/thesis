@@ -36,24 +36,26 @@ static const uint8_t ns_tx_payload[] = "NS TX packet";
 #define NS_LED_PORT (gpioPortB)
 #define NS_LED_PIN  (2u)
 
-void sl_rail_util_on_rf_ready(RAIL_Handle_t rail_handle)
-{
-  ns_rail_handle = rail_handle;
-  (void)RAIL_SetTxFifo(ns_rail_handle,
-                       ns_tx_fifo,
-                       0u,
-                       sizeof(ns_tx_fifo));
-}
-
-void sl_rail_util_on_event(RAIL_Handle_t rail_handle, RAIL_Events_t events)
-{
-  (void)rail_handle;
-  if ((events & (RAIL_EVENTS_TX_COMPLETION
-                 | RAIL_EVENTS_TXACK_COMPLETION)) != 0u) {
-    ns_tx_in_progress = false;
-  }
-  // printf("NS event: 0x%016" PRIX64 "\n", (uint64_t)events);
-}
+//void sl_rail_util_on_rf_ready(RAIL_Handle_t rail_handle)
+//{
+//  ns_rail_handle = rail_handle;
+//  uint16_t size = RAIL_SetTxFifo(ns_rail_handle,
+//                       ns_tx_fifo,
+//                       0u,
+//                       sizeof(ns_tx_fifo));
+//  printf("NS tx fifo size after RAIL_SetTxFifo: %u\n", size);
+//}
+//
+//void sl_rail_util_on_event(RAIL_Handle_t rail_handle, RAIL_Events_t events)
+//{
+//  (void)rail_handle;
+//  if ((events & (RAIL_EVENTS_TX_COMPLETION
+//                 | RAIL_EVENTS_TXACK_COMPLETION)) != 0u) {
+//    ns_tx_in_progress = false;
+//    // printf("ns tx complete event fired\n");
+//  }
+//  // printf("NS event: 0x%016" PRIX64 "\n", (uint64_t)events);
+//}
 
 void sl_button_on_change(const sl_button_t *handle)
 {

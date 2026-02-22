@@ -37,25 +37,48 @@
 // to be non-secure -- but it's also not a problem if the peripheral is not
 // accessed from the S app.
 
+
+// Altijd secure
+#define SL_TRUSTZONE_PERIPHERAL_SMU_S (1)
+
+#define SL_TRUSTZONE_PERIPHERAL_SEMAILBOX_S (1)
+
+#define SL_TRUSTZONE_PERIPHERAL_MSC_S (1)
+
+#define SL_TRUSTZONE_PERIPHERAL_SYSCFG_S (1)
+
+
+// Secure tijdens preempt window
+#define SL_TRUSTZONE_PERIPHERAL_EMU_S (1)
+
+#define SL_TRUSTZONE_PERIPHERAL_LDMA_S (1)
+
+#define SL_TRUSTZONE_PERIPHERAL_LDMAXBAR_S (1)
+
+#define SL_TRUSTZONE_PERIPHERAL_GPIO_S (1)
+
+
+#define SL_TRUSTZONE_PERIPHERAL_EUSART0_S (1)
+
+#define SL_TRUSTZONE_PERIPHERAL_AHBRADIO_S (1)
+
+#define SL_TRUSTZONE_PERIPHERAL_RADIOAES_S (1)
+
+#define SL_TRUSTZONE_PERIPHERAL_HFXO0_S (1)
+
+
+
 // Used in multiple places.
 #define SL_TRUSTZONE_PERIPHERAL_CMU_S (0)
 
-// Used by SE Manager service.
-#define SL_TRUSTZONE_PERIPHERAL_AHBRADIO_S (0)
 
-// Used by RAIL/SE radio acceleration path.
-#define SL_TRUSTZONE_PERIPHERAL_RADIOAES_S (0)
 
-// Used by MSC service.
-#define SL_TRUSTZONE_PERIPHERAL_LDMA_S (1)
 
-// Used by MSC service.
-#define SL_TRUSTZONE_PERIPHERAL_LDMAXBAR_S (1)
 
-#define SL_TRUSTZONE_PERIPHERAL_SMU_S (0)
 
-#define SL_TRUSTZONE_PERIPHERAL_TIMER0_S (1)
 
-#define SL_TRUSTZONE_PERIPHERAL_EMU_S (1)
+#define SL_TRUSTZONE_PERIPHERAL_HOSTMAILBOX_S (1)
+
+#define SL_TRUSTZONE_PERIPHERAL_HFRCO0_S (1)
 
 #endif // SL_TRUSTZONE_SECURE_CONFIG_H
