@@ -3,6 +3,7 @@
 #include "sl_iostream_eusart.h"
 #include "sl_common.h"
 #include "dmadrv.h"
+#include "em_eusart.h"
 #include "sl_device_peripheral.h"
 #include "sl_clock_manager.h"
 #include "sl_hal_eusart.h"
@@ -233,11 +234,21 @@ void sl_iostream_eusart_init_instances(void)
 
 void SL_IOSTREAM_EUSART_TX_IRQ_HANDLER(SL_IOSTREAM_EUSART_VCOM_PERIPHERAL_NO)(void)
 {
+  if (sl_iostream_vcom.stream.context == NULL) {
+    EUSART_IntDisable(SL_IOSTREAM_EUSART_VCOM_PERIPHERAL, _EUSART_IEN_MASK);
+    EUSART_IntClear(SL_IOSTREAM_EUSART_VCOM_PERIPHERAL, _EUSART_IF_MASK);
+    return;
+  }
   sl_iostream_eusart_irq_handler(&sl_iostream_vcom);
 }
 
 void SL_IOSTREAM_EUSART_RX_IRQ_HANDLER(SL_IOSTREAM_EUSART_VCOM_PERIPHERAL_NO)(void)
 {
+  if (sl_iostream_vcom.stream.context == NULL) {
+    EUSART_IntDisable(SL_IOSTREAM_EUSART_VCOM_PERIPHERAL, _EUSART_IEN_MASK);
+    EUSART_IntClear(SL_IOSTREAM_EUSART_VCOM_PERIPHERAL, _EUSART_IF_MASK);
+    return;
+  }
   sl_iostream_eusart_irq_handler(&sl_iostream_vcom);
 }
 

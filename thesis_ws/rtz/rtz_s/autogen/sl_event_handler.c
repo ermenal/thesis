@@ -74,7 +74,7 @@ static uint8_t secure_rx_buffer[RX_PACKET_BUFFER_SIZE]
 SL_ATTRIBUTE_ALIGN(4);
 
 
-static const uint8_t secure_probe_payload[] = "SW TX packet";
+
 static sl_sleeptimer_timer_handle_t secure_preempt_timer;
 
 static void secure_delegate_peripherals_to_ns(void);
@@ -316,6 +316,13 @@ void sl_rail_util_on_event(RAIL_Handle_t rail_handle,
 // Free peripherals back to NS world
 static void secure_delegate_peripherals_to_ns(void)
 {
+EUSART_IntDisable(EUSART0, _EUSART_IEN_MASK);
+EUSART_IntClear(EUSART0, _EUSART_IF_MASK);
+NVIC_DisableIRQ(EUSART0_RX_IRQn);
+NVIC_DisableIRQ(EUSART0_TX_IRQn);
+NVIC_ClearPendingIRQ(EUSART0_RX_IRQn);
+NVIC_ClearPendingIRQ(EUSART0_TX_IRQn);
+
 secure_set_irq_target(true);
 secure_clear_irqs_pending();
 
@@ -351,59 +358,30 @@ secure_clear_irqs_pending();
 CMU->CLKEN1_SET = CMU_CLKEN1_SMU;
 SMU->LOCK = SMU_LOCK_SMULOCKKEY_UNLOCK;
 
-#if defined(SMU_BMPUSATD0_RADIOAES)
 SMU->BMPUSATD0_SET = SMU_BMPUSATD0_RADIOAES;
-#endif
-#if defined(SMU_BMPUSATD0_RADIOSUBSYSTEM)
 SMU->BMPUSATD0_SET = SMU_BMPUSATD0_RADIOSUBSYSTEM;
-#endif
-#if defined(SMU_BMPUSATD0_RFECA0)
 SMU->BMPUSATD0_SET = SMU_BMPUSATD0_RFECA0;
-#endif
-#if defined(SMU_BMPUSATD0_RFECA1)
 SMU->BMPUSATD0_SET = SMU_BMPUSATD0_RFECA1;
-#endif
-#if defined(SMU_BMPUSATD0_LDMA)
 SMU->BMPUSATD0_SET = SMU_BMPUSATD0_LDMA;
-#endif
 
-#if defined(SMU_PPUSATD0_GPIO)
 SMU->PPUSATD0_SET = SMU_PPUSATD0_GPIO;
-#endif
-#if defined(SMU_PPUSATD0_LDMA)
 SMU->PPUSATD0_SET = SMU_PPUSATD0_LDMA;
-#endif
-#if defined(SMU_PPUSATD0_LDMAXBAR)
 SMU->PPUSATD0_SET = SMU_PPUSATD0_LDMAXBAR;
-#endif
-#if defined (SMU_PPUSATD0_EMU)
 SMU->PPUSATD0_SET = SMU_PPUSATD0_EMU;
-#endif
 
-#if defined(SMU_PPUSATD1_EUSART0)
 SMU->PPUSATD1_SET = SMU_PPUSATD1_EUSART0;
-#endif
-#if defined(SMU_PPUSATD1_AHBRADIO)
 SMU->PPUSATD1_SET = SMU_PPUSATD1_AHBRADIO;
-#endif
-#if defined(SMU_PPUSATD1_RADIOAES)
 SMU->PPUSATD1_SET = SMU_PPUSATD1_RADIOAES;
-#endif
-#if defined (SMU_PPUSATD1_HFXO0)
 SMU->PPUSATD1_SET = SMU_PPUSATD1_HFXO0;
-#endif
-#if defined(SMU_PPUSATD1_SYSRTC)
 SMU->PPUSATD1_SET = SMU_PPUSATD1_SYSRTC;
-#endif
-
-
 
 SMU->LOCK = 0;  
 CMU->CLKEN1_CLR = CMU_CLKEN1_SMU;
 }
 
-#define NUM_IRQS_TO_SWITCH 15
+#define NUM_IRQS_TO_SWITCH 17
 const IRQn_Type irqs[NUM_IRQS_TO_SWITCH] = {
+  EUSART0_RX_IRQn, EUSART0_TX_IRQn,
     FRC_PRI_IRQn, FRC_IRQn, MODEM_IRQn, RAC_SEQ_IRQn, RAC_RSM_IRQn,
     BUFC_IRQn, AGC_IRQn, PROTIMER_IRQn, SYNTH_IRQn,
     HOSTMAILBOX_IRQn, RFECA0_IRQn, RFECA1_IRQn, HFRCO0_IRQn, LDMA_IRQn, GPIO_ODD_IRQn
@@ -440,8 +418,10 @@ static void secure_clear_irqs_pending(void)
 
 static void secure_log_irq_targets(const char *tag)
 {
-  printf("SW irq targets (%s): LDMA=%lu FRC=%lu MODEM=%lu RAC_SEQ=%lu BUFC=%lu AGC=%lu PROTIMER=%lu SYNTH=%lu HOSTMAILBOX=%lu RFECA0=%lu RFECA1=%lu HFRCO0=%lu\n",
+  printf("SW irq targets (%s): EUSART0_RX=%lu EUSART0_TX=%lu LDMA=%lu FRC=%lu MODEM=%lu RAC_SEQ=%lu BUFC=%lu AGC=%lu PROTIMER=%lu SYNTH=%lu HOSTMAILBOX=%lu RFECA0=%lu RFECA1=%lu HFRCO0=%lu\n",
          tag,
+         (unsigned long)NVIC_GetTargetState(EUSART0_RX_IRQn),
+         (unsigned long)NVIC_GetTargetState(EUSART0_TX_IRQn),
          (unsigned long)NVIC_GetTargetState(LDMA_IRQn),
          (unsigned long)NVIC_GetTargetState(FRC_IRQn),
          (unsigned long)NVIC_GetTargetState(MODEM_IRQn),
@@ -532,6 +512,7 @@ static void secure_handle_preemption_window(void)
   if ((rail_handle == NULL) || (rail_handle == RAIL_EFR32_HANDLE)) {
     printf("SW bad rail handle\n");
   } else {
+    uint8_t secure_probe_payload[] = "SW TX packet";
     uint16_t bytes_written = RAIL_WriteTxFifo(rail_handle,
                                       secure_probe_payload,
                                       sizeof(secure_probe_payload),
