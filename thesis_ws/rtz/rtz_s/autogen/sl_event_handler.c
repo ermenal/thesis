@@ -52,6 +52,11 @@ static bool secure_preempt_timer_active = false;
 static bool secure_tx_fifo_configured = false;
 static volatile bool secure_preempt_work_pending = false;
 
+SL_ALIGN(4) static uint8_t secure_probe_payload[] SL_ATTRIBUTE_ALIGN(4) = "SW TX packet";
+static volatile uint32_t secure_probe_stage = 0u;
+static volatile uint32_t secure_probe_status = 0u;
+static volatile uint32_t secure_probe_bytes_written = 0u;
+
 // TX FIFO dingen
 #define TX_FIFO_SIZE 256
 
@@ -87,6 +92,7 @@ static void secure_clear_all_irqs_pending(void);
 static void secure_set_irq_target(bool to_nonsecure);
 static void secure_clear_irqs_pending(void);
 static void secure_log_irq_targets(const char *tag);
+static bool secure_send_probe_packet(const char *tag);
 static void secure_preempt_timer_callback(sl_sleeptimer_timer_handle_t *handle,
                                           void *data);
 static void secure_route_irq_target(IRQn_Type irqn, bool to_nonsecure);
@@ -208,6 +214,9 @@ void start_ns_app(void)
   secure_init_radio();
   printf("SW init: preempt timer init\n");
   secure_init_preempt_timer();
+
+  (void)secure_send_probe_packet("SW startup probe");
+
   
   printf("SW init: delegate peripherals to NS\n");
   secure_delegate_peripherals_to_ns();
@@ -233,12 +242,8 @@ static void secure_runtime_init_once(void)
     return;
   }
 
-  printf("SW init: platform\n");
-
   sl_platform_init();
-  printf("SW init: driver\n");
   sl_driver_init();
-  printf("SW init: service\n");
   sl_service_init();
   // CMU_OscillatorEnable(cmuOsc_HFXO, true, true);
   sl_stack_init();
@@ -250,12 +255,19 @@ void secure_init_radio(void)
 {
   RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
 
+  if ((rail_handle == NULL) || (rail_handle == RAIL_EFR32_HANDLE)) {
+    printf("SW secure_init_radio bad rail handle\n");
+    while (1) {
+    }
+  }
+
   uint16_t size = RAIL_SetTxFifo(rail_handle, tx_fifo, 0, TX_FIFO_SIZE);
   if (size == 0) {
     printf("SW failed to set TX FIFO\n");
     while(1);
   } else {
     // printf("TX FIFO set, size: %u\n", size);
+    secure_tx_fifo_configured = true;
   }
 
   RAIL_Status_t status = RAIL_ConfigEvents(rail_handle,
@@ -506,27 +518,65 @@ static void secure_route_irq_target(IRQn_Type irqn, bool to_nonsecure)
 static void secure_handle_preemption_window(void)
 {
   secure_reclaim_peripherals();
-  printf("SW preempt: reclaim done\n");
 
+  (void)secure_send_probe_packet("SW preempt probe");
+
+  secure_delegate_peripherals_to_ns();
+}
+
+static bool secure_send_probe_packet(const char *tag)
+{
   RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
+  RAIL_Status_t status;
+  uint16_t fifo_size;
+  uint16_t bytes_written;
+
   if ((rail_handle == NULL) || (rail_handle == RAIL_EFR32_HANDLE)) {
-    printf("SW bad rail handle\n");
-  } else {
-    uint8_t secure_probe_payload[] = "SW TX packet";
-    uint16_t bytes_written = RAIL_WriteTxFifo(rail_handle,
-                                      secure_probe_payload,
-                                      sizeof(secure_probe_payload),
-                                      false);
-    printf("SW bytes written to FIFO: %u\n", (unsigned int)bytes_written);
-    RAIL_Status_t status = RAIL_StartTx(rail_handle,
-                                        channelConfigs[0]->configs->channelNumberStart,
-                                        RAIL_TX_OPTIONS_DEFAULT,
-                                        NULL);
-    printf("SW tx status: 0x%lx\n", (unsigned long)status);
+    (void)tag;
+    secure_probe_stage = 1u;
+    secure_probe_status = 0xE001u;
+    return false;
   }
 
-  printf("SW end query ota update\n");
-  secure_delegate_peripherals_to_ns();
+  secure_probe_stage = 2u;
+  status = RAIL_Idle(rail_handle,
+                     RAIL_IDLE_FORCE_SHUTDOWN_CLEAR_FLAGS,
+                     true);
+  if (status != RAIL_STATUS_NO_ERROR) {
+    secure_probe_stage = 3u;
+    secure_probe_status = (uint32_t)status;
+    return false;
+  }
+
+  secure_probe_stage = 4u;
+  fifo_size = RAIL_SetTxFifo(rail_handle, tx_fifo, 0, TX_FIFO_SIZE);
+  if (fifo_size == 0u) {
+    secure_probe_stage = 5u;
+    secure_probe_status = 0xE002u;
+    return false;
+  }
+  secure_tx_fifo_configured = true;
+
+  secure_probe_stage = 6u;
+  bytes_written = RAIL_WriteTxFifo(rail_handle,
+                                   secure_probe_payload,
+                                   sizeof(secure_probe_payload),
+                                   true);
+  secure_probe_bytes_written = bytes_written;
+  if (bytes_written != sizeof(secure_probe_payload)) {
+    secure_probe_stage = 7u;
+    secure_probe_status = 0xE003u;
+    return false;
+  }
+
+  secure_probe_stage = 8u;
+  status = RAIL_StartTx(rail_handle,
+                        channelConfigs[0]->configs->channelNumberStart,
+                        RAIL_TX_OPTIONS_DEFAULT,
+                        NULL);
+  secure_probe_status = (uint32_t)status;
+  secure_probe_stage = 9u;
+  return (status == RAIL_STATUS_NO_ERROR);
 }
 
 void sl_iostream_init_instances_stage_1(void)
