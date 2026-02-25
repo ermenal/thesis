@@ -3,7 +3,7 @@
  * @brief
  *******************************************************************************
  * # License
- * <b>Copyright 2020 Silicon Laboratories Inc. www.silabs.com</b>
+ * <b>Copyright 2024 Silicon Laboratories Inc. www.silabs.com</b>
  *******************************************************************************
  *
  * SPDX-License-Identifier: Zlib
@@ -47,6 +47,49 @@
 #define SL_RAIL_UTIL_INIT_INIT_COMPLETE_CALLBACK_INST_ENABLE 1
 // </h>
 
+// <h> FIFO and Queue Configuration
+// <h> Receive Packet Queue
+// <o SL_RAIL_UTIL_INIT_RX_PACKET_QUEUE_INST_ENTRIES> Receive Packet Queue Entries
+// <-16=>BuiltIn
+// <0=>None
+// <8=>8
+// <16=>16
+// <32=>32
+// <64=>64
+// <128=>128
+// <256=>256
+// <i> Default: -16
+#define SL_RAIL_UTIL_INIT_RX_PACKET_QUEUE_INST_ENTRIES -16
+// </h>
+// <h> Receive FIFO
+// <o SL_RAIL_UTIL_INIT_RX_FIFO_INST_BYTES> Receive FIFO Bytes
+// <-512=>BuiltIn
+// <0=>None
+// <64=>64
+// <128=>128
+// <256=>256
+// <512=>512
+// <1024=>1024
+// <2048=>2048
+// <4096=>4096
+// <i> Default: -512
+#define SL_RAIL_UTIL_INIT_RX_FIFO_INST_BYTES -512
+// </h>
+// <h> Transmit FIFO
+// <q SL_RAIL_UTIL_INIT_TX_FIFO_INST_BYTES> Configure initial TX FIFO
+// <0=>None
+// <64=>64
+// <128=>128
+// <256=>256
+// <512=>512
+// <1024=>1024
+// <2048=>2048
+// <4096=>4096
+// <i> Default: 0
+#define SL_RAIL_UTIL_INIT_TX_FIFO_INST_BYTES 0
+// </h>
+// </h>
+
 // <e SL_RAIL_UTIL_INIT_PROTOCOLS_INST_ENABLE> Protocol Configuration
 // <i> Default: 0
 #define SL_RAIL_UTIL_INIT_PROTOCOLS_INST_ENABLE 1
@@ -83,14 +126,14 @@
 
 // <e SL_RAIL_UTIL_INIT_CALIBRATIONS_INST_ENABLE> Calibration Configuration
 // <i> Default: 0
-#define SL_RAIL_UTIL_INIT_CALIBRATIONS_INST_ENABLE 0
+#define SL_RAIL_UTIL_INIT_CALIBRATIONS_INST_ENABLE 1
 // <h> Calibration Notifications
 // <q SL_RAIL_UTIL_INIT_CALIBRATION_TEMPERATURE_NOTIFY_INST_ENABLE> Enable Temperature Calibration Notifications (RAIL_EVENT_CAL_NEEDED radio event issued when temperature calibrations needed, for example VCO calibration)
 // <i> Default: 0
-#define SL_RAIL_UTIL_INIT_CALIBRATION_TEMPERATURE_NOTIFY_INST_ENABLE 0
+#define SL_RAIL_UTIL_INIT_CALIBRATION_TEMPERATURE_NOTIFY_INST_ENABLE 1
 // <q SL_RAIL_UTIL_INIT_CALIBRATION_ONETIME_NOTIFY_INST_ENABLE> Enable One-time Calibration Notifications (RAIL_EVENT_CAL_NEEDED radio event issued when one-time calibrations needed, for example IR calibration)
 // <i> Default: 0
-#define SL_RAIL_UTIL_INIT_CALIBRATION_ONETIME_NOTIFY_INST_ENABLE 0
+#define SL_RAIL_UTIL_INIT_CALIBRATION_ONETIME_NOTIFY_INST_ENABLE 1
 // </h>
 // </e>
 
@@ -124,33 +167,38 @@
 // </h>
 // </e>
 
-// <e SL_RAIL_UTIL_INIT_DATA_FORMATS_INST_ENABLE> Data Format Configuration
+// <e SL_RAIL_UTIL_INIT_TX_DATA_FORMAT_INST_ENABLE> TX Data Format Configuration
 // <i> Default: 0
-#define SL_RAIL_UTIL_INIT_DATA_FORMATS_INST_ENABLE 1
+#define SL_RAIL_UTIL_INIT_TX_DATA_FORMAT_INST_ENABLE 1
 // <h> TX Data
-// <o SL_RAIL_UTIL_INIT_DATA_FORMAT_INST_TX_SOURCE> Source of TX Data
-// <TX_PACKET_DATA=> Use frame hardware to packetize data
-// <i> Default: TX_PACKET_DATA
-#define SL_RAIL_UTIL_INIT_DATA_FORMAT_INST_TX_SOURCE  TX_PACKET_DATA
-// <o SL_RAIL_UTIL_INIT_DATA_FORMAT_INST_TX_MODE> Method of Providing TX Data
-// <PACKET_MODE=> Packet Mode
-// <FIFO_MODE=> FIFO Mode
-// <i> Default: PACKET_MODE
-#define SL_RAIL_UTIL_INIT_DATA_FORMAT_INST_TX_MODE  PACKET_MODE
+// <o SL_RAIL_UTIL_INIT_TX_DATA_FORMAT_INST_SOURCE> Source of TX Data
+// <SL_RAIL_TX_DATA_SOURCE_PACKET_DATA=> Use frame hardware to packetize data
+// <i> Default: SL_RAIL_TX_DATA_SOURCE_PACKET_DATA
+#define SL_RAIL_UTIL_INIT_TX_DATA_FORMAT_INST_SOURCE  SL_RAIL_TX_DATA_SOURCE_PACKET_DATA
+// <o SL_RAIL_UTIL_INIT_TX_DATA_FORMAT_INST_MODE> Method of Providing TX Data
+// <SL_RAIL_DATA_METHOD_PACKET_MODE=> Packet Mode
+// <SL_RAIL_DATA_METHOD_FIFO_MODE=> FIFO Mode
+// <i> Default: SL_RAIL_DATA_METHOD_PACKET_MODE
+#define SL_RAIL_UTIL_INIT_TX_DATA_FORMAT_INST_MODE  SL_RAIL_DATA_METHOD_PACKET_MODE
 // </h>
+// </e>
+
+// <e SL_RAIL_UTIL_INIT_RX_DATA_FORMAT_INST_ENABLE> RX Data Format Configuration
+// <i> Default: 0
+#define SL_RAIL_UTIL_INIT_RX_DATA_FORMAT_INST_ENABLE 1
 // <h> RX Data
-// <o SL_RAIL_UTIL_INIT_DATA_FORMAT_INST_RX_SOURCE> Source of RX Data
-// <RX_PACKET_DATA=> Use frame hardware to packetize data
-// <RX_DEMOD_DATA=> Get 8-bit output from demodulator
-// <RX_IQDATA_FILTLSB=> Get lowest 16 bits of I/Q data provided to demodulator
-// <RX_IQDATA_FILTMSB=> Get highest 16 bits of I/Q data provided to demodulator
-// <i> Default: RX_PACKET_DATA
-#define SL_RAIL_UTIL_INIT_DATA_FORMAT_INST_RX_SOURCE  RX_PACKET_DATA
-// <o SL_RAIL_UTIL_INIT_DATA_FORMAT_INST_RX_MODE> Method of Retrieving RX Data
-// <PACKET_MODE=> Packet Mode
-// <FIFO_MODE=> FIFO Mode
-// <i> Default: PACKET_MODE
-#define SL_RAIL_UTIL_INIT_DATA_FORMAT_INST_RX_MODE  PACKET_MODE
+// <o SL_RAIL_UTIL_INIT_RX_DATA_FORMAT_INST_SOURCE> Source of RX Data
+// <SL_RAIL_RX_DATA_SOURCE_PACKET_DATA=> Use frame hardware to packetize data
+// <SL_RAIL_RX_DATA_SOURCE_DEMOD_DATA=> Get 8-bit output from demodulator
+// <SL_RAIL_RX_DATA_SOURCE_IQDATA_FILTLSB=> Get lowest 16 bits of I/Q data provided to demodulator
+// <SL_RAIL_RX_DATA_SOURCE_IQDATA_FILTMSB=> Get highest 16 bits of I/Q data provided to demodulator
+// <i> Default: SL_RAIL_RX_DATA_SOURCE_PACKET_DATA
+#define SL_RAIL_UTIL_INIT_RX_DATA_FORMAT_INST_SOURCE  SL_RAIL_RX_DATA_SOURCE_PACKET_DATA
+// <o SL_RAIL_UTIL_INIT_RX_DATA_FORMAT_INST_MODE> Method of Retrieving RX Data
+// <SL_RAIL_DATA_METHOD_PACKET_MODE=> Packet Mode
+// <SL_RAIL_DATA_METHOD_FIFO_MODE=> FIFO Mode
+// <i> Default: SL_RAIL_DATA_METHOD_PACKET_MODE
+#define SL_RAIL_UTIL_INIT_RX_DATA_FORMAT_INST_MODE  SL_RAIL_DATA_METHOD_PACKET_MODE
 // </h>
 // </e>
 
@@ -170,12 +218,12 @@
 // <q SL_RAIL_UTIL_INIT_EVENT_RX_PREAMBLE_LOST_INST_ENABLE> RX Preamble Lost
 // <i> Default: 0
 #define SL_RAIL_UTIL_INIT_EVENT_RX_PREAMBLE_LOST_INST_ENABLE 1
-// <q SL_RAIL_UTIL_INIT_EVENT_RX_SYNC1_DETECT_INST_ENABLE> RX Sync1 Detect
+// <q SL_RAIL_UTIL_INIT_EVENT_RX_SYNC_0_DETECT_INST_ENABLE> RX Sync0 Detect
 // <i> Default: 0
-#define SL_RAIL_UTIL_INIT_EVENT_RX_SYNC1_DETECT_INST_ENABLE 0
-// <q SL_RAIL_UTIL_INIT_EVENT_RX_SYNC2_DETECT_INST_ENABLE> RX Sync2 Detect
+#define SL_RAIL_UTIL_INIT_EVENT_RX_SYNC_0_DETECT_INST_ENABLE 0
+// <q SL_RAIL_UTIL_INIT_EVENT_RX_SYNC_1_DETECT_INST_ENABLE> RX Sync1 Detect
 // <i> Default: 0
-#define SL_RAIL_UTIL_INIT_EVENT_RX_SYNC2_DETECT_INST_ENABLE 0
+#define SL_RAIL_UTIL_INIT_EVENT_RX_SYNC_1_DETECT_INST_ENABLE 0
 // <q SL_RAIL_UTIL_INIT_EVENT_RX_FILTER_PASSED_INST_ENABLE> RX Filter Passed
 // <i> Default: 0
 #define SL_RAIL_UTIL_INIT_EVENT_RX_FILTER_PASSED_INST_ENABLE 1
@@ -320,9 +368,6 @@
 #define SL_RAIL_UTIL_INIT_EVENT_THERMISTOR_DONE_INST_ENABLE 0
 // </h>
 // <h> Temperature Events
-// <q SL_RAIL_UTIL_INIT_EVENT_TX_BLOCKED_TOO_HOT_INST_ENABLE> Transmit blocked because of temperature limitation
-// <i> Default: 0
-#define SL_RAIL_UTIL_INIT_EVENT_TX_BLOCKED_TOO_HOT_INST_ENABLE 0
 // <q SL_RAIL_UTIL_INIT_EVENT_TEMPERATURE_TOO_HOT_INST_ENABLE> Temperature is too hot for Tx operation
 // <i> Default: 0
 #define SL_RAIL_UTIL_INIT_EVENT_TEMPERATURE_TOO_HOT_INST_ENABLE 0

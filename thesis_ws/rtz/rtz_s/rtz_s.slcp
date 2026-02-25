@@ -47,14 +47,15 @@ component:
 - {id: rail_lib_singleprotocol}
 - {id: rail_util_callbacks}
 - {id: rail_util_dma}
-- instance: [inst]
-  id: rail_util_init
-- {id: rail_util_pa}
-- {id: rail_util_recommended}
 - {id: silabs_core_memory_manager}
 - instance: [btn0]
   id: simple_button
 - {id: sl_main}
+- {id: sl_rail_util_callbacks}
+- {id: sl_rail_util_dma}
+- instance: [inst]
+  id: sl_rail_util_init
+- {id: sl_rail_util_pa}
 - {id: sl_system_compatibility}
 - {id: stdio}
 - {id: trustzone_secure}

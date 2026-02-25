@@ -1,9 +1,12 @@
 /***************************************************************************//**
  * @file
- * @brief RSSI configuration header file.
+ * @brief PA power conversion curves used by Silicon Labs PA power conversion
+ *   functions.
+ * @details This file contains the curves needed convert PA power levels to
+ *   dBm powers.
  *******************************************************************************
  * # License
- * <b>Copyright 2020 Silicon Laboratories Inc. www.silabs.com</b>
+ * <b>Copyright 2025 Silicon Laboratories Inc. www.silabs.com</b>
  *******************************************************************************
  *
  * SPDX-License-Identifier: Zlib
@@ -28,17 +31,9 @@
  *
  ******************************************************************************/
 
-#ifndef SL_RAIL_UTIL_RSSI_CONFIG_H
-#define SL_RAIL_UTIL_RSSI_CONFIG_H
+#ifndef SL_RAIL_PA_CURVES_H
+#define SL_RAIL_PA_CURVES_H
 
-// <<< Use Configuration Wizard in Context Menu >>>
+#include "sl_rail_util_pa_tables_config.h"
 
-// <h> RSSI Offset Configuration
-
-// <o SL_RAIL_UTIL_RSSI_OFFSET> Software RSSI offset value
-// <i> Default: 0
-#define SL_RAIL_UTIL_RSSI_OFFSET 0
-
-// </h>
-// <<< end of configuration section >>>
-#endif // SL_RAIL_UTIL_RSSI_CONFIG_H
+#endif // SL_RAIL_PA_CURVES_H
