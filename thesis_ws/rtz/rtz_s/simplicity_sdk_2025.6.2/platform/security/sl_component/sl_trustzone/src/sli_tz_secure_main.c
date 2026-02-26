@@ -250,6 +250,9 @@ static volatile uint32_t *const pagelock_registers[] = {
 
 // -----------------------------------------------------------------------------
 // Main function
+void config_smu(void);
+void config_mpu(void);
+void config_sau(void);
 
 int main(void)
 {
@@ -352,15 +355,15 @@ int main(void)
     fatal_error();
   }
 
-  // Initialize the Memory Manager ahead of the PSA Crypto init, in case PSA
-  // needs to utilize dynamic memory allocation.
-  sl_memory_init();
-
-  volatile psa_status_t psa_status = PSA_ERROR_GENERIC_ERROR;
-  psa_status = psa_crypto_init();
-  if (fih_not_eq(fih_int_encode(psa_status), fih_int_encode(PSA_SUCCESS))) {
-    fatal_error();
-  }
+//  // Initialize the Memory Manager ahead of the PSA Crypto init, in case PSA
+//  // needs to utilize dynamic memory allocation.
+//  sl_memory_init();
+//
+//  volatile psa_status_t psa_status = PSA_ERROR_GENERIC_ERROR;
+//  psa_status = psa_crypto_init();
+//  if (fih_not_eq(fih_int_encode(psa_status), fih_int_encode(PSA_SUCCESS))) {
+//    fatal_error();
+//  }
 
   FIH_CALL(enable_ns_fpu, fih_rc);
   if (fih_not_eq(fih_rc, FIH_SUCCESS)) {
@@ -1520,4 +1523,157 @@ __WEAK void BusFault_Handler(void)
 __WEAK void mpu_fault_handler(void)
 {
   fatal_error();
+}
+
+
+
+/*************************************************************** */
+
+extern const uint32_t linker_sg_begin;
+extern const uint32_t linker_vectors_begin;
+
+#define TZ_NS_FLASH_OFFSET (TZ_S_FLASH_END - FLASH_BASE)
+#define TZ_NS_RAM_OFFSET   (TZ_S_RAM_END - SRAM_BASE)
+#define NS_FLASH_BEGIN (FLASH_BASE + TZ_NS_FLASH_OFFSET)
+
+#define MY_CONFIGURED_SAU_REGIONS 6
+#define SECURE_RADIO_START 0xA0000000UL
+#define SECURE_RADIO_END 0xAFFFFFFFUL
+#define NS_RADIO_START 0xB0000000UL
+#define NS_RADIO_END 0xBFFFFFFFUL
+#define PERIPHERALS_BASE_NS_START (0x50000000UL)
+#define PERIPHERALS_BASE_NS_END   (0xBFFFFFFFUL)
+#define EPPB_REGION_START (0xE0044000UL)
+#define EPPB_REGION_END   (0xE00FDFFFUL)
+
+
+static const struct sau_cfg_t my_sau_cfg[MY_CONFIGURED_SAU_REGIONS] = {
+  { // NS Flash ( an overlapping NSC region for SG veneers is setup in SMU )
+    (uint32_t)&linker_sg_begin,
+    FLASH_BASE + FLASH_SIZE - 1u,
+  },
+//   { // RNR # 1 NS Peripherals
+    // PERIPHERALS_BASE_NS_START,
+    // SECURE_RADIO_START - 1u,
+//   },
+//   { // RNR # 2 NS Radio
+    // NS_RADIO_START,
+    // NS_RADIO_END,
+//   },
+  { // RNR # 3 NS SRAM
+    SRAM_BASE + TZ_NS_RAM_OFFSET,
+    SRAM_BASE + SRAM_SIZE - 1u,
+  },
+  { // RNR # 4 User Data
+    MSC_FLASH_USERDATA_MEM_BASE,
+    MSC_FLASH_USERDATA_MEM_END,
+  },
+  { // RNR # 5 Device Info
+    MSC_FLASH_DEVINFO_MEM_BASE,
+    MSC_FLASH_DEVINFO_MEM_END,
+  },
+  { // RNR # 6 Chip Config
+    MSC_FLASH_CHIPCONFIG_MEM_BASE,
+    MSC_FLASH_CHIPCONFIG_MEM_END,
+  },
+  { // RNR # 7 EPPB
+    EPPB_REGION_START,
+    EPPB_REGION_END,
+  },
+};
+
+void config_sau(void)
+{
+    // Enable configured regions 
+    int i = 0;
+    for (i = 0; i < MY_CONFIGURED_SAU_REGIONS; i++) {
+        SAU->RNR = i & SAU_RNR_REGION_Msk;
+        SAU->RBAR = my_sau_cfg[i].RBAR & SAU_RBAR_BADDR_Msk;
+        SAU->RLAR = (my_sau_cfg[i].RLAR & SAU_RLAR_LADDR_Msk) | SAU_RLAR_ENABLE_Msk;
+    }
+    // Disable remaining regions
+    for (; i < ((SAU->TYPE & SAU_TYPE_SREGION_Msk) >> SAU_TYPE_SREGION_Pos); i++) {
+        SAU->RNR = i & SAU_RNR_REGION_Msk;
+        SAU->RBAR = 0;
+        SAU->RLAR = 0;
+    }
+
+    // Enable SAU
+    SAU->CTRL |=  (SAU_CTRL_ENABLE_Msk);
+}
+
+void config_smu(void) 
+{
+    // Enable SMU clock (CMU is NS), unlock SMU
+    CMU_S->CLKEN1_SET = CMU_CLKEN1_SMU;
+
+    SMU->LOCK = SMU_LOCK_SMULOCKKEY_UNLOCK;
+
+    // Configure Flash mbv Movable Region Boundaries
+    SMU->ESAUMRB01 = FLASH_BASE & _SMU_ESAUMRB01_MASK; // Eind van secure flash, start van NSC flash
+    // SMU->ESAUMRB01 = ((uint32_t)&linker_sg_begin) & _SMU_ESAUMRB01_MASK; // Eind van secure flash, start van NSC flash
+    SMU->ESAUMRB12 = NS_FLASH_BEGIN & _SMU_ESAUMRB12_MASK; // Eind van NSC flash, start van NS flash
+
+    SMU->ESAUMRB45 = (SRAM_BASE + TZ_NS_RAM_OFFSET) & _SMU_ESAUMRB45_MASK; // Eind van secure RAM, start van NSC RAM
+    SMU->ESAUMRB56 = (SRAM_BASE + TZ_NS_RAM_OFFSET) & _SMU_ESAUMRB56_MASK; // Eind van NSC RAM, start van NS RAM
+
+    SMU->ESAURTYPES0 = SMU_ESAURTYPES0_ESAUR3NS; // Info page NS
+    SMU->ESAURTYPES1 = SMU_ESAURTYPES1_ESAUR11NS; // EPPB NS (External Private Peripheral Bus)
+
+    // Peripherals
+
+    SMU->PPUSATD0_CLR = _SMU_PPUSATD0_MASK
+                        & ~(SMU_PPUSATD0_SYSCFG
+                            | SMU_PPUSATD0_MSC
+                            | SMU_PPUSATD0_CMU
+                            | SMU_PPUSATD0_DCDC
+                            | SMU_PPUSATD0_GPIO
+                            | SMU_PPUSATD0_EMU
+                            | SMU_PPUSATD0_PRS
+                            | SMU_PPUSATD0_HOSTMAILBOX
+                            | SMU_PPUSATD0_LDMA
+                            | SMU_PPUSATD0_LDMAXBAR
+                            | SMU_PPUSATD0_LFRCO
+                            | SMU_PPUSATD0_LFXO
+                            | SMU_PPUSATD0_HFRCO0
+                            | SMU_PPUSATD0_FSRCO
+                        );
+    SMU->PPUSATD1_CLR = _SMU_PPUSATD1_MASK
+                      & ~(SMU_PPUSATD1_SMU
+                          | SMU_PPUSATD1_SEMAILBOX
+                            | SMU_PPUSATD1_AHBRADIO
+                            | SMU_PPUSATD1_HFXO0
+                            | SMU_PPUSATD1_SYSRTC
+                            | SMU_PPUSATD1_EUSART0
+                        );
+    
+    // Bus Masters
+    SMU->BMPUSATD0_CLR = _SMU_BMPUSATD0_MASK
+                        & ~(SMU_BMPUSATD0_LDMA
+                            | SMU_BMPUSATD0_RADIOSUBSYSTEM
+                            | SMU_BMPUSATD0_RFECA0
+                            | SMU_BMPUSATD0_RFECA1
+                            | SMU_BMPUSATD0_SEEXTDMA
+                        );
+    
+    // Zet Security fault IRQs aan
+    NVIC_ClearPendingIRQ(SMU_SECURE_IRQn);
+    SMU->IF_CLR = SMU_IF_PPUSEC | SMU_IF_BMPUSEC;
+    NVIC_EnableIRQ(SMU_SECURE_IRQn);
+    SMU->IEN = SMU_IEN_PPUSEC | SMU_IEN_BMPUSEC;
+
+    // Lock SMU config en disable SMU clock (CMU is S)
+    SMU->LOCK = 0;
+    CMU_S->CLKEN1_CLR = CMU_CLKEN1_SMU;
+
+}
+
+void config_mpu(void)
+{
+    // Bootloader shit 
+    // ... 
+    sl_status_t status = sl_mpu_disable_execute(TZ_S_FLASH_END,
+                                  FLASH_BASE + FLASH_SIZE - 1u,
+                                  FLASH_BASE + FLASH_SIZE - TZ_S_FLASH_END);
+    (void) status;
 }

@@ -8,6 +8,8 @@
 #include "sl_clock_manager.h"
 #include "sl_clock_manager_init.h"
 #include "sl_hfxo_manager.h"
+#include "sl_mpu.h"
+#include "sl_rail.h"
 #include "sl_rail_util_dma.h"
 #include "sl_rail_util_power_manager_init.h"
 #include "sl_rail_util_pa_conversions.h"
@@ -63,7 +65,7 @@ void sl_platform_init(void)
   }
   sl_hfxo_manager_init_hardware();
   sl_board_init();
-  bootloader_init();
+  // bootloader_init();
 }
 
 void sli_internal_init_early(void)
@@ -144,7 +146,7 @@ void sl_stack_init(void)
   // printf("RADIO_CONFIG_XTAL_FREQUENCY: %lu\n", (unsigned long)RADIO_CONFIG_XTAL_FREQUENCY);
 
   sl_rail_util_dma_init();
-  sl_rail_util_power_manager_init();
+  // sl_rail_util_power_manager_init();
   sl_rail_util_pa_init();
   sl_rail_util_init();
 
@@ -192,12 +194,14 @@ static void transmit_packet(const char *payload);
 static void secure_set_irqs_target(bool to_nonsecure);
 static void secure_clear_irqs_pending(void);
 
-#define NUM_IRQS_TO_SWITCH 20
+#define NUM_IRQS_TO_SWITCH 22
 const IRQn_Type irqs[NUM_IRQS_TO_SWITCH] = {
   EUSART0_RX_IRQn, EUSART0_TX_IRQn,
     FRC_PRI_IRQn, FRC_IRQn, MODEM_IRQn, RAC_SEQ_IRQn, RAC_RSM_IRQn,
     BUFC_IRQn, AGC_IRQn, PROTIMER_IRQn, SYNTH_IRQn,
-    RFECA0_IRQn, RFECA1_IRQn, HFRCO0_IRQn, LDMA_IRQn, GPIO_ODD_IRQn, HOSTMAILBOX_IRQn, DCDC_IRQn, SYSRTC_APP_IRQn, SYSRTC_SEQ_IRQn
+    RFECA0_IRQn, RFECA1_IRQn, HFRCO0_IRQn, LDMA_IRQn, GPIO_ODD_IRQn, 
+    HOSTMAILBOX_IRQn, DCDC_IRQn, SYSRTC_APP_IRQn, SYSRTC_SEQ_IRQn,
+    EMU_IRQn, HFXO0_IRQn
 }; 
 
 // TX FIFO dingen
@@ -384,18 +388,11 @@ void sl_rail_util_on_event(RAIL_Handle_t rail_handle,
     printf("SW event: RX packet received\n");
   }
   else if (events & RAIL_EVENT_CAL_NEEDED) {
-    printf("EVENT: Calibration needed. Getting pending mask...\n");
-    // Get the pending calibrations to see which types are needed
-    RAIL_CalMask_t pending = RAIL_GetPendingCal(rail_handle);
-    printf("Pending calibrations: 0x%08lx (TEMP_VCO=%lu, IR_CAL=%lu)\n",
-           (unsigned long)pending,
-           (unsigned long)((pending & RAIL_CAL_TEMP_VCO) ? 1 : 0),
-           (unsigned long)((pending & RAIL_CAL_ONETIME_IRCAL) ? 1 : 0));
-    printf("About to call RAIL_Calibrate with mask 0x%08lx...\n", (unsigned long)pending);
-    RAIL_Status_t status = RAIL_Calibrate(rail_handle, NULL, pending);
-    printf("RAIL_Calibrate returned: 0x%lx\n", (unsigned long)status);
+    printf("EVENT: Calibration needed\n");
+    printf("sys clock source: %lu sys clock freq: %lu Hz\n", (unsigned long)CMU_ClockSelectGet(cmuClock_SYSCLK), CMU_ClockFreqGet(cmuClock_SYSCLK));
+    RAIL_Status_t status = sl_rail_calibrate(rail_handle, NULL, RAIL_CAL_ALL);
     if (status != RAIL_STATUS_NO_ERROR) {
-      printf("SW RAIL_Calibrate failed. Status: 0x%lx\n", (unsigned long)status);
+      printf("SW split calibration failed. Status: 0x%lx\n", (unsigned long)status);
       while(1) {};
     }
   }
@@ -408,6 +405,7 @@ static void transmit_packet(const char *payload)
     printf("SW transmit_packet bad rail handle\n");
     while (1) {}
   }
+  sl_rail_write_tx_fifo(rail_handle, (const uint8_t *)payload, strlen(payload), false);
   uint16_t bytes_written = RAIL_WriteTxFifo(rail_handle,
                                    (const uint8_t *)payload,
                                    strlen(payload),

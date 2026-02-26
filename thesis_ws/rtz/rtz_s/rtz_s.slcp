@@ -64,6 +64,54 @@ component:
 - {id: ustimer}
 define:
 - {name: TFM_CRYPTO_CONC_OPER_NUM, value: '2'}
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_SYSCFG_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_MSC_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_CMU_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_DCDC_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_GPIO_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_EMU_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_PRS_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_HOSTMAILBOX_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_LDMA_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_LDMAXBAR_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_SMU_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_SEMAILBOX_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_AHBRADIO_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_HFXO0_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_SYSRTC_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_EUSART0_S
+  value: '1'
 template_contribution:
 - {name: application_type, priority: 0, value: APPLICATION_TYPE_MCU}
 - {name: memory_ram_start, priority: 0, value: 536870912}

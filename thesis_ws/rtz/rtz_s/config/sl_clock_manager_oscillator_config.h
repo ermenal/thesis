@@ -348,8 +348,6 @@
 
 // <cmu signal=CLKIN0 optional=true> SL_CLOCK_MANAGER_CLKIN0
 // $[CMU_SL_CLOCK_MANAGER_CLKIN0]
-
-
 // [CMU_SL_CLOCK_MANAGER_CLKIN0]$
 
 // <<< sl:end pin_tool >>>
