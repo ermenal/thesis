@@ -8,6 +8,7 @@
 #include "sl_clock_manager.h"
 #include "sl_clock_manager_init.h"
 #include "sl_hfxo_manager.h"
+#include "sl_main_init.h"
 #include "sl_mpu.h"
 #include "sl_rail.h"
 #include "sl_rail_util_dma.h"
@@ -243,7 +244,7 @@ void start_ns_app(void)
 
   
   printf("SW init: delegate peripherals to NS\n");
-  secure_delegate_peripherals_to_ns();
+  // secure_delegate_peripherals_to_ns();
 
   __TZ_set_MSP_NS(*((uint32_t *)ns_flash_base));
   __TZ_set_PSP_NS(*((uint32_t *)ns_flash_base));
@@ -323,10 +324,11 @@ static void secure_delegate_peripherals_to_ns(void)
 
 static void secure_runtime_init(void)
 {
-  sl_platform_init();
-  sl_driver_init();
-  sl_service_init();
-  sl_stack_init();
+  sl_main_init();
+  //sl_platform_init();
+  //sl_driver_init();
+  //sl_service_init();
+  //sl_stack_init();
 }
 
 // Target radio IRQs to NS or S for peripiheral sharing
@@ -388,8 +390,9 @@ void sl_rail_util_on_event(RAIL_Handle_t rail_handle,
     printf("SW event: RX packet received\n");
   }
   else if (events & RAIL_EVENT_CAL_NEEDED) {
+    // return;
     printf("EVENT: Calibration needed\n");
-    printf("sys clock source: %lu sys clock freq: %lu Hz\n", (unsigned long)CMU_ClockSelectGet(cmuClock_SYSCLK), CMU_ClockFreqGet(cmuClock_SYSCLK));
+    printf("sys clock source: %lu sys clock freq: %lu Hz\n", (unsigned long)CMU_ClockSelectGet(cmuClock_SYSCLK), (unsigned long)CMU_ClockFreqGet(cmuClock_SYSCLK));
     RAIL_Status_t status = sl_rail_calibrate(rail_handle, NULL, RAIL_CAL_ALL);
     if (status != RAIL_STATUS_NO_ERROR) {
       printf("SW split calibration failed. Status: 0x%lx\n", (unsigned long)status);

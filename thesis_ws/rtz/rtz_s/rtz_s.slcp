@@ -95,6 +95,15 @@ define:
   name: SL_TRUSTZONE_PERIPHERAL_LDMAXBAR_S
   value: '1'
 - condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_LFRCO_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_LFXO_S
+  value: '1'
+- condition: [trustzone_secure]
+  name: SL_TRUSTZONE_PERIPHERAL_FSRCO_S
+  value: '1'
+- condition: [trustzone_secure]
   name: SL_TRUSTZONE_PERIPHERAL_SMU_S
   value: '1'
 - condition: [trustzone_secure]
