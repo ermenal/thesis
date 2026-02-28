@@ -1,6 +1,6 @@
 /***************************************************************************//**
  * @file
- * @brief Power Manager API definition.
+ * @brief DEVICE_INIT_EMU Config
  *******************************************************************************
  * # License
  * <b>Copyright 2019 Silicon Laboratories Inc. www.silabs.com</b>
@@ -28,33 +28,26 @@
  *
  ******************************************************************************/
 
-#ifndef SL_POWER_MANAGER_DEBUG_H
-#define SL_POWER_MANAGER_DEBUG_H
+#ifndef SL_DEVICE_INIT_EMU_CONFIG_H
+#define SL_DEVICE_INIT_EMU_CONFIG_H
 
-#include "sl_power_manager.h"
+#include "em_emu.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+// <<< Use Configuration Wizard in Context Menu >>>
 
-/***************************************************************************//**
- * @addtogroup power_manager
- * @{
- ******************************************************************************/
+// <q> Allow debugger to remain connected in EM2
+// <i> Force PD0B to stay on on EM2 entry. This allows the debugger to remain connected in EM2 and EM3.
+// <i> Enabling debug connectivity results in an increased power consumption in EM2/EM3.
+// <i> Default: 1
+#define SL_DEVICE_INIT_EMU_EM2_DEBUG_ENABLE   1
 
-// -----------------------------------------------------------------------------
-// Prototypes
+// <o SL_DEVICE_INIT_EMU_EM4_PIN_RETENTION_MODE> EM4 pin retention mode
+// <emuPinRetentionDisable=> No Retention: Pads enter reset state when entering EM4.
+// <emuPinRetentionEm4Exit=> Retention through EM4: Pads enter reset state when exiting EM4.
+// <emuPinRetentionLatch=> Retention through EM4 and wakeup.
+// <i> Default: emuPinRetentionDisable
+#define SL_DEVICE_INIT_EMU_EM4_PIN_RETENTION_MODE  emuPinRetentionDisable
 
-/***************************************************************************//**
- * Print a table that describes the current requirements on each energy
- * mode and their owner.
- ******************************************************************************/
-void sl_power_manager_debug_print_em_requirements(void);
+// <<< end of configuration section >>>
 
-/** @} (end addtogroup power_manager) */
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif
+#endif // SL_DEVICE_INIT_EMU_CONFIG_H

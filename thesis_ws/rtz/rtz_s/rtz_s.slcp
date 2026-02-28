@@ -43,7 +43,6 @@ component:
 - {id: hfxo_manager}
 - {id: iostream_recommended_stream}
 - {id: iostream_retarget_stdio}
-- {id: power_manager}
 - {id: rail_lib_singleprotocol}
 - {id: rail_util_callbacks}
 - {id: rail_util_dma}

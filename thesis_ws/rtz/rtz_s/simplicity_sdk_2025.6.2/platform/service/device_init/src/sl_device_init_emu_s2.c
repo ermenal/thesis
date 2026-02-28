@@ -1,9 +1,9 @@
 /***************************************************************************//**
  * @file
- * @brief Initialize RAIL power manager
+ * @brief Device initialization for EMU.
  *******************************************************************************
  * # License
- * <b>Copyright 2020 Silicon Laboratories Inc. www.silabs.com</b>
+ * <b>Copyright 2019 Silicon Laboratories Inc. www.silabs.com</b>
  *******************************************************************************
  *
  * SPDX-License-Identifier: Zlib
@@ -27,13 +27,23 @@
  * 3. This notice may not be removed or altered from any source distribution.
  *
  ******************************************************************************/
-#include "sl_rail.h"
-#include "sl_rail_util_power_manager_init.h"
-#include "sl_rail_util_power_manager_init_config.h"
 
-void sl_rail_util_power_manager_init(void)
+#include "sl_device_init_emu.h"
+#include "sl_device_init_emu_config.h"
+
+#include "em_emu.h"
+
+sl_status_t sl_device_init_emu(void)
 {
-#if SL_RAIL_UTIL_RAIL_POWER_MANAGER_INIT == 1
-  (void) sl_rail_init_power_manager();
-#endif
+  // EM2 set debug enable
+  EMU->CTRL = (EMU->CTRL & ~_EMU_CTRL_EM2DBGEN_MASK)
+              | (SL_DEVICE_INIT_EMU_EM2_DEBUG_ENABLE << _EMU_CTRL_EM2DBGEN_SHIFT);
+
+  // EM4 Init
+  EMU_EM4Init_TypeDef em4_init = EMU_EM4INIT_DEFAULT;
+
+  em4_init.pinRetentionMode = SL_DEVICE_INIT_EMU_EM4_PIN_RETENTION_MODE;
+  EMU_EM4Init(&em4_init);
+
+  return SL_STATUS_OK;
 }

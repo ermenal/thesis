@@ -12,7 +12,6 @@
 #include "sl_mpu.h"
 #include "sl_rail.h"
 #include "sl_rail_util_dma.h"
-#include "sl_rail_util_power_manager_init.h"
 #include "sl_rail_util_pa_conversions.h"
 #include "sl_rail_util_init.h"
 #include "btl_interface.h"

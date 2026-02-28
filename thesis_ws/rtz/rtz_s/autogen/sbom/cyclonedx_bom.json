@@ -3,7 +3,7 @@
   "specVersion" : "1.6",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-02-24T21:18:10Z",
+    "timestamp" : "2026-02-26T18:15:01Z",
     "authors" : [ {
       "name" : "Silicon Laboratories, Inc."
     } ],
@@ -300,18 +300,6 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:power_manager",
-      "name" : "Power Manager",
-      "version" : "2025.6.2",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.2:rail_lib_singleprotocol",
       "name" : "RAIL Library, Single Protocol",
       "version" : "2025.6.2",
@@ -374,6 +362,54 @@
       "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.2:sl_main",
       "name" : "System Setup (sl_main)",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_callbacks",
+      "name" : "SL RAIL Utility, Callbacks",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_dma",
+      "name" : "SL RAIL Utility, DMA",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_init",
+      "name" : "SL RAIL Utility, Initialization",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_pa",
+      "name" : "SL RAIL Utility, PA",
       "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -915,8 +951,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:enum",
-      "name" : "Enumerations",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_pa_tables",
+      "name" : "RAIL Utility, PA Tables",
       "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -927,8 +963,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:power_manager_core_impl_sleep_loop",
-      "name" : "Power Manager: Core implementation",
+      "bom-ref" : "simplicity_sdk:2025.6.2:enum",
+      "name" : "Enumerations",
       "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -1013,6 +1049,18 @@
       "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.2:atomic",
       "name" : "Atomic Operations Library",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_protocol",
+      "name" : "SL RAIL Utility, Protocol",
       "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -1936,18 +1984,6 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:power_manager_handler_implementation",
-      "name" : "Power Manager: Handler",
-      "version" : "2025.6.2",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.2:psa_crypto_ecc",
       "name" : "ECC",
       "version" : "2025.6.2",
@@ -2055,18 +2091,6 @@
       "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.2:board_control",
       "name" : "Board Control",
-      "version" : "2025.6.2",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:power_manager_core",
-      "name" : "Power Manager: Core",
       "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -2419,18 +2443,6 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:power_manager_deepsleep",
-      "name" : "Power Manager: Deepsleep",
-      "version" : "2025.6.2",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.2:interrupt_manager_cortexm",
       "name" : "Interrupt Manager Cortex-M",
       "version" : "2025.6.2",
@@ -2467,8 +2479,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:rail_util_power_manager_init",
-      "name" : "RAIL Utility, Power manager init",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_init_core",
+      "name" : "SL RAIL Utility, Initialization Core",
       "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -3129,6 +3141,18 @@
     }, {
       "scope" : "required",
       "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:rail_util_protocol",
+      "name" : "RAIL Utility, Protocol",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.2:tz_util",
       "name" : "tz_util",
       "version" : "2025.6.2",
@@ -3522,92 +3546,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_pa",
-      "name" : "SL RAIL Utility, PA",
-      "version" : "2025.6.2",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_pa_tables",
-      "name" : "RAIL Utility, PA Tables",
-      "version" : "2025.6.2",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_dma",
-      "name" : "SL RAIL Utility, DMA",
-      "version" : "2025.6.2",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_callbacks",
-      "name" : "SL RAIL Utility, Callbacks",
-      "version" : "2025.6.2",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_init",
-      "name" : "SL RAIL Utility, Initialization",
-      "version" : "2025.6.2",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_protocol",
-      "name" : "SL RAIL Utility, Protocol",
-      "version" : "2025.6.2",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_init_core",
-      "name" : "SL RAIL Utility, Initialization Core",
-      "version" : "2025.6.2",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.2:rail_util_protocol",
-      "name" : "RAIL Utility, Protocol",
+      "bom-ref" : "simplicity_sdk:2025.6.2:device_init_emu",
+      "name" : "Energy Management Unit (EMU)",
       "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
