@@ -67,12 +67,25 @@ static AppSlot_t ota_target_slot = SLOT_A;
 static uint32_t ota_target_base = APP_SLOT_A_START_ADDR;
 
 #define FLASH_PAGE_SIZE_BYTES 0x2000u
+#define SLOT_NONSECURE_OFFSET_BYTES (0x08026000u - APP_SLOT_A_START_ADDR)
+
+typedef enum {
+  OTA_UPDATE_MODE_FULL = 0u,
+  OTA_UPDATE_MODE_SECURE_ONLY = 1u,
+  OTA_UPDATE_MODE_NONSECURE_ONLY = 2u,
+} ota_update_mode_t;
+
+_Static_assert(SLOT_NONSECURE_OFFSET_BYTES < APP_SLOT_SIZE_BYTES,
+               "Invalid secure/nonsecure split");
 
 typedef struct {
   bool active;
   bool msc_active;
   AppSlot_t slot;
+  ota_update_mode_t mode;
   uint32_t base_address;
+  uint32_t write_base_offset;
+  uint32_t max_update_bytes;
   uint32_t expected_offset;
   uint32_t write_cursor;
   uint8_t residual[4];
@@ -119,6 +132,27 @@ static bool ota_finish_update(uint32_t *out_crc, uint32_t *out_length);
 static void send_slot_info_response(AppSlot_t active_slot,
                                     AppSlot_t inactive_slot,
                                     UpdateStatus_t pending_slot);
+
+static bool ota_update_mode_valid(ota_update_mode_t mode)
+{
+  return (mode == OTA_UPDATE_MODE_FULL)
+         || (mode == OTA_UPDATE_MODE_SECURE_ONLY)
+         || (mode == OTA_UPDATE_MODE_NONSECURE_ONLY);
+}
+
+static const char *ota_update_mode_to_string(ota_update_mode_t mode)
+{
+  switch (mode) {
+    case OTA_UPDATE_MODE_FULL:
+      return "FULL";
+    case OTA_UPDATE_MODE_SECURE_ONLY:
+      return "SECURE_ONLY";
+    case OTA_UPDATE_MODE_NONSECURE_ONLY:
+      return "NONSECURE_ONLY";
+    default:
+      return "UNKNOWN";
+  }
+}
 
 static uint32_t crc32_update(uint32_t crc, const uint8_t *data, size_t length)
 {
@@ -504,11 +538,21 @@ static bool ota_address_within_slot(uint32_t address, size_t length)
   return (start >= slot_start) && (end <= slot_end);
 }
 
-static bool ota_erase_slot(void)
+static bool ota_erase_region(uint32_t start_address, size_t length)
 {
-  uint32_t slot_end = boot_state_slot_end(ota_ctx.slot);
+  if (length == 0u) {
+    return true;
+  }
 
-  for (uint32_t page = ota_ctx.base_address; page < slot_end; page += FLASH_PAGE_SIZE_BYTES) {
+  uint32_t first_page = start_address;
+  uint32_t end_address = start_address + (uint32_t)length;
+
+  if ((first_page % FLASH_PAGE_SIZE_BYTES) != 0u
+      || (end_address % FLASH_PAGE_SIZE_BYTES) != 0u) {
+    return false;
+  }
+
+  for (uint32_t page = first_page; page < end_address; page += FLASH_PAGE_SIZE_BYTES) {
     MSC_Status_TypeDef status = MSC_ErasePage((uint32_t *)page);
     if (status != mscReturnOk) {
       return false;
@@ -542,14 +586,41 @@ static bool ota_flash_write_aligned(const uint8_t *data, size_t length)
   return true;
 }
 
-static bool ota_begin_update(AppSlot_t slot)
+static bool ota_begin_update(AppSlot_t slot, ota_update_mode_t mode)
 {
   ota_abort_update();
 
+  if (!ota_update_mode_valid(mode)) {
+    return false;
+  }
+
+  if (!boot_state_manager_init()) {
+    return false;
+  }
+
   ota_ctx.slot = slot;
+  ota_ctx.mode = mode;
   ota_ctx.base_address = boot_state_slot_address(slot);
+
+  switch (mode) {
+    case OTA_UPDATE_MODE_FULL:
+      ota_ctx.write_base_offset = 0u;
+      ota_ctx.max_update_bytes = APP_SLOT_SIZE_BYTES;
+      break;
+    case OTA_UPDATE_MODE_SECURE_ONLY:
+      ota_ctx.write_base_offset = 0u;
+      ota_ctx.max_update_bytes = SLOT_NONSECURE_OFFSET_BYTES;
+      break;
+    case OTA_UPDATE_MODE_NONSECURE_ONLY:
+      ota_ctx.write_base_offset = SLOT_NONSECURE_OFFSET_BYTES;
+      ota_ctx.max_update_bytes = APP_SLOT_SIZE_BYTES - SLOT_NONSECURE_OFFSET_BYTES;
+      break;
+    default:
+      return false;
+  }
+
   ota_ctx.expected_offset = 0u;
-  ota_ctx.write_cursor = 0u;
+  ota_ctx.write_cursor = ota_ctx.write_base_offset;
   ota_ctx.residual_len = 0u;
   ota_ctx.total_bytes = 0u;
   ota_ctx.crc = CRC32_INITIAL_VALUE;
@@ -558,8 +629,13 @@ static bool ota_begin_update(AppSlot_t slot)
   MSC_Init();
   ota_ctx.msc_active = true;
 
-  if (!ota_erase_slot()) {
-    printf("Failed to erase slot %d\n", (int)slot);
+  uint32_t erase_start = ota_ctx.base_address + ota_ctx.write_base_offset;
+  size_t erase_length = ota_ctx.max_update_bytes;
+
+  if (!ota_erase_region(erase_start, erase_length)) {
+    printf("Failed to erase target region for slot %d mode=%s\n",
+           (int)slot,
+           ota_update_mode_to_string(mode));
     ota_abort_update();
     return false;
   }
@@ -586,10 +662,11 @@ static bool ota_write_chunk(uint32_t offset, const uint8_t *data, size_t length)
     return false;
   }
 
-  if ((offset + length) > APP_SLOT_SIZE_BYTES) {
-    printf("OTA write exceeds slot: off=%lu len=%lu\n",
+  if ((offset + length) > ota_ctx.max_update_bytes) {
+    printf("OTA write exceeds target component: off=%lu len=%lu max=%lu\n",
            (unsigned long)offset,
-           (unsigned long)length);
+           (unsigned long)length,
+           (unsigned long)ota_ctx.max_update_bytes);
     return false;
   }
 
@@ -895,20 +972,33 @@ void handle_secure_command(uint16_t packet_length)
         ota_in_progress = false;
       }
 
+      ota_update_mode_t requested_mode = OTA_UPDATE_MODE_FULL;
+      if (packet_length > OTA_WRITE_HEADER_BYTES) {
+        requested_mode = (ota_update_mode_t)secure_rx_buffer[OTA_WRITE_HEADER_BYTES];
+      }
+
+      if (!ota_update_mode_valid(requested_mode)) {
+        printf("Invalid OTA update mode: %u\n", (unsigned)requested_mode);
+        return;
+      }
+
       ota_target_slot = boot_state_get_inactive_slot();
       ota_target_base = boot_state_slot_address(ota_target_slot);
 
-      printf("Preparing slot %d @ 0x%08lX for OTA\n",
+      printf("Preparing slot %d @ 0x%08lX for OTA mode=%s\n",
              (int)ota_target_slot,
-             (unsigned long)ota_target_base);
+             (unsigned long)ota_target_base,
+             ota_update_mode_to_string(requested_mode));
 
-      if (!ota_begin_update(ota_target_slot)) {
-        printf("Failed to prepare slot %d for OTA\n", (int)ota_target_slot);
+      if (!ota_begin_update(ota_target_slot, requested_mode)) {
+        printf("Failed to prepare slot %d for OTA mode=%s\n",
+               (int)ota_target_slot,
+               ota_update_mode_to_string(requested_mode));
         ota_in_progress = false;
         return;
       }
 
-      printf("Slot %d erased and ready\n", (int)ota_target_slot);
+      printf("Slot %d prepared and ready\n", (int)ota_target_slot);
       ota_in_progress = true;
       break;
     case OTA_CMD_WRITE:
@@ -928,7 +1018,7 @@ void handle_secure_command(uint16_t packet_length)
 
       uint32_t address;
       memcpy(&address, &secure_rx_buffer[SECURE_COMMAND_SEQUENCE_LENGTH + 1], sizeof(uint32_t));
-      uint32_t absolute_address = ota_target_base + address;
+      uint32_t absolute_address = ota_target_base + ota_ctx.write_base_offset + address;
 
       uint16_t chunk_length;
       memcpy(&chunk_length,

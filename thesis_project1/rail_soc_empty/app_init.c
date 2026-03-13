@@ -40,6 +40,8 @@
 #include <string.h>
 #include "rail_config.h"
 #include "simplicity_sdk_2025.6.2/platform/emdrv/gpiointerrupt/inc/gpiointerrupt.h"
+#include "sl_simple_button_btn0_config.h"
+#include "sl_simple_button_btn1_config.h"
 #include "../boot_state.h"
 #include "ota_image_A.h"
 #include "ota_image_B.h"
@@ -53,6 +55,17 @@ const uint8_t secure_command_sequence[SECURE_COMMAND_SEQUENCE_LENGTH] = {0x01, 0
 #define OTA_RSP_SLOT_INFO  0x81u
 #define OTA_SLOT_INFO_PAYLOAD_LENGTH 3u
 #define OTA_HANDSHAKE_TIMEOUT_MS 500u
+
+typedef enum {
+  OTA_UPDATE_MODE_FULL = 0u,
+  OTA_UPDATE_MODE_SECURE_ONLY = 1u,
+  OTA_UPDATE_MODE_NONSECURE_ONLY = 2u,
+} ota_update_mode_t;
+
+// Configure the transfer mode used when pressing Button 1.
+static ota_update_mode_t configured_update_mode = OTA_UPDATE_MODE_NONSECURE_ONLY;
+
+#define SLOT_NONSECURE_OFFSET_BYTES (0x08026000u - APP_SLOT_A_START_ADDR)
 
 #define GBL_HEADER_LENGTH 6u
 #define GBL_TAG_HEADER        0x0000u
@@ -103,23 +116,41 @@ static const ota_image_descriptor_t ota_image_table[] = {
   { SLOT_B, image_B_bin, (size_t)image_B_bin_len, "Slot B" },
 };
 
+typedef struct {
+  const ota_image_descriptor_t *descriptor;
+  const uint8_t *data;
+  size_t length;
+  ota_update_mode_t mode;
+  const char *mode_label;
+} ota_stream_selection_t;
+
 static const char *slot_to_string(AppSlot_t slot);
 static const ota_image_descriptor_t *find_image_descriptor(AppSlot_t slot);
+static const char *update_mode_to_string(ota_update_mode_t mode);
 static bool send_slot_query(void);
 static bool await_slot_response(AppSlot_t *active_slot,
                                 AppSlot_t *inactive_slot,
                                 UpdateStatus_t *pending_status);
-static bool select_update_image(const ota_image_descriptor_t **out_descriptor);
+static bool select_update_image(ota_update_mode_t mode,
+                                ota_stream_selection_t *out_selection);
 
 static size_t gbl_write_tag_header(uint8_t *destination, uint16_t tag, uint32_t length);
 static bool transmit_packet(const uint8_t *payload, uint16_t length);
 static void send_ota_update(void);
 static bool wait_for_tx_idle(uint32_t timeout_ms);
+static ota_update_mode_t next_update_mode(ota_update_mode_t current_mode);
 
-void buttonCb(uint8_t intNo) 
+void start_button_cb(uint8_t intNo)
 {
   (void) intNo;
   start_update = true;
+}
+
+void mode_button_cb(uint8_t intNo)
+{
+  (void) intNo;
+  configured_update_mode = next_update_mode(configured_update_mode);
+  printf("Update mode changed to: %s\n", update_mode_to_string(configured_update_mode));
 }
 
 RAIL_Handle_t rail_app_init(void)
@@ -154,9 +185,30 @@ RAIL_Handle_t rail_app_init(void)
 
   CMU_ClockEnable(cmuClock_GPIO, true);
   GPIOINT_Init();
-  GPIO_PinModeSet(gpioPortB, 1, gpioModeInputPull, 1);
-  GPIOINT_CallbackRegister(1, buttonCb);
-  GPIO_ExtIntConfig(gpioPortB, 1, 1, false, true, true);
+
+  GPIO_PinModeSet(SL_SIMPLE_BUTTON_BTN0_PORT,
+                  SL_SIMPLE_BUTTON_BTN0_PIN,
+                  gpioModeInputPull,
+                  1);
+  GPIOINT_CallbackRegister(SL_SIMPLE_BUTTON_BTN0_PIN, start_button_cb);
+  GPIO_ExtIntConfig(SL_SIMPLE_BUTTON_BTN0_PORT,
+                    SL_SIMPLE_BUTTON_BTN0_PIN,
+                    SL_SIMPLE_BUTTON_BTN0_PIN,
+                    false,
+                    true,
+                    true);
+
+  GPIO_PinModeSet(SL_SIMPLE_BUTTON_BTN1_PORT,
+                  SL_SIMPLE_BUTTON_BTN1_PIN,
+                  gpioModeInputPull,
+                  1);
+  GPIOINT_CallbackRegister(SL_SIMPLE_BUTTON_BTN1_PIN, mode_button_cb);
+  GPIO_ExtIntConfig(SL_SIMPLE_BUTTON_BTN1_PORT,
+                    SL_SIMPLE_BUTTON_BTN1_PIN,
+                    SL_SIMPLE_BUTTON_BTN1_PIN,
+                    false,
+                    true,
+                    true);
   return rail_handle;
 }
 
@@ -261,6 +313,34 @@ static const ota_image_descriptor_t *find_image_descriptor(AppSlot_t slot)
   return NULL;
 }
 
+static const char *update_mode_to_string(ota_update_mode_t mode)
+{
+  switch (mode) {
+    case OTA_UPDATE_MODE_FULL:
+      return "FULL";
+    case OTA_UPDATE_MODE_SECURE_ONLY:
+      return "SECURE_ONLY";
+    case OTA_UPDATE_MODE_NONSECURE_ONLY:
+      return "NONSECURE_ONLY";
+    default:
+      return "UNKNOWN";
+  }
+}
+
+static ota_update_mode_t next_update_mode(ota_update_mode_t current_mode)
+{
+  switch (current_mode) {
+    case OTA_UPDATE_MODE_FULL:
+      return OTA_UPDATE_MODE_SECURE_ONLY;
+    case OTA_UPDATE_MODE_SECURE_ONLY:
+      return OTA_UPDATE_MODE_NONSECURE_ONLY;
+    case OTA_UPDATE_MODE_NONSECURE_ONLY:
+      return OTA_UPDATE_MODE_FULL;
+    default:
+      return OTA_UPDATE_MODE_FULL;
+  }
+}
+
 static bool send_slot_query(void)
 {
   memset(ota_packet_buffer, 0x00, OTA_FRAME_LENGTH);
@@ -357,7 +437,8 @@ static bool await_slot_response(AppSlot_t *active_slot,
   return true;
 }
 
-static bool select_update_image(const ota_image_descriptor_t **out_descriptor)
+static bool select_update_image(ota_update_mode_t mode,
+                                ota_stream_selection_t *out_selection)
 {
   AppSlot_t active_slot = SLOT_A;
   AppSlot_t inactive_slot = SLOT_B;
@@ -382,13 +463,40 @@ static bool select_update_image(const ota_image_descriptor_t **out_descriptor)
     return false;
   }
 
-  printf("Slot query response: active=%s inactive=%s pending=%u\n",
+  const uint8_t *selected_data = descriptor->image_data;
+  size_t selected_length = descriptor->image_length;
+
+  if (mode == OTA_UPDATE_MODE_SECURE_ONLY) {
+    size_t secure_length = (selected_length < SLOT_NONSECURE_OFFSET_BYTES)
+                           ? selected_length
+                           : SLOT_NONSECURE_OFFSET_BYTES;
+    if (secure_length == 0u) {
+      printf("Secure-only update has empty payload\n");
+      return false;
+    }
+    selected_length = secure_length;
+  } else if (mode == OTA_UPDATE_MODE_NONSECURE_ONLY) {
+    if (selected_length <= SLOT_NONSECURE_OFFSET_BYTES) {
+      printf("Image too small for nonsecure-only payload (%lu bytes)\n",
+             (unsigned long)selected_length);
+      return false;
+    }
+    selected_data += SLOT_NONSECURE_OFFSET_BYTES;
+    selected_length -= SLOT_NONSECURE_OFFSET_BYTES;
+  }
+
+  printf("Slot query response: active=%s inactive=%s pending=%u mode=%s\n",
          slot_to_string(active_slot),
          descriptor->label,
-         (unsigned)pending_status);
+         (unsigned)pending_status,
+         update_mode_to_string(mode));
 
-  if (out_descriptor != NULL) {
-    *out_descriptor = descriptor;
+  if (out_selection != NULL) {
+    out_selection->descriptor = descriptor;
+    out_selection->data = selected_data;
+    out_selection->length = selected_length;
+    out_selection->mode = mode;
+    out_selection->mode_label = update_mode_to_string(mode);
   }
 
   return true;
@@ -404,9 +512,9 @@ static void send_ota_update(void)
   ota_in_progress = true;
 
   bool success = false;
-  const ota_image_descriptor_t *image_desc = NULL;
+  ota_stream_selection_t selection = { 0 };
 
-  if (!select_update_image(&image_desc)) {
+  if (!select_update_image(configured_update_mode, &selection)) {
     goto cleanup;
   }
 
@@ -423,7 +531,7 @@ static void send_ota_update(void)
   gbl_write_tag_header(metadata_tag, GBL_TAG_METADATA, 0u);
   gbl_write_tag_header(app_tag,
                        GBL_TAG_APP_DATA,
-                       (uint32_t)image_desc->image_length);
+                       (uint32_t)selection.length);
   gbl_write_tag_header(end_tag, GBL_TAG_END, 0u);
 
   const gbl_segment_t segments[] = {
@@ -431,7 +539,7 @@ static void send_ota_update(void)
     { init_tag, sizeof(init_tag) },
     { metadata_tag, sizeof(metadata_tag) },
     { app_tag, sizeof(app_tag) },
-    { image_desc->image_data, image_desc->image_length },
+    { selection.data, selection.length },
     { end_tag, sizeof(end_tag) },
   };
   const size_t segment_count = sizeof(segments) / sizeof(segments[0]);
@@ -449,10 +557,11 @@ static void send_ota_update(void)
 
   const uint32_t total_length = (uint32_t)total_length_size;
 
-  printf("Starting OTA update targeting %s... Stream size: %lu bytes (image %lu bytes)\n",
-         image_desc->label,
+    printf("Starting OTA update targeting %s... Mode=%s Stream size: %lu bytes (image %lu bytes)\n",
+      selection.descriptor->label,
+      selection.mode_label,
          (unsigned long)total_length,
-         (unsigned long)image_desc->image_length);
+      (unsigned long)selection.length);
 
   memcpy(ota_packet_buffer, secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH);
   ota_packet_buffer[SECURE_COMMAND_SEQUENCE_LENGTH] = OTA_CMD_START;
@@ -464,6 +573,7 @@ static void send_ota_update(void)
   frame_ptr += sizeof(uint32_t);
   memcpy(frame_ptr, &zero_length, sizeof(uint16_t));
   frame_ptr += sizeof(uint16_t);
+  *frame_ptr++ = (uint8_t)selection.mode;
   memset(frame_ptr, 0x00, OTA_FRAME_LENGTH - (size_t)(frame_ptr - ota_packet_buffer));
 
   success = transmit_packet(ota_packet_buffer, OTA_FRAME_LENGTH);
@@ -581,7 +691,9 @@ cleanup:
 RAIL_Handle_t app_init(void)
 {
   RAIL_Handle_t rail_handle = rail_app_init();
-  printf("Updater device initialized. Press Button 1 to start OTA update.\n");
+  printf("Updater device initialized. Press BTN0 to start OTA update.\n");
+  printf("Press BTN1 to cycle update mode. Current mode: %s\n",
+         update_mode_to_string(configured_update_mode));
   return rail_handle;
 }
 
@@ -592,7 +704,7 @@ void app_process_action(RAIL_Handle_t rail_handle)
   if (start_update) {
     start_update = false;
     send_ota_update();
-    printf("Update process finished. Press Button 1 to try again.\n");
+    printf("Update process finished. Press BTN0 to try again.\n");
   }
 }
 

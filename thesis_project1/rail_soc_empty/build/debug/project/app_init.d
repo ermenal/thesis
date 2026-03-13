@@ -88,8 +88,13 @@ build/debug/project/app_init.o: app_init.c \
  simplicity_sdk_2025.6.2/platform/radio/rail_lib/common/rail.h \
  config/sl_rail_util_init_inst0_config.h autogen/rail_config.h \
  simplicity_sdk_2025.6.2/platform/emdrv/gpiointerrupt/inc/gpiointerrupt.h \
- simplicity_sdk_2025.6.2/platform/emlib/inc/em_gpio.h ../boot_state.h \
- ota_image_A.h ota_image_B.h
+ simplicity_sdk_2025.6.2/platform/emlib/inc/em_gpio.h \
+ config/sl_simple_button_btn0_config.h \
+ simplicity_sdk_2025.6.2/platform/driver/gpio/inc/sl_gpio.h \
+ simplicity_sdk_2025.6.2/platform/driver/button/inc/sl_simple_button.h \
+ simplicity_sdk_2025.6.2/platform/driver/button/inc/sl_button.h \
+ config/sl_simple_button_btn1_config.h ../boot_state.h ota_image_A.h \
+ ota_image_B.h
 simplicity_sdk_2025.6.2/platform/emlib/inc/em_cmu.h:
 simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/em_device.h:
 simplicity_sdk_2025.6.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23b010f512im48.h:
@@ -182,6 +187,11 @@ config/sl_rail_util_init_inst0_config.h:
 autogen/rail_config.h:
 simplicity_sdk_2025.6.2/platform/emdrv/gpiointerrupt/inc/gpiointerrupt.h:
 simplicity_sdk_2025.6.2/platform/emlib/inc/em_gpio.h:
+config/sl_simple_button_btn0_config.h:
+simplicity_sdk_2025.6.2/platform/driver/gpio/inc/sl_gpio.h:
+simplicity_sdk_2025.6.2/platform/driver/button/inc/sl_simple_button.h:
+simplicity_sdk_2025.6.2/platform/driver/button/inc/sl_button.h:
+config/sl_simple_button_btn1_config.h:
 ../boot_state.h:
 ota_image_A.h:
 ota_image_B.h:
