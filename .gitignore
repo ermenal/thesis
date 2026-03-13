@@ -6,3 +6,4 @@ thesis_project/thesis_project_s/build/debug/sdk/platform/bootloader/api/btl_inte
 *.s37
 *.out
 linker_objs
+thesis_project1/ARCHITECTURE_OTA_TZ_POC.md
