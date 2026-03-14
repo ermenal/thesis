@@ -26,6 +26,28 @@
 #include <stdio.h>
 #include <string.h>
 
+#define OTA_WORLD_MARKER_MAGIC            0x564D524Bu /* 'VMRK' */
+#define OTA_WORLD_ID_NONSECURE            0x4Eu       /* 'N' */
+
+#ifndef NONSECURE_WORLD_MARKER_VERSION
+#define NONSECURE_WORLD_MARKER_VERSION    2u
+#endif
+
+typedef struct {
+  uint32_t magic;
+  uint8_t world_id;
+  uint8_t reserved[3];
+  uint32_t version;
+} ota_world_marker_t;
+
+static const ota_world_marker_t nonsecure_world_marker
+  __attribute__((used, section(".rodata.ota_marker"))) = {
+    .magic = OTA_WORLD_MARKER_MAGIC,
+    .world_id = OTA_WORLD_ID_NONSECURE,
+    .reserved = { 0u, 0u, 0u },
+    .version = NONSECURE_WORLD_MARKER_VERSION,
+  };
+
 #define PAYLOAD_LENGTH 16
 static uint8_t payload[PAYLOAD_LENGTH] =
     {PAYLOAD_LENGTH - 1, 0x01, 0x02, 0x03, 0x04,
@@ -35,6 +57,20 @@ static volatile bool send_packet = false;
 static volatile bool packet_received = false;
 
 extern bool boot_state_commit_proof_of_life_nsc(void);
+
+static void log_nonsecure_world_marker(void)
+{
+  char marker_msg[96];
+  int length = snprintf(marker_msg,
+                        sizeof(marker_msg),
+                        "BOOT_MARKER_NONSECURE: magic=0x%08lX world=%c ver=%lu\n",
+                        (unsigned long)nonsecure_world_marker.magic,
+                        (char)nonsecure_world_marker.world_id,
+                        (unsigned long)nonsecure_world_marker.version);
+  if (length > 0) {
+    print_nsc(marker_msg, (uint16_t)length);
+  }
+}
 
 /*
 * Handler voor packet RX forward van SW
@@ -69,6 +105,7 @@ int main(void)
 {
   // while (1){}
   init_NVIC_irqs();
+  log_nonsecure_world_marker();
   print_nsc("SLOT B: In NS main, voor boot commit\n", sizeof("SLOT B: In NS main, voor boot commit\n") - 1);
   // print_nsc("SLOT A: SLOT B: In NS main, voor boot commit\n", sizeof("SLOT A: SLOT B: In NS main, voor boot commit\n") - 1);
   // print_nsc("SLOT B: SLOT B: In NS main, voor boot commit\n", sizeof("SLOT B: SLOT B: In NS main, voor boot commit\n") - 1);

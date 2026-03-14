@@ -44,6 +44,34 @@
 #include "rail_config.h"
 #include <string.h>
 
+#define OTA_WORLD_MARKER_MAGIC        0x564D524Bu /* 'VMRK' */
+#define OTA_WORLD_ID_SECURE           0x53u       /* 'S' */
+#define OTA_WORLD_ID_NONSECURE        0x4Eu       /* 'N' */
+
+#ifndef SECURE_WORLD_MARKER_VERSION
+#define SECURE_WORLD_MARKER_VERSION   2u
+#endif
+
+typedef struct {
+  uint32_t magic;
+  uint8_t world_id;
+  uint8_t reserved[3];
+  uint32_t version;
+} ota_world_marker_t;
+
+static const ota_world_marker_t secure_world_marker
+  __attribute__((used, section(".rodata.ota_marker"))) = {
+    .magic = OTA_WORLD_MARKER_MAGIC,
+    .world_id = OTA_WORLD_ID_SECURE,
+    .reserved = { OTA_WORLD_ID_NONSECURE, 0u, 0u },
+    .version = SECURE_WORLD_MARKER_VERSION,
+  };
+
+const ota_world_marker_t *get_secure_world_marker(void)
+{
+  return &secure_world_marker;
+}
+
 #define CRC32_INITIAL_VALUE 0xFFFFFFFFu
 #define CRC32_XOR_OUT       0xFFFFFFFFu
 #define CRC32_POLYNOMIAL    0xEDB88320u

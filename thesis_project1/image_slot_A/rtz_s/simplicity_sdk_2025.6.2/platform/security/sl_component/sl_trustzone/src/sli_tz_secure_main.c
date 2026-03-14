@@ -66,6 +66,15 @@
 #include "mijn_tz_setup.h"
 #include "second_main.h"
 
+typedef struct {
+  uint32_t magic;
+  uint8_t world_id;
+  uint8_t reserved[3];
+  uint32_t version;
+} ota_world_marker_t;
+
+extern const ota_world_marker_t *get_secure_world_marker(void);
+
 extern bool boot_state_manager_init(void);
 extern bool boot_state_commit_proof_of_life(void);
 
@@ -388,6 +397,15 @@ int main(void)
     fatal_error();
   }
   sl_main_init();
+
+  {
+    const ota_world_marker_t *secure_marker = get_secure_world_marker();
+    printf("BOOT_MARKER_SECURE: magic=0x%08lX world=%c ver=%lu\n",
+           (unsigned long)secure_marker->magic,
+           (char)secure_marker->world_id,
+           (unsigned long)secure_marker->version);
+  }
+  
   printf("SLOT A: In secure main, voor init radio\n");
   // printf("SLOT A: SLOT A: In secure main, voor init radio\n");
   // printf("SLOT B: SLOT A: In secure main, voor init radio\n");
