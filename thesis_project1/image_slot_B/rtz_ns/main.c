@@ -30,7 +30,7 @@
 #define OTA_WORLD_ID_NONSECURE            0x4Eu       /* 'N' */
 
 #ifndef NONSECURE_WORLD_MARKER_VERSION
-#define NONSECURE_WORLD_MARKER_VERSION    2u
+#define NONSECURE_WORLD_MARKER_VERSION    1u
 #endif
 
 typedef struct {

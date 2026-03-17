@@ -3,7 +3,7 @@
 set -e
 
 FSB_IMAGE="fsb/build/debug/fsb_baremetal.s37"
-SLOT_A_IMAGE="rtz/artifact/rtz_ws-combined.s37"
+SLOT_A_IMAGE="image_slot_A/artifact/rtz_ws-combined.s37"
 SLOT_B_IMAGE="image_slot_B/artifact/rtz_ws-combined.s37"
 
 if [ -f "$SLOT_B_IMAGE" ]; then
