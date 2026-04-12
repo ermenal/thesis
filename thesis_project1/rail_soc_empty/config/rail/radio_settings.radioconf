@@ -129,7 +129,7 @@
         </input>
         <input>
           <key>fixed_length_size</key>
-          <value>72</value>
+          <value>120</value>
         </input>
         <input>
           <key>crc_poly</key>

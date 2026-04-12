@@ -1,0 +1,2 @@
+build/debug/sdk/platform/service/iostream/src/sl_iostream_stdlib_config.o: \
+ simplicity_sdk_2025.6.2/platform/service/iostream/src/sl_iostream_stdlib_config.c

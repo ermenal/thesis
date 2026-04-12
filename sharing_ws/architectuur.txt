@@ -1,0 +1,31 @@
+Secure world: 
+- Geen speciale radio periphs Secure
+- TIMER0 periph secure voor preemption timer
+
+Preemption window: 
+- Reclaim alle secure periphs (Geen nodig)
+- Target alle radio IRQs tijdelijk naar secure
+- Stuur OTA query packet
+- Wacht op antwoord
+- Target alle radio IRQs weer naar NS 
+- Geef secure periphs weer vrij (Geen nodig)
+
+TODO: 
+verander NW radio settings/conf
+check wat breekt bij overname SW in preempt window
+check hoe makkelijk rail_handle vinden is voor SW
+
+
+rail_soc_simple_trx: 
+To become update server
+Voorlopig gewoon rx om te checken dat main proj werkt
+
+DCDC moet secure. Anders issues:
+- Ofwel geven we niks vrij in SAU van NS periphs, dan werkt board init wel maar issues tijdens rail init
+- Ofwel geven we NS periphs vrij in SAU, dan werkt board init al niet, blijft steken op dcdc init
+No clue waarom, dit maakt no sense
+
+AHBRADIO moet SW, CMU moet SW
+RADIOSUBSYSTEM moet SW busmaster anders packet 0x00...
+
+NS RAIL heeft CMU nodig, maar SW moet CMU hebben ivm IRQ handling

@@ -80,18 +80,18 @@ SL_ALIGN(RAIL_FIFO_ALIGNMENT)
 static uint8_t tx_fifo[SL_RAIL_SDK_TX_FIFO_SIZE]
 SL_ATTRIBUTE_ALIGN(RAIL_FIFO_ALIGNMENT);
 
-#define OTA_FRAME_LENGTH 72u
+#define OTA_RADIO_LENGTH_BYTES 1u
+#define OTA_PHY_FRAME_LENGTH 72u
+#define OTA_RADIO_MAX_PAYLOAD (OTA_PHY_FRAME_LENGTH - OTA_RADIO_LENGTH_BYTES)
+#define OTA_MAX_PACKET_LENGTH OTA_PHY_FRAME_LENGTH
 #define OTA_RX_BUFFER_SIZE 128u
 #define OTA_HEADER_BYTES   (SECURE_COMMAND_SEQUENCE_LENGTH + 1u + sizeof(uint32_t) + sizeof(uint16_t))
-#define OTA_CHUNK_DATA_BYTES (OTA_FRAME_LENGTH - OTA_HEADER_BYTES)
-#define OTA_CHUNK_EXPECTED_BYTES 62u
+#define OTA_CHUNK_DATA_BYTES (OTA_RADIO_MAX_PAYLOAD - OTA_HEADER_BYTES)
 #define OTA_TX_TIMEOUT_MS 50u
 
 _Static_assert(OTA_CHUNK_DATA_BYTES > 0, "OTA frame configuration invalid");
-_Static_assert(OTA_CHUNK_DATA_BYTES == OTA_CHUNK_EXPECTED_BYTES,
-               "Unexpected OTA chunk size");
 
-static uint8_t ota_packet_buffer[OTA_FRAME_LENGTH];
+static uint8_t ota_packet_buffer[OTA_MAX_PACKET_LENGTH];
 static volatile bool start_update = false;
 static bool ota_in_progress = false;
 static volatile bool tx_in_flight = false;
@@ -139,6 +139,16 @@ static bool transmit_packet(const uint8_t *payload, uint16_t length);
 static void send_ota_update(void);
 static bool wait_for_tx_idle(uint32_t timeout_ms);
 static ota_update_mode_t next_update_mode(ota_update_mode_t current_mode);
+
+static void print_packet_preview(const char *label, const uint8_t *payload, uint16_t length)
+{
+  uint16_t dump_count = (length < 12u) ? length : 12u;
+  printf("%s len=%u head:", label, (unsigned)length);
+  for (uint16_t i = 0u; i < dump_count; i++) {
+    printf(" %02X", payload[i]);
+  }
+  printf("\n");
+}
 
 void start_button_cb(uint8_t intNo)
 {
@@ -218,10 +228,14 @@ static bool transmit_packet(const uint8_t *payload, uint16_t length)
     return true;
   }
 
-  if (length != OTA_FRAME_LENGTH) {
-    printf("Unexpected frame length: %u\n", (unsigned)length);
+  if (length == 0u || length > OTA_MAX_PACKET_LENGTH) {
+    printf("Invalid packet length: %u (max: %u)\n", (unsigned)length, (unsigned)OTA_MAX_PACKET_LENGTH);
     return false;
   }
+
+  uint8_t tx_frame[OTA_PHY_FRAME_LENGTH];
+  memset(tx_frame, 0x00, sizeof(tx_frame));
+  memcpy(tx_frame, payload, length);
 
   RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST0);
 
@@ -230,11 +244,12 @@ static bool transmit_packet(const uint8_t *payload, uint16_t length)
     return false;
   }
 
-  while (RAIL_GetTxFifoSpaceAvailable(rail_handle) < length) {
+  while (RAIL_GetTxFifoSpaceAvailable(rail_handle) < OTA_PHY_FRAME_LENGTH) {
     // Busy wait until enough FIFO space is available
   }
 
-  RAIL_WriteTxFifo(rail_handle, payload, length, false);
+  // Reset FIFO write position per packet so each TX starts with this frame's bytes.
+  RAIL_WriteTxFifo(rail_handle, tx_frame, OTA_PHY_FRAME_LENGTH, true);
 
   tx_in_flight = true;
   RAIL_Status_t status = RAIL_StartTx(rail_handle,
@@ -343,16 +358,23 @@ static ota_update_mode_t next_update_mode(ota_update_mode_t current_mode)
 
 static bool send_slot_query(void)
 {
-  memset(ota_packet_buffer, 0x00, OTA_FRAME_LENGTH);
-  memcpy(ota_packet_buffer, secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH);
-  ota_packet_buffer[SECURE_COMMAND_SEQUENCE_LENGTH] = OTA_CMD_QUERY_SLOT;
+  // On-air packet: [radio_length (1B)] [secure_sequence (3B)] [command (1B)]
+  uint16_t packet_length = OTA_RADIO_LENGTH_BYTES + SECURE_COMMAND_SEQUENCE_LENGTH + 1u;
+  uint8_t packet[OTA_MAX_PACKET_LENGTH];
+  memset(packet, 0x00, sizeof(packet));
+  
+  size_t offset = OTA_RADIO_LENGTH_BYTES;
+  packet[0] = (uint8_t)packet_length;
+  
+  memcpy(&packet[offset], secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH);
+  offset += SECURE_COMMAND_SEQUENCE_LENGTH;
+  
+  packet[offset] = OTA_CMD_QUERY_SLOT;
+  offset++;
 
-  size_t padding = OTA_FRAME_LENGTH - (SECURE_COMMAND_SEQUENCE_LENGTH + 1u);
-  if (padding > 0u) {
-    memset(&ota_packet_buffer[SECURE_COMMAND_SEQUENCE_LENGTH + 1u], 0x00, padding);
-  }
+  print_packet_preview("TX QUERY", packet, packet_length);
 
-  if (!transmit_packet(ota_packet_buffer, OTA_FRAME_LENGTH)) {
+  if (!transmit_packet(packet, packet_length)) {
     return false;
   }
 
@@ -392,12 +414,18 @@ static bool await_slot_response(AppSlot_t *active_slot,
     return false;
   }
 
-  if (memcmp(local_buffer, secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH) != 0) {
+  size_t start_index = 0u;
+  if (memcmp(local_buffer, secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH) == 0) {
+    start_index = 0u;
+  } else if ((length >= (expected_length + 1u))
+             && (memcmp(&local_buffer[1], secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH) == 0)) {
+    start_index = 1u;
+  } else {
     printf("Slot info response sequence mismatch\n");
     return false;
   }
 
-  size_t index = SECURE_COMMAND_SEQUENCE_LENGTH;
+  size_t index = start_index + SECURE_COMMAND_SEQUENCE_LENGTH;
   uint8_t command = local_buffer[index++];
   if (command != OTA_RSP_SLOT_INFO) {
     printf("Unexpected slot response command: 0x%02X\n", command);
@@ -563,20 +591,28 @@ static void send_ota_update(void)
          (unsigned long)total_length,
       (unsigned long)selection.length);
 
-  memcpy(ota_packet_buffer, secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH);
-  ota_packet_buffer[SECURE_COMMAND_SEQUENCE_LENGTH] = OTA_CMD_START;
+  // On-air packet: [radio_length (1B)] [sequence (3B)] [cmd (1B)] [offset (4B)] [length (2B)] [mode (1B)]
+  uint16_t start_packet_length = OTA_RADIO_LENGTH_BYTES + SECURE_COMMAND_SEQUENCE_LENGTH + 1u + sizeof(uint32_t) + sizeof(uint16_t) + 1u;
+  
+  memset(ota_packet_buffer, 0x00, 20);  // Clear first 20 bytes to ensure clean assembly
+  uint8_t *buffer_ptr = ota_packet_buffer;
+  *buffer_ptr++ = (uint8_t)start_packet_length;
+  
+  memcpy(buffer_ptr, secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH);
+  buffer_ptr += SECURE_COMMAND_SEQUENCE_LENGTH;
 
-  uint8_t *frame_ptr = &ota_packet_buffer[SECURE_COMMAND_SEQUENCE_LENGTH + 1u];
+  *buffer_ptr++ = OTA_CMD_START;
+
   uint32_t zero_offset = 0u;
   uint16_t zero_length = 0u;
-  memcpy(frame_ptr, &zero_offset, sizeof(uint32_t));
-  frame_ptr += sizeof(uint32_t);
-  memcpy(frame_ptr, &zero_length, sizeof(uint16_t));
-  frame_ptr += sizeof(uint16_t);
-  *frame_ptr++ = (uint8_t)selection.mode;
-  memset(frame_ptr, 0x00, OTA_FRAME_LENGTH - (size_t)(frame_ptr - ota_packet_buffer));
+  memcpy(buffer_ptr, &zero_offset, sizeof(uint32_t));
+  buffer_ptr += sizeof(uint32_t);
+  memcpy(buffer_ptr, &zero_length, sizeof(uint16_t));
+  buffer_ptr += sizeof(uint16_t);
+  *buffer_ptr++ = (uint8_t)selection.mode;
 
-  success = transmit_packet(ota_packet_buffer, OTA_FRAME_LENGTH);
+  print_packet_preview("TX START", ota_packet_buffer, start_packet_length);
+  success = transmit_packet(ota_packet_buffer, start_packet_length);
   if (!success) {
     printf("Failed to send OTA_CMD_START\n");
     goto cleanup;
@@ -589,6 +625,7 @@ static void send_ota_update(void)
   uint32_t last_percent_reported = 0u;
   size_t segment_index = 0u;
   size_t segment_offset = 0u;
+  bool first_write_logged = false;
 
   while (stream_offset < total_length) {
     uint32_t remaining_stream = total_length - stream_offset;
@@ -596,7 +633,14 @@ static void send_ota_update(void)
                           ? OTA_CHUNK_DATA_BYTES
                           : (size_t)remaining_stream;
 
+    // On-air packet: [radio_length (1B)] [sequence (3B)] [cmd (1B)] [offset (4B)] [data_length (2B)] [payload]
+    memset(ota_packet_buffer, 0x00, sizeof(ota_packet_buffer));  // Clear entire buffer before assembly
     uint8_t *buffer_ptr = ota_packet_buffer;
+    
+    // Reserve radio length byte and fill it in after payload is assembled
+    uint8_t *length_field_ptr = buffer_ptr;
+    buffer_ptr += OTA_RADIO_LENGTH_BYTES;
+    
     memcpy(buffer_ptr, secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH);
     buffer_ptr += SECURE_COMMAND_SEQUENCE_LENGTH;
 
@@ -605,9 +649,9 @@ static void send_ota_update(void)
     memcpy(buffer_ptr, &stream_offset, sizeof(uint32_t));
     buffer_ptr += sizeof(uint32_t);
 
-    uint8_t *length_field = buffer_ptr;
+    uint8_t *data_length_field = buffer_ptr;
     uint16_t placeholder_length = 0u;
-    memcpy(length_field, &placeholder_length, sizeof(uint16_t));
+    memcpy(data_length_field, &placeholder_length, sizeof(uint16_t));
     buffer_ptr += sizeof(uint16_t);
 
     uint8_t *payload_start = buffer_ptr;
@@ -637,14 +681,18 @@ static void send_ota_update(void)
 
     size_t chunk_bytes = (size_t)(buffer_ptr - payload_start);
     uint16_t chunk_length = (uint16_t)chunk_bytes;
-    memcpy(length_field, &chunk_length, sizeof(uint16_t));
+    memcpy(data_length_field, &chunk_length, sizeof(uint16_t));
 
-    size_t padding = OTA_FRAME_LENGTH - (size_t)(buffer_ptr - ota_packet_buffer);
-    if (padding > 0u) {
-      memset(buffer_ptr, 0xFF, padding);
+    // Radio length byte is the number of bytes after itself.
+    uint16_t packet_size = (uint16_t)(buffer_ptr - ota_packet_buffer);
+    *length_field_ptr = (uint8_t)packet_size;
+
+    if (!first_write_logged) {
+      print_packet_preview("TX WRITE", ota_packet_buffer, packet_size);
+      first_write_logged = true;
     }
 
-    if (!transmit_packet(ota_packet_buffer, OTA_FRAME_LENGTH)) {
+    if (!transmit_packet(ota_packet_buffer, packet_size)) {
       printf("Failed to send OTA chunk at offset %lu\n", (unsigned long)stream_offset);
       success = false;
       goto cleanup;
@@ -664,16 +712,28 @@ static void send_ota_update(void)
     sl_sleeptimer_delay_millisecond(5);
   }
 
-  memcpy(ota_packet_buffer, secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH);
-  ota_packet_buffer[SECURE_COMMAND_SEQUENCE_LENGTH] = OTA_CMD_END;
-  frame_ptr = &ota_packet_buffer[SECURE_COMMAND_SEQUENCE_LENGTH + 1u];
-  memcpy(frame_ptr, &stream_offset, sizeof(uint32_t));
-  frame_ptr += sizeof(uint32_t);
-  memcpy(frame_ptr, &zero_length, sizeof(uint16_t));
-  frame_ptr += sizeof(uint16_t);
-  memset(frame_ptr, 0x00, OTA_FRAME_LENGTH - (size_t)(frame_ptr - ota_packet_buffer));
+  // On-air packet: [radio_length (1B)] [sequence (3B)] [cmd (1B)] [offset (4B)] [length (2B)]
+  uint16_t end_packet_length = OTA_RADIO_LENGTH_BYTES + SECURE_COMMAND_SEQUENCE_LENGTH + 1u + sizeof(uint32_t) + sizeof(uint16_t);
+  memset(ota_packet_buffer, 0x00, sizeof(ota_packet_buffer));  // Clear buffer before assembly
+  buffer_ptr = ota_packet_buffer;
+  
+  *buffer_ptr++ = (uint8_t)end_packet_length;
+  
+  memcpy(buffer_ptr, secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH);
+  buffer_ptr += SECURE_COMMAND_SEQUENCE_LENGTH;
+  
+  *buffer_ptr++ = OTA_CMD_END;
+  
+  memcpy(buffer_ptr, &stream_offset, sizeof(uint32_t));
+  buffer_ptr += sizeof(uint32_t);
+  
+  zero_length = 0u;
+  memcpy(buffer_ptr, &zero_length, sizeof(uint16_t));
+  buffer_ptr += sizeof(uint16_t);
 
-  if (!transmit_packet(ota_packet_buffer, OTA_FRAME_LENGTH)) {
+  print_packet_preview("TX END", ota_packet_buffer, end_packet_length);
+
+  if (!transmit_packet(ota_packet_buffer, end_packet_length)) {
     printf("Failed to send OTA_CMD_END\n");
     success = false;
     goto cleanup;
@@ -732,11 +792,22 @@ void sl_rail_util_on_event(sl_rail_handle_t rail_handle, sl_rail_events_t events
       if (!rx_packet_ready) {
         if (packet_info.packetBytes <= OTA_RX_BUFFER_SIZE) {
           RAIL_CopyRxPacket(rx_packet_buffer, &packet_info);
+          bool is_slot_response = false;
           if ((packet_info.packetBytes >= (SECURE_COMMAND_SEQUENCE_LENGTH + 1u))
               && (memcmp(rx_packet_buffer,
                          secure_command_sequence,
                          SECURE_COMMAND_SEQUENCE_LENGTH) == 0)
               && (rx_packet_buffer[SECURE_COMMAND_SEQUENCE_LENGTH] == OTA_RSP_SLOT_INFO)) {
+            is_slot_response = true;
+          } else if ((packet_info.packetBytes >= (SECURE_COMMAND_SEQUENCE_LENGTH + 2u))
+                     && (memcmp(&rx_packet_buffer[1],
+                                secure_command_sequence,
+                                SECURE_COMMAND_SEQUENCE_LENGTH) == 0)
+                     && (rx_packet_buffer[1 + SECURE_COMMAND_SEQUENCE_LENGTH] == OTA_RSP_SLOT_INFO)) {
+            is_slot_response = true;
+          }
+
+          if (is_slot_response) {
             rx_packet_length = packet_info.packetBytes;
             rx_packet_ready = true;
           }

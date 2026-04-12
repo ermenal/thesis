@@ -779,14 +779,6 @@ SL_ALIGN(RAIL_FIFO_ALIGNMENT)
 static uint8_t tx_fifo[TX_FIFO_SIZE]
 SL_ATTRIBUTE_ALIGN(RAIL_FIFO_ALIGNMENT);
 
-// RX FIFO dingen 
-#define RX_FIFO_SIZE 2048
-static uint16_t rx_fifo_size = RX_FIFO_SIZE;
-
-SL_ALIGN(RAIL_FIFO_ALIGNMENT)
-static uint8_t rx_fifo[RX_FIFO_SIZE]
-SL_ATTRIBUTE_ALIGN(RAIL_FIFO_ALIGNMENT);
-
 #define PACKET_MAX_LENGTH 128
 #define RX_PACKET_BUFFER_SIZE (PACKET_MAX_LENGTH * 2) // Extra voor appended info en RAIL metadata
 SL_ALIGN(4)
@@ -796,34 +788,145 @@ SL_ATTRIBUTE_ALIGN(4);
 // OTA update dingen
 #define SECURE_COMMAND_SEQUENCE_LENGTH 3
 const uint8_t secure_command_sequence[SECURE_COMMAND_SEQUENCE_LENGTH] = {0x01, 0x02, 0x03};
+#define OTA_RADIO_LENGTH_BYTES 1u
 #define OTA_CMD_START 0x01  
 #define OTA_CMD_WRITE 0x02 
 #define OTA_CMD_END   0x03 
 #define OTA_CMD_QUERY_SLOT 0x04
 #define OTA_RSP_SLOT_INFO  0x81u
 #define OTA_SLOT_INFO_PAYLOAD_LEN 3u
-#define OTA_FIXED_PACKET_LENGTH 72u
+#define OTA_PHY_FRAME_LENGTH 72u
+#define OTA_RADIO_MAX_PAYLOAD (OTA_PHY_FRAME_LENGTH - OTA_RADIO_LENGTH_BYTES)
+#define OTA_MAX_PACKET_LENGTH (OTA_RADIO_MAX_PAYLOAD + OTA_RADIO_LENGTH_BYTES)
 #define OTA_WRITE_HEADER_BYTES (SECURE_COMMAND_SEQUENCE_LENGTH + 1u + sizeof(uint32_t) + sizeof(uint16_t))
-#define OTA_WRITE_MAX_PAYLOAD  (OTA_FIXED_PACKET_LENGTH - OTA_WRITE_HEADER_BYTES)
-#define OTA_WRITE_EXPECTED_PAYLOAD 62u
+#define OTA_WRITE_MAX_PAYLOAD  (OTA_RADIO_MAX_PAYLOAD - OTA_WRITE_HEADER_BYTES)
 
 _Static_assert(OTA_WRITE_MAX_PAYLOAD > 0, "OTA write payload must be positive");
-_Static_assert(OTA_WRITE_MAX_PAYLOAD == OTA_WRITE_EXPECTED_PAYLOAD,
-               "Unexpected OTA payload size");
+
+static volatile bool secure_cmd_pending = false;
+static volatile uint16_t secure_cmd_pending_length = 0u;
+static uint8_t secure_cmd_pending_buffer[OTA_MAX_PACKET_LENGTH];
+
+static void log_reset_cause_once(void)
+{
+  uint32_t reset_cause = EMU->RSTCAUSE;
+  printf("RESET_CAUSE: 0x%08lX\n", (unsigned long)reset_cause);
+  EMU->CMD = EMU_CMD_RSTCAUSECLR;
+}
+
+static bool normalize_secure_packet_length(const uint8_t *packet_data,
+                                           uint16_t packet_length,
+                                           uint16_t *normalized_length)
+{
+  if ((packet_data == NULL) || (normalized_length == NULL)) {
+    return false;
+  }
+
+  if (packet_length < (SECURE_COMMAND_SEQUENCE_LENGTH + 1u)) {
+    return false;
+  }
+
+  uint8_t cmd = packet_data[SECURE_COMMAND_SEQUENCE_LENGTH];
+  switch (cmd) {
+    case OTA_CMD_QUERY_SLOT:
+      *normalized_length = (uint16_t)(SECURE_COMMAND_SEQUENCE_LENGTH + 1u);
+      return packet_length >= *normalized_length;
+
+    case OTA_CMD_START:
+      *normalized_length = (uint16_t)(OTA_WRITE_HEADER_BYTES + 1u);
+      return packet_length >= *normalized_length;
+
+    case OTA_CMD_END:
+      *normalized_length = (uint16_t)OTA_WRITE_HEADER_BYTES;
+      return packet_length >= *normalized_length;
+
+    case OTA_CMD_WRITE: {
+      if (packet_length < OTA_WRITE_HEADER_BYTES) {
+        return false;
+      }
+
+      size_t offset_index = SECURE_COMMAND_SEQUENCE_LENGTH + 1u;
+      uint16_t chunk_length = 0u;
+      memcpy(&chunk_length,
+             &packet_data[offset_index + sizeof(uint32_t)],
+             sizeof(uint16_t));
+
+      if ((chunk_length == 0u) || (chunk_length > OTA_WRITE_MAX_PAYLOAD)) {
+        return false;
+      }
+
+      uint16_t expected = (uint16_t)(OTA_WRITE_HEADER_BYTES + chunk_length);
+      if (packet_length < expected) {
+        return false;
+      }
+
+      *normalized_length = expected;
+      return true;
+    }
+
+    default:
+      return false;
+  }
+}
+
+static bool locate_secure_command(const uint8_t *rx_data,
+                                  uint16_t rx_length,
+                                  const uint8_t **out_packet_ptr,
+                                  uint16_t *out_payload_len,
+                                  uint16_t *out_offset)
+{
+  if ((rx_data == NULL) || (out_packet_ptr == NULL) || (out_payload_len == NULL) || (out_offset == NULL)) {
+    return false;
+  }
+
+  if (rx_length < (SECURE_COMMAND_SEQUENCE_LENGTH + 1u)) {
+    return false;
+  }
+
+  uint16_t min_required = (uint16_t)(SECURE_COMMAND_SEQUENCE_LENGTH + 1u);
+  uint16_t max_offset = (rx_length > min_required) ? (uint16_t)(rx_length - min_required) : 0u;
+  if (max_offset > 16u) {
+    max_offset = 16u;
+  }
+
+  for (uint16_t offset = 0u; offset <= max_offset; offset++) {
+    if (memcmp(&rx_data[offset], secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH) == 0) {
+      *out_packet_ptr = &rx_data[offset];
+      *out_payload_len = (uint16_t)(rx_length - offset);
+      *out_offset = offset;
+      return true;
+    }
+  }
+
+  return false;
+}
 
 static void send_slot_info_response(AppSlot_t active_slot,
                                     AppSlot_t inactive_slot,
                                     UpdateStatus_t pending_slot)
 {
-  uint8_t response[OTA_FIXED_PACKET_LENGTH];
+  uint8_t response[OTA_MAX_PACKET_LENGTH];
   memset(response, 0x00, sizeof(response));
-  memcpy(response, secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH);
-  response[SECURE_COMMAND_SEQUENCE_LENGTH] = OTA_RSP_SLOT_INFO;
-  response[SECURE_COMMAND_SEQUENCE_LENGTH + 1u] = (uint8_t)active_slot;
-  response[SECURE_COMMAND_SEQUENCE_LENGTH + 2u] = (uint8_t)inactive_slot;
-  response[SECURE_COMMAND_SEQUENCE_LENGTH + 3u] = (uint8_t)pending_slot;
+  
+  // On-air packet: [radio_length (1B)] [secure_sequence (3B)] [command (1B)] [payload (3B)]
+  uint16_t packet_length = OTA_RADIO_LENGTH_BYTES + SECURE_COMMAND_SEQUENCE_LENGTH + 1u + OTA_SLOT_INFO_PAYLOAD_LEN;
+  response[0] = (uint8_t)packet_length;
+  
+  size_t offset = OTA_RADIO_LENGTH_BYTES;
+  memcpy(&response[offset], secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH);
+  offset += SECURE_COMMAND_SEQUENCE_LENGTH;
+  
+  response[offset] = OTA_RSP_SLOT_INFO;
+  offset++;
+  
+  response[offset] = (uint8_t)active_slot;
+  offset++;
+  response[offset] = (uint8_t)inactive_slot;
+  offset++;
+  response[offset] = (uint8_t)pending_slot;
+  offset++;
 
-  uint32_t status = transmit_packet(response, OTA_FIXED_PACKET_LENGTH);
+  uint32_t status = transmit_packet(response, OTA_PHY_FRAME_LENGTH);
   if (status != RAIL_STATUS_NO_ERROR) {
     printf("Slot info response TX failed: %lu\n", (unsigned long)status);
   }
@@ -850,6 +953,7 @@ void buttonCb(uint8_t intNo)
 void init_secure_radio(void)
 {
   RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
+  log_reset_cause_once();
 
   uint16_t size = RAIL_SetTxFifo(rail_handle, tx_fifo, 0, TX_FIFO_SIZE);
   if (size == 0) {
@@ -863,6 +967,7 @@ void init_secure_radio(void)
                                            RAIL_EVENTS_ALL,
                                            RAIL_EVENTS_TX_COMPLETION
                                            | RAIL_EVENTS_RX_COMPLETION
+                                           | RAIL_EVENT_RX_PACKET_RECEIVED
                                            | RAIL_EVENT_CAL_NEEDED);
   if (status != RAIL_STATUS_NO_ERROR) {
     printf("RAIL_ConfigEvents failed: %u\n", status);
@@ -871,13 +976,9 @@ void init_secure_radio(void)
     // printf("Config events worked\n");
   }
 
-  status = RAIL_SetRxFifo(rail_handle, rx_fifo, &rx_fifo_size);
-  if (status != RAIL_STATUS_NO_ERROR) {
-    printf("RAIL_SetRxFifo failed: %u\n", status);
-    while(1);
-  } else {
-    // printf("Set RX FIFO worked\n");
-  }
+  // Keep RX in packet-mode defaults configured by sl_rail_util_init.
+  // Do not override RX FIFO here; mixing manual FIFO setup with packet-mode APIs
+  // can cause truncated/invalid packet copies.
   const RAIL_ChannelConfig_t *mijnConfig = channelConfigs[0];
   status = RAIL_StartRx(rail_handle,
                         mijnConfig->configs->channelNumberStart,
@@ -935,7 +1036,8 @@ uint16_t download_packet(RAIL_Handle_t rail_handle, uint8_t *rx_buf)
 uint32_t transmit_packet(uint8_t *payload, uint16_t length)
 {
   RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST);
-  RAIL_WriteTxFifo(rail_handle, payload, length, false);
+  // Reset FIFO write position per packet to avoid transmitting stale appended data.
+  RAIL_WriteTxFifo(rail_handle, payload, length, true);
   return RAIL_StartTx(rail_handle,
                  channelConfigs[0]->configs->channelNumberStart,
                  RAIL_TX_OPTIONS_DEFAULT,
@@ -945,14 +1047,15 @@ uint32_t transmit_packet(uint8_t *payload, uint16_t length)
 /*
 * Wanneer we packet met secure command sequence ontvangen, call deze
 */
-void handle_secure_command(uint16_t packet_length) 
+void handle_secure_command(const uint8_t *packet_data, uint16_t packet_length) 
 {
-  // printf("SECURE COMMAND RECEIVED! COMMAND: %.*s\n", packet_length, secure_rx_buffer);
-  if (packet_length < (SECURE_COMMAND_SEQUENCE_LENGTH + 1)) {
+  // printf("SECURE COMMAND RECEIVED! COMMAND: %.*s\n", packet_length, packet_data);
+  if (packet_length < (SECURE_COMMAND_SEQUENCE_LENGTH + 1u)) {
     printf("Secure command packet te kort\n");
     return;
   }
-  uint8_t ota_command = secure_rx_buffer[SECURE_COMMAND_SEQUENCE_LENGTH];
+
+  uint8_t ota_command = packet_data[SECURE_COMMAND_SEQUENCE_LENGTH];
   switch (ota_command){
     case OTA_CMD_QUERY_SLOT: {
       AppSlot_t active_slot = SLOT_A;
@@ -1002,7 +1105,7 @@ void handle_secure_command(uint16_t packet_length)
 
       ota_update_mode_t requested_mode = OTA_UPDATE_MODE_FULL;
       if (packet_length > OTA_WRITE_HEADER_BYTES) {
-        requested_mode = (ota_update_mode_t)secure_rx_buffer[OTA_WRITE_HEADER_BYTES];
+        requested_mode = (ota_update_mode_t)packet_data[OTA_WRITE_HEADER_BYTES];
       }
 
       if (!ota_update_mode_valid(requested_mode)) {
@@ -1040,17 +1143,15 @@ void handle_secure_command(uint16_t packet_length)
         return;
       }
 
-      if (packet_length != OTA_FIXED_PACKET_LENGTH) {
-        printf("OTA_CMD_WRITE afwijkende lengte: %u\n", (unsigned)packet_length);
-      }
-
+            // Extract offset and length from WRITE packet
+            size_t offset_index = SECURE_COMMAND_SEQUENCE_LENGTH + 1u;
       uint32_t address;
-      memcpy(&address, &secure_rx_buffer[SECURE_COMMAND_SEQUENCE_LENGTH + 1], sizeof(uint32_t));
+            memcpy(&address, &packet_data[offset_index], sizeof(uint32_t));
       uint32_t absolute_address = ota_target_base + ota_ctx.write_base_offset + address;
 
       uint16_t chunk_length;
       memcpy(&chunk_length,
-             &secure_rx_buffer[SECURE_COMMAND_SEQUENCE_LENGTH + 1 + sizeof(uint32_t)],
+              &packet_data[offset_index + sizeof(uint32_t)],
              sizeof(uint16_t));
 
       if (chunk_length == 0u) {
@@ -1071,9 +1172,7 @@ void handle_secure_command(uint16_t packet_length)
         return;
       }
 
-      uint8_t *data = &secure_rx_buffer[SECURE_COMMAND_SEQUENCE_LENGTH + 1
-                                         + sizeof(uint32_t)
-                                         + sizeof(uint16_t)];
+      const uint8_t *data = &packet_data[offset_index + sizeof(uint32_t) + sizeof(uint16_t)];
 
       if (!gbl_parser_feed(address, data, chunk_length)) {
         printf("GBL parser failed @ 0x%08lX (len=%u)\n",
@@ -1122,6 +1221,19 @@ void handle_secure_command(uint16_t packet_length)
   }
 }
 
+void PendSV_Handler(void)
+{
+  while (secure_cmd_pending) {
+    uint16_t pending_length = secure_cmd_pending_length;
+    uint8_t cmd = secure_cmd_pending_buffer[SECURE_COMMAND_SEQUENCE_LENGTH];
+    secure_cmd_pending = false;
+    if (cmd != OTA_CMD_WRITE) {
+      printf("PendSV exec secure cmd=0x%02X len=%u\n", (unsigned)cmd, (unsigned)pending_length);
+    }
+    handle_secure_command(secure_cmd_pending_buffer, pending_length);
+  }
+}
+
 /*
 * RAIL library event callback functie
 * Setup verschillende events, enkel RX doet iets speciaal
@@ -1134,7 +1246,8 @@ SL_CODE_RAM void sl_rail_util_on_event(sl_rail_handle_t rail_handle, sl_rail_eve
   if (events & RAIL_EVENTS_TX_COMPLETION) {
     // printf("EVENT: TX completed\n");
   }
-  else if (events & RAIL_EVENT_RX_PACKET_RECEIVED) {
+  if (events & RAIL_EVENT_RX_PACKET_RECEIVED) {
+    printf("Packet received. Events: 0x%08lX\n", (unsigned long)events);
     RAIL_RxPacketInfo_t packet_info;
     RAIL_RxPacketHandle_t packet_handle = RAIL_GetRxPacketInfo(rail_handle,
                                          RAIL_RX_PACKET_HANDLE_NEWEST,
@@ -1143,34 +1256,85 @@ SL_CODE_RAM void sl_rail_util_on_event(sl_rail_handle_t rail_handle, sl_rail_eve
       printf("RAIL_GetRxPacketInfo failed\n");
       return;
     }
+    
+    memset(secure_rx_buffer, 0xCC, sizeof(secure_rx_buffer));  // Fill with pattern to detect if RAIL_CopyRxPacket fails
     RAIL_CopyRxPacket(secure_rx_buffer, &packet_info);
-    if ((packet_info.packetBytes >= SECURE_COMMAND_SEQUENCE_LENGTH) &&
-        (memcmp(secure_rx_buffer, secure_command_sequence, SECURE_COMMAND_SEQUENCE_LENGTH) == 0)){
-        // Secure command
-        handle_secure_command(packet_info.packetBytes);
-        RAIL_ReleaseRxPacket(rail_handle, packet_handle);
-    } else { // Normal packet, voor NS
-      if (RAIL_HoldRxPacket(rail_handle) == RAIL_RX_PACKET_HANDLE_INVALID) {
-        printf("RAIL_HoldRxPacket failed\n");
-        while(1);
+    printf("RX packet_info.packetBytes=%u", (unsigned)packet_info.packetBytes);
+    // Show first bytes to verify data was copied
+    if (packet_info.packetBytes > 0 && packet_info.packetBytes <= 20) {
+      printf(" head:");
+      for (uint16_t i = 0; i < packet_info.packetBytes && i < 12; i++) {
+        printf(" %02X", secure_rx_buffer[i]);
       }
-      // Laat NS weten dat packet klaar is
-      NVIC_SetPendingIRQ(SW0_IRQn);
+    }
+    printf("\n");
+    const uint8_t *packet_ptr = NULL;
+    uint16_t payload_len = 0u;
+    uint16_t payload_offset = 0u;
+
+    (void)locate_secure_command(secure_rx_buffer,
+                  packet_info.packetBytes,
+                  &packet_ptr,
+                  &payload_len,
+                  &payload_offset);
+
+    if (packet_ptr != NULL) {
+      uint8_t cmd = packet_ptr[SECURE_COMMAND_SEQUENCE_LENGTH];
+      if (cmd != OTA_CMD_WRITE) {
+        printf("Secure cmd RX cmd=0x%02X raw_len=%u off=%u\n",
+               (unsigned)cmd,
+               (unsigned)payload_len,
+               (unsigned)payload_offset);
+      }
+
+      // Defer secure command processing to PendSV to avoid flash operations in RAIL IRQ context.
+      uint16_t normalized_len = 0u;
+      if (normalize_secure_packet_length(packet_ptr, payload_len, &normalized_len) && !secure_cmd_pending) {
+        if (cmd != OTA_CMD_WRITE) {
+          printf("Secure cmd normalized len=%u\n", (unsigned)normalized_len);
+        }
+        memcpy(secure_cmd_pending_buffer, packet_ptr, normalized_len);
+        secure_cmd_pending_length = normalized_len;
+        secure_cmd_pending = true;
+        SCB->ICSR = SCB_ICSR_PENDSVSET_Msk;
+      } else if (secure_cmd_pending) {
+        printf("Secure command dropped: previous command still pending\n");
+      } else {
+        printf("Secure command dropped: invalid content/length (%u)\n", (unsigned)payload_len);
+      }
+
+      RAIL_ReleaseRxPacket(rail_handle, packet_handle);
+    } else {
+      printf("Dropping non-secure/unknown RX frame len=%u head:", (unsigned)packet_info.packetBytes);
+      uint16_t dump_count = (packet_info.packetBytes < 12u) ? packet_info.packetBytes : 12u;
+      for (uint16_t i = 0u; i < dump_count; i++) {
+        printf(" %02X", secure_rx_buffer[i]);
+      }
+      printf("\n");
+      RAIL_ReleaseRxPacket(rail_handle, packet_handle);
     }
   }
-  else if (events & RAIL_EVENT_CAL_NEEDED) {
+
+  if (events & RAIL_EVENT_RX_FRAME_ERROR) {
+    // 0x00000100 == RAIL_EVENT_RX_FRAME_ERROR: packet failed frame/CRC/length checks.
+    printf("RX frame error. Events: 0x%08lX\n", (unsigned long)events);
+  }
+
+  if (events & RAIL_EVENT_RX_FIFO_OVERFLOW) {
+    printf("RX FIFO overflow. Events: 0x%08lX\n", (unsigned long)events);
+    RAIL_ResetFifo(rail_handle, false, true);
+  }
+
+  if (events & RAIL_EVENT_RX_FIFO_FULL) {
+    printf("RX FIFO full. Events: 0x%08lX\n", (unsigned long)events);
+  }
+
+  if (events & RAIL_EVENT_CAL_NEEDED) {
     // printf("EVENT: Calibration needed\n");
     RAIL_Status_t status = RAIL_Calibrate(rail_handle, NULL, RAIL_CAL_ALL_PENDING);
     if (status != RAIL_STATUS_NO_ERROR) {
       printf("RAIL_Calibrate failed: %u\n", status);
       while(1);
     }
-  }
-  else {
-    printf("Wss FIFO vol\n");
-    // Wss RX fifo vol want NS traag met downloaden, reset zodat we geen important packets missen
-    // Edge case: RX FIFO net vol + net nieuwe secure command = secure verloren? 
-    // Maar events bevat ook RAIL_EVENT_RX_FIFO_ALMOST_FULL dus denk niet mogelijk want dan resetten we ook hier? 
-    RAIL_ResetFifo(rail_handle, false, true);
   }
 }
