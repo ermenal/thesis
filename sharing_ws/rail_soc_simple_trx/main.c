@@ -108,6 +108,11 @@ static const slot_image_set_t slot_image_sets[] = {
   },
 };
 
+static char slot_label(AppSlot_t slot)
+{
+  return (slot == SLOT_B) ? 'B' : 'A';
+}
+
 static void init_radio(void);
 static void poll_buttons(void);
 static void process_received_packets(sl_rail_handle_t rail_handle);
@@ -240,9 +245,9 @@ static void process_received_packets(sl_rail_handle_t rail_handle)
 
         switch (header.packet_type) {
           case OTA_PACKET_QUERY:
-            app_log_info("Received OTA query: requested_kind=%u, target_slot=%u\n",
+            app_log_info("Received OTA query: requested_kind=%u, target_slot=%c\n",
                          (unsigned)header.update_kind,
-                         (unsigned)requested_slot);
+                         slot_label(requested_slot));
             if (update_ready) {
               OtaPacketHeader_t response = {
                 .magic = OTA_PROTOCOL_MAGIC,
@@ -551,8 +556,8 @@ static void session_handle_ack(sl_rail_handle_t rail_handle, const OtaPacketHead
           uint32_t progress_percent = (session.current_chunk_index * 100u) / session.current_chunk_count;
           if (session.current_chunk_index == session.current_chunk_count
               || progress_percent >= session.next_progress_percent) {
-            app_log_info("OTA progress: slot=%u image=%u %lu%% (%lu/%lu chunks)\n",
-                         (unsigned)session.target_slot,
+            app_log_info("OTA progress: slot=%c image=%u %lu%% (%lu/%lu chunks)\n",
+                         slot_label(session.target_slot),
                          (unsigned)session.image_index,
                          (unsigned long)progress_percent,
                          (unsigned long)session.current_chunk_index,
