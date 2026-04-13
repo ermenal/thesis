@@ -20,6 +20,39 @@ typedef enum {
     UPDATE_PENDING_B = 2
 } UpdateStatus_t;
 
+typedef enum {
+    OTA_UPDATE_FULL = 0,
+    OTA_UPDATE_SECURE_ONLY = 1,
+    OTA_UPDATE_NONSECURE_ONLY = 2
+} OtaUpdateKind_t;
+
+typedef enum {
+    OTA_PACKET_QUERY = 1,
+    OTA_PACKET_RESPONSE = 2,
+    OTA_PACKET_IMAGE_BEGIN = 3,
+    OTA_PACKET_IMAGE_CHUNK = 4,
+    OTA_PACKET_IMAGE_END = 5,
+    OTA_PACKET_ACK = 6,
+    OTA_PACKET_DONE = 7
+} OtaPacketType_t;
+
+#define OTA_PROTOCOL_MAGIC        ((uint32_t)0x4F544132u) /* OTA2 */
+#define OTA_PROTOCOL_VERSION      ((uint8_t)1u)
+#define OTA_MAX_CHUNK_BYTES       ((uint16_t)96u)
+
+typedef struct __attribute__((packed)) {
+    uint32_t magic;
+    uint8_t version;
+    uint8_t packet_type;
+    uint8_t update_kind;
+    uint8_t image_kind;
+    uint32_t transfer_id;
+    uint32_t total_bytes;
+    uint32_t chunk_index;
+    uint16_t chunk_bytes;
+    uint16_t total_chunks;
+} OtaPacketHeader_t;
+
 typedef struct {
     uint32_t version;
     AppSlot_t active_slot;

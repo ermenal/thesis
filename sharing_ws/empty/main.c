@@ -42,6 +42,114 @@ uint32_t get_slot_address(AppSlot_t slot)
     return (slot == SLOT_A) ? APP_SLOT_A_START_ADDR : APP_SLOT_B_START_ADDR;
 }
 
+static bool slot_value_valid(AppSlot_t slot)
+{
+    return (slot == SLOT_A) || (slot == SLOT_B);
+}
+
+static bool pending_value_valid(UpdateStatus_t status)
+{
+    switch (status) {
+        case UPDATE_NONE:
+        case UPDATE_PENDING_A:
+        case UPDATE_PENDING_B:
+            return true;
+        default:
+            return false;
+    }
+}
+
+static bool NVM_IsStateValid(const NvmBootState_t *state)
+{
+    if (!slot_value_valid(state->active_slot)) {
+        return false;
+    }
+
+    if (!pending_value_valid(state->pending_slot)) {
+        return false;
+    }
+    return true;
+}
+
+static bool NVM_ReadLatestState(NvmBootState_t *out_state, uint32_t *out_page_addr)
+{
+    const NvmBootState_t *state_A = (const NvmBootState_t *)NVM_BOOT_STATE_PAGE_A;
+    const NvmBootState_t *state_B = (const NvmBootState_t *)NVM_BOOT_STATE_PAGE_B;
+
+    bool valid_A = NVM_IsStateValid(state_A);
+    bool valid_B = NVM_IsStateValid(state_B);
+
+    if (!valid_A && !valid_B) {
+        return false;
+    }
+
+    const NvmBootState_t *chosen = NULL;
+    uint32_t chosen_page = 0u;
+
+    if (valid_A && valid_B) {
+        if (state_A->version >= state_B->version) {
+            chosen = state_A;
+            chosen_page = NVM_BOOT_STATE_PAGE_A;
+        } else {
+            chosen = state_B;
+            chosen_page = NVM_BOOT_STATE_PAGE_B;
+        }
+    } else if (valid_A) {
+        chosen = state_A;
+        chosen_page = NVM_BOOT_STATE_PAGE_A;
+    } else {
+        chosen = state_B;
+        chosen_page = NVM_BOOT_STATE_PAGE_B;
+    }
+
+    memcpy(out_state, chosen, sizeof(NvmBootState_t));
+    *out_page_addr = chosen_page;
+    return true;
+}
+
+static void NVM_WriteStateToPage(const NvmBootState_t *state, uint32_t page_address)
+{
+    MSC_Init();
+
+    MSC_Status_TypeDef status = MSC_ErasePage((uint32_t *)page_address);
+    if (status != mscReturnOk) {
+        while (1) {}
+    }
+
+    status = MSC_WriteWord((uint32_t *)page_address, (const void *)state, sizeof(NvmBootState_t));
+    if (status != mscReturnOk) {
+        while (1) {}
+    }
+
+    MSC_Deinit();
+}
+
+static uint32_t NVM_GetAlternatePage(uint32_t current_page)
+{
+    return (current_page == NVM_BOOT_STATE_PAGE_A) ? NVM_BOOT_STATE_PAGE_B : NVM_BOOT_STATE_PAGE_A;
+}
+
+static void NVM_CommitState(NvmBootState_t *state,
+                            uint32_t *state_page_address,
+                            AppSlot_t active_slot,
+                            UpdateStatus_t pending_slot,
+                            uint8_t boot_attempts)
+{
+    NvmBootState_t new_state = {
+        .version = state->version + 1u,
+        .active_slot = active_slot,
+        .pending_slot = pending_slot,
+        .boot_attempts = boot_attempts,
+        .reserved = {0},
+    };
+
+    uint32_t target_page = NVM_GetAlternatePage(*state_page_address);
+    NVM_WriteStateToPage(&new_state, target_page);
+
+    *state = new_state;
+    *state_page_address = target_page;
+}
+
 int main(void)
 {
   /*
@@ -55,7 +163,53 @@ int main(void)
   * For now just boot into slot A
   */
 
-  AppSlot_t boot_slot = SLOT_A; // TODO determine based on state
+  NvmBootState_t state = {0};
+  uint32_t state_page = NVM_BOOT_STATE_PAGE_A;
+  bool have_state = NVM_ReadLatestState(&state, &state_page);
+
+  if (!have_state) {
+      NvmBootState_t initial_state = { 0 };
+      initial_state.version = 1u;
+      initial_state.active_slot = SLOT_A;
+      initial_state.pending_slot = UPDATE_NONE;
+      initial_state.boot_attempts = 0u;
+
+      NVM_WriteStateToPage(&initial_state, NVM_BOOT_STATE_PAGE_A);
+
+      state = initial_state;
+      state_page = NVM_BOOT_STATE_PAGE_A;
+      have_state = true;
+  }
+
+  AppSlot_t boot_slot = state.active_slot; 
+
+  // 2. Check for a pending update (just downloaded and "activated")
+  if (state.pending_slot != UPDATE_NONE) {
+      AppSlot_t new_slot = (state.pending_slot == UPDATE_PENDING_A) ? SLOT_A : SLOT_B;
+
+      NVM_CommitState(&state, &state_page, new_slot, UPDATE_NONE, 1u);
+
+      boot_slot = new_slot;
+  }
+  // 3. Check for an un-committed, failing application
+  else if (state.boot_attempts > 0u) {
+      if (state.boot_attempts >= MAX_BOOT_RETRIES) {
+          AppSlot_t last_known_good_slot = (state.active_slot == SLOT_A) ? SLOT_B : SLOT_A; 
+
+          NVM_CommitState(&state, &state_page, last_known_good_slot, UPDATE_NONE, 0u);
+
+          NVIC_SystemReset();
+          while (1) {}
+      } else {
+          uint8_t next_attempt = (uint8_t)(state.boot_attempts + 1u);
+          NVM_CommitState(&state, &state_page, state.active_slot, UPDATE_NONE, next_attempt);
+          boot_slot = state.active_slot;
+      }
+  } else {
+      boot_slot = state.active_slot;
+  }
+
+
   uint32_t app_start_address = boot_state_slot_address(boot_slot);
   jump_to_application(app_start_address);
   while (1) {}

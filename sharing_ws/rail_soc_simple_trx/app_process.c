@@ -158,6 +158,7 @@ void app_process_action(void)
       //  - Return to app IDLE state (RAIL will automatically switch back to Rx radio state)
       rx_packet_handle = sl_rail_get_rx_packet_info(rail_handle, SL_RAIL_RX_PACKET_HANDLE_OLDEST_COMPLETE, &packet_info);
       while (rx_packet_handle != SL_RAIL_RX_PACKET_HANDLE_INVALID) {
+        app_log_info("Packet received, length: %d\n", packet_info.packet_bytes);
         uint8_t *start_of_packet = 0;
         uint16_t packet_size = unpack_packet(rail_handle, rx_buffer, &packet_info, &start_of_packet);
         rail_status = sl_rail_release_rx_packet(rail_handle, rx_packet_handle);
@@ -221,42 +222,42 @@ void app_process_action(void)
 /******************************************************************************
  * RAIL callback, called if a RAIL event occurs.
  *****************************************************************************/
-SL_CODE_RAM void sl_rail_util_on_event(sl_rail_handle_t rail_handle, sl_rail_events_t events)
-{
-  error_code = events;
-  // Handle Rx events
-  if ( events & SL_RAIL_EVENTS_RX_COMPLETION ) {
-    if (events & SL_RAIL_EVENT_RX_PACKET_RECEIVED) {
-      // Keep the packet in the radio buffer, download it later at the state machine
-      sl_rail_hold_rx_packet(rail_handle);
-      packet_received = true;
-    } else {
-      // Handle Rx error
-      rx_error = true;
-    }
-  }
-  // Handle Tx events
-  if ( events & SL_RAIL_EVENTS_TX_COMPLETION) {
-    if (events & SL_RAIL_EVENT_TX_PACKET_SENT) {
-      packet_sent = true;
-    } else {
-      // Handle Tx error
-      tx_error = true;
-    }
-  }
+// SL_CODE_RAM void sl_rail_util_on_event(sl_rail_handle_t rail_handle, sl_rail_events_t events)
+// {
+//   error_code = events;
+//   // Handle Rx events
+//   if ( events & SL_RAIL_EVENTS_RX_COMPLETION ) {
+//     if (events & SL_RAIL_EVENT_RX_PACKET_RECEIVED) {
+//       // Keep the packet in the radio buffer, download it later at the state machine
+//       sl_rail_hold_rx_packet(rail_handle);
+//       packet_received = true;
+//     } else {
+//       // Handle Rx error
+//       rx_error = true;
+//     }
+//   }
+//   // Handle Tx events
+//   if ( events & SL_RAIL_EVENTS_TX_COMPLETION) {
+//     if (events & SL_RAIL_EVENT_TX_PACKET_SENT) {
+//       packet_sent = true;
+//     } else {
+//       // Handle Tx error
+//       tx_error = true;
+//     }
+//   }
 
-  // Perform all calibrations when needed
-  if ( events & SL_RAIL_EVENT_CAL_NEEDED ) {
-    calibration_status = sl_rail_calibrate(rail_handle, NULL, SL_RAIL_CAL_ALL_PENDING);
-    if (calibration_status != SL_RAIL_STATUS_NO_ERROR) {
-      cal_error = true;
-    }
-  }
+//   // Perform all calibrations when needed
+//   if ( events & SL_RAIL_EVENT_CAL_NEEDED ) {
+//     calibration_status = sl_rail_calibrate(rail_handle, NULL, SL_RAIL_CAL_ALL_PENDING);
+//     if (calibration_status != SL_RAIL_STATUS_NO_ERROR) {
+//       cal_error = true;
+//     }
+//   }
 
-#if defined(SL_CATALOG_KERNEL_PRESENT)
-  app_task_notify();
-#endif
-}
+// #if defined(SL_CATALOG_KERNEL_PRESENT)
+//   app_task_notify();
+// #endif
+// }
 
 /******************************************************************************
  * Button callback, called if any button is pressed or released.
